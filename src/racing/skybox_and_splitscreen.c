@@ -2,7 +2,6 @@
 #include <macros.h>
 #include <libultra/gbi.h>
 #include <mk64.h>
-#include <stdio.h>
 
 #include "skybox_and_splitscreen.h"
 #include "code_800029B0.h"
@@ -22,8 +21,6 @@
 #include "engine/courses/Course.h"
 #include "port/Game.h"
 #include "math_util.h"
-#include "src/enhancements/freecam/freecam.h"
-#include "port/interpolation/FrameInterpolation.h"
 
 Vp D_802B8880[] = {
     { { { 640, 480, 511, 0 }, { 640, 480, 511, 0 } } },
@@ -383,7 +380,6 @@ void func_802A450C(Vtx* skybox) {
     skybox[3].v.cn[1] = prop->TopLeft.g;
     skybox[3].v.cn[2] = prop->TopLeft.b;
 
-    // Floor
     skybox[4].v.cn[0] = prop->FloorTopRight.r;
     skybox[4].v.cn[1] = prop->FloorTopRight.g;
     skybox[4].v.cn[2] = prop->FloorTopRight.b;
@@ -409,7 +405,7 @@ void func_802A487C(Vtx* arg0, UNUSED struct UnkStruct_800DC5EC* arg1, UNUSED s32
                    UNUSED f32* arg4) {
 
     init_rdp();
-    if (!IsRainbowRoad()) {
+    if (GetCourse() != GetRainbowRoad()) {
 
         gDPSetRenderMode(gDisplayListHead++, G_RM_OPA_SURF, G_RM_OPA_SURF2);
         gSPClearGeometryMode(gDisplayListHead++, G_ZBUFFER | G_LIGHTING);
@@ -424,15 +420,18 @@ void func_802A487C(Vtx* arg0, UNUSED struct UnkStruct_800DC5EC* arg1, UNUSED s32
 }
 
 void func_802A4A0C(Vtx* vtx, struct UnkStruct_800DC5EC* arg1, UNUSED s32 arg2, UNUSED s32 arg3, UNUSED f32* arg4) {
+    //! @todo Confirm if this crash still happens and fix if so
+    s32 id = arg1 - D_8015F480;
+    arg1->camera = &cameras[id]; // bad fix of bowser castle crash where camera get an invalid value
     Camera* camera = arg1->camera;
     s16 temp_t5;
     f32 temp_f0;
     UNUSED s32 pad[2];
     UNUSED u16 pad2;
     u16 sp128;
-    Mat4 matrix1 = { 0 };
-    Mat4 matrix2 = { 0 };
-    Mat4 matrix3 = { 0 };
+    Mat4 matrix1;
+    Mat4 matrix2;
+    Mat4 matrix3;
     Vec3f sp5C;
     f32 sp58;
 
@@ -442,7 +441,6 @@ void func_802A4A0C(Vtx* vtx, struct UnkStruct_800DC5EC* arg1, UNUSED s32 arg2, U
     vtx[1].v.ob[0] = OTRGetRectDimensionFromRightEdge(SCREEN_WIDTH);
     vtx[2].v.ob[0] = OTRGetRectDimensionFromLeftEdge(0);
     vtx[3].v.ob[0] = OTRGetRectDimensionFromLeftEdge(0);
-
     vtx[4].v.ob[0] = OTRGetRectDimensionFromRightEdge(SCREEN_WIDTH);
     vtx[5].v.ob[0] = OTRGetRectDimensionFromRightEdge(SCREEN_WIDTH);
     vtx[6].v.ob[0] = OTRGetRectDimensionFromLeftEdge(0);
@@ -468,7 +466,7 @@ void func_802A4A0C(Vtx* vtx, struct UnkStruct_800DC5EC* arg1, UNUSED s32 arg2, U
     sp5C[0] *= 160.0f;
     sp5C[1] *= 120.0f;
 
-    temp_t5 = 120 - (s32) sp5C[1];
+    temp_t5 = 120 - (s16) sp5C[1];
     arg1->cameraHeight = temp_t5;
     vtx[1].v.ob[1] = temp_t5;
     vtx[2].v.ob[1] = temp_t5;
@@ -485,7 +483,7 @@ void func_802A4A0C(Vtx* vtx, struct UnkStruct_800DC5EC* arg1, UNUSED s32 arg2, U
     gSPMatrix(gDisplayListHead++, &gIdentityMatrix2, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
     gSPVertex(gDisplayListHead++, &vtx[0], 4, 0);
     gSP2Triangles(gDisplayListHead++, 0, 3, 1, 0, 1, 3, 2, 0);
-    if (IsRainbowRoad()) {
+    if (GetCourse() == GetRainbowRoad()) {
         gSPVertex(gDisplayListHead++, &vtx[4], 4, 0);
         gSP2Triangles(gDisplayListHead++, 0, 3, 1, 0, 1, 3, 2, 0);
     }
@@ -756,39 +754,17 @@ void func_802A5760(void) {
     }
 }
 
-// Setup the cameras perspective and lookAt (movement/rotation)
-void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_800DC5EC* screen) {
-    Mat4 matrix;
-    u16 perspNorm;
-
-    // This allows freecam to create a new separate camera
-    // if (CVarGetInteger("gFreecam", 0) == true) {
-    //     freecam_render_setup(gFreecamCamera);
-    //     return;
-    // }
-
-    // Setup perspective (camera movement)
-    FrameInterpolation_RecordOpenChild("camera",
-                                       (FrameInterpolation_GetCameraEpoch() | (((playerId | cameraId) << 8))));
-    guPerspective(&gGfxPool->mtxPersp[cameraId], &perspNorm, gCameraZoom[cameraId], gScreenAspect,
-                  CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
-    gSPPerspNormalize(gDisplayListHead++, perspNorm);
-    gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxPersp[cameraId]),
-              G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-
-    // Setup lookAt (camera rotation)
-    guLookAt(&gGfxPool->mtxLookAt[cameraId], camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
-             camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
-    gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
-              G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-    FrameInterpolation_RecordCloseChild();
-}
-
 void render_screens(s32 mode, s32 cameraId, s32 playerId) {
+    UNUSED s32 pad[4];
+    u16 perspNorm;
+    UNUSED s32 pad2[2];
+    UNUSED s32 pad3;
     Mat4 matrix;
 
     s32 screenId = 0;
     s32 screenMode = SCREEN_MODE_1P;
+
+    FrameInterpolation_StartRecord();
 
     switch (mode) {
         case RENDER_SCREEN_MODE_1P_PLAYER_ONE:
@@ -847,16 +823,8 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     }
 
     struct UnkStruct_800DC5EC* screen = &D_8015F480[screenId];
-    Camera* camera;
+    Camera* camera = &cameras[cameraId];
 
-    // Required for freecam to have its own camera
-    //if (CVarGetInteger("gFreecam", 0) == true) {
-    //    camera = &gFreecamCamera;
-    //    cameraId = 4;
-    //} else {
-        camera = &cameras[cameraId];
-    //}
-    
     if (screenMode == SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL) {
         gSPSetGeometryMode(gDisplayListHead++, G_SHADE | G_CULL_BACK | G_LIGHTING | G_SHADING_SMOOTH);
     }
@@ -866,21 +834,34 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     gSPSetGeometryMode(gDisplayListHead++, G_ZBUFFER | G_SHADE | G_CULL_BACK | G_LIGHTING | G_SHADING_SMOOTH);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
 
-    // Setup camera perspective and lookAt
-    setup_camera(camera, playerId, cameraId, screen);
+    guPerspective(&gGfxPool->mtxPersp[cameraId], &perspNorm, gCameraZoom[cameraId], gScreenAspect,
+                  CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
 
-    // Create a matrix for the track and game objects
-    FrameInterpolation_RecordOpenChild("track", (playerId | cameraId) << 8);
-    Mat4 trackMatrix;
-    mtxf_identity(trackMatrix);
-    render_set_position(trackMatrix, 0);
+    gSPPerspNormalize(gDisplayListHead++, perspNorm);
+    gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxPersp[cameraId]),
+              G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
 
-    // Draw course and game objects
+    guLookAt(&gGfxPool->mtxLookAt[cameraId], camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
+             camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
+    if (D_800DC5C8 == 0) {
+        gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
+                  G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+        mtxf_identity(matrix);
+        render_set_position(matrix, 0);
+    } else {
+        gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
+                  G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
+    }
     render_course(screen);
+    if (D_800DC5C8 == 1) {
+        gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
+                  G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+        mtxf_identity(matrix);
+        render_set_position(matrix, 0);
+    }
     render_course_actors(screen);
     CM_DrawStaticMeshActors();
     render_object(mode);
-
     switch (screenId) {
         case 0:
             render_players_on_screen_one();
@@ -927,7 +908,8 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     if (mode != RENDER_SCREEN_MODE_1P_PLAYER_ONE) {
         gNumScreens += 1;
     }
-    FrameInterpolation_RecordCloseChild();
+
+    FrameInterpolation_StopRecord();
 }
 
 void func_802A74BC(void) {

@@ -2,7 +2,6 @@
 #include <math.h>
 #include "matrix.h"
 #include "common_structs.h"
-#include "FrameInterpolation.h"
 
 Mtx gIdentityMtx = gdSPDefMtx(1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
 Matrix gIdentityMatrix = { {
