@@ -4,7 +4,6 @@
 #include "GameExtractor.h"
 #include "ui/ImguiUI.h"
 #include "libultraship/src/Context.h"
-#include "libultraship/src/controller/controldevice/controller/mapping/ControllerDefaultMappings.h"
 #include "resource/type/ResourceType.h"
 #include "resource/importers/GenericArrayFactory.h"
 #include "resource/importers/AudioBankFactory.h"
@@ -12,15 +11,14 @@
 #include "resource/importers/AudioSequenceFactory.h"
 #include "resource/importers/Vec3fFactory.h"
 #include "resource/importers/Vec3sFactory.h"
-#include "resource/importers/CPUFactory.h"
+#include "resource/importers/KartAIFactory.h"
 #include "resource/importers/CourseVtxFactory.h"
 #include "resource/importers/TrackSectionsFactory.h"
-#include "resource/importers/TrackPathPointFactory.h"
+#include "resource/importers/TrackWaypointFactory.h"
 #include "resource/importers/ActorSpawnDataFactory.h"
 #include "resource/importers/UnkActorSpawnDataFactory.h"
 #include "resource/importers/ArrayFactory.h"
 #include "resource/importers/MinimapFactory.h"
-#include "resource/importers/BetterTextureFactory.h"
 #include <Fonts.h>
 #include "window/gui/resource/Font.h"
 #include "window/gui/resource/FontFactory.h"
@@ -29,7 +27,7 @@
 #include "port/interpolation/FrameInterpolation.h"
 #include <graphic/Fast3D/Fast3dWindow.h>
 #include <graphic/Fast3D/interpreter.h>
-// #include <Fast3D/gfx_rendering_api.h>
+//#include <Fast3D/gfx_rendering_api.h>
 #include <SDL2/SDL.h>
 
 #include <utility>
@@ -48,44 +46,31 @@ float gInterpolationStep = 0.0f;
 #include <BlobFactory.h>
 #include <VertexFactory.h>
 #include <LightFactory.h>
-// #include <PngFactory.h>
 #include "audio/internal.h"
 #include "audio/GameAudio.h"
 }
 
 Fast::Interpreter* GetInterpreter() {
     return static_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow())
-        ->GetInterpreterWeak()
-        .lock()
-        .get();
+             ->GetInterpreterWeak()
+             .lock()
+             .get();
 }
 
 GameEngine* GameEngine::Instance;
-
-bool CreateDirectoryRecursive(std::string const& dirName, std::error_code& err) {
-    err.clear();
-    if (!std::filesystem::create_directories(dirName, err)) {
-        if (std::filesystem::exists(dirName)) {
-            // The folder already exists:
-            err.clear();
-            return true;
-        }
-        return false;
-    }
-    return true;
-}
 
 GameEngine::GameEngine() {
 
     const std::string main_path = Ship::Context::GetPathRelativeToAppDirectory("mk64.o2r");
     const std::string assets_path = Ship::Context::LocateFileAcrossAppDirs("spaghetti.o2r");
-
+  
     std::vector<std::string> archiveFiles;
 
 #ifdef __SWITCH__
     Ship::Switch::Init(Ship::PreInitPhase);
     Ship::Switch::Init(Ship::PostInitPhase);
 #endif
+
 
 #ifdef _WIN32
     AllocConsole();
@@ -95,7 +80,7 @@ GameEngine::GameEngine() {
         archiveFiles.push_back(main_path);
     } else {
         if (ShowYesNoBox("No O2R Files", "No O2R files found. Generate one now?") == IDYES) {
-            if (!GenAssetFile()) {
+            if(!GenAssetFile()){
                 ShowMessage("Error", "An error occured, no O2R file was generated.\n\nExiting...");
                 exit(1);
             } else {
@@ -109,6 +94,7 @@ GameEngine::GameEngine() {
     if (std::filesystem::exists(assets_path)) {
         archiveFiles.push_back(assets_path);
     }
+
     if (const std::string patches_path = Ship::Context::GetPathRelativeToAppDirectory("mods");
         !patches_path.empty() && std::filesystem::exists(patches_path)) {
         if (std::filesystem::is_directory(patches_path)) {
@@ -121,66 +107,13 @@ GameEngine::GameEngine() {
         }
     }
 
-    this->context = Ship::Context::CreateUninitializedInstance("Spaghetti Kart", "spaghettify", "spaghettify.cfg.json");
+    this->context =
+        Ship::Context::CreateUninitializedInstance("Spaghetti Kart", "spaghettify", "spaghettify.cfg.json");
 
-    this->context->InitConfiguration();    // without this line InitConsoleVariables fails at Config::Reload()
-    this->context->InitConsoleVariables(); // without this line the controldeck constructor failes in
-                                           // ShipDeviceIndexMappingManager::UpdateControllerNamesFromConfig()
+    this->context->InitConfiguration(); // without this line InitConsoleVariables fails at Config::Reload()
+    this->context->InitConsoleVariables(); // without this line the controldeck constructor failes in ShipDeviceIndexMappingManager::UpdateControllerNamesFromConfig()
 
-        auto defaultMappings = std::make_shared<Ship::ControllerDefaultMappings>(
-        // KeyboardKeyToButtonMappings
-        std::unordered_map<CONTROLLERBUTTONS_T, std::unordered_set<Ship::KbScancode>>{
-            { BTN_A, { Ship::KbScancode::LUS_KB_SHIFT} },
-            { BTN_B, { Ship::KbScancode::LUS_KB_CONTROL} },
-            { BTN_L, { Ship::KbScancode::LUS_KB_Q} },
-            { BTN_R, { Ship::KbScancode::LUS_KB_SPACE} },
-            { BTN_Z, { Ship::KbScancode::LUS_KB_Z} },
-            { BTN_START, { Ship::KbScancode::LUS_KB_ENTER} },
-            { BTN_CUP, { Ship::KbScancode::LUS_KB_T} },
-            { BTN_CDOWN, { Ship::KbScancode::LUS_KB_G} },
-            { BTN_CLEFT, { Ship::KbScancode::LUS_KB_F} },
-            { BTN_CRIGHT, { Ship::KbScancode::LUS_KB_H} },
-            { BTN_DUP, { Ship::KbScancode::LUS_KB_NUMPAD8} },
-            { BTN_DDOWN, { Ship::KbScancode::LUS_KB_NUMPAD2} },
-            { BTN_DLEFT, { Ship::KbScancode::LUS_KB_NUMPAD4} },
-            { BTN_DRIGHT, { Ship::KbScancode::LUS_KB_NUMPAD6} }
-        },
-        // KeyboardKeyToAxisDirectionMappings - use built-in LUS defaults
-        std::unordered_map<Ship::StickIndex, std::vector<std::pair<Ship::Direction, Ship::KbScancode>>>{
-            { Ship::StickIndex::LEFT_STICK, {
-                { Ship::Direction::UP, Ship::KbScancode::LUS_KB_ARROWKEY_UP},
-                { Ship::Direction::DOWN, Ship::KbScancode::LUS_KB_ARROWKEY_DOWN},
-                { Ship::Direction::LEFT, Ship::KbScancode::LUS_KB_ARROWKEY_LEFT},
-                { Ship::Direction::RIGHT, Ship::KbScancode::LUS_KB_ARROWKEY_RIGHT}
-            }}
-        },
-        // SDLButtonToButtonMappings
-        std::unordered_map<CONTROLLERBUTTONS_T, std::unordered_set<SDL_GameControllerButton>>{
-            { BTN_A, { SDL_CONTROLLER_BUTTON_A } },
-            { BTN_B, { SDL_CONTROLLER_BUTTON_X } },
-            { BTN_START, { SDL_CONTROLLER_BUTTON_START } },
-            { BTN_CLEFT, { SDL_CONTROLLER_BUTTON_Y } },
-            { BTN_CDOWN, { SDL_CONTROLLER_BUTTON_B } },
-            { BTN_DUP, { SDL_CONTROLLER_BUTTON_DPAD_UP } },
-            { BTN_DDOWN, { SDL_CONTROLLER_BUTTON_DPAD_DOWN } },
-            { BTN_DLEFT, { SDL_CONTROLLER_BUTTON_DPAD_LEFT } },
-            { BTN_DRIGHT, { SDL_CONTROLLER_BUTTON_DPAD_RIGHT } },
-            { BTN_R, { SDL_CONTROLLER_BUTTON_RIGHTSHOULDER } },
-            { BTN_L, { SDL_CONTROLLER_BUTTON_LEFTSHOULDER } }
-        },
-        // SDLButtonToAxisDirectionMappings - use built-in LUS defaults
-        std::unordered_map<Ship::StickIndex, std::vector<std::pair<Ship::Direction, SDL_GameControllerButton>>>(),
-        // SDLAxisDirectionToButtonMappings
-        std::unordered_map<CONTROLLERBUTTONS_T, std::vector<std::pair<SDL_GameControllerAxis, int32_t>>>{
-            { BTN_R, { { SDL_CONTROLLER_AXIS_TRIGGERRIGHT, 1 } } },
-            { BTN_Z, { { SDL_CONTROLLER_AXIS_TRIGGERLEFT, 1 } } },
-            { BTN_CUP, { { SDL_CONTROLLER_AXIS_RIGHTY, -1 } } },
-            { BTN_CRIGHT, { { SDL_CONTROLLER_AXIS_RIGHTX, 1 } } }
-        },
-        // SDLAxisDirectionToAxisDirectionMappings - use built-in LUS defaults
-        std::unordered_map<Ship::StickIndex, std::vector<std::pair<Ship::Direction, std::pair<SDL_GameControllerAxis, int32_t>>>>()
-    );
-    auto controlDeck = std::make_shared<LUS::ControlDeck>(std::vector<CONTROLLERBUTTONS_T>(), defaultMappings);
+    auto controlDeck = std::make_shared<LUS::ControlDeck>();
 
     this->context->InitResourceManager(archiveFiles, {}, 3); // without this line InitWindow fails in Gui::Init()
     this->context->InitConsole(); // without this line the GuiWindow constructor fails in ConsoleWindow::InitElement()
@@ -188,8 +121,8 @@ GameEngine::GameEngine() {
     auto gui = std::make_shared<Ship::SpaghettiGui>(std::vector<std::shared_ptr<Ship::GuiWindow>>({}));
     auto wnd = std::make_shared<Fast::Fast3dWindow>(gui);
 
-    // auto wnd = std::make_shared<Fast::Fast3dWindow>(std::vector<std::shared_ptr<Ship::GuiWindow>>({}));
-    // auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
+    //auto wnd = std::make_shared<Fast::Fast3dWindow>(std::vector<std::shared_ptr<Ship::GuiWindow>>({}));
+    //auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
 
     this->context->Init(archiveFiles, {}, 3, { 26800, 512, 1100 }, wnd, controlDeck);
 
@@ -216,22 +149,18 @@ GameEngine::GameEngine() {
     loader->RegisterResourceFactory(std::make_shared<SF64::ResourceFactoryBinaryGenericArrayV0>(),
                                     RESOURCE_FORMAT_BINARY, "GenericArray",
                                     static_cast<uint32_t>(SF64::ResourceType::GenericArray), 0);
-    // loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryBinaryTextureV0>(), RESOURCE_FORMAT_BINARY,
-    //                                 "Texture", static_cast<uint32_t>(Fast::ResourceType::Texture), 0);
-    // loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryBinaryTextureV1>(), RESOURCE_FORMAT_BINARY,
-    //                                 "Texture", static_cast<uint32_t>(Fast::ResourceType::Texture), 1);
-    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryTextureV0>(), RESOURCE_FORMAT_BINARY,
+    loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryBinaryTextureV0>(), RESOURCE_FORMAT_BINARY,
                                     "Texture", static_cast<uint32_t>(Fast::ResourceType::Texture), 0);
-    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryTextureV1>(), RESOURCE_FORMAT_BINARY,
+    loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryBinaryTextureV1>(), RESOURCE_FORMAT_BINARY,
                                     "Texture", static_cast<uint32_t>(Fast::ResourceType::Texture), 1);
+
     loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryBinaryVertexV0>(), RESOURCE_FORMAT_BINARY,
                                     "Vertex", static_cast<uint32_t>(Fast::ResourceType::Vertex), 0);
     loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryXMLVertexV0>(), RESOURCE_FORMAT_XML, "Vertex",
                                     static_cast<uint32_t>(Fast::ResourceType::Vertex), 0);
 
-    loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryBinaryDisplayListV0>(),
-                                    RESOURCE_FORMAT_BINARY, "DisplayList",
-                                    static_cast<uint32_t>(Fast::ResourceType::DisplayList), 0);
+    loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryBinaryDisplayListV0>(), RESOURCE_FORMAT_BINARY,
+                                    "DisplayList", static_cast<uint32_t>(Fast::ResourceType::DisplayList), 0);
     loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryXMLDisplayListV0>(), RESOURCE_FORMAT_XML,
                                     "DisplayList", static_cast<uint32_t>(Fast::ResourceType::DisplayList), 0);
 
@@ -243,8 +172,8 @@ GameEngine::GameEngine() {
                                     "Lights1", static_cast<uint32_t>(Fast::ResourceType::Light), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryArrayV0>(), RESOURCE_FORMAT_BINARY,
                                     "Array", static_cast<uint32_t>(MK64::ResourceType::MK_Array), 0);
-    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryCPUV0>(), RESOURCE_FORMAT_BINARY, "CPU",
-                                    static_cast<uint32_t>(MK64::ResourceType::CPU), 0);
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryKartAIV0>(), RESOURCE_FORMAT_BINARY,
+                                    "KartAI", static_cast<uint32_t>(MK64::ResourceType::KartAI), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryCourseVtxV0>(), RESOURCE_FORMAT_BINARY,
                                     "CourseVtx", static_cast<uint32_t>(MK64::ResourceType::CourseVertex), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryTrackSectionsV0>(),
@@ -253,20 +182,21 @@ GameEngine::GameEngine() {
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryXMLTrackSectionsV0>(),
                                     RESOURCE_FORMAT_XML, "TrackSections",
                                     static_cast<uint32_t>(MK64::ResourceType::TrackSection), 0);
-    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryTrackPathPointsV0>(),
-                                    RESOURCE_FORMAT_BINARY, "Paths",
-                                    static_cast<uint32_t>(MK64::ResourceType::Paths), 0);
-    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryXMLTrackPathPointsV0>(),
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryTrackWaypointsV0>(),
+                                    RESOURCE_FORMAT_BINARY, "Waypoints",
+                                    static_cast<uint32_t>(MK64::ResourceType::Waypoints), 0);
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryXMLTrackWaypointsV0>(),
                                     RESOURCE_FORMAT_XML, "Paths",
-                                    static_cast<uint32_t>(MK64::ResourceType::Paths), 0);
+                                    static_cast<uint32_t>(MK64::ResourceType::Waypoints), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryActorSpawnDataV0>(),
                                     RESOURCE_FORMAT_BINARY, "SpawnData",
                                     static_cast<uint32_t>(MK64::ResourceType::SpawnData), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryUnkActorSpawnDataV0>(),
                                     RESOURCE_FORMAT_BINARY, "UnkSpawnData",
                                     static_cast<uint32_t>(MK64::ResourceType::UnkSpawnData), 0);
-    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryMinimapV0>(), RESOURCE_FORMAT_BINARY,
-                                    "Minimap", static_cast<uint32_t>(MK64::ResourceType::Minimap), 0);
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryMinimapV0>(),
+                                    RESOURCE_FORMAT_BINARY, "Minimap",
+                                    static_cast<uint32_t>(MK64::ResourceType::Minimap), 0);
 
     fontMono = CreateFontWithSize(16.0f, "fonts/Inconsolata-Regular.ttf");
     fontMonoLarger = CreateFontWithSize(20.0f, "fonts/Inconsolata-Regular.ttf");
@@ -287,13 +217,11 @@ bool GameEngine::GenAssetFile() {
 
     auto game = extractor->ValidateChecksum();
     if (!game.has_value()) {
-        ShowMessage("Unsupported ROM",
-                    "The provided ROM is not supported.\n\nCheck the readme for a list of supported versions.");
+        ShowMessage("Unsupported ROM", "The provided ROM is not supported.\n\nCheck the readme for a list of supported versions.");
         exit(1);
     }
 
-    ShowMessage(("Found " + game.value()).c_str(),
-                "The extraction process will now begin.\n\nThis may take a few minutes.", SDL_MESSAGEBOX_INFORMATION);
+    ShowMessage(("Found " + game.value()).c_str(), "The extraction process will now begin.\n\nThis may take a few minutes.", SDL_MESSAGEBOX_INFORMATION);
 
     return extractor->GenerateOTR();
 }
@@ -305,18 +233,19 @@ uint32_t GameEngine::GetInterpolationFPS() {
     } else if (CVarGetInteger("gVsyncEnabled", 1) ||
                !Ship::Context::GetInstance()->GetWindow()->CanDisableVerticalSync()) {
         return std::min<uint32_t>(Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate(),
-                                  CVarGetInteger("gInterpolationFPS", 30));
+                                  CVarGetInteger("gInterpolationFPS", 60));
     }
 
-    return CVarGetInteger("gInterpolationFPS", 30);
+    return CVarGetInteger("gInterpolationFPS", 60);
 }
 
-uint32_t GameEngine::GetInterpolationFrameCount() {
-    return ceil((float) GetInterpolationFPS() / (60.0f / 2 /*gVIsPerFrame*/));
+uint32_t GameEngine::GetInterpolationFrameCount()
+{
+	return ceil((float)GetInterpolationFPS() / (60.0f / 2 /*gVIsPerFrame*/));
 }
 
 extern "C" uint32_t GameEngine_GetInterpolationFrameCount() {
-    return GameEngine::GetInterpolationFrameCount();
+	return GameEngine::GetInterpolationFrameCount();
 }
 
 void GameEngine::ShowMessage(const char* title, const char* message, SDL_MessageBoxFlags type) {
@@ -369,9 +298,6 @@ void GameEngine::Destroy() {
 #ifdef __SWITCH__
     Ship::Switch::Exit();
 #endif
-    GameUI::Destroy();
-    delete GameEngine::Instance;
-    GameEngine::Instance = nullptr;
 }
 
 bool ShouldClearTextureCacheAtEndOfFrame = false;
@@ -398,24 +324,16 @@ void GameEngine::StartFrame() const {
 //     Instance->context->GetWindow()->MainLoop(run_one_game_iter);
 // }
 
-void GameEngine::RunCommands(Gfx* Commands, const std::vector<std::unordered_map<Mtx*, MtxF>>& mtx_replacements) {
+void GameEngine::RunCommands(Gfx* Commands) {
     auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
 
-    if (wnd == nullptr) {
+    if (nullptr == wnd) {
         return;
     }
 
-    auto interpreter = wnd->GetInterpreterWeak().lock().get();
-
-    // Process window events for resize, mouse, keyboard events
     wnd->HandleEvents();
 
-    interpreter->mInterpolationIndex = 0;
-
-    for (const auto& m : mtx_replacements) {
-        wnd->DrawAndRunGraphicsCommands(Commands, m);
-        interpreter->mInterpolationIndex++;
-    }
+    wnd->DrawAndRunGraphicsCommands(Commands, {});
 
     bool curAltAssets = CVarGetInteger("gEnhancements.Mods.AlternateAssets", 0);
     if (prevAltAssets != curAltAssets) {
@@ -428,16 +346,13 @@ void GameEngine::RunCommands(Gfx* Commands, const std::vector<std::unordered_map
 void GameEngine::ProcessGfxCommands(Gfx* commands) {
     std::vector<std::unordered_map<Mtx*, MtxF>> mtx_replacements;
     int target_fps = GameEngine::Instance->GetInterpolationFPS();
-    if (CVarGetInteger("gModifyInterpolationTargetFPS", 0)) {
-        target_fps = CVarGetInteger("gInterpolationTargetFPS", 60);
-    }
     static int last_fps;
     static int last_update_rate;
     static int time;
     int fps = target_fps;
     int original_fps = 60 / 2 /*gVIsPerFrame*/;
 
-    if (target_fps == 30 || original_fps > target_fps) {
+    if (target_fps == 20 || original_fps > target_fps) {
         fps = original_fps;
     }
 
@@ -456,19 +371,15 @@ void GameEngine::ProcessGfxCommands(Gfx* commands) {
             mtx_replacements.emplace_back();
         }
     }
-    // printf("mtxf size: %d\n", mtx_replacements.size());
 
     time -= fps;
 
     auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
     if (wnd != nullptr) {
-        wnd->SetTargetFps(GetInterpolationFPS());
+        wnd->SetTargetFps(CVarGetInteger("gInterpolationFPS", 30));
         wnd->SetMaximumFrameLatency(1);
     }
-    RunCommands(commands, mtx_replacements);
-
-    last_fps = fps;
-    last_update_rate = 2;
+    RunCommands(commands);
 }
 
 // Audio
@@ -490,8 +401,8 @@ void GameEngine::HandleAudioThread() {
         int samples_left = AudioPlayerBuffered();
         u32 num_audio_samples = samples_left < AudioPlayerGetDesiredBuffered() ? SAMPLES_HIGH : SAMPLES_LOW;
 
-        s16 audio_buffer[SAMPLES_PER_FRAME] = { 0 };
-        for (size_t i = 0; i < NUM_AUDIO_CHANNELS; i++) {
+        s16 audio_buffer[SAMPLES_PER_FRAME];
+        for (int i = 0; i < NUM_AUDIO_CHANNELS; i++) {
             create_next_audio_buffer(audio_buffer + i * (num_audio_samples * 2), num_audio_samples);
         }
 
@@ -586,9 +497,7 @@ ImFont* GameEngine::CreateFontWithSize(float size, std::string fontPath) {
         initData->Path = fontPath;
         std::shared_ptr<Ship::Font> fontData = std::static_pointer_cast<Ship::Font>(
             Ship::Context::GetInstance()->GetResourceManager()->LoadResource(fontPath, false, initData));
-        char* fontDataPtr = (char*) malloc(fontData->DataSize);
-        memcpy(fontDataPtr, fontData->Data, fontData->DataSize);
-        font = mImGuiIo->Fonts->AddFontFromMemoryTTF(fontDataPtr, fontData->DataSize, size);
+        font = mImGuiIo->Fonts->AddFontFromMemoryTTF(fontData->Data, fontData->DataSize, size);
     }
     // FontAwesome fonts need to have their sizes reduced by 2.0f/3.0f in order to align correctly
     float iconFontSize = size * 2.0f / 3.0f;
@@ -698,17 +607,6 @@ extern "C" bool GameEngine_OTRSigCheck(const char* data) {
     return strncmp(data, sOtrSignature, strlen(sOtrSignature)) == 0;
 }
 
-extern "C" int32_t GameEngine_ResourceGetTexTypeByName(const char* name) {
-    const auto res = std::static_pointer_cast<Fast::Texture>(ResourceLoad(name));
-
-    if (res != nullptr) {
-        return (int16_t) res->Type;
-    }
-
-    SPDLOG_ERROR("Given texture path is a non-existent resource");
-    return -1;
-}
-
 // struct TimedEntry {
 //     uint64_t duration;
 //     TimerAction action;
@@ -790,14 +688,14 @@ extern "C" int16_t OTRGetRectDimensionFromRightEdge(float v) {
 
 /**
  * Centers an item in a given area.
- *
+ * 
  * Adds the number of extended screen pixels to the location to center.
  * This allows stretching the game window really wide, and the item will stay in-place.
- *
+ * 
  * This is not for centering in the direct center of the screen.
- *
+ * 
  * How to use:
- *
+ * 
  * s32 center = OTRCalculateCenterOfAreaFromRightEdge((SCREEN_WIDTH / 4) + (SCREEN_WIDTH / 2));
  * x = center - (texWidth / 2)
  * x2 = center + (texWidth / 2)
