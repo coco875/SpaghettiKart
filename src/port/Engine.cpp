@@ -388,6 +388,9 @@ void GameEngine::ProcessGfxCommands(Gfx* commands) {
         wnd->SetMaximumFrameLatency(1);
     }
     RunCommands(commands, mtx_replacements);
+
+    last_fps = fps;
+    last_update_rate = 2;
 }
 
 // Audio
