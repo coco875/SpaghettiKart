@@ -324,16 +324,24 @@ void GameEngine::StartFrame() const {
 //     Instance->context->GetWindow()->MainLoop(run_one_game_iter);
 // }
 
-void GameEngine::RunCommands(Gfx* Commands) {
+void GameEngine::RunCommands(Gfx* Commands, const std::vector<std::unordered_map<Mtx*, MtxF>>& mtx_replacements) {
     auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
 
-    if (nullptr == wnd) {
+    if (wnd == nullptr) {
         return;
     }
 
+    auto interpreter = wnd->GetInterpreterWeak().lock().get();
+
+    // Process window events for resize, mouse, keyboard events
     wnd->HandleEvents();
 
-    wnd->DrawAndRunGraphicsCommands(Commands, {});
+    interpreter->mInterpolationIndex = 0;
+
+    for (const auto& m : mtx_replacements) {
+        wnd->DrawAndRunGraphicsCommands(Commands, m);
+        interpreter->mInterpolationIndex++;
+    }
 
     bool curAltAssets = CVarGetInteger("gEnhancements.Mods.AlternateAssets", 0);
     if (prevAltAssets != curAltAssets) {
@@ -379,7 +387,7 @@ void GameEngine::ProcessGfxCommands(Gfx* commands) {
         wnd->SetTargetFps(CVarGetInteger("gInterpolationFPS", 30));
         wnd->SetMaximumFrameLatency(1);
     }
-    RunCommands(commands);
+    RunCommands(commands, mtx_replacements);
 }
 
 // Audio
