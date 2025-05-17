@@ -333,6 +333,7 @@ void func_802B5794(Mat4 mtx, Vec3f from, Vec3f to) {
 
 // create a rotation matrix around the x axis
 void mtxf_rotate_x(Mat4 mat, s16 angle) {
+    FrameInterpolation_RecordMatrixRotate1Coord(&mat, 0, angle);
     f32 sin_theta = sins(angle);
     f32 cos_theta = coss(angle);
 
