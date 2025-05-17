@@ -1,3 +1,6 @@
+#ifndef GCC
+#define gRaceState_AS_U16
+#endif
 #include <libultraship.h>
 #include <libultra/vi.h>
 #include <libultra/os.h>
@@ -41,7 +44,6 @@
 #include "buffers/gfx_output_buffer.h"
 #include <bridge/gfxdebuggerbridge.h>
 #include "enhancements/freecam/freecam.h"
-#include "port/interpolation/FrameInterpolation.h"
 #include "engine/wasm.h"
 #include "port/Game.h"
 #include "engine/Matrix.h"
@@ -116,7 +118,7 @@ u8 gControllerBits;
 CollisionGrid gCollisionGrid[1024];
 u16 gNumActors;
 u16 gMatrixObjectCount;
-s32 gTickLogic;   // Tick game physics at 60fps
+s32 gTickLogic; // Tick game physics at 60fps
 s32 gTickVisuals; // Tick animations at 30fps
 s32 gTickGame;
 f32 D_80150118;
@@ -176,7 +178,7 @@ OSMesgQueue gPIMesgQueue;
 
 s32 gGamestate = 0xFFFF;
 // gRaceState is externed as an s32 in other files. D_800DC514 is only used in main.c, likely a developer mistake.
-s32 gRaceState = RACE_INIT;
+u16 gRaceState = RACE_INIT;
 u16 D_800DC514 = 0;
 u16 creditsRenderMode = 0; // Renders the whole track. Displays red if used in normal race mode.
 u16 gDemoMode = DEMO_MODE_INACTIVE;
@@ -634,19 +636,13 @@ void game_init_clear_framebuffer(void) {
     clear_framebuffer(0);
 }
 
-//! @deprecated
-// This function was made to tick the game logic at native 60 fps.
-// However, many game objects are not in that special tick loop and run at native 30fps.
-// Thus adding `if (gTickVisuals) { // stuff here }` would prevent double speed and allow ticking visuals once every 30 fps.
-// This does not however, create extra interpolated frames. Whereas a possible solution, it is not the best solution.
-// This function should be cleaned up and removed, since frame interpolation now exists.
 void calculate_updaterate(void) {
     static u32 prevtime = 0;
     static u32 remainder = 0;
     static u32 logicAccumulator = 0;
     static u32 visualsAccumulator = 0;
-    static u32 frameCounter = 0; // For tracking frames for logic updates
-    u32 now = SDL_GetTicks();    // Replaces osGetTime()
+    static u32 frameCounter = 0;   // For tracking frames for logic updates
+    u32 now = SDL_GetTicks();      // Replaces osGetTime()
     u32 frameRate = 0;
     s32 total;
 
@@ -670,9 +666,9 @@ void calculate_updaterate(void) {
     // Avoid division by zero
     if (total > 0) {
         // Calculate approximate frame rate (milliseconds per frame)
-        frameRate = 1000 / total; // Frame rate in frames per second
+        frameRate = 1000 / total;  // Frame rate in frames per second
     } else {
-        frameRate = targetFPS; // Fallback to target FPS
+        frameRate = targetFPS;  // Fallback to target FPS
     }
 
     // Default both to no updates
@@ -680,13 +676,13 @@ void calculate_updaterate(void) {
     gTickVisuals = 0;
 
     // Calculate the update rates based on target FPS
-    s32 logicUpdateInterval = 1000 / 60;   // Time in ms between logic updates
+    s32 logicUpdateInterval = 1000 / 60; // Time in ms between logic updates
     s32 visualsUpdateInterval = 1000 / 30; // 30 FPS for visuals
 
-    // Accumulate time for logic updates
+ // Accumulate time for logic updates
     logicAccumulator += total;
     if (logicAccumulator >= logicUpdateInterval) {
-        logicAccumulator -= logicUpdateInterval; // Subtract full interval
+        logicAccumulator -= logicUpdateInterval;  // Subtract full interval
         if (targetFPS < 60) {
             gTickLogic = 2;
         } else {
@@ -695,10 +691,9 @@ void calculate_updaterate(void) {
     }
 
     // Visual updates (based on 30 FPS equivalent)
-    visualsAccumulator += total;                       // Increment for each frame
-    if (visualsAccumulator >= visualsUpdateInterval) { // Check if it's time to update visuals
+    visualsAccumulator += total;  // Increment for each frame
+    if (visualsAccumulator >= visualsUpdateInterval) {  // Check if it's time to update visuals
         visualsAccumulator -= visualsUpdateInterval;
-        // gTickVisuals <-- Goes here to use the native 60fps system
     }
     gTickVisuals = 1;    // Perform visual update
 }
@@ -708,26 +703,28 @@ void display_debug_info(void) {
     if (!gEnableDebugMode) {
         D_800DC514 = false;
     } else if (D_800DC514) {
-        if ((gControllerOne->buttonPressed & R_TRIG) && (gControllerOne->button & A_BUTTON) &&
+        if ((gControllerOne->buttonPressed & R_TRIG) &&
+            (gControllerOne->button & A_BUTTON) &&
             (gControllerOne->button & B_BUTTON)) {
             D_800DC514 = false;
         }
         rotY = camera1->rot[1];
         gDebugPathCount = D_800DC5EC->pathCounter;
 
-        if (rotY < 0x2000) {
-            func_80057A50(40, 100, "SOUTH  ", gDebugPathCount);
-        } else if (rotY < 0x6000) {
-            func_80057A50(40, 100, "EAST   ", gDebugPathCount);
-        } else if (rotY < 0xA000) {
-            func_80057A50(40, 100, "NORTH  ", gDebugPathCount);
-        } else if (rotY < 0xE000) {
-            func_80057A50(40, 100, "WEST   ", gDebugPathCount);
-        } else {
-            func_80057A50(40, 100, "SOUTH  ", gDebugPathCount);
-        }
+    if (rotY < 0x2000) {
+        func_80057A50(40, 100, "SOUTH  ", gDebugPathCount);
+    } else if (rotY < 0x6000) {
+        func_80057A50(40, 100, "EAST   ", gDebugPathCount);
+    } else if (rotY < 0xA000) {
+        func_80057A50(40, 100, "NORTH  ", gDebugPathCount);
+    } else if (rotY < 0xE000) {
+        func_80057A50(40, 100, "WEST   ", gDebugPathCount);
+    } else {
+        func_80057A50(40, 100, "SOUTH  ", gDebugPathCount);
+    }
 
-    } else if ((gControllerOne->buttonPressed & L_TRIG) && (gControllerOne->button & A_BUTTON) &&
+    } else if ((gControllerOne->buttonPressed & L_TRIG) &&
+               (gControllerOne->button & A_BUTTON) &&
                (gControllerOne->button & B_BUTTON)) {
         D_800DC514 = true;
     }
@@ -737,11 +734,13 @@ void display_debug_info(void) {
     } else {
         if (gEnableResourceMeters) {
             resource_display();
-            if (!(gControllerOne->button & L_TRIG) && (gControllerOne->button & R_TRIG) &&
-                (gControllerOne->buttonPressed & B_BUTTON)) {
+            if (!(gControllerOne->button & L_TRIG) && 
+                 (gControllerOne->button & R_TRIG) && 
+                 (gControllerOne->buttonPressed & B_BUTTON)) {
                 gEnableResourceMeters = 0;
             }
-        } else if (!(gControllerOne->button & L_TRIG) && (gControllerOne->button & R_TRIG) &&
+        } else if (!(gControllerOne->button & L_TRIG) && 
+                   (gControllerOne->button & R_TRIG) && 
                    (gControllerOne->buttonPressed & B_BUTTON)) {
             gEnableResourceMeters = 1;
         }
@@ -759,20 +758,9 @@ void process_game_tick(void) {
         func_800382DC();
     }
 
-
-    // tick camera
-    // This looks like it should be in the switch.
-    // But it needs to be here for player 1 to work in all modes.
+    // Editor requires this for camera movement.
     func_8001EE98(gPlayerOneCopy, camera1, 0);
-    // Required if freecam was to have a new camera
-    //if (CVarGetInteger("gFreecam", 0) == true) {
-    //    freecam(gFreecamCamera, gPlayerOneCopy, 0);
-    //} else {
-        
-        //func_8001EE98(gPlayerOneCopy, camera1, 0);
-    //}
 
-    // Editor requires this so the camera keeps moving while the game is paused.
     if (gIsEditorPaused == true) {
         return;
     }
@@ -859,7 +847,7 @@ void race_logic_loop(void) {
         select_framebuffer();
     }
 
-    switch (gActiveScreenMode) {
+    switch(gActiveScreenMode) {
         case SCREEN_MODE_1P:
             render_screens(RENDER_SCREEN_MODE_1P_PLAYER_ONE, 0, 0);
             break;
@@ -942,8 +930,6 @@ void race_logic_loop(void) {
  */
 
 void game_state_handler(void) {
-    FrameInterpolation_StartRecord();
-
 #if DVDL
     if ((gControllerOne->button & L_TRIG) && (gControllerOne->button & R_TRIG) && (gControllerOne->button & Z_TRIG) &&
         (gControllerOne->button & A_BUTTON)) {
@@ -980,7 +966,6 @@ void game_state_handler(void) {
             credits_loop();
             break;
     }
-    FrameInterpolation_StopRecord();
 }
 
 void interrupt_gfx_sptask(void) {
@@ -1293,9 +1278,9 @@ void thread5_iteration(void) {
     FB_CreateFramebuffers();
     read_controllers();
     game_state_handler();
-
-    // call_render_hook();
-
+    
+    //call_render_hook();
+    
     end_master_display_list();
     display_and_vsync();
 }
