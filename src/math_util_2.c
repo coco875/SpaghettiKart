@@ -807,27 +807,29 @@ UNUSED void func_8004252C(Mat4 arg0, u16 arg1, u16 arg2) {
     arg0[2][2] = sp28 * cos_theta_y;
 }
 
-void mtxf_set_matrix_transformation(Mat4 transformMatrix, Vec3f translationVector, Vec3su rotationVector,
-                                    f32 scalingFactor) {
-    f32 sinX = sins(rotationVector[0]);
-    f32 cosX = coss(rotationVector[0]);
-    f32 sinY = sins(rotationVector[1]);
-    f32 cosY = coss(rotationVector[1]);
-    f32 sinZ = sins(rotationVector[2]);
-    f32 cosZ = coss(rotationVector[2]);
+void mtxf_set_matrix_transformation(Mat4 transformMatrix, Vec3f location, Vec3su rotation,
+                                    f32 scale) {
 
-    transformMatrix[0][0] = ((cosY * cosZ) + (sinX * sinY * sinZ)) * scalingFactor;
-    transformMatrix[1][0] = ((-cosY * sinZ) + (sinX * sinY * cosZ)) * scalingFactor;
-    transformMatrix[2][0] = (cosX * sinY) * scalingFactor;
-    transformMatrix[3][0] = translationVector[0];
-    transformMatrix[0][1] = cosX * sinZ * scalingFactor;
-    transformMatrix[1][1] = cosX * cosZ * scalingFactor;
-    transformMatrix[2][1] = -sinX * scalingFactor;
-    transformMatrix[3][1] = translationVector[1];
-    transformMatrix[0][2] = ((-sinY * cosZ) + (sinX * cosY * sinZ)) * scalingFactor;
-    transformMatrix[1][2] = ((sinY * sinZ) + (sinX * cosY * cosZ)) * scalingFactor;
-    transformMatrix[2][2] = cosX * cosY * scalingFactor;
-    transformMatrix[3][2] = translationVector[2];
+    FrameInterpolation_RecordSetMatrixTransformation(transformMatrix, location, rotation, scale);
+    f32 sinX = sins(rotation[0]);
+    f32 cosX = coss(rotation[0]);
+    f32 sinY = sins(rotation[1]);
+    f32 cosY = coss(rotation[1]);
+    f32 sinZ = sins(rotation[2]);
+    f32 cosZ = coss(rotation[2]);
+
+    transformMatrix[0][0] = ((cosY * cosZ) + (sinX * sinY * sinZ)) * scale;
+    transformMatrix[1][0] = ((-cosY * sinZ) + (sinX * sinY * cosZ)) * scale;
+    transformMatrix[2][0] = (cosX * sinY) * scale;
+    transformMatrix[3][0] = location[0];
+    transformMatrix[0][1] = cosX * sinZ * scale;
+    transformMatrix[1][1] = cosX * cosZ * scale;
+    transformMatrix[2][1] = -sinX * scale;
+    transformMatrix[3][1] = location[1];
+    transformMatrix[0][2] = ((-sinY * cosZ) + (sinX * cosY * sinZ)) * scale;
+    transformMatrix[1][2] = ((sinY * sinZ) + (sinX * cosY * cosZ)) * scale;
+    transformMatrix[2][2] = cosX * cosY * scale;
+    transformMatrix[3][2] = location[2];
     transformMatrix[0][3] = 0.0f;
     transformMatrix[1][3] = 0.0f;
     transformMatrix[2][3] = 0.0f;
@@ -919,8 +921,7 @@ void set_transform_matrix(Mat4 dest, Vec3f orientationVector, Vec3f positionVect
     Vec3f sp38;
     Vec3f sp2C;
 
-    FrameInterpolation_Record_set_transform_matrix(dest, orientationVector, positionVector, rotationAngle, scaleFactor);
-    
+    FrameInterpolation_RecordSetTransformMatrix(dest, orientationVector, positionVector, rotationAngle, scaleFactor);
     vec3f_set_xyz(sp44, sins(rotationAngle), 0.0f, coss(rotationAngle));
     vec3f_normalize(orientationVector);
     vec3f_cross_product(sp38, orientationVector, sp44);

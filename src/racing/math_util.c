@@ -391,39 +391,6 @@ void mtxf_s16_rotate_z(Mat4 mat, s16 angle) {
      */
 }
 
-void func_802B5B14(Vec3f b, Vec3s rotate) {
-    Mat4 mtx;
-    Vec3f copy;
-
-    f32 sx = sins(rotate[0]);
-    f32 cx = coss(rotate[0]);
-
-    f32 sy = sins(rotate[1]);
-    f32 cy = coss(rotate[1]);
-
-    f32 sz = sins(rotate[2]);
-    f32 cz = coss(rotate[2]);
-
-    copy[0] = b[0];
-    copy[1] = b[1];
-
-    mtx[0][0] = cy * cz + sx * sy * sz;
-    mtx[1][0] = -cy * sz + sx * sy * cz;
-    mtx[2][0] = cx * sy;
-
-    mtx[0][1] = cx * sz;
-    mtx[1][1] = cx * cz;
-    mtx[2][1] = -sx;
-
-    mtx[0][2] = -sy * cz + sx * cy * sz;
-    mtx[1][2] = sy * sz + sx * cy * cz;
-    mtx[2][2] = cx * cy;
-
-    b[0] = copy[0] * mtx[0][0] + copy[1] * mtx[0][1] + copy[1] * mtx[0][2];
-    b[1] = copy[0] * mtx[1][0] + copy[1] * mtx[1][1] + copy[1] * mtx[1][2];
-    b[2] = copy[0] * mtx[2][0] + copy[1] * mtx[2][1] + copy[1] * mtx[2][2];
-}
-
 void func_802B5CAC(s16 arg0, s16 arg1, Vec3f arg2) {
     f32 sp2C = sins(arg1);
     f32 sp28 = coss(arg1);
@@ -467,6 +434,7 @@ void set_track_light_direction(Lights1* addr, s16 pitch, s16 yaw, s32 numLights)
 
 // multiply a matrix with a number
 void mtxf_scale(Mat4 mat, f32 coef) {
+    FrameInterpolation_RecordMatrixScale(mat, coef);
     mat[0][0] *= coef;
     mat[1][0] *= coef;
     mat[2][0] *= coef;
@@ -631,7 +599,9 @@ void func_802B64C4(Vec3f arg0, s16 arg1) {
     arg0[2] = sp2C * temp1 + (temp_f0 * temp3);
 }
 
-void calculate_orientation_matrix(Mat3 dest, f32 arg1, f32 arg2, f32 arg3, s16 rotationAngle) {
+// Rotates the object around the Y axis.
+// x,y,z is a direction (not a rotator).
+void calculate_orientation_matrix(Mat3 dest, f32 x, f32 y, f32 z, s16 rotationAngle) {
     Mat3 mtx_rot_y;
     Mat3 matrix;
     s32 i, j;
@@ -642,6 +612,7 @@ void calculate_orientation_matrix(Mat3 dest, f32 arg1, f32 arg2, f32 arg3, s16 r
     UNUSED s32 pad[3];
     f32 sinValue;
     f32 cossValue;
+    FrameInterpolation_RecordCalculateOrientationMatrix(dest, x, y, z, rotationAngle);
 
     sinValue = sins(rotationAngle);
     cossValue = coss(rotationAngle);
@@ -657,7 +628,7 @@ void calculate_orientation_matrix(Mat3 dest, f32 arg1, f32 arg2, f32 arg3, s16 r
     mtx_rot_y[1][0] = 0;
     mtx_rot_y[0][1] = 0;
 
-    if (arg2 == 1) { // set matrix to identity
+    if (y == 1) { // set matrix to identity
 
         for (i = 0; i < 3; i++) {
             for (j = 0; j < 3; j++) {
@@ -665,7 +636,7 @@ void calculate_orientation_matrix(Mat3 dest, f32 arg1, f32 arg2, f32 arg3, s16 r
             }
         }
 
-    } else if (arg2 == -1) { // set matrix to identity with the second column negative
+    } else if (y == -1) { // set matrix to identity with the second column negative
 
         for (i = 0; i < 3; i++) {
             for (j = 0; j < 3; j++) {
@@ -676,10 +647,10 @@ void calculate_orientation_matrix(Mat3 dest, f32 arg1, f32 arg2, f32 arg3, s16 r
         matrix[1][1] = -1;
 
     } else {
-        a = (f32) - (360.0 - ((f64) (calculate_vector_angle_xy(arg2) * 180.0f) / M_PI));
-        b = -arg3 / sqrtf((arg1 * arg1) + (arg3 * arg3));
+        a = (f32) - (360.0 - ((f64) (calculate_vector_angle_xy(y) * 180.0f) / M_PI));
+        b = -z / sqrtf((x * x) + (z * z));
         c = 0;
-        d = arg1 / sqrtf((arg1 * arg1) + (arg3 * arg3));
+        d = x / sqrtf((x * x) + (z * z));
         calculate_rotation_matrix(matrix, a, b, c, d);
     }
     dest[0][0] = (mtx_rot_y[0][0] * matrix[0][0]) + (mtx_rot_y[0][1] * matrix[1][0]) + (mtx_rot_y[0][2] * matrix[2][0]);
@@ -760,7 +731,7 @@ void calculate_rotation_matrix(Mat3 destMatrix, s16 rotationAngle, f32 rotationX
     destMatrix[0][1] = temp + (rotationZ * sinValue);
 }
 
-void func_802B6BC0(Mat4 arg0, s16 arg1, f32 arg2, f32 arg3, f32 arg4) {
+UNUSED void func_802B6BC0(Mat4 arg0, s16 arg1, f32 arg2, f32 arg3, f32 arg4) {
     f32 sine;
     f32 cosine;
     f32 temp_f0;

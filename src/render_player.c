@@ -927,18 +927,6 @@ UNUSED void func_80021F50(Mat4 arg0, Vec3f arg1) {
     arg0[3][2] += arg1[2];
 }
 
-void mtxf_scale2(Mat4 arg0, f32 scale) {
-    arg0[0][0] *= scale;
-    arg0[1][0] *= scale;
-    arg0[2][0] *= scale;
-    arg0[0][1] *= scale;
-    arg0[1][1] *= scale;
-    arg0[2][1] *= scale;
-    arg0[0][2] *= scale;
-    arg0[1][2] *= scale;
-    arg0[2][2] *= scale;
-}
-
 /**
  * This function writes a fixed-point value to each Mtx entry. This is not how the Mtx struct works.
  * The first half of Mtx only holds s16 whole numbers and the second half holds the s16 decimal (fractional) parts.
@@ -1523,7 +1511,7 @@ void render_player_shadow(Player* player, s8 playerId, s8 screenId) {
         spCC[1] = player->unk_074 + 1.0f;
         spCC[2] = player->pos[2] + ((spB0 * coss(spC0)) - (spAC * sins(spC0)));
         mtxf_translate_rotate(mtx, spCC, spC4);
-        mtxf_scale2(mtx, gCharacterSize[player->characterId] * player->size);
+        mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     }
     // convert_to_fixed_point_matrix(&gGfxPool->mtxShadow[playerId + (screenId * 8)], mtx);
 
@@ -1582,7 +1570,7 @@ void render_player_shadow_credits(Player* player, s8 playerId, s8 arg2) {
     spCC[1] = gObjectList[indexObjectList1[playerId]].pos[1] + sp94[playerId];
 
     mtxf_translate_rotate(mtx, spCC, spC4);
-    mtxf_scale2(mtx, gCharacterSize[player->characterId] * player->size);
+    mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxShadow[playerId + (arg2 * 8)], mtx);
 
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxShadow[playerId + (arg2 * 8)]),
@@ -1674,7 +1662,7 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
 #endif
     }
     mtxf_translate_rotate(mtx, sp154, sp14C);
-    mtxf_scale2(mtx, gCharacterSize[player->characterId] * player->size);
+    mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxKart[playerId + (screenId * 8)], mtx);
 
     // @port: Tag the transform.
@@ -1801,7 +1789,7 @@ void render_ghost(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     }
 
     mtxf_translate_rotate(mtx, spDC, spD4);
-    mtxf_scale2(mtx, gCharacterSize[player->characterId] * player->size);
+    mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxKart[playerId + (screenId * 8)], mtx);
 
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxKart[playerId + (screenId * 8)]),
@@ -1847,7 +1835,7 @@ void func_80025DE8(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     sp94[2] = player->unk_050[screenId];
 
     mtxf_translate_rotate(mtx, sp9C, sp94);
-    mtxf_scale2(mtx, gCharacterSize[player->characterId] * player->size);
+    mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], mtx);
 
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount]),
@@ -1897,7 +1885,7 @@ void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 a
     }
 
     mtxf_translate_rotate(mtx, sp9C, sp94);
-    mtxf_scale2(mtx, gCharacterSize[player->characterId] * player->size);
+    mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], mtx);
 
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount]),

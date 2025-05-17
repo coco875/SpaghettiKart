@@ -4971,7 +4971,7 @@ void func_800652D4(Vec3f arg0, Vec3s arg1, f32 arg2) {
     Mat4 mtx;
 
     mtxf_translate_rotate(mtx, arg0, arg1);
-    mtxf_scale2(mtx, arg2);
+    mtxf_scale(mtx, arg2);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], mtx);
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount]),
     //           G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
@@ -6067,7 +6067,7 @@ void render_battle_balloon(Player* player, s8 arg1, s16 arg2, s8 arg3) {
     sp12C[2] = D_8018D7D0[arg1][arg2] - (D_8018D860[arg1][arg2] * coss(temp_t1)) -
                ((D_8018D890[arg1][arg2] * 8) * sins(temp_t1));
     mtxf_translate_rotate(mtx, sp134, sp12C);
-    mtxf_scale2(mtx, var_f20);
+    mtxf_scale(mtx, var_f20);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], sp140);
 
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount]),
@@ -6192,7 +6192,7 @@ void render_balloon(Vec3f arg0, f32 arg1, s16 arg2, s16 arg3) {
     spF4[1] = camera1->rot[1];
     spF4[2] = arg2;
     mtxf_translate_rotate(mtx, spFC, spF4);
-    mtxf_scale2(mtx, arg1);
+    mtxf_scale(mtx, arg1);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], sp108);
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount]),
     //           G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
