@@ -108,7 +108,7 @@ void render_limb_or_add_mtx(Armature* arg0, s16* arg1, AnimationLimbVector arg2,
         model = (virtualModel);
         gSPDisplayList(gDisplayListHead++, model);
     }
-    //FrameInterpolation_RecordMatrixPop(modelMatrix);
+    FrameInterpolation_RecordMatrixPop(modelMatrix);
 }
 
 void render_armature(Armature* animation, Animation* arg1, s16 timeCycle) {

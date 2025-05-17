@@ -11,12 +11,10 @@ extern "C" {
 
 void AddMatrix(std::vector<Mtx>& stack, Mat4 mtx, s32 flags) {
     // Push a new matrix to the stack
-
-//FrameInterpolation_RecordMatrixPush((Mat4*) &mtx);
-
     stack.emplace_back();
 
     // Convert to a fixed-point matrix
+    FrameInterpolation_RecordMatrixMtxFToMtx((MtxF*)mtx, &stack.back());
     guMtxF2L(mtx, &stack.back());
 
     // Load the matrix

@@ -33,7 +33,7 @@ void render_actor_mario_sign(Camera* arg0, UNUSED Mat4 arg1, struct Actor* arg2)
         if (render_set_position(mtx, 0) != 0) {
             gSPDisplayList(gDisplayListHead++, d_course_mario_raceway_dl_sign);
         }
-    //FrameInterpolation_RecordMatrixPop(mtx);
+    FrameInterpolation_RecordMatrixPop(mtx);
 
     }
 }
