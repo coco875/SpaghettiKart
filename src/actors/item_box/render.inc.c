@@ -3,6 +3,8 @@
 #include <macros.h>
 #include "port/interpolation/FrameInterpolation.h"
 
+#define TAG_ITEM_ADDR(x) ((u32) 0x10000000 | (u32) x)
+
 /**
  * @brief Renders the item box actor.
  *
@@ -27,8 +29,8 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
     f32 temp_f2_2;
     f32 someMultiplier;
 
-    FrameInterpolation_RecordMatrixPush(someMatrix1);
-    FrameInterpolation_RecordMatrixPush(someMatrix2);
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild(TAG_ITEM_ADDR(item_box), 0);
 
     temp_f0 = is_within_render_distance(camera->pos, item_box->pos, camera->rot[1], 0.0f, gCameraZoom[camera - camera1],
                                         4000000.0f);
@@ -78,18 +80,18 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
 
             gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
             gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
-            if ((item_box->rot[1] < 0xAA1) && (item_box->rot[1] > 0)) {
-                gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
-            } else if ((item_box->rot[1] >= 0x6AA5) && (item_box->rot[1] < 0x754E)) {
-                gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
-            } else if ((item_box->rot[1] >= 0x38E1) && (item_box->rot[1] < 0x438A)) {
-                gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
-            } else if ((item_box->rot[1] >= 0xC711) && (item_box->rot[1] < 0xD1BA)) {
-                gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
-            } else {
+            // if ((item_box->rot[1] < 0xAA1) && (item_box->rot[1] > 0)) {
+            //     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
+            // } else if ((item_box->rot[1] >= 0x6AA5) && (item_box->rot[1] < 0x754E)) {
+            //     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
+            // } else if ((item_box->rot[1] >= 0x38E1) && (item_box->rot[1] < 0x438A)) {
+            //     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
+            // } else if ((item_box->rot[1] >= 0xC711) && (item_box->rot[1] < 0xD1BA)) {
+            //     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
+            // } else {
                 gDPSetBlendMask(gDisplayListHead++, 0xFF);
                 gDPSetRenderMode(gDisplayListHead++, G_RM_ZB_CLD_SURF, G_RM_ZB_CLD_SURF2);
-            }
+            // }
             gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
             gSPDisplayList(gDisplayListHead++, D_0D003090);
         } else {
@@ -183,7 +185,6 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
         }
         gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     }
-
-    FrameInterpolation_RecordMatrixPop(someMatrix1);
-    FrameInterpolation_RecordMatrixPop(someMatrix2);
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }
