@@ -1484,6 +1484,7 @@ void render_player_shadow(Player* player, s8 playerId, s8 screenId) {
     UNUSED Vec3f pad2;
     f32 var_f2;
 
+    FrameInterpolation_RecordOpenChild("Kart Shadow", TAG_ITEM_ADDR(player));
     temp_t9 = (u16) (player->unk_048[screenId] + player->rotation[1] + player->unk_0C0) / 128; // << 7) & 0xFFFF;
     spC0 = -player->rotation[1] - player->unk_0C0;
 
@@ -1547,6 +1548,7 @@ void render_player_shadow(Player* player, s8 playerId, s8 screenId) {
 
     gSPDisplayList(gDisplayListHead++, common_square_plain_render);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
+    FrameInterpolation_RecordCloseChild();
 }
 
 void render_player_shadow_credits(Player* player, s8 playerId, s8 arg2) {

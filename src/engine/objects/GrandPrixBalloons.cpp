@@ -3,7 +3,6 @@
 #include "port/Game.h"
 #include "assets/other_textures.h"
 #include "assets/common_data.h"
-#include "port/interpolation/FrameInterpolation.h"
 
 extern "C" {
 #include "update_objects.h"
@@ -13,6 +12,7 @@ extern "C" {
 #include "math_util.h"
 #include "math_util_2.h"
 #include "menus.h"
+#include "port/interpolation/FrameInterpolation.h"
 }
 
 size_t OGrandPrixBalloons::_count = 0;
@@ -74,7 +74,7 @@ void OGrandPrixBalloons::Draw(s32 cameraId) {
         return;
     }
 
-    gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D007E98);
+    gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D007E98);
     gDPLoadTLUT_pal256(gDisplayListHead++, gTLUTOnomatopoeia);
     func_8004B614(0, 0, 0, 0, 0, 0, 0);
     gDPSetAlphaCompare(gDisplayListHead++, G_AC_THRESHOLD);
@@ -85,14 +85,14 @@ void OGrandPrixBalloons::Draw(s32 cameraId) {
                          GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA));
     D_80183E80[0] = 0;
     D_80183E80[1] = 0x8000;
-    rsp_load_texture((uint8_t*) gTextureBalloon1, 64, 32);
+    rsp_load_texture((uint8_t*)gTextureBalloon1, 64, 32);
     for (var_s1 = 0; var_s1 < _numBalloons; var_s1++) {
         objectIndex = gObjectParticle3[var_s1];
         if ((objectIndex != NULL_OBJECT_ID) && (gObjectList[objectIndex].state >= 2)) {
             OGrandPrixBalloons::func_80053D74(objectIndex, cameraId, 0);
         }
     }
-    rsp_load_texture((uint8_t*) gTextureBalloon2, 64, 32);
+    rsp_load_texture((uint8_t*)gTextureBalloon2, 64, 32);
     for (var_s1 = 0; var_s1 < _numBalloons; var_s1++) {
         objectIndex = gObjectParticle3[var_s1];
         if ((objectIndex != NULL_OBJECT_ID) && (gObjectList[objectIndex].state >= 2)) {
@@ -106,25 +106,20 @@ void OGrandPrixBalloons::func_80053D74(s32 objectIndex, UNUSED s32 arg1, s32 ver
 
     Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_hedgehog);
 
-    size_t i = 0;
+    FrameInterpolation_RecordOpenChild("Balloon", TAG_ITEM_ADDR(object)); //Not working properly just yet
+
     if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
         object = &gObjectList[objectIndex];
-
-        // @port: Tag the transform.
-        FrameInterpolation_RecordOpenChild("Balloon",
-                                           TAG_ITEM_ADDR((objectIndex << 32) + i++)); // Not working properly just yet
-
         D_80183E80[2] = (s16) (object->unk_084[6] + 0x8000);
         rsp_set_matrix_transformation(object->pos, (u16*) D_80183E80, object->sizeScaling);
         set_color_render((s32) object->unk_084[0], (s32) object->unk_084[1], (s32) object->unk_084[2],
                          (s32) object->unk_084[3], (s32) object->unk_084[4], (s32) object->unk_084[5],
                          (s32) object->primAlpha);
-        gSPVertex(gDisplayListHead++, (uintptr_t) &vtx[vertexIndex], 4, 0);
-        gSPDisplayList(gDisplayListHead++, (Gfx*) common_rectangle_display);
-
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
+        gSPVertex(gDisplayListHead++, (uintptr_t)&vtx[vertexIndex], 4, 0);
+        gSPDisplayList(gDisplayListHead++, (Gfx*)common_rectangle_display);
     }
+
+    FrameInterpolation_RecordCloseChild();
 }
 
 void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
@@ -138,7 +133,7 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
     object = &gObjectList[objectIndex];
     object->sizeScaling = 0.15f;
 
-    if (IsMarioRaceway()) {
+    if (GetCourse() == GetMarioRaceway()) {
         sp2C = random_int(0x00C8U);
         sp28 = random_int(_numBalloons3);
         sp24 = random_int(0x0096U);
@@ -146,7 +141,7 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
         object->origin_pos[0] = (f32) ((((f64) Pos.x + 100.0) - (f64) sp2C) * (f64) xOrientation);
         object->origin_pos[1] = (f32) (Pos.y + sp28);
         object->origin_pos[2] = (f32) (((f64) Pos.z + 200.0) - (f64) sp24);
-    } else if (IsRoyalRaceway()) {
+    } else if (GetCourse() == GetRoyalRaceway()) {
         sp2C = random_int(0x0168U);
         sp28 = random_int(_numBalloons3);
         sp24 = random_int(0x00B4U);
@@ -154,7 +149,7 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
         object->origin_pos[0] = (f32) ((((f64) Pos.x + 180.0) - (f64) sp2C) * (f64) xOrientation);
         object->origin_pos[1] = (f32) (Pos.y + sp28);
         object->origin_pos[2] = (f32) (((f64) Pos.z + 200.0) - (f64) sp24);
-    } else if (IsLuigiRaceway()) {
+    } else if (GetCourse() == GetLuigiRaceway()) {
         sp2C = random_int(0x012CU);
         sp28 = random_int(_numBalloons3);
         sp24 = random_int(0x0096U);
@@ -197,10 +192,7 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
 
 void OGrandPrixBalloons::func_80074D94(s32 objectIndex) {
     if (gObjectList[objectIndex].unk_0AE == 1) {
-        //! @warning this fades out the balloons. Original game uses _numBalloons3 here but they disappear before
-        //! off-screen.
-        // So _numBalloons replaces it for now.
-        if ((_numBalloons <= gObjectList[objectIndex].offset[1]) &&
+        if ((_numBalloons2 <= gObjectList[objectIndex].offset[1]) &&
             (s16_step_down_towards(&gObjectList[objectIndex].primAlpha, 0, 8) != 0)) {
             func_80086F60(objectIndex);
         }
@@ -222,8 +214,7 @@ void OGrandPrixBalloons::func_80074E28(s32 objectIndex) {
         case 0:
             break;
         case 3:
-            OGrandPrixBalloons::func_80041480(&gObjectList[objectIndex].unk_084[6], -0x1000, 0x1000,
-                                              &gObjectList[objectIndex].unk_084[7]);
+            OGrandPrixBalloons::func_80041480(&gObjectList[objectIndex].unk_084[6], -0x1000, 0x1000, &gObjectList[objectIndex].unk_084[7]);
             if (gObjectList[objectIndex].unk_0AE == 0) {
                 func_80072428(objectIndex);
             }
