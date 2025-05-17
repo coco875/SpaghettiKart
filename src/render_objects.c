@@ -936,11 +936,7 @@ void func_800484BC(Vec3f arg0, Vec3su arg1, f32 arg2, s32 arg3, u8* tlut, u8* te
     rsp_set_matrix_transformation(arg0, arg1, arg2);
     gSPDisplayList(gDisplayListHead++, D_0D007E18);
     set_transparency(arg3);
-    gDPLoadTLUT_pal256(gDisplayListHead++, tlut);
-    rsp_load_texture(texture, arg9, arg8);
-    gSPVertex(gDisplayListHead++, arg6, 4, 0);
-    gSPDisplayList(gDisplayListHead++, common_rectangle_display);
-    gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
+    draw_rectangle_texture_overlap(tlut, texture, arg6, arg7, arg8, arg9, argA);
 }
 
 void func_80048540(Vec3f arg0, Vec3su arg1, f32 arg2, s32 arg3, u8* tlut, u8* texture, Vtx* arg6, s32 arg7, s32 arg8,
@@ -2072,16 +2068,16 @@ void render_texture_tile_rgba32_block(s16 x, s16 y, u8* texture, u32 width, u32 
     gDPLoadTextureTile(gDisplayListHead++, texture, G_IM_FMT_RGBA, G_IM_SIZ_32b, width, height, 0, 0, width - 1,
                        height - 1, 0, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOMASK,
                        G_TX_NOLOD, G_TX_NOLOD);
-    gSPWideTextureRectangle(gDisplayListHead++, currX * 4, currY * 4, ((x + (width / 2)) << 2),
-                            ((y + (height / 2)) << 2), G_TX_RENDERTILE, 0, 0, 1 << 10, 1 << 10);
+    gSPWideTextureRectangle(gDisplayListHead++, currX * 4, currY * 4, ((x + width) << 2), ((y + height) << 2),
+                            G_TX_RENDERTILE, 0, 0, 1 << 10, 1 << 10);
 
     gSPDisplayList(gDisplayListHead++, D_0D007EB8);
 }
 
 void render_game_logo(s16 x, s16 y) {
-    int32_t height = 128;
-    int32_t width = ResourceGetTexWidthByName(logo_mario_kart_64) * height / ResourceGetTexHeightByName(logo_mario_kart_64);
-    render_texture_tile_rgba32_block(x, y, logo_mario_kart_64, width, height);
+    render_texture_tile_rgba32_block(x, y, LOAD_ASSET(gTextureLogoMarioKart64),
+                                     ResourceGetTexWidthByName(gTextureLogoMarioKart64),
+                                     ResourceGetTexHeightByName(gTextureLogoMarioKart64));
 }
 
 UNUSED void func_8004C91C(s32 arg0, s32 arg1, u8* texture, s32 arg3, s32 arg4, s32 arg5) {
@@ -2257,34 +2253,42 @@ void func_8004D210(s32 arg0, s32 arg1, u8* texture, s32 arg3, s32 arg4, s32 arg5
     }
 }
 
-void func_8004D37C(s32 x, s32 y, u8* texture, s32 red, s32 green, s32 blue, s32 alpha, s32 width, s32 height,
-                   UNUSED s32 width2, s32 height2) {
+void func_8004D37C(s32 arg0, s32 arg1, u8* texture, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 width, s32 arg8,
+                   UNUSED s32 arg9, s32 height) {
     s32 var_s3;
     u8* img;
     s32 i;
 
+    var_s3 = arg1 - (arg8 / 2);
     img = texture;
     gSPDisplayList(gDisplayListHead++, D_0D007FE0);
-    func_8004B414(red, green, blue, alpha);
+    func_8004B414(arg3, arg4, arg5, arg6);
 
-    func_80044F34(img, width, height);
-    func_8004B97C_wide(x - (width / 2), y - (height / 2), width, height, 1);
+    for (i = 0; i < arg8 / height; i++) {
+        func_80044F34(img, width, height);
+        func_8004B97C_wide(arg0 - (width / 2), var_s3, width, height, 1);
+        img += (width * height) / 2;
+        var_s3 += height;
+    }
 }
 
-void func_8004D4E8(s32 arg0, s32 arg1, u8* texture, s32 red, s32 green, s32 blue, s32 alpha, s32 width, s32 height,
-                   UNUSED s32 width2, s32 height2) {
+void func_8004D4E8(s32 arg0, s32 arg1, u8* texture, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 width, s32 arg8,
+                   UNUSED s32 arg9, s32 height) {
     s32 var_s3;
     u8* img;
     s32 i;
 
-    var_s3 = arg1 - (height / 2);
+    var_s3 = arg1 - (arg8 / 2);
     img = texture;
     gSPDisplayList(gDisplayListHead++, D_0D007FE0);
-    func_8004B414(red, green, blue, alpha);
-    func_800450C8(img, width, height2);
-    func_8004BA08(arg0 - (width / 2), var_s3, width, height2, 1);
-    img += (width * height2) / 2;
-    var_s3 += height2;
+    func_8004B414(arg3, arg4, arg5, arg6);
+
+    for (i = 0; i < arg8 / height; i++) {
+        func_800450C8(img, width, height);
+        func_8004BA08(arg0 - (width / 2), var_s3, width, height, 1);
+        img += (width * height) / 2;
+        var_s3 += height;
+    }
 }
 
 void func_8004D654(s32 arg0, s32 arg1, u8* texture, f32 arg3, s32 arg4, s32 arg5, s32 arg6, UNUSED s32 arg7, s32 width,
@@ -2625,8 +2629,6 @@ void draw_simplified_lap_count(s32 playerId) {
 }
 
 void func_8004E800(s32 playerId) {
-    // @port: Tag the transform.
-    FrameInterpolation_RecordOpenChild("Player place HUD", playerId);
     if (playerHUD[playerId].unk_81 != 0) {
         if (playerHUD[playerId].lapCount != 3) {
             func_8004A384(playerHUD[playerId].rankX + playerHUD[playerId].slideRankX,
@@ -2642,8 +2644,6 @@ void func_8004E800(s32 playerId) {
                           0x00000040, 0x00000080, 0x00000040);
         }
     }
-    // @port Pop the transform id.
-    FrameInterpolation_RecordCloseChild();
 }
 
 void func_8004E998(s32 playerId) {
@@ -2698,9 +2698,7 @@ void func_8004EB38(s32 playerId) {
     }
 }
 
-// render the speedometer for the player
 void func_8004ED40(s32 arg0) {
-    gSPClearGeometryMode(gDisplayListHead++, G_ZBUFFER);
     func_8004A2F4(playerHUD[arg0].speedometerX, playerHUD[arg0].speedometerY, 0U, 1.0f,
                   // RGBA
                   CM_GetProps()->Minimap.Colour.r, CM_GetProps()->Minimap.Colour.g, CM_GetProps()->Minimap.Colour.b,
@@ -2730,9 +2728,9 @@ void func_8004EF9C(s32 arg0) {
     s16 temp_t0;
     s16 temp_v0;
 
-    temp_v0 = CM_GetPropsCourseId(arg0)->Minimap.Width;
-    temp_t0 = CM_GetPropsCourseId(arg0)->Minimap.Height;
-    func_8004D37C(0x00000104, 0x0000003C, CM_GetPropsCourseId(arg0)->Minimap.Texture, 0x000000FF, 0x000000FF, 0x000000FF,
+    temp_v0 = CM_GetProps()->Minimap.Width;
+    temp_t0 = CM_GetProps()->Minimap.Height;
+    func_8004D37C(0x00000104, 0x0000003C, CM_GetProps()->Minimap.Texture, 0x000000FF, 0x000000FF, 0x000000FF,
                   0x000000FF, temp_v0, temp_t0, temp_v0, temp_t0);
 }
 
@@ -2762,27 +2760,19 @@ void set_minimap_finishline_position(s32 playerId) {
     draw_hud_2d_texture_8x8(var_f2, var_f0, (u8*) common_texture_minimap_finish_line);
 }
 
-char* common_texture_minimap_progress[] = {
-    common_texture_minimap_mario, common_texture_minimap_luigi,  common_texture_minimap_yoshi,
-    common_texture_minimap_toad,  common_texture_minimap_dk,     common_texture_minimap_wario,
-    common_texture_minimap_peach, common_texture_minimap_bowser,
-};
-
 #ifdef NON_MATCHING
 // https://decomp.me/scratch/FxA1w
 /**
  * characterId of 8 appears to be a type of null check or control flow alteration.
  */
-void draw_minimap_character(s32 arg0, s32 playerId, s32 characterId) {
+#define EXPLICIT_AND 1
+void func_8004F168(s32 arg0, s32 playerId, s32 characterId) {
     f32 thing0;
     f32 thing1;
-    s16 x;
-    s16 y;
+    s16 temp_a0;
+    s16 temp_a1;
     s32 center = 0;
     Player* player = &gPlayerOne[playerId];
-
-    // @port Skip Interpolation, if interpolated later remove this tag
-    FrameInterpolation_ShouldInterpolateFrame(false);
 
     if (player->type & (1 << 15)) {
         thing0 = player->pos[0] * CM_GetProps()->Minimap.PlayerScaleFactor; // gMinimapPlayerScale;
@@ -2795,34 +2785,43 @@ void draw_minimap_character(s32 arg0, s32 playerId, s32 characterId) {
             center = CM_GetProps()->Minimap.Pos[arg0].X;
         }
 
-        x = (center - (CM_GetProps()->Minimap.Width / 2)) + CM_GetProps()->Minimap.PlayerX + (s16) (thing0);
-        y = (CM_GetProps()->Minimap.Pos[arg0].Y - (CM_GetProps()->Minimap.Height / 2)) +
+        temp_a0 = (center - (CM_GetProps()->Minimap.Width / 2)) + CM_GetProps()->Minimap.PlayerX + (s16) (thing0);
+        temp_a1 = (CM_GetProps()->Minimap.Pos[arg0].Y - (CM_GetProps()->Minimap.Height / 2)) +
                   CM_GetProps()->Minimap.PlayerY + (s16) (thing1);
         if (characterId != 8) {
             if ((gGPCurrentRaceRankByPlayerId[playerId] == 0) && (gModeSelection != 3) && (gModeSelection != 1)) {
-                func_80046424(x, y, player->rotation[1] + 0x8000, 1.0f,
+#if EXPLICIT_AND == 1
+                func_80046424(temp_a0, temp_a1, (player->rotation[1] + 0x8000) & 0xFFFF, 1.0f,
                               (u8*) common_texture_minimap_kart_character[characterId], common_vtx_player_minimap_icon,
                               8, 8, 8, 8);
+#else
+                func_80046424(temp_a0, temp_a1, player->rotation[1] + 0x8000, 1.0f,
+                              (u8*) common_texture_minimap_kart_character[characterId], common_vtx_player_minimap_icon,
+                              8, 8, 8, 8);
+#endif
             } else {
-                func_800463B0(x, y, player->rotation[1] + 0x8000, 1.0f,
+#if EXPLICIT_AND == 1
+                func_800463B0(temp_a0, temp_a1, (player->rotation[1] + 0x8000) & 0xFFFF, 1.0f,
                               (u8*) common_texture_minimap_kart_character[characterId], common_vtx_player_minimap_icon,
                               8, 8, 8, 8);
+#else
+                func_800463B0(temp_a0, temp_a1, player->rotation[1] + 0x8000, 1.0f,
+                              (u8*) common_texture_minimap_kart_character[characterId], common_vtx_player_minimap_icon,
+                              8, 8, 8, 8);
+#endif
             }
         } else {
             if (gGPCurrentRaceRankByPlayerId[playerId] == 0) {
-                func_8004C450(x, y, 8, 8, (u8*) common_texture_minimap_progress[player->characterId]);
+                func_8004C450(temp_a0, temp_a1, 8, 8, (u8*) common_texture_minimap_progress_dot);
             } else {
-                draw_hud_2d_texture_wide(x, y, 8, 8, (u8*) common_texture_minimap_progress[player->characterId]);
+                draw_hud_2d_texture_wide(temp_a0, temp_a1, 8, 8, (u8*) common_texture_minimap_progress_dot);
             }
         }
     }
-
-    // @port Resume Interpolation, if interpolated later remove this tag
-    FrameInterpolation_ShouldInterpolateFrame(true);
-
 }
+#undef EXPLICIT_AND
 #else
-GLOBAL_ASM("asm/non_matchings/render_objects/draw_minimap_character.s")
+GLOBAL_ASM("asm/non_matchings/render_objects/func_8004F168.s")
 #endif
 
 // WTF is up with the gPlayerOne access in this function?
@@ -2835,35 +2834,35 @@ void func_8004F3E4(s32 arg0) {
         case GRAND_PRIX:
             for (idx = D_8018D158 - 1; idx >= 0; idx--) {
                 playerId = gGPCurrentRacePlayerIdByRank[idx];
-                if ((gPlayerOne + playerId)->type & PLAYER_CPU) {
-                    draw_minimap_character(arg0, playerId, 8);
+                if ((gPlayerOne + playerId)->type & PLAYER_KART_AI) {
+                    func_8004F168(arg0, playerId, 8);
                 }
             }
             for (idx = D_8018D158 - 1; idx >= 0; idx--) {
                 playerId = gGPCurrentRacePlayerIdByRank[idx];
-                if (((gPlayerOne + playerId)->type & PLAYER_CPU) != PLAYER_CPU) {
-                    draw_minimap_character(arg0, playerId, (gPlayerOne + playerId)->characterId);
+                if (((gPlayerOne + playerId)->type & PLAYER_KART_AI) != PLAYER_KART_AI) {
+                    func_8004F168(arg0, playerId, (gPlayerOne + playerId)->characterId);
                 }
             }
             break;
         case TIME_TRIALS:
             for (idx = 0; idx < 8; idx++) {
                 if (((gPlayerOne + idx)->type & PLAYER_INVISIBLE_OR_BOMB) == PLAYER_INVISIBLE_OR_BOMB) {
-                    draw_minimap_character(arg0, idx, 8);
+                    func_8004F168(arg0, idx, 8);
                 }
             }
-            draw_minimap_character(arg0, 0, gPlayerOne->characterId);
+            func_8004F168(arg0, 0, gPlayerOne->characterId);
             break;
         case VERSUS:
             for (idx = gPlayerCountSelection1 - 1; idx >= 0; idx--) {
                 playerId = gGPCurrentRacePlayerIdByRank[idx];
-                draw_minimap_character(arg0, playerId, (gPlayerOne + playerId)->characterId);
+                func_8004F168(arg0, playerId, (gPlayerOne + playerId)->characterId);
             }
             break;
         case BATTLE:
             for (idx = 0; idx < gPlayerCountSelection1; idx++) {
                 if (!((gPlayerOne + idx)->type & PLAYER_UNKNOWN_0x40)) {
-                    draw_minimap_character(arg0, idx, (gPlayerOne + idx)->characterId);
+                    func_8004F168(arg0, idx, (gPlayerOne + idx)->characterId);
                 }
             }
             break;
@@ -3010,7 +3009,7 @@ void draw_lap_count(s16 lapX, s16 lapY, s8 lap) {
 }
 
 void func_8004FDB4(f32 arg0, f32 arg1, s16 arg2, s16 arg3, s16 characterId, s32 arg5, s32 arg6, s32 arg7, s32 arg8) {
-    if ((IsYoshiValley()) && (arg3 < 3) && (arg8 == 0)) {
+    if ((GetCourse() == GetYoshiValley()) && (arg3 < 3) && (arg8 == 0)) {
         func_80042330((s32) arg0, (s32) arg1, 0U, 1.0f);
         gSPDisplayList(gDisplayListHead++, D_0D007DB8);
         func_8004B35C(0x000000FF, 0x000000FF, 0x000000FF, D_8018D3E0);
@@ -3052,57 +3051,47 @@ void func_8004FDB4(f32 arg0, f32 arg1, s16 arg2, s16 arg3, s16 characterId, s32 
 void func_80050320(void) {
     s16 temp_v0;
     s16 characterId;
-    s32 i;
+    s32 var_s0;
     s32 lapCount;
     s32 var_a0;
 
     if (D_801657E2 == 0) {
-        for (i = 0; i < 4; i++) {
+        for (var_s0 = 0; var_s0 < 4; var_s0++) {
             var_a0 = 0;
-            if (D_8018D050[i] >= 0.0f) {
-                if (D_8018D078[i] < 0.0) {
+            if (D_8018D050[var_s0] >= 0.0f) {
+                if (D_8018D078[var_s0] < 0.0) {
                     var_a0 = 1;
                 }
-
-                // @port: Tag the transform.
-                FrameInterpolation_RecordOpenChild("ranking portraits", i | var_a0 << 16);
-
-                temp_v0 = gGPCurrentRacePlayerIdByRank[i];
-                characterId = gGPCurrentRaceCharacterIdByRank[i];
+                temp_v0 = gGPCurrentRacePlayerIdByRank[var_s0];
+                characterId = gGPCurrentRaceCharacterIdByRank[var_s0];
                 lapCount = gLapCountByPlayerId[temp_v0];
                 if (characterId == gPlayerOne->characterId) {
-                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 1, var_a0, 0);
+                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 1,
+                                  var_a0, 0);
                 } else {
-                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, D_8018D3E0, 0, var_a0, 0);
+                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, D_8018D3E0, 0,
+                                  var_a0, 0);
                 }
-
-                // @port Pop the transform id.
-                FrameInterpolation_RecordCloseChild();
             }
         }
     } else {
-        for (i = 0; i < 8; i++) {
+        for (var_s0 = 0; var_s0 < 8; var_s0++) {
             var_a0 = 0;
-            if (D_8018D050[i] >= 0.0f) {
-                if (D_8018D078[i] <= 0.0) {
+            if (D_8018D050[var_s0] >= 0.0f) {
+                if (D_8018D078[var_s0] <= 0.0) {
                     var_a0 = 1;
                 }
-
-                // @port: Tag the transform.
-                FrameInterpolation_RecordOpenChild("ranking portraits 2", i | var_a0 << 16);
-
-                temp_v0 = gGPCurrentRacePlayerIdByRank[i];
+                temp_v0 = gGPCurrentRacePlayerIdByRank[var_s0];
                 // ????
                 characterId = (gPlayerOne + temp_v0)->characterId;
                 lapCount = gLapCountByPlayerId[temp_v0];
                 if (temp_v0 == 0) {
-                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 1, var_a0, 1);
+                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 1,
+                                  var_a0, 1);
                 } else {
-                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 0, var_a0, 1);
+                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 0,
+                                  var_a0, 1);
                 }
-
-                // @port Pop the transform id.
-                FrameInterpolation_RecordCloseChild();
             }
         }
     }
@@ -3159,7 +3148,7 @@ void func_800507D8(u16 bombIndex, s32* arg1, s32* arg2) {
     s32 var_v1 = 0;
 
     if (temp_v0 != 0) {
-        var_v1 = (s32) (temp_v0 * 0x3A0) / (s32) gSelectedPathCount;
+        var_v1 = (s32) (temp_v0 * 0x3A0) / (s32) D_80164430;
     }
     if (var_v1 < 0x104) {
         *arg1 = var_v1;
@@ -3317,7 +3306,7 @@ void func_80050E34(s32 playerId, s32 arg1) {
         spB8 = 0;
     }
 
-    if ((IsYoshiValley()) && (lapCount < 3)) {
+    if ((GetCourse() == GetYoshiValley()) && (lapCount < 3)) {
         gSPDisplayList(gDisplayListHead++, D_0D007DB8);
         gDPLoadTLUT_pal256(gDisplayListHead++, common_tlut_portrait_bomb_kart_and_question_mark);
         rsp_load_texture(common_texture_portrait_question_mark, 0x00000020, 0x00000020);
@@ -3390,7 +3379,7 @@ void func_800514BC(void) {
         }
     }
     if (gModeSelection == 1) {
-        func_80050E34(0, gGPCurrentRaceRankByPlayerIdDup[0]);
+        func_80050E34(0, D_80164408[0]);
     } else if (gPlayerCountSelection1 == 1) {
         func_80050E34(0, gGPCurrentRaceRankByPlayerId[0]);
     }
@@ -3398,19 +3387,15 @@ void func_800514BC(void) {
 }
 
 void render_object_leaf_particle(UNUSED s32 cameraId) {
-    size_t i;
+    s32 someIndex;
     s32 leafIndex;
     Object* object;
 
     gSPDisplayList(gDisplayListHead++, D_0D0079C8);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BOTH);
     load_texture_block_rgba16_mirror((u8*) common_texture_particle_leaf, 0x00000020, 0x00000010);
-    for (i = 0; i < gLeafParticle_SIZE; i++) {
-        leafIndex = gLeafParticle[i];
-
-        // @port: Tag the transform.
-        FrameInterpolation_RecordOpenChild("Leaves", leafIndex);
-
+    for (someIndex = 0; someIndex < gLeafParticle_SIZE; someIndex++) {
+        leafIndex = gLeafParticle[someIndex];
         if (leafIndex != -1) {
             object = &gObjectList[leafIndex];
             if ((object->state >= 2) && (object->unk_0D5 == 7) && (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX)) {
@@ -3418,83 +3403,40 @@ void render_object_leaf_particle(UNUSED s32 cameraId) {
                 gSPDisplayList(gDisplayListHead++, D_0D0069C8);
             }
         }
-
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
     }
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
 void render_object_snowflakes_particles(void) {
-    size_t i;
+    s32 someIndex;
     s32 snowflakeIndex;
 
     gSPDisplayList(gDisplayListHead++, D_0D007AE0);
     gDPSetCombineLERP(gDisplayListHead++, 1, 0, SHADE, 0, 0, 0, 0, TEXEL0, 1, 0, SHADE, 0, 0, 0, 0, TEXEL0);
     func_80044F34(D_0D0293D8, 0x10, 0x10);
-    for (i = 0; i < NUM_SNOWFLAKES; i++) {
-        snowflakeIndex = gObjectParticle1[i];
-
-        // @port: Tag the transform.
-        FrameInterpolation_RecordOpenChild("SnowFlakes", snowflakeIndex);
-
+    for (someIndex = 0; someIndex < NUM_SNOWFLAKES; someIndex++) {
+        snowflakeIndex = gObjectParticle1[someIndex];
         if (gObjectList[snowflakeIndex].state >= 2) {
             rsp_set_matrix_gObjectList(snowflakeIndex);
             gSPDisplayList(gDisplayListHead++, D_0D006980);
         }
-
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
     }
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
-struct ObjectInterpData {
-    s32 objectIndex;
-    s16 x, y;
-};
-
-struct ObjectInterpData prevObject[OBJECT_LIST_SIZE] = { 0 };
-
-void func_800518F8(s32 objectIndex, s16 x, s16 y) {
-
-    // Search all recorded objects for the one we're drawing
-    for (size_t i = 0; i < OBJECT_LIST_SIZE; i++) {
-        if (objectIndex == prevObject[i].objectIndex) {
-            // Coincidence!
-            // Skip drawing the object this frame if it warped to the other side of the screen
-            if ((fabs(x - prevObject[i].x) > SCREEN_WIDTH / 2) || (fabs(y - prevObject[i].y) > SCREEN_HEIGHT / 2)) {
-                prevObject[objectIndex].x = x;
-                prevObject[objectIndex].y = y;
-                prevObject[objectIndex].objectIndex = objectIndex;
-                return;
-            }
-        }
-    }
-
+void func_800518F8(s32 objectIndex, s16 arg1, s16 arg2) {
+    UNUSED s32 pad[1];
     if (gObjectList[objectIndex].status & 0x10) {
-
-        // @port: Tag the transform.
-        FrameInterpolation_RecordOpenChild("func_800518F8", (uintptr_t) &gObjectList[objectIndex]);
-
         if (D_8018D228 != gObjectList[objectIndex].unk_0D5) {
             D_8018D228 = gObjectList[objectIndex].unk_0D5;
             func_80044DA0(gObjectList[objectIndex].activeTexture, gObjectList[objectIndex].textureWidth,
                           gObjectList[objectIndex].textureHeight);
         }
-        func_80042330_unchanged(x, y, 0, gObjectList[objectIndex].sizeScaling);
+        func_80042330_unchanged(arg1, arg2, 0U, gObjectList[objectIndex].sizeScaling);
         gSPVertex(gDisplayListHead++, gObjectList[objectIndex].vertex, 4, 0);
         gSPDisplayList(gDisplayListHead++, common_rectangle_display);
-
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
     }
-
-    // Save current cloud index and x position
-    prevObject[objectIndex].x = x;
-    prevObject[objectIndex].y = y;
-    prevObject[objectIndex].objectIndex = objectIndex;
 }
 
 void func_800519D4(s32 objectIndex, s16 arg1, s16 arg2) {
@@ -3511,7 +3453,6 @@ void func_800519D4(s32 objectIndex, s16 arg1, s16 arg2) {
     }
 }
 
-// Render clouds
 void func_80051ABC(s16 arg0, s32 arg1) {
     s32 var_s0;
     s32 objectIndex;
@@ -3524,11 +3465,7 @@ void func_80051ABC(s16 arg0, s32 arg1) {
         for (var_s0 = 0; var_s0 < D_8018D1F0; var_s0++) {
             objectIndex = D_8018CC80[arg1 + var_s0];
             object = &gObjectList[objectIndex];
-            FrameInterpolation_RecordOpenChild("stars_cloud", TAG_OBJECT(object));
-
             func_800519D4(objectIndex, object->unk_09C, arg0 - object->unk_09E);
-            FrameInterpolation_RecordCloseChild();
-
         }
     } else {
         func_8004B6C4(255, 255, 255);
@@ -3554,16 +3491,16 @@ void func_80051C60(s16 arg0, s32 arg1) {
     Object* object;
 
     if (D_801658FE == 0) {
-        if (IsKoopaTroopaBeach()) {
+        if (GetCourse() == GetKoopaTroopaBeach()) {
             var_s5 = arg0;
-        } else if (IsMooMooFarm()) {
+        } else if (GetCourse() == GetMooMooFarm()) {
             var_s5 = arg0 - 16;
-        } else if (IsYoshiValley()) {
+        } else if (GetCourse() == GetYoshiValley()) {
             var_s5 = arg0 - 16;
         } else {
             var_s5 = arg0 + 16;
         }
-    } else if (IsKoopaTroopaBeach()) {
+    } else if (GetCourse() == GetKoopaTroopaBeach()) {
         var_s5 = arg0 * 2;
     } else {
         var_s5 = arg0 + 32;
@@ -3597,11 +3534,11 @@ void func_80051EF8(void) {
     s16 temp_a0;
 
     temp_a0 = 0xF0 - D_800DC5EC->cameraHeight;
-    if (IsKoopaTroopaBeach()) {
+    if (GetCourse() == GetKoopaTroopaBeach()) {
         temp_a0 = temp_a0 - 0x30;
-    } else if (IsMooMooFarm()) {
+    } else if (GetCourse() == GetMooMooFarm()) {
         temp_a0 = temp_a0 - 0x40;
-    } else if (IsYoshiValley()) {
+    } else if (GetCourse() == GetYoshiValley()) {
         temp_a0 = temp_a0 - 0x40;
     } else {
         temp_a0 = temp_a0 - 0x30;
@@ -3613,11 +3550,11 @@ void func_80051F9C(void) {
     s16 temp_a0;
 
     temp_a0 = 0xF0 - D_800DC5F0->cameraHeight;
-    if (IsKoopaTroopaBeach()) {
+    if (GetCourse() == GetKoopaTroopaBeach()) {
         temp_a0 = temp_a0 - 0x30;
-    } else if (IsMooMooFarm()) {
+    } else if (GetCourse() == GetMooMooFarm()) {
         temp_a0 = temp_a0 - 0x40;
-    } else if (IsYoshiValley()) {
+    } else if (GetCourse() == GetYoshiValley()) {
         temp_a0 = temp_a0 - 0x40;
     } else {
         temp_a0 = temp_a0 - 0x30;
@@ -3873,9 +3810,6 @@ void render_object_bowser_flame_particle(s32 objectIndex, s32 cameraId) {
     camera = &camera1[cameraId];
     if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
         object = &gObjectList[objectIndex];
-
-        // @port: Tag the transform.
-        FrameInterpolation_RecordOpenChild("Bowser Statue Flame", TAG_ITEM_ADDR(object));
         if (object->unk_0D5 == 9) {
             func_8004B72C(0xFF, (s32) object->type, 0, (s32) object->unk_0A2, 0, 0, (s32) object->primAlpha);
         } else {
@@ -3883,9 +3817,6 @@ void render_object_bowser_flame_particle(s32 objectIndex, s32 cameraId) {
         }
         D_80183E80[1] = func_800418AC(object->pos[0], object->pos[2], camera->pos);
         func_800431B0(object->pos, D_80183E80, object->sizeScaling, D_0D005AE0);
-
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
     }
 }
 
@@ -3932,23 +3863,20 @@ void func_8005477C(s32 objectIndex, u8 arg1, Vec3f arg2) {
 void render_object_smoke_particles(s32 cameraId) {
     UNUSED s32 stackPadding[2];
     Camera* sp54;
-    s32 i;
+    s32 var_s0;
     s32 objectIndex;
     Object* object;
 
     sp54 = &camera1[cameraId];
-
     gSPDisplayList(gDisplayListHead++, D_0D007AE0);
     load_texture_block_i8_nomirror(common_texture_particle_smoke[D_80165598], 32, 32);
     func_8004B72C(255, 255, 255, 255, 255, 255, 255);
     D_80183E80[0] = 0;
     D_80183E80[2] = 0x8000;
-    for (i = 0; i < gObjectParticle4_SIZE; i++) {
-        objectIndex = gObjectParticle4[i];
+    for (var_s0 = 0; var_s0 < gObjectParticle4_SIZE; var_s0++) {
+        objectIndex = gObjectParticle4[var_s0];
         if (objectIndex != NULL_OBJECT_ID) {
             object = &gObjectList[objectIndex];
-            // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("SmokeParticles", (uintptr_t) object);
             if (object->state >= 2) {
                 if (object->unk_0D8 == 3) {
                     func_8008A364(objectIndex, cameraId, 0x4000U, 0x00000514);
@@ -3959,8 +3887,6 @@ void render_object_smoke_particles(s32 cameraId) {
                     func_8005477C(objectIndex, object->unk_0D8, sp54->pos);
                 }
             }
-            // @port Pop the transform id.
-            FrameInterpolation_RecordCloseChild();
         }
     }
 }
@@ -3973,9 +3899,6 @@ void func_800557B4(s32 objectIndex, u32 arg1, u32 arg2) {
     Object* object;
 
     object = &gObjectList[objectIndex];
-
-    // @port: Tag the transform.
-    FrameInterpolation_RecordOpenChild("Penguin", (uintptr_t) object);
     if (object->state >= 2) {
         if (is_obj_flag_status_active(objectIndex, 0x00000020) != 0) {
             if (func_80072320(objectIndex, 4) != 0) {
@@ -3998,9 +3921,6 @@ void func_800557B4(s32 objectIndex, u32 arg1, u32 arg2) {
         render_animated_model((Armature*) object->model, (Animation**) object->vertex, (s16) object->unk_0D8,
                               (s16) object->textureListIndex);
     }
-
-    // @port Pop the transform id.
-    FrameInterpolation_RecordCloseChild();
 }
 
 void func_80055EF4(s32 objectIndex, UNUSED s32 arg1) {
@@ -4014,15 +3934,15 @@ void func_80055EF4(s32 objectIndex, UNUSED s32 arg1) {
 
 void render_object_neon(s32 cameraId) {
     Camera* camera;
+    s32 var_s2;
     s32 objectIndex;
     Object* object;
 
     camera = &camera1[cameraId];
-    for (size_t i = 0; i < 10; i++) {
-        objectIndex = indexObjectList1[i];
+    for (var_s2 = 0; var_s2 < 10; var_s2++) {
+        objectIndex = indexObjectList1[var_s2];
         if (D_8018E838[cameraId] == 0) {
             object = &gObjectList[objectIndex];
-            FrameInterpolation_RecordOpenChild(object, TAG_OBJECT((objectIndex << 8) + i));
             if ((object->state >= 2) && (is_obj_index_flag_status_inactive(objectIndex, 0x00080000) != 0) &&
                 (is_object_visible_on_camera(objectIndex, camera, 0x2AABU) != 0)) {
                 Vtx* vtx = (Vtx*) LOAD_ASSET(common_vtx_hedgehog);
@@ -4030,7 +3950,6 @@ void render_object_neon(s32 cameraId) {
                 draw_2d_texture_at(object->pos, object->orientation, object->sizeScaling, (u8*) object->activeTLUT,
                                    object->activeTexture, vtx, 0x00000040, 0x00000040, 0x00000040, 0x00000020);
             }
-            FrameInterpolation_RecordCloseChild();
         }
     }
 }
