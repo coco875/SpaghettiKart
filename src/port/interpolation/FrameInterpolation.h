@@ -49,7 +49,7 @@ void FrameInterpolation_RecordMatrixPosRotScaleXY(Mat4* matrix, s32 x, s32 y, u1
 
 void FrameInterpolation_Record_SetTextMatrix(Mat4* matrix, f32 x, f32 y, f32 arg3, f32 arg4);
 
-void FrameInterpolation_RecordMatrixPush(Mat4* mtx);
+void FrameInterpolation_RecordMatrixPush(Mat4* matrix);
 
 void FrameInterpolation_RecordMatrixPop(Mat4* matrix);
 
