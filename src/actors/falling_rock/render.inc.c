@@ -42,29 +42,24 @@ void render_actor_falling_rock(Camera* camera, struct FallingRock* rock) {
             sp98[1] = 0;
             sp98[2] = 0;
             sp8C[1] = height + 2.0f;
+            FrameInterpolation_RecordMatrixPush(mtx);
 
-            FrameInterpolation_RecordOpenChild("rock_shadow", (uintptr_t) rock);
             mtxf_pos_rotation_xyz(mtx, sp8C, sp98);
             if (render_set_position(mtx, 0) == 0) {
-                FrameInterpolation_RecordCloseChild();
                 return;
             }
             gSPDisplayList(gDisplayListHead++, d_course_choco_mountain_dl_6F88);
-            FrameInterpolation_RecordCloseChild();
+        FrameInterpolation_RecordMatrixPop(mtx);
+
         }
     }
-
-    // @port: Tag the transform.
-    FrameInterpolation_RecordOpenChild("rock", (uintptr_t) rock);
+            FrameInterpolation_RecordMatrixPush(mtx);
 
     mtxf_pos_rotation_xyz(mtx, rock->pos, rock->rot);
     if (render_set_position(mtx, 0) == 0) {
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
         return;
     }
     gSPDisplayList(gDisplayListHead++, d_course_choco_mountain_dl_falling_rock);
+        FrameInterpolation_RecordMatrixPop(mtx);
 
-    // @port Pop the transform id.
-    FrameInterpolation_RecordCloseChild();
 }

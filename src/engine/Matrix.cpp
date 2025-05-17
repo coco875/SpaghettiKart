@@ -15,6 +15,7 @@ void AddMatrix(std::vector<Mtx>& stack, Mat4 mtx, s32 flags) {
 
     FrameInterpolation_RecordMatrixMtxFToMtx((MtxF*)mtx, &stack.back());
     // Convert to a fixed-point matrix
+    FrameInterpolation_RecordMatrixMtxFToMtx((MtxF*)mtx, &stack.back());
     guMtxF2L(mtx, &stack.back());
 
     // Load the matrix
