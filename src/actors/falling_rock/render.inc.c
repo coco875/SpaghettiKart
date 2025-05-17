@@ -59,6 +59,7 @@ void render_actor_falling_rock(Camera* camera, struct FallingRock* rock) {
         return;
     }
     gSPDisplayList(gDisplayListHead++, d_course_choco_mountain_dl_falling_rock);
-    FrameInterpolation_RecordCloseChild();
 
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }

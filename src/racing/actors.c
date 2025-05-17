@@ -38,18 +38,8 @@
 
 // Appears to be textures
 // or tluts
-char* texture_green_shell[] = {
-    texture_green_shell_0, texture_green_shell_1, texture_green_shell_2, texture_green_shell_3,
-    texture_green_shell_4, texture_green_shell_5, texture_green_shell_6, texture_green_shell_7,
-};
-char* gTextureBlueshell[] = {
-    texture_blue_shell_0, texture_blue_shell_1, texture_blue_shell_2, texture_blue_shell_3,
-    texture_blue_shell_4, texture_blue_shell_5, texture_blue_shell_6, texture_blue_shell_7,
-};
-char* texture_red_shell[] = {
-    texture_red_shell_0, texture_red_shell_1, texture_red_shell_2, texture_red_shell_3,
-    texture_red_shell_4, texture_red_shell_5, texture_red_shell_6, texture_red_shell_7,
-};
+u8* D_802BA050;
+u8* D_802BA054;
 u8* D_802BA058;
 
 struct Actor* gActorHotAirBalloonItemBox;
@@ -520,7 +510,6 @@ void render_cows(Camera* camera, Mat4 arg1) {
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     var_s5 = NULL;
     var_s1 = var_t1;
-
     while (var_s1->pos[0] != END_OF_SPAWN_DATA) {
         sp88[0] = var_s1->pos[0] * gCourseDirection;
         sp88[1] = var_s1->pos[1];
@@ -535,12 +524,6 @@ void render_cows(Camera* camera, Mat4 arg1) {
             arg1[3][0] = sp88[0];
             arg1[3][1] = sp88[1];
             arg1[3][2] = sp88[2];
-
-            // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("render_actor_cow", ((var_s1->pos[0] & 0xFFFF) << 32) |
-                                                                       ((var_s1->pos[1] & 0xFFFF) << 16) |
-                                                                       (var_s1->pos[2] & 0xFFFF));
-
             if ((gMatrixObjectCount < MTX_OBJECT_POOL_SIZE) && (render_set_position(arg1, 0) != 0)) {
                 switch (var_s1->someId) {
                     case 0:
@@ -562,9 +545,6 @@ void render_cows(Camera* camera, Mat4 arg1) {
             } else {
                 return;
             }
-
-            // @port Pop the transform id.
-            FrameInterpolation_RecordCloseChild();
         }
         var_s1++;
     }
@@ -675,11 +655,6 @@ void render_palm_trees(Camera* camera, Mat4 arg1) {
             continue;
         }
 
-        // @port: Tag the transform.
-        FrameInterpolation_RecordOpenChild("render_actor_cow", ((var_s1->pos[0] & 0xFFFF) << 32) |
-                                                                   ((var_s1->pos[1] & 0xFFFF) << 16) |
-                                                                   (var_s1->pos[2] & 0xFFFF));
-
         test &= 0xF;
         test = (s16) test;
         if (test == 6) {
@@ -716,8 +691,6 @@ void render_palm_trees(Camera* camera, Mat4 arg1) {
             }
             var_s1++;
         }
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
     }
 }
 
@@ -726,10 +699,16 @@ void render_palm_trees(Camera* camera, Mat4 arg1) {
 #include "actors/kiwano_fruit/render.inc.c"
 
 void render_actor_shell(Camera* camera, Mat4 matrix, struct ShellActor* shell) {
-    u16 index;
-    char* phi_t3;
-    bool reverseShell = false;
-
+    UNUSED s16 pad;
+    u16 temp_t8;
+    UNUSED s32 pad2;
+    s16 sp58[15] = // D_802B87E8;
+        { 0x0000, 0x0400, 0x0800, 0x0c00, 0x1000, 0x1400, 0x1800, 0x1c00,
+          0x1c00, 0x1800, 0x1400, 0x1000, 0x0c00, 0x0800, 0x0400 };
+    //! @todo Is this making the shell spin?
+    // Is it doing this by modifying a an address?
+    uintptr_t phi_t3;
+    
     // @port: Tag the transform.
     FrameInterpolation_RecordOpenChild("Shell", TAG_ITEM_ADDR(shell));
 
@@ -748,24 +727,13 @@ void render_actor_shell(Camera* camera, Mat4 matrix, struct ShellActor* shell) {
     if (temp_f0 < 40000.0f) {
         func_802979F8((struct Actor*) shell, 3.4f);
     }
-
-    index = (u16) shell->rotVelocity / 4369; // Give a number between 0-15
-    if (index >= 8) {
-        reverseShell = true;
-        index = 15 - index;
+    if (shell->type == ACTOR_BLUE_SPINY_SHELL) {
+        phi_t3 = (uintptr_t) D_802BA054;
+    } else {
+        phi_t3 = (uintptr_t) D_802BA050;
     }
-
-    switch (shell->type) {
-        case ACTOR_GREEN_SHELL:
-            phi_t3 = texture_green_shell[index];
-            break;
-        case ACTOR_RED_SHELL:
-            phi_t3 = texture_red_shell[index];
-            break;
-        case ACTOR_BLUE_SPINY_SHELL:
-            phi_t3 = gTextureBlueshell[index];
-            break;
-    }
+    temp_t8 = (u16) shell->rotVelocity / 4369; // Give a number between 0-15
+    phi_t3 += sp58[temp_t8];                   // Select sprite
 
     matrix[3][0] = shell->pos[0];
     matrix[3][1] = (shell->pos[1] - shell->boundingBoxSize) + 1.0f;
@@ -780,7 +748,7 @@ void render_actor_shell(Camera* camera, Mat4 matrix, struct ShellActor* shell) {
                         G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD,
                         G_TX_NOLOD);
 
-    if (reverseShell) { // Reverse shell ?
+    if (temp_t8 < 8) { // Reverse shell ?
         gSPDisplayList(gDisplayListHead++, D_0D005338);
     } else {
         gSPDisplayList(gDisplayListHead++, D_0D005368);
@@ -959,15 +927,15 @@ void spawn_foliage(struct ActorSpawnData* actor) {
         position[2] = var_s3->pos[2];
         position[1] = var_s3->pos[1];
 
-        if (IsMarioRaceway()) {
+        if (GetCourse() == GetMarioRaceway()) {
             actorType = 2;
-        } else if (IsBowsersCastle()) {
+        } else if (GetCourse() == GetBowsersCastle()) {
             actorType = 0x0021;
-        } else if (IsYoshiValley()) {
+        } else if (GetCourse() == GetYoshiValley()) {
             actorType = 3;
-        } else if (IsFrappeSnowland()) {
+        } else if (GetCourse() == GetFrappeSnowland()) {
             actorType = 0x001D;
-        } else if (IsRoyalRaceway()) {
+        } else if (GetCourse() == GetRoyalRaceway()) {
             switch (var_s3->signedSomeId) {
                 case 6:
                     actorType = 0x001C;
@@ -976,11 +944,11 @@ void spawn_foliage(struct ActorSpawnData* actor) {
                     actorType = 4;
                     break;
             }
-        } else if (IsLuigiRaceway()) {
+        } else if (GetCourse() == GetLuigiRaceway()) {
             actorType = 0x001A;
-        } else if (IsMooMooFarm()) {
+        } else if (GetCourse() == GetMooMooFarm()) {
             actorType = 0x0013;
-        } else if (IsKalimariDesert()) {
+        } else if (GetCourse() == GetKalimariDesert()) {
             switch (var_s3->signedSomeId) {
                 case 5:
                     actorType = 0x001E;
@@ -1234,17 +1202,32 @@ void spawn_course_actors(void) {
  */
 void init_actors_and_load_textures(void) {
     set_segment_base_addr_x64(3, (void*) gNextFreeMemoryAddress);
-    allocate_memory(0x400 * 16);
-    dma_textures(gTextureFinishLineBanner1, 0x0000028EU, 0x00000800U); // 0x03004000
-    dma_textures(gTextureFinishLineBanner2, 0x000002FBU, 0x00000800U); // 0x03004800
-    dma_textures(gTextureFinishLineBanner3, 0x00000302U, 0x00000800U); // 0x03005000
-    dma_textures(gTextureFinishLineBanner4, 0x000003B4U, 0x00000800U); // 0x03005800
-    dma_textures(gTextureFinishLineBanner5, 0x0000031EU, 0x00000800U); // 0x03006000
-    dma_textures(gTextureFinishLineBanner6, 0x0000036EU, 0x00000800U); // 0x03006800
-    dma_textures(gTextureFinishLineBanner7, 0x0000029CU, 0x00000800U); // 0x03007000
-    dma_textures(gTextureFinishLineBanner8, 0x0000025BU, 0x00000800U); // 0x03007800
-    dma_textures(gTexture671A88, 0x00000400U, 0x00000800U); // 0x03008000
-    dma_textures(gTexture6774D8, 0x00000400U, 0x00000800U); // 0x03008800
+    D_802BA050 = dma_textures(gTextureGreenShell0, 0x00000257U, 0x00000400U);
+    dma_textures(gTextureGreenShell1, 0x00000242U, 0x00000400U);
+    dma_textures(gTextureGreenShell2, 0x00000259U, 0x00000400U);
+    dma_textures(gTextureGreenShell3, 0x00000256U, 0x00000400U);
+    dma_textures(gTextureGreenShell4, 0x00000246U, 0x00000400U);
+    dma_textures(gTextureGreenShell5, 0x0000025EU, 0x00000400U);
+    dma_textures(gTextureGreenShell6, 0x0000025CU, 0x00000400U);
+    dma_textures(gTextureGreenShell7, 0x00000254U, 0x00000400U);
+    D_802BA054 = dma_textures(gTextureBlueShell0, 0x0000022AU, 0x00000400U);
+    dma_textures(gTextureBlueShell1, 0x00000237U, 0x00000400U);
+    dma_textures(gTextureBlueShell2, 0x0000023EU, 0x00000400U);
+    dma_textures(gTextureBlueShell3, 0x00000243U, 0x00000400U);
+    dma_textures(gTextureBlueShell4, 0x00000255U, 0x00000400U);
+    dma_textures(gTextureBlueShell5, 0x00000259U, 0x00000400U);
+    dma_textures(gTextureBlueShell6, 0x00000239U, 0x00000400U);
+    dma_textures(gTextureBlueShell7, 0x00000236U, 0x00000400U);
+    dma_textures(gTextureFinishLineBanner1, 0x0000028EU, 0x00000800U);
+    dma_textures(gTextureFinishLineBanner2, 0x000002FBU, 0x00000800U);
+    dma_textures(gTextureFinishLineBanner3, 0x00000302U, 0x00000800U);
+    dma_textures(gTextureFinishLineBanner4, 0x000003B4U, 0x00000800U);
+    dma_textures(gTextureFinishLineBanner5, 0x0000031EU, 0x00000800U);
+    dma_textures(gTextureFinishLineBanner6, 0x0000036EU, 0x00000800U);
+    dma_textures(gTextureFinishLineBanner7, 0x0000029CU, 0x00000800U);
+    dma_textures(gTextureFinishLineBanner8, 0x0000025BU, 0x00000800U);
+    dma_textures(gTexture671A88, 0x00000400U, 0x00000800U);
+    dma_textures(gTexture6774D8, 0x00000400U, 0x00000800U);
 
     CM_LoadTextures();
 
@@ -1631,7 +1614,7 @@ bool collision_yoshi_egg(Player* player, struct YoshiValleyEgg* egg) {
             func_800C90F4(player - gPlayerOne, (player->characterId * 0x10) + SOUND_ARG_LOAD(0x29, 0x00, 0x80, 0x0D));
         } else {
             apply_hit_sound_effect(player, player - gPlayerOne);
-            if ((gModeSelection == TIME_TRIALS) && ((player->type & PLAYER_CPU) == 0)) {
+            if ((gModeSelection == TIME_TRIALS) && ((player->type & PLAYER_KART_AI) == 0)) {
                 D_80162DF8 = 1;
             }
         }
@@ -1706,9 +1689,9 @@ bool collision_tree(Player* player, struct Actor* actor) {
     actorPos[0] = actor->pos[0];
     actorPos[1] = actor->pos[1];
     actorPos[2] = actor->pos[2];
-    if (((IsMarioRaceway()) || (IsYoshiValley()) ||
-         (IsRoyalRaceway()) || (IsLuigiRaceway())) &&
-        (player->speed > 1.0f)) {
+    if (((GetCourse() == GetMarioRaceway()) || (GetCourse() == GetYoshiValley()) ||
+         (GetCourse() == GetRoyalRaceway()) || (GetCourse() == GetLuigiRaceway())) &&
+        (player->unk_094 > 1.0f)) {
         spawn_leaf(actorPos, 0);
     }
     if (xz_dist < 0.1f) {
@@ -2173,7 +2156,7 @@ void evaluate_collision_between_player_actor(Player* player, struct Actor* actor
             if (!(player->effects & BOO_EFFECT) && !(player->type & PLAYER_INVISIBLE_OR_BOMB)) {
                 if (query_collision_player_vs_actor_item(player, actor) == COLLISION) {
                     func_800C98B8(actor->pos, actor->velocity, SOUND_ACTION_EXPLOSION);
-                    if ((gModeSelection == TIME_TRIALS) && !(player->type & PLAYER_CPU)) {
+                    if ((gModeSelection == TIME_TRIALS) && !(player->type & PLAYER_KART_AI)) {
                         D_80162DF8 = 1;
                     }
                     if (player->effects & STAR_EFFECT) {
@@ -2222,7 +2205,7 @@ void evaluate_collision_between_player_actor(Player* player, struct Actor* actor
                 actor->flags = -0x8000;
                 actor->unk_04 = 0;
                 if (player->type & PLAYER_HUMAN) {
-                    func_8007ABFC(player - gPlayerOne, ITEM_BLUE_SPINY_SHELL);
+                    func_8007ABFC(player - gPlayerOne, 7);
                 }
             } else if (actor->state == 0) {
                 actor->state = 1;
@@ -2235,7 +2218,7 @@ void evaluate_collision_between_player_actor(Player* player, struct Actor* actor
                 actor->flags = -0x8000;
                 actor->unk_04 = 0;
                 if (player->type & PLAYER_HUMAN) {
-                    func_8007ABFC(player - gPlayerOne, ITEM_NONE);
+                    func_8007ABFC(player - gPlayerOne, 0);
                 }
             } else if (actor->state == 0) {
                 actor->state = 1;
@@ -2429,17 +2412,8 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
 
     struct Actor* actor;
     UNUSED Vec3f sp4C = { 0.0f, 5.0f, 10.0f };
-
-    // Freecam rotY is reversed in the engine for whatever reason
-    f32 sp48 = 0;
-    f32 temp_f0 = 0;
-    if (CVarGetInteger("gFreecam", 0) == true) {
-        sp48 = sins(-camera->rot[1] - 0x8000);
-        temp_f0 = coss(-camera->rot[1] - 0x8000);
-    } else {
-        sp48 = sins(camera->rot[1] - 0x8000);
-        temp_f0 = coss(camera->rot[1] - 0x8000);
-    }
+    f32 sp48 = sins(camera->rot[1] - 0x8000); // unk26;
+    f32 temp_f0 = coss(camera->rot[1] - 0x8000);
 
     sBillBoardMtx[0][0] = temp_f0;
     sBillBoardMtx[0][2] = -sp48;
@@ -2470,15 +2444,11 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
         if (actor->flags == 0) {
             continue;
         }
-
-        FrameInterpolation_RecordOpenChild(actor, i);
-
         switch (actor->type) {
             default: // Draw custom actor
                 CM_DrawActors(D_800DC5EC->camera, actor);
                 break;
             case ACTOR_TREE_MARIO_RACEWAY:
-
                 render_actor_tree_mario_raceway(camera, sBillBoardMtx, actor);
                 break;
             case ACTOR_TREE_YOSHI_VALLEY:
@@ -2578,11 +2548,10 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
                 render_actor_yoshi_egg(camera, sBillBoardMtx, (struct YoshiValleyEgg*) actor, pathCounter);
                 break;
         }
-        FrameInterpolation_RecordCloseChild();
     }
-    if (IsMooMooFarm()) {
+    if (GetCourse() == GetMooMooFarm()) {
         render_cows(camera, sBillBoardMtx);
-    } else if (IsDkJungle()) {
+    } else if (GetCourse() == GetDkJungle()) {
         render_palm_trees(camera, sBillBoardMtx);
     }
 }
@@ -2683,7 +2652,7 @@ void update_course_actors(void) {
 }
 
 const char* get_actor_name(s32 id) {
-    switch (id) {
+    switch(id) {
         case ACTOR_FALLING_ROCK:
             return "Falling Rock";
         case ACTOR_GREEN_SHELL:

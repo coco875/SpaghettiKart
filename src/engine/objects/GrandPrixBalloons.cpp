@@ -106,6 +106,7 @@ void OGrandPrixBalloons::func_80053D74(s32 objectIndex, UNUSED s32 arg1, s32 ver
 
     Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_hedgehog);
 
+    // @port: Tag the transform.
     FrameInterpolation_RecordOpenChild("Balloon", TAG_ITEM_ADDR(object)); //Not working properly just yet
 
     if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
@@ -119,6 +120,7 @@ void OGrandPrixBalloons::func_80053D74(s32 objectIndex, UNUSED s32 arg1, s32 ver
         gSPDisplayList(gDisplayListHead++, (Gfx*)common_rectangle_display);
     }
 
+    // @port Pop the transform id.
     FrameInterpolation_RecordCloseChild();
 }
 
