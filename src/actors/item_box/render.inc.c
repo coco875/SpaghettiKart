@@ -209,7 +209,8 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             someVec1[0] = temp_f0_3;
             someVec1[1] = temp_f2;
             someVec1[2] = temp_f12;
-        FrameInterpolation_RecordMatrixPop(someMatrix2);
+                    FrameInterpolation_RecordMatrixPush(someMatrix2);
+
 
             add_translate_mat4_vec3f(someMatrix1, someMatrix2, someVec1);
 
