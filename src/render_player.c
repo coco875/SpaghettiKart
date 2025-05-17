@@ -32,6 +32,7 @@
 #include <assets/donkeykong_kart.h>
 #include "port/Game.h"
 #include "engine/Matrix.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 s8 gRenderingFramebufferByPlayer[] = { 0x00, 0x02, 0x00, 0x01, 0x00, 0x01, 0x00, 0x02 };
 
@@ -722,7 +723,7 @@ const char** wheelPtr[] = {
     donkeykong_kart_wheels, wario_kart_wheels, peach_kart_wheels, bowser_kart_wheels,
 };
 
-s32 D_800DDE74[] = { 96, 128, 192, 256, 288, 384, 512, 544, 576, 0, 0};
+s32 D_800DDE74[] = { 96, 128, 192, 256, 288, 384, 512, 544, 576, 0, 0 };
 
 void render_players_on_screen_two(void) {
     gPlayersToRenderCount = 0;
@@ -1616,9 +1617,6 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     s16 temp_v1;
     s16 thing;
 
-    FrameInterpolation_RecordMatrixPush(mtx);
-
-
     if (player->unk_044 & 0x2000) {
         sp14C[0] = 0;
         sp14C[1] = player->unk_048[screenId];
@@ -1673,6 +1671,9 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     mtxf_translate_rotate(mtx, sp154, sp14C);
     mtxf_scale2(mtx, gCharacterSize[player->characterId] * player->size);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxKart[playerId + (screenId * 8)], mtx);
+
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild("Player", playerId | screenId << 8);
 
     if ((player->effects & BOO_EFFECT) == BOO_EFFECT) {
         if (screenId == playerId) {
@@ -1747,7 +1748,8 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
     gDPSetAlphaCompare(gDisplayListHead++, G_AC_NONE);
 
-    FrameInterpolation_RecordMatrixPop(mtx);
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }
 
 void render_ghost(Player* player, s8 playerId, s8 screenId, s8 arg3) {
