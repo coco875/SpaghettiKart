@@ -3,8 +3,6 @@
 #include <macros.h>
 #include "port/interpolation/FrameInterpolation.h"
 
-
-
 /**
  * @brief Renders the item box actor.
  *
@@ -45,7 +43,6 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             someVec2[0] = item_box->pos[0];
             someVec2[1] = item_box->resetDistance + 2.0f;
             someVec2[2] = item_box->pos[2];
-            FrameInterpolation_RecordMatrixPush(someMatrix1);
 
             mtxf_pos_rotation_xyz(someMatrix1, someVec2, someRot);
 
@@ -54,12 +51,9 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, D_0D002EE8);
-        FrameInterpolation_RecordMatrixPop(someMatrix1);
 
             someRot[1] = item_box->rot[1] * 2;
             someVec2[1] = item_box->pos[1];
-
-            FrameInterpolation_RecordMatrixPush(someMatrix1);
 
             mtxf_pos_rotation_xyz(someMatrix1, someVec2, someRot);
 
@@ -68,13 +62,8 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, itemBoxQuestionMarkModel);
-        FrameInterpolation_RecordMatrixPop(someMatrix1);
-
         }
         if (item_box->state == 5) {
-            FrameInterpolation_RecordMatrixPush(someMatrix1);
-
-            
             mtxf_pos_rotation_xyz(someMatrix1, item_box->pos, item_box->rot);
 
             if (!render_set_position(someMatrix1, 0)) {
@@ -82,11 +71,8 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, itemBoxQuestionMarkModel);
-        FrameInterpolation_RecordMatrixPop(someMatrix1);
-
         }
         if (item_box->state != 3) {
-            FrameInterpolation_RecordMatrixPush(someMatrix1);
 
             mtxf_pos_rotation_xyz(someMatrix1, item_box->pos, item_box->rot);
 
@@ -105,19 +91,17 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             // } else if ((item_box->rot[1] >= 0xC711) && (item_box->rot[1] < 0xD1BA)) {
             //     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
             // } else {
-                gDPSetBlendMask(gDisplayListHead++, 0xFF);
-                gDPSetRenderMode(gDisplayListHead++, G_RM_ZB_CLD_SURF, G_RM_ZB_CLD_SURF2);
+            gDPSetBlendMask(gDisplayListHead++, 0xFF);
+            gDPSetRenderMode(gDisplayListHead++, G_RM_ZB_CLD_SURF, G_RM_ZB_CLD_SURF2);
             // }
             gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
             gSPDisplayList(gDisplayListHead++, D_0D003090);
-        FrameInterpolation_RecordMatrixPop(someMatrix1);
 
         } else {
             gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
             gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
             gDPSetBlendMask(gDisplayListHead++, 0xFF);
             thing = item_box->someTimer;
-            FrameInterpolation_RecordMatrixPush(someMatrix2);
 
             mtxf_pos_rotation_xyz(someMatrix1, item_box->pos, item_box->rot);
             if (thing < 10.0f) {
@@ -142,10 +126,6 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, D_0D003158);
-        FrameInterpolation_RecordMatrixPop(someMatrix2);
-
-            FrameInterpolation_RecordMatrixPush(someMatrix2);
-
 
             temp_f2_2 = 0.8f * thing;
             temp_f12 = 0.5f * thing;
@@ -159,13 +139,11 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, D_0D0031B8);
-        FrameInterpolation_RecordMatrixPop(someMatrix2);
 
             temp_f0_2 = -0.5f * thing;
             someVec1[0] = temp_f2_2;
             someVec1[1] = 1.2f * thing;
             someVec1[2] = temp_f0_2;
-            FrameInterpolation_RecordMatrixPush(someMatrix2);
 
             add_translate_mat4_vec3f(someMatrix1, someMatrix2, someVec1);
 
@@ -174,7 +152,6 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, D_0D003128);
-        FrameInterpolation_RecordMatrixPop(someMatrix2);
 
             if (!(item_box->someTimer & 1)) {
                 gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
@@ -184,7 +161,6 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             someVec1[0] = 0.0f;
             someVec1[1] = 1.8f * thing;
             someVec1[2] = -1.0f * thing;
-            FrameInterpolation_RecordMatrixPush(someMatrix2);
 
             add_translate_mat4_vec3f(someMatrix1, someMatrix2, someVec1);
 
@@ -193,13 +169,11 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, D_0D0031E8);
-        FrameInterpolation_RecordMatrixPop(someMatrix2);
 
             temp_f0_3 = -0.8f * thing;
             someVec1[0] = temp_f0_3;
             someVec1[1] = 0.6f * thing;
             someVec1[2] = temp_f0_2;
-            FrameInterpolation_RecordMatrixPush(someMatrix2);
 
             add_translate_mat4_vec3f(someMatrix1, someMatrix2, someVec1);
 
@@ -208,13 +182,10 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, D_0D003188);
-        FrameInterpolation_RecordMatrixPop(someMatrix2);
 
             someVec1[0] = temp_f0_3;
             someVec1[1] = temp_f2;
             someVec1[2] = temp_f12;
-                    FrameInterpolation_RecordMatrixPush(someMatrix2);
-
 
             add_translate_mat4_vec3f(someMatrix1, someMatrix2, someVec1);
 
@@ -223,7 +194,6 @@ void render_actor_item_box(Camera* camera, struct ItemBox* item_box) {
             }
 
             gSPDisplayList(gDisplayListHead++, D_0D0030F8);
-        FrameInterpolation_RecordMatrixPop(someMatrix2);
 
             gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
         }
