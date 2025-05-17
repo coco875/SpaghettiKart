@@ -2444,11 +2444,15 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
         if (actor->flags == 0) {
             continue;
         }
+
+        FrameInterpolation_RecordOpenChild(actor, i);
+
         switch (actor->type) {
             default: // Draw custom actor
                 CM_DrawActors(D_800DC5EC->camera, actor);
                 break;
             case ACTOR_TREE_MARIO_RACEWAY:
+
                 render_actor_tree_mario_raceway(camera, sBillBoardMtx, actor);
                 break;
             case ACTOR_TREE_YOSHI_VALLEY:
@@ -2548,6 +2552,7 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
                 render_actor_yoshi_egg(camera, sBillBoardMtx, (struct YoshiValleyEgg*) actor, pathCounter);
                 break;
         }
+        FrameInterpolation_RecordCloseChild(actor, i);
     }
     if (GetCourse() == GetMooMooFarm()) {
         render_cows(camera, sBillBoardMtx);
