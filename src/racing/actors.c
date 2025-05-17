@@ -2552,7 +2552,7 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
                 render_actor_yoshi_egg(camera, sBillBoardMtx, (struct YoshiValleyEgg*) actor, pathCounter);
                 break;
         }
-        FrameInterpolation_RecordCloseChild(actor, i);
+        FrameInterpolation_RecordCloseChild();
     }
     if (GetCourse() == GetMooMooFarm()) {
         render_cows(camera, sBillBoardMtx);

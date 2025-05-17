@@ -3,6 +3,7 @@
 #include "port/Game.h"
 #include "assets/other_textures.h"
 #include "assets/common_data.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 extern "C" {
 #include "update_objects.h"
@@ -12,8 +13,6 @@ extern "C" {
 #include "math_util.h"
 #include "math_util_2.h"
 #include "menus.h"
-// Doesn't seem to compile on Windows
-// #include "port/interpolation/FrameInterpolation.h"
 }
 
 size_t OGrandPrixBalloons::_count = 0;
@@ -36,6 +35,7 @@ OGrandPrixBalloons::OGrandPrixBalloons(const FVector& pos) {
         find_unused_obj_index(&gObjectParticle3[i]);
         init_object(gObjectParticle3[i], 0);
     }
+  //  printf("primAlfa %d\n", object->primAlpha);
 }
 
 void OGrandPrixBalloons::Tick() {
@@ -108,10 +108,10 @@ void OGrandPrixBalloons::func_80053D74(s32 objectIndex, UNUSED s32 arg1, s32 ver
     Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_hedgehog);
 
     // @port: Tag the transform.
-    // FrameInterpolation_RecordOpenChild("Balloon", TAG_ITEM_ADDR(object)); //Not working properly just yet
-
+    size_t i = 0;
     if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
         object = &gObjectList[objectIndex];
+        FrameInterpolation_RecordOpenChild("Balloon", TAG_ITEM_ADDR((objectIndex << 8) + i++)); //Not working properly just yet
         D_80183E80[2] = (s16) (object->unk_084[6] + 0x8000);
         rsp_set_matrix_transformation(object->pos, (u16*) D_80183E80, object->sizeScaling);
         set_color_render((s32) object->unk_084[0], (s32) object->unk_084[1], (s32) object->unk_084[2],
@@ -119,10 +119,10 @@ void OGrandPrixBalloons::func_80053D74(s32 objectIndex, UNUSED s32 arg1, s32 ver
                          (s32) object->primAlpha);
         gSPVertex(gDisplayListHead++, (uintptr_t)&vtx[vertexIndex], 4, 0);
         gSPDisplayList(gDisplayListHead++, (Gfx*)common_rectangle_display);
+        FrameInterpolation_RecordCloseChild();
     }
 
     // @port Pop the transform id.
-    // FrameInterpolation_RecordCloseChild();
 }
 
 void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
@@ -195,7 +195,9 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
 
 void OGrandPrixBalloons::func_80074D94(s32 objectIndex) {
     if (gObjectList[objectIndex].unk_0AE == 1) {
-        if ((_numBalloons2 <= gObjectList[objectIndex].offset[1]) &&
+        //! @warning this fades out the balloons. Original game uses _numBalloons3 here but they disappear before off-screen.
+        // So _numBalloons replaces it for now.
+        if ((_numBalloons <= gObjectList[objectIndex].offset[1]) &&
             (s16_step_down_towards(&gObjectList[objectIndex].primAlpha, 0, 8) != 0)) {
             func_80086F60(objectIndex);
         }
