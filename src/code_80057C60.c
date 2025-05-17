@@ -6574,6 +6574,10 @@ void func_8006D474(Player* player, s8 playerId, s8 screenId) {
     s16 var_s2;
     if ((player->unk_002 & (8 << (screenId * 4))) == (8 << (screenId * 4))) {
         for (var_s2 = 0; var_s2 < 10; var_s2++) {
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild(
+                "SmokeDust", TAG_SMOKE_DUST(((u32) player->unk_258[var_s2].unk_012 << 8) + (playerId << 16) + var_s2));
+
             switch (player->unk_258[var_s2].unk_012) {
                 case 1:
                     if (gActiveScreenMode == SCREEN_MODE_3P_4P_SPLITSCREEN) {
@@ -6694,6 +6698,8 @@ void func_8006D474(Player* player, s8 playerId, s8 screenId) {
                     }
                     break;
             }
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
     }
     if ((gModeSelection == BATTLE) && (player->unk_002 & (2 << (screenId * 4)))) {
