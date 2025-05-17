@@ -190,6 +190,7 @@ void mtxf_identity(Mat4 mtx) {
 // Add a translation vector to a matrix, mat is the matrix to add, dest is the destination matrix, pos is the
 // translation vector
 void add_translate_mat4_vec3f(Mat4 mat, Mat4 dest, Vec3f pos) {
+    FrameInterpolation_RecordMatrixTranslate(dest, pos);
     dest[3][0] = mat[3][0] + pos[0];
     dest[3][1] = mat[3][1] + pos[1];
     dest[3][2] = mat[3][2] + pos[2];
