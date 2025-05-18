@@ -903,6 +903,8 @@ void mtxf_translate_rotate(Mat4 dest, Vec3f pos, Vec3s orientation) {
     f32 sinZ = sins(orientation[2]);
     f32 cosZ = coss(orientation[2]);
 
+    FrameInterpolation_RecordTranslateRotate(dest, pos, orientation);
+
     dest[0][0] = (cosY * cosZ) + ((sinX * sinY) * sinZ);
     dest[1][0] = (-cosY * sinZ) + ((sinX * sinY) * cosZ);
     dest[2][0] = cosX * sinY;
@@ -1609,7 +1611,8 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     f32 sp140;
     s16 temp_v1;
     s16 thing;
-
+    
+    FrameInterpolation_RecordOpenChild("Player", playerId | screenId << 8);
     if (player->unk_044 & 0x2000) {
         sp14C[0] = 0;
         sp14C[1] = player->unk_048[screenId];
@@ -1666,7 +1669,6 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     // convert_to_fixed_point_matrix(&gGfxPool->mtxKart[playerId + (screenId * 8)], mtx);
 
     // @port: Tag the transform.
-    FrameInterpolation_RecordOpenChild("Player", playerId | screenId << 8);
 
     if ((player->effects & BOO_EFFECT) == BOO_EFFECT) {
         if (screenId == playerId) {
