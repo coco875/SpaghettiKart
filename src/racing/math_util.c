@@ -803,6 +803,9 @@ void func_802B6D58(Mat4 arg0, Vec3f arg1, Vec3f arg2) {
 
 void mtxf_multiplication(Mat4 dest, Mat4 mat1, Mat4 mat2) {
     Mat4 product;
+
+    FrameInterpolation_RecordMatrixMult(dest, product, 0);
+
     product[0][0] =
         (mat1[0][0] * mat2[0][0]) + (mat1[0][1] * mat2[1][0]) + (mat1[0][2] * mat2[2][0]) + (mat1[0][3] * mat2[3][0]);
     product[0][1] =
