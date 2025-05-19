@@ -4967,9 +4967,10 @@ void func_800651F4(Player* player, UNUSED s8 arg1, UNUSED s8 arg2, s8 arg3) {
     }
 }
 
+s32 D_func_800652D4_counter = 0;
 void func_800652D4(Vec3f arg0, Vec3s arg1, f32 arg2) {
     Mat4 mtx;
-
+    FrameInterpolation_RecordOpenChild("some_thing", D_func_800652D4_counter++ << 8);
     mtxf_translate_rotate(mtx, arg0, arg1);
     mtxf_scale(mtx, arg2);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], mtx);
@@ -4977,6 +4978,7 @@ void func_800652D4(Vec3f arg0, Vec3s arg1, f32 arg2) {
     //           G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
 
     AddEffectMatrix(mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
+    FrameInterpolation_RecordCloseChild();
 }
 
 void func_8006538C(Player* player, s8 arg1, s16 arg2, s8 arg3) {

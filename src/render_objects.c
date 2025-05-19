@@ -3934,15 +3934,15 @@ void func_80055EF4(s32 objectIndex, UNUSED s32 arg1) {
 
 void render_object_neon(s32 cameraId) {
     Camera* camera;
-    s32 var_s2;
     s32 objectIndex;
     Object* object;
 
     camera = &camera1[cameraId];
-    for (var_s2 = 0; var_s2 < 10; var_s2++) {
-        objectIndex = indexObjectList1[var_s2];
+    for (size_t i = 0; i < 10; i++) {
+        objectIndex = indexObjectList1[i];
         if (D_8018E838[cameraId] == 0) {
             object = &gObjectList[objectIndex];
+            FrameInterpolation_RecordOpenChild(object, TAG_OBJECT((objectIndex << 8) + i));
             if ((object->state >= 2) && (is_obj_index_flag_status_inactive(objectIndex, 0x00080000) != 0) &&
                 (is_object_visible_on_camera(objectIndex, camera, 0x2AABU) != 0)) {
                 Vtx* vtx = (Vtx*) LOAD_ASSET(common_vtx_hedgehog);
@@ -3950,6 +3950,7 @@ void render_object_neon(s32 cameraId) {
                 draw_2d_texture_at(object->pos, object->orientation, object->sizeScaling, (u8*) object->activeTLUT,
                                    object->activeTexture, vtx, 0x00000040, 0x00000040, 0x00000040, 0x00000020);
             }
+            FrameInterpolation_RecordCloseChild();
         }
     }
 }

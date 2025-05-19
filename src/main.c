@@ -758,15 +758,18 @@ void process_game_tick(void) {
         func_800382DC();
     }
 
-    // Editor requires this for camera movement.
-    func_8001EE98(gPlayerOneCopy, camera1, 0);
-
-    if (gIsEditorPaused == true) {
-        return;
-    }
-
     switch(gActiveScreenMode) {
         case SCREEN_MODE_1P:
+            if (CVarGetInteger("gFreecam", 0) == true) {
+                freecam(gFreecamCamera, gPlayerOneCopy, 0);
+            } else {
+                func_8001EE98(gPlayerOneCopy, camera1, 0);
+            }
+        
+            // Editor requires this so the camera keeps moving while the game is paused.
+            if (gIsEditorPaused == true) {
+                return;
+            }
             func_80028F70();
             break;
         case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
@@ -930,6 +933,8 @@ void race_logic_loop(void) {
  */
 
 void game_state_handler(void) {
+    FrameInterpolation_StartRecord();
+
 #if DVDL
     if ((gControllerOne->button & L_TRIG) && (gControllerOne->button & R_TRIG) && (gControllerOne->button & Z_TRIG) &&
         (gControllerOne->button & A_BUTTON)) {
@@ -966,6 +971,7 @@ void game_state_handler(void) {
             credits_loop();
             break;
     }
+    FrameInterpolation_StopRecord();
 }
 
 void interrupt_gfx_sptask(void) {

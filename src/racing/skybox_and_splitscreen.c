@@ -755,17 +755,45 @@ void func_802A5760(void) {
     }
 }
 
-void render_screens(s32 mode, s32 cameraId, s32 playerId) {
-    UNUSED s32 pad[4];
+void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_800DC5EC* screen) {
+    Mat4 matrix;
     u16 perspNorm;
-    UNUSED s32 pad2[2];
-    UNUSED s32 pad3;
+
+    if (CVarGetInteger("gFreecam", 0) == true) {
+        freecam_render_setup(gFreecamCamera);
+        return;
+    }
+
+    FrameInterpolation_RecordOpenChild("camerapersp", FrameInterpolation_GetCameraEpoch());
+    guPerspective(&gGfxPool->mtxPersp[cameraId], &perspNorm, gCameraZoom[cameraId], gScreenAspect,
+    CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
+
+    gSPPerspNormalize(gDisplayListHead++, perspNorm);
+    gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxPersp[cameraId]),
+    G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+
+    guLookAt(&gGfxPool->mtxLookAt[cameraId], camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
+            camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
+            if (D_800DC5C8 == 0) {
+                gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
+                G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+                mtxf_identity(matrix);
+                render_set_position(matrix, 0);
+            } else {
+                gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
+                G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
+                
+    }
+    FrameInterpolation_RecordCloseChild();
+}
+
+extern s32 D_func_800652D4_counter;
+void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     Mat4 matrix;
 
     s32 screenId = 0;
     s32 screenMode = SCREEN_MODE_1P;
-
-    FrameInterpolation_StartRecord();
+D_func_800652D4_counter = 0;
 
     switch (mode) {
         case RENDER_SCREEN_MODE_1P_PLAYER_ONE:
@@ -824,7 +852,14 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     }
 
     struct UnkStruct_800DC5EC* screen = &D_8015F480[screenId];
-    Camera* camera = &cameras[cameraId];
+    Camera* camera;
+
+    if (CVarGetInteger("gFreecam", 0) == true) {
+        camera = &gFreecamCamera;
+        cameraId = 4;
+    } else {
+        camera = &cameras[cameraId];
+    }
 
     if (screenMode == SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL) {
         gSPSetGeometryMode(gDisplayListHead++, G_SHADE | G_CULL_BACK | G_LIGHTING | G_SHADING_SMOOTH);
@@ -834,27 +869,28 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     func_802A3730(screen);
     gSPSetGeometryMode(gDisplayListHead++, G_ZBUFFER | G_SHADE | G_CULL_BACK | G_LIGHTING | G_SHADING_SMOOTH);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
+    //FrameInterpolation_RecordOpenChild("SCREENCAMERA", (playerId | cameraId) << 8);
 
-    guPerspective(&gGfxPool->mtxPersp[cameraId], &perspNorm, gCameraZoom[cameraId], gScreenAspect,
-                  CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
+    setup_camera(camera, playerId, cameraId, screen); // Setup camera perspective and lookAt
+//    render_course(screen);
 
-    gSPPerspNormalize(gDisplayListHead++, perspNorm);
-    gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxPersp[cameraId]),
-              G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+//FrameInterpolation_RecordOpenChild("track", 0);
+//Mat4 trackMtx;
+//mtxf_identity(trackMtx);
+//AddObjectMatrix(trackMtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
+render_course(screen);
+//FrameInterpolation_RecordCloseChild();
 
-    guLookAt(&gGfxPool->mtxLookAt[cameraId], camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
-             camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
-    if (D_800DC5C8 == 0) {
-        gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
-                  G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-        mtxf_identity(matrix);
-        render_set_position(matrix, 0);
-    } else {
-        gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
-                  G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
-    }
-    render_course(screen);
+
+    //Mat4 projectionF;
+    //Matrix_MtxToMtxF(&gGfxPool->mtxLookAt[cameraId], &projectionF);
+  //  SkinMatrix_MtxFMtxFMult(&projectionF, &flipF, &projectionF);
+   // FrameInterpolation_RecordCloseChild();
+
+
+
     if (D_800DC5C8 == 1) {
+        //PushLookAtMtx(gGfxPool->mtxLookAt[cameraId], G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
         gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
                   G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
         mtxf_identity(matrix);
@@ -910,7 +946,6 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
         gNumScreens += 1;
     }
 
-    FrameInterpolation_StopRecord();
 }
 
 void func_802A74BC(void) {

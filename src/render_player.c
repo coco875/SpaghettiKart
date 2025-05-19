@@ -1611,8 +1611,8 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     f32 sp140;
     s16 temp_v1;
     s16 thing;
-    
-    FrameInterpolation_RecordOpenChild("Player", playerId | screenId << 8);
+
+    FrameInterpolation_RecordOpenChild("player_kart", playerId | screenId << 8);
     if (player->unk_044 & 0x2000) {
         sp14C[0] = 0;
         sp14C[1] = player->unk_048[screenId];
@@ -1836,6 +1836,9 @@ void func_80025DE8(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     sp94[1] = player->unk_048[screenId];
     sp94[2] = player->unk_050[screenId];
 
+    FrameInterpolation_RecordOpenChild("player_boost", playerId | screenId << 8);
+
+
     mtxf_translate_rotate(mtx, sp9C, sp94);
     mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], mtx);
@@ -1867,6 +1870,8 @@ void func_80025DE8(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     gSPDisplayList(gDisplayListHead++, common_square_plain_render);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
     gMatrixEffectCount += 1;
+
+    FrameInterpolation_RecordCloseChild();
 }
 
 void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 arg3) {
