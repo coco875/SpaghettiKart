@@ -2629,6 +2629,8 @@ void draw_simplified_lap_count(s32 playerId) {
 }
 
 void func_8004E800(s32 playerId) {
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild("Player place HUD", playerId << 8);
     if (playerHUD[playerId].unk_81 != 0) {
         if (playerHUD[playerId].lapCount != 3) {
             func_8004A384(playerHUD[playerId].rankX + playerHUD[playerId].slideRankX,
@@ -2644,6 +2646,8 @@ void func_8004E800(s32 playerId) {
                           0x00000040, 0x00000080, 0x00000040);
         }
     }
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }
 
 void func_8004E998(s32 playerId) {
