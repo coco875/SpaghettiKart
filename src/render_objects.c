@@ -3417,11 +3417,15 @@ void render_object_snowflakes_particles(void) {
     func_80044F34(D_0D0293D8, 0x10, 0x10);
     for (someIndex = 0; someIndex < NUM_SNOWFLAKES; someIndex++) {
         snowflakeIndex = gObjectParticle1[someIndex];
+
+        // @port: Tag the transform.
         FrameInterpolation_RecordOpenChild("SnowFlakes", snowflakeIndex);
         if (gObjectList[snowflakeIndex].state >= 2) {
             rsp_set_matrix_gObjectList(snowflakeIndex);
             gSPDisplayList(gDisplayListHead++, D_0D006980);
         }
+
+        // @port Pop the transform id.
         FrameInterpolation_RecordCloseChild();
     }
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
@@ -3843,6 +3847,8 @@ void render_object_bowser_flame_particle(s32 objectIndex, s32 cameraId) {
     camera = &camera1[cameraId];
     if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
         object = &gObjectList[objectIndex];
+
+        // @port: Tag the transform.
         FrameInterpolation_RecordOpenChild("Bowser Statue Flame", TAG_ITEM_ADDR(object));
         if (object->unk_0D5 == 9) {
             func_8004B72C(0xFF, (s32) object->type, 0, (s32) object->unk_0A2, 0, 0, (s32) object->primAlpha);
@@ -3851,6 +3857,8 @@ void render_object_bowser_flame_particle(s32 objectIndex, s32 cameraId) {
         }
         D_80183E80[1] = func_800418AC(object->pos[0], object->pos[2], camera->pos);
         func_800431B0(object->pos, D_80183E80, object->sizeScaling, D_0D005AE0);
+
+        // @port Pop the transform id.
         FrameInterpolation_RecordCloseChild();
     }
 }
@@ -3936,6 +3944,9 @@ void func_800557B4(s32 objectIndex, u32 arg1, u32 arg2) {
     Object* object;
 
     object = &gObjectList[objectIndex];
+
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild("Penguin", (uintptr_t) object);
     if (object->state >= 2) {
         if (is_obj_flag_status_active(objectIndex, 0x00000020) != 0) {
             if (func_80072320(objectIndex, 4) != 0) {
@@ -3958,6 +3969,9 @@ void func_800557B4(s32 objectIndex, u32 arg1, u32 arg2) {
         render_animated_model((Armature*) object->model, (Animation**) object->vertex, (s16) object->unk_0D8,
                               (s16) object->textureListIndex);
     }
+
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }
 
 void func_80055EF4(s32 objectIndex, UNUSED s32 arg1) {
