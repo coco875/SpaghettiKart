@@ -51,11 +51,17 @@ void render_actor_falling_rock(Camera* camera, struct FallingRock* rock) {
         }
     }
 
-    mtxf_pos_rotation_xyz(mtx, rock->pos, rock->rot);
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild("rock", TAG_ITEM_ADDR(rock)); // Not working properly just yet
 
+    mtxf_pos_rotation_xyz(mtx, rock->pos, rock->rot);
     if (render_set_position(mtx, 0) == 0) {
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
         return;
     }
-
     gSPDisplayList(gDisplayListHead++, d_course_choco_mountain_dl_falling_rock);
+
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }
