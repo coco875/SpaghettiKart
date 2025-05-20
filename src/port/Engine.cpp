@@ -233,10 +233,10 @@ uint32_t GameEngine::GetInterpolationFPS() {
     } else if (CVarGetInteger("gVsyncEnabled", 1) ||
                !Ship::Context::GetInstance()->GetWindow()->CanDisableVerticalSync()) {
         return std::min<uint32_t>(Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate(),
-                                  CVarGetInteger("gInterpolationFPS", 60));
+                                  CVarGetInteger("gInterpolationFPS", 30));
     }
 
-    return CVarGetInteger("gInterpolationFPS", 60);
+    return CVarGetInteger("gInterpolationFPS", 30);
 }
 
 uint32_t GameEngine::GetInterpolationFrameCount()
@@ -360,7 +360,7 @@ void GameEngine::ProcessGfxCommands(Gfx* commands) {
     int fps = target_fps;
     int original_fps = 60 / 2 /*gVIsPerFrame*/;
 
-    if (target_fps == 20 || original_fps > target_fps) {
+    if (target_fps == 30 || original_fps > target_fps) {
         fps = original_fps;
     }
 
