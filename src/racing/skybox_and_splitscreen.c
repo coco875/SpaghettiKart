@@ -756,6 +756,7 @@ void func_802A5760(void) {
     }
 }
 
+// Setup the cameras perspective and lookAt (movement/rotation)
 void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_800DC5EC* screen) {
     Mat4 matrix;
     u16 perspNorm;
@@ -765,26 +766,19 @@ void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_8
         return;
     }
 
-    FrameInterpolation_RecordOpenChild("camerapersp", FrameInterpolation_GetCameraEpoch());
+    // Setup perspective (camera movement)
+    FrameInterpolation_RecordOpenChild("camera", FrameInterpolation_GetCameraEpoch());
     guPerspective(&gGfxPool->mtxPersp[cameraId], &perspNorm, gCameraZoom[cameraId], gScreenAspect,
-    CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
-
+                  CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
     gSPPerspNormalize(gDisplayListHead++, perspNorm);
     gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxPersp[cameraId]),
-    G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+              G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
 
+    // Setup lookAt (camera rotation)
     guLookAt(&gGfxPool->mtxLookAt[cameraId], camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
             camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
-            if (D_800DC5C8 == 0) {
-                gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
-                G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-                mtxf_identity(matrix);
-                render_set_position(matrix, 0);
-            } else {
-                gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
-                G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
-                
-    }
+    gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
+              G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
     FrameInterpolation_RecordCloseChild();
 }
 
@@ -870,36 +864,22 @@ D_func_800652D4_counter = 0;
     func_802A3730(screen);
     gSPSetGeometryMode(gDisplayListHead++, G_ZBUFFER | G_SHADE | G_CULL_BACK | G_LIGHTING | G_SHADING_SMOOTH);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
-    //FrameInterpolation_RecordOpenChild("SCREENCAMERA", (playerId | cameraId) << 8);
 
-    setup_camera(camera, playerId, cameraId, screen); // Setup camera perspective and lookAt
-//    render_course(screen);
+    // Setup camera perspective and lookAt
+    setup_camera(camera, playerId, cameraId, screen);
+    
+    // Create a matrix for the track and game objects
+    FrameInterpolation_RecordOpenChild("track", (playerId | cameraId) << 8);
+    Mat4 trackMatrix;
+    mtxf_identity(trackMatrix);
+    render_set_position(trackMatrix, 0);
 
-//FrameInterpolation_RecordOpenChild("track", 0);
-//Mat4 trackMtx;
-//mtxf_identity(trackMtx);
-//AddObjectMatrix(trackMtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
-render_course(screen);
-//FrameInterpolation_RecordCloseChild();
-
-
-    //Mat4 projectionF;
-    //Matrix_MtxToMtxF(&gGfxPool->mtxLookAt[cameraId], &projectionF);
-  //  SkinMatrix_MtxFMtxFMult(&projectionF, &flipF, &projectionF);
-   // FrameInterpolation_RecordCloseChild();
-
-
-
-    if (D_800DC5C8 == 1) {
-        //PushLookAtMtx(gGfxPool->mtxLookAt[cameraId], G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-        gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
-                  G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-        mtxf_identity(matrix);
-        render_set_position(matrix, 0);
-    }
+    // Draw course and game objects
+    render_course(screen);
     render_course_actors(screen);
     CM_DrawStaticMeshActors();
     render_object(mode);
+
     switch (screenId) {
         case 0:
             render_players_on_screen_one();
@@ -946,7 +926,7 @@ render_course(screen);
     if (mode != RENDER_SCREEN_MODE_1P_PLAYER_ONE) {
         gNumScreens += 1;
     }
-
+    FrameInterpolation_RecordCloseChild();
 }
 
 void func_802A74BC(void) {
