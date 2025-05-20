@@ -1891,6 +1891,9 @@ void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 a
         arg3 = 0;
     }
 
+    // @port: Tag the transform.
+    //FrameInterpolation_RecordOpenChild("PlayerReflection", playerId);
+
     mtxf_translate_rotate(mtx, sp9C, sp94);
     mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], mtx);
@@ -1918,6 +1921,9 @@ void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 a
     gSPDisplayList(gDisplayListHead++, common_square_plain_render);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
     gMatrixEffectCount += 1;
+
+    // @port Pop the transform id.
+    //FrameInterpolation_RecordCloseChild();
 }
 
 void render_player(Player* player, s8 playerId, s8 screenId) {
