@@ -52,7 +52,7 @@ void render_actor_falling_rock(Camera* camera, struct FallingRock* rock) {
     }
 
     // @port: Tag the transform.
-    FrameInterpolation_RecordOpenChild("rock", TAG_ITEM_ADDR(rock)); // Not working properly just yet
+    FrameInterpolation_RecordOpenChild("rock", (uintptr_t) rock);
 
     mtxf_pos_rotation_xyz(mtx, rock->pos, rock->rot);
     if (render_set_position(mtx, 0) == 0) {
