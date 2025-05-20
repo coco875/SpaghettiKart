@@ -3387,15 +3387,19 @@ void func_800514BC(void) {
 }
 
 void render_object_leaf_particle(UNUSED s32 cameraId) {
-    s32 someIndex;
+    size_t i;
     s32 leafIndex;
     Object* object;
 
     gSPDisplayList(gDisplayListHead++, D_0D0079C8);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BOTH);
     load_texture_block_rgba16_mirror((u8*) common_texture_particle_leaf, 0x00000020, 0x00000010);
-    for (someIndex = 0; someIndex < gLeafParticle_SIZE; someIndex++) {
-        leafIndex = gLeafParticle[someIndex];
+    for (i = 0; i < gLeafParticle_SIZE; i++) {
+        leafIndex = gLeafParticle[i];
+
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("Leaves", leafIndex);
+
         if (leafIndex != -1) {
             object = &gObjectList[leafIndex];
             if ((object->state >= 2) && (object->unk_0D5 == 7) && (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX)) {
@@ -3403,23 +3407,27 @@ void render_object_leaf_particle(UNUSED s32 cameraId) {
                 gSPDisplayList(gDisplayListHead++, D_0D0069C8);
             }
         }
+
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
 void render_object_snowflakes_particles(void) {
-    s32 someIndex;
+    size_t i;
     s32 snowflakeIndex;
 
     gSPDisplayList(gDisplayListHead++, D_0D007AE0);
     gDPSetCombineLERP(gDisplayListHead++, 1, 0, SHADE, 0, 0, 0, 0, TEXEL0, 1, 0, SHADE, 0, 0, 0, 0, TEXEL0);
     func_80044F34(D_0D0293D8, 0x10, 0x10);
-    for (someIndex = 0; someIndex < NUM_SNOWFLAKES; someIndex++) {
-        snowflakeIndex = gObjectParticle1[someIndex];
+    for (i = 0; i < NUM_SNOWFLAKES; i++) {
+        snowflakeIndex = gObjectParticle1[i];
 
         // @port: Tag the transform.
         FrameInterpolation_RecordOpenChild("SnowFlakes", snowflakeIndex);
+
         if (gObjectList[snowflakeIndex].state >= 2) {
             rsp_set_matrix_gObjectList(snowflakeIndex);
             gSPDisplayList(gDisplayListHead++, D_0D006980);
@@ -3454,7 +3462,7 @@ void func_800518F8(s32 objectIndex, s16 x, s16 y) {
     }
 
     if (gObjectList[objectIndex].status & 0x10) {
-        
+
         // @port: Tag the transform.
         FrameInterpolation_RecordOpenChild("func_800518F8", (uintptr_t) &gObjectList[objectIndex]);
 
