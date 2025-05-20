@@ -8,11 +8,13 @@
 #include "math.h"
 #include "memory.h"
 #include "engine/Matrix.h"
+#include "course.h"
 #include "port/Game.h"
 #include <port/interpolation/FrameInterpolation.h>
 #include <port/interpolation/matrix.h>
-
 #pragma intrinsic(sqrtf, fabs)
+
+extern s16 gCurrentCourseId;
 
 s32 D_802B91C0[2] = { 13, 13 };
 Vec3f D_802B91C8 = { 0.0f, 0.0f, 0.0f };
@@ -55,7 +57,7 @@ s32 render_set_position(Mat4 mtx, s32 arg1) {
     if (gMatrixObjectCount >= MTX_OBJECT_POOL_SIZE) {
         return 0;
     }
-    //mtxf_to_mtx(&gGfxPool->mtxObject[gMatrixObjectCount], arg0);
+    // mtxf_to_mtx(&gGfxPool->mtxObject[gMatrixObjectCount], arg0);
     switch (arg1) { /* irregular */
         case 0:
             AddObjectMatrix(mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
@@ -1103,16 +1105,22 @@ s32 is_visible_between_angle(u16 arg0, u16 arg1, u16 arg2) {
 f32 is_within_render_distance(Vec3f cameraPos, Vec3f objectPos, u16 orientationY, f32 minDistance, f32 fov,
                               f32 maxDistance) {
     u16 angleObject;
-    UNUSED u16 pad;
     u16 temp_v0;
     f32 distanceX;
     f32 distance;
     f32 distanceY;
+    f32 scaleFov;
+    f32 maxDistance2;
     s32 plus_fov_angle;
     s32 minus_fov_angle;
     u16 temp;
-    UNUSED s32 pad2[3];
-    u16 extended_fov = ((u16) fov * 0xB6);
+    s32 count = 0;
+
+    maxDistance *= 6.5f;
+    maxDistance2 = 1.0f;
+    scaleFov = 1.25;
+
+    f32 extended_fov = ((f32) fov * 0xB6 * scaleFov); // Sets the Culling for objects on the left and right
 
     distanceX = objectPos[0] - cameraPos[0];
     distanceX = distanceX * distanceX;
@@ -1141,19 +1149,28 @@ f32 is_within_render_distance(Vec3f cameraPos, Vec3f objectPos, u16 orientationY
 
     if (minDistance == 0.0f) {
         if (is_visible_between_angle((orientationY + extended_fov), (orientationY - extended_fov), angleObject) == 1) {
-            return distance;
+            if (gCurrentCourseId == 0xB /* COURSE_KALAMARI_DESERT */) {
+                return distance / 6.5f; // set for better DD settings in Desert
+            } else {
+                return distance / 10.0f; // Items
+            }
         }
         return -1.0f;
     }
 
     if (is_visible_between_angle((u16) plus_fov_angle, (u16) minus_fov_angle, angleObject) == 1) {
-        return distance;
+        if (gCurrentCourseId == 0xB /* COURSE_KALAMARI_DESERT */) {
+            return distance / 2.0f;
+        } else {
+            return distance / 10.0f; // DD Vhicles
+        }
     }
+
     temp_v0 = func_802B7CA8(minDistance / distance);
     temp = angleObject + temp_v0;
 
     if (is_visible_between_angle(plus_fov_angle, minus_fov_angle, temp) == 1) {
-        return distance;
+        return 0;
     }
 
     temp = angleObject - temp_v0;
