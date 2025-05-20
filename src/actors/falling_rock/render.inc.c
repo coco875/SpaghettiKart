@@ -17,9 +17,6 @@ void render_actor_falling_rock(Camera* camera, struct FallingRock* rock) {
     f32 height;
     UNUSED s32 pad[4];
 
-    // @port: Tag the transform.
-    FrameInterpolation_RecordOpenChild("rock", TAG_ITEM_ADDR(rock)); //Not working properly just yet
-
     if (rock->respawnTimer != 0) {
         return;
     }
@@ -55,11 +52,10 @@ void render_actor_falling_rock(Camera* camera, struct FallingRock* rock) {
     }
 
     mtxf_pos_rotation_xyz(mtx, rock->pos, rock->rot);
+
     if (render_set_position(mtx, 0) == 0) {
         return;
     }
-    gSPDisplayList(gDisplayListHead++, d_course_choco_mountain_dl_falling_rock);
 
-    // @port Pop the transform id.
-    FrameInterpolation_RecordCloseChild();
+    gSPDisplayList(gDisplayListHead++, d_course_choco_mountain_dl_falling_rock);
 }
