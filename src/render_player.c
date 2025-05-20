@@ -1892,7 +1892,7 @@ void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 a
     }
 
     // @port: Tag the transform.
-    FrameInterpolation_RecordOpenChild("PlayerReflection", playerId);
+    FrameInterpolation_RecordOpenChild("PlayerReflection", playerId | screenId << 8);
 
     mtxf_translate_rotate(mtx, sp9C, sp94);
     mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
