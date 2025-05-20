@@ -221,8 +221,8 @@ void OMole::func_80081D34(s32 objectIndex) {
                     player->soundEffects |= 2;
                 }
                 object->direction_angle[1] = camera->rot[1];
-                object->velocity[1] = (player->speed / 2) + 3.0;
-                object->unk_034 = player->speed + 1.0;
+                object->velocity[1] = (player->unk_094 / 2) + 3.0;
+                object->unk_034 = player->unk_094 + 1.0;
                 if (object->velocity[1] >= 5.0) {
                     object->velocity[1] = 5.0f;
                 }
@@ -323,7 +323,6 @@ void OMole::func_800821AC(s32 objectIndex, s32 arg1) {
     }
 }
 
-// Holes
 void OMole::func_80054E10(s32 objectIndex) {
     if (gObjectList[objectIndex].state > 0) {
         if (is_obj_flag_status_active(objectIndex, 0x00800000) != 0) {
@@ -363,7 +362,7 @@ void OMole::func_80054D00(s32 objectIndex, s32 cameraId) {
         if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {
 
             // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("func_80054D00", (uintptr_t)&gObjectList[objectIndex]);
+            FrameInterpolation_RecordOpenChild("func_80054D00", TAG_OBJECT(&gObjectList[objectIndex]));
 
             D_80183E80[0] = (s16) gObjectList[objectIndex].orientation[0];
             D_80183E80[1] =
@@ -379,7 +378,6 @@ void OMole::func_80054D00(s32 objectIndex, s32 cameraId) {
     }
 }
 
-// Mole rocks
 void OMole::func_80054F04(s32 cameraId) {
     Camera* camera = &camera1[cameraId];
 

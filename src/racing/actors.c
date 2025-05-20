@@ -510,6 +510,7 @@ void render_cows(Camera* camera, Mat4 arg1) {
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     var_s5 = NULL;
     var_s1 = var_t1;
+
     while (var_s1->pos[0] != END_OF_SPAWN_DATA) {
         sp88[0] = var_s1->pos[0] * gCourseDirection;
         sp88[1] = var_s1->pos[1];
@@ -524,6 +525,12 @@ void render_cows(Camera* camera, Mat4 arg1) {
             arg1[3][0] = sp88[0];
             arg1[3][1] = sp88[1];
             arg1[3][2] = sp88[2];
+
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("render_actor_cow", ((var_s1->pos[0] & 0xFFFF) << 32) |
+                                                                       ((var_s1->pos[1] & 0xFFFF) << 16) |
+                                                                       (var_s1->pos[2] & 0xFFFF));
+
             if ((gMatrixObjectCount < MTX_OBJECT_POOL_SIZE) && (render_set_position(arg1, 0) != 0)) {
                 switch (var_s1->someId) {
                     case 0:
@@ -545,6 +552,9 @@ void render_cows(Camera* camera, Mat4 arg1) {
             } else {
                 return;
             }
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
         var_s1++;
     }
@@ -655,6 +665,11 @@ void render_palm_trees(Camera* camera, Mat4 arg1) {
             continue;
         }
 
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("render_actor_cow", ((var_s1->pos[0] & 0xFFFF) << 32) |
+                                                                   ((var_s1->pos[1] & 0xFFFF) << 16) |
+                                                                   (var_s1->pos[2] & 0xFFFF));
+
         test &= 0xF;
         test = (s16) test;
         if (test == 6) {
@@ -691,6 +706,8 @@ void render_palm_trees(Camera* camera, Mat4 arg1) {
             }
             var_s1++;
         }
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
 }
 
@@ -708,7 +725,7 @@ void render_actor_shell(Camera* camera, Mat4 matrix, struct ShellActor* shell) {
     //! @todo Is this making the shell spin?
     // Is it doing this by modifying a an address?
     uintptr_t phi_t3;
-    
+
     // @port: Tag the transform.
     FrameInterpolation_RecordOpenChild("Shell", TAG_ITEM_ADDR(shell));
 
@@ -2657,7 +2674,7 @@ void update_course_actors(void) {
 }
 
 const char* get_actor_name(s32 id) {
-    switch(id) {
+    switch (id) {
         case ACTOR_FALLING_ROCK:
             return "Falling Rock";
         case ACTOR_GREEN_SHELL:

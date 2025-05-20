@@ -35,7 +35,7 @@ OGrandPrixBalloons::OGrandPrixBalloons(const FVector& pos) {
         find_unused_obj_index(&gObjectParticle3[i]);
         init_object(gObjectParticle3[i], 0);
     }
-  //  printf("primAlfa %d\n", object->primAlpha);
+    //  printf("primAlfa %d\n", object->primAlpha);
 }
 
 void OGrandPrixBalloons::Tick() {
@@ -75,7 +75,7 @@ void OGrandPrixBalloons::Draw(s32 cameraId) {
         return;
     }
 
-    gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D007E98);
+    gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D007E98);
     gDPLoadTLUT_pal256(gDisplayListHead++, gTLUTOnomatopoeia);
     func_8004B614(0, 0, 0, 0, 0, 0, 0);
     gDPSetAlphaCompare(gDisplayListHead++, G_AC_THRESHOLD);
@@ -86,14 +86,14 @@ void OGrandPrixBalloons::Draw(s32 cameraId) {
                          GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA));
     D_80183E80[0] = 0;
     D_80183E80[1] = 0x8000;
-    rsp_load_texture((uint8_t*)gTextureBalloon1, 64, 32);
+    rsp_load_texture((uint8_t*) gTextureBalloon1, 64, 32);
     for (var_s1 = 0; var_s1 < _numBalloons; var_s1++) {
         objectIndex = gObjectParticle3[var_s1];
         if ((objectIndex != NULL_OBJECT_ID) && (gObjectList[objectIndex].state >= 2)) {
             OGrandPrixBalloons::func_80053D74(objectIndex, cameraId, 0);
         }
     }
-    rsp_load_texture((uint8_t*)gTextureBalloon2, 64, 32);
+    rsp_load_texture((uint8_t*) gTextureBalloon2, 64, 32);
     for (var_s1 = 0; var_s1 < _numBalloons; var_s1++) {
         objectIndex = gObjectParticle3[var_s1];
         if ((objectIndex != NULL_OBJECT_ID) && (gObjectList[objectIndex].state >= 2)) {
@@ -107,22 +107,25 @@ void OGrandPrixBalloons::func_80053D74(s32 objectIndex, UNUSED s32 arg1, s32 ver
 
     Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_hedgehog);
 
-    // @port: Tag the transform.
     size_t i = 0;
     if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
         object = &gObjectList[objectIndex];
-        FrameInterpolation_RecordOpenChild("Balloon", TAG_ITEM_ADDR((objectIndex << 8) + i++)); //Not working properly just yet
+
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("Balloon",
+                                           TAG_ITEM_ADDR((objectIndex << 32) + i++)); // Not working properly just yet
+
         D_80183E80[2] = (s16) (object->unk_084[6] + 0x8000);
         rsp_set_matrix_transformation(object->pos, (u16*) D_80183E80, object->sizeScaling);
         set_color_render((s32) object->unk_084[0], (s32) object->unk_084[1], (s32) object->unk_084[2],
                          (s32) object->unk_084[3], (s32) object->unk_084[4], (s32) object->unk_084[5],
                          (s32) object->primAlpha);
-        gSPVertex(gDisplayListHead++, (uintptr_t)&vtx[vertexIndex], 4, 0);
-        gSPDisplayList(gDisplayListHead++, (Gfx*)common_rectangle_display);
+        gSPVertex(gDisplayListHead++, (uintptr_t) &vtx[vertexIndex], 4, 0);
+        gSPDisplayList(gDisplayListHead++, (Gfx*) common_rectangle_display);
+
+        // @port Pop the transform id.
         FrameInterpolation_RecordCloseChild();
     }
-
-    // @port Pop the transform id.
 }
 
 void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
@@ -195,7 +198,8 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
 
 void OGrandPrixBalloons::func_80074D94(s32 objectIndex) {
     if (gObjectList[objectIndex].unk_0AE == 1) {
-        //! @warning this fades out the balloons. Original game uses _numBalloons3 here but they disappear before off-screen.
+        //! @warning this fades out the balloons. Original game uses _numBalloons3 here but they disappear before
+        //! off-screen.
         // So _numBalloons replaces it for now.
         if ((_numBalloons <= gObjectList[objectIndex].offset[1]) &&
             (s16_step_down_towards(&gObjectList[objectIndex].primAlpha, 0, 8) != 0)) {
@@ -219,7 +223,8 @@ void OGrandPrixBalloons::func_80074E28(s32 objectIndex) {
         case 0:
             break;
         case 3:
-            OGrandPrixBalloons::func_80041480(&gObjectList[objectIndex].unk_084[6], -0x1000, 0x1000, &gObjectList[objectIndex].unk_084[7]);
+            OGrandPrixBalloons::func_80041480(&gObjectList[objectIndex].unk_084[6], -0x1000, 0x1000,
+                                              &gObjectList[objectIndex].unk_084[7]);
             if (gObjectList[objectIndex].unk_0AE == 0) {
                 func_80072428(objectIndex);
             }
