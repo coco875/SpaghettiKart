@@ -3430,27 +3430,28 @@ struct CloudInterpData {
     s16 x;
 };
 
-struct CloudInterpData prevClouds[550] = { 0 };
+struct CloudInterpData prevClouds[OBJECT_LIST_SIZE] = { 0 };
 
 void func_800518F8(s32 objectIndex, s16 x, s16 y) {
-    bool skipped = false;
 
-    for (int cloudIdx = 0; cloudIdx < 550; cloudIdx++) {
-        if (objectIndex == prevClouds[cloudIdx].objectIndex) {
-            if (fabs(x - prevClouds[cloudIdx].x) > 550 / 2) {
-                // @port Skip interpolation
-                FrameInterpolation_ShouldInterpolateFrame(false);
-                skipped = true;
-                break;
+    // Search all recorded clouds for the one we're drawing
+    for (int i = 0; i < OBJECT_LIST_SIZE; i++) {
+        if (objectIndex == prevClouds[i].objectIndex) {
+            // Coincidence!
+            // Skip drawing the cloud this frame if it warped to the other side of the screen
+            if (fabs(x - prevClouds[i].x) > SCREEN_WIDTH / 2) {
+                prevClouds[objectIndex].x = x;
+                prevClouds[objectIndex].objectIndex = objectIndex;
+                return;
             }
         }
     }
 
     if (gObjectList[objectIndex].status & 0x10) {
-        if (!skipped) {
-            // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("func_800518F8", (uintptr_t) &gObjectList[objectIndex]);
-        }
+        
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("func_800518F8", (uintptr_t) &gObjectList[objectIndex]);
+
         if (D_8018D228 != gObjectList[objectIndex].unk_0D5) {
             D_8018D228 = gObjectList[objectIndex].unk_0D5;
             func_80044DA0(gObjectList[objectIndex].activeTexture, gObjectList[objectIndex].textureWidth,
@@ -3460,16 +3461,11 @@ void func_800518F8(s32 objectIndex, s16 x, s16 y) {
         gSPVertex(gDisplayListHead++, gObjectList[objectIndex].vertex, 4, 0);
         gSPDisplayList(gDisplayListHead++, common_rectangle_display);
 
-        if (skipped) {
-            // @port renable interpolation
-            FrameInterpolation_ShouldInterpolateFrame(true);
-            // printf("skipped!\n");
-        }
-        else {
-            // @port Pop the transform id.
-            FrameInterpolation_RecordCloseChild();
-        }
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
+
+    // Save current cloud index and x position
     prevClouds[objectIndex].x = x;
     prevClouds[objectIndex].objectIndex = objectIndex;
 }
