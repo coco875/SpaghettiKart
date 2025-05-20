@@ -32,7 +32,7 @@ OTrashBin::OTrashBin(const FVector& pos, const IRotator& rotation, f32 scale, OT
 
     init_object(_objectIndex, 0);
 
-    if (!IsBansheeBoardwalk()) {
+    if (GetCourse() != GetBansheeBoardwalk()) {
         _drawBin = true;
     }
 }
@@ -65,7 +65,7 @@ void OTrashBin::Draw(s32 cameraId) {
             Vec3s Rot = { 0, 0x4000, 0 };
 
             // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("OTrashBin", (uintptr_t) object);
+            FrameInterpolation_RecordOpenChild("Bin", mtx);
 
             mtxf_pos_rotation_xyz(mtx, Pos, Rot);
             //mtxf_scale(mtx, 1.0f);
