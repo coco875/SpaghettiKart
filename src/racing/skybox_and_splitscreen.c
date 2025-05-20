@@ -21,6 +21,7 @@
 #include "engine/courses/Course.h"
 #include "port/Game.h"
 #include "math_util.h"
+#include "src/enhancements/freecam/freecam.h"
 #include "port/interpolation/FrameInterpolation.h"
 
 Vp D_802B8880[] = {

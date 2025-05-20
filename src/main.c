@@ -44,6 +44,7 @@
 #include "buffers/gfx_output_buffer.h"
 #include <bridge/gfxdebuggerbridge.h>
 #include "enhancements/freecam/freecam.h"
+#include "port/interpolation/FrameInterpolation.h"
 #include "engine/wasm.h"
 #include "port/Game.h"
 #include "engine/Matrix.h"

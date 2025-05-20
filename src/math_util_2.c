@@ -15,6 +15,7 @@
 
 #include "port/Engine.h"
 #include "engine/Matrix.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 #pragma intrinsic(sqrtf)
 
