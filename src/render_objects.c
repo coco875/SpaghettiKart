@@ -3425,18 +3425,53 @@ void render_object_snowflakes_particles(void) {
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
-void func_800518F8(s32 objectIndex, s16 arg1, s16 arg2) {
-    UNUSED s32 pad[1];
+struct CloudInterpData {
+    s32 objectIndex;
+    s16 x;
+};
+
+struct CloudInterpData prevClouds[550] = { 0 };
+
+void func_800518F8(s32 objectIndex, s16 x, s16 y) {
+    bool skipped = false;
+
+    for (int cloudIdx = 0; cloudIdx < 550; cloudIdx++) {
+        if (objectIndex == prevClouds[cloudIdx].objectIndex) {
+            if (fabs(x - prevClouds[cloudIdx].x) > 550 / 2) {
+                // @port Skip interpolation
+                FrameInterpolation_ShouldInterpolateFrame(false);
+                skipped = true;
+                break;
+            }
+        }
+    }
+
     if (gObjectList[objectIndex].status & 0x10) {
+        if (!skipped) {
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("func_800518F8", (uintptr_t) &gObjectList[objectIndex]);
+        }
         if (D_8018D228 != gObjectList[objectIndex].unk_0D5) {
             D_8018D228 = gObjectList[objectIndex].unk_0D5;
             func_80044DA0(gObjectList[objectIndex].activeTexture, gObjectList[objectIndex].textureWidth,
                           gObjectList[objectIndex].textureHeight);
         }
-        func_80042330_unchanged(arg1, arg2, 0U, gObjectList[objectIndex].sizeScaling);
+        func_80042330_unchanged(x, y, 0, gObjectList[objectIndex].sizeScaling);
         gSPVertex(gDisplayListHead++, gObjectList[objectIndex].vertex, 4, 0);
         gSPDisplayList(gDisplayListHead++, common_rectangle_display);
+
+        if (skipped) {
+            // @port renable interpolation
+            FrameInterpolation_ShouldInterpolateFrame(true);
+            // printf("skipped!\n");
+        }
+        else {
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
+        }
     }
+    prevClouds[objectIndex].x = x;
+    prevClouds[objectIndex].objectIndex = objectIndex;
 }
 
 void func_800519D4(s32 objectIndex, s16 arg1, s16 arg2) {
