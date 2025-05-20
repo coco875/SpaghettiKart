@@ -3810,6 +3810,7 @@ void render_object_bowser_flame_particle(s32 objectIndex, s32 cameraId) {
     camera = &camera1[cameraId];
     if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
         object = &gObjectList[objectIndex];
+        FrameInterpolation_RecordOpenChild("Bowser Statue Flame", TAG_ITEM_ADDR(object));
         if (object->unk_0D5 == 9) {
             func_8004B72C(0xFF, (s32) object->type, 0, (s32) object->unk_0A2, 0, 0, (s32) object->primAlpha);
         } else {
@@ -3817,6 +3818,7 @@ void render_object_bowser_flame_particle(s32 objectIndex, s32 cameraId) {
         }
         D_80183E80[1] = func_800418AC(object->pos[0], object->pos[2], camera->pos);
         func_800431B0(object->pos, D_80183E80, object->sizeScaling, D_0D005AE0);
+        FrameInterpolation_RecordCloseChild();
     }
 }
 
