@@ -368,6 +368,7 @@ void PortMenu::AddEnhancements() {
         .Options(FloatSliderOptions().Min(-50.0f).Max(50.0f).DefaultValue(0.0f)
                      .Tooltip("When Disable Wall Collision are enable what is the minimal height you can get."));
 
+    #if not defined(__SWITCH__) and not defined(__WIIU__)
     path = { "Enhancements", "HM64 Lab", SECTION_COLUMN_1 };
     AddSidebarEntry("Enhancements", "HM64 Lab", 4);
     AddWidget(path, "Enable HM64 Labs", WIDGET_CVAR_CHECKBOX)
@@ -380,6 +381,7 @@ void PortMenu::AddEnhancements() {
         Ship::Context::GetInstance()->GetWindow()->GetGui()->GetGuiWindow("Properties")->ToggleVisibility();
     })
     .Options(UIWidgets::CheckboxOptions({{ .tooltip = "Edit the universe!"}}));
+    #endif
 }
 
 #ifdef __SWITCH__
