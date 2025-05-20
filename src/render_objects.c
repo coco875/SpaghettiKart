@@ -3051,47 +3051,57 @@ void func_8004FDB4(f32 arg0, f32 arg1, s16 arg2, s16 arg3, s16 characterId, s32 
 void func_80050320(void) {
     s16 temp_v0;
     s16 characterId;
-    s32 var_s0;
+    s32 i;
     s32 lapCount;
     s32 var_a0;
 
     if (D_801657E2 == 0) {
-        for (var_s0 = 0; var_s0 < 4; var_s0++) {
+        for (i = 0; i < 4; i++) {
             var_a0 = 0;
-            if (D_8018D050[var_s0] >= 0.0f) {
-                if (D_8018D078[var_s0] < 0.0) {
+            if (D_8018D050[i] >= 0.0f) {
+                if (D_8018D078[i] < 0.0) {
                     var_a0 = 1;
                 }
-                temp_v0 = gGPCurrentRacePlayerIdByRank[var_s0];
-                characterId = gGPCurrentRaceCharacterIdByRank[var_s0];
+
+                // @port: Tag the transform.
+                FrameInterpolation_RecordOpenChild("ranking portraits", i | var_a0 << 16);
+
+                temp_v0 = gGPCurrentRacePlayerIdByRank[i];
+                characterId = gGPCurrentRaceCharacterIdByRank[i];
                 lapCount = gLapCountByPlayerId[temp_v0];
                 if (characterId == gPlayerOne->characterId) {
-                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 1,
-                                  var_a0, 0);
+                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 1, var_a0, 0);
                 } else {
-                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, D_8018D3E0, 0,
-                                  var_a0, 0);
+                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, D_8018D3E0, 0, var_a0, 0);
                 }
+
+                // @port Pop the transform id.
+                FrameInterpolation_RecordCloseChild();
             }
         }
     } else {
-        for (var_s0 = 0; var_s0 < 8; var_s0++) {
+        for (i = 0; i < 8; i++) {
             var_a0 = 0;
-            if (D_8018D050[var_s0] >= 0.0f) {
-                if (D_8018D078[var_s0] <= 0.0) {
+            if (D_8018D050[i] >= 0.0f) {
+                if (D_8018D078[i] <= 0.0) {
                     var_a0 = 1;
                 }
-                temp_v0 = gGPCurrentRacePlayerIdByRank[var_s0];
+
+                // @port: Tag the transform.
+                FrameInterpolation_RecordOpenChild("ranking portraits 2", i | var_a0 << 16);
+
+                temp_v0 = gGPCurrentRacePlayerIdByRank[i];
                 // ????
                 characterId = (gPlayerOne + temp_v0)->characterId;
                 lapCount = gLapCountByPlayerId[temp_v0];
                 if (temp_v0 == 0) {
-                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 1,
-                                  var_a0, 1);
+                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 1, var_a0, 1);
                 } else {
-                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 0,
-                                  var_a0, 1);
+                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 0, var_a0, 1);
                 }
+
+                // @port Pop the transform id.
+                FrameInterpolation_RecordCloseChild();
             }
         }
     }

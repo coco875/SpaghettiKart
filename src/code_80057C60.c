@@ -939,6 +939,10 @@ void func_80058F48(void) {
 
 void func_80058F78(void) {
     if (gHUDDisable == 0) {
+
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("HudMatrix", 0);
+
         set_matrix_hud_screen();
         if ((!gDemoMode) && (gIsHUDVisible != 0) && (D_801657D8 == 0)) {
             draw_item_window(PLAYER_ONE);
@@ -951,6 +955,9 @@ void func_80058F78(void) {
                 }
             }
         }
+
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
 }
 
