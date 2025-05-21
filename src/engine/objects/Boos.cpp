@@ -83,20 +83,23 @@ void OBoos::Draw(s32 cameraId) {
     s32 objectIndex;
 
     for (size_t i = 0; i < _numBoos; i++) {
-        // @port: Tag the transform.
-        FrameInterpolation_RecordOpenChild("Boo", i);
         objectIndex = _indices[i]; //indexObjectList3[i];
         if (gObjectList[objectIndex].state >= 2) {
             temp_s2 = func_8008A364(objectIndex, cameraId, 0x4000U, 0x00000320);
             if (CVarGetInteger("gNoCulling", 0) == 1) {
                 temp_s2 = MIN(temp_s2, 0x15F91U);
             }
+
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("Boo", (uintptr_t)&gObjectList[objectIndex]);
+            
             if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {
                 func_800523B8(objectIndex, cameraId, temp_s2);
             }
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
     }
 }
 

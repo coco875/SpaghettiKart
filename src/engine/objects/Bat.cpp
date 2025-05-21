@@ -23,7 +23,7 @@ OBat::OBat(const FVector& pos, const IRotator& rot) {
     Name = "Bat";
     find_unused_obj_index(&_objectIndex);
 
-    init_texture_object(_objectIndex, (uint8_t*)d_course_banshee_boardwalk_bat_tlut, sBoardwalkTexList, 0x20U,
+    init_texture_object(_objectIndex, (uint8_t*) d_course_banshee_boardwalk_bat_tlut, sBoardwalkTexList, 0x20U,
                         (u16) 0x00000040);
     gObjectList[_objectIndex].orientation[0] = rot.pitch;
     gObjectList[_objectIndex].orientation[1] = rot.roll;
@@ -102,59 +102,64 @@ void OBat::Tick() {
 }
 
 void OBat::Draw(s32 cameraId) {
-    s32 var_s2;
-    s32 objectIndex;
-    Camera* temp_s7;
+    s32 i;
+    s32 objectIndex = _objectIndex;
+    Camera* cam = &camera1[cameraId];
 
-    objectIndex = _objectIndex;
-    temp_s7 = &camera1[cameraId];
-    OBat::func_80046F60((u8*)gObjectList[objectIndex].activeTLUT, (u8*)gObjectList[objectIndex].activeTexture, 0x00000020, 0x00000040,
-                  5);
+    OBat::func_80046F60((u8*) gObjectList[objectIndex].activeTLUT, (u8*) gObjectList[objectIndex].activeTexture,
+                        0x00000020, 0x00000040, 5);
     D_80183E80[0] = gObjectList[objectIndex].orientation[0];
     D_80183E80[2] = gObjectList[objectIndex].orientation[2];
+
     if ((D_8018CFB0 != 0) || (D_8018CFC8 != 0)) {
-        for (var_s2 = 0; var_s2 < 40; var_s2++) {
-            // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("Bat set 1", var_s2);
-            objectIndex = gObjectParticle2[var_s2];
+        for (i = 0; i < 40; i++) {
+            objectIndex = gObjectParticle2[i];
             if (objectIndex == -1) {
                 continue;
             }
 
             if ((gObjectList[objectIndex].state >= 2) && (gMatrixHudCount < 0x2EF)) {
+                // @port: Tag the transform.
+                FrameInterpolation_RecordOpenChild("Bat set 1", (uintptr_t) &gObjectList[objectIndex]);
+
                 D_80183E80[1] =
-                    func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], temp_s7->pos);
+                    func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], cam->pos);
                 func_800431B0(gObjectList[objectIndex].pos, D_80183E80, gObjectList[objectIndex].sizeScaling,
-                              (Vtx*)D_0D0062B0);
+                              (Vtx*) D_0D0062B0);
+
+                // @port Pop the transform id.
+                FrameInterpolation_RecordCloseChild();
             }
-            // @port Pop the transform id.
-            FrameInterpolation_RecordCloseChild();
         }
     }
+
     if ((D_8018CFE8 != 0) || (D_8018D000 != 0)) {
-        for (var_s2 = 0; var_s2 < 30; var_s2++) {
-            // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("Bat set 2", var_s2);
-            objectIndex = gObjectParticle3[var_s2];
+        for (i = 0; i < 30; i++) {
+
+            objectIndex = gObjectParticle3[i];
             if (objectIndex == -1) {
                 continue;
             }
 
             if ((gObjectList[objectIndex].state >= 2) && (gMatrixHudCount < 0x2EF)) {
+                // @port: Tag the transform.
+                FrameInterpolation_RecordOpenChild("Bat set 2", (uintptr_t) &gObjectList[objectIndex]);
+
                 D_80183E80[1] =
-                    func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], temp_s7->pos);
+                    func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], cam->pos);
                 func_800431B0(gObjectList[objectIndex].pos, D_80183E80, gObjectList[objectIndex].sizeScaling,
-                              (Vtx*)D_0D0062B0);
+                              (Vtx*) D_0D0062B0);
+
+                // @port Pop the transform id.
+                FrameInterpolation_RecordCloseChild();
             }
-            // @port Pop the transform id.
-            FrameInterpolation_RecordCloseChild();
         }
     }
     gSPTexture(gDisplayListHead++, 0x0001, 0x0001, 0, G_TX_RENDERTILE, G_OFF);
 }
 
 void OBat::func_80046F60(u8* tlut, u8* arg1, s32 arg2, s32 arg3, s32 arg4) {
-    gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D007D78);
+    gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D007D78);
     gDPLoadTLUT_pal256(gDisplayListHead++, tlut);
     rsp_load_texture_mask(arg1, arg2, arg3, arg4);
 }
