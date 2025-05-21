@@ -323,6 +323,7 @@ void OMole::func_800821AC(s32 objectIndex, s32 arg1) {
     }
 }
 
+// Holes
 void OMole::func_80054E10(s32 objectIndex) {
     if (gObjectList[objectIndex].state > 0) {
         if (is_obj_flag_status_active(objectIndex, 0x00800000) != 0) {
@@ -362,7 +363,7 @@ void OMole::func_80054D00(s32 objectIndex, s32 cameraId) {
         if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {
 
             // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("func_80054D00", TAG_OBJECT(&gObjectList[objectIndex]));
+            FrameInterpolation_RecordOpenChild("func_80054D00", (uintptr_t)&gObjectList[objectIndex]);
 
             D_80183E80[0] = (s16) gObjectList[objectIndex].orientation[0];
             D_80183E80[1] =
@@ -378,6 +379,7 @@ void OMole::func_80054D00(s32 objectIndex, s32 cameraId) {
     }
 }
 
+// Mole rocks
 void OMole::func_80054F04(s32 cameraId) {
     Camera* camera = &camera1[cameraId];
 
