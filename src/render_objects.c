@@ -3514,6 +3514,7 @@ void func_800519D4(s32 objectIndex, s16 arg1, s16 arg2) {
     }
 }
 
+// Render clouds
 void func_80051ABC(s16 arg0, s32 arg1) {
     s32 var_s0;
     s32 objectIndex;
