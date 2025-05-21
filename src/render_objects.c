@@ -2630,7 +2630,7 @@ void draw_simplified_lap_count(s32 playerId) {
 
 void func_8004E800(s32 playerId) {
     // @port: Tag the transform.
-    FrameInterpolation_RecordOpenChild("Player place HUD", playerId << 8);
+    FrameInterpolation_RecordOpenChild("Player place HUD", playerId);
     if (playerHUD[playerId].unk_81 != 0) {
         if (playerHUD[playerId].lapCount != 3) {
             func_8004A384(playerHUD[playerId].rankX + playerHUD[playerId].slideRankX,
