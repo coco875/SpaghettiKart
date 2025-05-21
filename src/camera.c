@@ -1125,7 +1125,6 @@ void func_8001EE98(Player* player, Camera* camera, s8 index) {
             break;
     }
     if (gIsGamePaused == 0) {
-        FrameInterpolation_ShouldInterpolateFrame(false);
         switch (D_80152300[cameraIndex]) {
             case 3:
                 func_8001A588(&D_80152300[cameraIndex], camera, player, index, cameraIndex);
@@ -1150,7 +1149,6 @@ void func_8001EE98(Player* player, Camera* camera, s8 index) {
                 func_8001EA0C(camera, player, index);
                 break;
         }
-        FrameInterpolation_ShouldInterpolateFrame(true);
     }
 }
 
