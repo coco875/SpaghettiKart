@@ -65,7 +65,7 @@ void OTrashBin::Draw(s32 cameraId) {
             Vec3s Rot = { 0, 0x4000, 0 };
 
             // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("Bin", mtx);
+            FrameInterpolation_RecordOpenChild("Bin", (uintptr_t) object);
 
             mtxf_pos_rotation_xyz(mtx, Pos, Rot);
             //mtxf_scale(mtx, 1.0f);
