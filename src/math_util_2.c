@@ -690,13 +690,13 @@ UNUSED void func_800421FC(s32 x, s32 y, f32 scale) {
 
 void func_80042330(s32 x, s32 y, u16 angle, f32 scale) {
     Mat4 matrix;
-    //printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
+    // printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
 
     if (gHUDModes != 2) {
         if (x < (SCREEN_WIDTH / 2)) {
-            x = (s32)OTRGetDimensionFromLeftEdge(x);
+            x = (s32) OTRGetDimensionFromLeftEdge(x);
         } else {
-            x = (s32)OTRGetDimensionFromRightEdge(x);
+            x = (s32) OTRGetDimensionFromRightEdge(x);
         }
     }
 
@@ -710,7 +710,7 @@ void func_80042330(s32 x, s32 y, u16 angle, f32 scale) {
 
 void func_80042330_unchanged(s32 x, s32 y, u16 angle, f32 scale) {
     Mat4 matrix;
-    //printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
+    // printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
 
     mtxf_translation_x_y_rotate_z_scale_x_y(matrix, x, y, angle, scale);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxHud[gMatrixHudCount], matrix);
@@ -723,13 +723,13 @@ void func_80042330_unchanged(s32 x, s32 y, u16 angle, f32 scale) {
 // Allows a different way of lining up the portraits at the end of race sequence
 void func_80042330_portrait(s32 x, s32 y, u16 angle, f32 scale, s16 lapCount) {
     Mat4 matrix;
-    //printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
+    // printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
 
     if ((gHUDModes != 2) && (D_801657E2 == 0) || (CVarGetInteger("gImprovements", 0) == true)) {
         if (x < (SCREEN_WIDTH / 2)) {
-            x = (s32)OTRGetDimensionFromLeftEdge(x);
+            x = (s32) OTRGetDimensionFromLeftEdge(x);
         } else {
-            x = (s32)OTRGetDimensionFromRightEdge(x);
+            x = (s32) OTRGetDimensionFromRightEdge(x);
         }
     }
 
@@ -745,9 +745,9 @@ void func_80042330_wide(s32 x, s32 y, u16 angle, f32 scale) {
     Mat4 matrix;
 
     if (x < (SCREEN_WIDTH / 2)) {
-        x = (s32)OTRGetDimensionFromLeftEdge(x);
+        x = (s32) OTRGetDimensionFromLeftEdge(x);
     } else {
-        x = (s32)OTRGetDimensionFromRightEdge(x);
+        x = (s32) OTRGetDimensionFromRightEdge(x);
     }
 
     mtxf_translation_x_y_rotate_z_scale_x_y(matrix, x, y, angle, scale);
@@ -808,8 +808,7 @@ UNUSED void func_8004252C(Mat4 arg0, u16 arg1, u16 arg2) {
     arg0[2][2] = sp28 * cos_theta_y;
 }
 
-void mtxf_set_matrix_transformation(Mat4 transformMatrix, Vec3f location, Vec3su rotation,
-                                    f32 scale) {
+void mtxf_set_matrix_transformation(Mat4 transformMatrix, Vec3f location, Vec3su rotation, f32 scale) {
 
     FrameInterpolation_RecordSetMatrixTransformation(transformMatrix, location, rotation, scale);
     f32 sinX = sins(rotation[0]);
@@ -864,7 +863,13 @@ void mtxf_set_matrix_scale_transl(Mat4 transformMatrix, Vec3f vec1, Vec3f vec2, 
  * @param arg1
  **/
 
-void mtxf_set_matrix_gObjectList(s32 objectIndex, Mat4 transformMatrix) {
+struct ObjectInterpData2 {
+    s32 objectIndex;
+    f32 x, y;
+};
+struct ObjectInterpData2 prevObject2[OBJECT_LIST_SIZE] = { 0 };
+
+s32 mtxf_set_matrix_gObjectList(s32 objectIndex, Mat4 transformMatrix) {
     f32 sinX;
     Object* object = &gObjectList[objectIndex];
     f32 sinY;
@@ -896,6 +901,26 @@ void mtxf_set_matrix_gObjectList(s32 objectIndex, Mat4 transformMatrix) {
     transformMatrix[1][3] = 0.0f;
     transformMatrix[2][3] = 0.0f;
     transformMatrix[3][3] = 1.0f;
+
+    // Search all recorded objects for the one we're drawing
+    for (int i = 0; i < OBJECT_LIST_SIZE; i++) {
+        if (objectIndex == prevObject2[i].objectIndex) {
+            // Coincidence!
+            // Skip drawing the object this frame if it warped to the other side of the screen
+            if ((fabsf(object->pos[0] - prevObject2[i].x) > 20) || (fabsf(object->pos[1] - prevObject2[i].y) > 20)) {
+                prevObject2[objectIndex].x = object->pos[0];
+                prevObject2[objectIndex].y = object->pos[1];
+                prevObject2[objectIndex].objectIndex = objectIndex;
+                // printf("IDX: %d X: %f Y: %f Z: %f\n", objectIndex, object->pos[0], object->pos[1], object->pos[2]);
+                return 1;
+            }
+        }
+    }
+    prevObject2[objectIndex].x = object->pos[0];
+    prevObject2[objectIndex].y = object->pos[1];
+    prevObject2[objectIndex].objectIndex = objectIndex;
+
+    return 0;
 }
 
 UNUSED void mtxf_mult_first_column(Mat4 arg0, f32 arg1) {
@@ -1065,7 +1090,9 @@ void rsp_set_matrix_transl_rot_scale(Vec3f arg0, Vec3f arg1, f32 arg2) {
 void rsp_set_matrix_gObjectList(s32 transformIndex) {
     Mat4 matrix;
 
-    mtxf_set_matrix_gObjectList(transformIndex, matrix);
+    if (mtxf_set_matrix_gObjectList(transformIndex, matrix)) {
+        return;
+    }
     // convert_to_fixed_point_matrix(&gGfxPool->mtxHud[gMatrixHudCount], matrix);
 
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxHud[gMatrixHudCount++]),

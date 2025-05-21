@@ -3453,23 +3453,24 @@ void render_object_snowflakes_particles(void) {
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
-struct CloudInterpData {
+struct ObjectInterpData {
     s32 objectIndex;
-    s16 x;
+    s16 x, y;
 };
 
-struct CloudInterpData prevClouds[OBJECT_LIST_SIZE] = { 0 };
+struct ObjectInterpData prevObject[OBJECT_LIST_SIZE] = { 0 };
 
 void func_800518F8(s32 objectIndex, s16 x, s16 y) {
 
-    // Search all recorded clouds for the one we're drawing
+    // Search all recorded objects for the one we're drawing
     for (int i = 0; i < OBJECT_LIST_SIZE; i++) {
-        if (objectIndex == prevClouds[i].objectIndex) {
+        if (objectIndex == prevObject[i].objectIndex) {
             // Coincidence!
-            // Skip drawing the cloud this frame if it warped to the other side of the screen
-            if (fabs(x - prevClouds[i].x) > SCREEN_WIDTH / 2) {
-                prevClouds[objectIndex].x = x;
-                prevClouds[objectIndex].objectIndex = objectIndex;
+            // Skip drawing the object this frame if it warped to the other side of the screen
+            if ((fabs(x - prevObject[i].x) > SCREEN_WIDTH / 2) || (fabs(y - prevObject[i].y) > SCREEN_HEIGHT / 2)) {
+                prevObject[objectIndex].x = x;
+                prevObject[objectIndex].y = y;
+                prevObject[objectIndex].objectIndex = objectIndex;
                 return;
             }
         }
@@ -3494,8 +3495,9 @@ void func_800518F8(s32 objectIndex, s16 x, s16 y) {
     }
 
     // Save current cloud index and x position
-    prevClouds[objectIndex].x = x;
-    prevClouds[objectIndex].objectIndex = objectIndex;
+    prevObject[objectIndex].x = x;
+    prevObject[objectIndex].y = y;
+    prevObject[objectIndex].objectIndex = objectIndex;
 }
 
 void func_800519D4(s32 objectIndex, s16 arg1, s16 arg2) {

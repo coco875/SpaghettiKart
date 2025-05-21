@@ -76,7 +76,7 @@ void func_80042330_portrait(s32, s32, u16, f32, s16);
 void func_80042330_wide(s32, s32, u16, f32);
 void mtxf_set_matrix_transformation(Mat4, Vec3f, Vec3su, f32);
 void mtxf_set_matrix_scale_transl(Mat4, Vec3f, Vec3f, f32);
-void mtxf_set_matrix_gObjectList(s32, Mat4);
+s32 mtxf_set_matrix_gObjectList(s32, Mat4);
 void set_transform_matrix(Mat4 dest, Vec3f orientationVector, Vec3f positionVector, u16 rotationAngle,
                           f32 scaleFactor);
 void vec3f_rotate_x_y(Vec3f, Vec3f, Vec3s);
