@@ -3943,11 +3943,11 @@ void render_object_smoke_particles(s32 cameraId) {
     D_80183E80[0] = 0;
     D_80183E80[2] = 0x8000;
     for (i = 0; i < gObjectParticle4_SIZE; i++) {
-        // @port: Tag the transform.
-        FrameInterpolation_RecordOpenChild("SmokeParticles", (uintptr_t) i);
         objectIndex = gObjectParticle4[i];
         if (objectIndex != NULL_OBJECT_ID) {
             object = &gObjectList[objectIndex];
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("SmokeParticles", (uintptr_t) object);
             if (object->state >= 2) {
                 if (object->unk_0D8 == 3) {
                     func_8008A364(objectIndex, cameraId, 0x4000U, 0x00000514);
@@ -3958,11 +3958,10 @@ void render_object_smoke_particles(s32 cameraId) {
                     func_8005477C(objectIndex, object->unk_0D8, sp54->pos);
                 }
             }
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
-        // @port Pop the transform id.
-        FrameInterpolation_RecordCloseChild();
     }
-    
 }
 
 UNUSED void func_800557AC() {
