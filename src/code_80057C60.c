@@ -6101,6 +6101,10 @@ void render_battle_balloon(Player* player, s8 arg1, s16 arg2, s8 arg3) {
     sp12C[1] = player->unk_048[arg3];
     sp12C[2] = D_8018D7D0[arg1][arg2] - (D_8018D860[arg1][arg2] * coss(temp_t1)) -
                ((D_8018D890[arg1][arg2] * 8) * sins(temp_t1));
+
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild((uintptr_t) player, arg1 | arg2 << 16);
+
     mtxf_translate_rotate(mtx, sp134, sp12C);
     mtxf_scale(mtx, var_f20);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxEffect[gMatrixEffectCount], sp140);
@@ -6130,6 +6134,10 @@ void render_battle_balloon(Player* player, s8 arg1, s16 arg2, s8 arg3) {
     gSPVertex(gDisplayListHead++, gBalloonVertexPlane2, 4, 0);
     gSPDisplayList(gDisplayListHead++, common_square_plain_render);
     gSPTexture(gDisplayListHead++, 0x0001, 0x0001, 0, G_TX_RENDERTILE, G_OFF);
+
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
+
     gMatrixEffectCount++;
 }
 
