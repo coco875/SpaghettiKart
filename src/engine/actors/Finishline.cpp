@@ -7,7 +7,6 @@
 #include "World.h"
 #include "assets/common_data.h"
 #include "src/port/Game.h"
-#include "port/interpolation/FrameInterpolation.h"
 
 extern "C" {
 #include "macros.h"
@@ -19,10 +18,12 @@ extern f32 gKartHopInitialVelocityTable[];
 extern f32 gKartGravityTable[];
 }
 
-size_t AFinishline::_count = 0;
-
 AFinishline::AFinishline(std::optional<FVector> pos) {
     Name = "Finishline";
+
+    if (GetCup() == GetBattleCup()) {
+        return;
+    }
 
     if (pos.has_value()) {
         // Set spawn point to the provided position
@@ -31,9 +32,9 @@ AFinishline::AFinishline(std::optional<FVector> pos) {
         Pos[2] = D_8015F8D0[2] = pos.value().z;
     } else {
         // Set spawn point to the tracks first path point.
-        Pos[0] = D_8015F8D0[0] = gCurrentTrackPath->posX;
-        Pos[1] = D_8015F8D0[1] = (f32) (gCurrentTrackPath->posY - 15);
-        Pos[2] = D_8015F8D0[2] = gCurrentTrackPath->posZ;
+        Pos[0] = D_8015F8D0[0] = D_80164490->posX;
+        Pos[1] = D_8015F8D0[1] = (f32) (D_80164490->posY - 15);
+        Pos[2] = D_8015F8D0[2] = D_80164490->posZ;
     }
 
     Rot[0] = 0;
@@ -45,19 +46,17 @@ AFinishline::AFinishline(std::optional<FVector> pos) {
     BoundingBoxSize = 0.0f;
 }
 
-void AFinishline::Tick() {
-}
+void AFinishline::Tick() {}
 
 void AFinishline::Draw(Camera *camera) {
     Mat4 mtx;
     s16 temp = Pos[2];
     s32 maxObjectsReached;
 
+
     if (gGamestate == CREDITS_SEQUENCE) {
         return;
     }
-
-    FrameInterpolation_RecordOpenChild("Finishline", _count);
 
     mtxf_pos_rotation_xyz(mtx, Pos, Rot);
 
@@ -70,23 +69,18 @@ void AFinishline::Draw(Camera *camera) {
         if (D_800DC5BC != 0) {
 
             gDPSetFogColor(gDisplayListHead++, D_801625EC, D_801625F4, D_801625F0, 0xFF);
-            gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D001C20);
+            gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D001C20);
         } else {
-            gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D001B90);
+            gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D001B90);
         }
     } else if (D_800DC5BC != 0) {
         gDPSetFogColor(gDisplayListHead++, D_801625EC, D_801625F4, D_801625F0, 0xFF);
-        gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D001C88);
+        gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D001C88);
     } else {
-        gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D001BD8);
+        gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D001BD8);
     }
-
-    FrameInterpolation_RecordCloseChild();
 }
 
-void AFinishline::Collision(Player* player, AActor* actor) {
-}
+void AFinishline::Collision(Player* player, AActor* actor) {}
 
-bool AFinishline::IsMod() {
-    return true;
-}
+bool AFinishline::IsMod() { return true; }
