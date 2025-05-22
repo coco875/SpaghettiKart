@@ -759,18 +759,21 @@ void process_game_tick(void) {
         func_800382DC();
     }
 
+    // This looks like it should be in the switch.
+    // But it needs to be here for player 1 to work in all modes.
+    if (CVarGetInteger("gFreecam", 0) == true) {
+        freecam(gFreecamCamera, gPlayerOneCopy, 0);
+    } else {
+        func_8001EE98(gPlayerOneCopy, camera1, 0);
+    }
+
+    // Editor requires this so the camera keeps moving while the game is paused.
+    if (gIsEditorPaused == true) {
+        return;
+    }
+
     switch(gActiveScreenMode) {
         case SCREEN_MODE_1P:
-            if (CVarGetInteger("gFreecam", 0) == true) {
-                freecam(gFreecamCamera, gPlayerOneCopy, 0);
-            } else {
-                func_8001EE98(gPlayerOneCopy, camera1, 0);
-            }
-        
-            // Editor requires this so the camera keeps moving while the game is paused.
-            if (gIsEditorPaused == true) {
-                return;
-            }
             func_80028F70();
             break;
         case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:

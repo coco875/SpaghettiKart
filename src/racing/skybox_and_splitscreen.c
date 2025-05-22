@@ -767,7 +767,7 @@ void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_8
     }
 
     // Setup perspective (camera movement)
-    FrameInterpolation_RecordOpenChild("camera", FrameInterpolation_GetCameraEpoch());
+    FrameInterpolation_RecordOpenChild("camera", (FrameInterpolation_GetCameraEpoch() | (((playerId | cameraId) << 8))));
     guPerspective(&gGfxPool->mtxPersp[cameraId], &perspNorm, gCameraZoom[cameraId], gScreenAspect,
                   CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
     gSPPerspNormalize(gDisplayListHead++, perspNorm);
