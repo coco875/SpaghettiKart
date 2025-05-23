@@ -7,6 +7,7 @@
 #include "World.h"
 #include "assets/common_data.h"
 #include "src/port/Game.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 extern "C" {
 #include "macros.h"
@@ -17,6 +18,8 @@ extern "C" {
 extern f32 gKartHopInitialVelocityTable[];
 extern f32 gKartGravityTable[];
 }
+
+size_t AFinishline::_count = 0;
 
 AFinishline::AFinishline(std::optional<FVector> pos) {
     Name = "Finishline";
@@ -58,6 +61,8 @@ void AFinishline::Draw(Camera *camera) {
         return;
     }
 
+    FrameInterpolation_RecordOpenChild("Finishline", _count);
+
     mtxf_pos_rotation_xyz(mtx, Pos, Rot);
 
     maxObjectsReached = render_set_position(mtx, 0) == 0;
@@ -79,6 +84,8 @@ void AFinishline::Draw(Camera *camera) {
     } else {
         gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D001BD8);
     }
+
+    FrameInterpolation_RecordCloseChild();
 }
 
 void AFinishline::Collision(Player* player, AActor* actor) {}
