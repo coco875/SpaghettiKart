@@ -139,7 +139,7 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
     object = &gObjectList[objectIndex];
     object->sizeScaling = 0.15f;
 
-    if (GetCourse() == GetMarioRaceway()) {
+    if (IsMarioRaceway()) {
         sp2C = random_int(0x00C8U);
         sp28 = random_int(_numBalloons3);
         sp24 = random_int(0x0096U);
@@ -147,7 +147,7 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
         object->origin_pos[0] = (f32) ((((f64) Pos.x + 100.0) - (f64) sp2C) * (f64) xOrientation);
         object->origin_pos[1] = (f32) (Pos.y + sp28);
         object->origin_pos[2] = (f32) (((f64) Pos.z + 200.0) - (f64) sp24);
-    } else if (GetCourse() == GetRoyalRaceway()) {
+    } else if (IsRoyalRaceway()) {
         sp2C = random_int(0x0168U);
         sp28 = random_int(_numBalloons3);
         sp24 = random_int(0x00B4U);
@@ -155,7 +155,7 @@ void OGrandPrixBalloons::func_80074924(s32 objectIndex) {
         object->origin_pos[0] = (f32) ((((f64) Pos.x + 180.0) - (f64) sp2C) * (f64) xOrientation);
         object->origin_pos[1] = (f32) (Pos.y + sp28);
         object->origin_pos[2] = (f32) (((f64) Pos.z + 200.0) - (f64) sp24);
-    } else if (GetCourse() == GetLuigiRaceway()) {
+    } else if (IsLuigiRaceway()) {
         sp2C = random_int(0x012CU);
         sp28 = random_int(_numBalloons3);
         sp24 = random_int(0x0096U);

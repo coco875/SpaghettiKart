@@ -729,7 +729,7 @@ void spawn_players_versus_two_player(f32* arg0, f32* arg1, f32 arg2) {
 }
 
 void spawn_players_2p_battle(f32* arg0, f32* arg1, f32 arg2) {
-    if (GetCourse() == GetBigDonut()) {
+    if (IsBigDonut()) {
         spawn_player(gPlayerOne, 0, arg0[0], arg1[0], arg2, -16384.0f, gCharacterSelections[0],
                      PLAYER_EXISTS | PLAYER_START_SEQUENCE | PLAYER_HUMAN);
         spawn_player(gPlayerTwo, 1, arg0[1], arg1[1], arg2, 16384.0f, gCharacterSelections[1],
@@ -778,7 +778,7 @@ void func_8003B318(f32* arg0, f32* arg1, f32 arg2) {
 }
 
 void spawn_players_3p_battle(f32* arg0, f32* arg1, f32 arg2) {
-    if (GetCourse() == GetBigDonut()) {
+    if (IsBigDonut()) {
         spawn_player(gPlayerOne, 0, arg0[0], arg1[0], arg2, -16384.0f, gCharacterSelections[0],
                      PLAYER_EXISTS | PLAYER_START_SEQUENCE | PLAYER_HUMAN);
         spawn_player(gPlayerTwo, 1, arg0[1], arg1[1], arg2, 16384.0f, gCharacterSelections[1],
@@ -830,7 +830,7 @@ void func_8003B870(f32* arg0, f32* arg1, f32 arg2) {
 }
 
 void spawn_players_4p_battle(f32* arg0, f32* arg1, f32 arg2) {
-    if (GetCourse() == GetBigDonut()) {
+    if (IsBigDonut()) {
         spawn_player(gPlayerOne, 0, arg0[0], arg1[0], arg2, -16384.0f, gCharacterSelections[0],
                      PLAYER_EXISTS | PLAYER_START_SEQUENCE | PLAYER_HUMAN);
         spawn_player(gPlayerTwo, 1, arg0[1], arg1[1], arg2, 16384.0f, gCharacterSelections[1],
@@ -888,17 +888,17 @@ void func_8003C0F0(void) {
 
     if (gModeSelection == BATTLE) {
         func_8000EEDC();
-    } else if (GetCourse() != GetPodiumCeremony()) {
+    } else if (!IsPodiumCeremony()) {
         func_8000F2DC();
         sp5E = (f32) D_80164550[0][0].posX;
         sp5C = (f32) D_80164550[0][0].posZ;
         sp5A = (f32) D_80164550[0][0].posY;
-        if (GetCourse() == GetToadsTurnpike()) {
+        if (IsToadsTurnpike()) {
             sp5E = 0;
         }
     }
 
-    if ((gModeSelection != BATTLE) && (GetCourse() != GetPodiumCeremony())) {
+    if ((gModeSelection != BATTLE) && (!IsPodiumCeremony())) {
         switch (gActiveScreenMode) {
             case SCREEN_MODE_1P:
                 switch (gModeSelection) {
@@ -993,7 +993,7 @@ void func_8003C0F0(void) {
                 }
                 break;
         }
-    } else if (GetCourse() == GetBlockFort()) {
+    } else if (IsBlockFort()) {
         switch (gActiveScreenMode) {
             case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
             case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
@@ -1023,7 +1023,7 @@ void func_8003C0F0(void) {
                 }
                 break;
         }
-    } else if (GetCourse() == GetSkyscraper()) {
+    } else if (IsSkyscraper()) {
         switch (gActiveScreenMode) {
             case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
             case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
@@ -1053,7 +1053,7 @@ void func_8003C0F0(void) {
                 }
                 break;
         }
-    } else if (GetCourse() == GetDoubleDeck()) {
+    } else if (IsDoubleDeck()) {
         switch (gActiveScreenMode) {
             case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
             case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
@@ -1083,7 +1083,7 @@ void func_8003C0F0(void) {
                 }
                 break;
         }
-    } else if (GetCourse() == GetBigDonut()) {
+    } else if (IsBigDonut()) {
         switch (gActiveScreenMode) {
             case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
             case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
@@ -1200,7 +1200,7 @@ void func_8003D080(void) {
             case SCREEN_MODE_1P:
                 switch (gModeSelection) {
                     case GRAND_PRIX:
-                        if (GetCourse() == GetToadsTurnpike()) {
+                        if (IsToadsTurnpike()) {
                             camera_init(0.0f, player->pos[1], D_80165230[7], player->rotation[1], 8, 0);
                         } else {
                             camera_init((D_80165210[7] + D_80165210[6]) / 2, player->pos[1], D_80165230[7],

@@ -944,15 +944,15 @@ void spawn_foliage(struct ActorSpawnData* actor) {
         position[2] = var_s3->pos[2];
         position[1] = var_s3->pos[1];
 
-        if (GetCourse() == GetMarioRaceway()) {
+        if (IsMarioRaceway()) {
             actorType = 2;
-        } else if (GetCourse() == GetBowsersCastle()) {
+        } else if (IsBowsersCastle()) {
             actorType = 0x0021;
-        } else if (GetCourse() == GetYoshiValley()) {
+        } else if (IsYoshiValley()) {
             actorType = 3;
-        } else if (GetCourse() == GetFrappeSnowland()) {
+        } else if (IsFrappeSnowland()) {
             actorType = 0x001D;
-        } else if (GetCourse() == GetRoyalRaceway()) {
+        } else if (IsRoyalRaceway()) {
             switch (var_s3->signedSomeId) {
                 case 6:
                     actorType = 0x001C;
@@ -961,11 +961,11 @@ void spawn_foliage(struct ActorSpawnData* actor) {
                     actorType = 4;
                     break;
             }
-        } else if (GetCourse() == GetLuigiRaceway()) {
+        } else if (IsLuigiRaceway()) {
             actorType = 0x001A;
-        } else if (GetCourse() == GetMooMooFarm()) {
+        } else if (IsMooMooFarm()) {
             actorType = 0x0013;
-        } else if (GetCourse() == GetKalimariDesert()) {
+        } else if (IsKalimariDesert()) {
             switch (var_s3->signedSomeId) {
                 case 5:
                     actorType = 0x001E;
@@ -1706,8 +1706,8 @@ bool collision_tree(Player* player, struct Actor* actor) {
     actorPos[0] = actor->pos[0];
     actorPos[1] = actor->pos[1];
     actorPos[2] = actor->pos[2];
-    if (((GetCourse() == GetMarioRaceway()) || (GetCourse() == GetYoshiValley()) ||
-         (GetCourse() == GetRoyalRaceway()) || (GetCourse() == GetLuigiRaceway())) &&
+    if (((IsMarioRaceway()) || (IsYoshiValley()) ||
+         (IsRoyalRaceway()) || (IsLuigiRaceway())) &&
         (player->unk_094 > 1.0f)) {
         spawn_leaf(actorPos, 0);
     }
@@ -2571,9 +2571,9 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
         }
         FrameInterpolation_RecordCloseChild();
     }
-    if (GetCourse() == GetMooMooFarm()) {
+    if (IsMooMooFarm()) {
         render_cows(camera, sBillBoardMtx);
-    } else if (GetCourse() == GetDkJungle()) {
+    } else if (IsDkJungle()) {
         render_palm_trees(camera, sBillBoardMtx);
     }
 }

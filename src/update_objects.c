@@ -2106,19 +2106,19 @@ void init_object_leaf_particle(s32 objectIndex, Vec3f arg1, s32 num) {
     gObjectList[objectIndex].sizeScaling = 0.1f;
     gObjectList[objectIndex].surfaceHeight = arg1[1];
 
-    if (GetCourse() == GetMarioRaceway()) {
+    if (IsMarioRaceway()) {
         object_origin_pos_randomize_around_xyz(objectIndex, arg1[0], arg1[1] + 25.0, arg1[2], 0x14, 0x1E, 0x14);
         gObjectList[objectIndex].unk_034 = 1.5f;
         gObjectList[objectIndex].velocity[1] = 1.5f;
-    } else if (GetCourse() == GetYoshiValley()) {
+    } else if (IsYoshiValley()) {
         object_origin_pos_randomize_around_xyz(objectIndex, arg1[0], arg1[1] + 25.0, arg1[2], 0x14, 0x1E, 0x14);
         gObjectList[objectIndex].unk_034 = 2.0f;
         gObjectList[objectIndex].velocity[1] = 2.0f;
-    } else if (GetCourse() == GetRoyalRaceway()) {
+    } else if (IsRoyalRaceway()) {
         object_origin_pos_randomize_around_xyz(objectIndex, arg1[0], arg1[1] + 30.0, arg1[2], 0x10, 0x28, 0x10);
         gObjectList[objectIndex].unk_034 = 2.0f;
         gObjectList[objectIndex].velocity[1] = 2.0f;
-    } else if (GetCourse() == GetLuigiRaceway()) {
+    } else if (IsLuigiRaceway()) {
         object_origin_pos_randomize_around_xyz(objectIndex, arg1[0], arg1[1] + 25.0, arg1[2], 0x14, 0x1E, 0x14);
         gObjectList[objectIndex].unk_034 = 1.5f;
         gObjectList[objectIndex].velocity[1] = 1.0f;

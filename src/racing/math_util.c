@@ -14,8 +14,6 @@
 #include <port/interpolation/matrix.h>
 #pragma intrinsic(sqrtf, fabs)
 
-extern s16 gCurrentCourseId;
-
 s32 D_802B91C0[2] = { 13, 13 };
 Vec3f D_802B91C8 = { 0.0f, 0.0f, 0.0f };
 
@@ -1146,7 +1144,7 @@ f32 is_within_render_distance(Vec3f cameraPos, Vec3f objectPos, u16 orientationY
 
     if (minDistance == 0.0f) {
         if (is_visible_between_angle((orientationY + extended_fov), (orientationY - extended_fov), angleObject) == 1) {
-            if (gCurrentCourseId == 0xB /* COURSE_KALAMARI_DESERT */) {
+            if (IsKalimariDesert()) {
                 return distance / 6.5f; // set for better DD settings in Desert
             } else {
                 return distance / 10.0f; // Items
@@ -1156,7 +1154,7 @@ f32 is_within_render_distance(Vec3f cameraPos, Vec3f objectPos, u16 orientationY
     }
 
     if (is_visible_between_angle((u16) plus_fov_angle, (u16) minus_fov_angle, angleObject) == 1) {
-        if (gCurrentCourseId == 0xB /* COURSE_KALAMARI_DESERT */) {
+        if (IsKalimariDesert()) {
             return distance / 2.0f;
         } else {
             return distance / 10.0f; // DD Vhicles

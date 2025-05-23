@@ -32,7 +32,7 @@ OTrashBin::OTrashBin(const FVector& pos, const IRotator& rotation, f32 scale, OT
 
     init_object(_objectIndex, 0);
 
-    if (GetCourse() != GetBansheeBoardwalk()) {
+    if (!IsBansheeBoardwalk()) {
         _drawBin = true;
     }
 }

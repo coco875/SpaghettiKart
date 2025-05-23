@@ -297,7 +297,7 @@ void OLakitu::func_800729EC(s32 objectIndex) {
     D_8018D2BC = 1;
     D_8018D2A4 = 1;
 
-    if (GetCourse() != GetYoshiValley()) {
+    if (!IsYoshiValley()) {
         for (i = 0; i < gPlayerCount; i++) {
             playerHUD[i].unk_81 = temp_v1;
         }
@@ -366,7 +366,7 @@ void OLakitu::func_800797AC(s32 playerId) {
 
     objectIndex = gIndexLakituList[playerId];
     player = &gPlayerOne[playerId];
-    //if ((GetCourse() == GetSherbetLand()) && (player->unk_0CA & 1)) {
+    //if ((IsSherbetLand()) && (player->unk_0CA & 1)) {
     if ((CM_GetProps()->LakituTowType == LakituTowType::ICE) && (player->unk_0CA & 1)) {
         init_object(objectIndex, 7);
         player->unk_0CA |= 0x10;
