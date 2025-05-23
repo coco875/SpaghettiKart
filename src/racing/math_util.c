@@ -804,43 +804,40 @@ void func_802B6D58(Mat4 arg0, Vec3f arg1, Vec3f arg2) {
 }
 
 void mtxf_multiplication(Mat4 dest, Mat4 mat1, Mat4 mat2) {
-    Mat4 product;
+    FrameInterpolation_RecordMatrixMult(dest, dest, 0);
 
-    FrameInterpolation_RecordMatrixMult(dest, product, 0);
-
-    product[0][0] =
+    dest[0][0] =
         (mat1[0][0] * mat2[0][0]) + (mat1[0][1] * mat2[1][0]) + (mat1[0][2] * mat2[2][0]) + (mat1[0][3] * mat2[3][0]);
-    product[0][1] =
+    dest[0][1] =
         (mat1[0][0] * mat2[0][1]) + (mat1[0][1] * mat2[1][1]) + (mat1[0][2] * mat2[2][1]) + (mat1[0][3] * mat2[3][1]);
-    product[0][2] =
+    dest[0][2] =
         (mat1[0][0] * mat2[0][2]) + (mat1[0][1] * mat2[1][2]) + (mat1[0][2] * mat2[2][2]) + (mat1[0][3] * mat2[3][2]);
-    product[0][3] =
+    dest[0][3] =
         (mat1[0][0] * mat2[0][3]) + (mat1[0][1] * mat2[1][3]) + (mat1[0][2] * mat2[2][3]) + (mat1[0][3] * mat2[3][3]);
-    product[1][0] =
+    dest[1][0] =
         (mat1[1][0] * mat2[0][0]) + (mat1[1][1] * mat2[1][0]) + (mat1[1][2] * mat2[2][0]) + (mat1[1][3] * mat2[3][0]);
-    product[1][1] =
+    dest[1][1] =
         (mat1[1][0] * mat2[0][1]) + (mat1[1][1] * mat2[1][1]) + (mat1[1][2] * mat2[2][1]) + (mat1[1][3] * mat2[3][1]);
-    product[1][2] =
+    dest[1][2] =
         (mat1[1][0] * mat2[0][2]) + (mat1[1][1] * mat2[1][2]) + (mat1[1][2] * mat2[2][2]) + (mat1[1][3] * mat2[3][2]);
-    product[1][3] =
+    dest[1][3] =
         (mat1[1][0] * mat2[0][3]) + (mat1[1][1] * mat2[1][3]) + (mat1[1][2] * mat2[2][3]) + (mat1[1][3] * mat2[3][3]);
-    product[2][0] =
+    dest[2][0] =
         (mat1[2][0] * mat2[0][0]) + (mat1[2][1] * mat2[1][0]) + (mat1[2][2] * mat2[2][0]) + (mat1[2][3] * mat2[3][0]);
-    product[2][1] =
+    dest[2][1] =
         (mat1[2][0] * mat2[0][1]) + (mat1[2][1] * mat2[1][1]) + (mat1[2][2] * mat2[2][1]) + (mat1[2][3] * mat2[3][1]);
-    product[2][2] =
+    dest[2][2] =
         (mat1[2][0] * mat2[0][2]) + (mat1[2][1] * mat2[1][2]) + (mat1[2][2] * mat2[2][2]) + (mat1[2][3] * mat2[3][2]);
-    product[2][3] =
+    dest[2][3] =
         (mat1[2][0] * mat2[0][3]) + (mat1[2][1] * mat2[1][3]) + (mat1[2][2] * mat2[2][3]) + (mat1[2][3] * mat2[3][3]);
-    product[3][0] =
+    dest[3][0] =
         (mat1[3][0] * mat2[0][0]) + (mat1[3][1] * mat2[1][0]) + (mat1[3][2] * mat2[2][0]) + (mat1[3][3] * mat2[3][0]);
-    product[3][1] =
+    dest[3][1] =
         (mat1[3][0] * mat2[0][1]) + (mat1[3][1] * mat2[1][1]) + (mat1[3][2] * mat2[2][1]) + (mat1[3][3] * mat2[3][1]);
-    product[3][2] =
+    dest[3][2] =
         (mat1[3][0] * mat2[0][2]) + (mat1[3][1] * mat2[1][2]) + (mat1[3][2] * mat2[2][2]) + (mat1[3][3] * mat2[3][2]);
-    product[3][3] =
+    dest[3][3] =
         (mat1[3][0] * mat2[0][3]) + (mat1[3][1] * mat2[1][3]) + (mat1[3][2] * mat2[2][3]) + (mat1[3][3] * mat2[3][3]);
-    mtxf_copy_n_element((s32*) dest, (s32*) product, 16);
 }
 
 /**
