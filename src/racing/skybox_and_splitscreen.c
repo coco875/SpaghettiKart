@@ -767,7 +767,8 @@ void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_8
     }
 
     // Setup perspective (camera movement)
-    FrameInterpolation_RecordOpenChild("camera", (FrameInterpolation_GetCameraEpoch() | (((playerId | cameraId) << 8))));
+    FrameInterpolation_RecordOpenChild("camera",
+                                       (FrameInterpolation_GetCameraEpoch() | (((playerId | cameraId) << 8))));
     guPerspective(&gGfxPool->mtxPersp[cameraId], &perspNorm, gCameraZoom[cameraId], gScreenAspect,
                   CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
     gSPPerspNormalize(gDisplayListHead++, perspNorm);
@@ -776,19 +777,17 @@ void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_8
 
     // Setup lookAt (camera rotation)
     guLookAt(&gGfxPool->mtxLookAt[cameraId], camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
-            camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
+             camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
     gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxLookAt[cameraId]),
               G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
     FrameInterpolation_RecordCloseChild();
 }
 
-extern s32 D_func_800652D4_counter;
 void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     Mat4 matrix;
 
     s32 screenId = 0;
     s32 screenMode = SCREEN_MODE_1P;
-D_func_800652D4_counter = 0;
 
     switch (mode) {
         case RENDER_SCREEN_MODE_1P_PLAYER_ONE:
@@ -867,7 +866,7 @@ D_func_800652D4_counter = 0;
 
     // Setup camera perspective and lookAt
     setup_camera(camera, playerId, cameraId, screen);
-    
+
     // Create a matrix for the track and game objects
     FrameInterpolation_RecordOpenChild("track", (playerId | cameraId) << 8);
     Mat4 trackMatrix;
