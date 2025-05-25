@@ -354,7 +354,10 @@ void GameEngine::RunCommands(Gfx* Commands, const std::vector<std::unordered_map
 
 void GameEngine::ProcessGfxCommands(Gfx* commands) {
     std::vector<std::unordered_map<Mtx*, MtxF>> mtx_replacements;
-    int target_fps = 200; // GameEngine::Instance->GetInterpolationFPS();
+    int target_fps = GameEngine::Instance->GetInterpolationFPS();
+    if (CVarGetInteger("gModifyInterpolationTargetFPS", 0)) {
+        target_fps = CVarGetInteger("gInterpolationTargetFPS", 60);
+    }
     static int last_fps;
     static int last_update_rate;
     static int time;
