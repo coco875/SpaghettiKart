@@ -761,10 +761,11 @@ void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_8
     Mat4 matrix;
     u16 perspNorm;
 
-    if (CVarGetInteger("gFreecam", 0) == true) {
-        freecam_render_setup(gFreecamCamera);
-        return;
-    }
+    // This allows freecam to create a new separate camera
+    // if (CVarGetInteger("gFreecam", 0) == true) {
+    //     freecam_render_setup(gFreecamCamera);
+    //     return;
+    // }
 
     // Setup perspective (camera movement)
     FrameInterpolation_RecordOpenChild("camera",
@@ -848,13 +849,14 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     struct UnkStruct_800DC5EC* screen = &D_8015F480[screenId];
     Camera* camera;
 
-    if (CVarGetInteger("gFreecam", 0) == true) {
-        camera = &gFreecamCamera;
-        cameraId = 4;
-    } else {
+    // Required for freecam to have its own camera
+    //if (CVarGetInteger("gFreecam", 0) == true) {
+    //    camera = &gFreecamCamera;
+    //    cameraId = 4;
+    //} else {
         camera = &cameras[cameraId];
-    }
-
+    //}
+    
     if (screenMode == SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL) {
         gSPSetGeometryMode(gDisplayListHead++, G_SHADE | G_CULL_BACK | G_LIGHTING | G_SHADING_SMOOTH);
     }
