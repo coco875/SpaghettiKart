@@ -78,5 +78,4 @@ void guLookAt(Mtx* m, float xEye, float yEye, float zEye, float xAt, float yAt, 
 
     FrameInterpolation_RecordMatrixMtxFToMtx((MtxF*)mf, m);
     guMtxF2L(mf, m);
-    FrameInterpolation_RecordMatrixMtxFToMtx((MtxF*)mf, m);
 }

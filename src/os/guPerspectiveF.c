@@ -39,5 +39,4 @@ void guPerspective(Mtx* m, u16* perspNorm, float fovy, float aspect, float near,
     guPerspectiveF(mat, perspNorm, fovy, aspect, near, far, scale);
     FrameInterpolation_RecordMatrixMtxFToMtx((MtxF*)mat, m);
     guMtxF2L(mat, m);
-    FrameInterpolation_RecordMatrixMtxFToMtx((MtxF*)mat, m);
 }
