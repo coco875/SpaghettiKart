@@ -2459,7 +2459,7 @@ void func_800788F8(s32 objectIndex, u16 rot, Camera* camera) {
     // Adjustable culling factor
     const float cullingFactor = OTRGetAspectRatio();
 
-    // Calculate object's rotation relative to the camera
+    // Calculate the cloud's rotation relative to the camera
     cameraRot = camera->rot[1] + rot;
 
     // Adjust bounds based on the culling factor
