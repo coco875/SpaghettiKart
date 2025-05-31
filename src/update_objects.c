@@ -2454,6 +2454,7 @@ void update_snowflakes(void) {
     }
 }
 
+// This function adjusted to place clouds in the sky correctly
 void func_800788F8(s32 objectIndex, u16 rot, Camera* camera) {
     s16 cameraRot;
     // Adjustable culling factor
