@@ -19,7 +19,7 @@ typedef enum {
     DISABLE_FOR_ADVANCED_RESOLUTION_ON,
     DISABLE_FOR_VERTICAL_RES_TOGGLE_ON,
     DISABLE_FOR_LOW_RES_MODE_ON,
-    //DISABLE_FOR_MULTIPLAYER_CONNECTED,
+    // DISABLE_FOR_MULTIPLAYER_CONNECTED,
 } DisableOption;
 
 struct WidgetInfo;
@@ -263,6 +263,7 @@ static const std::unordered_map<Ship::WindowBackend, const char*> windowBackends
     { Ship::WindowBackend::FAST3D_DXGI_DX11, "DirectX" },
     { Ship::WindowBackend::FAST3D_SDL_OPENGL, "OpenGL" },
     { Ship::WindowBackend::FAST3D_SDL_METAL, "Metal" },
+    { Ship::WindowBackend::FAST3D_SDL_LLGL, "LLGL" }
 };
 
 struct MenuInit {
