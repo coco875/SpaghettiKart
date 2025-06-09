@@ -50,10 +50,10 @@ void SetupGuiElements() {
     mPortMenu = std::make_shared<PortMenu>("gOpenMenu", "Port Menu");
     gui->SetMenu(mPortMenu);
 
-    //mMultiplayerWindow = gui->GetGuiWindow("Multiplayer");
-    //if (mMultiplayerWindow == nullptr) {
-    //    SPDLOG_ERROR("Could not find multiplayer window");
-    //}
+    // mMultiplayerWindow = gui->GetGuiWindow("Multiplayer");
+    // if (mMultiplayerWindow == nullptr) {
+    //     SPDLOG_ERROR("Could not find multiplayer window");
+    // }
 
     mStatsWindow = gui->GetGuiWindow("Stats");
     if (mStatsWindow == nullptr) {
@@ -77,7 +77,7 @@ void SetupGuiElements() {
     }
 
     mToolsWindow = std::make_shared<Editor::ToolsWindow>("gEditorEnabled", "Tools", ImVec2(100, 100),
-                                                                  (ImGuiWindowFlags_NoTitleBar));
+                                                         (ImGuiWindowFlags_NoTitleBar));
     gui->AddGuiWindow(mToolsWindow);
 
     mSceneExplorerWindow = std::make_shared<Editor::SceneExplorerWindow>("gEditorEnabled", "Scene Explorer");
@@ -89,8 +89,7 @@ void SetupGuiElements() {
     mTrackPropertiesWindow = std::make_shared<Editor::TrackPropertiesWindow>("gEditorEnabled", "Track Properties");
     gui->AddGuiWindow(mTrackPropertiesWindow);
 
-    mContentBrowserWindow =
-        std::make_shared<Editor::ContentBrowserWindow>("gEditorEnabled", "Content Browser");
+    mContentBrowserWindow = std::make_shared<Editor::ContentBrowserWindow>("gEditorEnabled", "Content Browser");
     gui->AddGuiWindow(mContentBrowserWindow);
 }
 
@@ -243,8 +242,8 @@ void DrawSettingsMenu() {
     //        { // FPS Slider
     //            const int minFps = 30;
     //            static int maxFps;
-    //            if (Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() ==
-    //                Ship::WindowBackend::FAST3D_DXGI_DX11) {
+    //            if (Ship::Context::GetInstance()->GetWindow()->GetRendererID() ==
+    //                LLGL::RendererID::FAST3D_DXGI_DX11) {
     //                maxFps = 360;
     //            } else {
     //                maxFps = Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate();
@@ -313,14 +312,14 @@ void DrawSettingsMenu() {
     // #else
     //            bool matchingRefreshRate =
     //                CVarGetInteger("gMatchRefreshRate", 0) &&
-    //                Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() !=
-    //                Ship::WindowBackend::FAST3D_DXGI_DX11;
+    //                Ship::Context::GetInstance()->GetWindow()->GetRendererID() !=
+    //                LLGL::RendererID::FAST3D_DXGI_DX11;
     //            UIWidgets::CVarSliderInt((currentFps == 20) ? "FPS: Original (20)" : "FPS: %d", "gInterpolationFPS",
     //            minFps,
     //                                     maxFps, 1, { .disabled = matchingRefreshRate });
     // #endif
-    //            if (Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() ==
-    //                Ship::WindowBackend::FAST3D_DXGI_DX11) {
+    //            if (Ship::Context::GetInstance()->GetWindow()->GetRendererID() ==
+    //                LLGL::RendererID::FAST3D_DXGI_DX11) {
     //                UIWidgets::Tooltip(
     //                    "Uses Matrix Interpolation to create extra frames, resulting in smoother graphics. "
     //                    "This is purely "
@@ -334,8 +333,7 @@ void DrawSettingsMenu() {
     //            }
     //        } // END FPS Slider
     //
-    //        if (Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() ==
-    //        Ship::WindowBackend::FAST3D_DXGI_DX11) {
+    //        if (Ship::Context::GetInstance()->GetWindow()->GetRendererID() == LLGL::RendererID::FAST3D_DXGI_DX11) {
     //            UIWidgets::Spacer(0);
     //            if (ImGui::Button("Match Refresh Rate")) {
     //                int hz = Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate();
@@ -350,8 +348,7 @@ void DrawSettingsMenu() {
     //
     //        UIWidgets::Tooltip("Matches interpolation value to the current game's window refresh rate");
     //
-    //        if (Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() ==
-    //        Ship::WindowBackend::FAST3D_DXGI_DX11) {
+    //        if (Ship::Context::GetInstance()->GetWindow()->GetRendererID() == LLGL::RendererID::FAST3D_DXGI_DX11) {
     //            UIWidgets::PaddedEnhancementSliderInt(
     //                CVarGetInteger("gExtraLatencyThreshold", 0) == 0 ? "Jitter fix: Off" : "Jitter fix: >= %d FPS",
     //                "##ExtraLatencyThreshold", "gExtraLatencyThreshold", 0, 360, "", 0, true, true, false);
@@ -364,30 +361,30 @@ void DrawSettingsMenu() {
     //
     //        UIWidgets::PaddedSeparator(true, true, 3.0f, 3.0f);
     //
-    //        static std::unordered_map<Ship::WindowBackend, const char*> windowBackendNames = {
-    //            { Ship::WindowBackend::FAST3D_DXGI_DX11, "DirectX" },
-    //            { Ship::WindowBackend::FAST3D_SDL_OPENGL, "OpenGL" },
-    //            { Ship::WindowBackend::FAST3D_SDL_METAL, "Metal" },
+    //        static std::unordered_map<LLGL::RendererID, const char*> windowBackendNames = {
+    //            { LLGL::RendererID::FAST3D_DXGI_DX11, "DirectX" },
+    //            { LLGL::RendererID::FAST3D_SDL_OPENGL, "OpenGL" },
+    //            { LLGL::RendererID::FAST3D_SDL_METAL, "Metal" },
     //        };
     //
     //        ImGui::Text("Renderer API (Needs reload)");
-    //        Ship::WindowBackend runningWindowBackend = Ship::Context::GetInstance()->GetWindow()->GetWindowBackend();
-    //        Ship::WindowBackend configWindowBackend;
+    //        LLGL::RendererID runningWindowBackend = Ship::Context::GetInstance()->GetWindow()->GetRendererID();
+    //        LLGL::RendererID configWindowBackend;
     //        int configWindowBackendId = Ship::Context::GetInstance()->GetConfig()->GetInt("Window.Backend.Id", -1);
     //        if (Ship::Context::GetInstance()->GetWindow()->IsAvailableWindowBackend(configWindowBackendId)) {
-    //            configWindowBackend = static_cast<Ship::WindowBackend>(configWindowBackendId);
+    //            configWindowBackend = static_cast<LLGL::RendererID>(configWindowBackendId);
     //        } else {
     //            configWindowBackend = runningWindowBackend;
     //        }
     //
-    //        if (Ship::Context::GetInstance()->GetWindow()->GetAvailableWindowBackends()->size() <= 1) {
+    //        if (Ship::Context::GetInstance()->GetWindow()->GetAvailableRenderers()->size() <= 1) {
     //            UIWidgets::DisableComponent(ImGui::GetStyle().Alpha * 0.5f);
     //        }
     //        if (ImGui::BeginCombo("##RApi", windowBackendNames[configWindowBackend])) {
     //            for (size_t i = 0; i <
-    //            Ship::Context::GetInstance()->GetWindow()->GetAvailableWindowBackends()->size();
+    //            Ship::Context::GetInstance()->GetWindow()->GetAvailableRenderers()->size();
     //                 i++) {
-    //                auto backend = Ship::Context::GetInstance()->GetWindow()->GetAvailableWindowBackends()->data()[i];
+    //                auto backend = Ship::Context::GetInstance()->GetWindow()->GetAvailableRenderers()->data()[i];
     //                if (ImGui::Selectable(windowBackendNames[backend], backend == configWindowBackend)) {
     //                    Ship::Context::GetInstance()->GetConfig()->SetInt("Window.Backend.Id",
     //                    static_cast<int>(backend));
@@ -398,7 +395,7 @@ void DrawSettingsMenu() {
     //            }
     //            ImGui::EndCombo();
     //        }
-    //        if (Ship::Context::GetInstance()->GetWindow()->GetAvailableWindowBackends()->size() <= 1) {
+    //        if (Ship::Context::GetInstance()->GetWindow()->GetAvailableRenderers()->size() <= 1) {
     //            UIWidgets::ReEnableComponent("");
     //        }
     //
@@ -465,6 +462,7 @@ void DrawEnhancementsMenu() {
     if (UIWidgets::BeginMenu("Enhancements")) {
 
         if (UIWidgets::BeginMenu("Gameplay")) {
+
             ImGui::EndMenu();
         }
 

@@ -188,16 +188,10 @@ void PortMenu::AddSettings() {
     // Graphics Settings
     static int32_t maxFps;
     const char* tooltip = "";
-    if (Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() == Ship::WindowBackend::FAST3D_DXGI_DX11) {
-        maxFps = 360;
-        tooltip = "Uses Matrix Interpolation to create extra frames, resulting in smoother graphics. This is "
-                  "purely visual and does not impact game logic, execution of glitches etc.\n\nA higher target "
-                  "FPS than your monitor's refresh rate will waste resources, and might give a worse result.";
-    } else {
-        maxFps = Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate();
-        tooltip = "Uses Matrix Interpolation to create extra frames, resulting in smoother graphics. This is "
-                  "purely visual and does not impact game logic, execution of glitches etc.";
-    }
+
+    maxFps = Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate();
+    tooltip = "Uses Matrix Interpolation to create extra frames, resulting in smoother graphics. This is "
+              "purely visual and does not impact game logic, execution of glitches etc.";
     path.sidebarName = "Graphics";
     AddSidebarEntry("Settings", "Graphics", 3);
     AddWidget(path, "Renderer API (Needs reload)", WIDGET_VIDEO_BACKEND);
@@ -267,15 +261,20 @@ void PortMenu::AddSettings() {
                 Ship::Context::GetInstance()->GetWindow()->GetGui()->SaveConsoleVariablesNextFrame();
             }
         })
-        .PreFunc([](WidgetInfo& info) { info.isHidden = mPortMenu->disabledMap.at(DISABLE_FOR_NOT_DIRECTX).active; })
+        .PreFunc([](WidgetInfo& info) {
+            info.isHidden = false;
+        }) // mPortMenu->disabledMap.at(DISABLE_FOR_NOT_DIRECTX).active;
         .Options(ButtonOptions().Tooltip("Matches interpolation value to the current game's window refresh rate."));
-    AddWidget(path, "Match Refresh Rate", WIDGET_CVAR_CHECKBOX)
-        .CVar("gMatchRefreshRate")
-        .PreFunc([](WidgetInfo& info) { info.isHidden = mPortMenu->disabledMap.at(DISABLE_FOR_DIRECTX).active; })
-        .Options(CheckboxOptions().Tooltip("Matches interpolation value to the current game's window refresh rate."));
+    // AddWidget(path, "Match Refresh Rate", WIDGET_CVAR_CHECKBOX)
+    //     .CVar("gMatchRefreshRate")
+    //     .PreFunc([](WidgetInfo& info) { info.isHidden = mPortMenu->disabledMap.at(DISABLE_FOR_DIRECTX).active; })
+    //     .Options(CheckboxOptions().Tooltip("Matches interpolation value to the current game's window refresh
+    //     rate."));
     AddWidget(path, "Jitter fix : >= % d FPS", WIDGET_CVAR_SLIDER_INT)
         .CVar("gExtraLatencyThreshold")
-        .PreFunc([](WidgetInfo& info) { info.isHidden = mPortMenu->disabledMap.at(DISABLE_FOR_NOT_DIRECTX).active; })
+        .PreFunc([](WidgetInfo& info) {
+            info.isHidden = false;
+        }) // mPortMenu->disabledMap.at(DISABLE_FOR_NOT_DIRECTX).active;
         .Options(IntSliderOptions()
                      .Tooltip("When Interpolation FPS setting is at least this threshold, add one frame of input "
                               "lag (e.g. 16.6 ms for 60 FPS) in order to avoid jitter. This setting allows the "
@@ -509,18 +508,18 @@ void PortMenu::InitElement() {
                return !Ship::Context::GetInstance()->GetWindow()->GetGui()->SupportsViewports();
            },
             "Multi-viewports not supported" } },
-        { DISABLE_FOR_NOT_DIRECTX,
-          { [](disabledInfo& info) -> bool {
-               return Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() !=
-                      Ship::WindowBackend::FAST3D_DXGI_DX11;
-           },
-            "Available Only on DirectX" } },
-        { DISABLE_FOR_DIRECTX,
-          { [](disabledInfo& info) -> bool {
-               return Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() ==
-                      Ship::WindowBackend::FAST3D_DXGI_DX11;
-           },
-            "Not Available on DirectX" } },
+        // { DISABLE_FOR_NOT_DIRECTX,
+        //   { [](disabledInfo& info) -> bool {
+        //        return Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() !=
+        //               Ship::WindowBackend::FAST3D_DXGI_DX11;
+        //    },
+        //     "Available Only on DirectX" } },
+        // { DISABLE_FOR_DIRECTX,
+        //   { [](disabledInfo& info) -> bool {
+        //        return Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() ==
+        //               Ship::WindowBackend::FAST3D_DXGI_DX11;
+        //    },
+        //     "Not Available on DirectX" } },
         { DISABLE_FOR_MATCH_REFRESH_RATE_ON,
           { [](disabledInfo& info) -> bool { return CVarGetInteger("gMatchRefreshRate", 0); },
             "Match Refresh Rate is Enabled" } },

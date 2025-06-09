@@ -88,13 +88,13 @@ void freecam(Camera* camera, Player* player, s8 index) {
     } else {
         func_8001E45C(camera, player, index);
         // Required if freecam were to use its own camera instead of borrowing the player camera
-        //func_8001EE98(gPlayerOneCopy, camera, index);
+        // func_8001EE98(gPlayerOneCopy, camera, index);
     }
 }
 
 void on_freecam(void) {
     gIsHUDVisible = false;
-   // gPlayerOne->type |= PLAYER_KART_AI;
+    // gPlayerOne->type |= PLAYER_KART_AI;
 }
 
 void off_freecam(void) {
@@ -134,29 +134,31 @@ void freecam_mouse_manager(Camera* camera, Vec3f forwardVector) {
 
     if (bFreecamUseController) {
         // Controller controls
-            f32 stickX = ((f32)fController.rightRawStickX);
-            f32 stickY = ((f32)fController.rightRawStickY);
+        f32 stickX = ((f32) fController.rightRawStickX);
+        f32 stickY = ((f32) fController.rightRawStickY);
 
-            // Sensitivity multipliers
-            float controllerSensitivityX = 5.0f; // Adjust as needed
-            float controllerSensitivityY = 3.0f;
+        // Sensitivity multipliers
+        float controllerSensitivityX = 5.0f; // Adjust as needed
+        float controllerSensitivityY = 3.0f;
 
-            // Deadzone handling (ignore tiny stick movements)
-            const float deadzone = 0.1f;
-            if (fabs(stickX) < deadzone) stickX = 0.0f;
-            if (fabs(stickY) < deadzone) stickY = 0.0f;
+        // Deadzone handling (ignore tiny stick movements)
+        const float deadzone = 0.1f;
+        if (fabs(stickX) < deadzone)
+            stickX = 0.0f;
+        if (fabs(stickY) < deadzone)
+            stickY = 0.0f;
 
-            // Instead of adding, directly set rotation velocity (so holding gives a steady rotation)
-            freeCam.rotVelocity[1] += stickX * controllerSensitivityX;  // Yaw (left/right)
-            freeCam.rotVelocity[2] += stickY * controllerSensitivityY;  // Pitch (up/down)
-    } else { // Mouse controls
+        // Instead of adding, directly set rotation velocity (so holding gives a steady rotation)
+        freeCam.rotVelocity[1] += stickX * controllerSensitivityX; // Yaw (left/right)
+        freeCam.rotVelocity[2] += stickY * controllerSensitivityY; // Pitch (up/down)
+    } else {                                                       // Mouse controls
         // Calculate yaw (left/right) and pitch (up/down) changes
         if (wnd->GetMouseState(Ship::LUS_MOUSE_BTN_RIGHT)) {
             yawChange = mouse.x * MOUSE_SENSITIVITY_X;
             pitchChange = mouse.y * MOUSE_SENSITIVITY_Y;
         }
         // Update rotational velocity based on mouse movement
-        freeCam.rotVelocity[1] += yawChange * 65535.0f / (2 * M_PI);  // Yaw (left/right)
+        freeCam.rotVelocity[1] += yawChange * 65535.0f / (2 * M_PI);   // Yaw (left/right)
         freeCam.rotVelocity[2] += pitchChange * 65535.0f / (2 * M_PI); // Pitch (up/down)
     }
 }
@@ -174,18 +176,8 @@ bool FreecamKeyDown(int virtualKey) {
     static bool prevKeyState[256] = { false }; // Store previous key states
     bool isDownNow = false;
 
-    if (wnd->GetWindowBackend() == Ship::WindowBackend::FAST3D_SDL_LLGL) {
-        // Use SDL to check key states
-        const uint8_t* keystate = SDL_GetKeyboardState(NULL);
-        isDownNow = keystate[virtualKey] != 0;
-    }
-#ifdef _WIN32
-    else if (wnd->GetWindowBackend() == Ship::WindowBackend::FAST3D_DXGI_DX11) {
-        // Use Windows GetKeyState for DirectX
-        SHORT keyState = GetKeyState(virtualKey);
-        isDownNow = (keyState & 0x8000) != 0;
-    }
-#endif
+    const uint8_t* keystate = SDL_GetKeyboardState(NULL);
+    isDownNow = keystate[virtualKey] != 0;
 
     // Determine if this is a new key press
     bool isKeyDownEvent = isDownNow && !prevKeyState[virtualKey];
@@ -251,47 +243,11 @@ void freecam_keyboard_manager(Camera* camera, Vec3f forwardVector) {
             Up = true;
         }
         if (fController.button & Z_TRIG) {
-           FastMove = true;
+            FastMove = true;
         }
     }
     // Keyboard and mouse DX
-#ifdef _WIN32
-    else if (wnd->GetWindowBackend() == Ship::WindowBackend::FAST3D_DXGI_DX11) {
-        if (FreecamKeyDown('F')) {
-            fTargetPlayer = !fTargetPlayer;
-        }
-        if (FreecamKeyDown('N')) {
-            TargetPreviousPlayer = true;
-        }
-        if (FreecamKeyDown('M')) {
-            TargetNextPlayer = true;
-        }
-        if (GetKeyState('W') & 0x8000) {
-            Forward = true;
-        }
-        if (GetKeyState('S') & 0x8000) {
-            Backward = true;
-        }
-        if (GetKeyState('D') & 0x8000) {
-            PanRight = true;
-        }
-        if (GetKeyState('A') & 0x8000) {
-            PanLeft = true;
-        }
-        if (GetKeyState(VK_SPACE) & 0x8000) {
-            Up = true;
-        }
-        if (GetKeyState(VK_LSHIFT) & 0x8000 || GetKeyState(VK_RSHIFT) & 0x8000) {
-            Down = true;
-        }
-        // Fast movement with Ctrl
-        if (GetKeyState(VK_LCONTROL) || GetKeyState(VK_RCONTROL)) {
-            FastMove = true;
-        }
-        // Keyboard/mouse OpenGL/SDL
-    }
-#endif
-    else if (wnd->GetWindowBackend() == Ship::WindowBackend::FAST3D_SDL_LLGL) {
+    else {
         const uint8_t* keystate = SDL_GetKeyboardState(NULL);
         if (FreecamKeyDown(SDL_SCANCODE_F)) {
             fTargetPlayer = !fTargetPlayer;
@@ -405,19 +361,18 @@ void freecam_render_setup(Camera* camera) {
 
     // Perspective (camera movement)
     FrameInterpolation_RecordOpenChild("freecam_persp", FrameInterpolation_GetCameraEpoch());
-    guPerspective(&fPersp, &perspNorm, gCameraZoom[0], gScreenAspect,
-                  CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
+    guPerspective(&fPersp, &perspNorm, gCameraZoom[0], gScreenAspect, CM_GetProps()->NearPersp, CM_GetProps()->FarPersp,
+                  1.0f);
     gSPPerspNormalize(gDisplayListHead++, perspNorm);
     gSPMatrix(gDisplayListHead++, (&fPersp), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
     FrameInterpolation_RecordCloseChild();
 
     // LookAt (camera rotation)
     FrameInterpolation_RecordOpenChild("freecam_lookAt", FrameInterpolation_GetCameraEpoch());
-    guLookAt(&fLookAt, camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
-             camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
+    guLookAt(&fLookAt, camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0], camera->lookAt[1],
+             camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
     gSPMatrix(gDisplayListHead++, (&fLookAt), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
     FrameInterpolation_RecordCloseChild();
 
     gDPPipeSync(gDisplayListHead++);
-
 }
