@@ -2,34 +2,14 @@
 
 #version 450 core
 
+// layout(binding = {get_binding_index("samplerState", "Sampler", "")}) uniform sampler samplerState;
+
 layout(std140, binding = @{get_binding_index("frame_count", "Buffer", "ConstantBuffer")}) uniform FrameCount {
     int frame_count;
 };
 layout(std140, binding = @{get_binding_index("noise_scale", "Buffer", "ConstantBuffer")}) uniform NoiseScale {
     float noise_scale;
 };
-
-@if(o_grayscale)
-layout(binding = @{get_binding_index("vGrayscaleColor", "Buffer", "ConstantBuffer")}) uniform GrayScale {
-    vec4 vGrayscaleColor;
-};
-@end
-
-@for(i in 0..o_inputs)
-    layout(binding = @{get_binding_index("vInput" + to_string(i + 1), "Buffer", "ConstantBuffer")}) uniform Input@{i + 1} {
-    @if(o_alpha)
-        vec4 vInput@{i + 1};
-    @else
-        vec3 vInput@{i + 1};
-    @end
-    };
-@end
-
-@if(o_fog)
-layout(binding = @{get_binding_index("fog_color", "Buffer", "ConstantBuffer")}) uniform Fog { 
-    vec3 fog_color;
-};
-@end
 
 @for(i in 0..2)
     @if(o_textures[i]) layout(binding = @{get_binding_index("uTex" + to_string(i), "Texture", "Sampled")}) uniform texture2D uTex@{i};
@@ -42,31 +22,30 @@ layout(binding = @{get_binding_index("fog_color", "Buffer", "ConstantBuffer")}) 
 
 @for(i in 0..2)
     @if(o_textures[i])
+        layout(location = @{get_input_location()}) in vec2 vTexCoord@{i};
         @for(j in 0..2)
             @if(o_clamp[i][j])
                 @if(j == 0)
-                    layout(binding = @{get_binding_index("vTexClampS" + to_string(i), "Buffer", "ConstantBuffer")}) uniform TexClampS@{i} {
-                        float vTexClampS@{i};
-                    };
+                    layout(location = @{get_input_location()}) in float vTexClampS@{i};
                 @else
-                    layout(binding = @{get_binding_index("vTexClampT" + to_string(i), "Buffer", "ConstantBuffer")}) uniform TexClampT@{i} {
-                        float vTexClampT@{i};
-                    };
+                    layout(location = @{get_input_location()}) in float vTexClampT@{i};
                 @end
             @end
         @end
     @end
 @end
 
-// vertex attributes
+@if(o_fog) layout(location = @{get_input_location()}) in vec4 vFog;
+@if(o_grayscale) layout(location = @{get_input_location()}) in vec4 vGrayscaleColor;
 
-layout(location = @{get_input_location()}) in vec4 vColor;
-
-@for(i in 0..2)
-    @if(o_textures[i])
-        layout(location = @{get_input_location()}) in vec2 vTexCoord@{i};
+@for(i in 0..o_inputs)
+    @if(o_alpha)
+        layout(location = @{get_input_location()}) in vec4 vInput@{i + 1};
+    @else
+        layout(location = @{get_input_location()}) in vec3 vInput@{i + 1};
     @end
 @end
+
 
 #define TEX_OFFSET(off) texture(tex, texCoord - off / texSize)
 #define WRAP(x, low, high) mod((x)-(low), (high)-(low)) + (low)
@@ -105,9 +84,6 @@ vec4 hookTexture2D(in int id, in texture2D tex, in sampler sampl, in vec2 uv, in
 layout(location = 0) out vec4 fragColor;
 
 void main() {
-    @if(o_fog)
-        vec4 vFog = vec4(fog_color, vColor.a);
-    @end
     @for(i in 0..2)
         @if(o_textures[i])
             @{s = o_clamp[i][0]}

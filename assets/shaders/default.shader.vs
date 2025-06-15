@@ -5,20 +5,41 @@
 // should stay position
 layout(location = @{get_vs_input_location("position", "RGBA32Float")}) in vec4 position;
 
-layout(location = @{get_vs_input_location("aColor", "RGBA32Float")}) in vec4 aColor;
-layout(location = @{get_output_location()}) out vec4 vColor;
-
-layout(location = @{get_vs_input_location("aTexCoord", "RG32Float")}) in vec2 aTexCoord;
-
 @for(i in 0..2)
     @if(o_textures[i])
+        layout(location = @{get_vs_input_location("aTexCoord" + to_string(i), "RG32Float")}) in vec2 aTexCoord@{i};
         layout(location = @{get_output_location()}) out vec2 vTexCoord@{i};
-        layout(std140, binding = @{get_binding_index("texData" + to_string(i), "Buffer", "ConstantBuffer")}) uniform texData@{i} {
-            vec2 texShift@{i};
-            vec2 texUl@{i};
-            bool texIsRect@{i};
-            vec2 texSize@{i};
-        };
+        @for(j in 0..2)
+            @if(o_clamp[i][j])
+                @if(j == 0)
+                    layout(location = @{get_vs_input_location("aTexClampS" + to_string(i), "R32Float")}) in float aTexClampS@{i};
+                    layout(location = @{get_output_location()}) out float vTexClampS@{i};
+                @else
+                    layout(location = @{get_vs_input_location("aTexClampT" + to_string(i), "R32Float")}) in float aTexClampT@{i};
+                    layout(location = @{get_output_location()}) out float vTexClampT@{i};
+                @end
+            @end
+        @end
+    @end
+@end
+
+@if(o_fog)
+    layout(location = @{get_vs_input_location("aFog", "RGBA32Float")}) in vec4 aFog;
+    layout(location = @{get_output_location()}) out vec4 vFog;
+@end
+
+@if(o_grayscale)
+    layout(location = @{get_vs_input_location("aGrayscaleColor", "RGBA32Float")}) in vec4 aGrayscaleColor;
+    layout(location = @{get_output_location()}) out vec4 vGrayscaleColor;
+@end
+
+@for(i in 0..o_inputs)
+    @if(o_alpha)
+        layout(location = @{get_vs_input_location("aInput" + to_string(i+1), "RGBA32Float")}) in vec4 aInput@{i + 1};
+        layout(location = @{get_output_location()}) out vec4 vInput@{i + 1};
+    @else
+        layout(location = @{get_vs_input_location("aInput" + to_string(i+1), "RGB32Float")}) in vec3 aInput@{i + 1};
+        layout(location = @{get_output_location()}) out vec3 vInput@{i + 1};
     @end
 @end
 
@@ -29,32 +50,29 @@ out gl_PerVertex {
 void main() {
     @for(i in 0..2)
         @if(o_textures[i])
-            vec2 uv@{i} = aTexCoord;
-
-            uv@{i} *= texShift@{i};
-            // if (shifts != 0) {
-            //     if (shifts <= 10) {
-            //         u /= 1 << shifts;
-            //     } else {
-            //         u *= 1 << (16 - shifts);
-            //     }
-            // }
-            // if (shiftt != 0) {
-            //     if (shiftt <= 10) {
-            //         v /= 1 << shiftt;
-            //     } else {
-            //         v *= 1 << (16 - shiftt);
-            //     }
-            // }
-            uv@{i} -= texUl@{i};
-
-            if (texIsRect@{i}) {
-                uv@{i} += 0.5f;
-            }
-            vTexCoord@{i} = uv@{i} / texSize@{i};
+            vTexCoord@{i} = aTexCoord@{i};
+            @for(j in 0..2)
+                @if(o_clamp[i][j])
+                    @if(j == 0)
+                        vTexClampS@{i} = aTexClampS@{i};
+                    @else
+                        vTexClampT@{i} = aTexClampT@{i};
+                    @end
+                @end
+            @end
         @end
     @end
-
-    vColor = aColor;
+    
+    @if(o_fog)
+        vFog = aFog;
+    @end
+    
+    @if(o_grayscale)
+        vGrayscaleColor = aGrayscaleColor;
+    @end
+    
+    @for(i in 0..o_inputs)
+        vInput@{i + 1} = aInput@{i + 1};
+    @end
     gl_Position = position;
 }
