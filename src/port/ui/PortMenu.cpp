@@ -188,10 +188,16 @@ void PortMenu::AddSettings() {
     // Graphics Settings
     static int32_t maxFps;
     const char* tooltip = "";
-
-    maxFps = Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate();
-    tooltip = "Uses Matrix Interpolation to create extra frames, resulting in smoother graphics. This is "
-              "purely visual and does not impact game logic, execution of glitches etc.";
+    if (false) { // (Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() == Ship::WindowBackend::FAST3D_DXGI_DX11) {
+        maxFps = 360;
+        tooltip = "Uses Matrix Interpolation to create extra frames, resulting in smoother graphics. This is "
+                  "purely visual and does not impact game logic, execution of glitches etc.\n\nA higher target "
+                  "FPS than your monitor's refresh rate will waste resources, and might give a worse result.";
+    } else {
+        maxFps = Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate();
+        tooltip = "Uses Matrix Interpolation to create extra frames, resulting in smoother graphics. This is "
+                  "purely visual and does not impact game logic, execution of glitches etc.";
+    }
     path.sidebarName = "Graphics";
     AddSidebarEntry("Settings", "Graphics", 3);
     AddWidget(path, "Renderer API (Needs reload)", WIDGET_VIDEO_BACKEND);
@@ -261,20 +267,15 @@ void PortMenu::AddSettings() {
                 Ship::Context::GetInstance()->GetWindow()->GetGui()->SaveConsoleVariablesNextFrame();
             }
         })
-        .PreFunc([](WidgetInfo& info) {
-            info.isHidden = false;
-        }) // mPortMenu->disabledMap.at(DISABLE_FOR_NOT_DIRECTX).active;
+        .PreFunc([](WidgetInfo& info) { info.isHidden = mPortMenu->disabledMap.at(DISABLE_FOR_NOT_DIRECTX).active; })
         .Options(ButtonOptions().Tooltip("Matches interpolation value to the current game's window refresh rate."));
-    // AddWidget(path, "Match Refresh Rate", WIDGET_CVAR_CHECKBOX)
-    //     .CVar("gMatchRefreshRate")
-    //     .PreFunc([](WidgetInfo& info) { info.isHidden = mPortMenu->disabledMap.at(DISABLE_FOR_DIRECTX).active; })
-    //     .Options(CheckboxOptions().Tooltip("Matches interpolation value to the current game's window refresh
-    //     rate."));
+    AddWidget(path, "Match Refresh Rate", WIDGET_CVAR_CHECKBOX)
+        .CVar("gMatchRefreshRate")
+        .PreFunc([](WidgetInfo& info) { info.isHidden = mPortMenu->disabledMap.at(DISABLE_FOR_DIRECTX).active; })
+        .Options(CheckboxOptions().Tooltip("Matches interpolation value to the current game's window refresh rate."));
     AddWidget(path, "Jitter fix : >= % d FPS", WIDGET_CVAR_SLIDER_INT)
         .CVar("gExtraLatencyThreshold")
-        .PreFunc([](WidgetInfo& info) {
-            info.isHidden = false;
-        }) // mPortMenu->disabledMap.at(DISABLE_FOR_NOT_DIRECTX).active;
+        .PreFunc([](WidgetInfo& info) { info.isHidden = mPortMenu->disabledMap.at(DISABLE_FOR_NOT_DIRECTX).active; })
         .Options(IntSliderOptions()
                      .Tooltip("When Interpolation FPS setting is at least this threshold, add one frame of input "
                               "lag (e.g. 16.6 ms for 60 FPS) in order to avoid jitter. This setting allows the "
@@ -338,9 +339,9 @@ void PortMenu::AddEnhancements() {
     AddWidget(path, "No multiplayer feature cuts", WIDGET_CVAR_CHECKBOX)
         .CVar("gMultiplayerNoFeatureCuts")
         .Options(CheckboxOptions().Tooltip("Allows full train and jumbotron in multiplayer, etc."));
-    AddWidget(path, "General Improvements", WIDGET_CVAR_CHECKBOX)
-        .CVar("gImprovements")
-        .Options(CheckboxOptions().Tooltip("General improvements to the game experience."));
+    AddWidget(path, "Widescreen portrait spacing", WIDGET_CVAR_CHECKBOX)
+        .CVar("gBetterResultPortraits")
+        .Options(CheckboxOptions().Tooltip("Alters result portrait spacing for better aesthetics on widescreen"));
     AddWidget(path, "No Level of Detail (LOD)", WIDGET_CVAR_CHECKBOX)
         .CVar("gDisableLod")
         .Options(CheckboxOptions().Tooltip(
@@ -350,6 +351,7 @@ void PortMenu::AddEnhancements() {
         .Options(CheckboxOptions().Tooltip("Disable original culling of mk64"));
     AddWidget(path, "Far Frustrum", WIDGET_CVAR_SLIDER_FLOAT)
         .CVar("gFarFrustrum")
+        .PreFunc([](WidgetInfo& info) { info.isHidden = !CVarGetInteger("gNoCulling", 0); })
         .Options(FloatSliderOptions()
                      .Min(0.0f)
                      .Max(10000.0f)
@@ -363,18 +365,21 @@ void PortMenu::AddEnhancements() {
     AddWidget(path, "Enable Custom CC", WIDGET_CVAR_CHECKBOX).CVar("gEnableCustomCC");
     AddWidget(path, "Custom CC", WIDGET_CVAR_SLIDER_FLOAT)
         .CVar("gCustomCC")
+        .PreFunc([](WidgetInfo& info) { info.isHidden = !CVarGetInteger("gEnableCustomCC", 0); })
         .Options(FloatSliderOptions().Min(0.0f).Max(1000.0f).DefaultValue(150.0f).Step(10.0f));
     AddWidget(path, "Disable Wall Collision", WIDGET_CVAR_CHECKBOX)
         .CVar("gNoWallColision")
         .Options(CheckboxOptions().Tooltip("Disable wall collision."));
     AddWidget(path, "Min Height", WIDGET_CVAR_SLIDER_FLOAT)
         .CVar("gMinHeight")
+        .PreFunc([](WidgetInfo& info) { info.isHidden = !CVarGetInteger("gNoWallColision", 0); })
         .Options(FloatSliderOptions().Min(-50.0f).Max(50.0f).DefaultValue(0.0f).Tooltip(
             "When Disable Wall Collision are enable what is the minimal height you can get."));
 
 #if not defined(__SWITCH__) and not defined(__WIIU__)
     path = { "Enhancements", "HM64 Lab", SECTION_COLUMN_1 };
     AddSidebarEntry("Enhancements", "HM64 Lab", 4);
+    AddWidget(path, "Work in progress.", WIDGET_TEXT);
     AddWidget(path, "Enable HM64 Labs", WIDGET_CVAR_CHECKBOX)
         .CVar("gEditorEnabled")
         .Callback([](WidgetInfo& info) {
@@ -421,7 +426,7 @@ void PortMenu::AddDevTools() {
         .Options(CheckboxOptions().Tooltip("Enables Debug Mode."));
     AddWidget(path, "Modify Interpolation Target FPS", WIDGET_CVAR_CHECKBOX)
         .CVar("gModifyInterpolationTargetFPS")
-        .Options(CheckboxOptions().Tooltip("Enables Debug Mode."));
+        .Options(CheckboxOptions().Tooltip("For testing frame interpolation."));
     AddWidget(path, "Interpolation Target FPS", WIDGET_CVAR_SLIDER_INT)
         .CVar("gInterpolationTargetFPS")
         .PreFunc([](WidgetInfo& info) { info.isHidden = !CVarGetInteger("gModifyInterpolationTargetFPS", 0); })
@@ -508,18 +513,18 @@ void PortMenu::InitElement() {
                return !Ship::Context::GetInstance()->GetWindow()->GetGui()->SupportsViewports();
            },
             "Multi-viewports not supported" } },
-        // { DISABLE_FOR_NOT_DIRECTX,
-        //   { [](disabledInfo& info) -> bool {
-        //        return Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() !=
-        //               Ship::WindowBackend::FAST3D_DXGI_DX11;
-        //    },
-        //     "Available Only on DirectX" } },
-        // { DISABLE_FOR_DIRECTX,
-        //   { [](disabledInfo& info) -> bool {
-        //        return Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() ==
-        //               Ship::WindowBackend::FAST3D_DXGI_DX11;
-        //    },
-        //     "Not Available on DirectX" } },
+        { DISABLE_FOR_NOT_DIRECTX,
+          { [](disabledInfo& info) -> bool {
+               return true; // Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() !=
+                      // Ship::WindowBackend::FAST3D_DXGI_DX11;
+           },
+            "Available Only on DirectX" } },
+        { DISABLE_FOR_DIRECTX,
+          { [](disabledInfo& info) -> bool {
+               return false; // Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() ==
+                      // Ship::WindowBackend::FAST3D_DXGI_DX11;
+           },
+            "Not Available on DirectX" } },
         { DISABLE_FOR_MATCH_REFRESH_RATE_ON,
           { [](disabledInfo& info) -> bool { return CVarGetInteger("gMatchRefreshRate", 0); },
             "Match Refresh Rate is Enabled" } },
