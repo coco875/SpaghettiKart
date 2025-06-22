@@ -2052,7 +2052,7 @@ void print_text0(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 
     }
 
     // @port Skip Interpolation, if interpolated later remove this tag
-    FrameInterpolation_ShouldInterpolateFrame(false);  
+    FrameInterpolation_ShouldInterpolateFrame(false);
 
     gSPDisplayList(gDisplayListHead++, D_020077A8);
     if (*text != 0) {
@@ -2971,13 +2971,13 @@ Gfx* func_80095BD0(Gfx* displayListHead, u8* arg1, f32 arg2, f32 arg3, u32 arg4,
     if (gMatrixEffectCount < 0) {
         rmonPrintf("effectcount < 0 !!!!!!(kawano)\n");
     }
-    FrameInterpolation_RecordOpenChild("flashing_text", TAG_LETTER((uintptr_t)&arg1 << 8) + (arg4 + arg5));
+    FrameInterpolation_RecordOpenChild("flashing_text", TAG_LETTER((uintptr_t) &arg1 << 8) + (arg4 + arg5));
     Mat4 mf;
     SetTextMatrix(mf, arg2, arg3, arg6, arg7);
     // func_80095AE0(&gGfxPool->mtxEffect[gMatrixEffectCount], arg2, arg3, arg6, arg7);
 
     displayListHead = AddTextMatrix(displayListHead, mf);
-    //gSPMatrix(displayListHead++, mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
+    // gSPMatrix(displayListHead++, mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
     gMKLoadTextureTile_4b(displayListHead++, arg1, G_IM_FMT_I, arg4, 0, 0, 0, arg4, arg5, 0, G_TX_NOMIRROR | G_TX_WRAP,
                           G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOLOD);
     switch (arg4) {
@@ -3012,10 +3012,10 @@ Gfx* func_80095BD0_wide_right(Gfx* displayListHead, u8* arg1, f32 arg2, f32 arg3
         rmonPrintf("func_80095BD0_wide_right: effectcount < 0 !!!!!!(kawano)\n");
     }
 
-    FrameInterpolation_RecordOpenChild("flashing_text_wide_right", TAG_LETTER((uintptr_t)&arg1 << 8) + (arg4 + arg5));
+    FrameInterpolation_RecordOpenChild("flashing_text_wide_right", TAG_LETTER((uintptr_t) &arg1 << 8) + (arg4 + arg5));
     Mat4 mf;
     SetTextMatrix(mf, OTRGetDimensionFromRightEdge(arg2), arg3, arg6, arg7);
-    //func_80095AE0(&gGfxPool->mtxEffect[gMatrixEffectCount], OTRGetDimensionFromRightEdge(arg2), arg3, arg6, arg7);
+    // func_80095AE0(&gGfxPool->mtxEffect[gMatrixEffectCount], OTRGetDimensionFromRightEdge(arg2), arg3, arg6, arg7);
 
     displayListHead = AddTextMatrix(displayListHead, mf);
     // gSPMatrix(displayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount++]),
@@ -3047,7 +3047,7 @@ Gfx* func_80095E10(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 te
                    s32 srcWidth, s32 srcHeight, s32 screenX, s32 screenY, u8* textureData, u32 texWidth,
                    u32 texHeight) {
     gDPLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, texWidth, texHeight, srcX, srcY,
-                       srcX + srcWidth - 1, srcY + srcHeight - 1, 0, G_TX_NOMIRROR | G_TX_WRAP,
+                       srcX + srcWidth - 1, srcY + srcHeight, 0, G_TX_NOMIRROR | G_TX_WRAP,
                        G_TX_NOMIRROR | G_TX_WRAP, 0, 0, G_TX_NOLOD, G_TX_NOLOD);
     gSPWideTextureRectangle(displayListHead++, screenX << 2, screenY << 2, (screenX + srcWidth) << 2,
                             (screenY + srcHeight) << 2, G_TX_RENDERTILE, 0, 0, texScaleS, texScaleT);
@@ -3056,15 +3056,15 @@ Gfx* func_80095E10(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 te
 
 Gfx* func_800963F0(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 texScaleT, f32 scaleX, f32 scaleY,
                    s32 srcX, s32 srcY, s32 srcHeight, s32 srcWidth, s32 screenX, s32 screenY, u8* textureData,
-                   u32 height, u32 width) {
-    gMKLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, height, width, srcX, srcY,
-                       srcX + srcHeight, srcY + srcWidth, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMIRROR | G_TX_WRAP, 0, 0,
+                   u32 texWidth, u32 texHeight) {
+    gDPLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, texWidth, texHeight, srcX, srcY,
+                       srcX + texWidth-1, srcY + texHeight-1, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMIRROR | G_TX_WRAP, 0, 0,
                        G_TX_NOLOD, G_TX_NOLOD);
     f32 percentScaleX = 1.0f / ((f32) texScaleS / 1024.0f);
     f32 percentScaleY = 1.0f / ((f32) texScaleT / 1024.0f);
     gSPWideTextureRectangle(displayListHead++, screenX << 2, screenY << 2,
-                            (screenX + (s32) ((f32) height * scaleX)) << 2,
-                            (screenY + (s32) ((f32) width * scaleY)) << 2, 0, 0, 0,
+                            (screenX + (s32) ((f32) texWidth * scaleX)) << 2,
+                            (screenY + (s32) ((f32) texHeight * scaleY)) << 2, 0, 0, 0,
                             (1.0f / (scaleX * percentScaleX) * 1024.0f), (1.0f / (scaleY * percentScaleY) * 1024.0f));
     return displayListHead;
 }
@@ -3269,7 +3269,7 @@ Gfx* func_80097E58(Gfx* displayListHead, s8 textureFormat, u32 uls, u32 ult, u32
     }
     f32 percent = (f32) (32 - width) / 32.0f;
     gDPLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, textureWidth, textureHeight, uls,
-                       ult, lrs - 1, lrt - 1, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMIRROR | G_TX_WRAP, 5, 5, G_TX_NOLOD,
+                       ult, textureWidth - 1, textureHeight - 1, 0, G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMIRROR | G_TX_WRAP, 5, 5, G_TX_NOLOD,
                        G_TX_NOLOD);
     screenX += (s32) ((f32) (textureWidth / 2) * (1.0f - percent));
     gSPWideTextureRectangle(displayListHead++, (screenX) << 2, screenY << 2,
@@ -4543,7 +4543,7 @@ Gfx* render_menu_textures(Gfx* arg0, MenuTexture* arg1, s32 column, s32 row) {
                 break;
         }
         temp_v0_3 = (u8*) func_8009B8C4(arg1->textureData);
-        if (temp_v0_3 != 0) {
+        if (temp_v0_3 != NULL) {
             if (gTransitionType[4] != 4) {
                 arg0 = func_80095E10(arg0, var_s4, 0x00000400, 0x00000400, 0, 0, arg1->width, arg1->height,
                                      arg1->dX + column, arg1->dY + row, temp_v0_3, arg1->width, arg1->height);
@@ -4792,8 +4792,8 @@ Gfx* func_8009C434(Gfx* arg0, struct_8018DEE0_entry* arg1, s32 arg2, s32 arg3, s
             switch (arg4) {
                 case -1:
                     arg0 = func_80095E10(arg0, var_t1, 0x00000400, 0x00000400, 0, 0, var_s0->width, var_s0->height,
-                                         var_s0->dX + arg2, var_s0->dY + arg3, (u8*) var_s0->textureData,
-                                         var_s0->width, var_s0->height);
+                                         var_s0->dX + arg2, var_s0->dY + arg3, (u8*) var_s0->textureData, var_s0->width,
+                                         var_s0->height);
                     break;
                 case -2:
                     arg0 = func_800963F0(arg0, var_t1, 0x00000400, 0x00000400, 0.5f, 0.5f, 0, 0, var_s0->width,
@@ -5303,8 +5303,7 @@ void func_8009CE64(s32 arg0) {
                 }
             }
 
-            if (IsBlockFort() || IsSkyscraper() || IsDoubleDeck() ||
-                IsBigDonut()) {
+            if (IsBlockFort() || IsSkyscraper() || IsDoubleDeck() || IsBigDonut()) {
 
                 gModeSelection = BATTLE;
                 if (gPlayerCountSelection1 == 1) {
@@ -5781,19 +5780,7 @@ void resize_menu_texture(MenuTexture* mi) {
     int original_height = mi->height;
     float new_width = (f32) ResourceGetTexWidthByName(mi->textureData) /
                       ((f32) ResourceGetTexHeightByName(mi->textureData) / (f32) original_height);
-    if (fractional_part(new_width) >= 0.5) {
-        new_width += 1.0;
-        if (fractional_part(new_width) <= 0.7) {
-            new_width += 1.0;
-            mi->height += 1;
-        }
-    }
-
-    mi->width = (s32) new_width;
-
-    int textureWidth = ResourceGetTexWidthByName(mi->textureData);
-    int textureHeight = ResourceGetTexHeightByName(mi->textureData);
-
+    mi->width = (s32) ceilf(new_width);
     mi->dX += (original_width - mi->width) / 2;
 }
 
@@ -6012,7 +5999,7 @@ void add_menu_item(s32 type, s32 column, s32 row, s8 priority) {
         case MENU_ITEM_TYPE_05B:
         case COURSE_SELECT_BATTLE_NAMES:
             load_menu_img_comp_type(
-                segmented_to_virtual_dupe(gMenuTexturesTrackSelection[type - COURSE_SELECT_MAP_SELECT]),
+                gMenuTexturesTrackSelection[type - COURSE_SELECT_MAP_SELECT],
                 LOAD_MENU_IMG_TKMK00_ONCE);
             break;
         case MENU_ITEM_TYPE_05F:
@@ -6056,7 +6043,7 @@ void add_menu_item(s32 type, s32 column, s32 row, s8 priority) {
         case MENU_ITEM_TYPE_079:
         case MENU_ITEM_TYPE_07A:
         case MENU_ITEM_TYPE_07B:
-            load_menu_img_comp_type(segmented_to_virtual_dupe(D_800E82F4[type - 0x78]), LOAD_MENU_IMG_TKMK00_ONCE);
+            load_menu_img_comp_type(segmented_to_virtual_dupe(D_800E82F4[type - MENU_ITEM_TYPE_078]), LOAD_MENU_IMG_TKMK00_ONCE);
             break;
         case MENU_ITEM_TYPE_08C:
             load_menu_img_comp_type(segmented_to_virtual_dupe(seg2_data_texture), LOAD_MENU_IMG_TKMK00_ONCE);
@@ -6559,7 +6546,7 @@ void render_menus(MenuItem* arg0) {
             case COURSE_SELECT_FLOWER_CUP:
             case COURSE_SELECT_STAR_CUP:
             case COURSE_SELECT_SPECIAL_CUP:
-                var_a1 = arg0->type - 0x53;
+                var_a1 = arg0->type - COURSE_SELECT_MUSHROOM_CUP;
                 func_800A890C(var_a1, arg0);
                 func_800A143C(arg0, var_a1);
                 break;
@@ -7059,7 +7046,7 @@ void func_800A143C(MenuItem* arg0, s32 arg1) {
         case 2:
         case 3:
             gDisplayListHead =
-                render_menu_textures(gDisplayListHead, segmented_to_virtual_dupe(gMenuTexturesTrackSelection[arg1 + 1]),
+                render_menu_textures(gDisplayListHead, gMenuTexturesTrackSelection[arg1 + 1],
                                      arg0->column, arg0->row);
             break;
         case 1:
