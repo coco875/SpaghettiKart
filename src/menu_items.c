@@ -5561,35 +5561,6 @@ void clear_menus(void) {
     }
 }
 
-f32 integral_part(f32 arg0) {
-    return (f32) (s32) arg0;
-}
-
-f32 fractional_part(f32 arg0) {
-    return arg0 - integral_part(arg0);
-}
-
-void resize_menu_texture(MenuTexture* mi) {
-    int original_width = mi->width;
-    int original_height = mi->height;
-    float new_width = (f32) ResourceGetTexWidthByName(mi->textureData) /
-                      ((f32) ResourceGetTexHeightByName(mi->textureData) / (f32) original_height);
-    if (fractional_part(new_width) >= 0.5) {
-        new_width += 1.0;
-        if (fractional_part(new_width) <= 0.7) {
-            new_width += 1.0;
-            mi->height += 1;
-        }
-    }
-
-    mi->width = (s32) new_width;
-
-    int textureWidth = ResourceGetTexWidthByName(mi->textureData);
-    int textureHeight = ResourceGetTexHeightByName(mi->textureData);
-
-    mi->dX += (original_width - mi->width) / 2;
-}
-
 #ifdef NON_MATCHING
 // https://decomp.me/scratch/1BHpa
 // Stack differences, can't figure out how to fix them
@@ -5719,7 +5690,6 @@ void add_menu_item(s32 type, s32 column, s32 row, s8 priority) {
         case MENU_ITEM_UI_START_BACKGROUND:
             // load_menu_img_comp_type(gMenuTexturesBackground[has_unlocked_extra_mode()], LOAD_MENU_IMG_TKMK00_ONCE);
             load_texture_reset_cache(gMenuTexturesBackground[has_unlocked_extra_mode()]->textureData);
-            // resize_menu_texture(gMenuTexturesBackground[has_unlocked_extra_mode()]);
             break;
         case MENU_ITEM_UI_LOGO_AND_COPYRIGHT:
             load_mario_kart_64_logo();
@@ -5732,7 +5702,7 @@ void add_menu_item(s32 type, s32 column, s32 row, s8 priority) {
         case MAIN_MENU_BACKGROUND:
         case CHARACTER_SELECT_BACKGROUND:
         case COURSE_SELECT_BACKGROUND:
-            load_menu_img_comp_type(gMenuTexturesBackground[has_unlocked_extra_mode()]->textureData, LOAD_MENU_IMG_TKMK00_ONCE);
+            load_texture_reset_cache(gMenuTexturesBackground[has_unlocked_extra_mode()]->textureData);
             // load_menu_img_comp_type(gMenuTexturesBackground[has_unlocked_extra_mode()], LOAD_MENU_IMG_TKMK00_ONCE);
             load_menu_img_comp_type(D_02004B74, LOAD_MENU_IMG_TKMK00_ONCE);
             convert_img_to_greyscale(0, 0x00000019);
