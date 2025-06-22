@@ -6734,7 +6734,7 @@ void func_8006DD3C(Player* player, s8 playerId, s8 arg2) {
     temp_v0 = 8 << (arg2 * 4);
     if (temp_v0 == (player->unk_002 & temp_v0)) {
         for (temp_s0 = 0; temp_s0 < 10; ++temp_s0) {
-            temp_v0 = arg0->playerPacticlePool0[temp_s0].type;
+            temp_v0 = player->playerPacticlePool0[temp_s0].type;
             if (temp_v0 != 3) {
                 if (temp_v0 == 5) {
                     func_8006A280(player, playerId, temp_s0, arg2);

@@ -72,7 +72,7 @@ BowsersCastle::BowsersCastle() {
     this->gfx = d_course_bowsers_castle_packed_dls;
     this->gfxSize = 4900;
     Props.textures = bowsers_castle_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineBowsersCastle;
+    Props.Minimap.Texture = minimap_bowsers_castle;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 265;

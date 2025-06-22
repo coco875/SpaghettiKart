@@ -4897,8 +4897,8 @@ minimap_toads_turnpike:
   width: 128
   height: 64
   format: I4
-gTextureCourseOutlineKalimariDesert:
-  symbol: gTextureCourseOutlineKalimariDesert
+minimap_kalimari_desert:
+  symbol: minimap_kalimari_desert
   mio0: true
   type: texture
   offset: 0xE0A50

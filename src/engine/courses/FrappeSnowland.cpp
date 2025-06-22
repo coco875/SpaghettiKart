@@ -52,7 +52,7 @@ FrappeSnowland::FrappeSnowland() {
     this->gfx = d_course_frappe_snowland_packed_dls;
     this->gfxSize = 4140;
     Props.textures = frappe_snowland_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineFrappeSnowland;
+    Props.Minimap.Texture = minimap_frappe_snowland;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 262;

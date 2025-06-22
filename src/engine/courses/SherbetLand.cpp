@@ -49,7 +49,7 @@ SherbetLand::SherbetLand() {
     this->gfx = d_course_sherbet_land_packed_dls;
     this->gfxSize = 1803;
     Props.textures = sherbet_land_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineSherbetLand;
+    Props.Minimap.Texture = minimap_sherbet_land;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 262;

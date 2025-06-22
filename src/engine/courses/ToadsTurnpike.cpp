@@ -70,7 +70,7 @@ ToadsTurnpike::ToadsTurnpike() {
     this->gfx = d_course_toads_turnpike_packed_dls;
     this->gfxSize = 3427;
     Props.textures = toads_turnpike_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineToadsTurnpike;
+    Props.Minimap.Texture = minimap_toads_turnpike;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 252;

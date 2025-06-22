@@ -61,7 +61,7 @@ YoshiValley::YoshiValley() {
     this->gfxSize = 4140;
     Props.textures = yoshi_valley_textures;
 
-    Props.Minimap.Texture = gTextureCourseOutlineYoshiValley;
+    Props.Minimap.Texture = minimap_yoshi_valley;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.PlayerX = 61;

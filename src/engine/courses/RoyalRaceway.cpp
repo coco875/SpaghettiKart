@@ -87,7 +87,7 @@ RoyalRaceway::RoyalRaceway() {
     this->gfx = d_course_royal_raceway_packed_dls;
     this->gfxSize = 5670;
     Props.textures = royal_raceway_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineRoyalRaceway;
+    Props.Minimap.Texture = minimap_royal_raceway;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 262;

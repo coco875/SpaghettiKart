@@ -57,7 +57,7 @@ KalimariDesert::KalimariDesert() {
     this->gfx = d_course_kalimari_desert_packed_dls;
     this->gfxSize = 5328;
     Props.textures = kalimari_desert_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineKalimariDesert;
+    Props.Minimap.Texture = minimap_kalimari_desert;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 263;

@@ -64,7 +64,7 @@ ChocoMountain::ChocoMountain() {
     this->gfx = d_course_choco_mountain_packed_dls;
     this->gfxSize = 2910;
     Props.textures = choco_mountain_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineChocoMountain;
+    Props.Minimap.Texture = minimap_choco_mountain;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 265;

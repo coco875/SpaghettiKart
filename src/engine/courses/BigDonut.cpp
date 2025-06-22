@@ -43,7 +43,7 @@ BigDonut::BigDonut() {
     this->gfx = d_course_big_donut_packed_dls;
     this->gfxSize = 528;
     Props.textures = big_donut_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineBigDonut;
+    Props.Minimap.Texture = minimap_big_donut;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 257;

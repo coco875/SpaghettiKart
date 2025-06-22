@@ -64,7 +64,7 @@ Skyscraper::Skyscraper() {
     this->gfx = d_course_skyscraper_packed_dls;
     this->gfxSize = 548;
     Props.textures = skyscraper_textures;
-    Props.Minimap.Texture = gTextureCourseOutlineSkyscraper;
+    Props.Minimap.Texture = minimap_skyscraper;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
     Props.Minimap.Pos[0].X = 257;
