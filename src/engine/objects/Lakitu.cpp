@@ -2,6 +2,7 @@
 #include <libultra/gbi.h>
 #include "Lakitu.h"
 #include <vector>
+#include "port/interpolation/FrameInterpolation.h"
 
 #include "port/Game.h"
 
@@ -10,6 +11,7 @@ extern "C" {
 #include "main.h"
 #include "actors.h"
 #include "math_util.h"
+#include "math_util_2.h"
 #include "sounds.h"
 #include "update_objects.h"
 #include "render_player.h"
@@ -21,7 +23,6 @@ extern "C" {
 #include "code_80057C60.h"
 #include "defines.h"
 #include "code_80005FD0.h"
-#include "math_util_2.h"
 #include "collision.h"
 #include "assets/bowsers_castle_data.h"
 #include "ceremony_and_credits.h"
@@ -37,6 +38,7 @@ extern s8 gPlayerCount;
 }
 
 OLakitu::OLakitu(s32 playerId, LakituType type) {
+    Name = "Lakitu";
     _playerId = playerId;
 
     init_object(gIndexLakituList[playerId], (s32)type);
@@ -94,6 +96,8 @@ void OLakitu::Draw(s32 cameraId) {
     s32 objectIndex;
     Object* object;
 
+    FrameInterpolation_RecordOpenChild("Lakitu",(uintptr_t) this);
+
     objectIndex = gIndexLakituList[cameraId];
     camera = &camera1[cameraId];
     if (is_obj_flag_status_active(objectIndex, 0x00000010) != 0) {
@@ -125,6 +129,7 @@ void OLakitu::Draw(s32 cameraId) {
             }
         }
     }
+    FrameInterpolation_RecordCloseChild();
 }
 
 void OLakitu::func_80079114(s32 objectIndex, s32 playerId, s32 arg2) {
@@ -292,7 +297,7 @@ void OLakitu::func_800729EC(s32 objectIndex) {
     D_8018D2BC = 1;
     D_8018D2A4 = 1;
 
-    if (GetCourse() != GetYoshiValley()) {
+    if (!IsYoshiValley()) {
         for (i = 0; i < gPlayerCount; i++) {
             playerHUD[i].unk_81 = temp_v1;
         }
@@ -361,7 +366,7 @@ void OLakitu::func_800797AC(s32 playerId) {
 
     objectIndex = gIndexLakituList[playerId];
     player = &gPlayerOne[playerId];
-    //if ((GetCourse() == GetSherbetLand()) && (player->unk_0CA & 1)) {
+    //if ((IsSherbetLand()) && (player->unk_0CA & 1)) {
     if ((CM_GetProps()->LakituTowType == LakituTowType::ICE) && (player->unk_0CA & 1)) {
         init_object(objectIndex, 7);
         player->unk_0CA |= 0x10;

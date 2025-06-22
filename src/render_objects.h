@@ -341,8 +341,6 @@ void translate_thwomp_lights(s32);
 void thwomp_lights(s32);
 void render_object_thwomps_model(s32);
 void render_object_thwomps(s32);
-void func_80053D74(s32, s32, s32);
-void render_balloons_grand_prix(s32);
 
 void render_object_train_smoke_particle(s32, s32);
 void render_object_trains_smoke_particles(s32);
@@ -363,7 +361,6 @@ void render_object_seagulls(s32);
 void render_object_crabs(s32);
 void func_800557AC(void);
 void func_800557B4(s32, u32, u32);
-void render_object_train_penguins(s32);
 void func_80055AB8(s32, s32);
 void render_object_chain_chomps(s32);
 void func_80055EF4(s32, s32);
@@ -430,8 +427,8 @@ extern Vec3su D_80183E80;
 
 extern f32 D_8018CFEC;
 extern f32 D_8018CFF4;
-extern s16 D_8018D2E0;
-extern s16 D_8018D2E8;
+extern s16 gMinimapPlayerX;
+extern s16 gMinimapPlayerY;
 
 extern u8* D_8018D4BC;
 extern u8* D_8018D4C0;

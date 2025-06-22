@@ -3,7 +3,6 @@
 #include <cstdint>
 #include "resource/Resource.h"
 
-extern "C" {
 struct AdpcmLoop {
     uint32_t start;
     uint32_t end;
@@ -21,21 +20,21 @@ struct AdpcmBook {
 struct AudioBankSample {
     uint8_t unused;
     uint8_t loaded;
-    uint8_t* sampleAddr;
-    AdpcmLoop* loop;
-    AdpcmBook* book;
+    uint8_t *sampleAddr;
+    AdpcmLoop *loop;
+    AdpcmBook *book;
     uint32_t sampleSize; // never read. either 0 or 1 mod 9, depending on padding
 };
-}
 
 namespace SM64 {
+
 
 class AudioSample : public Ship::Resource<AudioBankSample> {
   public:
     using Resource::Resource;
 
-    AudioSample() : Resource(std::shared_ptr<Ship::ResourceInitData>()) {
-    }
+    AudioSample() : Resource(std::shared_ptr<Ship::ResourceInitData>()) {}
+    ~AudioSample() override;
 
     AudioBankSample* GetPointer();
     size_t GetPointerSize();
@@ -46,4 +45,4 @@ class AudioSample : public Ship::Resource<AudioBankSample> {
     AdpcmBook book;
     std::vector<uint8_t> sampleAddr;
 };
-} // namespace SM64
+}

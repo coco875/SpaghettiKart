@@ -21,65 +21,62 @@ extern "C" {
 #include "sounds.h"
 #include "external.h"
 }
+#include "port/interpolation/FrameInterpolation.h"
 
-OMole::OMole(Vec3f pos) {
+size_t OMole::_count = 0;
 
-    find_unused_obj_index(&indexObjectList1[0]);
+OMole::OMole(FVector pos, OMoleGroup* group) {
+    Name = "Mole";
+    _idx = _count;
+    _group = group;
+
+    find_unused_obj_index(&_objectIndex);
+
+    gObjectList[_objectIndex].pos[0] = pos.x * xOrientation;
+    gObjectList[_objectIndex].pos[1] = pos.y;
+    gObjectList[_objectIndex].pos[2] = pos.z;
+
+    gObjectList[_objectIndex].origin_pos[0] = pos.x * xOrientation;
+    gObjectList[_objectIndex].origin_pos[1] = pos.y - 9.0;
+    gObjectList[_objectIndex].origin_pos[2] = pos.z;
+
+    // This is probably the mole particles
+    find_unused_obj_index(&_moleIndex);
+    init_object(_moleIndex, 0);
+    gObjectList[_moleIndex].pos[0] = pos.x * xOrientation;
+    gObjectList[_moleIndex].pos[2] = pos.z;
+    func_800887C0(_moleIndex);
+    gObjectList[_moleIndex].sizeScaling = 0.7f;
+
+    _count++;
 }
 
 void OMole::Tick() {
-    s32 var_s1;
-    s32 objectIndex;
-
-    for (var_s1 = 0; var_s1 < D_8018D1C8; var_s1++) {
-        objectIndex = indexObjectList1[var_s1];
-        if (gObjectList[objectIndex].state == 0) {
-            if (are_players_in_course_section(8, 9) != 0) {
-                func_80081FF4(objectIndex, 1);
+    if (_idx == 0) {
+        for (size_t i = 0; i < gObjectParticle2_SIZE; i++) {
+            s32 objectIndex = gObjectParticle2[i];
+            if (gObjectList[objectIndex].state != 0) {
+                OMole::func_80081790(objectIndex);
             }
-        } else {
-            OMole::func_800821AC(objectIndex, 1);
-        }
-    }
-
-    for (var_s1 = 0; var_s1 < D_8018D1D0; var_s1++) {
-        objectIndex = indexObjectList2[var_s1];
-        if (gObjectList[objectIndex].state == 0) {
-            if (are_players_in_course_section(0x0010, 0x0013) != 0) {
-                OMole::func_80081FF4(objectIndex, 2);
-            }
-        } else {
-            OMole::func_800821AC(objectIndex, 2);
-        }
-    }
-
-    for (var_s1 = 0; var_s1 < D_8018D1D8; var_s1++) {
-        objectIndex = indexObjectList3[var_s1];
-        if (gObjectList[objectIndex].state == 0) {
-            if (are_players_in_course_section(0x0011, 0x0014) != 0) {
-                func_80081FF4(objectIndex, 3);
-            }
-        } else {
-            OMole::func_800821AC(objectIndex, 3);
-        }
-    }
-
-    for (var_s1 = 0; var_s1 < gObjectParticle2_SIZE; var_s1++) {
-        objectIndex = gObjectParticle2[var_s1];
-        if (gObjectList[objectIndex].state != 0) {
-            OMole::func_80081790(objectIndex);
         }
     }
 }
 
 void OMole::Draw(s32 cameraId) {
+    size_t i;
 
+    OMole::func_80054D00(_objectIndex, cameraId);
+
+    OMole::func_80054EB8();
+    if (_idx == 0) {
+        OMole::func_80054F04(cameraId);
+    }
 }
 
 void OMole::func_80081790(s32 objectIndex) {
     switch (gObjectList[objectIndex].state) {
         case 0:
-            break; /* irregular */
+            break;
         case 1:
             if (func_80087E08(objectIndex, gObjectList[objectIndex].velocity[1], 0.3f, gObjectList[objectIndex].unk_034,
                               gObjectList[objectIndex].orientation[1], 0x00000032) != 0) {
@@ -93,10 +90,6 @@ void OMole::func_80081790(s32 objectIndex) {
             break;
     }
 }
-
-
-
-
 
 void OMole::func_80081AFC(s32 objectIndex, s32 arg1) {
     s8* sp2C;
@@ -119,7 +112,7 @@ void OMole::func_80081AFC(s32 objectIndex, s32 arg1) {
         case 0x3:
             if (object->unk_0AE == 0) {
                 func_80086EAC(objectIndex, 2, 4);
-                func_8008153C(objectIndex);
+                OMole::func_8008153C(objectIndex);
                 object_next_state(objectIndex);
                 func_800C98B8(object->pos, object->velocity, SOUND_ARG_LOAD(0x19, 0x01, 0x80, 0x07));
             }
@@ -139,18 +132,21 @@ void OMole::func_80081AFC(s32 objectIndex, s32 arg1) {
             if (object->unk_0AE == 0) {
                 clear_object_flag(objectIndex, 0x00000200);
                 func_80072428(objectIndex);
-                switch (arg1) { /* switch 1; irregular */
-                    case 1:     /* switch 1 */
-                        sp2C = D_8018D198;
-                        break;
-                    case 2: /* switch 1 */
-                        sp2C = D_8018D1A8;
-                        break;
-                    case 3: /* switch 1 */
-                        sp2C = D_8018D1B8;
-                        break;
-                }
-                sp2C[object->type] = 0;
+
+                _group->_moles[object->type].Active = false;
+
+                // switch (arg1) {
+                //     case 1:
+                //         sp2C = D_8018D198;
+                //         break;
+                //     case 2:
+                //         sp2C = D_8018D1A8;
+                //         break;
+                //     case 3:
+                //         sp2C = D_8018D1B8;
+                //         break;
+                // }
+                // sp2C[object->type] = 0;
             }
             break;
         case 0:
@@ -162,17 +158,55 @@ void OMole::func_80081AFC(s32 objectIndex, s32 arg1) {
     }
 }
 
+void OMole::func_8008153C(s32 objectIndex) {
+    UNUSED s32 stackPadding[3];
+    s32 sp70;
+    s32 var_s1;
+    s32 var_s7;
+    s32 loopObjectIndex;
+
+    if (gPlayerCountSelection1 == 1) {
+        sp70 = 8;
+    } else {
+        sp70 = 4;
+    }
+
+    for (var_s7 = 0; var_s7 < sp70; var_s7++) {
+        for (var_s1 = 0; var_s1 < gObjectParticle2_SIZE; var_s1++) {
+            loopObjectIndex = gObjectParticle2[var_s1];
+
+            if (gObjectList[loopObjectIndex].state != 0) {
+                continue;
+            }
+
+            u8* mole = (u8*) LOAD_ASSET_RAW(d_course_moo_moo_farm_mole_dirt);
+            init_object(loopObjectIndex, 0);
+            gObjectList[loopObjectIndex].activeTLUT = d_course_moo_moo_farm_mole_dirt;
+            gObjectList[loopObjectIndex].tlutList = mole;
+            gObjectList[loopObjectIndex].sizeScaling = 0.15f;
+            gObjectList[loopObjectIndex].velocity[1] = random_int(0x000AU);
+            gObjectList[loopObjectIndex].velocity[1] = (gObjectList[loopObjectIndex].velocity[1] * 0.1) + 4.8;
+            gObjectList[loopObjectIndex].unk_034 = random_int(5U);
+            gObjectList[loopObjectIndex].unk_034 = (gObjectList[loopObjectIndex].unk_034 * 0.01) + 0.8;
+            gObjectList[loopObjectIndex].orientation[1] = (0x10000 / sp70) * var_s1;
+            gObjectList[loopObjectIndex].origin_pos[0] = gObjectList[objectIndex].origin_pos[0];
+            gObjectList[loopObjectIndex].origin_pos[1] = gObjectList[objectIndex].origin_pos[1] - 13.0;
+            gObjectList[loopObjectIndex].origin_pos[2] = gObjectList[objectIndex].origin_pos[2];
+            break;
+        }
+    }
+}
+
 void OMole::func_80081D34(s32 objectIndex) {
     Player* player;
-    Camera* var_s4;
-    s32 var_s2;
+    Camera* camera;
     s32 var_s5;
     Object* object;
 
     var_s5 = 0;
     player = gPlayerOne;
-    var_s4 = camera1;
-    for (var_s2 = 0; var_s2 < D_8018D158; var_s2++, player++, var_s4++) {
+    camera = camera1;
+    for (size_t i = 0; i < D_8018D158; i++, player++, camera++) {
         if ((is_obj_flag_status_active(objectIndex, 0x00000200) != 0) && !(player->effects & 0x80000000) &&
             (has_collided_with_player(objectIndex, player) != 0)) {
             if ((player->type & 0x8000) && !(player->type & 0x100)) {
@@ -182,13 +216,13 @@ void OMole::func_80081D34(s32 objectIndex) {
                     func_80072180();
                 }
                 if (player->effects & 0x200) {
-                    func_800C9060(var_s2, 0x1900A046U);
+                    func_800C9060(i, 0x1900A046U);
                 } else {
                     player->soundEffects |= 2;
                 }
-                object->direction_angle[1] = var_s4->rot[1];
-                object->velocity[1] = (player->unk_094 / 2) + 3.0;
-                object->unk_034 = player->unk_094 + 1.0;
+                object->direction_angle[1] = camera->rot[1];
+                object->velocity[1] = (player->speed / 2) + 3.0;
+                object->unk_034 = player->speed + 1.0;
                 if (object->velocity[1] >= 5.0) {
                     object->velocity[1] = 5.0f;
                 }
@@ -209,66 +243,17 @@ void OMole::func_80081D34(s32 objectIndex) {
     }
 }
 
-
-void OMole::func_80081FF4(s32 objectIndex, s32 arg1) {
-    UNUSED s32 stackPadding0;
-    UNUSED s32 stackPadding1;
-    s32 moleCount;
-    s16 var_v1;
-    s16 offset;
-    s32 var_a0;
-    s8* var_a2;
-
-    init_object(objectIndex, 0);
-    gObjectList[objectIndex].unk_04C = random_int(0x001EU) + 5;
-    switch (arg1) { /* irregular */
-        case 1:
-            var_a2 = D_8018D198;
-            moleCount = NUM_GROUP1_MOLES;
-            offset = 0;
-            break;
-        case 2:
-            var_a2 = D_8018D1A8;
-            moleCount = NUM_GROUP2_MOLES;
-            offset = 24;
-            // offset = NUM_GROUP1_MOLES;
-            break;
-        case 3:
-            var_a2 = D_8018D1B8;
-            moleCount = NUM_GROUP3_MOLES;
-            offset = 57;
-            // offset = NUM_GROUP1_MOLES + NUM_GROUP2_MOLES;
-            break;
-    }
-    var_v1 = random_int(moleCount);
-    for (var_a0 = 0; var_a0 < moleCount; var_a0++) {
-        if (var_a2[var_v1] != 0) {
-            var_v1++;
-            if (var_v1 == moleCount) {
-                var_v1 = 0;
-            }
-        } else {
-            var_a2[var_v1] = 1;
-            gObjectList[objectIndex].type = var_v1;
-            break;
-        }
-    }
-    /*
-    Ideally `gMoleSpawns` wouldn't be a union at all and its just be a list of Vec3s
-    Even more ideally each mole group would have its own array for its spawns
-    gObjectList[objectIndex].origin_pos[0] = gMoleSpawns.asVec3sList[offset + var_v1][0] * xOrientation;
-    gObjectList[objectIndex].origin_pos[1] = gMoleSpawns.asVec3sList[offset + var_v1][1] - 9.0;
-    gObjectList[objectIndex].origin_pos[2] = gMoleSpawns.asVec3sList[offset + var_v1][2];
-    */
-    gObjectList[objectIndex].origin_pos[0] = gMoleSpawns.asFlatList[offset + (var_v1 * 3) + 0] * xOrientation;
-    gObjectList[objectIndex].origin_pos[1] = gMoleSpawns.asFlatList[offset + (var_v1 * 3) + 1] - 9.0;
-    gObjectList[objectIndex].origin_pos[2] = gMoleSpawns.asFlatList[offset + (var_v1 * 3) + 2];
-}
+static const char* frames[] = {
+    gTextureMole1, gTextureMole2, gTextureMole3, gTextureMole4,
+    gTextureMole5, gTextureMole6, gTextureMole7, d_course_moo_moo_farm_mole_dirt,
+};
 
 void OMole::func_80081848(s32 objectIndex) {
-    u8* mole = (u8*) LOAD_ASSET_RAW(d_course_moo_moo_farm_mole_frames);
-    u8* tlut = (u8*) LOAD_ASSET_RAW(d_course_moo_moo_farm_mole_tlut);
-    init_texture_object(objectIndex, (u8*)d_course_moo_moo_farm_mole_tlut, (const char**) mole, 0x20U, (u16) 0x00000040);
+    init_texture_object(objectIndex, (u8*) d_course_moo_moo_farm_mole_tlut, (const char**) frames, 0x20U,
+                        (u16) 0x00000040);
+    // gObjectList[objectIndex].activeTexture = (const char*)d_course_moo_moo_farm_mole_frames;
+    // gObjectList[objectIndex].activeTLUT = (const char*)d_course_moo_moo_farm_mole_tlut;
+
     gObjectList[objectIndex].sizeScaling = 0.15f;
     gObjectList[objectIndex].textureListIndex = 0;
     set_obj_origin_offset(objectIndex, 0.0f, 0.0f, 0.0f);
@@ -279,7 +264,6 @@ void OMole::func_80081848(s32 objectIndex) {
     set_object_flag(objectIndex, 0x04000000);
     object_next_state(objectIndex);
 }
-
 
 void OMole::func_80081924(s32 objectIndex) {
     switch (gObjectList[objectIndex].unk_0AE) {
@@ -317,7 +301,6 @@ void OMole::func_80081924(s32 objectIndex) {
     }
 }
 
-
 void OMole::func_80081A88(s32 objectIndex) {
     switch (gObjectList[objectIndex].unk_0DD) { /* irregular */
         case 0:
@@ -340,9 +323,14 @@ void OMole::func_800821AC(s32 objectIndex, s32 arg1) {
     }
 }
 
+// Holes
 void OMole::func_80054E10(s32 objectIndex) {
     if (gObjectList[objectIndex].state > 0) {
         if (is_obj_flag_status_active(objectIndex, 0x00800000) != 0) {
+
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("func_80054E10", TAG_OBJECT(&gObjectList[objectIndex]));
+
             D_80183E50[0] = gObjectList[objectIndex].pos[0];
             D_80183E50[1] = gObjectList[objectIndex].surfaceHeight + 0.8;
             D_80183E50[2] = gObjectList[objectIndex].pos[2];
@@ -350,6 +338,9 @@ void OMole::func_80054E10(s32 objectIndex) {
             D_80183E70[1] = gObjectList[objectIndex].velocity[1];
             D_80183E70[2] = gObjectList[objectIndex].velocity[2];
             func_8004A9B8(gObjectList[objectIndex].sizeScaling);
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
     }
 }
@@ -358,9 +349,9 @@ void OMole::func_80054E10(s32 objectIndex) {
 void OMole::func_80054EB8() {
     s32 someIndex;
 
-    for (someIndex = 0; someIndex < NUM_TOTAL_MOLES; someIndex++) {
-        func_80054E10(gObjectParticle1[someIndex]);
-    }
+    // for (someIndex = 0; someIndex < NUM_TOTAL_MOLES; someIndex++) {
+    func_80054E10(_moleIndex);
+    //}
 }
 
 void OMole::func_80054D00(s32 objectIndex, s32 cameraId) {
@@ -370,53 +361,52 @@ void OMole::func_80054D00(s32 objectIndex, s32 cameraId) {
     if (gObjectList[objectIndex].state >= 3) {
         func_8008A364(objectIndex, cameraId, 0x2AABU, 0x0000012C);
         if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {
+
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("func_80054D00", (uintptr_t)&gObjectList[objectIndex]);
+
             D_80183E80[0] = (s16) gObjectList[objectIndex].orientation[0];
             D_80183E80[1] =
                 func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], camera->pos);
             D_80183E80[2] = (u16) gObjectList[objectIndex].orientation[2];
             func_80048130(gObjectList[objectIndex].pos, (u16*) D_80183E80, gObjectList[objectIndex].sizeScaling,
-                          (u8*) gObjectList[objectIndex].activeTLUT, (u8*)gObjectList[objectIndex].activeTexture,
-                          (Vtx*)LOAD_ASSET_RAW(D_0D0062B0), 0x00000020, 0x00000040, 0x00000020, 0x00000040, 5);
+                          (u8*) gObjectList[objectIndex].activeTLUT, (u8*) gObjectList[objectIndex].activeTexture,
+                          (Vtx*) LOAD_ASSET_RAW(D_0D0062B0), 0x00000020, 0x00000040, 0x00000020, 0x00000040, 5);
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
     }
 }
 
+// Mole rocks
 void OMole::func_80054F04(s32 cameraId) {
-    s32 var_s2;
-    s32 objectIndex;
-    Camera* sp44;
-    Object* object;
+    Camera* camera = &camera1[cameraId];
 
-    sp44 = &camera1[cameraId];
-    gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D0079C8);
+    gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D0079C8);
     load_texture_block_rgba16_mirror((u8*) LOAD_ASSET_RAW(d_course_moo_moo_farm_mole_dirt), 0x00000010, 0x00000010);
-    for (var_s2 = 0; var_s2 < gObjectParticle2_SIZE; var_s2++) {
-        objectIndex = gObjectParticle2[var_s2];
-        object = &gObjectList[objectIndex];
-        if (object->state > 0) {
-            func_8008A364(objectIndex, cameraId, 0x2AABU, 0x000000C8);
-            if ((is_obj_flag_status_active(objectIndex, VISIBLE) != 0) && (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX)) {
-                object->orientation[1] = func_800418AC(object->pos[0], object->pos[2], sp44->pos);
-                rsp_set_matrix_gObjectList(objectIndex);
-                gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D006980);
+
+    if (_idx == 0) {
+        for (size_t i = 0; i < gObjectParticle2_SIZE; i++) {
+            s32 objectIndex = gObjectParticle2[i];
+            Object* object = &gObjectList[objectIndex];
+            if (object->state > 0) {
+                func_8008A364(objectIndex, cameraId, 0x2AABU, 0x000000C8);
+                if ((is_obj_flag_status_active(objectIndex, VISIBLE) != 0) &&
+                    (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX)) {
+
+                    // @port: Tag the transform.
+                    FrameInterpolation_RecordOpenChild("func_80054F04", TAG_OBJECT(object) | (i << 32));
+
+                    object->orientation[1] = func_800418AC(object->pos[0], object->pos[2], camera->pos);
+                    rsp_set_matrix_gObjectList(objectIndex);
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D006980);
+
+                    // @port Pop the transform id.
+                    FrameInterpolation_RecordCloseChild();
+                }
             }
         }
     }
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
-}
-
-void OMole::render_object_moles(s32 cameraId) {
-    s32 i;
-
-    for (i = 0; i < NUM_GROUP1_MOLES; i++) {
-        OMole::func_80054D00(indexObjectList1[i], cameraId);
-    }
-    for (i = 0; i < NUM_GROUP2_MOLES; i++) {
-        OMole::func_80054D00(indexObjectList2[i], cameraId);
-    }
-    for (i = 0; i < NUM_GROUP3_MOLES; i++) {
-        OMole::func_80054D00(indexObjectList3[i], cameraId);
-    }
-    OMole::func_80054EB8();
-    OMole::func_80054F04(cameraId);
 }

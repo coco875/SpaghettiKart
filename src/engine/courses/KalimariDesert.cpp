@@ -5,7 +5,7 @@
 
 #include "KalimariDesert.h"
 #include "World.h"
-#include "engine/actors/AFinishline.h"
+#include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
 #include "kalimari_desert_data.h"
 #include "engine/vehicles/Utils.h"
@@ -32,6 +32,7 @@ extern "C" {
     #include "actors.h"
     #include "collision.h"
     #include "memory.h"
+    #include "course.h"
     extern const char *kalimari_desert_dls[];
 }
 
@@ -56,16 +57,24 @@ KalimariDesert::KalimariDesert() {
     this->gfx = d_course_kalimari_desert_packed_dls;
     this->gfxSize = 5328;
     Props.textures = kalimari_desert_textures;
-    Props.MinimapTexture = gTextureCourseOutlineKalimariDesert;
-    Props.MinimapDimensions = IVector2D(ResourceGetTexWidthByName(Props.MinimapTexture), ResourceGetTexHeightByName(Props.MinimapTexture));
+    Props.Minimap.Texture = gTextureCourseOutlineKalimariDesert;
+    Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
+    Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
+    Props.Minimap.Pos[0].X = 263;
+    Props.Minimap.Pos[0].Y = 165;
+    Props.Minimap.PlayerX = 55;
+    Props.Minimap.PlayerY = 27;
+    Props.Minimap.PlayerScaleFactor = 0.015f;
+    Props.Minimap.FinishlineX = 0;
+    Props.Minimap.FinishlineY = 4.0;
 
-    Props.Name = "kalimari desert";
-    Props.DebugName = "desert";
-    Props.CourseLength = "753m";
+    Props.SetText(Props.Name, "kalimari desert", sizeof(Props.Name));
+    Props.SetText(Props.DebugName, "desert", sizeof(Props.DebugName));
+    Props.SetText(Props.CourseLength, "753m", sizeof(Props.CourseLength));
+
     Props.AIBehaviour = D_0D009260;
     Props.AIMaximumSeparation = 50.0f;
     Props.AIMinimumSeparation = 0.3f;
-    Props.SomePtr = D_800DCAF4;
     Props.AISteeringSensitivity = 53;
 
     Props.NearPersp = 10.0f;
@@ -73,40 +82,39 @@ KalimariDesert::KalimariDesert() {
 
     Props.PathSizes = {0x2BC, 1, 1, 1, 0x226, 0, 0, 0, 0, 0, 0};
 
-    Props.D_0D009418[0] = 4.1666665f;
-    Props.D_0D009418[1] = 5.5833334f;
-    Props.D_0D009418[2] = 6.1666665f;
-    Props.D_0D009418[3] = 6.75f;
+    Props.CurveTargetSpeed[0] = 4.1666665f;
+    Props.CurveTargetSpeed[1] = 5.5833334f;
+    Props.CurveTargetSpeed[2] = 6.1666665f;
+    Props.CurveTargetSpeed[3] = 6.75f;
 
-    Props.D_0D009568[0] = 3.75f;
-    Props.D_0D009568[1] = 5.1666665f;
-    Props.D_0D009568[2] = 5.75f;
-    Props.D_0D009568[3] = 6.3333334f;
+    Props.NormalTargetSpeed[0] = 3.75f;
+    Props.NormalTargetSpeed[1] = 5.1666665f;
+    Props.NormalTargetSpeed[2] = 5.75f;
+    Props.NormalTargetSpeed[3] = 6.3333334f;
 
     Props.D_0D0096B8[0] = 3.3333332f;
     Props.D_0D0096B8[1] = 3.9166667f;
     Props.D_0D0096B8[2] = 4.5f;
     Props.D_0D0096B8[3] = 5.0833334f;
 
-    Props.D_0D009808[0] = 3.75f;
-    Props.D_0D009808[1] = 5.1666665f;
-    Props.D_0D009808[2] = 5.75f;
-    Props.D_0D009808[3] = 6.3333334f;
+    Props.OffTrackTargetSpeed[0] = 3.75f;
+    Props.OffTrackTargetSpeed[1] = 5.1666665f;
+    Props.OffTrackTargetSpeed[2] = 5.75f;
+    Props.OffTrackTargetSpeed[3] = 6.3333334f;
 
-    Props.PathTable[0] = (TrackWaypoint*)LOAD_ASSET_RAW(d_course_kalimari_desert_unknown_waypoints);
+    Props.PathTable[0] = (TrackPathPoint*)LOAD_ASSET_RAW(d_course_kalimari_desert_unknown_waypoints);
     Props.PathTable[1] = NULL;
     Props.PathTable[2] = NULL;
     Props.PathTable[3] = NULL;
 
-    Props.PathTable2[0] = (TrackWaypoint*)LOAD_ASSET_RAW(d_course_kalimari_desert_track_waypoints);
+    Props.PathTable2[0] = (TrackPathPoint*)LOAD_ASSET_RAW(d_course_kalimari_desert_track_waypoints);
     Props.PathTable2[1] = NULL;
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
+    Props.CloudTexture = (u8*) LOAD_ASSET_RAW(gTextureExhaust5);
     Props.Clouds = gKalimariDesertClouds;
     Props.CloudList = gKalimariDesertClouds;
-    Props.MinimapFinishlineX = 0;
-    Props.MinimapFinishlineY = 0;
 
     Props.Skybox.TopRight = {195, 231, 255};
     Props.Skybox.BottomRight = {255, 192, 0};
@@ -122,9 +130,9 @@ KalimariDesert::KalimariDesert() {
 void KalimariDesert::Load() {
     Course::Load();
 
-    parse_course_displaylists((TrackSectionsI*)LOAD_ASSET_RAW(d_course_kalimari_desert_addr));
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_kalimari_desert_addr));
     func_80295C6C();
-    D_8015F8E4 = gCourseMinY - 10.0f;
+    Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
 void KalimariDesert::LoadTextures() {
@@ -141,86 +149,78 @@ void KalimariDesert::BeginPlay() {
     Vec3f velocity = { 0.0f, 0.0f, 0.0f };
     Vec3s rotation = { 0, 0, 0 };
 
-    gWorldInstance.AddActor(new AFinishline());
-
     spawn_foliage((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_kalimari_desert_cactus_spawn));
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_kalimari_desert_item_box_spawns));
 
-    Vec3f crossingPos = {-2500, 2, 2355};
-    Vec3f crossingPos2 = {-1639, 2, 68};
-    uintptr_t* crossing1 = (uintptr_t*) gWorldInstance.AddCrossing(crossingPos, 306, 310, 900.0f, 650.0f);
-    uintptr_t* crossing2 = (uintptr_t*) gWorldInstance.AddCrossing(crossingPos2, 176, 182, 900.0f, 650.0f);
+    if (gGamestate != CREDITS_SEQUENCE) {
 
-    vec3f_set(position, -1680.0f, 2.0f, 35.0f);
-    position[0] *= gCourseDirection;
-    rrxing = (struct RailroadCrossing*) GET_ACTOR(add_actor_to_empty_slot(position, rotation, velocity,
-                                                                            ACTOR_RAILROAD_CROSSING));
-    rrxing->crossingTrigger = crossing2;
-    vec3f_set(position, -1600.0f, 2.0f, 35.0f);
-    position[0] *= gCourseDirection;
-    rrxing = (struct RailroadCrossing*) GET_ACTOR(add_actor_to_empty_slot(position, rotation, velocity,
-                                                                            ACTOR_RAILROAD_CROSSING));
-    rrxing->crossingTrigger = crossing2;
-    vec3s_set(rotation, 0, -0x2000, 0);
-    vec3f_set(position, -2459.0f, 2.0f, 2263.0f);
-    position[0] *= gCourseDirection;
-    rrxing = (struct RailroadCrossing*) GET_ACTOR(add_actor_to_empty_slot(position, rotation, velocity,
-                                                                            ACTOR_RAILROAD_CROSSING));
-    rrxing->crossingTrigger = crossing1;
-    vec3f_set(position, -2467.0f, 2.0f, 2375.0f);
-    position[0] *= gCourseDirection;
-    rrxing = (struct RailroadCrossing*) GET_ACTOR(add_actor_to_empty_slot(position, rotation, velocity,
-                                                                            ACTOR_RAILROAD_CROSSING));
-    rrxing->crossingTrigger = crossing1;
+        Vec3f crossingPos = {-2500, 2, 2355};
+        Vec3f crossingPos2 = {-1639, 2, 68};
+        uintptr_t* crossing1 = (uintptr_t*) gWorldInstance.AddCrossing(crossingPos, 306, 310, 900.0f, 650.0f);
+        uintptr_t* crossing2 = (uintptr_t*) gWorldInstance.AddCrossing(crossingPos2, 176, 182, 900.0f, 650.0f);
+
+        vec3f_set(position, -1680.0f, 2.0f, 35.0f);
+        position[0] *= gCourseDirection;
+        rrxing = (struct RailroadCrossing*) GET_ACTOR(add_actor_to_empty_slot(position, rotation, velocity,
+                                                                                ACTOR_RAILROAD_CROSSING));
+        rrxing->crossingTrigger = crossing2;
+        vec3f_set(position, -1600.0f, 2.0f, 35.0f);
+        position[0] *= gCourseDirection;
+        rrxing = (struct RailroadCrossing*) GET_ACTOR(add_actor_to_empty_slot(position, rotation, velocity,
+                                                                                ACTOR_RAILROAD_CROSSING));
+        rrxing->crossingTrigger = crossing2;
+
+        // Original game forgot to put gCourseDirection to face the crossing the right direction in extra mode
+        vec3s_set(rotation, 0, -0x2000 * gCourseDirection, 0);
+        vec3f_set(position, -2459.0f, 2.0f, 2263.0f);
+        position[0] *= gCourseDirection;
+        rrxing = (struct RailroadCrossing*) GET_ACTOR(add_actor_to_empty_slot(position, rotation, velocity,
+                                                                                ACTOR_RAILROAD_CROSSING));
+        rrxing->crossingTrigger = crossing1;
+        vec3f_set(position, -2467.0f, 2.0f, 2375.0f);
+        position[0] *= gCourseDirection;
+        rrxing = (struct RailroadCrossing*) GET_ACTOR(add_actor_to_empty_slot(position, rotation, velocity,
+                                                                                ACTOR_RAILROAD_CROSSING));
+        rrxing->crossingTrigger = crossing1;
 
 
+        generate_train_path();
 
-    generate_train_waypoints();
+        s32 centerWaypoint = 160;
 
-    s32 centerWaypoint = 160;
+        // Spawn two trains
+        for (size_t i = 0; i < _numTrains; ++i) {
+            uint32_t waypoint = CalculateWaypointDistribution(i, _numTrains, gVehicle2DPathLength, centerWaypoint);
 
-    // Spawn two trains
-    for (size_t i = 0; i < _numTrains; ++i) {
-        uint32_t waypoint = CalculateWaypointDistribution(i, _numTrains, gVehicle2DWaypointLength, centerWaypoint);
+            if (CVarGetInteger("gMultiplayerNoFeatureCuts", 0) == false) {
+                // Multiplayer modes have no tender and no carriages
+                if (gActiveScreenMode != SCREEN_MODE_1P) {
+                    _tender = ATrain::TenderStatus::NO_TENDER;
+                    _numCarriages = 0;
+                }
 
-        if (CVarGetInteger("gMultiplayerNoFeatureCuts", 0) == false) {
-            // Multiplayer modes have no tender and no carriages
-            if (gActiveScreenMode != SCREEN_MODE_1P) {
-                _tender = ATrain::TenderStatus::NO_TENDER;
-                _numCarriages = 0;
+                // 2 player versus mode has a tender and a carriage
+                if ((gModeSelection == VERSUS) && (gPlayerCountSelection1 == 2)) {
+                    _tender = ATrain::TenderStatus::HAS_TENDER;
+                    _numCarriages = 1;
+                }
             }
 
-            // 2 player versus mode has a tender and a carriage
-            if ((gModeSelection == VERSUS) && (gPlayerCountSelection1 == 2)) {
-                _tender = ATrain::TenderStatus::HAS_TENDER;
-                _numCarriages = 1;
-            }
+            gWorldInstance.AddActor(new ATrain(_tender, _numCarriages, 2.5f, waypoint));
         }
 
-        gWorldInstance.AddActor(new ATrain(_tender, _numCarriages, 2.5f, waypoint));
+        if (gModeSelection == VERSUS) {
+            FVector pos = { 0, 0, 0 };
+
+            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
+            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][138], 138, 1, 0.8333333f));
+            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][280], 280, 3, 0.8333333f));
+            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][404], 404, 1, 0.8333333f));
+            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][510], 510, 3, 0.8333333f));
+            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        }
     }
-
-    if (gModeSelection == VERSUS) {
-        Vec3f pos = {0, 0, 0};
-
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][50], 50, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][138], 138, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][280], 280, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][404], 404, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][510], 510, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
-    }
-}
-
-// Likely sets minimap boundaries
-void KalimariDesert::MinimapSettings() {
-    D_8018D2C0[0] = 263;
-    D_8018D2D8[0] = 165;
-    D_8018D220 = reinterpret_cast<uint8_t (*)[1024]>(dma_textures(gTextureExhaust5, 0x443, 0x1000));
-    D_8018D2A0 = 0.015f;
-    D_8018D2E0 = 55;
-    D_8018D2E8 = 27;
 }
 
 void KalimariDesert::InitCourseObjects() {
@@ -246,14 +246,8 @@ void KalimariDesert::WhatDoesThisDo(Player* player, int8_t playerId) {}
 
 void KalimariDesert::WhatDoesThisDoAI(Player* player, int8_t playerId) {}
 
-// Positions the finishline on the minimap
-void KalimariDesert::MinimapFinishlinePosition() {
-    //! todo: Place hard-coded values here.
-    draw_hud_2d_texture_8x8(this->Props.MinimapFinishlineX, this->Props.MinimapFinishlineY, (u8*) common_texture_minimap_finish_line);
-}
-
 void KalimariDesert::Render(struct UnkStruct_800DC5EC* arg0) {
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
 
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -288,7 +282,5 @@ void KalimariDesert::Render(struct UnkStruct_800DC5EC* arg0) {
 void KalimariDesert::RenderCredits() {
     gSPDisplayList(gDisplayListHead++, (Gfx*)(d_course_kalimari_desert_dl_22E00));
 }
-
-void KalimariDesert::Collision() {}
 
 void KalimariDesert::Destroy() { }

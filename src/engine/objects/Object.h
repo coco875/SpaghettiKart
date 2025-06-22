@@ -11,7 +11,9 @@ class OObject {
 public:
     uint8_t uuid[16];
     Object o;
-    bool PendingDestroy = false;
+    const char* Name = "";
+    bool bPendingDestroy = false;
+    s32 _objectIndex = -1;
 
     virtual ~OObject() = default;
 
@@ -22,4 +24,5 @@ public:
     virtual void Draw(s32 cameraId);
     virtual void Expire();
     virtual void Destroy(); // Mark object for deletion at the start of the next frame
+    virtual void Reset();
 };

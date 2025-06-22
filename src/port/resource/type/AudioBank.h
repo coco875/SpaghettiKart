@@ -47,6 +47,7 @@ class AudioBank : public Ship::Resource<CtlEntry> {
     using Resource::Resource;
 
     AudioBank() : Resource(std::shared_ptr<Ship::ResourceInitData>()) {}
+    ~AudioBank() override;
 
     CtlEntry* GetPointer();
     size_t GetPointerSize();

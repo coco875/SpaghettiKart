@@ -46,6 +46,8 @@
 #include "engine/courses/Course.h"
 #include "engine/Matrix.h"
 
+#include "port/interpolation/FrameInterpolation.h"
+
 Lights1 D_800E45C0[] = {
     gdSPDefLights1(100, 0, 0, 100, 0, 0, 0, -120, 0),
     gdSPDefLights1(100, 100, 0, 255, 255, 0, 0, -120, 0),
@@ -2624,6 +2626,8 @@ void draw_simplified_lap_count(s32 playerId) {
 }
 
 void func_8004E800(s32 playerId) {
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild("Player place HUD", playerId);
     if (playerHUD[playerId].unk_81 != 0) {
         if (playerHUD[playerId].lapCount != 3) {
             func_8004A384(playerHUD[playerId].rankX + playerHUD[playerId].slideRankX,
@@ -2639,6 +2643,8 @@ void func_8004E800(s32 playerId) {
                           0x00000040, 0x00000080, 0x00000040);
         }
     }
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }
 
 void func_8004E998(s32 playerId) {
@@ -2694,21 +2700,28 @@ void func_8004EB38(s32 playerId) {
 }
 
 void func_8004ED40(s32 arg0) {
-    func_8004A2F4(playerHUD[arg0].speedometerX, playerHUD[arg0].speedometerY, 0U, 1.0f, D_8018D300, D_8018D308,
-                  D_8018D310, 0xFF, LOAD_ASSET(common_texture_speedometer), LOAD_ASSET(D_0D0064B0), 64, 96, 64, 48);
+    func_8004A2F4(playerHUD[arg0].speedometerX, playerHUD[arg0].speedometerY, 0U, 1.0f,
+                  // RGBA
+                  CM_GetProps()->Minimap.Colour.r, CM_GetProps()->Minimap.Colour.g, CM_GetProps()->Minimap.Colour.b,
+                  0xFF, LOAD_ASSET(common_texture_speedometer), LOAD_ASSET(D_0D0064B0), 64, 96, 64, 48);
     func_8004A258(D_8018CFEC, D_8018CFF4, D_8016579E, 1.0f, common_texture_speedometer_needle, D_0D005FF0, 0x40, 0x20,
                   0x40, 0x20);
 }
 
-void func_8004EE54(s32 arg0) {
+// player is only 0 or 1
+void func_8004EE54(s32 playerId) {
     if (gIsMirrorMode != 0) {
-        func_8004D4E8(D_8018D2C0[arg0], D_8018D2D8[arg0], (u8*) D_8018D240, (s32) D_8018D300, (s32) D_8018D308,
-                      (s32) D_8018D310, 0x000000FF, (s32) gMinimapWidth, (s32) gMinimapHeight, (s32) gMinimapWidth,
-                      (s32) gMinimapHeight);
+        func_8004D4E8(CM_GetProps()->Minimap.Pos[playerId].X, CM_GetProps()->Minimap.Pos[playerId].Y, (u8*) D_8018D240,
+                      // RGBA
+                      CM_GetProps()->Minimap.Colour.r, CM_GetProps()->Minimap.Colour.g, CM_GetProps()->Minimap.Colour.b,
+                      0xFF, CM_GetProps()->Minimap.Width, CM_GetProps()->Minimap.Height, CM_GetProps()->Minimap.Width,
+                      CM_GetProps()->Minimap.Height);
     } else {
-        func_8004D37C(D_8018D2C0[arg0], D_8018D2D8[arg0], (u8*) D_8018D240, (s32) D_8018D300, (s32) D_8018D308,
-                      (s32) D_8018D310, 0x000000FF, (s32) gMinimapWidth, (s32) gMinimapHeight, (s32) gMinimapWidth,
-                      (s32) gMinimapHeight);
+        func_8004D37C(CM_GetProps()->Minimap.Pos[playerId].X, CM_GetProps()->Minimap.Pos[playerId].Y, (u8*) D_8018D240,
+                      // RGBA
+                      CM_GetProps()->Minimap.Colour.r, CM_GetProps()->Minimap.Colour.g, CM_GetProps()->Minimap.Colour.b,
+                      0xFF, CM_GetProps()->Minimap.Width, CM_GetProps()->Minimap.Height, CM_GetProps()->Minimap.Width,
+                      CM_GetProps()->Minimap.Height);
     }
 }
 
@@ -2716,8 +2729,8 @@ void func_8004EF9C(s32 arg0) {
     s16 temp_t0;
     s16 temp_v0;
 
-    temp_v0 = CM_GetProps()->MinimapDimensions.X;
-    temp_t0 = CM_GetProps()->MinimapDimensions.Z;
+    temp_v0 = CM_GetProps()->Minimap.Width;
+    temp_t0 = CM_GetProps()->Minimap.Height;
 
     // rescale minimap
     int prevWidth = temp_v0;
@@ -2729,11 +2742,11 @@ void func_8004EF9C(s32 arg0) {
         temp_v0 = 64;
         temp_t0 = (temp_t0 * 64) / prevWidth;
     }
-    func_8004D37C(0x00000104, 0x0000003C, CM_GetProps()->MinimapTexture, 0x000000FF, 0x000000FF, 0x000000FF, 0x000000FF,
+    func_8004D37C(0x00000104, 0x0000003C, CM_GetProps()->Minimap.Texture, 0x000000FF, 0x000000FF, 0x000000FF, 0x000000FF,
                   temp_v0, temp_t0, temp_v0, temp_t0);
 }
 
-void set_minimap_finishline_position(s32 arg0) {
+void set_minimap_finishline_position(s32 playerId) {
     f32 var_f0;
     f32 var_f2;
     s32 center = 0;
@@ -2744,22 +2757,18 @@ void set_minimap_finishline_position(s32 arg0) {
         center = ((OTRGetDimensionFromRightEdge(SCREEN_WIDTH) - SCREEN_WIDTH) / 2) +
                  ((SCREEN_WIDTH / 4) + (SCREEN_WIDTH / 2));
     } else {
-        center = D_8018D2C0[arg0];
+        center = CM_GetProps()->Minimap.Pos[playerId].X;
     }
 
     // minimap center pos -  minimap left edge  +  offset
-    var_f2 = (center - (gMinimapWidth / 2)) + D_8018D2E0;
-    var_f0 = (D_8018D2D8[arg0] - (gMinimapHeight / 2)) + D_8018D2E8;
-    if (GetCourse() == GetMarioRaceway()) {
-        var_f0 = var_f0 - 2.0;
-    } else if (GetCourse() == GetChocoMountain()) {
-        var_f0 = var_f0 - 16.0;
-    } else if (GetCourse() == GetKalimariDesert()) {
-        var_f0 = var_f0 + 4.0;
-    }
+    var_f2 = (center - (CM_GetProps()->Minimap.Width / 2)) +
+             CM_GetProps()->Minimap.PlayerX; // (center - (gMinimapWidth / 2)) + gMinimapPlayerX;
+    var_f0 = (CM_GetProps()->Minimap.Pos[playerId].Y - (CM_GetProps()->Minimap.Height / 2)) +
+             CM_GetProps()->Minimap.PlayerY; // (gMinimapY[arg0] - (gMinimapHeight / 2)) + gMinimapPlayerY
 
-    //! @todo Get course minimap props from course.
-    CM_MinimapFinishlinePosition();
+    var_f2 += CM_GetProps()->Minimap.FinishlineX;
+    var_f0 += CM_GetProps()->Minimap.FinishlineY;
+
     draw_hud_2d_texture_8x8(var_f2, var_f0, (u8*) common_texture_minimap_finish_line);
 }
 
@@ -2782,19 +2791,23 @@ void draw_minimap_character(s32 arg0, s32 playerId, s32 characterId) {
     s32 center = 0;
     Player* player = &gPlayerOne[playerId];
 
+    // @port Skip Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(false);
+
     if (player->type & (1 << 15)) {
-        thing0 = player->pos[0] * D_8018D2A0;
-        thing1 = player->pos[2] * D_8018D2A0;
+        thing0 = player->pos[0] * CM_GetProps()->Minimap.PlayerScaleFactor; // gMinimapPlayerScale;
+        thing1 = player->pos[2] * CM_GetProps()->Minimap.PlayerScaleFactor; // gMinimapPlayerScale;
 
         if (gPlayerCount == 3) {
             center = ((OTRGetDimensionFromRightEdge(SCREEN_WIDTH) - SCREEN_WIDTH) / 2) +
                      ((SCREEN_WIDTH / 4) + (SCREEN_WIDTH / 2));
         } else {
-            center = D_8018D2C0[arg0];
+            center = CM_GetProps()->Minimap.Pos[arg0].X;
         }
 
-        x = (center - (gMinimapWidth / 2)) + D_8018D2E0 + (s16) (thing0);
-        y = (D_8018D2D8[arg0] - (gMinimapHeight / 2)) + D_8018D2E8 + (s16) (thing1);
+        temp_a0 = (center - (CM_GetProps()->Minimap.Width / 2)) + CM_GetProps()->Minimap.PlayerX + (s16) (thing0);
+        temp_a1 = (CM_GetProps()->Minimap.Pos[arg0].Y - (CM_GetProps()->Minimap.Height / 2)) +
+                  CM_GetProps()->Minimap.PlayerY + (s16) (thing1);
         if (characterId != 8) {
             if ((gGPCurrentRaceRankByPlayerId[playerId] == 0) && (gModeSelection != 3) && (gModeSelection != 1)) {
                 func_80046424(x, y, player->rotation[1] + 0x8000, 1.0f,
@@ -2813,6 +2826,10 @@ void draw_minimap_character(s32 arg0, s32 playerId, s32 characterId) {
             }
         }
     }
+
+    // @port Resume Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(true);
+
 }
 #else
 GLOBAL_ASM("asm/non_matchings/render_objects/draw_minimap_character.s")
@@ -2828,13 +2845,13 @@ void func_8004F3E4(s32 arg0) {
         case GRAND_PRIX:
             for (idx = D_8018D158 - 1; idx >= 0; idx--) {
                 playerId = gGPCurrentRacePlayerIdByRank[idx];
-                if ((gPlayerOne + playerId)->type & PLAYER_KART_AI) {
+                if ((gPlayerOne + playerId)->type & PLAYER_CPU) {
                     draw_minimap_character(arg0, playerId, 8);
                 }
             }
             for (idx = D_8018D158 - 1; idx >= 0; idx--) {
                 playerId = gGPCurrentRacePlayerIdByRank[idx];
-                if (((gPlayerOne + playerId)->type & PLAYER_KART_AI) != PLAYER_KART_AI) {
+                if (((gPlayerOne + playerId)->type & PLAYER_CPU) != PLAYER_CPU) {
                     draw_minimap_character(arg0, playerId, (gPlayerOne + playerId)->characterId);
                 }
             }
@@ -3003,7 +3020,7 @@ void draw_lap_count(s16 lapX, s16 lapY, s8 lap) {
 }
 
 void func_8004FDB4(f32 arg0, f32 arg1, s16 arg2, s16 arg3, s16 characterId, s32 arg5, s32 arg6, s32 arg7, s32 arg8) {
-    if ((GetCourse() == GetYoshiValley()) && (arg3 < 3) && (arg8 == 0)) {
+    if ((IsYoshiValley()) && (arg3 < 3) && (arg8 == 0)) {
         func_80042330((s32) arg0, (s32) arg1, 0U, 1.0f);
         gSPDisplayList(gDisplayListHead++, D_0D007DB8);
         func_8004B35C(0x000000FF, 0x000000FF, 0x000000FF, D_8018D3E0);
@@ -3045,47 +3062,57 @@ void func_8004FDB4(f32 arg0, f32 arg1, s16 arg2, s16 arg3, s16 characterId, s32 
 void func_80050320(void) {
     s16 temp_v0;
     s16 characterId;
-    s32 var_s0;
+    s32 i;
     s32 lapCount;
     s32 var_a0;
 
     if (D_801657E2 == 0) {
-        for (var_s0 = 0; var_s0 < 4; var_s0++) {
+        for (i = 0; i < 4; i++) {
             var_a0 = 0;
-            if (D_8018D050[var_s0] >= 0.0f) {
-                if (D_8018D078[var_s0] < 0.0) {
+            if (D_8018D050[i] >= 0.0f) {
+                if (D_8018D078[i] < 0.0) {
                     var_a0 = 1;
                 }
-                temp_v0 = gGPCurrentRacePlayerIdByRank[var_s0];
-                characterId = gGPCurrentRaceCharacterIdByRank[var_s0];
+
+                // @port: Tag the transform.
+                FrameInterpolation_RecordOpenChild("ranking portraits", i | var_a0 << 16);
+
+                temp_v0 = gGPCurrentRacePlayerIdByRank[i];
+                characterId = gGPCurrentRaceCharacterIdByRank[i];
                 lapCount = gLapCountByPlayerId[temp_v0];
                 if (characterId == gPlayerOne->characterId) {
-                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 1,
-                                  var_a0, 0);
+                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 1, var_a0, 0);
                 } else {
-                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, D_8018D3E0, 0,
-                                  var_a0, 0);
+                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, D_8018D3E0, 0, var_a0, 0);
                 }
+
+                // @port Pop the transform id.
+                FrameInterpolation_RecordCloseChild();
             }
         }
     } else {
-        for (var_s0 = 0; var_s0 < 8; var_s0++) {
+        for (i = 0; i < 8; i++) {
             var_a0 = 0;
-            if (D_8018D050[var_s0] >= 0.0f) {
-                if (D_8018D078[var_s0] <= 0.0) {
+            if (D_8018D050[i] >= 0.0f) {
+                if (D_8018D078[i] <= 0.0) {
                     var_a0 = 1;
                 }
-                temp_v0 = gGPCurrentRacePlayerIdByRank[var_s0];
+
+                // @port: Tag the transform.
+                FrameInterpolation_RecordOpenChild("ranking portraits 2", i | var_a0 << 16);
+
+                temp_v0 = gGPCurrentRacePlayerIdByRank[i];
                 // ????
                 characterId = (gPlayerOne + temp_v0)->characterId;
                 lapCount = gLapCountByPlayerId[temp_v0];
                 if (temp_v0 == 0) {
-                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 1,
-                                  var_a0, 1);
+                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 1, var_a0, 1);
                 } else {
-                    func_8004FDB4(D_8018D028[var_s0], D_8018D050[var_s0], var_s0, lapCount, characterId, 0x000000FF, 0,
-                                  var_a0, 1);
+                    func_8004FDB4(D_8018D028[i], D_8018D050[i], i, lapCount, characterId, 0x000000FF, 0, var_a0, 1);
                 }
+
+                // @port Pop the transform id.
+                FrameInterpolation_RecordCloseChild();
             }
         }
     }
@@ -3142,7 +3169,7 @@ void func_800507D8(u16 bombIndex, s32* arg1, s32* arg2) {
     s32 var_v1 = 0;
 
     if (temp_v0 != 0) {
-        var_v1 = (s32) (temp_v0 * 0x3A0) / (s32) D_80164430;
+        var_v1 = (s32) (temp_v0 * 0x3A0) / (s32) gSelectedPathCount;
     }
     if (var_v1 < 0x104) {
         *arg1 = var_v1;
@@ -3300,7 +3327,7 @@ void func_80050E34(s32 playerId, s32 arg1) {
         spB8 = 0;
     }
 
-    if ((GetCourse() == GetYoshiValley()) && (lapCount < 3)) {
+    if ((IsYoshiValley()) && (lapCount < 3)) {
         gSPDisplayList(gDisplayListHead++, D_0D007DB8);
         gDPLoadTLUT_pal256(gDisplayListHead++, common_tlut_portrait_bomb_kart_and_question_mark);
         rsp_load_texture(common_texture_portrait_question_mark, 0x00000020, 0x00000020);
@@ -3373,7 +3400,7 @@ void func_800514BC(void) {
         }
     }
     if (gModeSelection == 1) {
-        func_80050E34(0, D_80164408[0]);
+        func_80050E34(0, gGPCurrentRaceRankByPlayerIdDup[0]);
     } else if (gPlayerCountSelection1 == 1) {
         func_80050E34(0, gGPCurrentRaceRankByPlayerId[0]);
     }
@@ -3381,15 +3408,19 @@ void func_800514BC(void) {
 }
 
 void render_object_leaf_particle(UNUSED s32 cameraId) {
-    s32 someIndex;
+    size_t i;
     s32 leafIndex;
     Object* object;
 
     gSPDisplayList(gDisplayListHead++, D_0D0079C8);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BOTH);
     load_texture_block_rgba16_mirror((u8*) common_texture_particle_leaf, 0x00000020, 0x00000010);
-    for (someIndex = 0; someIndex < gLeafParticle_SIZE; someIndex++) {
-        leafIndex = gLeafParticle[someIndex];
+    for (i = 0; i < gLeafParticle_SIZE; i++) {
+        leafIndex = gLeafParticle[i];
+
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("Leaves", leafIndex);
+
         if (leafIndex != -1) {
             object = &gObjectList[leafIndex];
             if ((object->state >= 2) && (object->unk_0D5 == 7) && (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX)) {
@@ -3397,40 +3428,83 @@ void render_object_leaf_particle(UNUSED s32 cameraId) {
                 gSPDisplayList(gDisplayListHead++, D_0D0069C8);
             }
         }
+
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
 void render_object_snowflakes_particles(void) {
-    s32 someIndex;
+    size_t i;
     s32 snowflakeIndex;
 
     gSPDisplayList(gDisplayListHead++, D_0D007AE0);
     gDPSetCombineLERP(gDisplayListHead++, 1, 0, SHADE, 0, 0, 0, 0, TEXEL0, 1, 0, SHADE, 0, 0, 0, 0, TEXEL0);
     func_80044F34(D_0D0293D8, 0x10, 0x10);
-    for (someIndex = 0; someIndex < NUM_SNOWFLAKES; someIndex++) {
-        snowflakeIndex = gObjectParticle1[someIndex];
+    for (i = 0; i < NUM_SNOWFLAKES; i++) {
+        snowflakeIndex = gObjectParticle1[i];
+
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("SnowFlakes", snowflakeIndex);
+
         if (gObjectList[snowflakeIndex].state >= 2) {
             rsp_set_matrix_gObjectList(snowflakeIndex);
             gSPDisplayList(gDisplayListHead++, D_0D006980);
         }
+
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
-void func_800518F8(s32 objectIndex, s16 arg1, s16 arg2) {
-    UNUSED s32 pad[1];
+struct ObjectInterpData {
+    s32 objectIndex;
+    s16 x, y;
+};
+
+struct ObjectInterpData prevObject[OBJECT_LIST_SIZE] = { 0 };
+
+void func_800518F8(s32 objectIndex, s16 x, s16 y) {
+
+    // Search all recorded objects for the one we're drawing
+    for (int i = 0; i < OBJECT_LIST_SIZE; i++) {
+        if (objectIndex == prevObject[i].objectIndex) {
+            // Coincidence!
+            // Skip drawing the object this frame if it warped to the other side of the screen
+            if ((fabs(x - prevObject[i].x) > SCREEN_WIDTH / 2) || (fabs(y - prevObject[i].y) > SCREEN_HEIGHT / 2)) {
+                prevObject[objectIndex].x = x;
+                prevObject[objectIndex].y = y;
+                prevObject[objectIndex].objectIndex = objectIndex;
+                return;
+            }
+        }
+    }
+
     if (gObjectList[objectIndex].status & 0x10) {
+
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("func_800518F8", (uintptr_t) &gObjectList[objectIndex]);
+
         if (D_8018D228 != gObjectList[objectIndex].unk_0D5) {
             D_8018D228 = gObjectList[objectIndex].unk_0D5;
             func_80044DA0(gObjectList[objectIndex].activeTexture, gObjectList[objectIndex].textureWidth,
                           gObjectList[objectIndex].textureHeight);
         }
-        func_80042330_unchanged(arg1, arg2, 0U, gObjectList[objectIndex].sizeScaling);
+        func_80042330_unchanged(x, y, 0, gObjectList[objectIndex].sizeScaling);
         gSPVertex(gDisplayListHead++, gObjectList[objectIndex].vertex, 4, 0);
         gSPDisplayList(gDisplayListHead++, common_rectangle_display);
+
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
+
+    // Save current cloud index and x position
+    prevObject[objectIndex].x = x;
+    prevObject[objectIndex].y = y;
+    prevObject[objectIndex].objectIndex = objectIndex;
 }
 
 void func_800519D4(s32 objectIndex, s16 arg1, s16 arg2) {
@@ -3447,6 +3521,7 @@ void func_800519D4(s32 objectIndex, s16 arg1, s16 arg2) {
     }
 }
 
+// Render clouds
 void func_80051ABC(s16 arg0, s32 arg1) {
     s32 var_s0;
     s32 objectIndex;
@@ -3459,14 +3534,25 @@ void func_80051ABC(s16 arg0, s32 arg1) {
         for (var_s0 = 0; var_s0 < D_8018D1F0; var_s0++) {
             objectIndex = D_8018CC80[arg1 + var_s0];
             object = &gObjectList[objectIndex];
+            FrameInterpolation_RecordOpenChild("stars_cloud", TAG_OBJECT(object));
+
             func_800519D4(objectIndex, object->unk_09C, arg0 - object->unk_09E);
+            FrameInterpolation_RecordCloseChild();
+
         }
     } else {
         func_8004B6C4(255, 255, 255);
         for (var_s0 = 0; var_s0 < D_8018D1F0; var_s0++) {
             objectIndex = D_8018CC80[arg1 + var_s0];
             object = &gObjectList[objectIndex];
+
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("func_80051ABC", TAG_OBJECT(object));
+
             func_800518F8(objectIndex, object->unk_09C, arg0 - object->unk_09E);
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
     }
 }
@@ -3478,16 +3564,16 @@ void func_80051C60(s16 arg0, s32 arg1) {
     Object* object;
 
     if (D_801658FE == 0) {
-        if (GetCourse() == GetKoopaTroopaBeach()) {
+        if (IsKoopaTroopaBeach()) {
             var_s5 = arg0;
-        } else if (GetCourse() == GetMooMooFarm()) {
+        } else if (IsMooMooFarm()) {
             var_s5 = arg0 - 16;
-        } else if (GetCourse() == GetYoshiValley()) {
+        } else if (IsYoshiValley()) {
             var_s5 = arg0 - 16;
         } else {
             var_s5 = arg0 + 16;
         }
-    } else if (GetCourse() == GetKoopaTroopaBeach()) {
+    } else if (IsKoopaTroopaBeach()) {
         var_s5 = arg0 * 2;
     } else {
         var_s5 = arg0 + 32;
@@ -3521,11 +3607,11 @@ void func_80051EF8(void) {
     s16 temp_a0;
 
     temp_a0 = 0xF0 - D_800DC5EC->cameraHeight;
-    if (GetCourse() == GetKoopaTroopaBeach()) {
+    if (IsKoopaTroopaBeach()) {
         temp_a0 = temp_a0 - 0x30;
-    } else if (GetCourse() == GetMooMooFarm()) {
+    } else if (IsMooMooFarm()) {
         temp_a0 = temp_a0 - 0x40;
-    } else if (GetCourse() == GetYoshiValley()) {
+    } else if (IsYoshiValley()) {
         temp_a0 = temp_a0 - 0x40;
     } else {
         temp_a0 = temp_a0 - 0x30;
@@ -3537,11 +3623,11 @@ void func_80051F9C(void) {
     s16 temp_a0;
 
     temp_a0 = 0xF0 - D_800DC5F0->cameraHeight;
-    if (GetCourse() == GetKoopaTroopaBeach()) {
+    if (IsKoopaTroopaBeach()) {
         temp_a0 = temp_a0 - 0x30;
-    } else if (GetCourse() == GetMooMooFarm()) {
+    } else if (IsMooMooFarm()) {
         temp_a0 = temp_a0 - 0x40;
-    } else if (GetCourse() == GetYoshiValley()) {
+    } else if (IsYoshiValley()) {
         temp_a0 = temp_a0 - 0x40;
     } else {
         temp_a0 = temp_a0 - 0x30;
@@ -3687,54 +3773,6 @@ void func_80052E30(UNUSED s32 arg0) {
     }
 }
 
-void func_80053D74(s32 objectIndex, UNUSED s32 arg1, s32 vertexIndex) {
-    Object* object;
-
-    Vtx* vtx = (Vtx*) LOAD_ASSET(common_vtx_hedgehog);
-
-    if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
-        object = &gObjectList[objectIndex];
-        D_80183E80[2] = (s16) (object->unk_084[6] + 0x8000);
-        rsp_set_matrix_transformation(object->pos, (u16*) D_80183E80, object->sizeScaling);
-        set_color_render((s32) object->unk_084[0], (s32) object->unk_084[1], (s32) object->unk_084[2],
-                         (s32) object->unk_084[3], (s32) object->unk_084[4], (s32) object->unk_084[5],
-                         (s32) object->primAlpha);
-        gSPVertex(gDisplayListHead++, &vtx[vertexIndex], 4, 0);
-        gSPDisplayList(gDisplayListHead++, common_rectangle_display);
-    }
-}
-
-void render_balloons_grand_prix(s32 arg0) {
-    s32 var_s1;
-    s32 objectIndex;
-
-    gSPDisplayList(gDisplayListHead++, D_0D007E98);
-    gDPLoadTLUT_pal256(gDisplayListHead++, gTLUTOnomatopoeia);
-    func_8004B614(0, 0, 0, 0, 0, 0, 0);
-    gDPSetAlphaCompare(gDisplayListHead++, G_AC_THRESHOLD);
-    gDPSetRenderMode(gDisplayListHead++,
-                     AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_WRAP | ZMODE_XLU | FORCE_BL |
-                         GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA),
-                     AA_EN | Z_CMP | Z_UPD | IM_RD | CVG_DST_WRAP | ZMODE_XLU | FORCE_BL |
-                         GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA));
-    D_80183E80[0] = 0;
-    D_80183E80[1] = 0x8000;
-    rsp_load_texture(gTextureBalloon1, 64, 32);
-    for (var_s1 = 0; var_s1 < D_80165738; var_s1++) {
-        objectIndex = gObjectParticle3[var_s1];
-        if ((objectIndex != NULL_OBJECT_ID) && (gObjectList[objectIndex].state >= 2)) {
-            func_80053D74(objectIndex, arg0, 0);
-        }
-    }
-    rsp_load_texture(gTextureBalloon2, 64, 32);
-    for (var_s1 = 0; var_s1 < D_80165738; var_s1++) {
-        objectIndex = gObjectParticle3[var_s1];
-        if ((objectIndex != NULL_OBJECT_ID) && (gObjectList[objectIndex].state >= 2)) {
-            func_80053D74(objectIndex, arg0, 4);
-        }
-    }
-}
-
 void render_object_train_smoke_particle(s32 objectIndex, s32 cameraId) {
     Camera* camera;
 
@@ -3845,6 +3883,9 @@ void render_object_bowser_flame_particle(s32 objectIndex, s32 cameraId) {
     camera = &camera1[cameraId];
     if (gMatrixHudCount <= MTX_HUD_POOL_SIZE_MAX) {
         object = &gObjectList[objectIndex];
+
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("Bowser Statue Flame", TAG_ITEM_ADDR(object));
         if (object->unk_0D5 == 9) {
             func_8004B72C(0xFF, (s32) object->type, 0, (s32) object->unk_0A2, 0, 0, (s32) object->primAlpha);
         } else {
@@ -3852,6 +3893,9 @@ void render_object_bowser_flame_particle(s32 objectIndex, s32 cameraId) {
         }
         D_80183E80[1] = func_800418AC(object->pos[0], object->pos[2], camera->pos);
         func_800431B0(object->pos, D_80183E80, object->sizeScaling, D_0D005AE0);
+
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
 }
 
@@ -3898,20 +3942,23 @@ void func_8005477C(s32 objectIndex, u8 arg1, Vec3f arg2) {
 void render_object_smoke_particles(s32 cameraId) {
     UNUSED s32 stackPadding[2];
     Camera* sp54;
-    s32 var_s0;
+    s32 i;
     s32 objectIndex;
     Object* object;
 
     sp54 = &camera1[cameraId];
+
     gSPDisplayList(gDisplayListHead++, D_0D007AE0);
     load_texture_block_i8_nomirror(common_texture_particle_smoke[D_80165598], 32, 32);
     func_8004B72C(255, 255, 255, 255, 255, 255, 255);
     D_80183E80[0] = 0;
     D_80183E80[2] = 0x8000;
-    for (var_s0 = 0; var_s0 < gObjectParticle4_SIZE; var_s0++) {
-        objectIndex = gObjectParticle4[var_s0];
+    for (i = 0; i < gObjectParticle4_SIZE; i++) {
+        objectIndex = gObjectParticle4[i];
         if (objectIndex != NULL_OBJECT_ID) {
             object = &gObjectList[objectIndex];
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("SmokeParticles", (uintptr_t) object);
             if (object->state >= 2) {
                 if (object->unk_0D8 == 3) {
                     func_8008A364(objectIndex, cameraId, 0x4000U, 0x00000514);
@@ -3922,6 +3969,8 @@ void render_object_smoke_particles(s32 cameraId) {
                     func_8005477C(objectIndex, object->unk_0D8, sp54->pos);
                 }
             }
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
     }
 }
@@ -3934,6 +3983,9 @@ void func_800557B4(s32 objectIndex, u32 arg1, u32 arg2) {
     Object* object;
 
     object = &gObjectList[objectIndex];
+
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild("Penguin", (uintptr_t) object);
     if (object->state >= 2) {
         if (is_obj_flag_status_active(objectIndex, 0x00000020) != 0) {
             if (func_80072320(objectIndex, 4) != 0) {
@@ -3956,50 +4008,9 @@ void func_800557B4(s32 objectIndex, u32 arg1, u32 arg2) {
         render_animated_model((Armature*) object->model, (Animation**) object->vertex, (s16) object->unk_0D8,
                               (s16) object->textureListIndex);
     }
-}
 
-void render_object_train_penguins(s32 cameraId) {
-    s32 i;
-    s32 objectIndex;
-    s32 temp_s1;
-    s32 var_a3;
-    u16 var_s1;
-    u32 var_s3;
-
-    if (gPlayerCountSelection1 == 1) {
-        var_s3 = 0x0003D090;
-    } else if (gPlayerCountSelection1 == 2) {
-        var_s3 = 0x00027100;
-    } else {
-        var_s3 = 0x00015F90;
-    }
-    for (i = 0; i < NUM_PENGUINS; i++) {
-        objectIndex = indexObjectList1[i];
-        if (gObjectList[objectIndex].state >= 2) {
-            if (gPlayerCountSelection1 == 1) {
-                var_s1 = 0x4000;
-                if (i == 0) {
-                    var_a3 = 0x000005DC;
-                } else if (func_80072320(objectIndex, 8) != 0) {
-                    var_a3 = 0x00000320;
-                } else {
-                    var_a3 = 0x000003E8;
-                }
-            } else {
-                if (func_80072320(objectIndex, 8) != 0) {
-                    var_a3 = 0x000001F4;
-                    var_s1 = 0x4000;
-                } else {
-                    var_a3 = 0x00000258;
-                    var_s1 = 0x5555;
-                }
-            }
-            temp_s1 = func_8008A364(objectIndex, cameraId, var_s1, var_a3);
-            if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {
-                func_800557B4(objectIndex, (u32) temp_s1, var_s3);
-            }
-        }
-    }
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }
 
 void func_80055EF4(s32 objectIndex, UNUSED s32 arg1) {
@@ -4013,15 +4024,15 @@ void func_80055EF4(s32 objectIndex, UNUSED s32 arg1) {
 
 void render_object_neon(s32 cameraId) {
     Camera* camera;
-    s32 var_s2;
     s32 objectIndex;
     Object* object;
 
     camera = &camera1[cameraId];
-    for (var_s2 = 0; var_s2 < 10; var_s2++) {
-        objectIndex = indexObjectList1[var_s2];
+    for (size_t i = 0; i < 10; i++) {
+        objectIndex = indexObjectList1[i];
         if (D_8018E838[cameraId] == 0) {
             object = &gObjectList[objectIndex];
+            FrameInterpolation_RecordOpenChild(object, TAG_OBJECT((objectIndex << 8) + i));
             if ((object->state >= 2) && (is_obj_index_flag_status_inactive(objectIndex, 0x00080000) != 0) &&
                 (is_object_visible_on_camera(objectIndex, camera, 0x2AABU) != 0)) {
                 Vtx* vtx = (Vtx*) LOAD_ASSET(common_vtx_hedgehog);
@@ -4029,6 +4040,7 @@ void render_object_neon(s32 cameraId) {
                 draw_2d_texture_at(object->pos, object->orientation, object->sizeScaling, (u8*) object->activeTLUT,
                                    object->activeTexture, vtx, 0x00000040, 0x00000040, 0x00000040, 0x00000020);
             }
+            FrameInterpolation_RecordCloseChild();
         }
     }
 }
@@ -4112,8 +4124,8 @@ void func_8005669C(s32 objectIndex, UNUSED s32 arg1, s32 arg2) {
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
+Mat4 mtx;
 void func_800568A0(s32 objectIndex, s32 playerId) {
-    Mat4 mtx;
     Player* player;
 
     player = &gPlayerOne[playerId];

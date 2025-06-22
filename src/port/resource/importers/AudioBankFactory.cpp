@@ -4,9 +4,10 @@
 #include "resourcebridge.h"
 #include "ResourceUtil.h"
 
-std::shared_ptr<Ship::IResource> SM64::AudioBankFactoryV0::ReadResource(std::shared_ptr<Ship::File> file) {
-    auto initData = file->InitData;
-    if (!FileHasValidFormatAndReader(file)) {
+std::shared_ptr<Ship::IResource>
+SM64::AudioBankFactoryV0::ReadResource(std::shared_ptr<Ship::File> file,
+                                       std::shared_ptr<Ship::ResourceInitData> initData) {
+    if (!FileHasValidFormatAndReader(file, initData)) {
         return nullptr;
     }
 
@@ -16,10 +17,11 @@ std::shared_ptr<Ship::IResource> SM64::AudioBankFactoryV0::ReadResource(std::sha
     uint8_t bankId = reader->ReadUInt32();
     uint32_t instrumentCount = reader->ReadUInt32();
 
-    for (size_t i = 0; i < instrumentCount; i++) {
+    for(size_t i = 0; i < instrumentCount; i++){
         auto* instrument = new Instrument();
         bool valid = reader->ReadUByte();
-        if (!valid) {
+        if(!valid){
+            delete instrument;
             bank->instruments.push_back(nullptr);
             continue;
         }
@@ -29,9 +31,9 @@ std::shared_ptr<Ship::IResource> SM64::AudioBankFactoryV0::ReadResource(std::sha
         instrument->normalRangeHi = reader->ReadUByte();
 
         uint32_t envelopeSize = reader->ReadUInt32();
-        if (envelopeSize != 0) {
+        if(envelopeSize != 0){
             instrument->envelope = new AdsrEnvelope[envelopeSize];
-            for (size_t j = 0; j < envelopeSize; j++) {
+            for(size_t j = 0; j < envelopeSize; j++){
                 instrument->envelope[j].delay = BSWAP16(reader->ReadInt16());
                 instrument->envelope[j].arg = BSWAP16(reader->ReadInt16());
             }
@@ -42,19 +44,19 @@ std::shared_ptr<Ship::IResource> SM64::AudioBankFactoryV0::ReadResource(std::sha
         bool hasMed = soundFlags & (1 << 1);
         bool hasHi = soundFlags & (1 << 2);
 
-        if (hasLo) {
+        if(hasLo){
             std::string lowSampleName = reader->ReadString();
             instrument->lowNotesSound.sample = LoadChild<AudioBankSample*>(lowSampleName.c_str());
             instrument->lowNotesSound.tuning = reader->ReadFloat();
         }
 
-        if (hasMed) {
+        if(hasMed){
             std::string normalSampleName = reader->ReadString();
             instrument->normalNotesSound.sample = LoadChild<AudioBankSample*>(normalSampleName.c_str());
             instrument->normalNotesSound.tuning = reader->ReadFloat();
         }
 
-        if (hasHi) {
+        if(hasHi){
             std::string highSampleName = reader->ReadString();
             instrument->highNotesSound.sample = LoadChild<AudioBankSample*>(highSampleName.c_str());
             instrument->highNotesSound.tuning = reader->ReadFloat();
@@ -65,16 +67,16 @@ std::shared_ptr<Ship::IResource> SM64::AudioBankFactoryV0::ReadResource(std::sha
 
     uint32_t drumCount = reader->ReadUInt32();
 
-    for (size_t i = 0; i < drumCount; i++) {
+    for(size_t i = 0; i < drumCount; i++){
         auto* drum = new Drum();
         drum->releaseRate = reader->ReadUByte();
         drum->pan = reader->ReadUByte();
         drum->loaded = 1;
 
         uint32_t envelopeSize = reader->ReadUInt32();
-        if (envelopeSize != 0) {
+        if(envelopeSize != 0){
             drum->envelope = new AdsrEnvelope[envelopeSize];
-            for (size_t j = 0; j < envelopeSize; j++) {
+            for(size_t j = 0; j < envelopeSize; j++){
                 drum->envelope[j].delay = BSWAP16(reader->ReadInt16());
                 drum->envelope[j].arg = BSWAP16(reader->ReadInt16());
             }

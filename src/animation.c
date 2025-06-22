@@ -8,6 +8,7 @@
 #include <libultra/gbi.h>
 #include "code_80057C60.h"
 #include "engine/Matrix.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 Vec3s sOriginalPosAnimation;
 s16 isNotTheFirst;
@@ -21,10 +22,10 @@ void convert_to_fixed_point_matrix_animation(Mtx* dest, Mat4 src) {
     guMtxF2L(src, dest);
 #else
     s32 asFixedPoint;
-    register s32 i;
-    register s16* a3 = (s16*) dest;      // all integer parts stored in first 16 bytes
-    register s16* t0 = (s16*) dest + 16; // all fraction parts stored in last 16 bytes
-    register f32* t1 = (f32*) src;
+    s32 i;
+    s16* a3 = (s16*) dest;      // all integer parts stored in first 16 bytes
+    s16* t0 = (s16*) dest + 16; // all fraction parts stored in last 16 bytes
+    f32* t1 = (f32*) src;
 
     for (i = 0; i < 16; i++) {
         asFixedPoint = *t1++ * (1 << 16);         //! float-to-integer conversion responsible for PU crashes
@@ -35,14 +36,17 @@ void convert_to_fixed_point_matrix_animation(Mtx* dest, Mat4 src) {
 }
 
 void mtxf_translate_rotate2(Mat4 dest, Vec3f pos, Vec3s angle) {
-    register f32 sx = sins(angle[0]);
-    register f32 cx = coss(angle[0]);
 
-    register f32 sy = sins(angle[1]);
-    register f32 cy = coss(angle[1]);
+    FrameInterpolation_RecordMatrixPosRotXYZ(&dest, pos, angle);
 
-    register f32 sz = sins(angle[2]);
-    register f32 cz = coss(angle[2]);
+    f32 sx = sins(angle[0]);
+    f32 cx = coss(angle[0]);
+
+    f32 sy = sins(angle[1]);
+    f32 cy = coss(angle[1]);
+
+    f32 sz = sins(angle[2]);
+    f32 cz = coss(angle[2]);
 
     dest[0][0] = cy * cz;
     dest[0][1] = cy * sz;
@@ -92,7 +96,7 @@ void render_limb_or_add_mtx(Armature* arg0, s16* arg1, AnimationLimbVector arg2,
         }
         angle[i] = arg1[arg2[i].indexCycle + some_offset];
     }
-
+    FrameInterpolation_RecordMatrixPush(modelMatrix);
     mtxf_translate_rotate2(modelMatrix, pos, angle);
     //convert_to_fixed_point_matrix_animation(&gGfxPool->mtxHud[gMatrixHudCount], modelMatrix);
     sMatrixStackSize += 1;
@@ -104,6 +108,7 @@ void render_limb_or_add_mtx(Armature* arg0, s16* arg1, AnimationLimbVector arg2,
         model = (virtualModel);
         gSPDisplayList(gDisplayListHead++, model);
     }
+    FrameInterpolation_RecordMatrixPop(modelMatrix);
 }
 
 void render_armature(Armature* animation, Animation* arg1, s16 timeCycle) {

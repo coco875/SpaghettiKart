@@ -317,7 +317,8 @@ enum MENU_ITEM_TYPE {
     MENU_ITEM_TYPE_1CB,
     MENU_ITEM_TYPE_1CC,
     MENU_ITEM_TYPE_1CD,
-    MENU_ITEM_TYPE_1CE
+    MENU_ITEM_TYPE_1CE,
+    MENU_ITEM_UI_HARBOUR_MASTERS
 };
 
 enum LoadImgCompType {
@@ -536,7 +537,7 @@ void render_menu_item_end_course_option(MenuItem*);
 void func_800A6034(MenuItem*);
 void func_800A6154(MenuItem*);
 void func_800A638C(MenuItem*);
-void func_800A66A8(MenuItem*, Unk_D_800E70A0*);
+void pause_menu_item_box_cursor(MenuItem*, Unk_D_800E70A0*);
 void func_800A69C8(MenuItem*);
 void func_800A6BEC(MenuItem*);
 void func_800A6CC0(MenuItem*);
@@ -659,7 +660,7 @@ void rmonPrintf(const char*, ...);
 /* This is where I'd put my static data, if I had any */
 
 extern s32 D_800DDB24;
-extern s16 D_80164478[];
+extern s16 gGetPlayerByCharacterId[];
 
 /**
  * Old name: sMenuTextureBuffer

@@ -3,17 +3,11 @@
 
 #include "code_800029B0.h"
 #include "../camera.h"
-
-typedef struct {
-    u32 addr;
-    u8 surfaceType;
-    u8 sectionId;
-    u16 flags;
-} TrackSectionsI;
+#include <course.h>
 
 void func_8029122C(struct UnkStruct_800DC5EC*, s32);
 s32 func_80290C20(Camera*);
-void parse_course_displaylists(TrackSectionsI* asset);
+void parse_course_displaylists(TrackSections* asset);
 void render_course_segments(const char*[], struct UnkStruct_800DC5EC*);
 void func_80291198(void);
 void render_mario_raceway_pipe(void);
@@ -35,7 +29,7 @@ void render_skyscraper(struct UnkStruct_800DC5EC*);
 void render_double_deck(struct UnkStruct_800DC5EC*);
 void render_dks_jungle_parkway(struct UnkStruct_800DC5EC*);
 void render_big_donut(struct UnkStruct_800DC5EC*);
-void func_8029569C(void);
+void render_credits(void);
 void course_init(void);
 void render_course(struct UnkStruct_800DC5EC*);
 void func_80295BF8(s32);
@@ -44,7 +38,6 @@ void func_80295D50(s16, s16);
 void func_80295D6C(void);
 void func_80295D88(void);
 void func_802966A0(void);
-void func_802969F8(void);
 
 extern s32 D_8015F59C;
 

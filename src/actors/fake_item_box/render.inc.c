@@ -2,6 +2,7 @@
 #include <code_800029B0.h>
 #include <libultra/gbi.h>
 #include <main.h>
+#include "port/interpolation/FrameInterpolation.h"
 
 /**
  * @brief Renders the fake item box actor.
@@ -23,6 +24,9 @@ void render_actor_fake_item_box(Camera* camera, struct FakeItemBox* fakeItemBox)
     f32 thing;
     f32 temp_f2_2;
     f32 someMultiplier;
+
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild("Fake Item Box", TAG_ITEM_ADDR(fakeItemBox));
 
     if (is_within_render_distance(camera->pos, fakeItemBox->pos, camera->rot[1], 2500.0f, gCameraZoom[camera - camera1],
                                   1000000.0f) < 0 &&
@@ -61,6 +65,13 @@ void render_actor_fake_item_box(Camera* camera, struct FakeItemBox* fakeItemBox)
 
         gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
         gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
+
+        /*
+         * In the original game, the question mark texture would become corrupted. Thus, this code
+         * makes it disappear to hide the issue. Since the texture no longer becomes corrupted, this
+         * fix can be removed.
+         */
+#ifdef TARGET_N64
         if ((fakeItemBox->rot[1] < 0xAA1) && (fakeItemBox->rot[1] > 0)) {
             gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         } else if ((fakeItemBox->rot[1] >= 0x6AA5) && (fakeItemBox->rot[1] < 0x754E)) {
@@ -70,9 +81,12 @@ void render_actor_fake_item_box(Camera* camera, struct FakeItemBox* fakeItemBox)
         } else if ((fakeItemBox->rot[1] >= 0xC711) && (fakeItemBox->rot[1] < 0xD1BA)) {
             gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         } else {
+#endif
             gDPSetBlendMask(gDisplayListHead++, 0xFF);
             gDPSetRenderMode(gDisplayListHead++, G_RM_ZB_CLD_SURF, G_RM_ZB_CLD_SURF2);
+#ifdef TARGET_N64
         }
+#endif
         gSPDisplayList(gDisplayListHead++, D_0D003090);
     } else {
         gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -163,4 +177,6 @@ void render_actor_fake_item_box(Camera* camera, struct FakeItemBox* fakeItemBox)
         gSPDisplayList(gDisplayListHead++, D_0D0030F8);
         gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
     }
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }

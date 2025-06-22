@@ -202,7 +202,7 @@ void func_80299864(Camera* camera, Mat4 arg1, struct Actor* arg2) {
         // Unless both courses use this actor and use the same addr for the texture.
         // Just in-case changed the code into a switch to prevent future crashes.
         // This comment can be removed when this is confirmed to work.
-        if (GetCourse() == GetLuigiRaceway()) {
+        if (IsLuigiRaceway()) {
             gSPDisplayList(gDisplayListHead++, d_course_luigi_raceway_dl_FC70);
         }
     }

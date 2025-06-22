@@ -4,6 +4,7 @@
 #include "port/Game.h"
 #include <controller/controldevice/controller/mapping/keyboard/KeyboardScancodes.h>
 #include <window/Window.h>
+#include "port/interpolation/FrameInterpolation.h"
 
 extern "C" {
 #include <macros.h>
@@ -33,14 +34,14 @@ typedef struct {
 
 freecamSaveState fState;
 
+Controller fController;
+
 u32 fRankIndex = 0;
 u32 fTargetPlayer = false;
 u32 fMode; // freecam mode should probably be an enum
 u32 fModeInit = false;
 
-int rightMouseButtonDown = 0; // Track if right mouse button is held down
-
-u32 gFreecamControllerType = 0;
+u32 bFreecamUseController = false;
 
 /**
  * Controls
@@ -66,27 +67,46 @@ u32 gFreecamControllerType = 0;
  *
  */
 void freecam(Camera* camera, Player* player, s8 index) {
-    struct Controller* controller = &gControllers[0];
     f32 dirX;
     f32 dirY;
     f32 dirZ;
     f32 length;
+    static bool enabled = false; // Tracks previous activation state
+    bool freecamEnabled = CVarGetInteger("gFreecam", 0);
 
-    if (controller->buttonPressed & L_TRIG) {
-        // Toggle freecam
-        CVarSetInteger("gFreecam", !CVarGetInteger("gFreecam", 0));
-
-        // Don't use `bool = !bool` here as the game code can swap these on you.
-        // Which will confuse the code. This forces it to always be correct
-        if (CVarGetInteger("gFreecam", 0) == 1) {
-            player->type |= PLAYER_KART_AI;
-        } else {
-            player->type &= PLAYER_KART_AI;
-        }
-
-        gIsHUDVisible = !CVarGetInteger("gFreecam", 0);
+    if (freecamEnabled && !enabled) {
+        enabled = true; // Mark that freecam was activated
+        on_freecam();
+    } else if (!freecamEnabled && enabled) {
+        off_freecam();
+        enabled = false; // Reset when freecam is turned off
     }
 
+    // Freecam mode is enabled
+    if (enabled && (player == gPlayerOne)) {
+        freecam_loop(camera, player, index);
+    } else {
+        func_8001E45C(camera, player, index);
+        // Required if freecam were to use its own camera instead of borrowing the player camera
+        //func_8001EE98(gPlayerOneCopy, camera, index);
+    }
+}
+
+void on_freecam(void) {
+    gIsHUDVisible = false;
+   // gPlayerOne->type |= PLAYER_CPU;
+}
+
+void off_freecam(void) {
+    gIsHUDVisible = true;
+    gPlayerOne->type &= ~PLAYER_CPU;
+}
+
+void freecam_loop(Camera* camera, Player* player, s8 index) {
+    if ((fController.buttonPressed & L_TRIG) && (fController.buttonPressed & R_TRIG)) {
+        // Toggle freecam
+        CVarSetInteger("gFreecam", !CVarGetInteger("gFreecam", 0));
+    }
     // Calculate forward direction
     freecam_calculate_forward_vector_allow_rotation(camera, freeCam.forwardVector);
 
@@ -104,47 +124,40 @@ void freecam(Camera* camera, Player* player, s8 index) {
     freecam_tick(camera, freeCam.forwardVector);
 }
 
-f32 gFreecamRotateSmoothingFactor = 0.85f;
-
 void freecam_mouse_manager(Camera* camera, Vec3f forwardVector) {
-    static int prevMouseX = 0, prevMouseY = 0;
     auto wnd = GameEngine::Instance->context->GetWindow();
     Ship::Coords mouse = wnd->GetMouseDelta();
+    wnd->SetMouseCapture(false);
 
-    // Uint32 mouseState = SDL_GetRelativeMouseState(&mouse.x, &mouse.y);
+    f32 yawChange = 0.0f;
+    f32 pitchChange = 0.0f;
 
-    // printf("MOUSE %d %d\n", mouse.x, mouse.y);
+    if (bFreecamUseController) {
+        // Controller controls
+            f32 stickX = ((f32)fController.rightRawStickX);
+            f32 stickY = ((f32)fController.rightRawStickY);
 
-    mouse.x = (mouse.x + prevMouseX) / 2;
-    mouse.y = (mouse.y + prevMouseY) / 2;
-    prevMouseX = mouse.x;
-    prevMouseY = mouse.y;
+            // Sensitivity multipliers
+            float controllerSensitivityX = 5.0f; // Adjust as needed
+            float controllerSensitivityY = 3.0f;
 
-    if (wnd->GetMouseState(Ship::LUS_MOUSE_BTN_RIGHT)) {
+            // Deadzone handling (ignore tiny stick movements)
+            const float deadzone = 0.1f;
+            if (fabs(stickX) < deadzone) stickX = 0.0f;
+            if (fabs(stickY) < deadzone) stickY = 0.0f;
+
+            // Instead of adding, directly set rotation velocity (so holding gives a steady rotation)
+            freeCam.rotVelocity[1] += stickX * controllerSensitivityX;  // Yaw (left/right)
+            freeCam.rotVelocity[2] += stickY * controllerSensitivityY;  // Pitch (up/down)
+    } else { // Mouse controls
         // Calculate yaw (left/right) and pitch (up/down) changes
-        f32 yawChange = mouse.x * MOUSE_SENSITIVITY_X;
-        f32 pitchChange = mouse.y * MOUSE_SENSITIVITY_Y;
-
-        // Smoothly update yaw and pitch
-        camera->rot[1] += (short) (yawChange * 65535.0f / (2 * M_PI));   // Yaw (left/right)
-        camera->rot[2] += (short) (pitchChange * 65535.0f / (2 * M_PI)); // Pitch (up/down)
-
-        // Clamp pitch to avoid extreme values
-        if (camera->rot[2] > 15999) {
-            camera->rot[2] = 15999;
+        if (wnd->GetMouseState(Ship::LUS_MOUSE_BTN_RIGHT)) {
+            yawChange = mouse.x * MOUSE_SENSITIVITY_X;
+            pitchChange = mouse.y * MOUSE_SENSITIVITY_Y;
         }
-        if (camera->rot[2] < -15999) {
-            camera->rot[2] = -15999;
-        }
-
-        // Smoothly interpolate the lookAt position
-        Vec3f targetLookAt = { camera->pos[0] + forwardVector[0], camera->pos[1] + forwardVector[1],
-                               camera->pos[2] + forwardVector[2] };
-
-        // Smoothing
-        camera->lookAt[0] += (targetLookAt[0] - camera->lookAt[0]) * gFreecamRotateSmoothingFactor;
-        camera->lookAt[1] += (targetLookAt[1] - camera->lookAt[1]) * gFreecamRotateSmoothingFactor;
-        camera->lookAt[2] += (targetLookAt[2] - camera->lookAt[2]) * gFreecamRotateSmoothingFactor;
+        // Update rotational velocity based on mouse movement
+        freeCam.rotVelocity[1] += yawChange * 65535.0f / (2 * M_PI);  // Yaw (left/right)
+        freeCam.rotVelocity[2] += pitchChange * 65535.0f / (2 * M_PI); // Pitch (up/down)
     }
 }
 
@@ -186,7 +199,6 @@ bool FreecamKeyDown(int virtualKey) {
 void freecam_keyboard_manager(Camera* camera, Vec3f forwardVector) {
     auto wnd = GameEngine::Instance->context->GetWindow();
     float moveSpeed = gFreecamSpeed;
-    Controller* controller = &gControllers[0];
 
     // Determine movement direction based on keys pressed
     Vec3f totalMove = { 0.0f, 0.0f, 0.0f };
@@ -207,44 +219,42 @@ void freecam_keyboard_manager(Camera* camera, Vec3f forwardVector) {
 
     // Use n64 controls for use with a controller
     //! @todo configure this properly
-    if (gFreecamControllerType == 1) {
-        // Targeting /fMode is broken
-        // if (controller->buttonPressed & U_JPAD) {
-        //     fMode = !fMode;
-        // }
-        // Target a player
-        if (controller->buttonPressed & R_TRIG) {
-            fTargetPlayer = !fTargetPlayer;
+    if (bFreecamUseController) {
+        if (fController.buttonDepressed & R_TRIG) {
+            fTargetPlayer = true;
         }
-        if (controller->buttonPressed & L_CBUTTONS) {
+        if (fController.buttonDepressed & L_TRIG) {
+            fTargetPlayer = false;
+        }
+        if (fController.buttonPressed & L_JPAD) {
             TargetPreviousPlayer = true;
         }
-        if (controller->buttonPressed & R_CBUTTONS) {
+        if (fController.buttonPressed & R_JPAD) {
             TargetNextPlayer = true;
         }
-        if (controller->button & A_BUTTON) {
+        if (fController.rawStickY > 10) {
             Forward = true;
         }
-        if (controller->button & B_BUTTON) {
+        if (fController.rawStickY < -10) {
             Backward = true;
         }
-        if (controller->button & L_JPAD) {
+        if (fController.rawStickX > 10) {
+            PanRight = true;
+        }
+        if (fController.rawStickX < -10) {
             PanLeft = true;
         }
-        if (controller->button & R_JPAD) {
-            PanLeft = true;
-        }
-        if (controller->button & U_CBUTTONS) {
+        if (fController.button & B_BUTTON) {
             Down = true;
         }
-        if (controller->button & U_CBUTTONS) {
+        if (fController.button & A_BUTTON) {
             Up = true;
         }
-        // if (controller->button ??) {
-        //    FastMove = true;
-        // }
-        // Keyboard and mouse DX
+        if (fController.button & Z_TRIG) {
+           FastMove = true;
+        }
     }
+    // Keyboard and mouse DX
 #ifdef _WIN32
     else if (wnd->GetWindowBackend() == Ship::WindowBackend::FAST3D_DXGI_DX11) {
         if (FreecamKeyDown('F')) {
@@ -364,24 +374,50 @@ void freecam_keyboard_manager(Camera* camera, Vec3f forwardVector) {
     freeCam.velocity[2] += totalMove[2];
 }
 
-void freecam_render_setup(void) {
+void freecam_update_controller(void) {
+    fController.rawStickX = gControllerPads[0].stick_x;
+    fController.rawStickY = gControllerPads[0].stick_y;
+
+    fController.rightRawStickX = gControllerPads[0].right_stick_x;
+    fController.rightRawStickY = gControllerPads[0].right_stick_y;
+
+    if ((gControllerPads[0].button & 4) != 0) {
+        gControllerPads[0].button |= Z_TRIG;
+    }
+    fController.buttonPressed = gControllerPads[0].button & (gControllerPads[0].button ^ fController.button);
+    fController.buttonDepressed = fController.button & (gControllerPads[0].button ^ fController.button);
+    fController.button = gControllerPads[0].button;
+
+    // Note that D Pad as stick code has been removed. So if it's needed, it needs to be put back in.
+}
+
+Mtx fPersp;
+Mtx fLookAt;
+void freecam_render_setup(Camera* camera) {
     u16 perspNorm;
     Mat4 matrix;
-    init_rdp();
-    func_802A53A4();
-    init_rdp();
-    func_80057FC4(0);
+
+    Mat4 persp;
+    Mat4 lookAt;
+
     gSPSetGeometryMode(gDisplayListHead++, G_ZBUFFER | G_SHADE | G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK | G_CULL_BOTH | G_CULL_FRONT);
-    guPerspective(&gGfxPool->mtxPersp[0], &perspNorm, gCameraZoom[0], gScreenAspect,
+
+    // Perspective (camera movement)
+    FrameInterpolation_RecordOpenChild("freecam_persp", FrameInterpolation_GetCameraEpoch());
+    guPerspective(&fPersp, &perspNorm, gCameraZoom[0], gScreenAspect,
                   CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
     gSPPerspNormalize(gDisplayListHead++, perspNorm);
-    gSPMatrix(gDisplayListHead++, (&gGfxPool->mtxPersp[0]), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-    guLookAt(&gGfxPool->mtxLookAt[0], camera1->pos[0], camera1->pos[1], camera1->pos[2], camera1->lookAt[0],
-             camera1->lookAt[1], camera1->lookAt[2], camera1->up[0], camera1->up[1], camera1->up[2]);
-    gSPMatrix(gDisplayListHead++, (&gGfxPool->mtxLookAt[0]), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-    mtxf_identity(matrix);
-    gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
-    render_set_position(matrix, 0);
-    init_rdp();
+    gSPMatrix(gDisplayListHead++, (&fPersp), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+    FrameInterpolation_RecordCloseChild();
+
+    // LookAt (camera rotation)
+    FrameInterpolation_RecordOpenChild("freecam_lookAt", FrameInterpolation_GetCameraEpoch());
+    guLookAt(&fLookAt, camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
+             camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
+    gSPMatrix(gDisplayListHead++, (&fLookAt), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+    FrameInterpolation_RecordCloseChild();
+
+    gDPPipeSync(gDisplayListHead++);
+
 }

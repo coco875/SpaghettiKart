@@ -28,17 +28,14 @@ public:
     virtual void LoadTextures() override;
     virtual void BeginPlay() override;
     //virtual void InitClouds() override;
-    virtual void MinimapSettings() override;
     virtual void InitCourseObjects() override;
     virtual void UpdateCourseObjects() override;
     virtual void RenderCourseObjects(s32 cameraId) override;
     virtual void SomeSounds() override;
     virtual void WhatDoesThisDo(Player* player, int8_t playerId) override;
     virtual void WhatDoesThisDoAI(Player* player, int8_t playerId) override;
-    virtual void MinimapFinishlinePosition() override;
     virtual void Render(struct UnkStruct_800DC5EC*) override;
     virtual void RenderCredits() override;    
-    virtual void Collision() override;
     virtual void ScrollingTextures() override;
     virtual void Waypoints(Player*, int8_t) override;
     virtual void DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) override;

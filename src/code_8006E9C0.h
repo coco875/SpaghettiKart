@@ -11,7 +11,7 @@ void clear_object_list(void);
 u8* dma_misc_textures(u8*, u8*, u32, u32);
 void load_mario_kart_64_logo(void);
 void init_item_window(s32);
-void func_8006EEE8(s32);
+void get_minimap_properties(void);
 void func_8006EF60(void);
 void func_8006F008(void);
 void func_8006F824(s32);

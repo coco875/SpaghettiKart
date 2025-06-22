@@ -1,4 +1,4 @@
-#include <libultraship.h>
+ #include <libultraship.h>
 #include <libultra/gbi.h>
 #include <macros.h>
 #include <mk64.h>
@@ -7,6 +7,7 @@
 #include <course.h>
 #include "../camera.h"
 #include "framebuffer_effects.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 #include "render_courses.h"
 #include "code_800029B0.h"
@@ -50,7 +51,7 @@ s32 func_80290C20(Camera* camera) {
     return 0;
 }
 
-void parse_course_displaylists(TrackSectionsI* asset) {
+void parse_course_displaylists(TrackSections* asset) {
     TrackSections* section = (TrackSections*) asset;
 
     while (section->addr != 0) {
@@ -132,7 +133,7 @@ void render_course_segments(const char* addr[], struct UnkStruct_800DC5EC* arg1)
                 index = sp1E;
             }
         } else {
-            if (GetCourse() == GetBowsersCastle()) {
+            if (IsBowsersCastle()) {
                 if ((temp_v0_3 >= 0x11) && (temp_v0_3 < 0x18)) {
                     index = temp_v0_3;
                 } else if ((temp_v0_3 == 255) && (sp1E != 255)) {
@@ -142,7 +143,7 @@ void render_course_segments(const char* addr[], struct UnkStruct_800DC5EC* arg1)
                 } else {
                     index = arg1->pathCounter;
                 }
-            } else if (GetCourse() == GetChocoMountain()) {
+            } else if (IsChocoMountain()) {
                 if ((temp_v0_3 >= 0xE) && (temp_v0_3 < 0x16)) {
                     index = temp_v0_3;
                 } else if ((temp_v0_3 == 255) && (sp1E != 255)) {
@@ -175,7 +176,7 @@ void render_course_segments(const char* addr[], struct UnkStruct_800DC5EC* arg1)
     index = ((index - 1) * 4) + direction;
     gSPDisplayList(gDisplayListHead++, addr[index]);
 
-    if (CVarGetInteger("gDisableLod", 1) == 1 && (GetCourse() == GetBowsersCastle()) &&
+    if (CVarGetInteger("gDisableLod", 1) == 1 && (IsBowsersCastle()) &&
         (index < 20 || index > 99)) { // always render higher version of bowser statue
         gDisplayListHead--;
         gSPDisplayList(gDisplayListHead++, d_course_bowsers_castle_dl_9148); // use credit version of the course
@@ -240,9 +241,14 @@ void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
                       G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
             break;
     }
+
+    FrameInterpolation_RecordOpenChild("track_water", playerId);
+
     mtxf_identity(matrix);
     render_set_position(matrix, 0);
+
     CM_DrawWater(arg0, pathCounter, cameraRot, playerDirection);
+    FrameInterpolation_RecordCloseChild();
     // switch (gCurrentCourseId) {
     //     case COURSE_BOWSER_CASTLE:
     //         if (gActiveScreenMode != SCREEN_MODE_1P) {
@@ -299,7 +305,7 @@ void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
     //                 break;
     //         }
     //         vector[0] = 0.0f;
-    //         vector[1] = D_8015F8E4;
+    //         vector[1] = gWaterLevel;
     //         vector[2] = 0.0f;
     //         mtxf_translate(matrix, vector);
     //         render_set_position(matrix, 0);
@@ -328,7 +334,7 @@ void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
     //         render_course_segments(sherbet_land_dls_2, arg0);
 
     //         gDPSetAlphaCompare(gDisplayListHead++, G_AC_NONE);
-    //         if ((func_80290C20(arg0->camera) == 1) && (func_802AAB4C(player) < player->pos[1])) {
+    //         if ((func_80290C20(arg0->camera) == 1) && (get_water_level(player) < player->pos[1])) {
     //             gSPSetGeometryMode(gDisplayListHead++, G_ZBUFFER);
     //             gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
     //             gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
@@ -978,7 +984,7 @@ void render_moo_moo_farm(struct UnkStruct_800DC5EC* arg0) {
     s16 temp_s0 = arg0->pathCounter;
     s16 playerDirection = arg0->playerDirection;
 
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -1047,7 +1053,7 @@ void render_moo_moo_farm(struct UnkStruct_800DC5EC* arg0) {
 void render_toads_turnpike(struct UnkStruct_800DC5EC* arg0) {
     UNUSED s32 pad[13];
 
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -1074,7 +1080,7 @@ void render_toads_turnpike(struct UnkStruct_800DC5EC* arg0) {
 
 void render_kalimari_desert(struct UnkStruct_800DC5EC* arg0) {
 
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
 
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -1229,7 +1235,7 @@ void render_wario_stadium(struct UnkStruct_800DC5EC* arg0) {
 
 void render_block_fort(UNUSED struct UnkStruct_800DC5EC* arg0) {
 
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -1238,7 +1244,7 @@ void render_block_fort(UNUSED struct UnkStruct_800DC5EC* arg0) {
 }
 
 void render_skyscraper(UNUSED struct UnkStruct_800DC5EC* arg0) {
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -1262,7 +1268,7 @@ void render_skyscraper(UNUSED struct UnkStruct_800DC5EC* arg0) {
 
 void render_double_deck(UNUSED struct UnkStruct_800DC5EC* arg0) {
 
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -1274,8 +1280,8 @@ void render_double_deck(UNUSED struct UnkStruct_800DC5EC* arg0) {
 
 void render_dks_jungle_parkway(struct UnkStruct_800DC5EC* arg0) {
 
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
-    func_802B5D64(&D_800DC610[1], D_802B87D4, D_802B87D0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(&D_800DC610[1], D_802B87D4, D_802B87D0, 1);
 
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK | G_LIGHTING);
@@ -1300,7 +1306,7 @@ void render_big_donut(struct UnkStruct_800DC5EC* arg0) {
 
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
 
@@ -1320,7 +1326,7 @@ void render_big_donut(struct UnkStruct_800DC5EC* arg0) {
     gSPDisplayList(gDisplayListHead++, ((uintptr_t) segmented_gfx_to_virtual(0x07000230)));
 }
 
-void func_8029569C(void) {
+void render_credits(void) {
 
     CM_RenderCredits();
 
@@ -1389,7 +1395,7 @@ void func_8029569C(void) {
 }
 
 void render_course(struct UnkStruct_800DC5EC* arg0) {
-    func_802B5D64(D_800DC610, D_802B87D4, 0, 1);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
 
     // Freecam priority renders collision.
     if (CVarGetInteger("gRenderCollisionMesh", 0) == true) {
@@ -1398,7 +1404,7 @@ void render_course(struct UnkStruct_800DC5EC* arg0) {
     }
 
     if (creditsRenderMode) {
-        func_8029569C();
+        render_credits();
         return;
     }
 
@@ -1521,7 +1527,7 @@ void course_init(void) {
 
     //         // parse_course_displaylists(d_course_mario_raceway_addr);
     //         // func_80295C6C();
-    //         // D_8015F8E4 = gCourseMinY - 10.0f;
+    //         // gWaterLevel = gCourseMinY - 10.0f;
     //         break;
     //     case COURSE_CHOCO_MOUNTAIN:
     //         D_800DC5BC = 1;
@@ -1552,13 +1558,13 @@ void course_init(void) {
     //         parse_course_displaylists(d_course_choco_mountain_addr);
     //         func_802B5CAC(0x238E, 0x31C7, D_8015F590);
     //         func_80295C6C();
-    //         D_8015F8E4 = -80.0f;
+    //         gWaterLevel = -80.0f;
     //         break;
     //     case COURSE_BOWSER_CASTLE:
     //         parse_course_displaylists(d_course_bowsers_castle_addr);
     //         func_80295C6C();
     //         find_vtx_and_set_colours(segmented_gfx_to_virtual(0x07001350), 0x32, 0, 0, 0);
-    //         D_8015F8E4 = -50.0f;
+    //         gWaterLevel = -50.0f;
     //         break;
     //     case COURSE_BANSHEE_BOARDWALK:
     //         // D_800DC5BC = 1;
@@ -1568,20 +1574,20 @@ void course_init(void) {
     //         // parse_course_displaylists(d_course_banshee_boardwalk_track_sections);
     //         // func_80295C6C();
     //         // find_vtx_and_set_colours(segmented_gfx_to_virtual(0x07000878), 128, 0, 0, 0);
-    //         // D_8015F8E4 = -80.0f;
+    //         // gWaterLevel = -80.0f;
     //         break;
     //     case COURSE_YOSHI_VALLEY: {
     //         Lights1 lights4 = gdSPDefLights1(100, 100, 100, 255, 254, 254, 0, 0, 120);
-    //         func_802B5D64(&lights4, -0x38F0, 0x1C70, 1);
+    //         set_track_light_direction(&lights4, -0x38F0, 0x1C70, 1);
     //         parse_course_displaylists(d_course_yoshi_valley_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = gCourseMinY - 10.0f;
+    //         gWaterLevel = gCourseMinY - 10.0f;
     //         break;
     //     }
     //     case COURSE_FRAPPE_SNOWLAND:
     //         parse_course_displaylists(d_course_frappe_snowland_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = -50.0f;
+    //         gWaterLevel = -50.0f;
     //         break;
     //     case COURSE_KOOPA_BEACH:
     //         parse_course_displaylists(d_course_koopa_troopa_beach_addr);
@@ -1594,17 +1600,17 @@ void course_init(void) {
     //     case COURSE_ROYAL_RACEWAY:
     //         parse_course_displaylists(d_course_royal_raceway_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = -60.0f;
+    //         gWaterLevel = -60.0f;
     //         break;
     //     case COURSE_LUIGI_RACEWAY:
     //         parse_course_displaylists(d_course_luigi_raceway_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = gCourseMinY - 10.0f;
+    //         gWaterLevel = gCourseMinY - 10.0f;
     //         break;
     //     case COURSE_MOO_MOO_FARM:
     //         parse_course_displaylists(d_course_moo_moo_farm_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = gCourseMinY - 10.0f;
+    //         gWaterLevel = gCourseMinY - 10.0f;
     //         break;
     //     case COURSE_TOADS_TURNPIKE:
     //         D_801625EC = 43;
@@ -1614,17 +1620,17 @@ void course_init(void) {
     //         D_802B87B4 = 1000;
     //         parse_course_displaylists(d_course_toads_turnpike_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = gCourseMinY - 10.0f;
+    //         gWaterLevel = gCourseMinY - 10.0f;
     //         break;
     //     case COURSE_KALIMARI_DESERT:
     //         parse_course_displaylists(d_course_kalimari_desert_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = gCourseMinY - 10.0f;
+    //         gWaterLevel = gCourseMinY - 10.0f;
     //         break;
     //     case COURSE_SHERBET_LAND:
     //         parse_course_displaylists(d_course_sherbet_land_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = -18.0f;
+    //         gWaterLevel = -18.0f;
     //         // d_course_sherbet_land_packed_dl_1EB8
     //         find_vtx_and_set_colours(segmented_gfx_to_virtual(0x07001EB8), -0x4C, 255, 255, 255);
     //         // d_course_sherbet_land_packed_dl_2308
@@ -1634,7 +1640,7 @@ void course_init(void) {
     //         D_800DC5C8 = 1;
     //         parse_course_displaylists(d_course_rainbow_road_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = 0.0f;
+    //         gWaterLevel = 0.0f;
     //         // d_course_rainbow_road_packed_dl_2068
     //         find_vtx_and_set_colours(segmented_gfx_to_virtual(0x07002068), -0x6A, 255, 255, 255);
     //         // d_course_rainbow_road_packed_dl_1E18
@@ -1649,7 +1655,7 @@ void course_init(void) {
     //     case COURSE_WARIO_STADIUM:
     //         parse_course_displaylists(d_course_wario_stadium_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = gCourseMinY - 10.0f;
+    //         gWaterLevel = gCourseMinY - 10.0f;
     //         // d_course_wario_stadium_packed_dl_C50
     //         find_vtx_and_set_colours(segmented_gfx_to_virtual(0x07000C50), 100, 255, 255, 255);
     //         // d_course_wario_stadium_packed_dl_BD8
@@ -1671,7 +1677,7 @@ void course_init(void) {
     //         // d_course_block_fort_packed_dl_15C0
     //         generate_collision_mesh_with_default_section_id((Gfx*) segmented_gfx_to_virtual(0x070015C0), 1);
     //         func_80295C6C();
-    //         D_8015F8E4 = gCourseMinY - 10.0f;
+    //         gWaterLevel = gCourseMinY - 10.0f;
     //         break;
     //     case COURSE_SKYSCRAPER:
     //         // d_course_skyscraper_packed_dl_1110
@@ -1680,18 +1686,18 @@ void course_init(void) {
     //         generate_collision_mesh_with_default_section_id((Gfx*) segmented_gfx_to_virtual(0x07000258), 1);
     //         func_80295C6C();
 
-    //         D_8015F8E4 = -480.0f;
+    //         gWaterLevel = -480.0f;
     //         break;
     //     case COURSE_DOUBLE_DECK:
     //         // d_course_double_deck_packed_dl_738
     //         generate_collision_mesh_with_default_section_id((Gfx*) segmented_gfx_to_virtual(0x07000738), 1);
     //         func_80295C6C();
-    //         D_8015F8E4 = gCourseMinY - 10.0f;
+    //         gWaterLevel = gCourseMinY - 10.0f;
     //         break;
     //     case COURSE_DK_JUNGLE:
     //         parse_course_displaylists(d_course_dks_jungle_parkway_addr);
     //         func_80295C6C();
-    //         D_8015F8E4 = -475.0f;
+    //         gWaterLevel = -475.0f;
     //         // d_course_dks_jungle_parkway_packed_dl_3FA8
     //         find_vtx_and_set_colours(segmented_gfx_to_virtual(0x07003FA8), 120, 255, 255, 255);
     //         break;
@@ -1707,7 +1713,7 @@ void course_init(void) {
     //         // d_course_big_donut_packed_dl_230
     //         generate_collision_mesh_with_default_section_id((Gfx*) segmented_gfx_to_virtual(0x07000230), 6);
     //         func_80295C6C();
-    //         D_8015F8E4 = 100.0f;
+    //         gWaterLevel = 100.0f;
     //         break;
     // }
 }
@@ -1719,13 +1725,13 @@ void func_802966A0(void) {
     // switch (gCurrentCourseId) {
     //     case COURSE_KOOPA_BEACH:
     //         // clang-format off
-    //         if (D_8015F8E8 < 0.0f) {
-    //             if (D_8015F8E4 < -20.0f) { D_8015F8E8 *= -1.0f; }
+    //         if (gWaterVelocity < 0.0f) {
+    //             if (gWaterLevel < -20.0f) { gWaterVelocity *= -1.0f; }
     //         } else {
-    //             if (D_8015F8E4 > 0.0f) { D_8015F8E8 *= -1.0f; }
+    //             if (gWaterLevel > 0.0f) { gWaterVelocity *= -1.0f; }
     //         }
     //         // clang-format on
-    //         D_8015F8E4 += D_8015F8E8;
+    //         gWaterLevel += gWaterVelocity;
 
     //         D_802B87BC += 9;
     //         if (D_802B87BC > 255) {
@@ -1792,14 +1798,4 @@ void func_802966A0(void) {
     //         evaluate_collision_players_palm_trees();
     //         break;
     // }
-}
-
-void func_802969F8(void) {
-    if (GetCourse() == GetMooMooFarm()) {
-        D_8015F702 = 0;
-        D_8015F700 = 200;
-    } else if (GetCourse() == GetKoopaTroopaBeach()) {
-        D_8015F8E8 = -0.1f;
-        D_8015F8E4 = 0.0f;
-    }
 }

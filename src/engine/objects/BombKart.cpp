@@ -29,7 +29,8 @@ extern s8 gPlayerCount;
 
 size_t OBombKart::_count = 0;
 
-OBombKart::OBombKart(Vec3f pos, TrackWaypoint* waypoint, uint16_t waypointIndex, uint16_t state, f32 unk_3C) {
+OBombKart::OBombKart(FVector pos, TrackPathPoint* waypoint, uint16_t waypointIndex, uint16_t state, f32 unk_3C) {
+    Name = "Bomb Kart";
     _idx = _count;
     Vec3f _pos = {0, 0, 0};
 
@@ -41,10 +42,10 @@ OBombKart::OBombKart(Vec3f pos, TrackWaypoint* waypoint, uint16_t waypointIndex,
 
         // Set height to the default value of 2000.0f unless Pos[1] is higher.
         // This allows placing these on very high surfaces.
-        f32 height = (pos[1] > 2000.0f) ? pos[1] : 2000.0f;
-        _pos[0] = pos[0];
-        _pos[1] = spawn_actor_on_surface(pos[0], height, pos[2]);
-        _pos[2] = pos[2];
+        f32 height = (pos.y > 2000.0f) ? pos.y : 2000.0f;
+        _pos[0] = pos.x;
+        _pos[1] = spawn_actor_on_surface(pos.x, height, pos.z);
+        _pos[2] = pos.z;
     }
 
     WaypointIndex = waypointIndex;
@@ -72,7 +73,7 @@ OBombKart::OBombKart(Vec3f pos, TrackWaypoint* waypoint, uint16_t waypointIndex,
     WheelPos[3][2] = _pos[2];
     check_bounding_collision(&_Collision, 2.0f, _pos[0], _pos[1], _pos[2]);
 
-    find_unused_obj_index(&ObjectIndex);
+    find_unused_obj_index(&_objectIndex);
 
     _count++;
 }
@@ -80,7 +81,7 @@ OBombKart::OBombKart(Vec3f pos, TrackWaypoint* waypoint, uint16_t waypointIndex,
 void OBombKart::Tick() {
     f32 sp118;
     f32 var_f18;
-    TrackWaypoint* temp_v0_2;
+    TrackPathPoint* temp_v0_2;
     f32 temp_f0_3;
     f32 sp108;
     f32 temp_f14;
@@ -108,7 +109,7 @@ void OBombKart::Tick() {
     u16 temp_t6;
     u16 temp_t7;
     u16 circleTimer;
-    TrackWaypoint* temp_v0_4;
+    TrackPathPoint* temp_v0_4;
     Player* player;
 
     state = State;
@@ -117,7 +118,7 @@ void OBombKart::Tick() {
         return;
     }
 
-    if (((Unk_4A != 1) || (GetCourse() == GetPodiumCeremony()))) {
+    if (((Unk_4A != 1) || (IsPodiumCeremony()))) {
         newPos[0] = Pos[0];
         newPos[1] = Pos[1];
         newPos[2] = Pos[2];
@@ -127,7 +128,7 @@ void OBombKart::Tick() {
         bounceTimer = BounceTimer;
         circleTimer = CircleTimer;
         if ((state != States::DISABLED) && (state != States::EXPLODE)) {
-            if (GetCourse() == GetPodiumCeremony()) {
+            if (IsPodiumCeremony()) {
                 if (D_8016347E == 1) {
                     player = gPlayerFour;
                     temp_f0 = newPos[0] - player->pos[0];
@@ -151,7 +152,7 @@ void OBombKart::Tick() {
                         if ((((temp_f0 * temp_f0) + (temp_f2 * temp_f2)) + (temp_f12 * temp_f12)) < 25.0f) {
                             state = States::EXPLODE;
                             circleTimer = 0;
-                            if (GetCourse() == GetFrappeSnowland()) {
+                            if (IsFrappeSnowland()) {
                                 player->soundEffects |= 0x01000000;
                             } else {
                                 player->soundEffects |= 0x400000;
@@ -167,7 +168,7 @@ void OBombKart::Tick() {
                 temp_t6 = (circleTimer * 0xFFFF) / 360;
                 sp118 = coss(temp_t6) * 25.0;
                 temp_f0_3 = sins(temp_t6) * 25.0;
-                temp_v0_2 = &D_80164550[0][waypoint];
+                temp_v0_2 = &gTrackPaths[0][waypoint];
                 newPos[0] = temp_v0_2->posX + sp118;
                 newPos[1] = CenterY + 3.5f;
                 newPos[2] = temp_v0_2->posZ + temp_f0_3;
@@ -187,7 +188,7 @@ void OBombKart::Tick() {
                 temp_t6 = (circleTimer * 0xFFFF) / 360;
                 sp118 = coss(temp_t6) * 25.0;
                 temp_f0_3 = sins(temp_t6) * 25.0;
-                temp_v0_2 = &D_80164550[0][waypoint];
+                temp_v0_2 = &gTrackPaths[0][waypoint];
                 newPos[0] = temp_v0_2->posX + sp118;
                 newPos[1] = CenterY + 3.5f;
                 newPos[2] = temp_v0_2->posZ + temp_f0_3;
@@ -208,19 +209,19 @@ void OBombKart::Tick() {
                 break;
 
             case States::PODIUM_CEREMONY:
-                if ((D_8016347C == 0) || (gNearestWaypointByPlayerId[3] < 5)) {
+                if ((D_8016347C == 0) || (gNearestPathPointByPlayerId[3] < 5)) {
                     break;
                 } else {
                     waypoint = func_8000D2B4(newPos[0], newPos[1], newPos[2], waypoint, 3);
-                    if ((waypoint < 0) || (gWaypointCountByPathIndex[3] < waypoint)) {
+                    if ((waypoint < 0) || (gPathCountByPathIndex[3] < waypoint)) {
                         waypoint = 0;
                     }
                     if (((s32) waypoint) < 0x1A) {
-                        temp_v0_2 = &D_80164550[3][(waypoint + 1) % gWaypointCountByPathIndex[3]];
+                        temp_v0_2 = &gTrackPaths[3][(waypoint + 1) % gPathCountByPathIndex[3]];
                         D_80162FB0[0] = temp_v0_2->posX;
                         D_80162FB0[1] = temp_v0_2->posY;
                         D_80162FB0[2] = temp_v0_2->posZ;
-                        temp_v0_4 = &D_80164550[3][(waypoint + 2) % gWaypointCountByPathIndex[3]];
+                        temp_v0_4 = &gTrackPaths[3][(waypoint + 2) % gPathCountByPathIndex[3]];
                         D_80162FC0[0] = temp_v0_4->posX;
                         D_80162FC0[1] = temp_v0_4->posY;
                         D_80162FC0[2] = temp_v0_4->posZ;
@@ -259,11 +260,11 @@ void OBombKart::Tick() {
                 }
                 break;
             case States::EXPLODE:
-                temp_v0_2 = &D_80164550[0][waypoint];
+                temp_v0_2 = &gTrackPaths[0][waypoint];
                 D_80162FB0[0] = temp_v0_2->posX;
                 D_80162FB0[1] = temp_v0_2->posY;
                 D_80162FB0[2] = temp_v0_2->posZ;
-                temp_v0_4 = &D_80164550[0][(waypoint + 1) % gWaypointCountByPathIndex[0]];
+                temp_v0_4 = &gTrackPaths[0][(waypoint + 1) % gPathCountByPathIndex[0]];
                 D_80162FC0[0] = temp_v0_4->posX;
                 D_80162FC0[1] = temp_v0_4->posY;
                 D_80162FC0[2] = temp_v0_4->posZ;
@@ -329,7 +330,7 @@ void OBombKart::Tick() {
 void OBombKart::Draw(s32 cameraId) {
     if (gModeSelection == BATTLE) {
         for (size_t playerId = 0; playerId < NUM_BOMB_KARTS_BATTLE; playerId++) {
-            Object* object = &gObjectList[ObjectIndex];
+            Object* object = &gObjectList[_objectIndex];
             if (object->state != 0) {
                 s32 primAlpha = object->primAlpha;
                 Player* player = &gPlayerOne[playerId];
@@ -337,15 +338,15 @@ void OBombKart::Draw(s32 cameraId) {
                 object->pos[1] = player->pos[1] - 2.0;
                 object->pos[2] = player->pos[2];
                 object->surfaceHeight = player->unk_074;
-                func_800563DC(ObjectIndex, cameraId, primAlpha);
-                func_8005669C(ObjectIndex, cameraId, primAlpha);
-                func_800568A0(ObjectIndex, cameraId);
+                func_800563DC(_objectIndex, cameraId, primAlpha);
+                func_8005669C(_objectIndex, cameraId, primAlpha);
+                func_800568A0(_objectIndex, cameraId);
             }
         }
         return;
     }
 
-    if (GetCourse() == GetPodiumCeremony()) {
+    if (IsPodiumCeremony()) {
         if ((_idx == 0) && (WaypointIndex < 16)) {
             return;
         } else {
@@ -358,27 +359,27 @@ void OBombKart::Draw(s32 cameraId) {
     }
     Camera* camera = &camera1[cameraId];
     if (cameraId == PLAYER_ONE) {
-        if (is_obj_flag_status_active(ObjectIndex, 0x00200000) != 0) {
+        if (is_obj_flag_status_active(_objectIndex, 0x00200000) != 0) {
             Unk_4A = 0;
         } else if (gGamestate != ENDING) {
             Unk_4A = 1;
         }
-        clear_object_flag(ObjectIndex, 0x00200000);
+        clear_object_flag(_objectIndex, 0x00200000);
     }
 
     // huh???
     s32 state = State;
     if (State != States::DISABLED) {
-        gObjectList[ObjectIndex].pos[0] = Pos[0];
-        gObjectList[ObjectIndex].pos[1] = Pos[1];
-        gObjectList[ObjectIndex].pos[2] = Pos[2];
-        s32 temp_s4 = func_8008A364(ObjectIndex, cameraId, 0x31C4U, 0x000001F4);
-        if (is_obj_flag_status_active(ObjectIndex, VISIBLE) != 0) {
-            set_object_flag(ObjectIndex, 0x00200000);
+        gObjectList[_objectIndex].pos[0] = Pos[0];
+        gObjectList[_objectIndex].pos[1] = Pos[1];
+        gObjectList[_objectIndex].pos[2] = Pos[2];
+        s32 temp_s4 = func_8008A364(_objectIndex, cameraId, 0x31C4U, 0x000001F4);
+        if (is_obj_flag_status_active(_objectIndex, VISIBLE) != 0) {
+            set_object_flag(_objectIndex, 0x00200000);
             D_80183E80[0] = 0;
             D_80183E80[1] = func_800418AC(Pos[0], Pos[2], camera->pos);
             D_80183E80[2] = 0x8000;
-            func_800563DC(ObjectIndex, cameraId, 0x000000FF);
+            func_800563DC(_objectIndex, cameraId, 0x000000FF);
             OBombKart::SomeRender(camera->pos);
             if (((u32) temp_s4 < 0x4E21U) && (state != BOMB_STATE_EXPLODED)) {
                 OBombKart::LoadMtx();
@@ -428,7 +429,7 @@ void OBombKart::Waypoint(s32 screenId) {
     s32 bombWaypoint;
     s32 waypointDiff;
 
-    playerWaypoint = gNearestWaypointByPlayerId[screenId];
+    playerWaypoint = gNearestPathPointByPlayerId[screenId];
     playerHUD[screenId].unk_74 = 0;
     if ((State == States::EXPLODE) || (State == States::DISABLED)) { return; };
     bombWaypoint = WaypointIndex;

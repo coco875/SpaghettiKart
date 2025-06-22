@@ -34,6 +34,7 @@
 #include <assets/wario_stadium_data.h>
 #include <assets/frappe_snowland_data.h>
 #include "port/Game.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 // Appears to be textures
 // or tluts
@@ -145,6 +146,7 @@ void actor_init(struct Actor* actor, Vec3f startingPos, Vec3s startingRot, Vec3f
     actor->state = 0;
     actor->unk_08 = 0.0f;
     actor->boundingBoxSize = 0.0f;
+    actor->model = NULL;
     func_802AAAAC(&actor->unk30);
     switch (actorType) {
         case ACTOR_BOX_TRUCK:
@@ -161,6 +163,7 @@ void actor_init(struct Actor* actor, Vec3f startingPos, Vec3s startingRot, Vec3f
             actor->velocity[0] = actor->pos[0];
             actor->velocity[1] = actor->pos[1];
             actor->velocity[2] = actor->pos[2] + 70.0f;
+            actor->model = d_course_yoshi_valley_dl_egg_lod0;
             break;
         case ACTOR_KIWANO_FRUIT:
             actor->state = 0;
@@ -168,10 +171,12 @@ void actor_init(struct Actor* actor, Vec3f startingPos, Vec3s startingRot, Vec3f
             actor->rot[1] = 0;
             actor->rot[2] = 0;
             actor->boundingBoxSize = 2.0f;
+            actor->model = d_course_dks_jungle_parkway_dl_kiwano_fruit;
             break;
         case ACTOR_FALLING_ROCK:
             actor->flags |= 0x4000;
             actor->boundingBoxSize = 10.0f;
+            actor->model = d_course_choco_mountain_dl_falling_rock;
             break;
         case ACTOR_TRAIN_ENGINE:
             actor->unk_08 = 10.0f;
@@ -179,6 +184,7 @@ void actor_init(struct Actor* actor, Vec3f startingPos, Vec3s startingRot, Vec3f
         case ACTOR_BANANA:
             actor->flags = actor->flags | 0x4000 | 0x1000;
             actor->boundingBoxSize = 2.0f;
+            actor->model = common_model_flat_banana;
             break;
         case ACTOR_GREEN_SHELL:
             gNumSpawnedShells += 1;
@@ -204,27 +210,32 @@ void actor_init(struct Actor* actor, Vec3f startingPos, Vec3s startingRot, Vec3f
             actor->state = 0x0043;
             actor->boundingBoxSize = 3.0f;
             actor->unk_08 = 20.0f;
+            actor->model = d_course_mario_raceway_dl_tree;
             break;
         case ACTOR_MARIO_SIGN:
             actor->flags |= 0x4000;
+            actor->model = d_course_mario_raceway_dl_sign;
             break;
         case ACTOR_TREE_YOSHI_VALLEY:
             actor->flags |= 0x4000;
             actor->state = 0x0043;
             actor->boundingBoxSize = 3.0f;
             actor->unk_08 = 23.0f;
+            actor->model = d_course_yoshi_valley_dl_tree;
             break;
         case ACTOR_TREE_ROYAL_RACEWAY:
             actor->flags |= 0x4000;
             actor->state = 0x0043;
             actor->boundingBoxSize = 3.0f;
             actor->unk_08 = 17.0f;
+            actor->model = d_course_royal_raceway_dl_tree;
             break;
         case ACTOR_TREE_MOO_MOO_FARM:
             actor->state = 0x0043;
             actor->flags = -0x8000;
             actor->boundingBoxSize = 3.0f;
             actor->unk_08 = 17.0f;
+            actor->model = d_course_moo_moo_farm_dl_tree;
             break;
         case 26:
             actor->flags |= 0x4000;
@@ -285,17 +296,20 @@ void actor_init(struct Actor* actor, Vec3f startingPos, Vec3s startingRot, Vec3f
             actor->unk_04 = 0;
             actor->state = 5;
             actor->boundingBoxSize = 5.5f;
+            actor->model = D_0D003090;
             break;
         case ACTOR_ITEM_BOX:
             actor->flags |= 0x4000;
             actor->unk_04 = 0;
             actor->state = 0;
             actor->boundingBoxSize = 5.5f;
+            actor->model = D_0D003090;
             break;
         case ACTOR_PIRANHA_PLANT:
             actor->flags |= 0x4000;
             actor->state = 0x001E;
             actor->boundingBoxSize = 5.0f;
+            actor->model = d_course_mario_raceway_dl_piranha_plant;
             break;
         default:
             break;
@@ -506,6 +520,7 @@ void render_cows(Camera* camera, Mat4 arg1) {
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     var_s5 = NULL;
     var_s1 = var_t1;
+
     while (var_s1->pos[0] != END_OF_SPAWN_DATA) {
         sp88[0] = var_s1->pos[0] * gCourseDirection;
         sp88[1] = var_s1->pos[1];
@@ -520,6 +535,12 @@ void render_cows(Camera* camera, Mat4 arg1) {
             arg1[3][0] = sp88[0];
             arg1[3][1] = sp88[1];
             arg1[3][2] = sp88[2];
+
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("render_actor_cow", ((var_s1->pos[0] & 0xFFFF) << 32) |
+                                                                       ((var_s1->pos[1] & 0xFFFF) << 16) |
+                                                                       (var_s1->pos[2] & 0xFFFF));
+
             if ((gMatrixObjectCount < MTX_OBJECT_POOL_SIZE) && (render_set_position(arg1, 0) != 0)) {
                 switch (var_s1->someId) {
                     case 0:
@@ -541,6 +562,9 @@ void render_cows(Camera* camera, Mat4 arg1) {
             } else {
                 return;
             }
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
         var_s1++;
     }
@@ -651,6 +675,11 @@ void render_palm_trees(Camera* camera, Mat4 arg1) {
             continue;
         }
 
+        // @port: Tag the transform.
+        FrameInterpolation_RecordOpenChild("render_actor_cow", ((var_s1->pos[0] & 0xFFFF) << 32) |
+                                                                   ((var_s1->pos[1] & 0xFFFF) << 16) |
+                                                                   (var_s1->pos[2] & 0xFFFF));
+
         test &= 0xF;
         test = (s16) test;
         if (test == 6) {
@@ -687,6 +716,8 @@ void render_palm_trees(Camera* camera, Mat4 arg1) {
             }
             var_s1++;
         }
+        // @port Pop the transform id.
+        FrameInterpolation_RecordCloseChild();
     }
 }
 
@@ -698,6 +729,9 @@ void render_actor_shell(Camera* camera, Mat4 matrix, struct ShellActor* shell) {
     u16 index;
     char* phi_t3;
     bool reverseShell = false;
+
+    // @port: Tag the transform.
+    FrameInterpolation_RecordOpenChild("Shell", TAG_ITEM_ADDR(shell));
 
     f32 temp_f0 =
         is_within_render_distance(camera->pos, shell->pos, camera->rot[1], 0, gCameraZoom[camera - camera1], 490000.0f);
@@ -751,6 +785,9 @@ void render_actor_shell(Camera* camera, Mat4 matrix, struct ShellActor* shell) {
     } else {
         gSPDisplayList(gDisplayListHead++, D_0D005368);
     }
+
+    // @port Pop the transform id.
+    FrameInterpolation_RecordCloseChild();
 }
 
 UNUSED s16 D_802B8808[] = { 0x0014, 0x0028, 0x0000, 0x0000 };
@@ -845,6 +882,10 @@ void spawn_piranha_plants(struct ActorSpawnData* spawnData) {
     Vec3s startingRot;
     s32 temp;
 
+    if (gGamestate == CREDITS_SEQUENCE) {
+        return;
+    }
+
     vec3f_set(startingVelocity, 0, 0, 0);
     vec3s_set(startingRot, 0, 0, 0);
 
@@ -909,20 +950,24 @@ void spawn_foliage(struct ActorSpawnData* actor) {
     rotation[1] = 0;
     rotation[2] = 0;
 
+    if (gGamestate == CREDITS_SEQUENCE) {
+        return;
+    }
+
     while (var_s3->pos[0] != END_OF_SPAWN_DATA) {
         position[0] = var_s3->pos[0] * gCourseDirection;
         position[2] = var_s3->pos[2];
         position[1] = var_s3->pos[1];
 
-        if (GetCourse() == GetMarioRaceway()) {
+        if (IsMarioRaceway()) {
             actorType = 2;
-        } else if (GetCourse() == GetBowsersCastle()) {
+        } else if (IsBowsersCastle()) {
             actorType = 0x0021;
-        } else if (GetCourse() == GetYoshiValley()) {
+        } else if (IsYoshiValley()) {
             actorType = 3;
-        } else if (GetCourse() == GetFrappeSnowland()) {
+        } else if (IsFrappeSnowland()) {
             actorType = 0x001D;
-        } else if (GetCourse() == GetRoyalRaceway()) {
+        } else if (IsRoyalRaceway()) {
             switch (var_s3->signedSomeId) {
                 case 6:
                     actorType = 0x001C;
@@ -931,11 +976,11 @@ void spawn_foliage(struct ActorSpawnData* actor) {
                     actorType = 4;
                     break;
             }
-        } else if (GetCourse() == GetLuigiRaceway()) {
+        } else if (IsLuigiRaceway()) {
             actorType = 0x001A;
-        } else if (GetCourse() == GetMooMooFarm()) {
+        } else if (IsMooMooFarm()) {
             actorType = 0x0013;
-        } else if (GetCourse() == GetKalimariDesert()) {
+        } else if (IsKalimariDesert()) {
             switch (var_s3->signedSomeId) {
                 case 5:
                     actorType = 0x001E;
@@ -973,7 +1018,7 @@ void spawn_all_item_boxes(struct ActorSpawnData* spawnData) {
     struct ActorSpawnData* temp_s0 = spawnData;
     // struct ItemBox *itemBox;
 
-    if ((gModeSelection == TIME_TRIALS) || (gPlaceItemBoxes == 0)) {
+    if ((gModeSelection == TIME_TRIALS) || (gPlaceItemBoxes == 0) || (gGamestate == CREDITS_SEQUENCE)) {
         return;
     }
 
@@ -1059,15 +1104,6 @@ void spawn_course_actors(void) {
     struct RailroadCrossing* rrxing;
 
     gNumPermanentActors = 0;
-
-    if (gModeSelection != BATTLE) {
-        if (!CM_DoesFinishlineExist()) {
-            printf("\n[actors.c] COURSE MISSING THE FINISHLINE\n");
-            printf("  In the Course class BeginPlay() function make sure to include:\n");
-            printf("  gWorldInstance.AddActor(new AFinishline());\n\n");
-            printf("\n  Otherwise, course textures may glitch out or other strange issues may occur.\n");
-        }
-    }
 
     // switch (gCurrentCourseId) {
     //     case COURSE_MARIO_RACEWAY:
@@ -1216,6 +1252,7 @@ void init_actors_and_load_textures(void) {
     destroy_all_actors();
     CM_CleanWorld();
 
+    CM_SpawnFromLevelProps();
     CM_BeginPlay();
     spawn_course_actors();
 }
@@ -1375,7 +1412,7 @@ s16 try_remove_destructable_item(Vec3f pos, Vec3s rot, Vec3f velocity, s16 actor
     return -1;
 }
 
-// returns actor index if any slot avaible returns -1
+// returns actor index if any available actor type is -1
 s16 add_actor_to_empty_slot(Vec3f pos, Vec3s rot, Vec3f velocity, s16 actorType) {
     size_t index;
 
@@ -1394,6 +1431,7 @@ s16 add_actor_to_empty_slot(Vec3f pos, Vec3s rot, Vec3f velocity, s16 actorType)
     gNumActors++;
     struct Actor* actor = CM_AddBaseActor();
     actor_init(actor, pos, rot, velocity, actorType);
+    CM_AddEditorObject(actor, get_actor_name(actor->type));
     return (s16) CM_GetActorSize() - 1; // Return current index;
 }
 
@@ -1593,7 +1631,7 @@ bool collision_yoshi_egg(Player* player, struct YoshiValleyEgg* egg) {
             func_800C90F4(player - gPlayerOne, (player->characterId * 0x10) + SOUND_ARG_LOAD(0x29, 0x00, 0x80, 0x0D));
         } else {
             apply_hit_sound_effect(player, player - gPlayerOne);
-            if ((gModeSelection == TIME_TRIALS) && ((player->type & PLAYER_KART_AI) == 0)) {
+            if ((gModeSelection == TIME_TRIALS) && ((player->type & PLAYER_CPU) == 0)) {
                 D_80162DF8 = 1;
             }
         }
@@ -1668,9 +1706,9 @@ bool collision_tree(Player* player, struct Actor* actor) {
     actorPos[0] = actor->pos[0];
     actorPos[1] = actor->pos[1];
     actorPos[2] = actor->pos[2];
-    if (((GetCourse() == GetMarioRaceway()) || (GetCourse() == GetYoshiValley()) ||
-         (GetCourse() == GetRoyalRaceway()) || (GetCourse() == GetLuigiRaceway())) &&
-        (player->unk_094 > 1.0f)) {
+    if (((IsMarioRaceway()) || (IsYoshiValley()) ||
+         (IsRoyalRaceway()) || (IsLuigiRaceway())) &&
+        (player->speed > 1.0f)) {
         spawn_leaf(actorPos, 0);
     }
     if (xz_dist < 0.1f) {
@@ -2135,7 +2173,7 @@ void evaluate_collision_between_player_actor(Player* player, struct Actor* actor
             if (!(player->effects & BOO_EFFECT) && !(player->type & PLAYER_INVISIBLE_OR_BOMB)) {
                 if (query_collision_player_vs_actor_item(player, actor) == COLLISION) {
                     func_800C98B8(actor->pos, actor->velocity, SOUND_ACTION_EXPLOSION);
-                    if ((gModeSelection == TIME_TRIALS) && !(player->type & PLAYER_KART_AI)) {
+                    if ((gModeSelection == TIME_TRIALS) && !(player->type & PLAYER_CPU)) {
                         D_80162DF8 = 1;
                     }
                     if (player->effects & STAR_EFFECT) {
@@ -2391,8 +2429,17 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
 
     struct Actor* actor;
     UNUSED Vec3f sp4C = { 0.0f, 5.0f, 10.0f };
-    f32 sp48 = sins(camera->rot[1] - 0x8000); // unk26;
-    f32 temp_f0 = coss(camera->rot[1] - 0x8000);
+
+    // Freecam rotY is reversed in the engine for whatever reason
+    f32 sp48 = 0;
+    f32 temp_f0 = 0;
+    if (CVarGetInteger("gFreecam", 0) == true) {
+        sp48 = sins(-camera->rot[1] - 0x8000);
+        temp_f0 = coss(-camera->rot[1] - 0x8000);
+    } else {
+        sp48 = sins(camera->rot[1] - 0x8000);
+        temp_f0 = coss(camera->rot[1] - 0x8000);
+    }
 
     sBillBoardMtx[0][0] = temp_f0;
     sBillBoardMtx[0][2] = -sp48;
@@ -2423,11 +2470,15 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
         if (actor->flags == 0) {
             continue;
         }
+
+        FrameInterpolation_RecordOpenChild(actor, i);
+
         switch (actor->type) {
             default: // Draw custom actor
                 CM_DrawActors(D_800DC5EC->camera, actor);
                 break;
             case ACTOR_TREE_MARIO_RACEWAY:
+
                 render_actor_tree_mario_raceway(camera, sBillBoardMtx, actor);
                 break;
             case ACTOR_TREE_YOSHI_VALLEY:
@@ -2527,10 +2578,11 @@ void render_course_actors(struct UnkStruct_800DC5EC* arg0) {
                 render_actor_yoshi_egg(camera, sBillBoardMtx, (struct YoshiValleyEgg*) actor, pathCounter);
                 break;
         }
+        FrameInterpolation_RecordCloseChild();
     }
-    if (GetCourse() == GetMooMooFarm()) {
+    if (IsMooMooFarm()) {
         render_cows(camera, sBillBoardMtx);
-    } else if (GetCourse() == GetDkJungle()) {
+    } else if (IsDkJungle()) {
         render_palm_trees(camera, sBillBoardMtx);
     }
 }
@@ -2628,4 +2680,79 @@ void update_course_actors(void) {
     }
     evaluate_collision_for_destructible_actors();
     check_player_use_item();
+}
+
+const char* get_actor_name(s32 id) {
+    switch (id) {
+        case ACTOR_FALLING_ROCK:
+            return "Falling Rock";
+        case ACTOR_GREEN_SHELL:
+            return "Green Shell";
+        case ACTOR_RED_SHELL:
+            return "Red Shell";
+        case ACTOR_BLUE_SPINY_SHELL:
+            return "Blue Spiny Shell";
+        case ACTOR_KIWANO_FRUIT:
+            return "Kiwano Fruit";
+        case ACTOR_BANANA:
+            return "Banana";
+        case ACTOR_PADDLE_BOAT:
+            return "Paddle Boat";
+        case ACTOR_TRAIN_ENGINE:
+            return "Train Engine";
+        case ACTOR_TRAIN_TENDER:
+            return "Train Tender";
+        case ACTOR_TRAIN_PASSENGER_CAR:
+            return "Train Passenger Car";
+        case ACTOR_ITEM_BOX:
+            return "Item Box";
+        case ACTOR_HOT_AIR_BALLOON_ITEM_BOX:
+            return "Hot Air Balloon Item Box";
+        case ACTOR_FAKE_ITEM_BOX:
+            return "Fake Item Box";
+        case ACTOR_PIRANHA_PLANT:
+            return "Piranha Plant";
+        case ACTOR_BANANA_BUNCH:
+            return "Banana Bunch";
+        case ACTOR_TRIPLE_GREEN_SHELL:
+            return "Triple Green Shell";
+        case ACTOR_TRIPLE_RED_SHELL:
+            return "Triple Red Shell";
+        case ACTOR_MARIO_SIGN:
+            return "Mario Sign";
+        case ACTOR_WARIO_SIGN:
+            return "Wario Sign";
+        case ACTOR_RAILROAD_CROSSING:
+            return "Railroad Crossing";
+        case ACTOR_TREE_MARIO_RACEWAY:
+            return "Tree (Mario Raceway)";
+        case ACTOR_TREE_YOSHI_VALLEY:
+            return "Tree (Yoshi Valley)";
+        case ACTOR_TREE_ROYAL_RACEWAY:
+            return "Tree (Royal Raceway)";
+        case ACTOR_TREE_MOO_MOO_FARM:
+            return "Tree (Moo Moo Farm)";
+        case ACTOR_PALM_TREE:
+            return "Palm Tree";
+        case ACTOR_UNKNOWN_0x1A:
+            return "Unknown Plant (0x1A)";
+        case ACTOR_UNKNOWN_0x1B:
+            return "Unknown (0x1B)";
+        case ACTOR_TREE_BOWSERS_CASTLE:
+            return "Tree (Bowser's Castle)";
+        case ACTOR_TREE_FRAPPE_SNOWLAND:
+            return "Tree (Frappe Snowland)";
+        case ACTOR_CACTUS1_KALAMARI_DESERT:
+            return "Cactus 1 (Kalamari Desert)";
+        case ACTOR_CACTUS2_KALAMARI_DESERT:
+            return "Cactus 2 (Kalamari Desert)";
+        case ACTOR_CACTUS3_KALAMARI_DESERT:
+            return "Cactus 3 (Kalamari Desert)";
+        case ACTOR_BUSH_BOWSERS_CASTLE:
+            return "Bush (Bowser's Castle)";
+        case ACTOR_YOSHI_EGG:
+            return "Yoshi Egg";
+        default:
+            return "Obj";
+    }
 }

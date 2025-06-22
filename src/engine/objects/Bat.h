@@ -21,14 +21,14 @@ extern "C" {
 /**
  * OBat
  * 
- * FRotation does not appear to do anything.
+ * IRotator does not appear to do anything.
  * Could not find where origin_pos was at.
  * So pos does not work either
  * 
  */
 class OBat : public OObject {
 public:
-    explicit OBat(const FVector& pos, const FRotation& rot);
+    explicit OBat(const FVector& pos, const IRotator& rot);
 
     ~OBat() {
         _count--;
@@ -50,7 +50,6 @@ public:
     void func_80089A04(s32 objectIndex, f32 arg1, f32 arg2);
     void func_8007D794(s32 objectIndex);
     void func_8007DA4C(s32 objectIndex);
-
 
 private:
     FVector _pos;

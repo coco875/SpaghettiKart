@@ -4,9 +4,10 @@
 #include "libultraship/libultra/gbi.h"
 
 namespace MK64 {
-std::shared_ptr<Ship::IResource> ResourceFactoryBinaryCourseVtxV0::ReadResource(std::shared_ptr<Ship::File> file) {
-    auto initData = file->InitData;
-    if (!FileHasValidFormatAndReader(file)) {
+std::shared_ptr<Ship::IResource>
+ResourceFactoryBinaryCourseVtxV0::ReadResource(std::shared_ptr<Ship::File> file,
+                                               std::shared_ptr<Ship::ResourceInitData> initData) {
+    if (!FileHasValidFormatAndReader(file, initData)) {
         return nullptr;
     }
 

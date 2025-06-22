@@ -1,19 +1,14 @@
-#pragma once
+#ifndef RESOLUTIONEDITOR_H
+#define RESOLUTIONEDITOR_H
+
 #include <libultraship/libultraship.h>
+#include <graphic/Fast3D/Fast3dWindow.h>
+#include <graphic/Fast3D/interpreter.h>
 
-namespace AdvancedResolutionSettings {
-class AdvancedResolutionSettingsWindow : public Ship::GuiWindow {
-  private:
-    bool IsDroppingFrames();
+namespace GameUI {
+bool IsDroppingFrames();
+void RegisterResolutionWidgets();
+void UpdateResolutionVars();
+} // namespace BenGui
 
-  protected:
-    bool IsBoolArrayTrue(bool*);
-
-  public:
-    using Ship::GuiWindow::GuiWindow;
-
-    void InitElement() override;
-    void DrawElement() override;
-    void UpdateElement() override;
-};
-} // namespace AdvancedResolutionSettings
+#endif // RESOLUTIONEDITOR_H

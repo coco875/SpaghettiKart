@@ -39,7 +39,7 @@ u32* D_80162DB4;
 s16 D_80162DB8;
 u32* D_80162DBC;
 
-u16 D_80162DC0;
+uintptr_t staff_ghost_track_ptr;
 StaffGhost* D_80162DC4;
 s32 D_80162DC8;
 s32 D_80162DCC;
@@ -166,11 +166,11 @@ void func_80005310(void) {
 
         set_staff_ghost();
 
-        if (D_80162DC0 != gCurrentCourseId) {
+        if (staff_ghost_track_ptr != (uintptr_t)GetCourse()) {
             D_80162DD4 = 1;
         }
 
-        D_80162DC0 = (u16) gCurrentCourseId;
+        staff_ghost_track_ptr = (uintptr_t)GetCourse();
         D_80162DF0 = 0;
         D_80162DEC = 0;
         D_80162DF8 = 0;
@@ -213,7 +213,7 @@ void func_8000546C(void) {
     s16 phi_v0 = 0;
 
     if (D_80162DB0 >= 0x1000) {
-        gPlayerOne->type = PLAYER_CINEMATIC_MODE | PLAYER_START_SEQUENCE | PLAYER_KART_AI;
+        gPlayerOne->type = PLAYER_CINEMATIC_MODE | PLAYER_START_SEQUENCE | PLAYER_CPU;
         return;
     }
 
@@ -443,7 +443,7 @@ void func_8000599C(void) {
 // sets player to AI? (unconfirmed)
 void func_80005AE8(Player* ply) {
     if (((ply->type & PLAYER_INVISIBLE_OR_BOMB) != 0) && (ply != gPlayerOne)) {
-        ply->type = PLAYER_CINEMATIC_MODE | PLAYER_START_SEQUENCE | PLAYER_KART_AI;
+        ply->type = PLAYER_CINEMATIC_MODE | PLAYER_START_SEQUENCE | PLAYER_CPU;
     }
 }
 

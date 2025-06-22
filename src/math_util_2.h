@@ -5,6 +5,8 @@
 #include <common_structs.h>
 #include "camera.h"
 
+extern Mat4* gInterpolationMatrix;
+
 /* Function Prototypes */
 
 // Unused functions
@@ -47,7 +49,6 @@ s32 s16_step_down_towards(s16*, s16, s16);
 s32 u16_step_down_towards(u16*, s32, s32);
 s32 s16_step_towards(s16*, s16, s16);
 s32 f32_step_towards(f32*, f32, f32);
-void func_80041480(s16*, s16, s16, s16*);
 Vec3f* vec3f_set_xyz(Vec3f, f32, f32, f32);
 Vec3f* vec3f_normalize(Vec3f dest);
 Vec3f* vec3f_cross_product(Vec3f, Vec3f, Vec3f);
@@ -75,15 +76,13 @@ void func_80042330_portrait(s32, s32, u16, f32, s16);
 void func_80042330_wide(s32, s32, u16, f32);
 void mtxf_set_matrix_transformation(Mat4, Vec3f, Vec3su, f32);
 void mtxf_set_matrix_scale_transl(Mat4, Vec3f, Vec3f, f32);
-void mtxf_set_matrix_gObjectList(s32, Mat4);
-void set_transform_matrix(Mat4, Vec3f, Vec3f, u16, f32);
+s32 mtxf_set_matrix_gObjectList(s32, Mat4);
+void set_transform_matrix(Mat4 dest, Vec3f orientationVector, Vec3f positionVector, u16 rotationAngle,
+                          f32 scaleFactor);
 void vec3f_rotate_x_y(Vec3f, Vec3f, Vec3s);
 void rsp_set_matrix_transformation(Vec3f, Vec3su, f32);
 void rsp_set_matrix_transformation_inverted_x_y_orientation(Vec3f, Vec3su, f32);
 void rsp_set_matrix_transl_rot_scale(Vec3f, Vec3f, f32);
 void rsp_set_matrix_gObjectList(s32);
-
-/* This is where I'd put my static data, if I had any */
-extern s8 D_801658FE;
 
 #endif // MATH_UTIL_2_H

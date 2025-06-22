@@ -61,6 +61,7 @@ extern struct UnkStruct_800DC5EC* D_800DC5F0;
 extern struct UnkStruct_800DC5EC* D_800DC5F4;
 extern struct UnkStruct_800DC5EC* D_800DC5F8;
 extern u16 gIsGamePaused;
+extern bool gIsEditorPaused;
 extern u8* pAppNmiBuffer;
 extern s32 gIsMirrorMode; // D_800DC604
 extern s16 gCreditsCourseId;
@@ -137,8 +138,8 @@ extern Vec3f D_8015F8D0;
 extern s32 D_8015F8DC;
 
 extern s32 D_8015F8E0;
-extern f32 D_8015F8E4;
-extern f32 D_8015F8E8;
+extern f32 gWaterLevel;
+extern f32 gWaterVelocity;
 extern s16 gPlayerPositionLUT[]; // Player index at each position
 extern u16 gNumPermanentActors;
 

@@ -5,33 +5,34 @@
 
 #include "BowsersCastle.h"
 #include "World.h"
-#include "engine/actors/AFinishline.h"
+#include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
 #include "engine/objects/Thwomp.h"
 #include "bowsers_castle_data.h"
 
 extern "C" {
-#include "main.h"
-#include "camera.h"
-#include "course_offsets.h"
-#include "code_800029B0.h"
-#include "render_courses.h"
-#include "code_8006E9C0.h"
-#include "code_80057C60.h"
-#include "defines.h"
-#include "math_util.h"
-#include "external.h"
-#include "code_80005FD0.h"
-#include "spawn_players.h"
-#include "render_objects.h"
-#include "assets/common_data.h"
-#include "save.h"
-#include "staff_ghosts.h"
-#include "actors.h"
-#include "collision.h"
-#include "code_8003DC40.h"
-#include "memory.h"
-extern const char* bowsers_castle_dls[];
+    #include "main.h"
+    #include "camera.h"
+    #include "course_offsets.h"
+    #include "code_800029B0.h"
+    #include "render_courses.h"
+    #include "code_8006E9C0.h"
+    #include "code_80057C60.h"
+    #include "defines.h"
+    #include "math_util.h"
+    #include "external.h"
+    #include "code_80005FD0.h"
+    #include "spawn_players.h"
+    #include "render_objects.h"
+    #include "assets/common_data.h"
+    #include "save.h"
+    #include "staff_ghosts.h"
+    #include "actors.h"
+    #include "collision.h"
+    #include "code_8003DC40.h"
+    #include "memory.h"
+    #include "course.h"
+    extern const char *bowsers_castle_dls[];
 }
 
 const course_texture bowsers_castle_textures[] = {
@@ -71,18 +72,26 @@ BowsersCastle::BowsersCastle() {
     this->gfx = d_course_bowsers_castle_packed_dls;
     this->gfxSize = 4900;
     Props.textures = bowsers_castle_textures;
-    Props.MinimapTexture = minimap_bowsers_castle;
-    Props.MinimapDimensions =
-        IVector2D(ResourceGetTexWidthByName(Props.MinimapTexture), ResourceGetTexHeightByName(Props.MinimapTexture));
+    Props.Minimap.Texture = gTextureCourseOutlineBowsersCastle;
+    Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
+    Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
+    Props.Minimap.Pos[0].X = 265;
+    Props.Minimap.Pos[0].Y = 170;
+    Props.Minimap.PlayerX = 12;
+    Props.Minimap.PlayerY = 48;
+    Props.Minimap.PlayerScaleFactor = 0.0174f;
+    Props.Minimap.FinishlineX = 0;
+    Props.Minimap.FinishlineY = 0;
 
-    Props.Id = "mk:bowsers_castle";
-    Props.Name = "bowser's castle";
-    Props.DebugName = "castle";
-    Props.CourseLength = "777m";
+    Id = "mk:bowsers_castle";
+
+    Props.SetText(Props.Name, "bowser's castle", sizeof(Props.Name));
+    Props.SetText(Props.DebugName, "castle", sizeof(Props.DebugName));
+    Props.SetText(Props.CourseLength, "777m", sizeof(Props.CourseLength));
+
     Props.AIBehaviour = D_0D008FB8;
     Props.AIMaximumSeparation = 35.0f;
     Props.AIMinimumSeparation = 0.2f;
-    Props.SomePtr = D_800DCAF4;
     Props.AISteeringSensitivity = 53;
 
     Props.NearPersp = 2.0f;
@@ -90,40 +99,38 @@ BowsersCastle::BowsersCastle() {
 
     Props.PathSizes = { 0x30C, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 };
 
-    Props.D_0D009418[0] = 4.1666665f;
-    Props.D_0D009418[1] = 5.5833334f;
-    Props.D_0D009418[2] = 6.1666665f;
-    Props.D_0D009418[3] = 6.75f;
+    Props.CurveTargetSpeed[0] = 4.1666665f;
+    Props.CurveTargetSpeed[1] = 5.5833334f;
+    Props.CurveTargetSpeed[2] = 6.1666665f;
+    Props.CurveTargetSpeed[3] = 6.75f;
 
-    Props.D_0D009568[0] = 3.75f;
-    Props.D_0D009568[1] = 5.1666665f;
-    Props.D_0D009568[2] = 5.75f;
-    Props.D_0D009568[3] = 6.3333334f;
+    Props.NormalTargetSpeed[0] = 3.75f;
+    Props.NormalTargetSpeed[1] = 5.1666665f;
+    Props.NormalTargetSpeed[2] = 5.75f;
+    Props.NormalTargetSpeed[3] = 6.3333334f;
 
     Props.D_0D0096B8[0] = 3.3333332f;
     Props.D_0D0096B8[1] = 3.9166667f;
     Props.D_0D0096B8[2] = 4.5f;
     Props.D_0D0096B8[3] = 5.0833334f;
 
-    Props.D_0D009808[0] = 3.75f;
-    Props.D_0D009808[1] = 5.1666665f;
-    Props.D_0D009808[2] = 5.75f;
-    Props.D_0D009808[3] = 6.3333334f;
+    Props.OffTrackTargetSpeed[0] = 3.75f;
+    Props.OffTrackTargetSpeed[1] = 5.1666665f;
+    Props.OffTrackTargetSpeed[2] = 5.75f;
+    Props.OffTrackTargetSpeed[3] = 6.3333334f;
 
-    Props.PathTable[0] = (TrackWaypoint*) LOAD_ASSET_RAW(d_course_bowsers_castle_unknown_waypoints);
+    Props.PathTable[0] = (TrackPathPoint*) LOAD_ASSET_RAW(d_course_bowsers_castle_unknown_waypoints);
     Props.PathTable[1] = NULL;
     Props.PathTable[2] = NULL;
     Props.PathTable[3] = NULL;
 
-    Props.PathTable2[0] = (TrackWaypoint*) LOAD_ASSET_RAW(d_course_bowsers_castle_track_waypoints);
+    Props.PathTable2[0] = (TrackPathPoint*) LOAD_ASSET_RAW(d_course_bowsers_castle_track_waypoints);
     Props.PathTable2[1] = NULL;
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
     Props.Clouds = NULL; // no clouds
     Props.CloudList = NULL;
-    Props.MinimapFinishlineX = 0;
-    Props.MinimapFinishlineY = 0;
 
     Props.Skybox.TopRight = { 48, 8, 120 };
     Props.Skybox.BottomRight = { 0, 0, 0 };
@@ -134,26 +141,43 @@ BowsersCastle::BowsersCastle() {
     Props.Skybox.FloorBottomLeft = { 0, 0, 0 };
     Props.Skybox.FloorTopLeft = { 0, 0, 0 };
     Props.Sequence = MusicSeq::MUSIC_SEQ_BOWSERS_CASTLE;
+
+    Props.WaterLevel = -50.0f;
+    WaterVolumes.push_back({20.0f, 1549.0f, 1859.0f, -1402.0f, -1102.0f});
 }
 
 void BowsersCastle::Load() {
     Course::Load();
 
-    parse_course_displaylists((TrackSectionsI*) LOAD_ASSET_RAW(d_course_bowsers_castle_addr));
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_bowsers_castle_addr));
     func_80295C6C();
     find_vtx_and_set_colours(segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07001350)), 0x32, 0, 0, 0);
-    D_8015F8E4 = -50.0f;
 }
 
 void BowsersCastle::LoadTextures() {
     dma_textures(gTextureShrub, 0x000003FFU, 0x00000800U);
 }
 
-void BowsersCastle::BeginPlay() {
-    gWorldInstance.AddActor(new AFinishline());
+// Required for the 2 thwomps that go far
+void BowsersCastle::SpawnStockThwomp() {
+    s32 objectId = indexObjectList1[0];
+    init_object(objectId, 0);
+    gObjectList[objectId].origin_pos[0] = 0x04b0 * xOrientation;
+    gObjectList[objectId].origin_pos[2] = 0xf5ba;
+    gObjectList[objectId].unk_0D5 = 3;
+    gObjectList[objectId].primAlpha = 0;
 
-    spawn_foliage((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_bowsers_castle_tree_spawn));
-    spawn_all_item_boxes((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_bowsers_castle_item_box_spawns));
+    objectId = indexObjectList1[1];
+    init_object(objectId, 0);
+    gObjectList[objectId].origin_pos[0] = 0x04b0 * xOrientation;
+    gObjectList[objectId].origin_pos[2] = 0xf592;
+    gObjectList[objectId].unk_0D5 = 3;
+    gObjectList[objectId].primAlpha = 1;
+}
+
+void BowsersCastle::BeginPlay() {
+    spawn_foliage((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_bowsers_castle_tree_spawn));
+    spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_bowsers_castle_item_box_spawns));
 
     switch (gCCSelection) {
         case CC_100:
@@ -162,6 +186,7 @@ void BowsersCastle::BeginPlay() {
             gWorldInstance.AddObject(new OThwomp(0x044c, 0xf92a, 0xC000, 1.0f, 1, 1));
             gWorldInstance.AddObject(new OThwomp(0x02bc, 0xf95c, 0xC000, 1.0f, 2, 0));
             gWorldInstance.AddObject(new OThwomp(0x04b0, 0xf8f8, 0xC000, 1.0f, 2, 1));
+            BowsersCastle::SpawnStockThwomp();
             gWorldInstance.AddObject(new OThwomp(0x04b0, 0xf5ba, 0xC000, 1.0f, 3, 0));
             gWorldInstance.AddObject(new OThwomp(0x04b0, 0xf592, 0xC000, 1.0f, 3, 1));
             gWorldInstance.AddObject(new OThwomp(0x091a, 0xf5bf, 0xC000, 1.0f, 4, 0));
@@ -173,6 +198,7 @@ void BowsersCastle::BeginPlay() {
         case CC_50:
             gWorldInstance.AddObject(new OThwomp(0x3B6, 0xF92A, 0xC000, 1.0f, 1, 0));
             gWorldInstance.AddObject(new OThwomp(0x0352, 0xf95c, 0xC000, 1.0f, 2, 0));
+            BowsersCastle::SpawnStockThwomp();
             gWorldInstance.AddObject(new OThwomp(0x04b0, 0xf5ba, 0xC000, 1.0f, 3, 0));
             gWorldInstance.AddObject(new OThwomp(0x04b0, 0xf592, 0xC000, 1.0f, 3, 1));
             gWorldInstance.AddObject(new OThwomp(0x091a, 0xf5b0, 0xC000, 1.0f, 4, 0));
@@ -185,6 +211,7 @@ void BowsersCastle::BeginPlay() {
             gWorldInstance.AddObject(new OThwomp(0x044c, 0xf92a, 0xC000, 1.0f, 1, 1));
             gWorldInstance.AddObject(new OThwomp(0x02bc, 0xf95c, 0xC000, 1.0f, 2, 0));
             gWorldInstance.AddObject(new OThwomp(0x04b0, 0xf8f8, 0xC000, 1.0f, 2, 1));
+            BowsersCastle::SpawnStockThwomp();
             gWorldInstance.AddObject(new OThwomp(0x04b0, 0xf5ba, 0xC000, 1.0f, 3, 0));
             gWorldInstance.AddObject(new OThwomp(0x04b0, 0xf592, 0xC000, 1.0f, 3, 1));
             gWorldInstance.AddObject(new OThwomp(0x091a, 0xf5c9, 0xC000, 1.0f, 4, 0));
@@ -197,24 +224,16 @@ void BowsersCastle::BeginPlay() {
     }
 
     if (gModeSelection == VERSUS) {
-        Vec3f pos = { 0, 0, 0 };
+        FVector pos = { 0, 0, 0 };
 
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][50], 50, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][150], 150, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][200], 200, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][260], 260, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][435], 435, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][150], 150, 1, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][200], 200, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][260], 260, 1, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][435], 435, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
     }
-}
-
-// Likely sets minimap boundaries
-void BowsersCastle::MinimapSettings() {
-    D_8018D2C0[0] = 265;
-    D_8018D2A0 = 0.0174f;
-    D_8018D2E0 = 12;
-    D_8018D2E8 = 48;
 }
 
 void BowsersCastle::InitCourseObjects() {
@@ -257,7 +276,8 @@ void BowsersCastle::SomeSounds() {
 }
 
 void BowsersCastle::WhatDoesThisDo(Player* player, int8_t playerId) {
-    if (((s16) gNearestWaypointByPlayerId[playerId] >= 0x29) && ((s16) gNearestWaypointByPlayerId[playerId] < 0x1D2)) {
+    if (((s16) gNearestPathPointByPlayerId[playerId] >= 0x29) &&
+        ((s16) gNearestPathPointByPlayerId[playerId] < 0x1D2)) {
         if (D_80165300[playerId] != 1) {
             func_800CA288(playerId, 0x41);
         }
@@ -271,7 +291,8 @@ void BowsersCastle::WhatDoesThisDo(Player* player, int8_t playerId) {
 }
 
 void BowsersCastle::WhatDoesThisDoAI(Player* player, int8_t playerId) {
-    if (((s16) gNearestWaypointByPlayerId[playerId] >= 0x29) && ((s16) gNearestWaypointByPlayerId[playerId] < 0x1D2)) {
+    if (((s16) gNearestPathPointByPlayerId[playerId] >= 0x29) &&
+        ((s16) gNearestPathPointByPlayerId[playerId] < 0x1D2)) {
         if (D_80165300[playerId] != 1) {
             func_800CA2E4(playerId, 0x41);
         }
@@ -282,13 +303,6 @@ void BowsersCastle::WhatDoesThisDoAI(Player* player, int8_t playerId) {
             D_80165300[playerId] = 0;
         }
     }
-}
-
-// Positions the finishline on the minimap
-void BowsersCastle::MinimapFinishlinePosition() {
-    //! todo: Place hard-coded values here.
-    draw_hud_2d_texture_8x8(this->Props.MinimapFinishlineX, this->Props.MinimapFinishlineY,
-                            (u8*) common_texture_minimap_finish_line);
 }
 
 void BowsersCastle::Render(struct UnkStruct_800DC5EC* arg0) {
@@ -322,24 +336,20 @@ void BowsersCastle::RenderCredits() {
     gSPDisplayList(gDisplayListHead++, (Gfx*) (d_course_bowsers_castle_dl_9148));
 }
 
-void BowsersCastle::Collision() {
-}
-
-void BowsersCastle::SomeCollisionThing(Player* player, Vec3f arg1, Vec3f arg2, Vec3f arg3, f32* arg4, f32* arg5,
-                                       f32* arg6, f32* arg7) {
+void BowsersCastle::SomeCollisionThing(Player *player, Vec3f arg1, Vec3f arg2, Vec3f arg3, f32* arg4, f32* arg5, f32* arg6, f32* arg7) {
     func_8003E6EC(player, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
 void BowsersCastle::Waypoints(Player* player, int8_t playerId) {
-    s16 waypoint = gNearestWaypointByPlayerId[playerId];
+    s16 waypoint = gNearestPathPointByPlayerId[playerId];
     if ((waypoint >= 0x235) && (waypoint < 0x247)) {
-        player->nearestWaypointId = 0x214;
+        player->nearestPathPointId = 0x214;
     } else if ((waypoint >= 0x267) && (waypoint < 0x277)) {
-        player->nearestWaypointId = 0x25B;
+        player->nearestPathPointId = 0x25B;
     } else {
-        player->nearestWaypointId = gNearestWaypointByPlayerId[playerId];
-        if (player->nearestWaypointId < 0) {
-            player->nearestWaypointId = gWaypointCountByPathIndex[0] + player->nearestWaypointId;
+        player->nearestPathPointId = gNearestPathPointByPlayerId[playerId];
+        if (player->nearestPathPointId < 0) {
+            player->nearestPathPointId = gPathCountByPathIndex[0] + player->nearestPathPointId;
         }
     }
 }

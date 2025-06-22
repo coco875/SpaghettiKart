@@ -3,6 +3,7 @@
 #include "TrashBin.h"
 #include "World.h"
 #include "port/Game.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 extern "C" {
 #include "main.h"
@@ -20,40 +21,40 @@ extern "C" {
 
 #define DEGREES_FLOAT_TO_SHORT(Degrees) ((s16)((Degrees) * (0x8000 / 180.0f)))
 
-OTrashBin::OTrashBin(const FVector& pos, const FRotation& rotation, f32 scale, OTrashBin::Behaviour bhv) {
+OTrashBin::OTrashBin(const FVector& pos, const IRotator& rotation, f32 scale, OTrashBin::Behaviour bhv) {
+    Name = "Trashbin";
     _pos = pos;
     _rot = rotation;
     _scale = scale;
     _bhv = bhv;
 
-    init_object(indexObjectList1[1], 0);
+    find_unused_obj_index(&_objectIndex);
 
-    if (GetCourse() != GetBansheeBoardwalk()) {
+    init_object(_objectIndex, 0);
+
+    if (!IsBansheeBoardwalk()) {
         _drawBin = true;
     }
 }
 
 void OTrashBin::Tick() {
-    s32 objectIndex = indexObjectList1[1];
-    OTrashBin::func_8007E00C(objectIndex);
+    OTrashBin::func_8007E00C(_objectIndex);
 
     switch(_bhv) {
         case STATIC:
             break;
         case MUNCHING:
-            func_8007DDC0(objectIndex);
+            func_8007DDC0(_objectIndex);
             break;
     }
 }
 
 void OTrashBin::Draw(s32 cameraId) {
-    s32 objectIndex;
     Object* object;
 
-    objectIndex = indexObjectList1[1];
-    func_8008A364(objectIndex, cameraId, 0x5555U, 0x00000320);
-    if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {
-        object = &gObjectList[objectIndex];
+    func_8008A364(_objectIndex, cameraId, 0x5555U, 0x00000320);
+    if (is_obj_flag_status_active(_objectIndex, VISIBLE) != 0) {
+        object = &gObjectList[_objectIndex];
         if (object->state >= 2) {
             func_80043220(object->pos, object->orientation, object->sizeScaling, object->model);
         }
@@ -62,11 +63,18 @@ void OTrashBin::Draw(s32 cameraId) {
             Mat4 mtx;
             Vec3f Pos = { _pos.x + 63, _pos.y + 12, _pos.z + 25 };
             Vec3s Rot = { 0, 0x4000, 0 };
+
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("OTrashBin", (uintptr_t) object);
+
             mtxf_pos_rotation_xyz(mtx, Pos, Rot);
             //mtxf_scale(mtx, 1.0f);
             if (render_set_position(mtx, 0) != 0) {
                 gSPDisplayList(gDisplayListHead++, BinMod);
             }
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
     }
 }

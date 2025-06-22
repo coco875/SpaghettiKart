@@ -7,8 +7,8 @@
 #include "World.h"
 #include "engine/objects/BombKart.h"
 #include "assets/wario_stadium_data.h"
-#include "engine/actors/AWarioSign.h"
-#include "engine/actors/AFinishline.h"
+#include "engine/actors/WarioSign.h"
+#include "engine/actors/Finishline.h"
 
 extern "C" {
 #include "main.h"
@@ -32,6 +32,7 @@ extern "C" {
 #include "code_8003DC40.h"
 #include "memory.h"
 #include "skybox_and_splitscreen.h"
+#include "course.h"
 extern const char* wario_stadium_dls[];
 extern s16 currentScreenSection;
 }
@@ -65,17 +66,24 @@ WarioStadium::WarioStadium() {
     this->gfx = d_course_wario_stadium_packed_dls;
     this->gfxSize = 5272;
     Props.textures = wario_stadium_textures;
-    Props.MinimapTexture = minimap_wario_stadium;
-    Props.MinimapDimensions =
-        IVector2D(ResourceGetTexWidthByName(Props.MinimapTexture), ResourceGetTexHeightByName(Props.MinimapTexture));
+    Props.Minimap.Texture = gTextureCourseOutlineWarioStadium;
+    Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
+    Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
+    Props.Minimap.Pos[0].X = 262;
+    Props.Minimap.Pos[0].Y = 170;
+    Props.Minimap.PlayerX = 53;
+    Props.Minimap.PlayerY = 35;
+    Props.Minimap.PlayerScaleFactor = 0.0155f;
+    Props.Minimap.FinishlineX = 0;
+    Props.Minimap.FinishlineY = 0;
 
-    Props.Name = "wario stadium";
-    Props.DebugName = "stadium";
-    Props.CourseLength = "1591m";
+    Props.SetText(Props.Name, "wario stadium", sizeof(Props.Name));
+    Props.SetText(Props.DebugName, "stadium", sizeof(Props.DebugName));
+    Props.SetText(Props.CourseLength, "1591m", sizeof(Props.CourseLength));
+
     Props.AIBehaviour = D_0D009310;
     Props.AIMaximumSeparation = 50.0f;
     Props.AIMinimumSeparation = 0.6f;
-    Props.SomePtr = D_800DCAF4;
     Props.AISteeringSensitivity = 53;
 
     Props.NearPersp = 10.0f;
@@ -83,40 +91,45 @@ WarioStadium::WarioStadium() {
 
     Props.PathSizes = { 0x640, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 };
 
-    Props.D_0D009418[0] = 4.1666665f;
-    Props.D_0D009418[1] = 5.5833334f;
-    Props.D_0D009418[2] = 6.1666665f;
-    Props.D_0D009418[3] = 6.75f;
+    Props.CurveTargetSpeed[0] = 4.1666665f;
+    Props.CurveTargetSpeed[1] = 5.5833334f;
+    Props.CurveTargetSpeed[2] = 6.1666665f;
+    Props.CurveTargetSpeed[3] = 6.75f;
 
-    Props.D_0D009568[0] = 3.75f;
-    Props.D_0D009568[1] = 5.1666665f;
-    Props.D_0D009568[2] = 5.75f;
-    Props.D_0D009568[3] = 6.3333334f;
+    Props.NormalTargetSpeed[0] = 3.75f;
+    Props.NormalTargetSpeed[1] = 5.1666665f;
+    Props.NormalTargetSpeed[2] = 5.75f;
+    Props.NormalTargetSpeed[3] = 6.3333334f;
 
     Props.D_0D0096B8[0] = 3.3333332f;
     Props.D_0D0096B8[1] = 3.9166667f;
     Props.D_0D0096B8[2] = 4.5f;
     Props.D_0D0096B8[3] = 5.0833334f;
 
-    Props.D_0D009808[0] = 3.75f;
-    Props.D_0D009808[1] = 5.1666665f;
-    Props.D_0D009808[2] = 5.75f;
-    Props.D_0D009808[3] = 6.3333334f;
+    Props.OffTrackTargetSpeed[0] = 3.75f;
+    Props.OffTrackTargetSpeed[1] = 5.1666665f;
+    Props.OffTrackTargetSpeed[2] = 5.75f;
+    Props.OffTrackTargetSpeed[3] = 6.3333334f;
 
-    Props.PathTable[0] = (TrackWaypoint*) LOAD_ASSET_RAW(d_course_wario_stadium_unknown_waypoints);
+    Props.PathTable[0] = (TrackPathPoint*) LOAD_ASSET_RAW(d_course_wario_stadium_unknown_waypoints);
     Props.PathTable[1] = NULL;
     Props.PathTable[2] = NULL;
     Props.PathTable[3] = NULL;
 
-    Props.PathTable2[0] = (TrackWaypoint*) LOAD_ASSET_RAW(d_course_wario_stadium_track_waypoints);
+    Props.PathTable2[0] = (TrackPathPoint*) LOAD_ASSET_RAW(d_course_wario_stadium_track_waypoints);
     Props.PathTable2[1] = NULL;
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
     Props.Clouds = gWarioStadiumStars;
     Props.CloudList = gWarioStadiumStars;
-    Props.MinimapFinishlineX = 0;
-    Props.MinimapFinishlineY = 0;
+
+    FVector finish;
+    finish.x = (gIsMirrorMode != 0) ? 13 + 12.0f : 13 - 12.0f;
+    finish.y = (f32) (0 - 15);
+    finish.z = -9;
+
+    this->FinishlineSpawnPoint = finish;
 
     Props.Skybox.TopRight = { 20, 30, 56 };
     Props.Skybox.BottomRight = { 40, 60, 110 };
@@ -132,9 +145,9 @@ WarioStadium::WarioStadium() {
 void WarioStadium::Load() {
     Course::Load();
 
-    parse_course_displaylists((TrackSectionsI*) LOAD_ASSET_RAW(d_course_wario_stadium_addr));
+    parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_wario_stadium_addr));
     func_80295C6C();
-    D_8015F8E4 = gCourseMinY - 10.0f;
+    Props.WaterLevel = gCourseMinY - 10.0f;
     // d_course_wario_stadium_packed_dl_C50
     find_vtx_and_set_colours(segmented_gfx_to_virtual((void*) 0x07000C50), 100, 255, 255, 255);
     // d_course_wario_stadium_packed_dl_BD8
@@ -157,38 +170,30 @@ void WarioStadium::LoadTextures() {
 }
 
 void WarioStadium::BeginPlay() {
-    Vec3f finish;
-    finish[0] = (gIsMirrorMode != 0) ? D_80164490->posX + 12.0f : D_80164490->posX - 12.0f;
-    (gIsMirrorMode != 0) ? D_80164490->posX + 12.0f : D_80164490->posX - 12.0f;
-    finish[1] = D_8015F8D0[1] = (f32) (D_80164490->posY - 15);
-    finish[2] = D_8015F8D0[2] = D_80164490->posZ;
-
-    gWorldInstance.AddActor(new AFinishline(finish));
-
     spawn_all_item_boxes((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_wario_stadium_item_box_spawns));
 
-    Vec3f pos = { -131.0f, 83.0f, 286.0f };
-    pos[0] *= gCourseDirection;
+    FVector pos = { -131.0f, 83.0f, 286.0f };
+    pos.x *= gCourseDirection;
     gWorldInstance.AddActor(new AWarioSign(pos));
 
-    Vec3f pos2 = { -2353.0f, 72.0f, -1608.0f };
-    pos2[0] *= gCourseDirection;
+    FVector pos2 = { -2353.0f, 72.0f, -1608.0f };
+    pos2.x *= gCourseDirection;
     gWorldInstance.AddActor(new AWarioSign(pos2));
 
-    Vec3f pos3 = { -2622.0f, 79.0f, 739.0f };
-    pos3[0] *= gCourseDirection;
+    FVector pos3 = { -2622.0f, 79.0f, 739.0f };
+    pos3.x *= gCourseDirection;
     gWorldInstance.AddActor(new AWarioSign(pos3));
 
     if (gModeSelection == VERSUS) {
-        Vec3f pos = { 0, 0, 0 };
+        FVector pos = { 0, 0, 0 };
 
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][50], 50, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][100], 100, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][150], 150, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][200], 200, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][250], 250, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][100], 100, 1, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][150], 150, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][200], 200, 1, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][250], 250, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
     }
 }
 
@@ -198,14 +203,6 @@ void WarioStadium::InitClouds() {
 
 void WarioStadium::UpdateClouds(s32 sp1C, Camera* camera) {
     update_stars(sp1C, camera, this->Props.CloudList);
-}
-
-// Likely sets minimap boundaries
-void WarioStadium::MinimapSettings() {
-    D_8018D2A0 = 0.0155f;
-    D_8018D2C0[0] = 0x0106;
-    D_8018D2E0 = 53;
-    D_8018D2E8 = 35;
 }
 
 void WarioStadium::InitCourseObjects() {
@@ -226,13 +223,6 @@ void WarioStadium::WhatDoesThisDo(Player* player, int8_t playerId) {
 }
 
 void WarioStadium::WhatDoesThisDoAI(Player* player, int8_t playerId) {
-}
-
-// Positions the finishline on the minimap
-void WarioStadium::MinimapFinishlinePosition() {
-    //! todo: Place hard-coded values here.
-    draw_hud_2d_texture_8x8(this->Props.MinimapFinishlineX, this->Props.MinimapFinishlineY,
-                            (u8*) common_texture_minimap_finish_line);
 }
 
 void WarioStadium::Jumbotron() {
@@ -317,12 +307,21 @@ void WarioStadium::Render(struct UnkStruct_800DC5EC* arg0) {
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
 
-    if (func_80290C20(arg0->camera) == 1) {
+    // Invalidate Jumbotron textures so they update each frame
+    // This could be more efficient if we exposed the non-opcode based invalidation to be called
+    // inside copy_framebuffers_port
+    gSPInvalidateTexCache(gDisplayListHead++, gSegmentTable[5] + 0x8800);
+    gSPInvalidateTexCache(gDisplayListHead++, gSegmentTable[5] + 0x9800);
+    gSPInvalidateTexCache(gDisplayListHead++, gSegmentTable[5] + 0xA800);
+    gSPInvalidateTexCache(gDisplayListHead++, gSegmentTable[5] + 0xB800);
+    gSPInvalidateTexCache(gDisplayListHead++, gSegmentTable[5] + 0xC800);
+    gSPInvalidateTexCache(gDisplayListHead++, gSegmentTable[5] + 0xD800);
 
+    if (func_80290C20(arg0->camera) == 1) {
         gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
         gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         // d_course_wario_stadium_packed_dl_A0C8
-        gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*) 0x0700A0C8));
+        gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x0700A0C8))));
     }
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATERGBA, G_CC_MODULATERGBA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
@@ -331,12 +330,12 @@ void WarioStadium::Render(struct UnkStruct_800DC5EC* arg0) {
     render_course_segments(wario_stadium_dls, arg0);
 
     // d_course_wario_stadium_packed_dl_A228
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*) 0x0700A228));
+    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x0700A228))));
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
     // d_course_wario_stadium_packed_dl_A88
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*) 0x07000A88));
+    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000A88))));
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
 
     D_800DC5DC = 88;
@@ -349,7 +348,7 @@ void WarioStadium::Render(struct UnkStruct_800DC5EC* arg0) {
             prevFrame = 0;
         }
         currentScreenSection++;
-        if (currentScreenSection > 5) {
+        if (currentScreenSection >= 6) {
             currentScreenSection = 0;
         }
 
@@ -364,9 +363,6 @@ void WarioStadium::Render(struct UnkStruct_800DC5EC* arg0) {
 
 void WarioStadium::RenderCredits() {
     gSPDisplayList(gDisplayListHead++, (Gfx*) (d_course_wario_stadium_dl_CA78));
-}
-
-void WarioStadium::Collision() {
 }
 
 void WarioStadium::SomeCollisionThing(Player* player, Vec3f arg1, Vec3f arg2, Vec3f arg3, f32* arg4, f32* arg5,

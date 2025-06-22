@@ -977,7 +977,7 @@ void func_80089020(s32 playerId, f32* arg1) {
         var_f2 = -*arg1;
     }
     if (player->effects & 0xC0) {
-        if (GetCourse() == GetSherbetLand()) {
+        if (IsSherbetLand()) {
             if (var_f2 <= 0.5) {
                 var_f0 = 0.025f;
             } else if (var_f2 <= 2.0) {
@@ -998,7 +998,7 @@ void func_80089020(s32 playerId, f32* arg1) {
                 var_f0 = 0.25f;
             }
         }
-    } else if (GetCourse() == GetSherbetLand()) {
+    } else if (IsSherbetLand()) {
         if (var_f2 <= 0.5) {
             var_f0 = 0.025f;
         } else if (var_f2 <= 2.0) {
@@ -1070,8 +1070,7 @@ void func_80089474(s32 objectIndex, s32 playerId, f32 arg2, f32 arg3, u32 soundB
     if (is_obj_flag_status_active(objectIndex, 0x04000000) != 0) {
         func_80072180();
     }
-    if ((func_8008933C(player, objectIndex, arg2, arg3) >= 4.0) &&
-        ((player->type & PLAYER_KART_AI) != PLAYER_KART_AI)) {
+    if ((func_8008933C(player, objectIndex, arg2, arg3) >= 4.0) && ((player->type & PLAYER_CPU) != PLAYER_CPU)) {
         func_800C9060(playerId, soundBits);
     }
 }
@@ -1081,8 +1080,7 @@ void func_80089538(s32 objectIndex, s32 playerId, f32 arg2, f32 arg3, u32 soundB
     Player* player;
 
     player = &gPlayerOne[playerId];
-    if ((func_8008933C(player, objectIndex, arg2, arg3) >= 4.0) &&
-        ((player->type & PLAYER_KART_AI) != PLAYER_KART_AI)) {
+    if ((func_8008933C(player, objectIndex, arg2, arg3) >= 4.0) && ((player->type & PLAYER_CPU) != PLAYER_CPU)) {
         func_800C9060((u8) playerId, soundBits);
     }
 }
@@ -1144,7 +1142,7 @@ void func_80089820(s32 objectIndex, f32 arg1, f32 arg2, u32 arg3) {
                             func_80072180();
                         }
                         if ((func_8008933C(player, objectIndex, arg1, arg2 * 1.1) >= 4.0) &&
-                            ((player->type & PLAYER_KART_AI) != PLAYER_KART_AI)) {
+                            ((player->type & PLAYER_CPU) != PLAYER_CPU)) {
                             func_800C9060(var_s1, arg3);
                         }
                     }

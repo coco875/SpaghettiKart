@@ -1,5 +1,5 @@
-#ifndef CODE_8001F980_H
-#define CODE_8001F980_H
+#ifndef RENDER_PLAYER_H
+#define RENDER_PLAYER_H
 
 #include <common_structs.h>
 #include "buffers.h"
@@ -29,7 +29,6 @@ void func_80021D40(void);
 void func_80021DA8(void);
 void mtxf_translate_rotate(Mat4, Vec3f, Vec3s);
 void func_80021F50(Mat4, Vec3f);
-void mtxf_scale2(Mat4, f32);
 void failed_fixed_point_matrix_conversion(Mtx*, Mat4);
 void convert_to_fixed_point_matrix(Mtx*, Mat4);
 bool adjust_angle(s16*, s16, s16);
@@ -279,4 +278,4 @@ extern s16 D_80165150[4][8];
 extern s16 D_80165190[4][8];
 extern s16 D_801651D0[4][8];
 
-#endif
+#endif // RENDER_PLAYER_H

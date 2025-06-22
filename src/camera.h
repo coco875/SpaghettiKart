@@ -59,6 +59,7 @@ typedef struct {
 } Camera; /* size = 0xB8 */
 
 void camera_init(f32, f32, f32, s16, u32, s32);
+void freecam_init(f32 posX, f32 posY, f32 posZ, s16 rot, u32 arg4, s32 cameraId);
 void func_8001CA10(Camera*);
 void func_8001CA24(Player*, f32);
 void func_8001CA78(Player*, Camera*, Vec3f, f32*, f32*, f32*, s32, s32);
@@ -81,6 +82,7 @@ extern Camera* camera1;
 extern Camera* camera2;
 extern Camera* camera3;
 extern Camera* camera4;
+extern Camera* gFreecamCamera;
 
 // end of camera.c variables
 

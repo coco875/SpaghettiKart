@@ -1,8 +1,10 @@
 #include "Engine.h"
 
 #include "StringHelper.h"
+#include "GameExtractor.h"
 #include "ui/ImguiUI.h"
 #include "libultraship/src/Context.h"
+#include "libultraship/src/controller/controldevice/controller/mapping/ControllerDefaultMappings.h"
 #include "resource/type/ResourceType.h"
 #include "resource/importers/GenericArrayFactory.h"
 #include "resource/importers/AudioBankFactory.h"
@@ -10,22 +12,33 @@
 #include "resource/importers/AudioSequenceFactory.h"
 #include "resource/importers/Vec3fFactory.h"
 #include "resource/importers/Vec3sFactory.h"
-#include "resource/importers/KartAIFactory.h"
+#include "resource/importers/CPUFactory.h"
 #include "resource/importers/CourseVtxFactory.h"
 #include "resource/importers/TrackSectionsFactory.h"
-#include "resource/importers/TrackWaypointFactory.h"
+#include "resource/importers/TrackPathPointFactory.h"
 #include "resource/importers/ActorSpawnDataFactory.h"
 #include "resource/importers/UnkActorSpawnDataFactory.h"
 #include "resource/importers/ArrayFactory.h"
-#include <Fast3D/Fast3dWindow.h>
+#include "resource/importers/MinimapFactory.h"
+#include <Fonts.h>
+#include "window/gui/resource/Font.h"
+#include "window/gui/resource/FontFactory.h"
+#include "SpaghettiGui.h"
 
-#include <Fast3D/gfx_pc.h>
-#include <Fast3D/gfx_rendering_api.h>
+#include "port/interpolation/FrameInterpolation.h"
+#include <graphic/Fast3D/Fast3dWindow.h>
+#include <graphic/Fast3D/interpreter.h>
+// #include <Fast3D/gfx_rendering_api.h>
 #include <SDL2/SDL.h>
 
 #include <utility>
 
+#ifdef __SWITCH__
+#include <port/switch/SwitchImpl.h>
+#endif
+
 extern "C" {
+bool prevAltAssets = false;
 float gInterpolationStep = 0.0f;
 #include <macros.h>
 #include <DisplayListFactory.h>
@@ -37,6 +50,13 @@ float gInterpolationStep = 0.0f;
 // #include <PngFactory.h>
 #include "audio/internal.h"
 #include "audio/GameAudio.h"
+}
+
+Fast::Interpreter* GetInterpreter() {
+    return static_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow())
+        ->GetInterpreterWeak()
+        .lock()
+        .get();
 }
 
 GameEngine* GameEngine::Instance;
@@ -55,27 +75,46 @@ bool CreateDirectoryRecursive(std::string const& dirName, std::error_code& err) 
 }
 
 GameEngine::GameEngine() {
-    std::vector<std::string> OTRFiles;
-    if (const std::string spaghetti_path = Ship::Context::GetPathRelativeToAppDirectory("spaghetti.o2r");
-        std::filesystem::exists(spaghetti_path)) {
-        OTRFiles.push_back(spaghetti_path);
+
+    const std::string main_path = Ship::Context::GetPathRelativeToAppDirectory("mk64.o2r");
+    const std::string assets_path = Ship::Context::LocateFileAcrossAppDirs("spaghetti.o2r");
+
+    std::vector<std::string> archiveFiles;
+
+#ifdef __SWITCH__
+    Ship::Switch::Init(Ship::PreInitPhase);
+    Ship::Switch::Init(Ship::PostInitPhase);
+#endif
+
+#ifdef _WIN32
+    AllocConsole();
+#endif
+
+    if (std::filesystem::exists(main_path)) {
+        archiveFiles.push_back(main_path);
+    } else {
+        if (ShowYesNoBox("No O2R Files", "No O2R files found. Generate one now?") == IDYES) {
+            if (!GenAssetFile()) {
+                ShowMessage("Error", "An error occured, no O2R file was generated.\n\nExiting...");
+                exit(1);
+            } else {
+                archiveFiles.push_back(main_path);
+            }
+        } else {
+            exit(1);
+        }
     }
-    if (const std::string ship_otr_path = Ship::Context::GetPathRelativeToAppBundle("ship.o2r");
-        std::filesystem::exists(ship_otr_path)) {
-        OTRFiles.push_back(ship_otr_path);
-    }
-    std::error_code err;
-    if (!CreateDirectoryRecursive("mods", err)) {
-        // Report the error:
-        SPDLOG_ERROR("CreateDirectoryRecursive FAILED, err: {}", err.message());
+
+    if (std::filesystem::exists(assets_path)) {
+        archiveFiles.push_back(assets_path);
     }
     if (const std::string patches_path = Ship::Context::GetPathRelativeToAppDirectory("mods");
         !patches_path.empty() && std::filesystem::exists(patches_path)) {
         if (std::filesystem::is_directory(patches_path)) {
             for (const auto& p : std::filesystem::recursive_directory_iterator(patches_path)) {
                 auto ext = p.path().extension().string();
-                if (StringHelper::IEquals(ext, ".otr") || StringHelper::IEquals(ext, ".o2r")) {
-                    OTRFiles.push_back(p.path().generic_string());
+                if (StringHelper::IEquals(ext, ".zip") || StringHelper::IEquals(ext, ".o2r")) {
+                    archiveFiles.push_back(p.path().generic_string());
                 }
             }
         }
@@ -87,18 +126,77 @@ GameEngine::GameEngine() {
     this->context->InitConsoleVariables(); // without this line the controldeck constructor failes in
                                            // ShipDeviceIndexMappingManager::UpdateControllerNamesFromConfig()
 
-    auto controlDeck = std::make_shared<LUS::ControlDeck>();
+        auto defaultMappings = std::make_shared<Ship::ControllerDefaultMappings>(
+        // KeyboardKeyToButtonMappings
+        std::unordered_map<CONTROLLERBUTTONS_T, std::unordered_set<Ship::KbScancode>>{
+            { BTN_A, { Ship::KbScancode::LUS_KB_SHIFT} },
+            { BTN_B, { Ship::KbScancode::LUS_KB_CONTROL} },
+            { BTN_L, { Ship::KbScancode::LUS_KB_Q} },
+            { BTN_R, { Ship::KbScancode::LUS_KB_SPACE} },
+            { BTN_Z, { Ship::KbScancode::LUS_KB_Z} },
+            { BTN_START, { Ship::KbScancode::LUS_KB_ENTER} },
+            { BTN_CUP, { Ship::KbScancode::LUS_KB_T} },
+            { BTN_CDOWN, { Ship::KbScancode::LUS_KB_G} },
+            { BTN_CLEFT, { Ship::KbScancode::LUS_KB_F} },
+            { BTN_CRIGHT, { Ship::KbScancode::LUS_KB_H} },
+            { BTN_DUP, { Ship::KbScancode::LUS_KB_NUMPAD8} },
+            { BTN_DDOWN, { Ship::KbScancode::LUS_KB_NUMPAD2} },
+            { BTN_DLEFT, { Ship::KbScancode::LUS_KB_NUMPAD4} },
+            { BTN_DRIGHT, { Ship::KbScancode::LUS_KB_NUMPAD6} }
+        },
+        // KeyboardKeyToAxisDirectionMappings - use built-in LUS defaults
+        std::unordered_map<Ship::StickIndex, std::vector<std::pair<Ship::Direction, Ship::KbScancode>>>{
+            { Ship::StickIndex::LEFT_STICK, {
+                { Ship::Direction::UP, Ship::KbScancode::LUS_KB_ARROWKEY_UP},
+                { Ship::Direction::DOWN, Ship::KbScancode::LUS_KB_ARROWKEY_DOWN},
+                { Ship::Direction::LEFT, Ship::KbScancode::LUS_KB_ARROWKEY_LEFT},
+                { Ship::Direction::RIGHT, Ship::KbScancode::LUS_KB_ARROWKEY_RIGHT}
+            }}
+        },
+        // SDLButtonToButtonMappings
+        std::unordered_map<CONTROLLERBUTTONS_T, std::unordered_set<SDL_GameControllerButton>>{
+            { BTN_A, { SDL_CONTROLLER_BUTTON_A } },
+            { BTN_B, { SDL_CONTROLLER_BUTTON_X } },
+            { BTN_START, { SDL_CONTROLLER_BUTTON_START } },
+            { BTN_CLEFT, { SDL_CONTROLLER_BUTTON_Y } },
+            { BTN_CDOWN, { SDL_CONTROLLER_BUTTON_B } },
+            { BTN_DUP, { SDL_CONTROLLER_BUTTON_DPAD_UP } },
+            { BTN_DDOWN, { SDL_CONTROLLER_BUTTON_DPAD_DOWN } },
+            { BTN_DLEFT, { SDL_CONTROLLER_BUTTON_DPAD_LEFT } },
+            { BTN_DRIGHT, { SDL_CONTROLLER_BUTTON_DPAD_RIGHT } },
+            { BTN_R, { SDL_CONTROLLER_BUTTON_RIGHTSHOULDER } },
+            { BTN_L, { SDL_CONTROLLER_BUTTON_LEFTSHOULDER } }
+        },
+        // SDLButtonToAxisDirectionMappings - use built-in LUS defaults
+        std::unordered_map<Ship::StickIndex, std::vector<std::pair<Ship::Direction, SDL_GameControllerButton>>>(),
+        // SDLAxisDirectionToButtonMappings
+        std::unordered_map<CONTROLLERBUTTONS_T, std::vector<std::pair<SDL_GameControllerAxis, int32_t>>>{
+            { BTN_R, { { SDL_CONTROLLER_AXIS_TRIGGERRIGHT, 1 } } },
+            { BTN_Z, { { SDL_CONTROLLER_AXIS_TRIGGERLEFT, 1 } } },
+            { BTN_CUP, { { SDL_CONTROLLER_AXIS_RIGHTY, -1 } } },
+            { BTN_CRIGHT, { { SDL_CONTROLLER_AXIS_RIGHTX, 1 } } }
+        },
+        // SDLAxisDirectionToAxisDirectionMappings - use built-in LUS defaults
+        std::unordered_map<Ship::StickIndex, std::vector<std::pair<Ship::Direction, std::pair<SDL_GameControllerAxis, int32_t>>>>()
+    );
+    auto controlDeck = std::make_shared<LUS::ControlDeck>(std::vector<CONTROLLERBUTTONS_T>(), defaultMappings);
 
-    this->context->InitResourceManager(OTRFiles, {}, 3); // without this line InitWindow fails in Gui::Init()
+    this->context->InitResourceManager(archiveFiles, {}, 3); // without this line InitWindow fails in Gui::Init()
     this->context->InitConsole(); // without this line the GuiWindow constructor fails in ConsoleWindow::InitElement()
 
-    auto wnd = std::make_shared<Fast::Fast3dWindow>(std::vector<std::shared_ptr<Ship::GuiWindow>>({}));
+    auto gui = std::make_shared<Ship::SpaghettiGui>(std::vector<std::shared_ptr<Ship::GuiWindow>>({}));
+    auto wnd = std::make_shared<Fast::Fast3dWindow>(gui);
+
+    // auto wnd = std::make_shared<Fast::Fast3dWindow>(std::vector<std::shared_ptr<Ship::GuiWindow>>({}));
     // auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
 
-    this->context->Init(OTRFiles, {}, 3, { 26800, 512, 1100 }, wnd, controlDeck);
+    this->context->Init(archiveFiles, {}, 3, { 26800, 512, 1100 }, wnd, controlDeck);
 
-    // this->context = Ship::Context::CreateInstance("Spaghettify", "skart64", "spaghettify.cfg.json", OTRFiles, {}, 3,
-    //                                               { 26800, 512, 1100 });
+#ifndef __SWITCH__
+    Ship::Context::GetInstance()->GetLogger()->set_level(
+        (spdlog::level::level_enum) CVarGetInteger("gDeveloperTools.LogLevel", 1));
+    Ship::Context::GetInstance()->GetLogger()->set_pattern("[%H:%M:%S.%e] [%s:%#] [%l] %v");
+#endif
 
     wnd->SetRendererUCode(ucode_f3dex);
     this->context->InitGfxDebugger();
@@ -141,24 +239,116 @@ GameEngine::GameEngine() {
                                     "Lights1", static_cast<uint32_t>(Fast::ResourceType::Light), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryArrayV0>(), RESOURCE_FORMAT_BINARY,
                                     "Array", static_cast<uint32_t>(MK64::ResourceType::MK_Array), 0);
-    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryKartAIV0>(), RESOURCE_FORMAT_BINARY,
-                                    "KartAI", static_cast<uint32_t>(MK64::ResourceType::KartAI), 0);
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryCPUV0>(), RESOURCE_FORMAT_BINARY, "CPU",
+                                    static_cast<uint32_t>(MK64::ResourceType::CPU), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryCourseVtxV0>(), RESOURCE_FORMAT_BINARY,
                                     "CourseVtx", static_cast<uint32_t>(MK64::ResourceType::CourseVertex), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryTrackSectionsV0>(),
                                     RESOURCE_FORMAT_BINARY, "TrackSections",
                                     static_cast<uint32_t>(MK64::ResourceType::TrackSection), 0);
-    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryTrackWaypointsV0>(),
-                                    RESOURCE_FORMAT_BINARY, "Waypoints",
-                                    static_cast<uint32_t>(MK64::ResourceType::Waypoints), 0);
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryXMLTrackSectionsV0>(),
+                                    RESOURCE_FORMAT_XML, "TrackSections",
+                                    static_cast<uint32_t>(MK64::ResourceType::TrackSection), 0);
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryTrackPathPointsV0>(),
+                                    RESOURCE_FORMAT_BINARY, "Paths",
+                                    static_cast<uint32_t>(MK64::ResourceType::Paths), 0);
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryXMLTrackPathPointsV0>(),
+                                    RESOURCE_FORMAT_XML, "Paths",
+                                    static_cast<uint32_t>(MK64::ResourceType::Paths), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryActorSpawnDataV0>(),
                                     RESOURCE_FORMAT_BINARY, "SpawnData",
                                     static_cast<uint32_t>(MK64::ResourceType::SpawnData), 0);
     loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryUnkActorSpawnDataV0>(),
                                     RESOURCE_FORMAT_BINARY, "UnkSpawnData",
                                     static_cast<uint32_t>(MK64::ResourceType::UnkSpawnData), 0);
-    // loader->RegisterResourceFactory(std::make_shared<Fast::ResourceFactoryImageTexture>(), RESOURCE_FORMAT_IMG,
-    //                                 "Texture", static_cast<uint32_t>(Fast::ResourceType::Texture), 0);
+    loader->RegisterResourceFactory(std::make_shared<MK64::ResourceFactoryBinaryMinimapV0>(), RESOURCE_FORMAT_BINARY,
+                                    "Minimap", static_cast<uint32_t>(MK64::ResourceType::Minimap), 0);
+
+    fontMono = CreateFontWithSize(16.0f, "fonts/Inconsolata-Regular.ttf");
+    fontMonoLarger = CreateFontWithSize(20.0f, "fonts/Inconsolata-Regular.ttf");
+    fontMonoLargest = CreateFontWithSize(24.0f, "fonts/Inconsolata-Regular.ttf");
+    fontStandard = CreateFontWithSize(16.0f, "fonts/Montserrat-Regular.ttf");
+    fontStandardLarger = CreateFontWithSize(20.0f, "fonts/Montserrat-Regular.ttf");
+    fontStandardLargest = CreateFontWithSize(24.0f, "fonts/Montserrat-Regular.ttf");
+    ImGui::GetIO().FontDefault = fontMono;
+}
+
+bool GameEngine::GenAssetFile() {
+    auto extractor = new GameExtractor();
+
+    if (!extractor->SelectGameFromUI()) {
+        ShowMessage("Error", "No ROM selected.\n\nExiting...");
+        exit(1);
+    }
+
+    auto game = extractor->ValidateChecksum();
+    if (!game.has_value()) {
+        ShowMessage("Unsupported ROM",
+                    "The provided ROM is not supported.\n\nCheck the readme for a list of supported versions.");
+        exit(1);
+    }
+
+    ShowMessage(("Found " + game.value()).c_str(),
+                "The extraction process will now begin.\n\nThis may take a few minutes.", SDL_MESSAGEBOX_INFORMATION);
+
+    return extractor->GenerateOTR();
+}
+
+uint32_t GameEngine::GetInterpolationFPS() {
+    if (CVarGetInteger("gMatchRefreshRate", 0)) {
+        return Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate();
+
+    } else if (CVarGetInteger("gVsyncEnabled", 1) ||
+               !Ship::Context::GetInstance()->GetWindow()->CanDisableVerticalSync()) {
+        return std::min<uint32_t>(Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate(),
+                                  CVarGetInteger("gInterpolationFPS", 30));
+    }
+
+    return CVarGetInteger("gInterpolationFPS", 30);
+}
+
+uint32_t GameEngine::GetInterpolationFrameCount() {
+    return ceil((float) GetInterpolationFPS() / (60.0f / 2 /*gVIsPerFrame*/));
+}
+
+extern "C" uint32_t GameEngine_GetInterpolationFrameCount() {
+    return GameEngine::GetInterpolationFrameCount();
+}
+
+void GameEngine::ShowMessage(const char* title, const char* message, SDL_MessageBoxFlags type) {
+#if defined(__SWITCH__)
+    SPDLOG_ERROR(message);
+#else
+    SDL_ShowSimpleMessageBox(type, title, message, nullptr);
+    SPDLOG_ERROR(message);
+#endif
+}
+
+int GameEngine::ShowYesNoBox(const char* title, const char* box) {
+    int ret;
+#ifdef _WIN32
+    ret = MessageBoxA(nullptr, box, title, MB_YESNO | MB_ICONQUESTION);
+#elif defined(__SWITCH__)
+    SPDLOG_ERROR(box);
+    return IDYES;
+#else
+    SDL_MessageBoxData boxData = { 0 };
+    SDL_MessageBoxButtonData buttons[2] = { { 0 } };
+
+    buttons[0].buttonid = IDYES;
+    buttons[0].text = "Yes";
+    buttons[0].flags = SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT;
+    buttons[1].buttonid = IDNO;
+    buttons[1].text = "No";
+    buttons[1].flags = SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT;
+    boxData.numbuttons = 2;
+    boxData.flags = SDL_MESSAGEBOX_INFORMATION;
+    boxData.message = box;
+    boxData.title = title;
+    boxData.buttons = buttons;
+    SDL_ShowMessageBox(&boxData, &ret);
+#endif
+    return ret;
 }
 
 void GameEngine::Create() {
@@ -172,6 +362,12 @@ void GameEngine::Create() {
 
 void GameEngine::Destroy() {
     AudioExit();
+#ifdef __SWITCH__
+    Ship::Switch::Exit();
+#endif
+    GameUI::Destroy();
+    delete GameEngine::Instance;
+    GameEngine::Instance = nullptr;
 }
 
 bool ShouldClearTextureCacheAtEndOfFrame = false;
@@ -191,7 +387,6 @@ void GameEngine::StartFrame() const {
         default:
             break;
     }
-    // this->context->GetWindow()->StartFrame();
 }
 
 // void GameEngine::ProcessFrame(void (*run_one_game_iter)()) const {
@@ -199,30 +394,77 @@ void GameEngine::StartFrame() const {
 //     Instance->context->GetWindow()->MainLoop(run_one_game_iter);
 // }
 
-void GameEngine::RunCommands(Gfx* Commands) {
-    auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(GameEngine::Instance->context->GetWindow());
+void GameEngine::RunCommands(Gfx* Commands, const std::vector<std::unordered_map<Mtx*, MtxF>>& mtx_replacements) {
+    auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
 
     if (wnd == nullptr) {
         return;
     }
 
+    auto interpreter = wnd->GetInterpreterWeak().lock().get();
+
     // Process window events for resize, mouse, keyboard events
     wnd->HandleEvents();
-    wnd->DrawAndRunGraphicsCommands(Commands, {});
 
-    if (ShouldClearTextureCacheAtEndOfFrame) {
+    interpreter->mInterpolationIndex = 0;
+
+    for (const auto& m : mtx_replacements) {
+        wnd->DrawAndRunGraphicsCommands(Commands, m);
+        interpreter->mInterpolationIndex++;
+    }
+
+    bool curAltAssets = CVarGetInteger("gEnhancements.Mods.AlternateAssets", 0);
+    if (prevAltAssets != curAltAssets) {
+        prevAltAssets = curAltAssets;
+        Ship::Context::GetInstance()->GetResourceManager()->SetAltAssetsEnabled(curAltAssets);
         gfx_texture_cache_clear();
-        ShouldClearTextureCacheAtEndOfFrame = false;
     }
 }
 
 void GameEngine::ProcessGfxCommands(Gfx* commands) {
-    RunCommands(commands);
+    std::vector<std::unordered_map<Mtx*, MtxF>> mtx_replacements;
+    int target_fps = GameEngine::Instance->GetInterpolationFPS();
+    if (CVarGetInteger("gModifyInterpolationTargetFPS", 0)) {
+        target_fps = CVarGetInteger("gInterpolationTargetFPS", 60);
+    }
+    static int last_fps;
+    static int last_update_rate;
+    static int time;
+    int fps = target_fps;
+    int original_fps = 60 / 2 /*gVIsPerFrame*/;
+
+    if (target_fps == 30 || original_fps > target_fps) {
+        fps = original_fps;
+    }
+
+    if (last_fps != fps || last_update_rate != 2 /*gVIsPerFrame*/) {
+        time = 0;
+    }
+
+    // time_base = fps * original_fps (one second)
+    int next_original_frame = fps;
+
+    while (time + original_fps <= next_original_frame) {
+        time += original_fps;
+        if (time != next_original_frame) {
+            mtx_replacements.push_back(FrameInterpolation_Interpolate((float) time / next_original_frame));
+        } else {
+            mtx_replacements.emplace_back();
+        }
+    }
+    // printf("mtxf size: %d\n", mtx_replacements.size());
+
+    time -= fps;
+
     auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
     if (wnd != nullptr) {
-        wnd->SetTargetFps(CVarGetInteger("gInterpolationFPS", 30));
+        wnd->SetTargetFps(GetInterpolationFPS());
         wnd->SetMaximumFrameLatency(1);
     }
+    RunCommands(commands, mtx_replacements);
+
+    last_fps = fps;
+    last_update_rate = 2;
 }
 
 // Audio
@@ -323,6 +565,39 @@ uint8_t GameEngine::GetBankIdByName(const std::string& name) {
     return 0;
 }
 
+ImFont* GameEngine::CreateFontWithSize(float size, std::string fontPath) {
+    auto mImGuiIo = &ImGui::GetIO();
+    ImFont* font;
+    if (fontPath == "") {
+        ImFontConfig fontCfg = ImFontConfig();
+        fontCfg.OversampleH = fontCfg.OversampleV = 1;
+        fontCfg.PixelSnapH = true;
+        fontCfg.SizePixels = size;
+        font = mImGuiIo->Fonts->AddFontDefault(&fontCfg);
+    } else {
+        auto initData = std::make_shared<Ship::ResourceInitData>();
+        initData->Format = RESOURCE_FORMAT_BINARY;
+        initData->Type = static_cast<uint32_t>(RESOURCE_TYPE_FONT);
+        initData->ResourceVersion = 0;
+        initData->Path = fontPath;
+        std::shared_ptr<Ship::Font> fontData = std::static_pointer_cast<Ship::Font>(
+            Ship::Context::GetInstance()->GetResourceManager()->LoadResource(fontPath, false, initData));
+        char* fontDataPtr = (char*) malloc(fontData->DataSize);
+        memcpy(fontDataPtr, fontData->Data, fontData->DataSize);
+        font = mImGuiIo->Fonts->AddFontFromMemoryTTF(fontDataPtr, fontData->DataSize, size);
+    }
+    // FontAwesome fonts need to have their sizes reduced by 2.0f/3.0f in order to align correctly
+    float iconFontSize = size * 2.0f / 3.0f;
+    static const ImWchar sIconsRanges[] = { ICON_MIN_FA, ICON_MAX_16_FA, 0 };
+    ImFontConfig iconsConfig;
+    iconsConfig.MergeMode = true;
+    iconsConfig.PixelSnapH = true;
+    iconsConfig.GlyphMinAdvanceX = iconFontSize;
+    mImGuiIo->Fonts->AddFontFromMemoryCompressedBase85TTF(fontawesome_compressed_data_base85, iconFontSize,
+                                                          &iconsConfig, sIconsRanges);
+    return font;
+}
+
 // End
 
 extern "C" uint32_t GameEngine_GetSampleRate() {
@@ -405,6 +680,7 @@ extern "C" void GameEngine_UnloadSequence(const uint8_t seqId) {
 }
 
 extern "C" float GameEngine_GetAspectRatio() {
+    auto gfx_current_dimensions = GetInterpreter()->mCurDimensions;
     return gfx_current_dimensions.aspect_ratio;
 }
 
@@ -478,7 +754,7 @@ extern "C" void Timer_SetValue(int32_t* address, int32_t value) {
 // }
 
 extern "C" float OTRGetAspectRatio() {
-    return gfx_current_dimensions.aspect_ratio;
+    return GetInterpreter()->mCurDimensions.aspect_ratio;
 }
 
 extern "C" float OTRGetDimensionFromLeftEdge(float v) {
@@ -521,10 +797,18 @@ extern "C" uint32_t OTRCalculateCenterOfAreaFromLeftEdge(int32_t center) {
 
 // Gets the width of the current render target area
 extern "C" uint32_t OTRGetGameRenderWidth() {
-    return gfx_current_dimensions.width;
+    return GetInterpreter()->mCurDimensions.width;
 }
 
 // Gets the height of the current render target area
 extern "C" uint32_t OTRGetGameRenderHeight() {
-    return gfx_current_dimensions.height;
+    return GetInterpreter()->mCurDimensions.height;
+}
+
+extern "C" uint32_t OTRGetGameViewportWidth() {
+    return GetInterpreter()->mGameWindowViewport.width;
+}
+
+extern "C" uint32_t OTRGetGameViewportHeight() {
+    return GetInterpreter()->mGameWindowViewport.height;
 }

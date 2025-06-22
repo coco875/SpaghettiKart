@@ -1,6 +1,7 @@
 #pragma once
 
 #include <libultraship.h>
+#include "CoreMath.h"
 
 extern "C" {
 #include "macros.h"
@@ -24,6 +25,10 @@ public:
     /* 0x24 */ Vec3f Velocity = {0, 0, 0};
     /* 0x30 */ Collision Unk30;
     uint8_t uuid[16];
+    const char* Name = "";
+    FVector Scale = {1, 1, 1};
+
+    Gfx* Model = NULL;
 
     virtual ~AActor() = default;  // Virtual destructor for proper cleanup in derived classes
 
@@ -33,6 +38,8 @@ public:
     virtual void Draw(Camera*);
     virtual void Collision(Player* player, AActor* actor);
     virtual void VehicleCollision(s32 playerId, Player* player);
+    void SetLocation(FVector pos);
+    FVector GetLocation() const;
 
     virtual void Destroy();
     virtual bool IsMod();

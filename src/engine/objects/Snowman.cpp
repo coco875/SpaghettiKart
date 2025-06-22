@@ -11,40 +11,42 @@ extern "C" {
 #include "code_80086E70.h"
 #include "code_80057C60.h"
 }
+#include "port/interpolation/FrameInterpolation.h"
 
 static const char* sSnowmanHeadList[] = { d_course_frappe_snowland_snowman_head };
 
 size_t OSnowman::_count = 0;
 
 OSnowman::OSnowman(const FVector& pos) {
+    Name = "Snowman";
     _idx = _count;
     _pos = pos;
 
-    s32 objectId = indexObjectList2[_idx];
-    init_object(objectId, 0);
-    gObjectList[objectId].origin_pos[0] = pos.x * xOrientation;
-    gObjectList[objectId].origin_pos[1] = pos.y + 5.0 + 3.0;
-    gObjectList[objectId].origin_pos[2] = pos.z;
-    gObjectList[objectId].pos[0] = pos.x * xOrientation; 
-    gObjectList[objectId].pos[1] = pos.y + 5.0 + 3.0;
-    gObjectList[objectId].pos[2] = pos.z;
+    find_unused_obj_index(&_headIndex);
+    init_object(_headIndex, 0);
+    _objectIndex = _headIndex;
+    gObjectList[_headIndex].origin_pos[0] = pos.x * xOrientation;
+    gObjectList[_headIndex].origin_pos[1] = pos.y + 5.0 + 3.0;
+    gObjectList[_headIndex].origin_pos[2] = pos.z;
+    gObjectList[_headIndex].pos[0] = pos.x * xOrientation;
+    gObjectList[_headIndex].pos[1] = pos.y + 5.0 + 3.0;
+    gObjectList[_headIndex].pos[2] = pos.z;
 
-    objectId = indexObjectList1[_idx];
-    init_object(objectId, 0);
-    gObjectList[objectId].origin_pos[0] = pos.x * xOrientation;
-    gObjectList[objectId].origin_pos[1] = pos.y + 3.0;
-    gObjectList[objectId].origin_pos[2] = pos.z;
-    gObjectList[objectId].unk_0D5 = 0; // Section Id no longer used.
+    find_unused_obj_index(&_bodyIndex);
+    init_object(_bodyIndex, 0);
+    gObjectList[_bodyIndex].origin_pos[0] = pos.x * xOrientation;
+    gObjectList[_bodyIndex].origin_pos[1] = pos.y + 3.0;
+    gObjectList[_bodyIndex].origin_pos[2] = pos.z;
+    gObjectList[_bodyIndex].unk_0D5 = 0; // Section Id no longer used.
 
-    gObjectList[objectId].pos[0] = pos.x * xOrientation; 
-    gObjectList[objectId].pos[1] = pos.y + 3.0;
-    gObjectList[objectId].pos[2] = pos.z;
+    gObjectList[_bodyIndex].pos[0] = pos.x * xOrientation;
+    gObjectList[_bodyIndex].pos[1] = pos.y + 3.0;
+    gObjectList[_bodyIndex].pos[2] = pos.z;
 
     _count++;
 }
 
 void OSnowman::Tick() {
-    s32 var_s0;
     s32 var_s3;
     s32 var_s4;
     s32 objectIndex;
@@ -52,8 +54,8 @@ void OSnowman::Tick() {
 
     //! @todo quick hack to add the snow particles on hit. Need to separate into its own class
     if (_idx == 0) {
-        for (var_s0 = 0; var_s0 < gObjectParticle2_SIZE; var_s0++) {
-            objectIndex = gObjectParticle2[var_s0];
+        for (size_t i = 0; i < gObjectParticle2_SIZE; i++) {
+            objectIndex = gObjectParticle2[i];
 
             if (objectIndex == DELETED_OBJECT_ID) {
                 continue;
@@ -66,19 +68,19 @@ void OSnowman::Tick() {
             if (gObjectList[objectIndex].state != 0) {
                 continue;
             }
-            delete_object_wrapper(&gObjectParticle2[var_s0]);
-            if (var_s0) {} // ??
+            delete_object_wrapper(&gObjectParticle2[i]);
         }
     }
 
-    //for (var_s0 = 0; var_s0 < NUM_SNOWMEN; var_s0++) {
-    var_s4 = indexObjectList1[_idx];
-    var_s3 = indexObjectList2[_idx];
+    // for (var_s0 = 0; var_s0 < NUM_SNOWMEN; var_s0++) {
+    var_s4 = _bodyIndex;
+    var_s3 = _headIndex;
     OSnowman::func_80083A94(var_s3); // snowman head
     OSnowman::func_80083C04(var_s4); // snowman body
     if (is_obj_index_flag_status_inactive(var_s4, 0x00001000) != 0) {
         object = &gObjectList[var_s4];
-        if ((are_players_in_course_section(object->unk_0D5 - 1, object->unk_0D5 + 1) != 0) && (func_80089B50(var_s4) != 0)) {
+        if ((are_players_in_course_section(object->unk_0D5 - 1, object->unk_0D5 + 1) != 0) &&
+            (func_80089B50(var_s4) != 0)) {
             set_object_flag(var_s4, 0x00001000);
             clear_object_flag(var_s4, 0x00000010);
             func_800726CC(var_s4, 0x0000000A);
@@ -93,6 +95,7 @@ void OSnowman::Tick() {
 }
 
 void OSnowman::Draw(s32 cameraId) {
+
     OSnowman::DrawHead(cameraId);
     OSnowman::DrawBody(cameraId);
 }
@@ -113,27 +116,33 @@ void OSnowman::func_800836F0(Vec3f pos) {
 void OSnowman::DrawHead(s32 cameraId) {
     s32 objectIndex;
     Camera* camera = &camera1[cameraId];
-    objectIndex = indexObjectList1[_idx];
+    objectIndex = _bodyIndex;
     if (gObjectList[objectIndex].state >= 2) {
         func_8008A364(objectIndex, cameraId, 0x2AABU, 0x00000258);
         if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {
+
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("OSnowman::DrawHead", (uintptr_t) &gObjectList[objectIndex]);
+
             D_80183E80[0] = (s16) gObjectList[objectIndex].orientation[0];
             D_80183E80[1] =
                 func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], camera->pos);
             D_80183E80[2] = (u16) gObjectList[objectIndex].orientation[2];
             if (is_obj_flag_status_active(objectIndex, 0x00000010) != 0) {
                 draw_2d_texture_at(gObjectList[objectIndex].pos, (u16*) D_80183E80,
-                                    gObjectList[objectIndex].sizeScaling, (u8*) gObjectList[objectIndex].activeTLUT,
-                                    (u8*)gObjectList[objectIndex].activeTexture, gObjectList[objectIndex].vertex,
-                                    0x00000040, 0x00000040, 0x00000040, 0x00000020);
+                                   gObjectList[objectIndex].sizeScaling, (u8*) gObjectList[objectIndex].activeTLUT,
+                                   (u8*) gObjectList[objectIndex].activeTexture, gObjectList[objectIndex].vertex,
+                                   0x00000040, 0x00000040, 0x00000040, 0x00000020);
             }
-            objectIndex = indexObjectList2[_idx];
+            objectIndex = _headIndex;
             D_80183E80[0] = (s16) gObjectList[objectIndex].orientation[0];
             D_80183E80[2] = (u16) gObjectList[objectIndex].orientation[2];
-            draw_2d_texture_at(gObjectList[objectIndex].pos, (u16*) D_80183E80,
-                                gObjectList[objectIndex].sizeScaling, (u8*) gObjectList[objectIndex].activeTLUT,
-                                (u8*)gObjectList[objectIndex].activeTexture, gObjectList[objectIndex].vertex, 0x00000040,
-                                0x00000040, 0x00000040, 0x00000020);
+            draw_2d_texture_at(gObjectList[objectIndex].pos, (u16*) D_80183E80, gObjectList[objectIndex].sizeScaling,
+                               (u8*) gObjectList[objectIndex].activeTLUT, (u8*) gObjectList[objectIndex].activeTexture,
+                               gObjectList[objectIndex].vertex, 0x00000040, 0x00000040, 0x00000040, 0x00000020);
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
     }
 }
@@ -146,7 +155,8 @@ void OSnowman::DrawBody(s32 cameraId) {
     Object* object;
 
     sp44 = &camera1[cameraId];
-    load_texture_and_tlut((u8*)d_course_frappe_snowland_snow_tlut, (u8*)d_course_frappe_snowland_snow, 0x00000020, 0x00000020);
+    load_texture_and_tlut((u8*) d_course_frappe_snowland_snow_tlut, (u8*) d_course_frappe_snowland_snow, 0x00000020,
+                          0x00000020);
 
     //! @todo quick hack to add the snow particles on hit. Need to separate into its own class
     if (_idx == 0) {
@@ -157,9 +167,16 @@ void OSnowman::DrawBody(s32 cameraId) {
                 if (object->state > 0) {
                     func_8008A364(objectIndex, cameraId, 0x2AABU, 0x000001F4);
                     if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {
+
+                        // @port: Tag the transform.
+                        FrameInterpolation_RecordOpenChild("OSnowman::DrawBody", (uintptr_t) object);
+
                         object->orientation[1] = func_800418AC(object->pos[0], object->pos[2], sp44->pos);
                         rsp_set_matrix_gObjectList(objectIndex);
-                        gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D0069E0);
+                        gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D0069E0);
+
+                        // @port Pop the transform id.
+                        FrameInterpolation_RecordCloseChild();
                     }
                 }
             }
@@ -215,7 +232,8 @@ void OSnowman::func_80083BE4(s32 objectIndex) {
 void OSnowman::func_80083868(s32 objectIndex) {
     Object* object;
     Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(D_0D0061B0);
-    init_texture_object(objectIndex, (u8*)d_course_frappe_snowland_snowman_tlut, (const char**)sSnowmanHeadList, 0x40U, (u16) 0x00000040);
+    init_texture_object(objectIndex, (u8*) d_course_frappe_snowland_snowman_tlut, (const char**) sSnowmanHeadList,
+                        0x40U, (u16) 0x00000040);
     object = &gObjectList[objectIndex];
     object->vertex = vtx;
     object->sizeScaling = 0.1f;
@@ -259,7 +277,8 @@ void OSnowman::func_80083948(s32 objectIndex) {
             break;
     }
     object_calculate_new_pos_offset(objectIndex);
-    OSnowman::func_80073D0C(objectIndex, &gObjectList[objectIndex].primAlpha, -0x00001000, 0x00001000, 0x00000400, 1, -1);
+    OSnowman::func_80073D0C(objectIndex, &gObjectList[objectIndex].primAlpha, -0x00001000, 0x00001000, 0x00000400, 1,
+                            -1);
     gObjectList[objectIndex].orientation[2] = gObjectList[objectIndex].primAlpha + 0x8000;
 }
 
@@ -285,7 +304,8 @@ static const char* sSnowmanBodyList[] = { d_course_frappe_snowland_snowman_body 
 
 void OSnowman::func_80083B0C(s32 objectIndex) {
     Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_hedgehog);
-    init_texture_object(objectIndex, (u8*)d_course_frappe_snowland_snowman_tlut, (const char**)sSnowmanBodyList, 0x40U, (u16) 0x00000040);
+    init_texture_object(objectIndex, (u8*) d_course_frappe_snowland_snowman_tlut, (const char**) sSnowmanBodyList,
+                        0x40U, (u16) 0x00000040);
     gObjectList[objectIndex].vertex = vtx;
     gObjectList[objectIndex].sizeScaling = 0.1f;
     gObjectList[objectIndex].textureListIndex = 0;
@@ -299,16 +319,15 @@ void OSnowman::func_80083B0C(s32 objectIndex) {
     set_object_flag(objectIndex, 0x04000210);
 }
 
-
 void OSnowman::func_80083538(s32 objectIndex, Vec3f arg1, s32 arg2, s32 arg3) {
     Object* object;
 
     init_object(objectIndex, 0);
     object = &gObjectList[objectIndex];
-    object->activeTexture = (const char*)d_course_frappe_snowland_snow;
-    object->textureList = (const char**)d_course_frappe_snowland_snow;
+    object->activeTexture = (const char*) d_course_frappe_snowland_snow;
+    object->textureList = (const char**) d_course_frappe_snowland_snow;
     object->activeTLUT = d_course_frappe_snowland_snow_tlut;
-    object->tlutList = (u8*)d_course_frappe_snowland_snow_tlut;
+    object->tlutList = (u8*) d_course_frappe_snowland_snow_tlut;
     object->sizeScaling = random_int(0x0064U);
     object->sizeScaling = (object->sizeScaling * 0.001) + 0.05;
     object->velocity[1] = random_int(0x0014U);

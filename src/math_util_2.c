@@ -15,8 +15,12 @@
 
 #include "port/Engine.h"
 #include "engine/Matrix.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 #pragma intrinsic(sqrtf)
+
+Mat4 sInterpolationMatrixStack[0x1000];
+Mat4* gInterpolationMatrix = &sInterpolationMatrixStack[0];
 
 UNUSED void operator_or(s32* arg0, s32 arg1) {
     *arg0 = (s32) (*arg0 | arg1);
@@ -328,19 +332,6 @@ s32 f32_step_towards(f32* value, f32 target, f32 step) {
     return targetReached;
 }
 
-void func_80041480(s16* arg0, s16 arg1, s16 arg2, s16* arg3) {
-    *arg0 += *arg3;
-    if (*arg3 >= 0) {
-        if (*arg0 >= arg2) {
-            *arg0 = arg2;
-            *arg3 = -*arg3;
-        }
-    } else if (arg1 >= *arg0) {
-        *arg0 = arg1;
-        *arg3 = -*arg3;
-    }
-}
-
 Vec3f* vec3f_set_xyz(Vec3f arg0, f32 arg1, f32 arg2, f32 arg3) {
     arg0[0] = arg1;
     arg0[1] = arg2;
@@ -588,6 +579,7 @@ UNUSED void mtxf_rotate_z_scale_x_y(Mat4 dest, u16 angle, f32 scale) {
 void mtxf_translation_x_y_rotate_z_scale_x_y(Mat4 dest, s32 x, s32 y, u16 angle, f32 scale) {
     f32 sin_theta = sins(angle);
     f32 cos_theta = coss(angle) * scale;
+    FrameInterpolation_RecordMatrixPosRotScaleXY(dest, x, y, angle, scale);
 
     dest[2][0] = 0.0f;
     dest[0][0] = cos_theta;
@@ -613,7 +605,6 @@ void func_80041D24(void) {
 }
 
 void guOrtho(Mtx*, f32, f32, f32, f32, f32, f32, f32); /* extern */
-extern s8 D_801658FE;
 
 void func_80041D34(void) {
     guOrtho(&D_80183D60, 0.0f, 320.0f, 240.0f, 0.0f, -1.0f, 1.0f, 1.0f);
@@ -700,13 +691,13 @@ UNUSED void func_800421FC(s32 x, s32 y, f32 scale) {
 
 void func_80042330(s32 x, s32 y, u16 angle, f32 scale) {
     Mat4 matrix;
-    //printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
+    // printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
 
     if (gHUDModes != 2) {
         if (x < (SCREEN_WIDTH / 2)) {
-            x = (s32)OTRGetDimensionFromLeftEdge(x);
+            x = (s32) OTRGetDimensionFromLeftEdge(x);
         } else {
-            x = (s32)OTRGetDimensionFromRightEdge(x);
+            x = (s32) OTRGetDimensionFromRightEdge(x);
         }
     }
 
@@ -720,7 +711,7 @@ void func_80042330(s32 x, s32 y, u16 angle, f32 scale) {
 
 void func_80042330_unchanged(s32 x, s32 y, u16 angle, f32 scale) {
     Mat4 matrix;
-    //printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
+    // printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
 
     mtxf_translation_x_y_rotate_z_scale_x_y(matrix, x, y, angle, scale);
     // convert_to_fixed_point_matrix(&gGfxPool->mtxHud[gMatrixHudCount], matrix);
@@ -733,13 +724,13 @@ void func_80042330_unchanged(s32 x, s32 y, u16 angle, f32 scale) {
 // Allows a different way of lining up the portraits at the end of race sequence
 void func_80042330_portrait(s32 x, s32 y, u16 angle, f32 scale, s16 lapCount) {
     Mat4 matrix;
-    //printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
+    // printf("panel %d %d %d\n", x, (s32)OTRGetDimensionFromLeftEdge(x), (s32)OTRGetDimensionFromLeftEdge(0));
 
-    if ((gHUDModes != 2) && (D_801657E2 == 0) || (CVarGetInteger("gImprovements", 0) == true)) {
+    if ((gHUDModes != 2) && (D_801657E2 == 0) || (CVarGetInteger("gBetterResultPortraits", 0) == true)) {
         if (x < (SCREEN_WIDTH / 2)) {
-            x = (s32)OTRGetDimensionFromLeftEdge(x);
+            x = (s32) OTRGetDimensionFromLeftEdge(x);
         } else {
-            x = (s32)OTRGetDimensionFromRightEdge(x);
+            x = (s32) OTRGetDimensionFromRightEdge(x);
         }
     }
 
@@ -755,9 +746,9 @@ void func_80042330_wide(s32 x, s32 y, u16 angle, f32 scale) {
     Mat4 matrix;
 
     if (x < (SCREEN_WIDTH / 2)) {
-        x = (s32)OTRGetDimensionFromLeftEdge(x);
+        x = (s32) OTRGetDimensionFromLeftEdge(x);
     } else {
-        x = (s32)OTRGetDimensionFromRightEdge(x);
+        x = (s32) OTRGetDimensionFromRightEdge(x);
     }
 
     mtxf_translation_x_y_rotate_z_scale_x_y(matrix, x, y, angle, scale);
@@ -818,27 +809,28 @@ UNUSED void func_8004252C(Mat4 arg0, u16 arg1, u16 arg2) {
     arg0[2][2] = sp28 * cos_theta_y;
 }
 
-void mtxf_set_matrix_transformation(Mat4 transformMatrix, Vec3f translationVector, Vec3su rotationVector,
-                                    f32 scalingFactor) {
-    f32 sinX = sins(rotationVector[0]);
-    f32 cosX = coss(rotationVector[0]);
-    f32 sinY = sins(rotationVector[1]);
-    f32 cosY = coss(rotationVector[1]);
-    f32 sinZ = sins(rotationVector[2]);
-    f32 cosZ = coss(rotationVector[2]);
+void mtxf_set_matrix_transformation(Mat4 transformMatrix, Vec3f location, Vec3su rotation, f32 scale) {
 
-    transformMatrix[0][0] = ((cosY * cosZ) + (sinX * sinY * sinZ)) * scalingFactor;
-    transformMatrix[1][0] = ((-cosY * sinZ) + (sinX * sinY * cosZ)) * scalingFactor;
-    transformMatrix[2][0] = (cosX * sinY) * scalingFactor;
-    transformMatrix[3][0] = translationVector[0];
-    transformMatrix[0][1] = cosX * sinZ * scalingFactor;
-    transformMatrix[1][1] = cosX * cosZ * scalingFactor;
-    transformMatrix[2][1] = -sinX * scalingFactor;
-    transformMatrix[3][1] = translationVector[1];
-    transformMatrix[0][2] = ((-sinY * cosZ) + (sinX * cosY * sinZ)) * scalingFactor;
-    transformMatrix[1][2] = ((sinY * sinZ) + (sinX * cosY * cosZ)) * scalingFactor;
-    transformMatrix[2][2] = cosX * cosY * scalingFactor;
-    transformMatrix[3][2] = translationVector[2];
+    FrameInterpolation_RecordSetMatrixTransformation(transformMatrix, location, rotation, scale);
+    f32 sinX = sins(rotation[0]);
+    f32 cosX = coss(rotation[0]);
+    f32 sinY = sins(rotation[1]);
+    f32 cosY = coss(rotation[1]);
+    f32 sinZ = sins(rotation[2]);
+    f32 cosZ = coss(rotation[2]);
+
+    transformMatrix[0][0] = ((cosY * cosZ) + (sinX * sinY * sinZ)) * scale;
+    transformMatrix[1][0] = ((-cosY * sinZ) + (sinX * sinY * cosZ)) * scale;
+    transformMatrix[2][0] = (cosX * sinY) * scale;
+    transformMatrix[3][0] = location[0];
+    transformMatrix[0][1] = cosX * sinZ * scale;
+    transformMatrix[1][1] = cosX * cosZ * scale;
+    transformMatrix[2][1] = -sinX * scale;
+    transformMatrix[3][1] = location[1];
+    transformMatrix[0][2] = ((-sinY * cosZ) + (sinX * cosY * sinZ)) * scale;
+    transformMatrix[1][2] = ((sinY * sinZ) + (sinX * cosY * cosZ)) * scale;
+    transformMatrix[2][2] = cosX * cosY * scale;
+    transformMatrix[3][2] = location[2];
     transformMatrix[0][3] = 0.0f;
     transformMatrix[1][3] = 0.0f;
     transformMatrix[2][3] = 0.0f;
@@ -872,7 +864,13 @@ void mtxf_set_matrix_scale_transl(Mat4 transformMatrix, Vec3f vec1, Vec3f vec2, 
  * @param arg1
  **/
 
-void mtxf_set_matrix_gObjectList(s32 objectIndex, Mat4 transformMatrix) {
+struct ObjectInterpData2 {
+    s32 objectIndex;
+    f32 x, y;
+};
+struct ObjectInterpData2 prevObject2[OBJECT_LIST_SIZE] = { 0 };
+
+s32 mtxf_set_matrix_gObjectList(s32 objectIndex, Mat4 transformMatrix) {
     f32 sinX;
     Object* object = &gObjectList[objectIndex];
     f32 sinY;
@@ -904,6 +902,26 @@ void mtxf_set_matrix_gObjectList(s32 objectIndex, Mat4 transformMatrix) {
     transformMatrix[1][3] = 0.0f;
     transformMatrix[2][3] = 0.0f;
     transformMatrix[3][3] = 1.0f;
+
+    // Search all recorded objects for the one we're drawing
+    for (int i = 0; i < OBJECT_LIST_SIZE; i++) {
+        if (objectIndex == prevObject2[i].objectIndex) {
+            // Coincidence!
+            // Skip drawing the object this frame if it warped to the other side of the screen
+            if ((fabsf(object->pos[0] - prevObject2[i].x) > 20) || (fabsf(object->pos[1] - prevObject2[i].y) > 20)) {
+                prevObject2[objectIndex].x = object->pos[0];
+                prevObject2[objectIndex].y = object->pos[1];
+                prevObject2[objectIndex].objectIndex = objectIndex;
+                // printf("IDX: %d X: %f Y: %f Z: %f\n", objectIndex, object->pos[0], object->pos[1], object->pos[2]);
+                return 1;
+            }
+        }
+    }
+    prevObject2[objectIndex].x = object->pos[0];
+    prevObject2[objectIndex].y = object->pos[1];
+    prevObject2[objectIndex].objectIndex = objectIndex;
+
+    return 0;
 }
 
 UNUSED void mtxf_mult_first_column(Mat4 arg0, f32 arg1) {
@@ -930,6 +948,7 @@ void set_transform_matrix(Mat4 dest, Vec3f orientationVector, Vec3f positionVect
     Vec3f sp38;
     Vec3f sp2C;
 
+    FrameInterpolation_RecordSetTransformMatrix(dest, orientationVector, positionVector, rotationAngle, scaleFactor);
     vec3f_set_xyz(sp44, sins(rotationAngle), 0.0f, coss(rotationAngle));
     vec3f_normalize(orientationVector);
     vec3f_cross_product(sp38, orientationVector, sp44);
@@ -1072,7 +1091,9 @@ void rsp_set_matrix_transl_rot_scale(Vec3f arg0, Vec3f arg1, f32 arg2) {
 void rsp_set_matrix_gObjectList(s32 transformIndex) {
     Mat4 matrix;
 
-    mtxf_set_matrix_gObjectList(transformIndex, matrix);
+    if (mtxf_set_matrix_gObjectList(transformIndex, matrix)) {
+        return;
+    }
     // convert_to_fixed_point_matrix(&gGfxPool->mtxHud[gMatrixHudCount], matrix);
 
     // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxHud[gMatrixHudCount++]),

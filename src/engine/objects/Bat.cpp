@@ -1,6 +1,7 @@
 #include "Bat.h"
 #include "World.h"
 #include "CoreMath.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 extern "C" {
 #include "render_objects.h"
@@ -18,20 +19,22 @@ const char* sBoardwalkTexList[] = { gTextureBat1, gTextureBat2, gTextureBat3, gT
 
 size_t OBat::_count = 0;
 
-OBat::OBat(const FVector& pos, const FRotation& rot) {
-    s32 objectId = indexObjectList1[0];
-    init_texture_object(objectId, (uint8_t*)d_course_banshee_boardwalk_bat_tlut, sBoardwalkTexList, 0x20U,
+OBat::OBat(const FVector& pos, const IRotator& rot) {
+    Name = "Bat";
+    find_unused_obj_index(&_objectIndex);
+
+    init_texture_object(_objectIndex, (uint8_t*) d_course_banshee_boardwalk_bat_tlut, sBoardwalkTexList, 0x20U,
                         (u16) 0x00000040);
-    gObjectList[objectId].orientation[0] = rot.pitch;
-    gObjectList[objectId].orientation[1] = rot.roll;
-    gObjectList[objectId].orientation[2] = rot.yaw; // 0x8000
+    gObjectList[_objectIndex].orientation[0] = rot.pitch;
+    gObjectList[_objectIndex].orientation[1] = rot.roll;
+    gObjectList[_objectIndex].orientation[2] = rot.yaw; // 0x8000
 
     _count++;
 }
 
 void OBat::Tick() {
     s32 var_s2;
-    s32 temp_s0;
+    s32 objectIndex;
     Object* object;
 
     if (D_8018CFC8 != 0) {
@@ -40,28 +43,28 @@ void OBat::Tick() {
     if (D_8018D000 != 0) {
         D_8018D000 -= 1;
     }
-    temp_s0 = indexObjectList1[0];
-    func_80072E54(temp_s0, 0, 3, 1, 0, -1);
-    func_80073514(temp_s0);
-    object = &gObjectList[temp_s0];
-    func_80073CB0(temp_s0, &object->primAlpha, -0x00001000, 0x00001000, 0x00000400, 0, -1);
+    objectIndex = _objectIndex;
+    func_80072E54(objectIndex, 0, 3, 1, 0, -1);
+    func_80073514(objectIndex);
+    object = &gObjectList[objectIndex];
+    func_80073CB0(objectIndex, &object->primAlpha, -0x00001000, 0x00001000, 0x00000400, 0, -1);
     object->orientation[2] = object->primAlpha + 0x8000;
     if ((D_8018CFB0 != 0) || (D_8018CFC8 != 0)) {
         D_8018CFD8 = 0;
         for (var_s2 = 0; var_s2 < 40; var_s2++) {
-            temp_s0 = gObjectParticle2[var_s2];
-            if (temp_s0 == -1) {
+            objectIndex = gObjectParticle2[var_s2];
+            if (objectIndex == -1) {
                 continue;
             }
 
-            object = &gObjectList[temp_s0];
+            object = &gObjectList[objectIndex];
             if (object->state == 0) {
                 continue;
             }
 
-            OBat::func_8007D8D4(temp_s0, 1);
-            OBat::func_8007DAF8(temp_s0, 1);
-            OBat::func_8007D794(temp_s0);
+            OBat::func_8007D8D4(objectIndex, 1);
+            OBat::func_8007DAF8(objectIndex, 1);
+            OBat::func_8007D794(objectIndex);
             if (object->state == 0) {
                 delete_object_wrapper(&gObjectParticle2[var_s2]);
             }
@@ -74,19 +77,19 @@ void OBat::Tick() {
     if ((D_8018CFE8 != 0) || (D_8018D000 != 0)) {
         D_8018D010 = 0;
         for (var_s2 = 0; var_s2 < 30; var_s2++) {
-            temp_s0 = gObjectParticle3[var_s2];
-            if (temp_s0 == -1) {
+            objectIndex = gObjectParticle3[var_s2];
+            if (objectIndex == -1) {
                 continue;
             }
 
-            object = &gObjectList[temp_s0];
+            object = &gObjectList[objectIndex];
             if (object->state == 0) {
                 continue;
             }
 
-            OBat::func_8007D8D4(temp_s0, 2);
-            OBat::func_8007DAF8(temp_s0, 2);
-            OBat::func_8007D794(temp_s0);
+            OBat::func_8007D8D4(objectIndex, 2);
+            OBat::func_8007DAF8(objectIndex, 2);
+            OBat::func_8007D794(objectIndex);
             if (object->state == 0) {
                 delete_object_wrapper(&gObjectParticle3[var_s2]);
             }
@@ -99,43 +102,56 @@ void OBat::Tick() {
 }
 
 void OBat::Draw(s32 cameraId) {
-    s32 var_s2;
-    s32 objectIndex;
-    Camera* temp_s7;
+    s32 i;
+    s32 objectIndex = _objectIndex;
+    Camera* cam = &camera1[cameraId];
 
-    objectIndex = indexObjectList1[0];
-    temp_s7 = &camera1[cameraId];
-    OBat::func_80046F60((u8*)gObjectList[objectIndex].activeTLUT, (u8*)gObjectList[objectIndex].activeTexture, 0x00000020, 0x00000040,
-                  5);
+    OBat::func_80046F60((u8*) gObjectList[objectIndex].activeTLUT, (u8*) gObjectList[objectIndex].activeTexture,
+                        0x00000020, 0x00000040, 5);
     D_80183E80[0] = gObjectList[objectIndex].orientation[0];
     D_80183E80[2] = gObjectList[objectIndex].orientation[2];
+
     if ((D_8018CFB0 != 0) || (D_8018CFC8 != 0)) {
-        for (var_s2 = 0; var_s2 < 40; var_s2++) {
-            objectIndex = gObjectParticle2[var_s2];
+        for (i = 0; i < 40; i++) {
+            objectIndex = gObjectParticle2[i];
             if (objectIndex == -1) {
                 continue;
             }
 
             if ((gObjectList[objectIndex].state >= 2) && (gMatrixHudCount < 0x2EF)) {
+                // @port: Tag the transform.
+                FrameInterpolation_RecordOpenChild("Bat set 1", (uintptr_t) &gObjectList[objectIndex]);
+
                 D_80183E80[1] =
-                    func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], temp_s7->pos);
+                    func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], cam->pos);
                 func_800431B0(gObjectList[objectIndex].pos, D_80183E80, gObjectList[objectIndex].sizeScaling,
-                              (Vtx*)D_0D0062B0);
+                              (Vtx*) D_0D0062B0);
+
+                // @port Pop the transform id.
+                FrameInterpolation_RecordCloseChild();
             }
         }
     }
+
     if ((D_8018CFE8 != 0) || (D_8018D000 != 0)) {
-        for (var_s2 = 0; var_s2 < 30; var_s2++) {
-            objectIndex = gObjectParticle3[var_s2];
+        for (i = 0; i < 30; i++) {
+
+            objectIndex = gObjectParticle3[i];
             if (objectIndex == -1) {
                 continue;
             }
 
             if ((gObjectList[objectIndex].state >= 2) && (gMatrixHudCount < 0x2EF)) {
+                // @port: Tag the transform.
+                FrameInterpolation_RecordOpenChild("Bat set 2", (uintptr_t) &gObjectList[objectIndex]);
+
                 D_80183E80[1] =
-                    func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], temp_s7->pos);
+                    func_800418AC(gObjectList[objectIndex].pos[0], gObjectList[objectIndex].pos[2], cam->pos);
                 func_800431B0(gObjectList[objectIndex].pos, D_80183E80, gObjectList[objectIndex].sizeScaling,
-                              (Vtx*)D_0D0062B0);
+                              (Vtx*) D_0D0062B0);
+
+                // @port Pop the transform id.
+                FrameInterpolation_RecordCloseChild();
             }
         }
     }
@@ -143,7 +159,7 @@ void OBat::Draw(s32 cameraId) {
 }
 
 void OBat::func_80046F60(u8* tlut, u8* arg1, s32 arg2, s32 arg3, s32 arg4) {
-    gSPDisplayList(gDisplayListHead++, (Gfx*)D_0D007D78);
+    gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D007D78);
     gDPLoadTLUT_pal256(gDisplayListHead++, tlut);
     rsp_load_texture_mask(arg1, arg2, arg3, arg4);
 }

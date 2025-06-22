@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "port/Game.h"
+#include "port/interpolation/FrameInterpolation.h"
 
 extern "C" {
 #include "macros.h"
@@ -45,25 +46,18 @@ f32 D_800E594C[][2] = {
 s16 D_800E597C[] = { 0x0000, 0x0000, 0x4000, 0x8000, 0x8000, 0xc000 };
 
 size_t OThwomp::_count = 0;
+size_t OThwomp::_rand = 0;
 
 OThwomp::OThwomp(s16 x, s16 z, s16 direction, f32 scale, s16 behaviour, s16 primAlpha, u16 boundingBoxSize) {
-    uuid[0] = 'T';
-    uuid[1] = 'H';
-    uuid[2] = 'W';
-    uuid[3] = 'O';
-    uuid[4] = 'M';
-    uuid[5] = 'P';
-    uuid[6] = '0' + _count;
+    Name = "Thwomp";
     _idx = _count;
     _faceDirection = direction;
     _boundingBoxSize = boundingBoxSize;
-    State = (States) behaviour;
+    State = (States)behaviour;
+    
+    find_unused_obj_index(&_objectIndex);
 
-    if (_idx >= 32) {
-        printf("MAX THWOMPS REACHED (32), skipping\n");
-        return;
-    }
-    s32 objectId = indexObjectList1[_idx];
+    s32 objectId = _objectIndex;
     init_object(objectId, 0);
     gObjectList[objectId].origin_pos[0] = x * xOrientation;
     gObjectList[objectId].origin_pos[2] = z;
@@ -86,9 +80,8 @@ void OThwomp::Tick60fps() { // func_80081210
     s32 var_s2_3;
     s32 var_s4;
 
-    objectIndex = indexObjectList1[_idx];
-    func_800722CC(objectIndex, 0x00000010);
-    OThwomp::SetVisibility(objectIndex);
+    func_800722CC(_objectIndex, 0x00000010);
+    OThwomp::SetVisibility(_objectIndex);
 
     OThwomp::func_8007F8D8();
 
@@ -97,28 +90,28 @@ void OThwomp::Tick60fps() { // func_80081210
     if (_idx == 0) {
         D_80165834[0] += 0x100;
         D_80165834[1] += 0x200;
+        _rand += 1;
     }
 
-    objectIndex = indexObjectList1[_idx];
-    if (gObjectList[objectIndex].state != 0) {
+    if (gObjectList[_objectIndex].state != 0) {
         switch (State) {
             case STATIONARY:
-                OThwomp::StationaryBehaviour(objectIndex);
+                OThwomp::StationaryBehaviour(_objectIndex);
                 break;
             case MOVE_AND_ROTATE:
-                OThwomp::MoveAndRotateBehaviour(objectIndex);
+                OThwomp::MoveAndRotateBehaviour(_objectIndex);
                 break;
             case MOVE_FAR:
-                OThwomp::MoveFarBehaviour(objectIndex);
+                OThwomp::MoveFarBehaviour(_objectIndex);
                 break;
             case STATIONARY_FAST:
-                OThwomp::StationaryFastBehaviour(objectIndex);
+                OThwomp::StationaryFastBehaviour(_objectIndex);
                 break;
             case JAILED:
-                OThwomp::JailedBehaviour(objectIndex);
+                OThwomp::JailedBehaviour(_objectIndex);
                 break;
             case SLIDE:
-                OThwomp::SlidingBehaviour(objectIndex);
+                OThwomp::SlidingBehaviour(_objectIndex);
                 break;
         }
     }
@@ -128,45 +121,51 @@ void OThwomp::Tick60fps() { // func_80081210
         player->tyres[FRONT_LEFT].unk_14 &= ~3;
         player->unk_046 &= ~0x0006;
 
-        objectIndex = indexObjectList1[_idx];
         if (!(player->effects & BOO_EFFECT)) {
-            OThwomp::func_80080B28(objectIndex, var_s4);
+            OThwomp::func_80080B28(_objectIndex, var_s4);
         }
-        if (is_obj_flag_status_active(objectIndex, 0x00020000) != 0) {
-            OThwomp::SetPlayerCrushedEffect(objectIndex, player);
+        if (is_obj_flag_status_active(_objectIndex, 0x00020000) != 0) {
+            OThwomp::SetPlayerCrushedEffect(_objectIndex, player);
         }
-        if (is_obj_flag_status_active(objectIndex, 0x00010000) != 0 && var_s4 < 4) {
-            OThwomp::func_80080A4C(objectIndex, var_s4);
+        if (is_obj_flag_status_active(_objectIndex, 0x00010000) != 0) {
+            OThwomp::func_80080A4C(_objectIndex, var_s4);
         }
     }
     OThwomp::func_8007542C(3);
 
-    objectIndex = indexObjectList1[_idx];
-    if (func_80072320(objectIndex, 0x00000020) == 0) {
-        return;
+    if (func_80072320(_objectIndex, 0x00000020)) {
+        func_800722CC(_objectIndex, 0x00000020);
+        OThwomp::AddParticles(_objectIndex);
     }
 
-    func_800722CC(objectIndex, 0x00000020);
-    OThwomp::AddParticles(objectIndex);
 
-    for (var_s4 = 0; var_s4 < gObjectParticle2_SIZE; var_s4++) {
-        objectIndex = gObjectParticle2[var_s4];
-        if (objectIndex == DELETED_OBJECT_ID) {
-            return;
+
+    if (_idx == 0) {
+        for (var_s4 = 0; var_s4 < gObjectParticle2_SIZE; var_s4++) {
+            // @port: Tag the transform.
+            FrameInterpolation_RecordOpenChild("Thwomp_part", (uintptr_t) var_s4);
+
+            objectIndex = gObjectParticle2[var_s4];
+            if (objectIndex == DELETED_OBJECT_ID) {
+                continue;
+            }
+            if (gObjectList[objectIndex].state == 0) {
+                continue;
+            }
+            OThwomp::func_800810F4(objectIndex);
+            if (gObjectList[objectIndex].state != 0) {
+                continue;
+            }
+            delete_object_wrapper(&gObjectParticle2[var_s4]);
+
+            // @port Pop the transform id.
+            FrameInterpolation_RecordCloseChild();
         }
-        if (gObjectList[objectIndex].state == 0) {
-            return;
-        }
-        OThwomp::func_800810F4(objectIndex);
-        if (gObjectList[objectIndex].state != 0) {
-            return;
-        }
-        delete_object_wrapper(&gObjectParticle2[var_s4]);
     }
 }
 
 void OThwomp::func_800810F4(s32 objectIndex) {
-    switch (gObjectList[objectIndex].state) { /* irregular */
+    switch (gObjectList[objectIndex].state) {
         case 0:
             break;
         case 1:
@@ -342,7 +341,6 @@ void OThwomp::SetVisibility(s32 objectIndex) { // func_8008A4CC
 
 void OThwomp::func_8007F8D8() {
     Player* player;
-    s32 objectIndex;
     s32 var_s0;
     s32 someIndex;
     s32 var_s4;
@@ -351,11 +349,10 @@ void OThwomp::func_8007F8D8() {
     player = gPlayerOne;
     var_s4 = 1;
 
-    objectIndex = indexObjectList1[_idx];
-    object = &gObjectList[objectIndex];
+    object = &gObjectList[_objectIndex];
     if (object->unk_0D5 == 3) {
         var_s0 = 0;
-        if ((object->state >= 2) && (func_80072354(objectIndex, 8) != 0)) {
+        if ((object->state >= 2) && (func_80072354(_objectIndex, 8) != 0)) {
             var_s0 = 1;
         }
         var_s4 *= var_s0;
@@ -363,7 +360,7 @@ void OThwomp::func_8007F8D8() {
 
     if (var_s4 != 0) {
         for (var_s0 = 0; var_s0 < 4; var_s0++, player++) {
-            if ((player->type & PLAYER_EXISTS) && !(player->type & PLAYER_KART_AI)) {
+            if ((player->type & PLAYER_EXISTS) && !(player->type & PLAYER_CPU)) {
                 if (OThwomp::func_8007F75C(var_s0) != 0) {
                     break;
                 }
@@ -374,26 +371,25 @@ void OThwomp::func_8007F8D8() {
 
 s32 OThwomp::func_8007F75C(s32 playerId) {
     s32 someIndex;
-    s32 objectIndex;
-    s32 temp_s7;
+    static s32 temp_s7 = 0; // Must be static to sync far travelling thwomp instances
     s32 var_s6;
     s32 waypoint;
 
-    waypoint = gNearestWaypointByPlayerId[playerId];
+    waypoint = gNearestPathPointByPlayerId[playerId];
     var_s6 = 0;
     if ((waypoint >= 0xAA) && (waypoint < 0xB5)) {
-        temp_s7 = random_int(0x0032U) + 0x32;
-        objectIndex = indexObjectList1[_idx];
-        if (gObjectList[objectIndex].unk_0D5 == 3) {
+        if (_idx == 0) {
+            temp_s7 = random_int(0x0032U) + 0x32;
+        }
+        if (gObjectList[_objectIndex].unk_0D5 == 3) {
             var_s6 = 1;
-            OThwomp::func_8007F660(objectIndex, playerId, temp_s7);
+            OThwomp::func_8007F660(_objectIndex, playerId, temp_s7);
         }
 
     } else if ((waypoint >= 0xD7) && (waypoint < 0xE2)) {
-        objectIndex = indexObjectList1[_idx];
-        if (gObjectList[objectIndex].unk_0D5 == 3) {
+        if (gObjectList[_objectIndex].unk_0D5 == 3) {
             var_s6 = 1;
-            OThwomp::func_8007F6C4(objectIndex, playerId);
+            OThwomp::func_8007F6C4(_objectIndex, playerId);
         }
     }
     return var_s6;
@@ -618,20 +614,20 @@ void OThwomp::func_8007F6C4(s32 objectIndex, s32 playerId) {
 
 void OThwomp::func_80080B28(s32 objectIndex, s32 playerId) {
     f32 temp_f0;
-    Player* temp_s0;
+    Player* player;
 
-    temp_s0 = &gPlayerOne[playerId];
+    player = &gPlayerOne[playerId];
     if (is_obj_flag_status_active(objectIndex, 0x00000200) != 0) {
-        if (!(temp_s0->soundEffects & 0x100)) {
-            temp_f0 = func_80088F54(objectIndex, temp_s0);
-            if ((temp_f0 <= 9.0) && !(temp_s0->effects & 0x04000000) &&
-                (has_collided_horizontally_with_player(objectIndex, temp_s0) != 0)) {
-                if ((temp_s0->type & 0x8000) && !(temp_s0->type & 0x100)) {
-                    if (!(temp_s0->effects & 0x200)) {
+        if (!(player->soundEffects & 0x100)) {
+            temp_f0 = func_80088F54(objectIndex, player);
+            if ((temp_f0 <= 9.0) && !(player->effects & 0x04000000) &&
+                (has_collided_horizontally_with_player(objectIndex, player) != 0)) {
+                if ((player->type & 0x8000) && !(player->type & 0x100)) {
+                    if (!(player->effects & 0x200)) {
                         func_80089474(objectIndex, playerId, 1.4f, 1.1f, SOUND_ARG_LOAD(0x19, 0x00, 0xA0, 0x4C));
                     } else if (func_80072354(objectIndex, 0x00000040) != 0) {
-                        if (temp_s0->type & 0x1000) {
-                            func_800C98B8(temp_s0->pos, temp_s0->velocity, SOUND_ARG_LOAD(0x19, 0x01, 0xA2, 0x4A));
+                        if (player->type & 0x1000) {
+                            func_800C98B8(player->pos, player->velocity, SOUND_ARG_LOAD(0x19, 0x01, 0xA2, 0x4A));
                         } else {
                             func_800C9060((u8) playerId, SOUND_ARG_LOAD(0x19, 0x01, 0xA2, 0x4A));
                         }
@@ -644,21 +640,21 @@ void OThwomp::func_80080B28(s32 objectIndex, s32 playerId) {
                     }
                 }
             } else if ((temp_f0 <= 17.5) && (func_80072320(objectIndex, 1) != 0) &&
-                       (is_within_horizontal_distance_of_player(objectIndex, temp_s0,
-                                                                (temp_s0->unk_094 * 0.5) + _boundingBoxSize) != 0)) {
-                if ((temp_s0->type & 0x8000) && !(temp_s0->type & 0x100)) {
+                       (is_within_horizontal_distance_of_player(objectIndex, player,
+                                                                (player->speed * 0.5) + _boundingBoxSize) != 0)) {
+                if ((player->type & 0x8000) && !(player->type & 0x100)) {
                     if (is_obj_flag_status_active(objectIndex, 0x04000000) != 0) {
                         func_80072180();
                     }
                     func_800722A4(objectIndex, 2);
-                    temp_s0->unk_040 = (s16) objectIndex;
-                    temp_s0->unk_046 |= 2;
-                    temp_s0->soundEffects |= 0x100;
-                    func_80088FF0(temp_s0);
+                    player->unk_040 = (s16) objectIndex;
+                    player->unk_046 |= 2;
+                    player->soundEffects |= 0x100;
+                    func_80088FF0(player);
                 }
             }
         } else {
-            func_80088FF0(temp_s0);
+            func_80088FF0(player);
         }
     }
 }
@@ -674,7 +670,7 @@ Lights1 D_800E4680 = gdSPDefLights1(85, 85, 85, 255, 255, 255, 0, 0, 120);
 Lights1 D_800E4698 = gdSPDefLights1(85, 85, 85, 255, 255, 255, 0, 0, 120);
 
 void OThwomp::Draw(s32 cameraId) {
-    s32 objectIndex = 0;
+    s32 objectIndex = _objectIndex;
     s32 i;
     UNUSED s32 stackPadding0;
     s16 minusone, plusone;
@@ -683,14 +679,12 @@ void OThwomp::Draw(s32 cameraId) {
 
     camera = &camera1[cameraId];
     if (cameraId == PLAYER_ONE) {
-        objectIndex = indexObjectList1[_idx];
         clear_object_flag(objectIndex, 0x00070000);
         func_800722CC(objectIndex, 0x00000110);
     }
 
     OThwomp::TranslateThwompLights();
 
-    objectIndex = indexObjectList1[_idx];
     minusone = gObjectList[objectIndex].unk_0DF - 1;
     plusone = gObjectList[objectIndex].unk_0DF + 1;
 
@@ -946,9 +940,9 @@ void OThwomp::func_8007FA08(s32 objectIndex) {
     set_obj_origin_offset(objectIndex, 0.0f, 0.0f, 0.0f);
     set_obj_direction_angle(objectIndex, 0U, 0U, 0U);
     if (gIsMirrorMode != 0) {
-        set_obj_orientation(objectIndex, 0U, 0xC000U, 0U);
+        set_obj_orientation(objectIndex, 0U, _faceDirection, 0U);
     } else {
-        set_obj_orientation(objectIndex, 0U, 0x4000U, 0U);
+        set_obj_orientation(objectIndex, 0U, -_faceDirection, 0U);
     }
     object->velocity[0] = 0.0f;
     object->direction_angle[1] = object->orientation[1];
@@ -985,10 +979,10 @@ void OThwomp::func_8007FB48(s32 objectIndex) {
             func_80086FD4(objectIndex);
             break;
         case 2:
-            gObjectList[objectIndex].velocity[0] = player->unk_094 * xOrientation * 1.25;
+            gObjectList[objectIndex].velocity[0] = player->speed * xOrientation * 1.25;
             if (gObjectList[objectIndex].unk_048 >= gObjectList[objectIndex].unk_0B0) {
                 if (gObjectList[objectIndex].unk_0B0 == gObjectList[objectIndex].unk_048) {
-                    if (D_8018D400 & 1) {
+                    if (_rand & 1) { // D_8018D400 & 1
                         gObjectList[objectIndex].velocity[2] = 1.5f;
                     } else {
                         gObjectList[objectIndex].velocity[2] = -1.5f;
@@ -1187,9 +1181,9 @@ void OThwomp::func_800802C0(s32 objectIndex) {
     object->offset[1] = 10.0f;
     object->unk_01C[1] = 10.0f;
     if (gIsMirrorMode != 0) {
-        set_obj_orientation(objectIndex, 0U, 0x4000U, 0U);
+        set_obj_orientation(objectIndex, 0U, -_faceDirection, 0U);
     } else {
-        set_obj_orientation(objectIndex, 0U, 0xC000U, 0U);
+        set_obj_orientation(objectIndex, 0U, _faceDirection, 0U);
     }
     object->offset[0] = 0.0f;
     object->offset[2] = 0.0f;
@@ -1213,7 +1207,7 @@ void OThwomp::SlidingBehaviour(s32 objectIndex) { // func_800808CC
         OThwomp::func_8008085C(objectIndex);
         func_80073514(objectIndex);
         if (gGamestate != 9) {
-            if ((D_8018D40C == 0) && (gObjectList[objectIndex].state == 2)) {
+            if (((_rand & 0x3F) == 0) && (gObjectList[objectIndex].state == 2)) { // D_8018D40C == 0 &&
                 func_800C98B8(gObjectList[objectIndex].pos, gObjectList[objectIndex].velocity,
                               SOUND_ARG_LOAD(0x19, 0x03, 0x60, 0x45));
             }

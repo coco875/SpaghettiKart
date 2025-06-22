@@ -3,9 +3,10 @@
 #include "../type/AudioSample.h"
 #include "spdlog/spdlog.h"
 
-std::shared_ptr<Ship::IResource> SM64::AudioSampleFactoryV0::ReadResource(std::shared_ptr<Ship::File> file) {
-    auto initData = file->InitData;
-    if (!FileHasValidFormatAndReader(file)) {
+std::shared_ptr<Ship::IResource>
+SM64::AudioSampleFactoryV0::ReadResource(std::shared_ptr<Ship::File> file,
+                                         std::shared_ptr<Ship::ResourceInitData> initData) {
+    if (!FileHasValidFormatAndReader(file, initData)) {
         return nullptr;
     }
 
@@ -19,7 +20,7 @@ std::shared_ptr<Ship::IResource> SM64::AudioSampleFactoryV0::ReadResource(std::s
 
     uint32_t stateSize = reader->ReadUInt32();
     std::vector<int16_t> state;
-    if (stateSize > 0) {
+    if(stateSize > 0){
         bank->loop.state = new int16_t[stateSize];
         reader->Read((char*) bank->loop.state, stateSize * sizeof(int16_t));
     } else {

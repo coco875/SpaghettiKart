@@ -5,7 +5,7 @@
 
 #include "BansheeBoardwalk.h"
 #include "World.h"
-#include "engine/actors/AFinishline.h"
+#include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
 #include "engine/objects/CheepCheep.h"
 #include "engine/objects/TrashBin.h"
@@ -34,8 +34,8 @@ extern "C" {
 #include "actors.h"
 #include "collision.h"
 #include "memory.h"
-#include "course_offsets.h"
-extern const char* banshee_boardwalk_dls[];
+#include "course.h"
+extern const char *banshee_boardwalk_dls[];
 }
 
 const course_texture banshee_boardwalk_textures[] = {
@@ -69,18 +69,26 @@ BansheeBoardwalk::BansheeBoardwalk() {
     this->gfx = d_course_banshee_boardwalk_packed_dls;
     this->gfxSize = 3689;
     Props.textures = banshee_boardwalk_textures;
-    Props.MinimapTexture = minimap_banshee_boardwalk;
-    Props.MinimapDimensions =
-        IVector2D(ResourceGetTexWidthByName(Props.MinimapTexture), ResourceGetTexHeightByName(Props.MinimapTexture));
+    Props.Minimap.Texture = gTextureCourseOutlineBansheeBoardwalk;
+    Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
+    Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
+    Props.Minimap.Pos[0].X = 262;
+    Props.Minimap.Pos[0].Y = 170;
+    Props.Minimap.PlayerX = 55;
+    Props.Minimap.PlayerY = 39;
+    Props.Minimap.PlayerScaleFactor = 0.016f;
+    Props.Minimap.FinishlineX = 0;
+    Props.Minimap.FinishlineY = 0;
 
-    Props.Id = "mk:banshee_boardwalk";
-    Props.Name = "banshee boardwalk";
-    Props.DebugName = "ghost";
-    Props.CourseLength = "747m";
+    Id = "mk:banshee_boardwalk";
+
+    Props.SetText(Props.Name, "banshee boardwalk", sizeof(Props.Name));
+    Props.SetText(Props.DebugName, "ghost", sizeof(Props.DebugName));
+    Props.SetText(Props.CourseLength, "747m", sizeof(Props.CourseLength));
+
     Props.AIBehaviour = D_0D009058;
     Props.AIMaximumSeparation = 40.0f;
     Props.AIMinimumSeparation = 0.4f;
-    Props.SomePtr = D_800DCAF4;
     Props.AISteeringSensitivity = 53;
 
     Props.NearPersp = 2.0f;
@@ -88,40 +96,38 @@ BansheeBoardwalk::BansheeBoardwalk() {
 
     Props.PathSizes = { 0x2EE, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 };
 
-    Props.D_0D009418[0] = 4.1666665f;
-    Props.D_0D009418[1] = 5.5833334f;
-    Props.D_0D009418[2] = 6.1666665f;
-    Props.D_0D009418[3] = 6.75f;
+    Props.CurveTargetSpeed[0] = 4.1666665f;
+    Props.CurveTargetSpeed[1] = 5.5833334f;
+    Props.CurveTargetSpeed[2] = 6.1666665f;
+    Props.CurveTargetSpeed[3] = 6.75f;
 
-    Props.D_0D009568[0] = 3.75f;
-    Props.D_0D009568[1] = 5.1666665f;
-    Props.D_0D009568[2] = 5.75f;
-    Props.D_0D009568[3] = 6.3333334f;
+    Props.NormalTargetSpeed[0] = 3.75f;
+    Props.NormalTargetSpeed[1] = 5.1666665f;
+    Props.NormalTargetSpeed[2] = 5.75f;
+    Props.NormalTargetSpeed[3] = 6.3333334f;
 
     Props.D_0D0096B8[0] = 3.3333332f;
     Props.D_0D0096B8[1] = 3.9166667f;
     Props.D_0D0096B8[2] = 4.5f;
     Props.D_0D0096B8[3] = 5.0833334f;
 
-    Props.D_0D009808[0] = 3.75f;
-    Props.D_0D009808[1] = 5.1666665f;
-    Props.D_0D009808[2] = 5.75f;
-    Props.D_0D009808[3] = 6.3333334f;
+    Props.OffTrackTargetSpeed[0] = 3.75f;
+    Props.OffTrackTargetSpeed[1] = 5.1666665f;
+    Props.OffTrackTargetSpeed[2] = 5.75f;
+    Props.OffTrackTargetSpeed[3] = 6.3333334f;
 
-    Props.PathTable[0] = (TrackWaypoint*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_unknown_waypoints);
+    Props.PathTable[0] = (TrackPathPoint*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_unknown_waypoints);
     Props.PathTable[1] = NULL;
     Props.PathTable[2] = NULL;
     Props.PathTable[3] = NULL;
 
-    Props.PathTable2[0] = (TrackWaypoint*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_waypoints);
+    Props.PathTable2[0] = (TrackPathPoint*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_waypoints);
     Props.PathTable2[1] = NULL;
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
     Props.Clouds = NULL; // no clouds
     Props.CloudList = NULL;
-    Props.MinimapFinishlineX = 0;
-    Props.MinimapFinishlineY = 0;
 
     Props.Skybox.TopRight = { 0, 0, 0 };
     Props.Skybox.BottomRight = { 0, 0, 0 };
@@ -132,6 +138,8 @@ BansheeBoardwalk::BansheeBoardwalk() {
     Props.Skybox.FloorBottomLeft = { 0, 0, 0 };
     Props.Skybox.FloorTopLeft = { 0, 0, 0 };
     Props.Sequence = MusicSeq::MUSIC_SEQ_BANSHEE_BOARDWALK;
+
+    Props.WaterLevel = -80.0f;
 }
 
 void BansheeBoardwalk::Load() {
@@ -141,19 +149,16 @@ void BansheeBoardwalk::Load() {
     D_801625EC = 0;
     D_801625F4 = 0;
     D_801625F0 = 0;
-    parse_course_displaylists((TrackSectionsI*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections));
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections));
     func_80295C6C();
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*) 0x07000878), 128, 0, 0, 0);
-    D_8015F8E4 = -80.0f;
+    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*)0x07000878), 128, 0, 0, 0);
 }
 
 void BansheeBoardwalk::LoadTextures() {
 }
 
 void BansheeBoardwalk::BeginPlay() {
-    gWorldInstance.AddActor(new AFinishline());
-
-    spawn_all_item_boxes((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_item_box_spawns));
+    spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_banshee_boardwalk_item_box_spawns));
 
     gWorldInstance.AddObject(new OCheepCheep(FVector(xOrientation * -1650.0, -200.0f, -1650.0f),
                                              OCheepCheep::CheepType::RACE, IPathSpan(160, 170)));
@@ -166,36 +171,28 @@ void BansheeBoardwalk::BeginPlay() {
     }
 
     if (gIsMirrorMode) {
-        gWorldInstance.AddObject(new OTrashBin(FVector(1765.0f, 45.0f, 195.0f), FRotation(0, 180.0f, 0), 1.0f, bhv));
+        gWorldInstance.AddObject(new OTrashBin(FVector(1765.0f, 45.0f, 195.0f), IRotator(0, 180, 0), 1.0f, bhv));
     } else {
-        gWorldInstance.AddObject(new OTrashBin(FVector(-1765.0f, 45.0f, 70.0f), FRotation(0, 0, 0), 1.0f, bhv));
+        gWorldInstance.AddObject(new OTrashBin(FVector(-1765.0f, 45.0f, 70.0f), IRotator(0, 0, 0), 1.0f, bhv));
     }
 
     if ((gGamestate != CREDITS_SEQUENCE) && (gModeSelection != TIME_TRIALS)) {
-        gWorldInstance.AddObject(new OBat(FVector(0, 0, 0), FRotation(0, 0, 90.0f)));
+        gWorldInstance.AddObject(new OBat(FVector(0,0,0), IRotator(0, 0, 90)));
         gWorldInstance.AddObject(new OBoos(5, IPathSpan(180, 190), IPathSpan(200, 210), IPathSpan(280, 290)));
         gWorldInstance.AddObject(new OBoos(5, IPathSpan(490, 500), IPathSpan(510, 520), IPathSpan(620, 630)));
     }
 
     if (gModeSelection == VERSUS) {
-        Vec3f pos = { 0, 0, 0 };
+        FVector pos = { 0, 0, 0 };
 
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][110], 110, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][190], 190, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][250], 250, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][475], 475, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][610], 610, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][110], 110, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][190], 190, 1, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][250], 250, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][475], 475, 1, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][610], 610, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
     }
-}
-
-// Likely sets minimap boundaries
-void BansheeBoardwalk::MinimapSettings() {
-    D_8018D2A0 = 0.016f;
-    D_8018D2C0[0] = 0x0106;
-    D_8018D2E0 = 55;
-    D_8018D2E8 = 39;
 }
 
 void BansheeBoardwalk::InitCourseObjects() {
@@ -226,7 +223,8 @@ void BansheeBoardwalk::SomeSounds() {
 }
 
 void BansheeBoardwalk::WhatDoesThisDo(Player* player, int8_t playerId) {
-    if (((s16) gNearestWaypointByPlayerId[playerId] >= 0x180) && ((s16) gNearestWaypointByPlayerId[playerId] < 0x1E1)) {
+    if (((s16) gNearestPathPointByPlayerId[playerId] >= 0x180) &&
+        ((s16) gNearestPathPointByPlayerId[playerId] < 0x1E1)) {
         if (D_80165300[playerId] != 1) {
             func_800CA288(playerId, 0x41);
         }
@@ -240,7 +238,8 @@ void BansheeBoardwalk::WhatDoesThisDo(Player* player, int8_t playerId) {
 }
 
 void BansheeBoardwalk::WhatDoesThisDoAI(Player* player, int8_t playerId) {
-    if (((s16) gNearestWaypointByPlayerId[playerId] >= 0x180) && ((s16) gNearestWaypointByPlayerId[playerId] < 0x1E1)) {
+    if (((s16) gNearestPathPointByPlayerId[playerId] >= 0x180) &&
+        ((s16) gNearestPathPointByPlayerId[playerId] < 0x1E1)) {
         if (D_80165300[playerId] != 1) {
             func_800CA2E4(playerId, 0x41);
         }
@@ -251,13 +250,6 @@ void BansheeBoardwalk::WhatDoesThisDoAI(Player* player, int8_t playerId) {
             D_80165300[playerId] = 0;
         }
     }
-}
-
-// Positions the finishline on the minimap
-void BansheeBoardwalk::MinimapFinishlinePosition() {
-    //! todo: Place hard-coded values here.
-    draw_hud_2d_texture_8x8(this->Props.MinimapFinishlineX, this->Props.MinimapFinishlineY,
-                            (u8*) common_texture_minimap_finish_line);
 }
 
 void BansheeBoardwalk::Render(struct UnkStruct_800DC5EC* arg0) {
@@ -323,9 +315,6 @@ void BansheeBoardwalk::RenderCredits() {
     gSPDisplayList(gDisplayListHead++, (Gfx*) (d_course_banshee_boardwalk_dl_B308));
 }
 
-void BansheeBoardwalk::Collision() {
-}
-
 void BansheeBoardwalk::ScrollingTextures() {
     D_802B87BC++;
 
@@ -336,13 +325,13 @@ void BansheeBoardwalk::ScrollingTextures() {
 }
 
 void BansheeBoardwalk::Waypoints(Player* player, int8_t playerId) {
-    s16 waypoint = gNearestWaypointByPlayerId[playerId];
+    s16 waypoint = gNearestPathPointByPlayerId[playerId];
     if ((waypoint >= 0x12C) && (waypoint < 0x13C)) {
-        player->nearestWaypointId = 0x12CU;
+        player->nearestPathPointId = 0x12CU;
     } else {
-        player->nearestWaypointId = gNearestWaypointByPlayerId[playerId];
-        if (player->nearestWaypointId < 0) {
-            player->nearestWaypointId = gWaypointCountByPathIndex[0] + player->nearestWaypointId;
+        player->nearestPathPointId = gNearestPathPointByPlayerId[playerId];
+        if (player->nearestPathPointId < 0) {
+            player->nearestPathPointId = gPathCountByPathIndex[0] + player->nearestPathPointId;
         }
     }
 }

@@ -8,7 +8,8 @@
 #include "engine/objects/BombKart.h"
 #include "assets/luigi_raceway_data.h"
 #include "engine/objects/HotAirBalloon.h"
-#include "engine/actors/AFinishline.h"
+#include "engine/actors/Finishline.h"
+#include "engine/objects/GrandPrixBalloons.h"
 
 extern "C" {
 #include "main.h"
@@ -34,6 +35,7 @@ extern "C" {
 #include "courses/staff_ghost_data.h"
 #include "framebuffer_effects.h"
 #include "skybox_and_splitscreen.h"
+#include "course.h"
 extern const char* luigi_raceway_dls[];
 extern s16 currentScreenSection;
 }
@@ -87,18 +89,25 @@ LuigiRaceway::LuigiRaceway() {
     this->gfx = d_course_luigi_raceway_packed_dls;
     this->gfxSize = 6377;
     Props.textures = luigi_raceway_textures;
-    Props.MinimapTexture = minimap_luigi_raceway;
-    Props.MinimapDimensions =
-        IVector2D(ResourceGetTexWidthByName(Props.MinimapTexture), ResourceGetTexHeightByName(Props.MinimapTexture));
+    Props.Minimap.Texture = gTextureCourseOutlineLuigiRaceway;
+    Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
+    Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
+    Props.Minimap.Pos[0].X = 271;
+    Props.Minimap.Pos[0].Y = 170;
+    Props.Minimap.PlayerX = 45;
+    Props.Minimap.PlayerY = 60;
+    Props.Minimap.PlayerScaleFactor = 0.0155f;
+    Props.Minimap.FinishlineX = 0;
+    Props.Minimap.FinishlineY = 0;
 
-    Props.Id = "mk:luigi_raceway";
-    Props.Name = "luigi raceway";
-    Props.DebugName = "l circuit";
-    Props.CourseLength = "717m";
+    Id = "mk:luigi_raceway";
+    Props.SetText(Props.Name, "luigi raceway", sizeof(Props.Name));
+    Props.SetText(Props.DebugName, "l circuit", sizeof(Props.DebugName));
+    Props.SetText(Props.CourseLength, "717m", sizeof(Props.CourseLength));
+
     Props.AIBehaviour = D_0D0091E8;
     Props.AIMaximumSeparation = 50.0f;
     Props.AIMinimumSeparation = 0.7f;
-    Props.SomePtr = D_800DCAF4;
     Props.AISteeringSensitivity = 48;
 
     Props.NearPersp = 9.0f;
@@ -106,40 +115,39 @@ LuigiRaceway::LuigiRaceway() {
 
     Props.PathSizes = { 0x2DA, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 };
 
-    Props.D_0D009418[0] = 4.1666665f;
-    Props.D_0D009418[1] = 5.5833334f;
-    Props.D_0D009418[2] = 6.1666665f;
-    Props.D_0D009418[3] = 6.75f;
+    Props.CurveTargetSpeed[0] = 4.1666665f;
+    Props.CurveTargetSpeed[1] = 5.5833334f;
+    Props.CurveTargetSpeed[2] = 6.1666665f;
+    Props.CurveTargetSpeed[3] = 6.75f;
 
-    Props.D_0D009568[0] = 3.75f;
-    Props.D_0D009568[1] = 5.1666665f;
-    Props.D_0D009568[2] = 5.75f;
-    Props.D_0D009568[3] = 6.3333334f;
+    Props.NormalTargetSpeed[0] = 3.75f;
+    Props.NormalTargetSpeed[1] = 5.1666665f;
+    Props.NormalTargetSpeed[2] = 5.75f;
+    Props.NormalTargetSpeed[3] = 6.3333334f;
 
     Props.D_0D0096B8[0] = 3.3333332f;
     Props.D_0D0096B8[1] = 3.9166667f;
     Props.D_0D0096B8[2] = 4.5f;
     Props.D_0D0096B8[3] = 5.0833334f;
 
-    Props.D_0D009808[0] = 3.75f;
-    Props.D_0D009808[1] = 5.1666665f;
-    Props.D_0D009808[2] = 5.75f;
-    Props.D_0D009808[3] = 6.3333334f;
+    Props.OffTrackTargetSpeed[0] = 3.75f;
+    Props.OffTrackTargetSpeed[1] = 5.1666665f;
+    Props.OffTrackTargetSpeed[2] = 5.75f;
+    Props.OffTrackTargetSpeed[3] = 6.3333334f;
 
-    Props.PathTable[0] = (TrackWaypoint*) LOAD_ASSET_RAW(d_course_luigi_raceway_unknown_waypoints);
+    Props.PathTable[0] = (TrackPathPoint*) LOAD_ASSET_RAW(d_course_luigi_raceway_unknown_waypoints);
     Props.PathTable[1] = NULL;
     Props.PathTable[2] = NULL;
     Props.PathTable[3] = NULL;
 
-    Props.PathTable2[0] = (TrackWaypoint*) LOAD_ASSET_RAW(d_course_luigi_raceway_track_waypoints);
+    Props.PathTable2[0] = (TrackPathPoint*) LOAD_ASSET_RAW(d_course_luigi_raceway_track_waypoints);
     Props.PathTable2[1] = NULL;
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
+    Props.CloudTexture = (u8*)LOAD_ASSET_RAW(gTextureExhaust2);
     Props.Clouds = gLuigiRacewayClouds;
     Props.CloudList = gLuigiRacewayClouds;
-    Props.MinimapFinishlineX = 0;
-    Props.MinimapFinishlineY = 0;
 
     Props.Skybox.TopRight = { 128, 184, 248 };
     Props.Skybox.BottomRight = { 216, 232, 248 };
@@ -155,9 +163,9 @@ LuigiRaceway::LuigiRaceway() {
 void LuigiRaceway::Load() {
     Course::Load();
 
-    parse_course_displaylists((TrackSectionsI*) LOAD_ASSET_RAW(d_course_luigi_raceway_addr));
+    parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_luigi_raceway_addr));
     func_80295C6C();
-    D_8015F8E4 = gCourseMinY - 10.0f;
+    Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
 void LuigiRaceway::LoadTextures() {
@@ -166,7 +174,6 @@ void LuigiRaceway::LoadTextures() {
 }
 
 void LuigiRaceway::BeginPlay() {
-    gWorldInstance.AddActor(new AFinishline());
     spawn_foliage((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_luigi_raceway_tree_spawn));
     spawn_all_item_boxes((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_luigi_raceway_item_box_spawns));
 
@@ -174,31 +181,20 @@ void LuigiRaceway::BeginPlay() {
         gWorldInstance.AddObject(new OHotAirBalloon(FVector(-1250.0f, 0.0f, 1110.0f)));
     } else { // Normal gameplay
         gWorldInstance.AddObject(new OHotAirBalloon(FVector(-176.0, 0.0f, -2323.0f)));
+        gWorldInstance.AddObject(new OGrandPrixBalloons(FVector(-140, -44, -215)));
     }
 
     if (gModeSelection == VERSUS) {
-        Vec3f pos = { 0, 0, 0 };
+        FVector pos = { 0, 0, 0 };
 
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][50], 50, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][200], 200, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][305], 305, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][440], 440, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][515], 515, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &D_80164550[0][0], 0, 0, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 1, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][200], 200, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][305], 305, 1, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][440], 440, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][515], 515, 3, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
     }
-}
-
-// Likely sets minimap boundaries
-void LuigiRaceway::MinimapSettings() {
-    D_8018D220 = reinterpret_cast<uint8_t(*)[1024]>(dma_textures(gTextureExhaust2, 0x4F4U, 0xC00));
-    D_8018D2A0 = 0.0155f;
-    D_8018D2C0[0] = 271;
-    D_8018D2E0 = 45;
-    D_8018D2E8 = 60;
-    D_80165718 = -140;
-    D_80165720 = -44;
-    D_80165728 = -215;
 }
 
 void LuigiRaceway::InitCourseObjects() {
@@ -207,18 +203,7 @@ void LuigiRaceway::InitCourseObjects() {
         if (gModeSelection == GRAND_PRIX) {
             func_80070714();
         }
-
-        for (i = 0; i < D_80165738; i++) {
-            find_unused_obj_index(&gObjectParticle3[i]);
-            init_object(gObjectParticle3[i], 0);
-        }
     }
-}
-
-void LuigiRaceway::UpdateCourseObjects() {
-}
-
-void LuigiRaceway::RenderCourseObjects(s32 cameraId) {
 }
 
 void LuigiRaceway::SomeSounds() {
@@ -227,7 +212,7 @@ void LuigiRaceway::SomeSounds() {
 }
 
 void LuigiRaceway::WhatDoesThisDo(Player* player, int8_t playerId) {
-    if (((s16) gNearestWaypointByPlayerId[playerId] >= 0x145) && ((s16) gNearestWaypointByPlayerId[playerId] < 0x18B)) {
+    if (((s16) gNearestPathPointByPlayerId[playerId] >= 0x145) && ((s16) gNearestPathPointByPlayerId[playerId] < 0x18B)) {
         if (D_80165300[playerId] != 1) {
             func_800CA288(playerId, 0x55);
         }
@@ -241,7 +226,7 @@ void LuigiRaceway::WhatDoesThisDo(Player* player, int8_t playerId) {
 }
 
 void LuigiRaceway::WhatDoesThisDoAI(Player* player, int8_t playerId) {
-    if (((s16) gNearestWaypointByPlayerId[playerId] >= 0x145) && ((s16) gNearestWaypointByPlayerId[playerId] < 0x18B)) {
+    if (((s16) gNearestPathPointByPlayerId[playerId] >= 0x145) && ((s16) gNearestPathPointByPlayerId[playerId] < 0x18B)) {
         if (D_80165300[playerId] != 1) {
             func_800CA2E4(playerId, 0x55);
         }
@@ -252,13 +237,6 @@ void LuigiRaceway::WhatDoesThisDoAI(Player* player, int8_t playerId) {
             D_80165300[playerId] = 0;
         }
     }
-}
-
-// Positions the finishline on the minimap
-void LuigiRaceway::MinimapFinishlinePosition() {
-    //! todo: Place hard-coded values here.
-    draw_hud_2d_texture_8x8(this->Props.MinimapFinishlineX, this->Props.MinimapFinishlineY,
-                            (u8*) common_texture_minimap_finish_line);
 }
 
 void LuigiRaceway::SetStaffGhost() {
@@ -419,7 +397,7 @@ void LuigiRaceway::Render(struct UnkStruct_800DC5EC* arg0) {
     D_800DC5E0 = 72;
 
     // Render only the first player camera onto the television billboard. Screen agnostic screens of other players).
-    if ((gActiveScreenMode == SCREEN_MODE_1P) && (sp22 >= 10) && (sp22 < 17)) {
+    if (gActiveScreenMode == SCREEN_MODE_1P) {
 
         prevFrame = (s16) sRenderedFramebuffer - 1;
 
@@ -446,13 +424,7 @@ void LuigiRaceway::RenderCredits() {
     gSPDisplayList(gDisplayListHead++, (Gfx*) (d_course_luigi_raceway_dl_FD40));
 }
 
-void LuigiRaceway::Collision() {
-}
-
 void LuigiRaceway::SomeCollisionThing(Player* player, Vec3f arg1, Vec3f arg2, Vec3f arg3, f32* arg4, f32* arg5,
                                       f32* arg6, f32* arg7) {
     func_8003E9EC(player, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-}
-
-void LuigiRaceway::Destroy() {
 }

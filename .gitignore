@@ -57,7 +57,7 @@ xml/*
 .assets-local.txt
 
 # Torch
-include/assets/*
+# include/assets/*
 torch/*
 debug/*
 /debug/*
@@ -111,7 +111,6 @@ mingw64/
 # torch
 torch.hash.yml
 build*
-cmake*
 .idea
 
 # the game
@@ -121,6 +120,9 @@ spaghettify.cfg.json
 
 # modding
 *.wasm
-out.*
-perf*
-*kernel.svg
+
+cmake-build-*/
+.idea/
+.vs
+build*/
+.DS_Store

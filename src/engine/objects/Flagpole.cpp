@@ -16,17 +16,20 @@ extern "C" {
 size_t OFlagpole::_count = 0;
 
 OFlagpole::OFlagpole(const FVector& pos, s16 direction) {
+    Name = "Flagpole";
     _idx = _count;
     _pos = pos;
     _direction = direction;
 
-    init_object(indexObjectList1[_idx], 0);
+    find_unused_obj_index(&_objectIndex);
+
+    init_object(_objectIndex, 0);
 
     _count++;
 }
 
 void OFlagpole::Tick() { // func_80083080
-    s32 objectIndex = indexObjectList1[_idx];
+    s32 objectIndex = _objectIndex;
 
     if (gObjectList[objectIndex].state != 0) {
         OFlagpole::func_80083018(objectIndex);
@@ -35,7 +38,7 @@ void OFlagpole::Tick() { // func_80083080
 }
 
 void OFlagpole::Draw(s32 cameraId) { // func_80055228
-    s32 objectIndex = indexObjectList1[_idx];
+    s32 objectIndex = _objectIndex;
 
     func_8008A364(objectIndex, cameraId, 0x4000U, 0x000005DC);
     if (is_obj_flag_status_active(objectIndex, VISIBLE) != 0) {

@@ -1,101 +1,85 @@
-# Mario Kart 64   
-This work-in-progress decompilation of Mario Kart 64 pursues historical and educational elements within the game found via taking it apart and putting it back together. Inspiration to do so not only emanates from the game's hardware and technology but also its immensely positive effects on the cultures and families of nearly every nationality.
+![Spaghetti Kart](docs/spaghettigithublight.png#gh-light-mode-only)
+![Spaghetti Kart](docs/spaghettigithubnight.png#gh-dark-mode-only)
 
-This repository does not contain assets. Compiling requires asset extraction from a prior copy of the game.
+## Discord
 
-It supports and builds the following versions:
+Official Discord: https://discord.com/invite/shipofharkinian
 
-| ROM Output        | Revision| SHA-1 Checksum                           |
-|-------------------|---------|------------------------------------------|
-| mk64.us.z64       | USA     | 579c48e211ae952530ffc8738709f078d5dd215e |
-| mk64.eu-1.0.z64   | EUR 1.0 | a729039453210b84f17019dda3f248d5888f7690 |
-| mk64.eu-final.z64 | EUR 1.1 | f6b5f519dd57ea59e9f013cc64816e9d273b2329 |
+If you're having any trouble after reading through this `README`, feel free ask for help in the SpaghettiKart Support text channels. Please keep in mind that we do not condone piracy.
 
-[![Linux Compile](https://github.com/n64decomp/mk64/actions/workflows/linux-compile.yml/badge.svg)](https://github.com/n64decomp/mk64/actions/workflows/linux-compile.yml)
+# Quick Start
 
-## Progress
+SpaghettiKart does not include any copyrighted assets.  You are required to provide a supported copy of the game.
 
-Total progress consists of all code segments together.
+### 1. Verify your ROM dump
+The US ROM is the only supported version. You can verify you have dumped a supported copy of the game by using the SHA-1 File Checksum Online at https://www.romhacking.net/hash/. The hash for a US ROM is SHA-1: 579C48E211AE952530FFC8738709F078D5DD215E.
 
-Game code progress consists of `main`, `ending` and `racing`.
+### 2. Verify your ROM is in .z64 format
+Your ROM needs to be in .z64 format. If it's in .n64 format, use the following to convert it to a .z64: https://hack64.net/tools/swapper.php
 
-![Build Status](https://n64decomp.github.io/mk64/total_progress.svg)
-![Build Status](https://n64decomp.github.io/mk64/game_progress.svg)
+### 2. Download SpaghettiKart from [Releases](https://github.com/HarbourMasters/SpaghettiKart/releases)
 
-![Build Status](https://n64decomp.github.io/mk64/asm_funcs.svg)
-![Build Status](https://n64decomp.github.io/mk64/m2c_funcs.svg)
-![Build Status](https://n64decomp.github.io/mk64/nonmatching_funcs.svg)
+### 3. Generating the O2R from the ROM
+#### Windows
+* Extract every file from the zip into a folder of your choosing.
+* Run "Spaghettify.exe" and select your US ROM.
 
-- ![Build Status](https://n64decomp.github.io/mk64/seg_main_progress.svg)
-- ![Build Status](https://n64decomp.github.io/mk64/seg_ending_progress.svg)
-- ![Build Status](https://n64decomp.github.io/mk64/seg_racing_progress.svg)
-- ![Build Status](https://n64decomp.github.io/mk64/audio_progress.svg)
-- ![Build Status](https://n64decomp.github.io/mk64/libultra_progress.svg)
+#### Linux
+* Extract every file from the zip into a folder of your choosing.
+* Run "spaghetti.appimage" and select your US ROM. You may have to chmod +x the appimage via terminal.
 
-## Quick Start
+#### Nintendo Switch
+* Run one of the PC releases to generate an `mk64.o2r` file. After launching the game on PC, you will be able to find these files in the same directory as `Spaghettify.exe` or `spaghetti.appimage`.
+* Copy the files to your sd card
 
-```
-git submodule update --init --recursive
-```
-Extract assets
-```
-make assets -j
-make -j
-```
+### 4. Play!
+* Launch `Spaghettify.exe`
+Congratulations, you are now sailing with SpaghettiKart! Have fun!
 
-## Building
+# Configuration
 
-Build instructions located in the [API docs](https://n64decomp.github.io/mk64/compiling.html)  
-See also, the comprehensive API and documentation which includes an overview of the code-base while also discussing significant concepts, features, and modding.
+### Default keyboard configuration
+| N64 | A | B | Z | Start | Analog stick | C buttons | D-Pad |
+| - | - | - | - | - | - | - | - |
+| Keyboard | Shift | Ctrl | Z | Enter | Arrow keys | TGFH (↑ ↓ ← →) | Num 8 2 4 6 |
 
-## Current State
+### Other shortcuts
+| Keys | Action |
+| - | - |
+| F11 | Fullscreen |
+| Tab | Toggle Alternate assets |
+| Ctrl+R | Reset |
+| Esc | Settings |
 
-The code-base may change significanty overtime as naming and documentation continues. The code-base is shiftable.
+### Graphics Backends
+Currently, there are three rendering APIs supported: DirectX11 (Windows), OpenGL (all platforms), and Metal (macOS). You can change which API to use in the `Settings` menu of the menubar, which requires a restart.  If you're having an issue with crashing, you can change the API in the `spaghettify.cfg.json` file by finding the line `"Backend":{`... and changing the `id` value to `3` and set the `Name` to `OpenGL`. `DirectX 11` with id `2` is the default on Windows. `Metal` with id `4` is the default on macOS.
 
-Some menu textures are compressed using a format called tkmk00. A byte-matching compressor/decompressor does not yet exist.   
+# Custom Assets
+Custom assets are packed in `.o2r` or stored `.zip` files. To use custom assets, place them in the `mods` folder.
 
-## Project Structure
-	
-	mk64
-	├── asm: Handwritten assembly code, rom header and boot
-	│   ├── non_matchings: Assembly for non-matching sections
-	│   └── os: Libultra handwritten assembly code
-	├── assets: Textures
-	├── courses: Course data, geography, display lists and staff ghosts
-	├── build: Output directory
-	├── data: Misc data, text, audio banks, and instrument sets
-	├── docs: Build guides
-	├── include: Header files
-	├── music: Sequences
-	├── src: C source code for the game
-	|   ├── actors: Individual actors split out from other files
-	│   ├── audio: Sample tables and audio code
-	│   ├── data: Misc data referenced in other C files
-	|   ├── debug: Custom debug code
-	|   ├── ending: Podium ceremony and credits code
-	│   ├── os: Libultra C code
-	|   └── racing: Race and game engine code
-	├── textures: Texture data, bitmaps
-	|   ├── common: Textures common to many courses
-	|   ├── courses: Course specific textures
-	|   ├── crash screen: Crash screen font image
-	│   ├── raw: Raw textures
-    │   ├── standalone: Whole textures
-	|   ├── startup_logo: Reflection map
-	|   └── trophy: Ceremony cutscene podium and trophy textures
-	└── tools: build tools
+If you're interested in creating and/or packing your own custom asset `.o2r` files, check out the following tools:
+* [**retro - O2R generator**](https://github.com/HarbourMasters64/retro)
+* [**fast64 - Blender plugin**](https://github.com/HarbourMasters/fast64)
 
-## Documentation
+**Note that .otr archives are not supported in SpaghettiKart!**
 
-Documentation available online at [https://n64decomp.github.io/mk64/](https://n64decomp.github.io/mk64/).
+# Development
+### Building
 
-Documentation generated using [Doxygen](https://www.doxygen.nl/index.html). Run `make doc` to test locally. Documentation resides in `docs/html`. Open index.html to view the site.
+If you want to manually compile SpaghettiKart, please consult the [building instructions](https://github.com/HarbourMasters/SpaghettiKart/blob/main/docs/BUILDING.md).
 
-## Contributing
+### Playtesting
+If you want to playtest a continuous integration build, you can find them at the links below. Keep in mind that these are for playtesting only, and you will likely encounter bugs and possibly crashes. 
 
-Pull requests are welcome. For major changes, please discuss in the Discord.
+* [Windows](https://nightly.link/HarbourMasters/SpaghettiKart/workflows/main/main/spaghettify-windows.zip)
+* [Linux](https://nightly.link/HarbourMasters/SpaghettiKart/workflows/main/main/SpaghettiKart-linux.zip)
+* [Switch](https://nightly.link/HarbourMasters/SpaghettiKart/workflows/main/main/Spaghettify-switch.zip)
 
-Run `make format` to ensure it meets the project's coding standards.
-If code needs to avoid formatting place `// clang-format off` before the code and `// clang-format on` after.
+Maintainers: [MegaMech](https://www.github.com/MegaMech), [Coco](https://www.github.com/coco875), [Kirito](https://github.com/KiritoDv)
 
-Official Discord: [discord.gg/DuYH3Fh](https://discord.gg/DuYH3Fh)
+<a href="https://github.com/Kenix3/libultraship/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/poweredbylus.darkmode.png">
+    <img alt="Powered by libultraship" src="./docs/poweredbylus.lightmode.png">
+  </picture>
+</a>

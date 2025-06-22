@@ -5,9 +5,10 @@
 #include <common_structs.h>
 
 namespace MK64 {
-std::shared_ptr<Ship::IResource> ResourceFactoryBinaryActorSpawnDataV0::ReadResource(std::shared_ptr<Ship::File> file) {
-    auto initData = file->InitData;
-    if (!FileHasValidFormatAndReader(file)) {
+std::shared_ptr<Ship::IResource>
+ResourceFactoryBinaryActorSpawnDataV0::ReadResource(std::shared_ptr<Ship::File> file,
+                                                    std::shared_ptr<Ship::ResourceInitData> initData) {
+    if (!FileHasValidFormatAndReader(file, initData)) {
         return nullptr;
     }
 

@@ -40,6 +40,8 @@
 #include <assets/boo_frames.h>
 #include "port/Game.h"
 
+float OTRGetAspectRatio(void);
+
 //! @todo unused?
 f32 D_800E43B0[] = { 65536.0, 0.0, 1.0, 0.0, 0.0, 65536.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
 
@@ -205,7 +207,7 @@ void func_80072120(s32* arg0, s32 arg1) {
 void func_80072180(void) {
     if (gModeSelection == TIME_TRIALS) {
         if (((gPlayerOne->type & PLAYER_EXISTS) != 0) &&
-            ((gPlayerOne->type & (PLAYER_INVISIBLE_OR_BOMB | PLAYER_KART_AI)) == 0)) {
+            ((gPlayerOne->type & (PLAYER_INVISIBLE_OR_BOMB | PLAYER_CPU)) == 0)) {
             D_80162DF8 = 1;
         }
     }
@@ -1301,124 +1303,6 @@ void func_800748F4(s32 objectIndex, const char** lakituTexturePtr) {
     func_80074704(objectIndex, lakituTexturePtr);
 }
 
-void func_80074924(s32 objectIndex) {
-    s32 sp2C = 0;
-    s32 sp28;
-    s32 sp24;
-    s32 sp20 = 0;
-    s32 temp_a0;
-    Object* object;
-
-    object = &gObjectList[objectIndex];
-    object->sizeScaling = 0.15f;
-
-    if (GetCourse() == GetMarioRaceway()) {
-        sp2C = random_int(0x00C8U);
-        sp28 = random_int(D_80165748);
-        sp24 = random_int(0x0096U);
-        sp20 = random_int(0x2000U);
-        object->origin_pos[0] = (f32) ((((f64) D_80165718 + 100.0) - (f64) sp2C) * (f64) xOrientation);
-        object->origin_pos[1] = (f32) (D_80165720 + sp28);
-        object->origin_pos[2] = (f32) (((f64) D_80165728 + 200.0) - (f64) sp24);
-    } else if (GetCourse() == GetRoyalRaceway()) {
-        sp2C = random_int(0x0168U);
-        sp28 = random_int(D_80165748);
-        sp24 = random_int(0x00B4U);
-        sp20 = random_int(0x2000U);
-        object->origin_pos[0] = (f32) ((((f64) D_80165718 + 180.0) - (f64) sp2C) * (f64) xOrientation);
-        object->origin_pos[1] = (f32) (D_80165720 + sp28);
-        object->origin_pos[2] = (f32) (((f64) D_80165728 + 200.0) - (f64) sp24);
-    } else if (GetCourse() == GetLuigiRaceway()) {
-        sp2C = random_int(0x012CU);
-        sp28 = random_int(D_80165748);
-        sp24 = random_int(0x0096U);
-        sp20 = random_int(0x2000U);
-        object->origin_pos[0] = (f32) ((((f64) D_80165718 + 150.0) - (f64) sp2C) * (f64) xOrientation);
-        object->origin_pos[1] = (f32) (D_80165720 + sp28);
-        object->origin_pos[2] = (f32) (((f64) D_80165728 + 200.0) - (f64) sp24);
-    }
-
-    set_obj_origin_offset(objectIndex, 0, 0, 0);
-    if (gPlayerCount == 1) {
-        object->velocity[1] = (f32) (((f64) (f32) (sp2C % 4) * 0.25) + 0.8);
-    } else {
-        object->velocity[1] = (f32) (((f64) (f32) (sp2C % 3) * 0.2) + 0.4);
-    }
-    temp_a0 = sp2C % 8;
-    object->unk_084[0] = D_800E6F30[temp_a0][0];
-    object->unk_084[1] = D_800E6F30[temp_a0][1];
-    object->unk_084[2] = D_800E6F30[temp_a0][2];
-    object->unk_084[3] = D_800E6F48[temp_a0][0];
-    object->unk_084[4] = D_800E6F48[temp_a0][1];
-    object->unk_084[5] = D_800E6F48[temp_a0][2];
-    object->unk_084[6] = sp20 - 0x1000;
-    if (sp2C & 1) {
-        object->unk_084[7] = (sp20 / 32) + 0x100;
-    } else {
-        object->unk_084[7] = -0x100 - (sp20 / 32);
-    }
-    object->primAlpha = 0x00E6;
-    object_next_state(objectIndex);
-}
-
-void func_80074D94(s32 objectIndex) {
-    if (gObjectList[objectIndex].unk_0AE == 1) {
-        if ((D_80165740 <= gObjectList[objectIndex].offset[1]) &&
-            (s16_step_down_towards(&gObjectList[objectIndex].primAlpha, 0, 8) != 0)) {
-            func_80086F60(objectIndex);
-        }
-        object_add_velocity_offset_y(objectIndex);
-    }
-    object_calculate_new_pos_offset(objectIndex);
-}
-
-void func_80074E28(s32 objectIndex) {
-    switch (gObjectList[objectIndex].state) {
-        case 1:
-            func_80074924(objectIndex);
-            break;
-        case 2:
-            if (set_and_run_timer_object(objectIndex, 1) != false) {
-                func_80086E70(objectIndex);
-                break;
-            }
-        case 0:
-            break;
-        case 3:
-            func_80041480(&gObjectList[objectIndex].unk_084[6], -0x1000, 0x1000, &gObjectList[objectIndex].unk_084[7]);
-            if (gObjectList[objectIndex].unk_0AE == 0) {
-                func_80072428(objectIndex);
-            }
-            break;
-    }
-}
-
-void func_80074EE8(void) {
-    s32 someIndex;
-    s32 objectIndex;
-    s32 someCount;
-    Object* object;
-
-    someCount = 0;
-    for (someIndex = 0; someIndex < D_80165738; someIndex++) {
-        objectIndex = gObjectParticle3[someIndex];
-        if (objectIndex != DELETED_OBJECT_ID) {
-            object = &gObjectList[objectIndex];
-            if (object->state != 0) {
-                func_80074E28(objectIndex);
-                func_80074D94(objectIndex);
-                if (object->state == 0) {
-                    delete_object_wrapper(&gObjectParticle3[someIndex]);
-                }
-                someCount += 1;
-            }
-        }
-    }
-    if (someCount == 0) {
-        D_80165730 = 0;
-    }
-}
-
 void func_800750D8(s32 objectIndex, s32 arg1, Vec3f arg2, s32 arg3, s32 arg4) {
     s32 sp24;
     s32 temp_v0;
@@ -2216,19 +2100,19 @@ void init_object_leaf_particle(s32 objectIndex, Vec3f arg1, s32 num) {
     gObjectList[objectIndex].sizeScaling = 0.1f;
     gObjectList[objectIndex].surfaceHeight = arg1[1];
 
-    if (GetCourse() == GetMarioRaceway()) {
+    if (IsMarioRaceway()) {
         object_origin_pos_randomize_around_xyz(objectIndex, arg1[0], arg1[1] + 25.0, arg1[2], 0x14, 0x1E, 0x14);
         gObjectList[objectIndex].unk_034 = 1.5f;
         gObjectList[objectIndex].velocity[1] = 1.5f;
-    } else if (GetCourse() == GetYoshiValley()) {
+    } else if (IsYoshiValley()) {
         object_origin_pos_randomize_around_xyz(objectIndex, arg1[0], arg1[1] + 25.0, arg1[2], 0x14, 0x1E, 0x14);
         gObjectList[objectIndex].unk_034 = 2.0f;
         gObjectList[objectIndex].velocity[1] = 2.0f;
-    } else if (GetCourse() == GetRoyalRaceway()) {
+    } else if (IsRoyalRaceway()) {
         object_origin_pos_randomize_around_xyz(objectIndex, arg1[0], arg1[1] + 30.0, arg1[2], 0x10, 0x28, 0x10);
         gObjectList[objectIndex].unk_034 = 2.0f;
         gObjectList[objectIndex].velocity[1] = 2.0f;
-    } else if (GetCourse() == GetLuigiRaceway()) {
+    } else if (IsLuigiRaceway()) {
         object_origin_pos_randomize_around_xyz(objectIndex, arg1[0], arg1[1] + 25.0, arg1[2], 0x14, 0x1E, 0x14);
         gObjectList[objectIndex].unk_034 = 1.5f;
         gObjectList[objectIndex].velocity[1] = 1.0f;
@@ -2468,7 +2352,7 @@ void func_80078288(s32 objectIndex) {
             break;
         case 1:
             if (gGamestate != 9) {
-                sp3A = ((gPlayerOneCopy->unk_094 / 18) * 216) / 2;
+                sp3A = ((gPlayerOneCopy->speed / 18) * 216) / 2;
                 sp3E = (random_int(0x000FU) - sp3A) + 0x2D;
                 sp3C = random_int(0x012CU) + 0x1E;
                 temp_t6 = camera1->rot[1] + ((s32) (random_int(0x3000U) - 0x1800) / (s16) ((sp3A / 15) + 1));
@@ -2566,21 +2450,30 @@ void update_snowflakes(void) {
     }
 }
 
+// This function adjusted to place clouds in the sky correctly
 void func_800788F8(s32 objectIndex, u16 rot, Camera* camera) {
-    s16 temp_v0;
+    s16 cameraRot;
+    // Adjustable culling factor
+    const float cullingFactor = OTRGetAspectRatio();
 
-    temp_v0 = camera->rot[1] + rot;
-    if ((temp_v0 >= D_8018D210) && (D_8018D208 >= temp_v0)) {
-        gObjectList[objectIndex].unk_09C = (D_8018D218 + (D_8018D1E8 * temp_v0));
-        set_object_flag(objectIndex, 0x00000010);
-        return;
+    // Calculate the cloud's rotation relative to the camera
+    cameraRot = camera->rot[1] + rot;
+
+    // Adjust bounds based on the culling factor
+    s16 adjustedLowerBound = (s16) (D_8018D210 * cullingFactor);
+    s16 adjustedUpperBound = (s16) (D_8018D208 * cullingFactor);
+
+    // Check if the object is within the adjusted bounds
+    if ((cameraRot >= adjustedLowerBound) && (adjustedUpperBound >= cameraRot)) {
+        // Calculate and update the object's position
+        gObjectList[objectIndex].unk_09C = (D_8018D218 + (D_8018D1E8 * cameraRot));
+
+        // Mark the object as visible
+        set_object_flag(objectIndex, 0x10);
+    } else {
+        // If outside the bounds, mark the object as not visible
+        set_object_flag(objectIndex, 0x10);
     }
-    if (CVarGetInteger("gNoCulling", 0) == 1) {
-        gObjectList[objectIndex].unk_09C = (D_8018D218 + (D_8018D1E8 * temp_v0));
-        set_object_flag(objectIndex, 0x00000010);
-        return;
-    }
-    clear_object_flag(objectIndex, 0x00000010);
 }
 
 void update_clouds(s32 arg0, Camera* arg1, CloudData* cloudList) {
@@ -3256,7 +3149,7 @@ u8 gen_random_item_human(UNUSED s16 arg0, s16 rank) {
     return gen_random_item(rank, false);
 }
 
-u8 kart_ai_gen_random_item(UNUSED s32 arg0, s16 rank) {
+u8 cpu_gen_random_item(UNUSED s32 arg0, s16 rank) {
     return gen_random_item(rank, true);
 }
 
@@ -3899,46 +3792,6 @@ void func_8007E4C4(void) {
     func_8007E3EC(objectIndex);
     if (gModeSelection != TIME_TRIALS) {
         func_8007E1F4(objectIndex);
-    }
-}
-
-void func_8008153C(s32 objectIndex) {
-    UNUSED s32 stackPadding[3];
-    s32 sp70;
-    s32 var_s1;
-    s32 var_s7;
-    s32 loopObjectIndex;
-
-    if (gPlayerCountSelection1 == 1) {
-        sp70 = 8;
-    } else {
-        sp70 = 4;
-    }
-
-    for (var_s7 = 0; var_s7 < sp70; var_s7++) {
-        for (var_s1 = 0; var_s1 < gObjectParticle2_SIZE; var_s1++) {
-            loopObjectIndex = gObjectParticle2[var_s1];
-
-            if (gObjectList[loopObjectIndex].state != 0) {
-                continue;
-            }
-
-            u8* mole = (u8*) LOAD_ASSET(d_course_moo_moo_farm_mole_dirt);
-
-            init_object(loopObjectIndex, 0);
-            gObjectList[loopObjectIndex].activeTLUT = d_course_moo_moo_farm_mole_dirt;
-            gObjectList[loopObjectIndex].tlutList = mole;
-            gObjectList[loopObjectIndex].sizeScaling = 0.15f;
-            gObjectList[loopObjectIndex].velocity[1] = random_int(0x000AU);
-            gObjectList[loopObjectIndex].velocity[1] = (gObjectList[loopObjectIndex].velocity[1] * 0.1) + 4.8;
-            gObjectList[loopObjectIndex].unk_034 = random_int(5U);
-            gObjectList[loopObjectIndex].unk_034 = (gObjectList[loopObjectIndex].unk_034 * 0.01) + 0.8;
-            gObjectList[loopObjectIndex].orientation[1] = (0x10000 / sp70) * var_s1;
-            gObjectList[loopObjectIndex].origin_pos[0] = gObjectList[objectIndex].origin_pos[0];
-            gObjectList[loopObjectIndex].origin_pos[1] = gObjectList[objectIndex].origin_pos[1] - 13.0;
-            gObjectList[loopObjectIndex].origin_pos[2] = gObjectList[objectIndex].origin_pos[2];
-            break;
-        }
     }
 }
 

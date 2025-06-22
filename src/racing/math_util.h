@@ -10,6 +10,10 @@
 // #define min(a, b) ((a) <= (b) ? (a) : (b))
 // #define max(a, b) ((a) > (b) ? (a) : (b))
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define sqr(x) ((x) * (x))
 
 // Here to appease the pragma gods
@@ -38,10 +42,9 @@ void func_802B5794(Mat4, Vec3f, Vec3f);
 void mtxf_rotate_x(Mat4, s16);
 void mtxf_rotate_y(Mat4, s16);
 void mtxf_s16_rotate_z(Mat4, s16);
-void func_802B5B14(Vec3f b, Vec3s rotate); // unused
 void func_802B5CAC(s16, s16, Vec3f);
 void func_802B5D30(s16, s16, s32);
-void func_802B5D64(Lights1*, s16, s16, s32);
+void set_track_light_direction(Lights1*, s16, s16, s32);
 void mtxf_scale(Mat4, f32);
 void mtxf_pos_rotation_xyz(Mat4, Vec3f, Vec3s);
 void mtxf_translate_vec3f_mat3(Vec3f, Mat3);
@@ -70,5 +73,12 @@ f32 is_within_render_distance(Vec3f, Vec3f, u16, f32, f32, f32);
 
 extern s32 D_802B91C0[];
 extern Vec3f D_802B91C8;
+//extern Mtx gIdentityMatrix;
+
+#ifdef __cplusplus
+}
+#endif
+
+#define DEGREES_CONVERSION_FACTOR 182
 
 #endif // MATH_UTIL_H

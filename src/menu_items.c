@@ -46,6 +46,8 @@
 
 #include "engine/courses/Course.h"
 #include "engine/Matrix.h"
+#include "src/engine/HM_Intro.h"
+#include "src/port/interpolation/FrameInterpolation.h"
 
 const char* GetCupName(void);
 
@@ -2044,6 +2046,14 @@ void print_text0(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 
     s32 stringWidth = 0;
     s32 glyphIndex;
 
+    if (text == NULL) {
+        // @port if invalid text is loaded it will skip rendering it.
+        return;
+    }
+
+    // @port Skip Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(false);  
+
     gSPDisplayList(gDisplayListHead++, D_020077A8);
     if (*text != 0) {
         do {
@@ -2069,12 +2079,23 @@ void print_text0(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 
         } while (*text != 0);
     }
     gSPDisplayList(gDisplayListHead++, D_020077D8);
+
+    // @port Resume Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(true);
 }
 
 // Time trials
 void print_text0_wide_right(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 scaleY, s32 mode) {
     s32 stringWidth = 0;
     s32 glyphIndex;
+
+    if (text == NULL) {
+        // @port if invalid text is loaded it will skip rendering it.
+        return;
+    }
+
+    // @port Skip Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(false);
 
     gSPDisplayList(gDisplayListHead++, D_020077A8);
     if (*text != 0) {
@@ -2101,6 +2122,9 @@ void print_text0_wide_right(s32 column, s32 row, char* text, s32 tracking, f32 s
         } while (*text != 0);
     }
     gSPDisplayList(gDisplayListHead++, D_020077D8);
+
+    // @port Resume Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(true);
 }
 
 void print_text_mode_1(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 scaleY) {
@@ -2125,6 +2149,14 @@ void print_text1(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 
     s32 stringWidth = 0;
     s32 glyphIndex;
     s32 sp60;
+
+    if (text == NULL) {
+        // @port if invalid text is loaded it will skip rendering it.
+        return;
+    }
+
+    // @port Skip Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(false);
 
     while (*temp_string != 0) {
         glyphIndex = char_to_glyph_index(temp_string);
@@ -2185,6 +2217,9 @@ void print_text1(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 
         }
     }
     gSPDisplayList(gDisplayListHead++, D_020077D8);
+
+    // @port Resume Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(true);
 }
 
 void print_text1_left(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 scaleY) {
@@ -2207,6 +2242,14 @@ void print_text2(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 
     MenuTexture* glyphTexture;
     s32 characterWidth;
     s32 glyphIndex;
+
+    if (text == NULL) {
+        // @port if invalid text is loaded it will skip rendering it.
+        return;
+    }
+
+    // @port Skip Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(false);
 
     gSPDisplayList(gDisplayListHead++, D_020077A8);
     if (*text != 0) {
@@ -2239,6 +2282,9 @@ void print_text2(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 
     }
 
     gSPDisplayList(gDisplayListHead++, D_020077D8);
+
+    // @port Resume Interpolation, if interpolated later remove this tag
+    FrameInterpolation_ShouldInterpolateFrame(true);
 }
 
 void func_800939C8(s32 column, s32 row, char* text, s32 tracking, f32 scaleX, f32 scaleY) {
@@ -2522,6 +2568,7 @@ void func_80094A64(struct GfxPool* pool) {
         case OPTIONS_MENU:
         case DATA_MENU:
         case COURSE_DATA_MENU:
+        case HARBOUR_MASTERS_MENU:
         case LOGO_INTRO_MENU:
         case CONTROLLER_PAK_MENU:
         case MAIN_MENU:
@@ -2581,6 +2628,9 @@ void setup_menus(void) {
                 add_menu_item(MENU_ITEM_DATA_COURSE_SELECTABLE, 0, 0, MENU_ITEM_PRIORITY_8);
                 add_menu_item(MENU_ITEM_TYPE_0E9, 0, 0, MENU_ITEM_PRIORITY_8);
                 add_menu_item(MENU_ITEM_TYPE_0EA, 0, 0, MENU_ITEM_PRIORITY_8);
+                break;
+            case HARBOUR_MASTERS_MENU:
+                add_menu_item(MENU_ITEM_UI_HARBOUR_MASTERS, 0, 0, MENU_ITEM_PRIORITY_0);
                 break;
             case LOGO_INTRO_MENU:
                 add_menu_item(MENU_ITEM_UI_LOGO_INTRO, 0, 0, MENU_ITEM_PRIORITY_0);
@@ -2733,12 +2783,15 @@ void func_80095574(void) {
         } else {
             debug_print_str2(0x000000AA, 0x00000064, "off");
         }
-        if ((gCurrentCourseId >= (NUM_COURSES - 1)) || (gCurrentCourseId < 0)) {
-            gCurrentCourseId = 0;
-        }
+
+        // This reset is not necessary. It wraps around automatically.
+        // if ((GetCourseIndex() >= (NUM_COURSES - 1)) || (GetCourseIndex() < 0)) {
+        //     gCurrentCourseId = 0;
+        // }
         print_str_num(0x00000050, 0x0000006E, "map_number", GetCourseIndex());
-        // This isn't functionally equivallent, but who cares.
-        if (gCurrentCourseId < COURSE_TOADS_TURNPIKE) {
+
+        // Bump the text over by 1 character width when the track id becomes two digits (10, 11, 12 etc.)
+        if (GetCourseIndex() < 10) {
             var_v0 = 0;
         } else {
             var_v0 = 8;
@@ -2918,9 +2971,13 @@ Gfx* func_80095BD0(Gfx* displayListHead, u8* arg1, f32 arg2, f32 arg3, u32 arg4,
     if (gMatrixEffectCount < 0) {
         rmonPrintf("effectcount < 0 !!!!!!(kawano)\n");
     }
+    FrameInterpolation_RecordOpenChild("flashing_text", TAG_LETTER((uintptr_t)&arg1 << 8) + (arg4 + arg5));
+    Mat4 mf;
+    SetTextMatrix(mf, arg2, arg3, arg6, arg7);
     // func_80095AE0(&gGfxPool->mtxEffect[gMatrixEffectCount], arg2, arg3, arg6, arg7);
-    Mtx* mtx = SetTextMatrix(arg2, arg3, arg6, arg7);
-    gSPMatrix(displayListHead++, mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
+
+    displayListHead = AddTextMatrix(displayListHead, mf);
+    //gSPMatrix(displayListHead++, mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
     gMKLoadTextureTile_4b(displayListHead++, arg1, G_IM_FMT_I, arg4, 0, 0, 0, arg4, arg5, 0, G_TX_NOMIRROR | G_TX_WRAP,
                           G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOLOD);
     switch (arg4) {
@@ -2937,28 +2994,32 @@ Gfx* func_80095BD0(Gfx* displayListHead, u8* arg1, f32 arg2, f32 arg3, u32 arg4,
             var_a1 = D_02007DF8;
             break;
     }
-
-    return func_800959F8(displayListHead, var_a1);
+    displayListHead = func_800959F8(displayListHead, var_a1);
+    FrameInterpolation_RecordCloseChild();
+    return displayListHead;
 }
 
+// Time trials text box
 Gfx* func_80095BD0_wide_right(Gfx* displayListHead, u8* arg1, f32 arg2, f32 arg3, u32 arg4, u32 arg5, f32 arg6,
                               f32 arg7) {
     Vtx* var_a1;
     // A match is a match, but why are goto's required here?
     if (gMatrixEffectCount >= 0x2F7) {
-        goto func_80095BD0_label1;
+        rmonPrintf("func_80095BD0_wide_right: MAX effectcount(760) over!!!!(kawano)\n");
+        return displayListHead;
     }
     if (gMatrixEffectCount < 0) {
-        rmonPrintf("effectcount < 0 !!!!!!(kawano)\n");
+        rmonPrintf("func_80095BD0_wide_right: effectcount < 0 !!!!!!(kawano)\n");
     }
-    goto func_80095BD0_label2;
-func_80095BD0_label1:
-    rmonPrintf("MAX effectcount(760) over!!!!(kawano)\n");
-    return displayListHead;
-func_80095BD0_label2:
-    func_80095AE0(&gGfxPool->mtxEffect[gMatrixEffectCount], OTRGetDimensionFromRightEdge(arg2), arg3, arg6, arg7);
-    gSPMatrix(displayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount++]),
-              G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
+
+    FrameInterpolation_RecordOpenChild("flashing_text_wide_right", TAG_LETTER((uintptr_t)&arg1 << 8) + (arg4 + arg5));
+    Mat4 mf;
+    SetTextMatrix(mf, OTRGetDimensionFromRightEdge(arg2), arg3, arg6, arg7);
+    //func_80095AE0(&gGfxPool->mtxEffect[gMatrixEffectCount], OTRGetDimensionFromRightEdge(arg2), arg3, arg6, arg7);
+
+    displayListHead = AddTextMatrix(displayListHead, mf);
+    // gSPMatrix(displayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount++]),
+    //           G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
     gMKLoadTextureTile_4b(displayListHead++, arg1, G_IM_FMT_I, arg4, 0, 0, 0, arg4, arg5, 0, G_TX_NOMIRROR | G_TX_WRAP,
                           G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOLOD);
     switch (arg4) {
@@ -2976,7 +3037,9 @@ func_80095BD0_label2:
             break;
     }
 
-    return func_800959F8(displayListHead, var_a1);
+    displayListHead = func_800959F8(displayListHead, var_a1);
+    FrameInterpolation_RecordCloseChild();
+    return displayListHead;
 }
 
 // Player select menu character border
@@ -4311,7 +4374,84 @@ void func_8009AD78(s32 arg0, s32 arg1) {
     gSPInvalidateTexCache(gDisplayListHead++, sMenuTextureMap[arg0].offset);
 }
 
+void convert_img_to_greyscale(s32 index, u32 num) {
+    size_t width = ResourceGetTexWidthByName(sMenuTextureList[sMenuTextureMap[index].offset]);
+    size_t height = ResourceGetTexHeightByName(sMenuTextureList[sMenuTextureMap[index].offset]);
+    u32 i;
+    s32 red;
+    s32 green;
+    s32 blue;
+    s32 alpha;
+    u32 result;
+    u16* color;
+    f32 sp48[32];
+
+    size_t size = width * height;
+
+    for (i = 0; i < ARRAY_COUNT(sp48); i++) {
+        sp48[i] = func_800917B0(i * 0.03125, (num * 1.5 * 0.00390625) + 0.25);
+    }
+
+    color = (u16*) LOAD_ASSET(sMenuTextureList[sMenuTextureMap[index].offset]);
+
+    for (i = 0; i < (u32) size; i++) {
+        u16 color_pixel = BSWAP16(*color);
+        red = ((color_pixel & 0xF800) >> 0xB) * 0x55;
+        green = ((color_pixel & 0x7C0) >> 6) * 0x4B;
+        blue = ((color_pixel & 0x3E) >> 1) * 0x5F;
+        alpha = color_pixel & 0x1;
+        result = red + green + blue;
+        result >>= 8;
+        result = sp48[result] * 32.0f;
+        if (result >= 0x20) {
+            result = 0x1F;
+        }
+        *color++ = BSWAP16((result << 1) + (result << 6) + (result << 0xB) + alpha);
+    }
+    // Invalidate texture to properly apply color manipulation
+    gSPInvalidateTexCache(gDisplayListHead++, sMenuTextureMap[index].offset);
+}
+
+void adjust_img_colour(s32 index, s32 screenSize, s32 r, s32 g, s32 b) {
+    size_t width = ResourceGetTexWidthByName(sMenuTextureList[sMenuTextureMap[index].offset]);
+    size_t height = ResourceGetTexHeightByName(sMenuTextureList[sMenuTextureMap[index].offset]);
+    s32 red;
+    s32 green;
+    s32 blue;
+    s32 alpha;
+    s32 newred;
+    s32 newgreen;
+    s32 newblue;
+    u32 temp_t9;
+    u16* color;
+    // Overwrite the default screen size of 320 * 240 to allow widescreen textures.
+    screenSize = width * height;
+
+    color = LOAD_ASSET(sMenuTextureList[sMenuTextureMap[index].offset]);
+
+    for (size_t i = 0; i < screenSize; i++) {
+        u16 color_pixel = BSWAP16(*color);
+        red = ((color_pixel & 0xF800) >> 0xB) * 0x4D;
+        green = ((color_pixel & 0x7C0) >> 6) * 0x96;
+        blue = ((color_pixel & 0x3E) >> 1) * 0x1D;
+        alpha = (color_pixel & 0x1);
+        temp_t9 = red + green + blue;
+        temp_t9 = temp_t9 >> 8;
+        newred = ((temp_t9 * r) >> 8) << 0xB;
+        newgreen = ((temp_t9 * g) >> 8) << 6;
+        newblue = ((temp_t9 * b) >> 8) << 1;
+        *color++ = BSWAP16(newred + newgreen + newblue + alpha);
+    }
+    // Invalidate texture to properly apply color manipulation
+    gSPInvalidateTexCache(gDisplayListHead++, sMenuTextureMap[index].offset);
+}
+
+/**
+ * Searches the menu texture cache for a texture. If not cached then return NULL
+ * This function is no longer required so the ptr can be returned back.
+ */
 u16* func_8009B8C4(u64* arg0) {
+    return arg0; // Prevent random CI8 crash in the menus
     UNUSED s32 pad[2];
     s32 offset;
     s32 found;
@@ -4652,8 +4792,8 @@ Gfx* func_8009C434(Gfx* arg0, struct_8018DEE0_entry* arg1, s32 arg2, s32 arg3, s
             switch (arg4) {
                 case -1:
                     arg0 = func_80095E10(arg0, var_t1, 0x00000400, 0x00000400, 0, 0, var_s0->width, var_s0->height,
-                                         var_s0->dX + arg2, var_s0->dY + arg3, (u8*) var_s0->textureData, var_s0->width,
-                                         var_s0->height);
+                                         var_s0->dX + arg2, var_s0->dY + arg3, (u8*) var_s0->textureData,
+                                         var_s0->width, var_s0->height);
                     break;
                 case -2:
                     arg0 = func_800963F0(arg0, var_t1, 0x00000400, 0x00000400, 0.5f, 0.5f, 0, 0, var_s0->width,
@@ -4880,7 +5020,7 @@ void func_8009CE64(s32 arg0) {
             gCreditsCourseId = COURSE_LUIGI_RACEWAY;
         } else {
             gGotoMenu = 1;
-            gMenuSelection = 0x0000000B;
+            gMenuSelection = MAIN_MENU;
         }
     } else if (gGamestate == 4) {
         if (gTransitionType[arg0] == 2) {
@@ -4998,8 +5138,11 @@ void func_8009CE64(s32 arg0) {
         if (gDebugMenuSelection != 0x40) {
             switch (gMenuFadeType) {
                 case 0:
-                    if (gMenuSelection == 8) {
-                        gMenuSelection = 0x0000000A;
+                    if (gMenuSelection == HARBOUR_MASTERS_MENU) {
+                        gMenuSelection = LOGO_INTRO_MENU;
+                        gFadeModeSelection = 0;
+                    } else if (gMenuSelection == LOGO_INTRO_MENU) {
+                        gMenuSelection = START_MENU;
                         gFadeModeSelection = 2;
                     } else {
                         gMenuSelection++;
@@ -5015,7 +5158,7 @@ void func_8009CE64(s32 arg0) {
                     gCCSelection = (s32) 1;
                     switch (gNextDemoId) { /* switch 4 */
                         case 0:            /* switch 4 */
-                            SetCourseByClass(GetMarioRaceway());
+                            SelectMarioRaceway();
                             CM_SetCup(GetFlowerCup());
                             SetCupCursorPosition(COURSE_FOUR);
                             gCurrentCourseId = 0;
@@ -5026,7 +5169,7 @@ void func_8009CE64(s32 arg0) {
                             gModeSelection = 0;
                             break;
                         case 1: /* switch 4 */
-                            SetCourseByClass(GetLuigiRaceway());
+                            SelectLuigiRaceway();
                             CM_SetCup(GetMushroomCup());
                             SetCupCursorPosition(COURSE_ONE);
                             gCurrentCourseId = (s16) 1;
@@ -5038,7 +5181,7 @@ void func_8009CE64(s32 arg0) {
                             gModeSelection = 2;
                             break;
                         case 2: /* switch 4 */
-                            SetCourseByClass(GetKalimariDesert());
+                            SelectKalimariDesert();
                             CM_SetCup(GetMushroomCup());
                             SetCupCursorPosition(COURSE_FOUR);
                             gCurrentCourseId = COURSE_KALIMARI_DESERT;
@@ -5049,7 +5192,7 @@ void func_8009CE64(s32 arg0) {
                             gModeSelection = 0;
                             break;
                         case 3: /* switch 4 */
-                            SetCourseByClass(GetWarioStadium());
+                            SelectWarioStadium();
                             CM_SetCup(GetStarCup());
                             SetCupCursorPosition(COURSE_ONE);
                             gCurrentCourseId = 0x000E;
@@ -5062,7 +5205,7 @@ void func_8009CE64(s32 arg0) {
                             gModeSelection = (s32) 2;
                             break;
                         case 4: /* switch 4 */
-                            SetCourseByClass(GetBowsersCastle());
+                            SelectBowsersCastle();
                             CM_SetCup(GetStarCup());
                             SetCupCursorPosition(COURSE_FOUR);
                             gCurrentCourseId = 2;
@@ -5073,7 +5216,7 @@ void func_8009CE64(s32 arg0) {
                             gModeSelection = 0;
                             break;
                         case 5: /* switch 4 */
-                            SetCourseByClass(GetSherbetLand());
+                            SelectSherbetLand();
                             CM_SetCup(GetFlowerCup());
                             SetCupCursorPosition(COURSE_TWO);
                             gCurrentCourseId = 0x000C;
@@ -5160,8 +5303,8 @@ void func_8009CE64(s32 arg0) {
                 }
             }
 
-            if (GetCourse() == GetBlockFort() || GetCourse() == GetSkyscraper() || GetCourse() == GetDoubleDeck() ||
-                GetCourse() == GetBigDonut()) {
+            if (IsBlockFort() || IsSkyscraper() || IsDoubleDeck() ||
+                IsBigDonut()) {
 
                 gModeSelection = BATTLE;
                 if (gPlayerCountSelection1 == 1) {
@@ -5693,6 +5836,11 @@ void add_menu_item(s32 type, s32 column, s32 row, s8 priority) {
     var_ra->param1 = 0;
     var_ra->param2 = 0;
     switch (type) {
+        case MENU_ITEM_UI_HARBOUR_MASTERS:
+            HM_InitIntro();
+            var_ra->param1 = -1;
+            var_ra->param2 = one;
+            break;
         case MENU_ITEM_UI_LOGO_INTRO:
             sIntroLogoTimer = 0;
             sIntroModelMotionSpeed = 0.0f;
@@ -6127,6 +6275,9 @@ void render_menus(MenuItem* arg0) {
     if ((s8) arg0->visible) {
         gDPPipeSync(gDisplayListHead++);
         switch (arg0->type) {
+            case MENU_ITEM_UI_HARBOUR_MASTERS:
+                HM_DrawIntro();
+                break;
             case MENU_ITEM_UI_LOGO_INTRO:
                 func_80094660(gGfxPool, arg0->param1);
                 break;
@@ -7079,7 +7230,7 @@ void menu_item_data_course_selectable(MenuItem* arg0) {
     }
     sp78.column = 0x001F;
     sp78.row = (gCourseRecordsMenuSelection * 0xD) + 0x3A;
-    func_800A66A8(arg0, (Unk_D_800E70A0*) &sp78);
+    pause_menu_item_box_cursor(arg0, (Unk_D_800E70A0*) &sp78);
 }
 
 void func_800A1DE0(MenuItem* arg0) {
@@ -7115,7 +7266,7 @@ void func_800A1DE0(MenuItem* arg0) {
 
     sp58.column = 0x003B;
     sp58.row = (gCourseRecordsSubMenuSelection * 0xD) + 0x66;
-    func_800A66A8(arg0, &sp58);
+    pause_menu_item_box_cursor(arg0, &sp58);
 }
 
 void func_800A1F30(UNUSED MenuItem* unused) {
@@ -7370,7 +7521,7 @@ void func_800A1FB0(MenuItem* arg0) {
             spE0.row -= 8;
             break;
     }
-    func_800A66A8(arg0, (Unk_D_800E70A0*) &spE0);
+    pause_menu_item_box_cursor(arg0, (Unk_D_800E70A0*) &spE0);
 }
 #else
 GLOBAL_ASM("asm/non_matchings/menu_items/func_800A1FB0.s")
@@ -7524,7 +7675,7 @@ void func_800A34A8(MenuItem* arg0) {
                     var_v1 = 0;
                 } else {
                     var_v1 = 0x0000000D;
-                    var_v0 = D_80164478[sp80[rank]];
+                    var_v0 = gGetPlayerByCharacterId[sp80[rank]];
                 }
                 if (var_v0 < gPlayerCount) {
                     var_a0 = (s32) gGlobalTimer % 3;
@@ -7551,7 +7702,7 @@ void func_800A34A8(MenuItem* arg0) {
                 if (arg0->state < 9) {
                     var_v0 = gGPCurrentRacePlayerIdByRank[rank];
                 } else {
-                    var_v0 = D_80164478[sp80[rank]];
+                    var_v0 = gGetPlayerByCharacterId[sp80[rank]];
                 }
                 if (var_v0 < gPlayerCount) {
                     var_a0 = (s32) gGlobalTimer % 3;
@@ -7592,7 +7743,8 @@ void func_800A3A10(s8* arg0) {
                 arg0[var_a1] = temp_a3;
                 arg0[var_a1 - 1] = temp_t1;
             } else if (gGPPointsByCharacterId[temp_t1] == gGPPointsByCharacterId[temp_a3]) {
-                if ((D_80164478[temp_t1] < gPlayerCount) && (D_80164478[temp_t1] < D_80164478[temp_a3])) {
+                if ((gGetPlayerByCharacterId[temp_t1] < gPlayerCount) &&
+                    (gGetPlayerByCharacterId[temp_t1] < gGetPlayerByCharacterId[temp_a3])) {
                     arg0[var_a1] = temp_a3;
                     arg0[var_a1 - 1] = temp_t1;
                 } else {
@@ -7806,7 +7958,7 @@ void func_800A3E60(MenuItem* arg0) {
     }
     sp84.column = var_v0_5->column - arg0->column;
     sp84.row = var_v0_5->row + arg0->row;
-    func_800A66A8(arg0, &sp84);
+    pause_menu_item_box_cursor(arg0, &sp84);
 }
 
 void render_lap_time(s32 lapNumber, s32 column, s32 row) {
@@ -8218,7 +8370,7 @@ void func_800A54EC(void) {
     whyTheSequel = D_800F0B50[why];
     sp50.column = var_v1->column - 8;
     sp50.row = (var_v1->row + ((sp48->state - whyTheSequel) * 0xD)) - 8;
-    func_800A66A8(sp48, &sp50);
+    pause_menu_item_box_cursor(sp48, &sp50);
 }
 
 // Also used to render the replay text box in time trials replay mode
@@ -8375,7 +8527,7 @@ void render_menu_item_end_course_option(MenuItem* arg0) {
         }
         sp98.column = var_v0_9->column;
         sp98.row = var_v0_9->row;
-        func_800A66A8(arg0, &sp98);
+        pause_menu_item_box_cursor(arg0, &sp98);
     }
 }
 
@@ -8388,7 +8540,9 @@ void func_800A6034(MenuItem* arg0) {
         set_text_color(TEXT_BLUE_GREEN_RED_CYCLE_2);
         print_text1_center_mode_2(arg0->column + 0x41, arg0->row + 0xA0, text, 0, 0.85f, 1.0f);
         text = CM_GetProps()->Name;
-        set_text_color((s32) gCurrentCourseId % 4);
+        //! @warning this used to be gCurrentCourseId % 4
+        // Hopefully this is equivallent.
+        set_text_color((s32) GetCourseIndex() % 4);
         print_text1_center_mode_2(arg0->column + 0x41, arg0->row + 0xC3, text, 0, 0.65f, 0.85f);
     }
 }
@@ -8419,7 +8573,7 @@ void func_800A6154(MenuItem* arg0) {
     if (arg0->state >= 0xB) {
         sp6C.column = 0x0084;
         sp6C.row = (arg0->state * 0x14) - 0x4E;
-        func_800A66A8(arg0, &sp6C);
+        pause_menu_item_box_cursor(arg0, &sp6C);
     }
     if (arg0->param2 > 0) {
         gDisplayListHead = func_80098FC8(gDisplayListHead, 0, 0, 0x0000013F, arg0->param2);
@@ -8475,17 +8629,18 @@ void func_800A638C(MenuItem* arg0) {
             text_rainbow_effect(arg0->state - 0xA, var_s1, TEXT_GREEN);
             print_text_mode_1(0x00000069, 0xAE + (0xF * var_s1), gTextPauseButton[var_s1 + 1], 0, 0.8f, 0.8f);
         }
-        func_800A66A8(arg0, &D_800E7360[arg0->state - 10]);
+        pause_menu_item_box_cursor(arg0, &D_800E7360[arg0->state - 10]);
     }
 }
 
-void func_800A66A8(MenuItem* arg0, Unk_D_800E70A0* arg1) {
+void pause_menu_item_box_cursor(MenuItem* arg0, Unk_D_800E70A0* arg1) {
     Mtx* mtx;
     Mtx* mtx2;
     f32 tmp;
     static float x2, y2, z2;
     static float x1, y1, z1;
 
+    FrameInterpolation_RecordOpenChild("pause_menu_item_box", TAG_OBJECT(arg0));
     mtx = GetEffectMatrix();
     mtx2 = GetEffectMatrix();
     if (arg0->paramf > 1.5) {
@@ -8517,14 +8672,13 @@ void func_800A66A8(MenuItem* arg0, Unk_D_800E70A0* arg1) {
     guMtxCatL(mtx, mtx2, mtx);
     guTranslate(mtx2, arg1->column, arg1->row, 0.0f);
     guMtxCatL(mtx, mtx2, mtx);
-    // gSPMatrix(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount++]),
-    //           (G_MTX_NOPUSH | G_MTX_LOAD) | G_MTX_MODELVIEW);
-    AddEffectMatrixFixed(G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
+    gSPMatrix(gDisplayListHead++, mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
     gDPNoOp(gDisplayListHead++);
     gDPSetRenderMode(gDisplayListHead++, G_RM_CLD_SURF, G_RM_CLD_SURF2);
     gSPDisplayList(gDisplayListHead++, D_0D003090);
+    FrameInterpolation_RecordCloseChild();
 }
 
 void func_800A69C8(UNUSED MenuItem* arg0) {
@@ -8872,6 +9026,10 @@ void handle_menus_with_pri_arg(s32 priSpecial) {
         }
 
         switch (type) {
+            case MENU_ITEM_UI_HARBOUR_MASTERS:
+                HM_TickIntro();
+                menuItem->param1++;
+                break;
             case MENU_ITEM_UI_LOGO_INTRO:
                 if (sIntroLogoTimer < 80) {
                     sIntroModelSpeed = 3.0f;
@@ -11217,7 +11375,7 @@ void func_800AC458(MenuItem* arg0) {
                 arg0->param1 = 0;
                 if (gCourseIndexInCup == 3) {
                     for (var_a1 = 0; var_a1 < 8; var_a1++) {
-                        if (D_80164478[gCharacterIdByGPOverallRank[var_a1]] < gPlayerCount) {
+                        if (gGetPlayerByCharacterId[gCharacterIdByGPOverallRank[var_a1]] < gPlayerCount) {
                             func_800B536C(var_a1);
                             break;
                         }
