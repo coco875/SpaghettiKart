@@ -5591,7 +5591,7 @@ void func_8009DF8C(u32 arg0, u32 arg1) {
     }
     if ((gTransitionType[4] != 2) && (gTransitionType[4] != 5)) {
         gTransitionType[4] = arg1;
-        gTransitionDuration[4] = 0;
+        gTransitionDuration[4] = arg0;
         if (gTransitionDuration[4] >= 0x100U) {
             gTransitionDuration[4] = 0xFFU;
         }
@@ -5662,7 +5662,7 @@ void func_8009E0F0(s32 arg0) {
 void func_8009E17C(u32 arg0) {
     if (gTransitionType[4] != 4) {
         gTransitionType[4] = 4;
-        gTransitionDuration[4] = 0;
+        gTransitionDuration[4] = arg0;
         if (gTransitionDuration[4] >= 0x100U) {
             gTransitionDuration[4] = 0x000000FFU;
         }
