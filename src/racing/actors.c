@@ -2222,7 +2222,7 @@ void evaluate_collision_between_player_actor(Player* player, struct Actor* actor
                 actor->flags = -0x8000;
                 actor->unk_04 = 0;
                 if (player->type & PLAYER_HUMAN) {
-                    func_8007ABFC(player - gPlayerOne, 7);
+                    func_8007ABFC(player - gPlayerOne, ITEM_BLUE_SPINY_SHELL);
                 }
             } else if (actor->state == 0) {
                 actor->state = 1;
@@ -2235,7 +2235,7 @@ void evaluate_collision_between_player_actor(Player* player, struct Actor* actor
                 actor->flags = -0x8000;
                 actor->unk_04 = 0;
                 if (player->type & PLAYER_HUMAN) {
-                    func_8007ABFC(player - gPlayerOne, 0);
+                    func_8007ABFC(player - gPlayerOne, ITEM_NONE);
                 }
             } else if (actor->state == 0) {
                 actor->state = 1;

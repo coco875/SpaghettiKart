@@ -2606,14 +2606,14 @@ void func_80078C70(s32 arg0) {
     }
 }
 
-void func_8007ABFC(s32 playerId, bool arg1) {
+void func_8007ABFC(s32 playerId, s32 arg1) {
     s32 itemWindow;
 
     if (playerHUD[playerId].raceCompleteBool == false) {
         itemWindow = gItemWindowObjectByPlayerId[playerId];
         if (func_80072354(itemWindow, 4) != 0) {
             init_object(itemWindow, 0);
-            if (arg1 != 0) {
+            if (arg1 != ITEM_NONE) {
                 playerHUD[playerId].itemOverride = arg1;
             }
         }
