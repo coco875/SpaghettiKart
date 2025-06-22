@@ -5569,7 +5569,7 @@ void func_8009DEF8(u32 arg0, u32 arg1) {
     }
     if ((gTransitionType[4] != 1) && (gTransitionType[4] != 6)) {
         gTransitionType[4] = arg1;
-        gTransitionDuration[4] = 0;
+        gTransitionDuration[4] = arg0;
         if (gTransitionDuration[4] >= 0x100U) {
             gTransitionDuration[4] = 0xFFU;
         }
@@ -5648,11 +5648,11 @@ void func_8009E0F0(s32 arg0) {
 
     if (gTransitionType[4] != 3) {
         gTransitionType[4] = 3;
-        gTransitionDuration[4] = 0;
+        gTransitionDuration[4] = arg0;
         if (gTransitionDuration[4] >= 0x100U) {
             gTransitionDuration[4] = 0x000000FF;
         }
-        gCurrentTransitionTime[4] = 0;
+        gCurrentTransitionTime[4] = arg0;
         for (var_v0 = 0; var_v0 < 0x4B0; var_v0++) {
             sTKMK00_LowResBuffer[var_v0] = 0;
         }
