@@ -211,7 +211,7 @@ void render_player_speech_bubble(Player*, s8, u8*, s8, f32, s32);
 void render_music_note(Player*, s8, u8*, s8, f32, s32);
 void render_player_onomatopoeia_crash(Player*, s8, f32, s8, s8);
 void func_80068724(Player*, s8, f32, s8, s8);
-void render_player_onomatopoeia_pomp(Player*, s8, f32, s8, s8);
+void render_player_onomatopoeia_boing(Player*, s8, f32, s8, s8);
 void render_player_onomatopoeia_pomp(Player*, s8, f32, s8, s8);
 
 void func_800691B8(Player*, s8, s16, s8);

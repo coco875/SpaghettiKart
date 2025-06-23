@@ -5590,7 +5590,7 @@ void func_80068724(Player* player, UNUSED s8 arg1, UNUSED f32 arg2, s8 arg3, s8 
     }
 }
 
-void render_player_onomatopoeia_pomp(Player* player, UNUSED s8 arg1, UNUSED f32 arg2, s8 arg3, s8 arg4) {
+void render_player_onomatopoeia_boing(Player* player, UNUSED s8 arg1, UNUSED f32 arg2, s8 arg3, s8 arg4) {
     Vec3f sp64;
     Vec3s sp5C;
 
@@ -6761,7 +6761,7 @@ void func_8006DD3C(Player* player, s8 playerId, s8 arg2) {
                     func_80068724(player, playerId, player->particlePool2[0].scale, arg2, 0);
                     break;
                 case 5:
-                    render_player_onomatopoeia_pomp(player, playerId, player->particlePool2[0].scale, arg2, 0);
+                    render_player_onomatopoeia_boing(player, playerId, player->particlePool2[0].scale, arg2, 0);
                     break;
                 case 6:
                     render_player_onomatopoeia_pomp(player, playerId, player->particlePool2[0].scale, arg2, 0);
