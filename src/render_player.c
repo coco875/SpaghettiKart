@@ -1404,7 +1404,7 @@ void func_800235AC(Player* player, s8 arg1) {
         return;
     }
     if ((player->effects & STAR_EFFECT) != 0) {
-        temp = (s32) gCourseTimer - D_8018D930[arg1];
+        temp = (s32) gCourseTimer - gPlayerStarEffectStartTime[arg1];
         if (temp <= 8) {
 
             if (temp >= 7) {

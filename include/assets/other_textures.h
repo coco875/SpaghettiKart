@@ -727,9 +727,9 @@ static const ALIGN_ASSET(2) char gTexture69B140[] = "__OTR__other_textures/textu
 
 static const ALIGN_ASSET(2) char gGrassParticle[] = "__OTR__other_textures/gGrassParticle";
 
-static const ALIGN_ASSET(2) char gTexture69B960[] = "__OTR__other_textures/texture_69B960";
+static const ALIGN_ASSET(2) char gTextureMusicNote[] = "__OTR__other_textures/texture_69B960";
 
-static const ALIGN_ASSET(2) char gTexture69BA28[] = "__OTR__other_textures/texture_69BA28";
+static const ALIGN_ASSET(2) char gTextureSpeechBubble[] = "__OTR__other_textures/texture_69BA28";
 
 static const ALIGN_ASSET(2) char gTextureBoingExclamation[] = "__OTR__other_textures/boing_exclamation";
 
@@ -741,7 +741,7 @@ static const ALIGN_ASSET(2) char gTexture69C090[] = "__OTR__other_textures/textu
 
 static const ALIGN_ASSET(2) char gTexture69C1E8[] = "__OTR__other_textures/texture_69C1E8";
 
-static const ALIGN_ASSET(2) char gTexture69C354[] = "__OTR__other_textures/texture_69C354";
+static const ALIGN_ASSET(2) char gTextureSmokePuff[] = "__OTR__other_textures/texture_69C354";
 
 static const ALIGN_ASSET(2) char gGroundDust[] = "__OTR__other_textures/gGroundDust";
 

@@ -355,7 +355,7 @@ typedef struct {
     /* 0x0222 */ s16 unk_222;
     /* 0x0224 */ f32 size;
     /* 0x0228 */ s16 unk_228;
-    /* 0x022A */ s16 unk_22A;
+    /* 0x022A */ s16 driftState;
     /* 0x022C */ f32 previousSpeed;
     /* 0x0230 */ f32 unk_230;
     /* 0x0234 */ s16 unk_234;
@@ -368,10 +368,10 @@ typedef struct {
     /* 0x024C */ u16 animGroupSelector[4]; // Based on screen
     /* 0x0254 */ u16 characterId;
     /* 0x0256 */ u16 unk_256;
-    /* 0x0258 */ UnkPlayerStruct258 playerPacticlePool0[10];
-    /* 0x06D8 */ UnkPlayerStruct258 playerPacticlePool1[10];
-    /* 0x0C98 */ UnkPlayerStruct258 playerPacticlePool2[10];
-    /* 0x1278 */ UnkPlayerStruct258 playerPacticlePool3[10];
+    /* 0x0258 */ UnkPlayerStruct258 particlePool0[10];
+    /* 0x06D8 */ UnkPlayerStruct258 particlePool1[10];
+    /* 0x0C98 */ UnkPlayerStruct258 particlePool2[10];
+    /* 0x1278 */ UnkPlayerStruct258 particlePool3[10];
     /* 0x0D98 */ s16 unk_D98;
     /* 0x0D9A */ s16 unk_D9A;
     /* 0x0D9C */ f32 unk_D9C;

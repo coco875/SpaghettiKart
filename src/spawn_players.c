@@ -216,7 +216,7 @@ void spawn_player(Player* player, s8 playerIndex, f32 startingRow, f32 startingC
     player->driftDuration = 0;
     player->nearestPathPointId = 0;
     player->unk_228 = 0;
-    player->unk_22A = 0;
+    player->driftState = 0;
     player->unk_234 = 0;
     player->unk_236 = 0;
     player->unk_238 = 0;
@@ -377,9 +377,9 @@ void spawn_player(Player* player, s8 playerIndex, f32 startingRow, f32 startingC
     D_8018CE10[playerIndex].unk_04[2] = 0.0f;
     func_80295BF8(playerIndex);
     reset_player_particle_pool(player);
-    func_8006B87C(player, playerIndex);
+    clear_all_player_balloons(player, playerIndex);
     if (gModeSelection == BATTLE) {
-        func_8006B7E4(player, playerIndex);
+        init_all_player_balloons(player, playerIndex);
     }
     calculate_orientation_matrix(player->unk_150, player->unk_058, player->unk_05C, player->unk_060,
                                  player->rotation[1]);

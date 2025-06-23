@@ -1095,10 +1095,10 @@ void func_8002A704(Player* player, s8 arg1) {
 
 void func_8002A79C(Player* player, s8 arg1) {
     if (((player->effects & 0x100) != 0x100) && ((player->effects & DRIFTING_EFFECT) != DRIFTING_EFFECT) &&
-        (player->unk_22A >= 2)) {
+        (player->driftState >= 2)) {
         player->effects |= 0x100;
         player->unk_23A = 0;
-        player->unk_22A = 0;
+        player->driftState = 0;
         player->unk_228 = 0;
         if (D_8015F890 != 1) {
             if ((player->type & PLAYER_HUMAN) && !(player->type & PLAYER_INVISIBLE_OR_BOMB)) {
@@ -1112,7 +1112,7 @@ void func_8002A79C(Player* player, s8 arg1) {
         if (player->unk_23A >= 0x1F) {
             player->unk_23A = 0;
             player->effects &= ~0x100;
-            player->unk_22A = 0;
+            player->driftState = 0;
             player->unk_228 = 0;
         }
     }
@@ -1129,15 +1129,15 @@ void func_8002A8A4(Player* player, s8 arg1) {
             }
         } else {
             if ((player->unk_228 >= 0x12) && (player->unk_228 < 0x64)) {
-                if (player->unk_22A < 3) {
-                    player->unk_22A++;
+                if (player->driftState < 3) {
+                    player->driftState++;
                 }
             }
             if ((player->unk_228 >= 0xA) && (player->unk_228 < 0x64)) {
                 player->unk_228 = 0x000A;
             } else {
                 player->unk_228 = 0;
-                player->unk_22A = 0;
+                player->driftState = 0;
             }
         }
     } else if (((s32) player->unk_07C >> 0x10) >= 0xA) {
@@ -1149,15 +1149,15 @@ void func_8002A8A4(Player* player, s8 arg1) {
         }
     } else {
         if ((player->unk_228 >= 0x12) && (player->unk_228 < 0x64)) {
-            if (player->unk_22A < 3) {
-                player->unk_22A++;
+            if (player->driftState < 3) {
+                player->driftState++;
             }
         }
         if ((player->unk_228 >= 0xA) && (player->unk_228 < 0x64)) {
             player->unk_228 = 0x000A;
         } else {
             player->unk_228 = 0;
-            player->unk_22A = 0;
+            player->driftState = 0;
         }
     }
 }
@@ -4055,8 +4055,8 @@ void func_80033AE0(Player* player, struct Controller* controller, s8 arg2) {
                 }
             }
             player->unk_228 = 0;
-            if (player->unk_22A < 2) {
-                player->unk_22A = 0;
+            if (player->driftState < 2) {
+                player->driftState = 0;
             }
         }
     } else if (((player->effects & 8) != 8) && ((player->effects & 2) != 2)) {

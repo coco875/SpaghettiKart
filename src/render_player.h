@@ -82,7 +82,7 @@ extern u16 gPlayerMagentaEffect[];
 extern u16 gPlayerYellowEffect[];
 extern s32 D_80164B80[];
 
-extern s32 D_8018D930[];
+extern s32 gPlayerStarEffectStartTime[];
 
 extern s32 gPlayersToRenderCount;
 extern void* D_800DDB5C[];
