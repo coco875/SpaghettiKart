@@ -3825,11 +3825,11 @@ void func_80099A70(void) {
 void func_80099A94(MenuTexture* arg0, s32 arg1) {
     struct_8018E060_entry* var_v1;
 
-    var_v1 = &D_8018E060[0];
+    var_v1 = D_8018E060;
     while (var_v1->texture != NULL) {
         var_v1++;
     }
-    var_v1->texture = segmented_to_virtual_dupe(arg0);
+    var_v1->texture = arg0;
     var_v1->texNum = arg1;
 }
 
@@ -4161,16 +4161,12 @@ s32 func_8009A478(MkAnimation* anim, s32 arg1) {
 }
 
 void func_8009A594(s32 arg0, s32 arg1, MkAnimation* arg2) {
-    MkAnimation* temp_v0;
     MenuTexture* temp_a0;
 
-    temp_v0 = segmented_to_virtual_dupe_2(arg2);
-    D_8018DEE0[arg0].textureSequence = temp_v0;
+    D_8018DEE0[arg0].textureSequence = arg2;
     D_8018DEE0[arg0].sequenceIndex = arg1;
-    // All hail the fake match gods who, in their infinite grace, have blessed us
-    // with this enigma of a match on the first iteration of permutation
-    D_8018DEE0[arg0].frameCountDown = (temp_v0 + arg1)->frame_length;
-    temp_a0 = segmented_to_virtual_dupe(temp_v0[arg1].mk64Texture);
+    D_8018DEE0[arg0].frameCountDown = arg2[arg1].frame_length;
+    temp_a0 = arg2[arg1].mk64Texture;
     if (D_8018DEE0[arg0].unk14 != 0) {
         func_80099A94(temp_a0, D_8018DEE0[arg0].menuTextureIndex);
         D_8018DEE0[arg0].unk14 = 0;
@@ -10403,14 +10399,14 @@ void func_800AA69C(MenuItem* arg0) {
                 arg0->subState = 3;
                 func_8009A594(arg0->D_8018DEE0_index,
                               D_800E8460[temp_a0] - D_8018DEE0[arg0->D_8018DEE0_index].sequenceIndex,
-                              segmented_to_virtual_dupe_2(gCharacterDeselectAnimation[temp_a0]));
+                              gCharacterDeselectAnimation[temp_a0]);
             }
             break;
         case 2:
             if ((gCharacterGridIsSelected[temp_v0] == 0) && (var_a0 != 0)) {
                 arg0->subState = 3;
                 func_8009A594(arg0->D_8018DEE0_index, 0,
-                              segmented_to_virtual_dupe_2(gCharacterDeselectAnimation[temp_a0]));
+                              gCharacterDeselectAnimation[temp_a0]);
             }
             break;
         case 3:
