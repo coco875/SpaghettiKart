@@ -8145,10 +8145,13 @@ void render_pause_menu_versus(MenuItem* arg0) {
     s32 leftEdge;
     s32 rightEdge;
     Unk_D_800E70A0* temp_s3;
-    temp_v1 = D_8015F480[gIsGamePaused - 1].screenStartX;
-    temp_t0 = D_8015F480[gIsGamePaused - 1].screenStartY;
-    temp_t3 = D_8015F480[gIsGamePaused - 1].screenWidth / 2;
-    temp_t4 = D_8015F480[gIsGamePaused - 1].screenHeight / 2;
+    struct UnkStruct_800DC5EC* temp_v0;
+
+    temp_v0 = &D_8015F480[gIsGamePaused - 1];
+    temp_v1 = temp_v0->screenStartX;
+    temp_t0 = temp_v0->screenStartY;
+    temp_t3 = temp_v0->screenWidth / 2;
+    temp_t4 = temp_v0->screenHeight / 2;
 
     switch (gScreenModeSelection) {
         case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
@@ -8165,16 +8168,16 @@ void render_pause_menu_versus(MenuItem* arg0) {
             break;
         case SCREEN_MODE_3P_4P_SPLITSCREEN:
             // Left side players
-            if ((D_8015F480[gIsGamePaused - 1].player == gPlayerOne) ||
-                (D_8015F480[gIsGamePaused - 1].player == gPlayerThree)) {
+            if ((temp_v0->player == gPlayerOne) ||
+                (temp_v0->player == gPlayerThree)) {
                 leftEdge = OTRGetDimensionFromLeftEdge(0);
                 gDisplayListHead =
                     draw_box_wide_pause_background(gDisplayListHead, leftEdge - temp_t3, temp_t0 - temp_t4,
                                                    temp_v1 + temp_t3, temp_t0 + temp_t4, 0, 0, 0, 140);
 
                 // Right side players
-            } else if ((D_8015F480[gIsGamePaused - 1].player == gPlayerTwo) ||
-                       (D_8015F480[gIsGamePaused - 1].player == gPlayerFour)) {
+            } else if ((temp_v0->player == gPlayerTwo) ||
+                       (temp_v0->player == gPlayerFour)) {
                 rightEdge = OTRGetDimensionFromRightEdge(SCREEN_WIDTH);
                 gDisplayListHead =
                     draw_box_wide_pause_background(gDisplayListHead, temp_v1 - temp_t3, temp_t0 - temp_t4,
