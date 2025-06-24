@@ -4913,6 +4913,7 @@ void draw_fade_in(s32 arg0, s32 arg1, s32 arg2) {
     s32 leftEdge;
     s32 rightEdge;
     UNUSED s32 pad[3];
+    struct UnkStruct_800DC5EC* unk;
     struct UnkStruct_8018E7E8 *size, *start;
 
     if ((gModeSelection == GRAND_PRIX) || (gModeSelection == TIME_TRIALS)) {
@@ -4930,10 +4931,11 @@ void draw_fade_in(s32 arg0, s32 arg1, s32 arg2) {
         w = size->x;
         h = size->y;
     } else {
-        x = D_8015F480[arg0].screenStartX;
-        y = D_8015F480[arg0].screenStartY;
-        w = D_8015F480[arg0].screenWidth;
-        h = D_8015F480[arg0].screenHeight;
+        unk = &D_8015F480[arg0];
+        x = unk->screenStartX;
+        y = unk->screenStartY;
+        w = unk->screenWidth;
+        h = unk->screenHeight;
     }
     color = &D_800E7AE8[arg2];
 
