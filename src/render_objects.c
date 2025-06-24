@@ -2732,16 +2732,6 @@ void func_8004EF9C(s32 arg0) {
     temp_v0 = CM_GetProps()->Minimap.Width;
     temp_t0 = CM_GetProps()->Minimap.Height;
 
-    // rescale minimap
-    int prevWidth = temp_v0;
-    int prevHeight = temp_t0;
-    if (prevHeight < prevWidth) {
-        temp_t0 = 64;
-        temp_v0 = (temp_v0 * 64) / prevHeight;
-    } else {
-        temp_v0 = 64;
-        temp_t0 = (temp_t0 * 64) / prevWidth;
-    }
     func_8004D37C(0x00000104, 0x0000003C, CM_GetProps()->Minimap.Texture, 0x000000FF, 0x000000FF, 0x000000FF, 0x000000FF,
                   temp_v0, temp_t0, temp_v0, temp_t0);
 }

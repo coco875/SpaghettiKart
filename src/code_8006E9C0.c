@@ -168,17 +168,17 @@ void get_minimap_properties() {
     // `u16 MinimapDimensions[][2]` but that doesn't match for some insane reason
 
     gMinimapWidth = CM_GetProps()->Minimap.Width;  // MinimapDimensions[courseId * 2];
-    gMinimapHeight = CM_GetProps()->Minimap.Height; // MinimapDimensions[courseId * 2 + 1];
+    CM_GetProps()->Minimap.Height = CM_GetProps()->Minimap.Height; // MinimapDimensions[courseId * 2 + 1];
 
     // rescale minimap
-    int prevWidth = gMinimapWidth;
-    int prevHeight = gMinimapHeight;
+    int prevWidth = CM_GetProps()->Minimap.Width;
+    int prevHeight = CM_GetProps()->Minimap.Height;
     if (prevHeight < prevWidth) {
-        gMinimapHeight = 64;
-        gMinimapWidth = (gMinimapWidth * 64) / prevHeight;
+        CM_GetProps()->Minimap.Height = 64;
+        CM_GetProps()->Minimap.Width = (CM_GetProps()->Minimap.Width * 64) / prevHeight;
     } else {
-        gMinimapWidth = 64;
-        gMinimapHeight = (gMinimapHeight * 64) / prevWidth;
+        CM_GetProps()->Minimap.Width = 64;
+        CM_GetProps()->Minimap.Height = (CM_GetProps()->Minimap.Height * 64) / prevWidth;
     }
 }
 
