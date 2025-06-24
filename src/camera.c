@@ -25,7 +25,7 @@
 
 f32 D_800DDB30[] = { 0.4f, 0.6f, 0.275f, 0.3f };
 
-Camera cameras[5];
+Camera cameras[8]; // his size should be 5 but there is an overflow somewhere, so we allocate 8 cameras to avoid it
 Camera* camera1 = &cameras[0];
 Camera* camera2 = &cameras[1];
 Camera* camera3 = &cameras[2];

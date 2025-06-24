@@ -157,6 +157,9 @@ RoyalRaceway::RoyalRaceway() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_RACEWAYS_WARIO_STADIUM;
 
     Props.WaterLevel = -60.0f;
+    for (int i = 0; i < 132; i++) {
+        fix_texture_segment((Gfx*) royal_raceway_dls[i], Props.textures);
+    }
 }
 
 void RoyalRaceway::Load() {

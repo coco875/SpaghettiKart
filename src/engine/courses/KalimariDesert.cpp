@@ -125,6 +125,9 @@ KalimariDesert::KalimariDesert() {
     Props.Skybox.FloorBottomLeft = {0, 0, 0};
     Props.Skybox.FloorTopLeft = {255, 192, 0};
     Props.Sequence = MusicSeq::MUSIC_SEQ_KALIMARI_DESERT;
+    for (int i = 0; i < 80; i++) {
+        fix_texture_segment((Gfx*) kalimari_desert_dls[i], Props.textures);
+    }
 }
 
 void KalimariDesert::Load() {

@@ -24,6 +24,8 @@ extern "C" {
 }
 #endif
 
+void fix_texture_segment(Gfx* gfx, const course_texture* textures);
+
 typedef struct SkyboxColours {
     RGB8 TopRight;
     RGB8 BottomRight;

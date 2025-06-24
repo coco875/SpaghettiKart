@@ -158,6 +158,9 @@ LuigiRaceway::LuigiRaceway() {
     Props.Skybox.FloorBottomLeft = { 0, 0, 0 };
     Props.Skybox.FloorTopLeft = { 216, 232, 248 };
     Props.Sequence = MusicSeq::MUSIC_SEQ_RACEWAYS_WARIO_STADIUM;
+    for (int i = 0; i < 120; i++) {
+        fix_texture_segment((Gfx*) luigi_raceway_dls[i], Props.textures);
+    }
 }
 
 void LuigiRaceway::Load() {

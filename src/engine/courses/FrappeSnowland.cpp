@@ -122,6 +122,9 @@ FrappeSnowland::FrappeSnowland() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_FRAPPE_SNOWLAND;
 
     Props.WaterLevel = -50.0f;
+    for (int i = 0; i < 68; i++) {
+        fix_texture_segment((Gfx*) d_course_frappe_snowland_dl_list[i], Props.textures);
+    }
 }
 
 void FrappeSnowland::Load() {

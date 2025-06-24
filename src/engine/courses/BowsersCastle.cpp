@@ -144,6 +144,9 @@ BowsersCastle::BowsersCastle() {
 
     Props.WaterLevel = -50.0f;
     WaterVolumes.push_back({20.0f, 1549.0f, 1859.0f, -1402.0f, -1102.0f});
+    for (int i = 0; i < 108; i++) {
+        fix_texture_segment((Gfx*) bowsers_castle_dls[i], Props.textures);
+    }
 }
 
 void BowsersCastle::Load() {

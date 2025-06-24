@@ -134,6 +134,9 @@ ChocoMountain::ChocoMountain() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_CHOCO_MOUNTAIN;
 
     Props.WaterLevel = -80.0f;
+    for (int i = 0; i < 96; i++) {
+        fix_texture_segment((Gfx*) choco_mountain_dls[i], Props.textures);
+    }
 }
 
 void ChocoMountain::Load() {
