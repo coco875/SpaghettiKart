@@ -33,6 +33,7 @@
 #include "port/Game.h"
 #include "engine/Matrix.h"
 #include "port/interpolation/FrameInterpolation.h"
+#include "port/Engine.h"
 
 s8 gRenderingFramebufferByPlayer[] = { 0x00, 0x02, 0x00, 0x01, 0x00, 0x01, 0x00, 0x02 };
 
@@ -1945,7 +1946,9 @@ void render_player(Player* player, s8 playerId, s8 screenId) {
         func_80025DE8(player, playerId, screenId, var_v1);
     }
     // Allows wheels to spin
-    gSPInvalidateTexCache(gDisplayListHead++, sKartTexture);
+    if (GameEngine_ResourceGetTexTypeByName(sKartTexture) != 6 || GameEngine_ResourceGetTexTypeByName(sKartTexture) != 5) { // only invalidate texture cache if it's a palette texture
+        gSPInvalidateTexCache(gDisplayListHead++, sKartTexture);
+    }
 }
 
 void func_80026A48(Player* player, s8 arg1) {

@@ -698,6 +698,17 @@ extern "C" bool GameEngine_OTRSigCheck(const char* data) {
     return strncmp(data, sOtrSignature, strlen(sOtrSignature)) == 0;
 }
 
+extern "C" int32_t GameEngine_ResourceGetTexTypeByName(const char* name) {
+    const auto res = std::static_pointer_cast<Fast::Texture>(ResourceLoad(name));
+
+    if (res != nullptr) {
+        return (int16_t) res->Type;
+    }
+
+    SPDLOG_ERROR("Given texture path is a non-existent resource");
+    return -1;
+}
+
 // struct TimedEntry {
 //     uint64_t duration;
 //     TimerAction action;
