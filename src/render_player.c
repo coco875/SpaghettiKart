@@ -585,7 +585,7 @@ void render_players_on_screen_one(void) {
 
 s32 junk[] = { 0, 0, 0 };
 
-Vtx* D_800DDBB4[] = { D_800E49C0, D_800E4AC0, D_800E4BC0, D_800E4CC0, D_800E4DC0, D_800E4EC0, D_800E4FD0, D_800E50D0 };
+Vtx* gPlayerVtx[] = { gPlayerOneVtx, gPlayerTwoVtx, gPlayerThreeVtx, gPlayerFourVtx, gPlayerFiveVtx, gPlayerSixVtx, gPlayerSevenVtx, gPlayerEightVtx };
 
 f32 gCharacterSize[] = { MARIO_SIZE, LUIGI_SIZE, YOSHI_SIZE, TOAD_SIZE, DK_SIZE, WARIO_SIZE, PEACH_SIZE, BOWSER_SIZE };
 
@@ -1198,24 +1198,24 @@ void func_80022BC4(Player* player, UNUSED s8 arg1) {
     player->unk_DB4.unk2 = temp_v0;
 }
 
-void func_80022CA8(Player* player, s8 playerId, UNUSED s8 screenId, s8 arg3) {
+void func_80022CA8(Player* player, s8 playerId, UNUSED s8 screenId, s8 flipOffset) {
     s16 temp_v0 = player->unk_DA4;
 
-    D_800DDBB4[playerId][arg3 + 0x0].v.ob[1] = 18 - (temp_v0 * 2.3);
-    D_800DDBB4[playerId][arg3 + 0x1].v.ob[1] = 9 - temp_v0;
-    D_800DDBB4[playerId][arg3 + 0x2].v.ob[1] = 9 - temp_v0;
-    D_800DDBB4[playerId][arg3 + 0x3].v.ob[1] = 18 - (temp_v0 * 2.3);
-    D_800DDBB4[playerId][arg3 + 0x4].v.ob[1] = 9 - temp_v0;
-    D_800DDBB4[playerId][arg3 + 0x7].v.ob[1] = 9 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x0].v.ob[1] = 18 - (temp_v0 * 2.3);
+    gPlayerVtx[playerId][flipOffset + 0x1].v.ob[1] = 9 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x2].v.ob[1] = 9 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x3].v.ob[1] = 18 - (temp_v0 * 2.3);
+    gPlayerVtx[playerId][flipOffset + 0x4].v.ob[1] = 9 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x7].v.ob[1] = 9 - temp_v0;
 }
 
 /**
  * Seems to stretch/warp a specific players texture for a
  * short period of time. Perhaps does not do anything
  **/
-void func_80022D60(UNUSED Player* player, s8 playerId, UNUSED s8 screenId, s8 arg3) {
-    D_800DDBB4[playerId][arg3].v.ob[1] = 21;
-    D_800DDBB4[playerId][arg3 + 0x3].v.ob[1] = 21;
+void func_80022D60(UNUSED Player* player, s8 playerId, UNUSED s8 screenId, s8 flipOffset) {
+    gPlayerVtx[playerId][flipOffset].v.ob[1] = 21;
+    gPlayerVtx[playerId][flipOffset + 0x3].v.ob[1] = 21;
 }
 
 void func_80022DB4(Player* player, UNUSED s8 arg1) {
@@ -1242,15 +1242,15 @@ void func_80022DB4(Player* player, UNUSED s8 arg1) {
     player->unk_DB4.unk18 = temp_v0;
 }
 
-void func_80022E84(Player* player, s8 playerId, UNUSED s8 screenId, s8 arg3) {
+void func_80022E84(Player* player, s8 playerId, UNUSED s8 screenId, s8 flipOffset) {
     s16 temp_v0 = player->unk_DB4.unk1E;
 
-    D_800DDBB4[playerId][arg3 + 0x0].v.ob[1] = 18 - temp_v0;
-    D_800DDBB4[playerId][arg3 + 0x1].v.ob[1] = 9 - temp_v0;
-    D_800DDBB4[playerId][arg3 + 0x2].v.ob[1] = 9 - temp_v0;
-    D_800DDBB4[playerId][arg3 + 0x3].v.ob[1] = 18 - temp_v0;
-    D_800DDBB4[playerId][arg3 + 0x4].v.ob[1] = 9 - temp_v0;
-    D_800DDBB4[playerId][arg3 + 0x7].v.ob[1] = 9 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x0].v.ob[1] = 18 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x1].v.ob[1] = 9 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x2].v.ob[1] = 9 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x3].v.ob[1] = 18 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x4].v.ob[1] = 9 - temp_v0;
+    gPlayerVtx[playerId][flipOffset + 0x7].v.ob[1] = 9 - temp_v0;
 }
 
 /**
@@ -1606,7 +1606,7 @@ Vtx player_vtx_flip[] = {
     { { { -9, 0, -6 }, 0, { 4032, 4032 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
 };
 
-void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
+void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     UNUSED s32 pad;
     Mat4 mtx;
     UNUSED s32 pad2[17];
@@ -1729,12 +1729,9 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     gDPLoadTextureBlock(gDisplayListHead++, sKartTexture, G_IM_FMT_CI, G_IM_SIZ_8b, 64, 64, 0,
                         G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD,
                         G_TX_NOLOD);
-    if (arg3 == 0) {
-        gSPVertex(gDisplayListHead++, player_vtx, 4, 0);
-    } else {
-        gSPVertex(gDisplayListHead++, player_vtx_flip, 4, 0);
-    }
-    gSP2Triangles(gDisplayListHead++, 0, 1, 2, 0, 1, 3, 2, 0);
+    gSPVertex(gDisplayListHead++, &gPlayerVtx[playerId][flipOffset], 8, 0);
+    gSP2Triangles(gDisplayListHead++, 0, 1, 2, 0, 0, 2, 3, 0);
+    gSP2Triangles(gDisplayListHead++, 4, 5, 6, 4, 4, 6, 7, 4);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
     gDPSetAlphaCompare(gDisplayListHead++, G_AC_NONE);
 
