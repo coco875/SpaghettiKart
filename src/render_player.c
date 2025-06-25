@@ -1593,19 +1593,6 @@ void render_player_shadow_credits(Player* player, s8 playerId, s8 arg2) {
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
-Vtx player_vtx[] = {
-    { { { 9, 18, -6 }, 0, { 4032, 0 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
-    { { { 9, 0, -6 }, 0, { 4032, 4032 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
-    { { { -9, 18, -6 }, 0, { 0, 0 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
-    { { { -9, 0, -6 }, 0, { 0, 4032 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
-};
-Vtx player_vtx_flip[] = {
-    { { { 9, 18, -6 }, 0, { 0, 0 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
-    { { { 9, 0, -6 }, 0, { 0, 4032 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
-    { { { -9, 18, -6 }, 0, { 4032, 0 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
-    { { { -9, 0, -6 }, 0, { 4032, 4032 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
-};
-
 void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     UNUSED s32 pad;
     Mat4 mtx;
@@ -1739,7 +1726,7 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     FrameInterpolation_RecordCloseChild();
 }
 
-void render_ghost(Player* player, s8 playerId, s8 screenId, s8 arg3) {
+void render_ghost(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     UNUSED s32 pad;
     Mat4 mtx;
     UNUSED s32 pad2[17];
@@ -1799,17 +1786,14 @@ void render_ghost(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     gDPLoadTextureBlock(gDisplayListHead++, sKartTexture, G_IM_FMT_CI, G_IM_SIZ_8b, 64, 64, 0,
                         G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD,
                         G_TX_NOLOD);
-    if (arg3 == 0) {
-        gSPVertex(gDisplayListHead++, player_vtx, 4, 0);
-    } else {
-        gSPVertex(gDisplayListHead++, player_vtx_flip, 4, 0);
-    }
-    gSP2Triangles(gDisplayListHead++, 0, 1, 2, 0, 1, 3, 2, 0);
+    gSPVertex(gDisplayListHead++, &gPlayerVtx[playerId][flipOffset], 8, 0);
+    gSP2Triangles(gDisplayListHead++, 0, 1, 2, 0, 0, 2, 3, 0);
+    gSP2Triangles(gDisplayListHead++, 4, 5, 6, 4, 4, 6, 7, 4);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
     gDPSetAlphaCompare(gDisplayListHead++, G_AC_NONE);
 }
 
-void func_80025DE8(Player* player, s8 playerId, s8 screenId, s8 arg3) {
+void func_80025DE8(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     Mat4 mtx;
     Vec3f sp9C;
     Vec3s sp94;
@@ -1844,19 +1828,16 @@ void func_80025DE8(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     gDPLoadTextureBlock(gDisplayListHead++, sKartTexture, G_IM_FMT_CI, G_IM_SIZ_8b, 64, 64, 0,
                         G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD,
                         G_TX_NOLOD);
-    if (arg3 == 0) {
-        gSPVertex(gDisplayListHead++, player_vtx, 4, 0);
-    } else {
-        gSPVertex(gDisplayListHead++, player_vtx_flip, 4, 0);
-    }
-    gSP2Triangles(gDisplayListHead++, 0, 1, 2, 0, 1, 3, 2, 0);
+    gSPVertex(gDisplayListHead++, &gPlayerVtx[playerId][flipOffset], 8, 0);
+    gSP2Triangles(gDisplayListHead++, 0, 1, 2, 0, 0, 2, 3, 0);
+    gSP2Triangles(gDisplayListHead++, 4, 5, 6, 4, 4, 6, 7, 4);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
     gMatrixEffectCount += 1;
 
     FrameInterpolation_RecordCloseChild();
 }
 
-void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 arg3) {
+void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     Mat4 mtx;
     Vec3f sp9C;
     Vec3s sp94;
@@ -1868,9 +1849,9 @@ void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 a
     sp9C[1] = player->unk_074 + (4.0f * player->size);
     sp9C[2] = player->pos[2];
     if (!(player->unk_002 & (4 << (screenId * 4)))) {
-        arg3 = 8;
+        flipOffset = 8;
     } else {
-        arg3 = 0;
+        flipOffset = 0;
     }
 
     // @port: Tag the transform.
@@ -1892,12 +1873,9 @@ void render_player_ice_reflection(Player* player, s8 playerId, s8 screenId, s8 a
     gDPLoadTextureBlock(gDisplayListHead++, sKartTexture, G_IM_FMT_CI, G_IM_SIZ_8b, 64, 64, 0,
                         G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD,
                         G_TX_NOLOD);
-    if (arg3 == 0) {
-        gSPVertex(gDisplayListHead++, player_vtx, 4, 0);
-    } else {
-        gSPVertex(gDisplayListHead++, player_vtx_flip, 4, 0);
-    }
-    gSP2Triangles(gDisplayListHead++, 0, 1, 2, 0, 1, 3, 2, 0);
+    gSPVertex(gDisplayListHead++, &gPlayerVtx[playerId][flipOffset], 8, 0);
+    gSP2Triangles(gDisplayListHead++, 0, 1, 2, 0, 0, 2, 3, 0);
+    gSP2Triangles(gDisplayListHead++, 4, 5, 6, 4, 4, 6, 7, 4);
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
     gMatrixEffectCount += 1;
 
@@ -1943,7 +1921,7 @@ void render_player(Player* player, s8 playerId, s8 screenId) {
         func_80025DE8(player, playerId, screenId, var_v1);
     }
     // Allows wheels to spin
-    if (GameEngine_ResourceGetTexTypeByName(sKartTexture) != 6 || GameEngine_ResourceGetTexTypeByName(sKartTexture) != 5) { // only invalidate texture cache if it's a palette texture
+    if (GameEngine_ResourceGetTexTypeByName(sKartTexture) == 6 || GameEngine_ResourceGetTexTypeByName(sKartTexture) == 5) { // only invalidate texture cache if it's a palette texture
         gSPInvalidateTexCache(gDisplayListHead++, sKartTexture);
     }
 }
