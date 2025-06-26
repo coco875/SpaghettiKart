@@ -6612,10 +6612,10 @@ void func_8006D474(Player* player, s8 playerId, s8 screenId) {
                 case 2:
                     if (gActiveScreenMode == SCREEN_MODE_1P) {
                         render_wall_bonk_star_particles(player, playerId, var_s2, screenId,
-                                      player->particlePool0[var_s2 + 30].scale);
+                                      player->particlePool3[var_s2].scale);
                     } else if (screenId == playerId) {
                         render_wall_bonk_star_particles(player, playerId, var_s2, screenId,
-                                      player->particlePool0[var_s2 + 30].scale);
+                                      player->particlePool3[var_s2].scale);
                     }
                     break;
                 case 3:
