@@ -3131,7 +3131,7 @@ u8 gen_random_item(s16 rank, s16 isCpu) {
             }
             break;
         case BATTLE:
-            distributionTable = &battleProbabilityCurve[rank];
+            distributionTable = &battleProbabilityCurve[0];
             break;
     }
 
