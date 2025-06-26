@@ -388,7 +388,6 @@ var menu__items_8c =
     [ "D_800E7D74", "menu__items_8c.html#a6340e9e8bfa1bb0b6b316890ac5b75a9", null ],
     [ "D_800E7DC4", "menu__items_8c.html#a6054f2be8629fec98b600884d77b283a", null ],
     [ "D_800E7E14", "menu__items_8c.html#a14bbf16ca6ffaf98beb7f581d7de4fe9", null ],
-    [ "D_800E7E20", "menu__items_8c.html#af27ff37bbdf546d3e5532c6684b25215", null ],
     [ "D_800E7E34", "menu__items_8c.html#a22d63ab75debc6bc34d50c12ee3e0b9d", null ],
     [ "D_800E8234", "menu__items_8c.html#aa1172b7c1699b5df642dcd59388f2832", null ],
     [ "D_800E8254", "menu__items_8c.html#abeb4b3ab0caae1b4c365f9009cdb6fda", null ],
