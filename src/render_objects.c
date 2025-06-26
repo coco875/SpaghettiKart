@@ -2702,7 +2702,9 @@ void func_8004EB38(s32 playerId) {
     }
 }
 
+// render the speedometer for the player
 void func_8004ED40(s32 arg0) {
+    gSPClearGeometryMode(gDisplayListHead++, G_ZBUFFER);
     func_8004A2F4(playerHUD[arg0].speedometerX, playerHUD[arg0].speedometerY, 0U, 1.0f,
                   // RGBA
                   CM_GetProps()->Minimap.Colour.r, CM_GetProps()->Minimap.Colour.g, CM_GetProps()->Minimap.Colour.b,
