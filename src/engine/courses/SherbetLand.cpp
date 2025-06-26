@@ -60,6 +60,7 @@ SherbetLand::SherbetLand() {
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
     Props.Minimap.Colour = {72, 100, 255};
+    resize_minimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "sherbet land", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "sherbet", sizeof(Props.DebugName));

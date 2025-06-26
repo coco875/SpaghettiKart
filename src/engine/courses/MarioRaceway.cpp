@@ -86,6 +86,7 @@ MarioRaceway::MarioRaceway() {
     Props.Minimap.PlayerScaleFactor = 0.022f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = -2.0;
+    resize_minimap(&Props.Minimap);
 
     Id = "mk:mario_raceway";
     Props.SetText(Props.Name, "mario raceway", sizeof(Props.Name));

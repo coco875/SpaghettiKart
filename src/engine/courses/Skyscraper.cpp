@@ -74,6 +74,7 @@ Skyscraper::Skyscraper() {
     Props.Minimap.PlayerScaleFactor = 0.0445f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
+    resize_minimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "skyscraper", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "skyscraper", sizeof(Props.DebugName));

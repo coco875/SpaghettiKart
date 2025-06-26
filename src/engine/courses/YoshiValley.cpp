@@ -69,6 +69,7 @@ YoshiValley::YoshiValley() {
     Props.Minimap.PlayerScaleFactor = 0.018f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
+    resize_minimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "yoshi valley", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "maze", sizeof(Props.DebugName));

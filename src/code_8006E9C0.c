@@ -168,18 +168,7 @@ void get_minimap_properties() {
     // `u16 MinimapDimensions[][2]` but that doesn't match for some insane reason
 
     gMinimapWidth = CM_GetProps()->Minimap.Width;  // MinimapDimensions[courseId * 2];
-    CM_GetProps()->Minimap.Height = CM_GetProps()->Minimap.Height; // MinimapDimensions[courseId * 2 + 1];
-
-    // rescale minimap
-    int prevWidth = CM_GetProps()->Minimap.Width;
-    int prevHeight = CM_GetProps()->Minimap.Height;
-    if (prevHeight < prevWidth) {
-        CM_GetProps()->Minimap.Height = 64;
-        CM_GetProps()->Minimap.Width = (CM_GetProps()->Minimap.Width * 64) / prevHeight;
-    } else {
-        CM_GetProps()->Minimap.Width = 64;
-        CM_GetProps()->Minimap.Height = (CM_GetProps()->Minimap.Height * 64) / prevWidth;
-    }
+    gMinimapHeight = CM_GetProps()->Minimap.Height; // MinimapDimensions[courseId * 2 + 1];
 }
 
 void func_8006EF60(void) {

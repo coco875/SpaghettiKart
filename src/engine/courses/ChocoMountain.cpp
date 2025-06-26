@@ -74,6 +74,7 @@ ChocoMountain::ChocoMountain() {
     Props.Minimap.PlayerScaleFactor = 0.022f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = -16.0;
+    resize_minimap(&Props.Minimap);
 
     Id = "mk:choco_mountain";
     Props.SetText(Props.Name, "choco mountain", sizeof(Props.Name));

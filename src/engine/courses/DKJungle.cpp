@@ -83,6 +83,7 @@ DKJungle::DKJungle() {
     Props.Minimap.PlayerScaleFactor = 0.0155f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
+    resize_minimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "d.k.'s jungle parkway", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "jungle", sizeof(Props.DebugName));

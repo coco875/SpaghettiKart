@@ -63,6 +63,7 @@ FrappeSnowland::FrappeSnowland() {
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
     Props.Minimap.Colour = {72, 100, 255};
+    resize_minimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "frappe snowland", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "snow", sizeof(Props.DebugName));

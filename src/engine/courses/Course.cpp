@@ -93,6 +93,18 @@ void fix_texture_segment(Gfx* gfx, const course_texture* textures) {
     }
 }
 
+void resize_minimap(MinimapProps* minimap) {
+    int prevWidth = minimap->Width;
+    int prevHeight = minimap->Height;
+    if (prevHeight < prevWidth) {
+        minimap->Height = 64;
+        minimap->Width = (minimap->Width * 64) / prevHeight;
+    } else {
+        minimap->Width = 64;
+        minimap->Height = (minimap->Height * 64) / prevWidth;
+    }
+}
+
 Course::Course() {
     Props.SetText(Props.Name, "Blank Track", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "blnktrck", sizeof(Props.DebugName));
@@ -111,6 +123,7 @@ Course::Course() {
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
     Props.Minimap.Colour = { 255, 255, 255 };
+
     Props.WaterLevel = FLT_MAX;
 
     Props.LakituTowType = (s32) OLakitu::LakituTowType::NORMAL;

@@ -82,6 +82,7 @@ BowsersCastle::BowsersCastle() {
     Props.Minimap.PlayerScaleFactor = 0.0174f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
+    resize_minimap(&Props.Minimap);
 
     Id = "mk:bowsers_castle";
 

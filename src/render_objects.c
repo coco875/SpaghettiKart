@@ -2253,23 +2253,18 @@ void func_8004D210(s32 arg0, s32 arg1, u8* texture, s32 arg3, s32 arg4, s32 arg5
     }
 }
 
-void func_8004D37C(s32 arg0, s32 arg1, u8* texture, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 width, s32 arg8,
-                   UNUSED s32 arg9, s32 height) {
+void func_8004D37C(s32 x, s32 y, u8* texture, s32 red, s32 green, s32 blue, s32 alpha, s32 width, s32 height,
+                   UNUSED s32 width2, s32 height2) {
     s32 var_s3;
     u8* img;
     s32 i;
 
-    var_s3 = arg1 - (arg8 / 2);
     img = texture;
     gSPDisplayList(gDisplayListHead++, D_0D007FE0);
-    func_8004B414(arg3, arg4, arg5, arg6);
+    func_8004B414(red, green, blue, alpha);
 
-    for (i = 0; i < arg8 / height; i++) {
-        func_80044F34(img, width, height);
-        func_8004B97C_wide(arg0 - (width / 2), var_s3, width, height, 1);
-        img += (width * height) / 2;
-        var_s3 += height;
-    }
+    func_80044F34(img, width, height);
+    func_8004B97C_wide(x - (width / 2), y - (height / 2), width, height, 1);
 }
 
 void func_8004D4E8(s32 arg0, s32 arg1, u8* texture, s32 red, s32 green, s32 blue, s32 alpha, s32 width, s32 height,
@@ -2729,10 +2724,10 @@ void func_8004EF9C(s32 arg0) {
     s16 temp_t0;
     s16 temp_v0;
 
-    temp_v0 = CM_GetProps()->Minimap.Width;
-    temp_t0 = CM_GetProps()->Minimap.Height;
+    temp_v0 = CM_GetPropsCourseId(arg0)->Minimap.Width;
+    temp_t0 = CM_GetPropsCourseId(arg0)->Minimap.Height;
 
-    func_8004D37C(0x00000104, 0x0000003C, CM_GetProps()->Minimap.Texture, 0x000000FF, 0x000000FF, 0x000000FF, 0x000000FF,
+    func_8004D37C(0x00000104, 0x0000003C, CM_GetPropsCourseId(arg0)->Minimap.Texture, 0x000000FF, 0x000000FF, 0x000000FF, 0x000000FF,
                   temp_v0, temp_t0, temp_v0, temp_t0);
 }
 

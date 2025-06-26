@@ -79,6 +79,7 @@ BansheeBoardwalk::BansheeBoardwalk() {
     Props.Minimap.PlayerScaleFactor = 0.016f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
+    resize_minimap(&Props.Minimap);
 
     Id = "mk:banshee_boardwalk";
 

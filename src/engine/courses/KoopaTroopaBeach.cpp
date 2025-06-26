@@ -72,6 +72,7 @@ KoopaTroopaBeach::KoopaTroopaBeach() {
     Props.Minimap.PlayerScaleFactor = 0.014f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
+    resize_minimap(&Props.Minimap);
 
     Id = "mk:koopa_beach";
     Props.SetText(Props.Name, "koopa troopa beach", sizeof(Props.Name));

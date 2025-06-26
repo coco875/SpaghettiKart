@@ -80,6 +80,7 @@ ToadsTurnpike::ToadsTurnpike() {
     Props.Minimap.PlayerScaleFactor = 0.013f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
+    resize_minimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "toad's turnpike", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "highway", sizeof(Props.DebugName));

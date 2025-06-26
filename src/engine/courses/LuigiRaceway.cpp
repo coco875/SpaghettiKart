@@ -99,6 +99,7 @@ LuigiRaceway::LuigiRaceway() {
     Props.Minimap.PlayerScaleFactor = 0.0155f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
+    resize_minimap(&Props.Minimap);
 
     Id = "mk:luigi_raceway";
     Props.SetText(Props.Name, "luigi raceway", sizeof(Props.Name));

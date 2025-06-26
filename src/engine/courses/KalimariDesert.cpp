@@ -67,6 +67,7 @@ KalimariDesert::KalimariDesert() {
     Props.Minimap.PlayerScaleFactor = 0.015f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 4.0;
+    resize_minimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "kalimari desert", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "desert", sizeof(Props.DebugName));
