@@ -48,6 +48,7 @@
 #include "engine/Matrix.h"
 #include "src/engine/HM_Intro.h"
 #include "src/port/interpolation/FrameInterpolation.h"
+#include "heap.h"
 
 const char* GetCupName(void);
 
@@ -3799,8 +3800,8 @@ void func_80099EC4(void) {
         mio0decode(gMenuCompressedBuffer,
                    D_802BFB80.arraySize4[var_s1->unk6][var_s1->unk4 / 2][(var_s1->unk4 % 2) + 2].pixel_index_array);
 #else
-        memcpy(D_802BFB80.arraySize4[var_s1->unk6][var_s1->unk4 / 2][(var_s1->unk4 % 2) + 2].pixel_index_array,
-               temp_s2->textureData, temp_s2->width * temp_s2->height * 2);
+        // memcpy(D_802BFB80.arraySize4[var_s1->unk6][var_s1->unk4 / 2][(var_s1->unk4 % 2) + 2].pixel_index_array,
+        //        temp_s2->textureData, temp_s2->width * temp_s2->height * 2);
 #endif
         var_s1->mk64Texture = NULL;
         var_s1++;
@@ -3829,8 +3830,8 @@ void func_80099EC4(void) {
         mio0decode(gMenuCompressedBuffer + 0x1400,
                    D_802BFB80.arraySize4[var_s1->unk6][var_s1->unk4 / 2][(var_s1->unk4 % 2) + 2].pixel_index_array);
 #else
-        memcpy(D_802BFB80.arraySize4[var_s1->unk6][var_s1->unk4 / 2][(var_s1->unk4 % 2) + 2].pixel_index_array,
-               temp_s2->textureData, temp_s2->width * temp_s2->height * 2);
+        // memcpy(D_802BFB80.arraySize4[var_s1->unk6][var_s1->unk4 / 2][(var_s1->unk4 % 2) + 2].pixel_index_array,
+        //        temp_s2->textureData, temp_s2->width * temp_s2->height * 2);
 #endif
         var_s1->mk64Texture = NULL;
         var_s1++;
@@ -4630,7 +4631,7 @@ Gfx* func_8009C708(Gfx* arg0, struct_8018DEE0_entry* arg1, s32 arg2, s32 arg3, s
         if (arg5 >= 0) {
             arg0 =
                 func_80097E58(arg0, var_t0, 0, 0U, var_s1->width, var_s1->height, var_s1->dX + arg2, var_s1->dY + arg3,
-                              D_802BFB80.arraySize4[arg1->unk14][arg4 / 2][(arg4 % 2) + 2].pixel_index_array,
+                              var_s1->textureData,
                               var_s1->width, var_s1->height, (u32) arg5);
         }
         var_s1++;
