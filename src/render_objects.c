@@ -936,7 +936,11 @@ void func_800484BC(Vec3f arg0, Vec3su arg1, f32 arg2, s32 arg3, u8* tlut, u8* te
     rsp_set_matrix_transformation(arg0, arg1, arg2);
     gSPDisplayList(gDisplayListHead++, D_0D007E18);
     set_transparency(arg3);
-    draw_rectangle_texture_overlap(tlut, texture, arg6, arg7, arg8, arg9, argA);
+    gDPLoadTLUT_pal256(gDisplayListHead++, tlut);
+    rsp_load_texture(texture, arg9, arg8);
+    gSPVertex(gDisplayListHead++, arg6, 4, 0);
+    gSPDisplayList(gDisplayListHead++, common_rectangle_display);
+    gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
 void func_80048540(Vec3f arg0, Vec3su arg1, f32 arg2, s32 arg3, u8* tlut, u8* texture, Vtx* arg6, s32 arg7, s32 arg8,
