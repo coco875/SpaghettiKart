@@ -111,7 +111,7 @@ void CustomEngineInit() {
     std::shared_ptr<Course> doubleDeck    = gWorldInstance.AddCourse(std::make_shared<DoubleDeck>());
     std::shared_ptr<Course> dkJungle      = gWorldInstance.AddCourse(std::make_shared<DKJungle>());
     std::shared_ptr<Course> bigDonut      = gWorldInstance.AddCourse(std::make_shared<BigDonut>());
-//    std::shared_ptr<Course> harbour       = gWorldInstance.AddCourse(std::make_unique<Harbour>());
+//    std::shared_ptr<Course> harbour       = gWorldInstance.AddCourse(std::make_shared<Harbour>());
     std::shared_ptr<Course> testCourse    = gWorldInstance.AddCourse(std::make_shared<TestCourse>());
 
     gPodiumCeremony = std::make_unique<PodiumCeremony>();
