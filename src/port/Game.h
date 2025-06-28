@@ -38,8 +38,6 @@ u32 WorldPreviousCup(void);
 
 u32 GetCupIndex(void);
 
-void CM_WeirdLength();
-
 const char* GetCupName(void);
 
 void LoadCourse();

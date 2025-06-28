@@ -528,12 +528,6 @@ Properties* CM_GetPropsCourseId(s32 courseId) {
     return &gWorldInstance.Courses[courseId]->Props;
 }
 
-void CM_WeirdLength() {
-    if (gWorldInstance.Courses.size() != 21) {
-        printf("World::WeirdLength() gWorldInstance.Courses.size() != 21, size: %zu\n", gWorldInstance.Courses.size());
-    }
-}
-
 void CM_ScrollingTextures() {
     if (gWorldInstance.CurrentCourse) {
         gWorldInstance.CurrentCourse->ScrollingTextures();
@@ -647,7 +641,6 @@ void CM_DeleteActor(size_t index) {
  * Clean up actors and other game objects.
  */
 void CM_CleanWorld(void) {
-    CM_WeirdLength();
     World* world = &gWorldInstance;
     for (auto& actor : world->Actors) {
         delete actor;
@@ -670,18 +663,13 @@ void CM_CleanWorld(void) {
         gWorldInstance.playerBombKart[i]._primAlpha = 0;
     }
 
-    CM_WeirdLength();
     gEditor.ClearObjects();
-    CM_WeirdLength();
     gWorldInstance.Actors.clear();
     gWorldInstance.StaticMeshActors.clear();
-    CM_WeirdLength();
     gWorldInstance.Objects.clear();
     gWorldInstance.Emitters.clear();
-    CM_WeirdLength();
     gWorldInstance.Lakitus.clear();
     gWorldInstance.Reset();
-    CM_WeirdLength();
 }
 
 struct Actor* CM_AddBaseActor() {
