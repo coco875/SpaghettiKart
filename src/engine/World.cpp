@@ -26,13 +26,12 @@ World::~World() {
     CM_CleanWorld();
 }
 
-Course* CurrentCourse;
+std::shared_ptr<Course> CurrentCourse;
 Cup* CurrentCup;
 
-Course* World::AddCourse(std::unique_ptr<Course> course) {
-    Course* ptr = course.get();
-    gWorldInstance.Courses.push_back(std::move(course));
-    return ptr;
+std::shared_ptr<Course> World::AddCourse(std::shared_ptr<Course> course) {
+    gWorldInstance.Courses.push_back(course);
+    return course;
 }
 
 void World::AddCup(Cup* cup) {
@@ -99,7 +98,7 @@ void World::SetCourse(const char* name) {
     //! @todo Use content dictionary instead
     for (size_t i = 0; i < Courses.size(); i++) {
         if (strcmp(Courses[i]->Props.Name, name) == 0) {
-            CurrentCourse = Courses[i].get();
+            CurrentCourse = Courses[i];
             break;
         }
     }
@@ -112,7 +111,7 @@ void World::NextCourse() {
     } else {
         CourseIndex = 0;
     }
-    gWorldInstance.CurrentCourse = Courses[CourseIndex].get();
+    gWorldInstance.CurrentCourse = Courses[CourseIndex];
 }
 
 void World::PreviousCourse() {
@@ -121,7 +120,7 @@ void World::PreviousCourse() {
     } else {
         CourseIndex = Courses.size() - 1;
     }
-    gWorldInstance.CurrentCourse = Courses[CourseIndex].get();
+    gWorldInstance.CurrentCourse = Courses[CourseIndex];
 }
 
 AActor* World::AddActor(AActor* actor) {
