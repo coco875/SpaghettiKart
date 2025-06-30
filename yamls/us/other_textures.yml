@@ -2922,7 +2922,6 @@ shrub:
   width: 32
   height: 32
   offset: 0x50FCC
-  mio0: true
   format: rgba16
 gTextureFrappeSnowlandTreeLeft:
   symbol: gTextureFrappeSnowlandTreeLeft
@@ -3340,7 +3339,7 @@ gGrassParticle:
   offset: 0x59408
   format: rgba16
 texture_69B960:
-  symbol: gTextureMusicNote
+  symbol: gTexture69B960
   type: texture
   mio0: true
   ctype: u16
@@ -3349,7 +3348,7 @@ texture_69B960:
   offset: 0x599F0
   format: i8
 texture_69BA28:
-  symbol: gTextureSpeechBubble
+  symbol: gTexture69BA28
   type: texture
   mio0: true
   ctype: u16
@@ -3403,7 +3402,7 @@ texture_69C1E8:
   offset: 0x5A278
   format: ia16
 texture_69C354:
-  symbol: gTextureSmokePuff
+  symbol: gTexture69C354
   type: texture
   mio0: true
   ctype: u16
@@ -4726,7 +4725,7 @@ gTextureLakituFishing4:
 #  height: 1160
 #  mio0: true
 #  format: CI8
-#  tlut_symbol: d_course_banshee_boardwalk_boo_tlut
+#  tlut_symbol: gTLUTBoo
 exhaust_0:
   symbol: gTextureExhaust0
   type: texture
@@ -4735,7 +4734,6 @@ exhaust_0:
   width: 32
   height: 96
   offset: 0xD5B14
-  mio0: true
   format: ia8
 exhaust_1:
   symbol: gTextureExhaust1
@@ -4745,7 +4743,6 @@ exhaust_1:
   width: 32
   height: 96
   offset: 0xD5F90
-  mio0: true
   format: ia8
 exhaust_2:
   symbol: gTextureExhaust2
@@ -4755,7 +4752,6 @@ exhaust_2:
   width: 32
   height: 96
   offset: 0xD6418
-  mio0: true
   format: ia8
 exhaust_3:
   symbol: gTextureExhaust3
@@ -4765,7 +4761,6 @@ exhaust_3:
   width: 32
   height: 128
   offset: 0xD690C
-  mio0: true
   format: ia8
 exhaust_4:
   symbol: gTextureExhaust4
@@ -4775,7 +4770,6 @@ exhaust_4:
   width: 32
   height: 128
   offset: 0xD6CD4
-  mio0: true
   format: ia8
 exhaust_5:
   symbol: gTextureExhaust5
@@ -4785,7 +4779,6 @@ exhaust_5:
   width: 32
   height: 128
   offset: 0xD70CC
-  mio0: true
   format: ia8
 logo_mario_kart_64:
   symbol: logo_mario_kart_64
@@ -4795,7 +4788,6 @@ logo_mario_kart_64:
   width: 256
   height: 128
   offset: 0xD7510
-  mio0: true
   format: rgba32
 minimap_mario_raceway:
   symbol: minimap_mario_raceway
