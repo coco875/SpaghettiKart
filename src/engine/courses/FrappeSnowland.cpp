@@ -136,8 +136,8 @@ void FrappeSnowland::Load() {
 }
 
 void FrappeSnowland::LoadTextures() {
-    dma_textures(gTextureFrappeSnowlandTreeLeft, 0x00000454U, 0x00000800U); // 0x03009000
-    dma_textures(gTextureFrappeSnowlandTreeRight, 0x00000432U, 0x00000800U); // 0x03009800
+    dma_textures_char(gTextureFrappeSnowlandTreeLeft, 0x00000454U, 0x00000800U); // 0x03009000
+    dma_textures_char(gTextureFrappeSnowlandTreeRight, 0x00000432U, 0x00000800U); // 0x03009800
 }
 
 void FrappeSnowland::BeginPlay() {

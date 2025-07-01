@@ -159,7 +159,7 @@ void BowsersCastle::Load() {
 }
 
 void BowsersCastle::LoadTextures() {
-    dma_textures(gTextureShrub, 0x000003FFU, 0x00000800U);
+    dma_textures_char(gTextureShrub, 0x000003FFU, 0x00000800U); // 0x03009000
 }
 
 // Required for the 2 thwomps that go far

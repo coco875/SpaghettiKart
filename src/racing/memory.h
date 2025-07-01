@@ -74,6 +74,7 @@ void func_802A81EC(void);
 struct AllocOnlyPool* alloc_only_pool_init(uintptr_t, uintptr_t);
 uintptr_t func_802A82AC(s32);
 uintptr_t func_802A8348(s32, s32, s32);
+u8* dma_textures_char(const char* texture, size_t arg1, size_t arg2);
 u8* dma_textures(const char*, size_t, size_t);
 uintptr_t MIO0_0F(u8*, uintptr_t, uintptr_t);
 void func_802A8844(void);

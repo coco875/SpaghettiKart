@@ -173,8 +173,8 @@ void LuigiRaceway::Load() {
 }
 
 void LuigiRaceway::LoadTextures() {
-    dma_textures(gTextureTrees5Left, 0x000003E8U, 0x00000800U); // 0x03009000
-    dma_textures(gTextureTrees5Right, 0x000003E8U, 0x00000800U); // 0x03009800
+    dma_textures_char(gTextureTrees5Left, 0x000003E8U, 0x00000800U); // 0x03009000
+    dma_textures_char(gTextureTrees5Right, 0x000003E8U, 0x00000800U); // 0x03009800
 }
 
 void LuigiRaceway::BeginPlay() {

@@ -483,6 +483,32 @@ UNUSED u8* func_802A841C(u8* arg0, s32 arg1, s32 arg2) {
     return temp_v0;
 }
 
+u8* dma_textures_char(const char* texture, size_t arg1, size_t arg2) {
+    u8* temp_v0;
+    void* temp_a0;
+#ifdef TARGET_N64
+    temp_v0 = (u8*) gNextFreeMemoryAddress;
+#else
+
+    temp_v0 = (u8*) allocate_memory(arg2);
+#endif
+    temp_a0 = temp_v0 + arg2;
+    arg1 = ALIGN16(arg1);
+    arg2 = ALIGN16(arg2);
+#ifdef TARGET_N64
+    osInvalDCache((void*) temp_a0, arg1);
+    osPiStartDma(&gDmaIoMesg, 0, 0, (uintptr_t) &_other_texturesSegmentRomStart[SEGMENT_OFFSET(texture)],
+                 (void*) temp_a0, arg1, &gDmaMesgQueue);
+    osRecvMesg(&gDmaMesgQueue, &gMainReceivedMesg, (int) 1);
+    mio0decode((u8*) temp_a0, temp_v0);
+    gNextFreeMemoryAddress += arg2;
+#else
+    strncpy(temp_v0, texture, arg2);
+    // strcpy(temp_v0, texture);
+#endif
+    return temp_v0;
+}
+
 u8* dma_textures(const char* texture, size_t arg1, size_t arg2) {
     u8* temp_v0;
     void* temp_a0;
