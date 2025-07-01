@@ -3,6 +3,8 @@
 #include <assets/other_textures.h>
 #include "some_data.h"
 
+// Values below are altered so that the whole kart texture may be rendered as one texture instead of two half.
+
 Vtx gPlayerOneVtx[] = {
     { { { 9, 18, -6 }, 0, { 4032, 0 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
     { { { 9, 9, -6 }, 0, { 4032, 1984 }, { 0xFF, 0xFF, 0xFF, 0xFF } } },
