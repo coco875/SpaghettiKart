@@ -3231,7 +3231,7 @@ ItemProbabilities battleProbabilityCurve[] = { { .none = 0,
                                                  .superMushroom = 0 } };
 
 void getProbabilityArray(const ItemProbabilities* probStruct, u8* probArray) {
-    probArray[ITEM_NONE] = ITEM_NONE;
+    probArray[ITEM_NONE] = probStruct->none;
     probArray[ITEM_BANANA] = probStruct->banana;
     probArray[ITEM_BANANA_BUNCH] = probStruct->bananaBunch;
     probArray[ITEM_GREEN_SHELL] = probStruct->greenShell;
