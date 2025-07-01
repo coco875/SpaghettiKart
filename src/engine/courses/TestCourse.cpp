@@ -72,7 +72,7 @@ TestCourse::TestCourse() {
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
     Props.Minimap.Colour = {255, 255, 255};
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Id = "mk:test_course";
 

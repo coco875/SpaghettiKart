@@ -80,7 +80,7 @@ ToadsTurnpike::ToadsTurnpike() {
     Props.Minimap.PlayerScaleFactor = 0.013f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "toad's turnpike", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "highway", sizeof(Props.DebugName));
@@ -146,7 +146,7 @@ ToadsTurnpike::ToadsTurnpike() {
     Props.Skybox.FloorTopLeft = {209, 65, 23};
     Props.Sequence = MusicSeq::MUSIC_SEQ_TOADS_TURNPIKE;
     for (int i = 0; i < 80; i++) {
-        fix_texture_segment((Gfx*) d_course_toads_turnpike_dl_list[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) d_course_toads_turnpike_dl_list[i], Props.textures);
     }
 }
 

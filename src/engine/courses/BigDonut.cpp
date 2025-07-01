@@ -53,7 +53,7 @@ BigDonut::BigDonut() {
     Props.Minimap.PlayerScaleFactor = 0.0257f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "big donut", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "doughnut", sizeof(Props.DebugName));

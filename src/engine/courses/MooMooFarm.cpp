@@ -85,7 +85,7 @@ MooMooFarm::MooMooFarm() {
     Props.Minimap.PlayerScaleFactor = 0.0155f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "moo moo farm", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "farm", sizeof(Props.DebugName));
@@ -145,7 +145,7 @@ MooMooFarm::MooMooFarm() {
     Props.Skybox.FloorTopLeft = {255, 184, 99};
     Props.Sequence = MusicSeq::MUSIC_SEQ_MOO_MOO_FARM_YOSHI_VALLEY;
     for (int i = 0; i < 92; i++) {
-        fix_texture_segment((Gfx*) moo_moo_farm_dls[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) moo_moo_farm_dls[i], Props.textures);
     }
 }
 

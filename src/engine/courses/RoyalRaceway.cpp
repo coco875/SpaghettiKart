@@ -97,7 +97,7 @@ RoyalRaceway::RoyalRaceway() {
     Props.Minimap.PlayerScaleFactor = 0.014f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "royal raceway", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "p circuit", sizeof(Props.DebugName));
@@ -159,7 +159,7 @@ RoyalRaceway::RoyalRaceway() {
 
     Props.WaterLevel = -60.0f;
     for (int i = 0; i < 132; i++) {
-        fix_texture_segment((Gfx*) royal_raceway_dls[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) royal_raceway_dls[i], Props.textures);
     }
 }
 

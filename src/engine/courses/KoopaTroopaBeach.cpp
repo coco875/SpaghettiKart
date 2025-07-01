@@ -72,7 +72,7 @@ KoopaTroopaBeach::KoopaTroopaBeach() {
     Props.Minimap.PlayerScaleFactor = 0.014f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Id = "mk:koopa_beach";
     Props.SetText(Props.Name, "koopa troopa beach", sizeof(Props.Name));
@@ -137,10 +137,10 @@ KoopaTroopaBeach::KoopaTroopaBeach() {
     gWaterVelocity = -0.1f;
     WaterVolumes.push_back({0.8f, 67.0f, 239.0f, 2233.0f, 2405.0f});
     for (int i = 0; i < 148; i++) {
-        fix_texture_segment((Gfx*) d_course_koopa_troopa_beach_dl_list1[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) d_course_koopa_troopa_beach_dl_list1[i], Props.textures);
     }
     for (int i = 0; i < 148; i++) {
-        fix_texture_segment((Gfx*) koopa_troopa_beach_dls2[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) koopa_troopa_beach_dls2[i], Props.textures);
     }
 }
 

@@ -67,7 +67,7 @@ KalimariDesert::KalimariDesert() {
     Props.Minimap.PlayerScaleFactor = 0.015f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 4.0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "kalimari desert", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "desert", sizeof(Props.DebugName));
@@ -127,7 +127,7 @@ KalimariDesert::KalimariDesert() {
     Props.Skybox.FloorTopLeft = {255, 192, 0};
     Props.Sequence = MusicSeq::MUSIC_SEQ_KALIMARI_DESERT;
     for (int i = 0; i < 80; i++) {
-        fix_texture_segment((Gfx*) kalimari_desert_dls[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) kalimari_desert_dls[i], Props.textures);
     }
 }
 

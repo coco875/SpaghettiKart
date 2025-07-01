@@ -79,7 +79,7 @@ BansheeBoardwalk::BansheeBoardwalk() {
     Props.Minimap.PlayerScaleFactor = 0.016f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Id = "mk:banshee_boardwalk";
 
@@ -142,7 +142,7 @@ BansheeBoardwalk::BansheeBoardwalk() {
 
     Props.WaterLevel = -80.0f;
     for (int i = 0; i < 100; i++) {
-        fix_texture_segment((Gfx*) banshee_boardwalk_dls[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) banshee_boardwalk_dls[i], Props.textures);
     }
 }
 

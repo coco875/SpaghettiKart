@@ -69,7 +69,7 @@ YoshiValley::YoshiValley() {
     Props.Minimap.PlayerScaleFactor = 0.018f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "yoshi valley", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "maze", sizeof(Props.DebugName));
@@ -129,7 +129,7 @@ YoshiValley::YoshiValley() {
     Props.Skybox.FloorTopLeft = {95, 40, 15};
     Props.Sequence = MusicSeq::MUSIC_SEQ_MOO_MOO_FARM_YOSHI_VALLEY;
     for (int i = 0; i < 124; i++) {
-        fix_texture_segment((Gfx*) d_course_yoshi_valley_dl_list[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) d_course_yoshi_valley_dl_list[i], Props.textures);
     }
 }
 

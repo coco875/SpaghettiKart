@@ -63,7 +63,7 @@ FrappeSnowland::FrappeSnowland() {
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
     Props.Minimap.Colour = {72, 100, 255};
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "frappe snowland", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "snow", sizeof(Props.DebugName));
@@ -124,7 +124,7 @@ FrappeSnowland::FrappeSnowland() {
 
     Props.WaterLevel = -50.0f;
     for (int i = 0; i < 68; i++) {
-        fix_texture_segment((Gfx*) d_course_frappe_snowland_dl_list[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) d_course_frappe_snowland_dl_list[i], Props.textures);
     }
 }
 

@@ -55,7 +55,7 @@ BlockFort::BlockFort() {
     Props.Minimap.PlayerScaleFactor = 0.0335f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "block fort", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "block", sizeof(Props.DebugName));

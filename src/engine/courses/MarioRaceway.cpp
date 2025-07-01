@@ -86,7 +86,7 @@ MarioRaceway::MarioRaceway() {
     Props.Minimap.PlayerScaleFactor = 0.022f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = -2.0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Id = "mk:mario_raceway";
     Props.SetText(Props.Name, "mario raceway", sizeof(Props.Name));
@@ -148,7 +148,7 @@ MarioRaceway::MarioRaceway() {
     Props.Skybox.FloorTopLeft = {0, 0, 0};
     Props.Sequence = MusicSeq::MUSIC_SEQ_RACEWAYS_WARIO_STADIUM;
     for (int i = 0; i < 68; i++) {
-        fix_texture_segment((Gfx*) mario_raceway_dls[i], Props.textures);
+        find_replace_segmented_texture_with_o2r_texture((Gfx*) mario_raceway_dls[i], Props.textures);
     }
 }
 
