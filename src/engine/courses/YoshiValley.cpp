@@ -144,7 +144,7 @@ void YoshiValley::Load() {
 }
 
 void YoshiValley::LoadTextures() {
-    dma_textures(gTextureTrees2, 0x000003E8U, 0x00000800U);
+    dma_textures(gTextureTrees2, 0x000003E8U, 0x00000800U); // 0x03009000
 }
 
 void YoshiValley::BeginPlay() {

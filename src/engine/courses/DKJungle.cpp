@@ -189,9 +189,9 @@ f32 DKJungle::GetWaterLevel(FVector pos, Collision* collision) {
 }
 
 void DKJungle::LoadTextures() {
-    dma_textures(gTextureDksJungleParkwayKiwanoFruit1, 0x0000032FU, 0x00000400U);
-    dma_textures(gTextureDksJungleParkwayKiwanoFruit2, 0x00000369U, 0x00000400U);
-    dma_textures(gTextureDksJungleParkwayKiwanoFruit3, 0x00000364U, 0x00000400U);
+    dma_textures(gTextureDksJungleParkwayKiwanoFruit1, 0x0000032FU, 0x00000400U); // 0x03009000
+    dma_textures(gTextureDksJungleParkwayKiwanoFruit2, 0x00000369U, 0x00000400U); // 0x03009800
+    dma_textures(gTextureDksJungleParkwayKiwanoFruit3, 0x00000364U, 0x00000400U); // 0x0300A000
 }
 
 void DKJungle::BeginPlay() {
