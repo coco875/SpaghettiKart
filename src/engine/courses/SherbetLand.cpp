@@ -123,11 +123,11 @@ SherbetLand::SherbetLand() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_FRAPPE_SNOWLAND;
 
     Props.WaterLevel = -18.0f;
-    for (int i = 0; i < 72; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) sherbet_land_dls[i], Props.textures);
+    for (size_t i = 0; i < 72; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) sherbet_land_dls[i], Props.textures);
     }
-    for (int i = 0; i < 72; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) sherbet_land_dls_2[i], Props.textures);
+    for (size_t i = 0; i < 72; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) sherbet_land_dls_2[i], Props.textures);
     }
 }
 

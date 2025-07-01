@@ -24,8 +24,6 @@ extern "C" {
 }
 #endif
 
-void find_replace_segmented_texture_with_o2r_texture(Gfx* gfx, const course_texture* textures);
-
 typedef struct SkyboxColours {
     RGB8 TopRight;
     RGB8 BottomRight;

@@ -128,8 +128,8 @@ YoshiValley::YoshiValley() {
     Props.Skybox.FloorBottomLeft = {0, 0, 0};
     Props.Skybox.FloorTopLeft = {95, 40, 15};
     Props.Sequence = MusicSeq::MUSIC_SEQ_MOO_MOO_FARM_YOSHI_VALLEY;
-    for (int i = 0; i < 124; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) d_course_yoshi_valley_dl_list[i], Props.textures);
+    for (size_t i = 0; i < 124; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) d_course_yoshi_valley_dl_list[i], Props.textures);
     }
 }
 
@@ -144,7 +144,7 @@ void YoshiValley::Load() {
 }
 
 void YoshiValley::LoadTextures() {
-    dma_textures_char(gTextureTrees2, 0x000003E8U, 0x00000800U); // 0x03009000
+    dma_textures(gTextureTrees2, 0x000003E8U, 0x00000800U); // 0x03009000
 }
 
 void YoshiValley::BeginPlay() {

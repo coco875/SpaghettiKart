@@ -101,7 +101,6 @@ PodiumCeremony::PodiumCeremony() {
     Props.Minimap.PlayerScaleFactor = 0.014f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    // ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "royal raceway", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "p circuit", sizeof(Props.DebugName));

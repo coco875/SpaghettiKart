@@ -145,8 +145,8 @@ BowsersCastle::BowsersCastle() {
 
     Props.WaterLevel = -50.0f;
     WaterVolumes.push_back({20.0f, 1549.0f, 1859.0f, -1402.0f, -1102.0f});
-    for (int i = 0; i < 108; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) bowsers_castle_dls[i], Props.textures);
+    for (size_t i = 0; i < 108; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) bowsers_castle_dls[i], Props.textures);
     }
 }
 
@@ -159,7 +159,7 @@ void BowsersCastle::Load() {
 }
 
 void BowsersCastle::LoadTextures() {
-    dma_textures_char(gTextureShrub, 0x000003FFU, 0x00000800U); // 0x03009000
+    dma_textures(gTextureShrub, 0x000003FFU, 0x00000800U); // 0x03009000
 }
 
 // Required for the 2 thwomps that go far

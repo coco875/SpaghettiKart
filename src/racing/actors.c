@@ -38,7 +38,7 @@
 
 // Appears to be textures
 // or tluts
-char* texture_green_shell_[] = {
+char* texture_green_shell[] = {
     texture_green_shell_0, texture_green_shell_1, texture_green_shell_2, texture_green_shell_3,
     texture_green_shell_4, texture_green_shell_5, texture_green_shell_6, texture_green_shell_7,
 };
@@ -46,7 +46,7 @@ char* gTextureBlueshell[] = {
     texture_blue_shell_0, texture_blue_shell_1, texture_blue_shell_2, texture_blue_shell_3,
     texture_blue_shell_4, texture_blue_shell_5, texture_blue_shell_6, texture_blue_shell_7,
 };
-char* texture_red_shell_[] = {
+char* texture_red_shell[] = {
     texture_red_shell_0, texture_red_shell_1, texture_red_shell_2, texture_red_shell_3,
     texture_red_shell_4, texture_red_shell_5, texture_red_shell_6, texture_red_shell_7,
 };
@@ -757,10 +757,10 @@ void render_actor_shell(Camera* camera, Mat4 matrix, struct ShellActor* shell) {
 
     switch (shell->type) {
         case ACTOR_GREEN_SHELL:
-            phi_t3 = texture_green_shell_[index];
+            phi_t3 = texture_green_shell[index];
             break;
         case ACTOR_RED_SHELL:
-            phi_t3 = texture_red_shell_[index];
+            phi_t3 = texture_red_shell[index];
             break;
         case ACTOR_BLUE_SPINY_SHELL:
             phi_t3 = gTextureBlueshell[index];
@@ -1235,16 +1235,16 @@ void spawn_course_actors(void) {
 void init_actors_and_load_textures(void) {
     set_segment_base_addr_x64(3, (void*) gNextFreeMemoryAddress);
     allocate_memory(0x400 * 16);
-    dma_textures_char(gTextureFinishLineBanner1, 0x0000028EU, 0x00000800U); // 0x03004000
-    dma_textures_char(gTextureFinishLineBanner2, 0x000002FBU, 0x00000800U); // 0x03004800
-    dma_textures_char(gTextureFinishLineBanner3, 0x00000302U, 0x00000800U); // 0x03005000
-    dma_textures_char(gTextureFinishLineBanner4, 0x000003B4U, 0x00000800U); // 0x03005800
-    dma_textures_char(gTextureFinishLineBanner5, 0x0000031EU, 0x00000800U); // 0x03006000
-    dma_textures_char(gTextureFinishLineBanner6, 0x0000036EU, 0x00000800U); // 0x03006800
-    dma_textures_char(gTextureFinishLineBanner7, 0x0000029CU, 0x00000800U); // 0x03007000
-    dma_textures_char(gTextureFinishLineBanner8, 0x0000025BU, 0x00000800U); // 0x03007800
-    dma_textures_char(gTexture671A88, 0x00000400U, 0x00000800U); // 0x03008000
-    dma_textures_char(gTexture6774D8, 0x00000400U, 0x00000800U); // 0x03008800
+    dma_textures(gTextureFinishLineBanner1, 0x0000028EU, 0x00000800U); // 0x03004000
+    dma_textures(gTextureFinishLineBanner2, 0x000002FBU, 0x00000800U); // 0x03004800
+    dma_textures(gTextureFinishLineBanner3, 0x00000302U, 0x00000800U); // 0x03005000
+    dma_textures(gTextureFinishLineBanner4, 0x000003B4U, 0x00000800U); // 0x03005800
+    dma_textures(gTextureFinishLineBanner5, 0x0000031EU, 0x00000800U); // 0x03006000
+    dma_textures(gTextureFinishLineBanner6, 0x0000036EU, 0x00000800U); // 0x03006800
+    dma_textures(gTextureFinishLineBanner7, 0x0000029CU, 0x00000800U); // 0x03007000
+    dma_textures(gTextureFinishLineBanner8, 0x0000025BU, 0x00000800U); // 0x03007800
+    dma_textures(gTexture671A88, 0x00000400U, 0x00000800U); // 0x03008000
+    dma_textures(gTexture6774D8, 0x00000400U, 0x00000800U); // 0x03008800
 
     CM_LoadTextures();
 

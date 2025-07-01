@@ -27,25 +27,6 @@ extern "C" {
 extern StaffGhost* d_mario_raceway_staff_ghost;
 }
 
-static uintptr_t get_texture(size_t offset, const course_texture* textures) {
-    if (!(offset & 0x5000000)) {
-        return NULL;
-    }
-    size_t totalOffset = 0x5000000;
-
-    while (textures->addr) {
-        if (totalOffset == offset) {
-            return (uintptr_t) (textures->addr);
-        }
-        totalOffset += textures->data_size;
-        textures++;
-    }
-
-    printf("memory.c: get_texture()\nTEXTURE NOT FOUND DURING DISPLAYLIST EXTRACT\n");
-    printf("offset: 0x%X\n", offset);
-    return NULL;
-}
-
 void ResizeMinimap(MinimapProps* minimap) {
     if (minimap->Height < minimap->Width) {
         minimap->Width = (minimap->Width * 64) / minimap->Height;

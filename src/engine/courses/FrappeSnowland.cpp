@@ -123,8 +123,8 @@ FrappeSnowland::FrappeSnowland() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_FRAPPE_SNOWLAND;
 
     Props.WaterLevel = -50.0f;
-    for (int i = 0; i < 68; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) d_course_frappe_snowland_dl_list[i], Props.textures);
+    for (size_t i = 0; i < 68; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) d_course_frappe_snowland_dl_list[i], Props.textures);
     }
 }
 
@@ -136,8 +136,8 @@ void FrappeSnowland::Load() {
 }
 
 void FrappeSnowland::LoadTextures() {
-    dma_textures_char(gTextureFrappeSnowlandTreeLeft, 0x00000454U, 0x00000800U); // 0x03009000
-    dma_textures_char(gTextureFrappeSnowlandTreeRight, 0x00000432U, 0x00000800U); // 0x03009800
+    dma_textures(gTextureFrappeSnowlandTreeLeft, 0x00000454U, 0x00000800U); // 0x03009000
+    dma_textures(gTextureFrappeSnowlandTreeRight, 0x00000432U, 0x00000800U); // 0x03009800
 }
 
 void FrappeSnowland::BeginPlay() {

@@ -135,8 +135,8 @@ ChocoMountain::ChocoMountain() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_CHOCO_MOUNTAIN;
 
     Props.WaterLevel = -80.0f;
-    for (int i = 0; i < 96; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) choco_mountain_dls[i], Props.textures);
+    for (size_t i = 0; i < 96; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) choco_mountain_dls[i], Props.textures);
     }
 }
 

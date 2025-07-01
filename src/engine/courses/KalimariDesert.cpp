@@ -126,8 +126,8 @@ KalimariDesert::KalimariDesert() {
     Props.Skybox.FloorBottomLeft = {0, 0, 0};
     Props.Skybox.FloorTopLeft = {255, 192, 0};
     Props.Sequence = MusicSeq::MUSIC_SEQ_KALIMARI_DESERT;
-    for (int i = 0; i < 80; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) kalimari_desert_dls[i], Props.textures);
+    for (size_t i = 0; i < 80; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) kalimari_desert_dls[i], Props.textures);
     }
 }
 
@@ -140,11 +140,11 @@ void KalimariDesert::Load() {
 }
 
 void KalimariDesert::LoadTextures() {
-    dma_textures_char(gTextureCactus1Left, 0x0000033EU, 0x00000800U); // 0x03009000
-    dma_textures_char(gTextureCactus1Right, 0x000002FBU, 0x00000800U); // 0x03009800
-    dma_textures_char(gTextureCactus2Left, 0x000002A8U, 0x00000800U); // 0x0300A000
-    dma_textures_char(gTextureCactus2Right, 0x00000374U, 0x00000800U); // 0x0300A800
-    dma_textures_char(gTextureCactus3, 0x000003AFU, 0x00000800U); // 0x0300B000
+    dma_textures(gTextureCactus1Left, 0x0000033EU, 0x00000800U); // 0x03009000
+    dma_textures(gTextureCactus1Right, 0x000002FBU, 0x00000800U); // 0x03009800
+    dma_textures(gTextureCactus2Left, 0x000002A8U, 0x00000800U); // 0x0300A000
+    dma_textures(gTextureCactus2Right, 0x00000374U, 0x00000800U); // 0x0300A800
+    dma_textures(gTextureCactus3, 0x000003AFU, 0x00000800U); // 0x0300B000
 }
 
 void KalimariDesert::BeginPlay() {

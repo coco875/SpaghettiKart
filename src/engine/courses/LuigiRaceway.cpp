@@ -159,8 +159,8 @@ LuigiRaceway::LuigiRaceway() {
     Props.Skybox.FloorBottomLeft = { 0, 0, 0 };
     Props.Skybox.FloorTopLeft = { 216, 232, 248 };
     Props.Sequence = MusicSeq::MUSIC_SEQ_RACEWAYS_WARIO_STADIUM;
-    for (int i = 0; i < 120; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) luigi_raceway_dls[i], Props.textures);
+    for (size_t i = 0; i < 120; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) luigi_raceway_dls[i], Props.textures);
     }
 }
 
@@ -173,8 +173,8 @@ void LuigiRaceway::Load() {
 }
 
 void LuigiRaceway::LoadTextures() {
-    dma_textures_char(gTextureTrees5Left, 0x000003E8U, 0x00000800U); // 0x03009000
-    dma_textures_char(gTextureTrees5Right, 0x000003E8U, 0x00000800U); // 0x03009800
+    dma_textures(gTextureTrees5Left, 0x000003E8U, 0x00000800U); // 0x03009000
+    dma_textures(gTextureTrees5Right, 0x000003E8U, 0x00000800U); // 0x03009800
 }
 
 void LuigiRaceway::BeginPlay() {

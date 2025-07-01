@@ -145,8 +145,8 @@ ToadsTurnpike::ToadsTurnpike() {
     Props.Skybox.FloorBottomLeft = {0, 0, 0};
     Props.Skybox.FloorTopLeft = {209, 65, 23};
     Props.Sequence = MusicSeq::MUSIC_SEQ_TOADS_TURNPIKE;
-    for (int i = 0; i < 80; i++) {
-        find_replace_segmented_texture_with_o2r_texture((Gfx*) d_course_toads_turnpike_dl_list[i], Props.textures);
+    for (size_t i = 0; i < 80; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) d_course_toads_turnpike_dl_list[i], Props.textures);
     }
 }
 

@@ -658,7 +658,7 @@ void CM_CleanWorld(void) {
         delete actor;
     }
 
-    for (int i = 0; i < ARRAY_COUNT(gWorldInstance.playerBombKart); i++) {
+    for (size_t i = 0; i < ARRAY_COUNT(gWorldInstance.playerBombKart); i++) {
         gWorldInstance.playerBombKart[i].state = PlayerBombKart::PlayerBombKartState::DISABLED;
         gWorldInstance.playerBombKart[i]._primAlpha = 0;
     }
