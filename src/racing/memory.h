@@ -2,6 +2,7 @@
 #define MEMORY_H
 
 #include "common_structs.h"
+#include "course_offsets.h"
 
 struct MainPoolBlock {
     struct MainPoolBlock* prev;

@@ -19,7 +19,7 @@
 #include "courses/all_course_offsets.h"
 #include "defines.h"
 
-#include <course_offsets.h>
+#include "course_offsets.h"
 
 #include "engine/courses/Course.h"
 
