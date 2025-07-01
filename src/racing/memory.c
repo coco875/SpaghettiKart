@@ -192,14 +192,14 @@ void replace_segmented_textures_with_o2r_textures(Gfx* gfx, const course_texture
         } else if (opcode == G_DL_OTR_FILEPATH) {
             char* fileName = (char*) iterator->words.w1;
             Gfx* gfx2 = (Gfx*) ResourceGetDataByName((const char*) fileName);
-            if (((iterator->words.w0 >> (16)) & ((1U << 1) - 1)) == 0 && gfx2 != nullptr) {
+            if (((iterator->words.w0 >> (16)) & ((1U << 1) - 1)) == 0 && gfx2 != NULL) {
                 replace_segmented_textures_with_o2r_textures(gfx2, textures);
             }
         } else if (opcode == G_DL_OTR_HASH) {
             if (((iterator->words.w0 >> (16)) & ((1U << 1) - 1)) == 0) {
                 iterator++;
                 Gfx* gfx2 = (Gfx*) ResourceGetDataByCrc(((uint64_t) iterator->words.w0 << 32) + iterator->words.w1);
-                if (gfx2 != nullptr) {
+                if (gfx2 != NULL) {
                     replace_segmented_textures_with_o2r_textures(gfx2, textures);
                 }
             }
