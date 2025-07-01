@@ -2833,7 +2833,7 @@ gTextureTrees1:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 gTextureTrees2:
   symbol: gTextureTrees2
   type: texture
@@ -2843,7 +2843,7 @@ gTextureTrees2:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 gTextureTrees3:
   symbol: gTextureTrees3
   type: texture
@@ -2853,7 +2853,7 @@ gTextureTrees3:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 gTextureTrees4Left:
   symbol: gTextureTrees4Left
   type: texture
@@ -2863,7 +2863,7 @@ gTextureTrees4Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 gTextureTrees4Right:
   symbol: gTextureTrees4Right
   type: texture
@@ -2873,7 +2873,7 @@ gTextureTrees4Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 gTextureTrees5Left:
   symbol: gTextureTrees5Left
   type: texture
@@ -2883,7 +2883,7 @@ gTextureTrees5Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 gTextureTrees5Right:
   symbol: gTextureTrees5Right
   type: texture
@@ -2893,7 +2893,7 @@ gTextureTrees5Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 gTextureTrees6:
   symbol: gTextureTrees6
   type: texture
@@ -2903,7 +2903,7 @@ gTextureTrees6:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 gTextureTrees7:
   symbol: gTextureTrees7
   type: texture
@@ -2913,7 +2913,7 @@ gTextureTrees7:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTTrees
+  tlut_symbol: common_tlut_trees_import
 shrub:
   symbol: gTextureShrub
   type: texture
@@ -2932,7 +2932,7 @@ gTextureFrappeSnowlandTreeLeft:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTFrappeSnowlandTree
+  tlut_symbol: d_course_frappe_snowland_tree_tlut
 gTextureFrappeSnowlandTreeRight:
   symbol: gTextureFrappeSnowlandTreeRight
   type: texture
@@ -2942,7 +2942,7 @@ gTextureFrappeSnowlandTreeRight:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTFrappeSnowlandTree
+  tlut_symbol: d_course_frappe_snowland_tree_tlut
 gTextureCow01Left:
   symbol: gTextureCow01Left
   type: texture
@@ -2952,7 +2952,7 @@ gTextureCow01Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow01Right:
   symbol: gTextureCow01Right
   type: texture
@@ -2962,7 +2962,7 @@ gTextureCow01Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow02Left:
   symbol: gTextureCow02Left
   type: texture
@@ -2972,7 +2972,7 @@ gTextureCow02Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow02Right:
   symbol: gTextureCow02Right
   type: texture
@@ -2982,7 +2982,7 @@ gTextureCow02Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow03Left:
   symbol: gTextureCow03Left
   type: texture
@@ -2992,7 +2992,7 @@ gTextureCow03Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow03Right:
   symbol: gTextureCow03Right
   type: texture
@@ -3002,7 +3002,7 @@ gTextureCow03Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow04Left:
   symbol: gTextureCow04Left
   type: texture
@@ -3012,7 +3012,7 @@ gTextureCow04Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow04Right:
   symbol: gTextureCow04Right
   type: texture
@@ -3022,7 +3022,7 @@ gTextureCow04Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow05Left:
   symbol: gTextureCow05Left
   type: texture
@@ -3032,7 +3032,7 @@ gTextureCow05Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCow05Right:
   symbol: gTextureCow05Right
   type: texture
@@ -3042,7 +3042,7 @@ gTextureCow05Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCow
+  tlut_symbol: d_course_moo_moo_farm_cow_tlut
 gTextureCactus1Left:
   symbol: gTextureCactus1Left
   type: texture
@@ -3052,7 +3052,7 @@ gTextureCactus1Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCactus
+  tlut_symbol: d_course_kalimari_desert_tree_tlut
 gTextureCactus1Right:
   symbol: gTextureCactus1Right
   type: texture
@@ -3062,7 +3062,7 @@ gTextureCactus1Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCactus
+  tlut_symbol: d_course_kalimari_desert_tree_tlut
 gTextureCactus2Left:
   symbol: gTextureCactus2Left
   type: texture
@@ -3072,7 +3072,7 @@ gTextureCactus2Left:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCactus
+  tlut_symbol: d_course_kalimari_desert_tree_tlut
 gTextureCactus2Right:
   symbol: gTextureCactus2Right
   type: texture
@@ -3082,7 +3082,7 @@ gTextureCactus2Right:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCactus
+  tlut_symbol: d_course_kalimari_desert_tree_tlut
 gTextureCactus3:
   symbol: gTextureCactus3
   type: texture
@@ -3092,7 +3092,7 @@ gTextureCactus3:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTCactus
+  tlut_symbol: d_course_kalimari_desert_tree_tlut
 gTextureFinishLineBanner1:
   symbol: gTextureFinishLineBanner1
   type: texture
@@ -3182,7 +3182,7 @@ gTexturePiranhaPlant1:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 gTexturePiranhaPlant2:
   symbol: gTexturePiranhaPlant2
   type: texture
@@ -3192,7 +3192,7 @@ gTexturePiranhaPlant2:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 gTexturePiranhaPlant3:
   symbol: gTexturePiranhaPlant3
   type: texture
@@ -3202,7 +3202,7 @@ gTexturePiranhaPlant3:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 gTexturePiranhaPlant4:
   symbol: gTexturePiranhaPlant4
   type: texture
@@ -3212,7 +3212,7 @@ gTexturePiranhaPlant4:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 gTexturePiranhaPlant5:
   symbol: gTexturePiranhaPlant5
   type: texture
@@ -3222,7 +3222,7 @@ gTexturePiranhaPlant5:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 gTexturePiranhaPlant6:
   symbol: gTexturePiranhaPlant6
   type: texture
@@ -3232,7 +3232,7 @@ gTexturePiranhaPlant6:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 gTexturePiranhaPlant7:
   symbol: gTexturePiranhaPlant7
   type: texture
@@ -3242,7 +3242,7 @@ gTexturePiranhaPlant7:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 gTexturePiranhaPlant8:
   symbol: gTexturePiranhaPlant8
   type: texture
@@ -3252,7 +3252,7 @@ gTexturePiranhaPlant8:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 gTexturePiranhaPlant9:
   symbol: gTexturePiranhaPlant9
   type: texture
@@ -3262,7 +3262,7 @@ gTexturePiranhaPlant9:
   width: 32
   height: 64
   format: CI8
-  tlut_symbol: gTLUTMarioRacewayPiranhaPlant
+  tlut_symbol: d_course_mario_raceway_piranha_plant_tlut
 texture_6997E0:
   symbol: gTexture6997E0
   type: texture
@@ -3281,7 +3281,7 @@ gTextureDksJungleParkwayKiwanoFruit1:
   width: 32
   height: 32
   format: CI8
-  tlut_symbol: gTLUTDksJungleParkwayKiwanoFruit
+  tlut_symbol: d_course_dks_jungle_parkway_kiwano_tlut
 gTextureDksJungleParkwayKiwanoFruit2:
   symbol: gTextureDksJungleParkwayKiwanoFruit2
   type: texture
@@ -3291,7 +3291,7 @@ gTextureDksJungleParkwayKiwanoFruit2:
   width: 32
   height: 32
   format: CI8
-  tlut_symbol: gTLUTDksJungleParkwayKiwanoFruit
+  tlut_symbol: d_course_dks_jungle_parkway_kiwano_tlut
 gTextureDksJungleParkwayKiwanoFruit3:
   symbol: gTextureDksJungleParkwayKiwanoFruit3
   type: texture
@@ -3301,7 +3301,7 @@ gTextureDksJungleParkwayKiwanoFruit3:
   width: 32
   height: 32
   format: CI8
-  tlut_symbol: gTLUTDksJungleParkwayKiwanoFruit
+  tlut_symbol: d_course_dks_jungle_parkway_kiwano_tlut
 kart_shadow:
   symbol: gTextureKartShadow
   type: texture
