@@ -7087,15 +7087,15 @@ void cpu_use_item_strategy(s32 playerId) {
         switch (temp_s0->branch) {
             case CPU_STRATEGY_WAIT_NEXT_ITEM:
                 temp_s0->actorIndex = -1;
-                if (CVarGetInteger("gHarderCPU", 0) == 1) {
-                    if (((gNumPathPointsTraversed[playerId] + (playerId * 0x14) + 0x64) % 0x8 == 0) &&
-                        (temp_s0->timer >= 0x200)) {
+
+                // Harder CPU Items
+                if (((gNumPathPointsTraversed[playerId] + (playerId * 0x14) + 0x64) % 0x8 == 0) &&
+                        (temp_s0->timer >= 0x200) && (CVarGetInteger("gHarderCPU", 0) == true)) {
                         cpu_decisions_branch_item(playerId, &temp_s0->branch,
                                                   hard_cpu_gen_random_item((s16) gLapCountByPlayerId[playerId],
                                                                         gGPCurrentRaceRankByPlayerId[playerId]));
-                    }
-                }
-                if ((((playerId * 0x14) + 0x64) < gNumPathPointsTraversed[playerId]) && (temp_s0->timer >= 0x259) &&
+                // Stock CPU Items
+                } else if ((((playerId * 0x14) + 0x64) < gNumPathPointsTraversed[playerId]) && (temp_s0->timer >= 0x259) &&
                     (temp_s0->numItemUse < 3) && (gLapCountByPlayerId[playerId] < 3)) {
                     cpu_decisions_branch_item(playerId, &temp_s0->branch,
                                               cpu_gen_random_item((s16) gLapCountByPlayerId[playerId],
