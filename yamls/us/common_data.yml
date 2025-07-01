@@ -551,22 +551,22 @@ D_0D006A40:
   symbol: D_0D006A40
   type: gfx
   offset: 0x6A40
-# common_shadow_i4:
-#   symbol: common_shadow_i4
-#   offset: 0x6A58
-#   size: 0x80
-#   type: texture
-#   width: 32
-#   height: 32
-#   format: i4
-# D_0D006AD8:
-#   symbol: D_0D006AD8
-#   offset: 0x6AD8
-#   size: 0x400
-#   type: texture
-#   width: 32
-#   height: 32
-#   format: i4
+common_shadow_i4:
+  symbol: common_shadow_i4
+  offset: 0x6A58
+  size: 0x80
+  type: texture
+  width: 32
+  height: 32
+  format: i4
+D_0D006AD8:
+  symbol: D_0D006AD8
+  offset: 0x6AD8
+  size: 0x400
+  type: texture
+  width: 32
+  height: 32
+  format: i4
 common_tlut_debug_font:
   symbol: common_tlut_debug_font
   offset: 0x6ED8
