@@ -24,8 +24,6 @@ extern "C" {
 }
 #endif
 
-void fix_texture_segment(Gfx* gfx, const course_texture* textures);
-
 typedef struct SkyboxColours {
     RGB8 TopRight;
     RGB8 BottomRight;
@@ -63,7 +61,7 @@ typedef struct MinimapProps {
     RGB8 Colour; // Colour of the visible pixels (the track path)
 } MinimapProps;
 
-void resize_minimap(MinimapProps* minimap);
+void ResizeMinimap(MinimapProps* minimap);
 
 typedef struct Properties {
     char Name[128];

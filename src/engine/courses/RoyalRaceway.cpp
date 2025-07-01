@@ -97,7 +97,7 @@ RoyalRaceway::RoyalRaceway() {
     Props.Minimap.PlayerScaleFactor = 0.014f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "royal raceway", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "p circuit", sizeof(Props.DebugName));
@@ -158,8 +158,8 @@ RoyalRaceway::RoyalRaceway() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_RACEWAYS_WARIO_STADIUM;
 
     Props.WaterLevel = -60.0f;
-    for (int i = 0; i < 132; i++) {
-        fix_texture_segment((Gfx*) royal_raceway_dls[i], Props.textures);
+    for (size_t i = 0; i < 132; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) royal_raceway_dls[i], Props.textures);
     }
 }
 
@@ -171,17 +171,17 @@ void RoyalRaceway::Load() {
 }
 
 void RoyalRaceway::LoadTextures() {
-    dma_textures_char(gTextureTrees3, 0x000003E8U, 0x00000800U); // 0x03009000
-    dma_textures_char(gTextureTrees7, 0x000003E8U, 0x00000800U); // 0x03009800
-    D_802BA058 = dma_textures_char(gTexturePiranhaPlant1, 0x000003E8U, 0x00000800U); // 0x0300A000
-    dma_textures_char(gTexturePiranhaPlant2, 0x000003E8U, 0x00000800U); // 0x0300A800
-    dma_textures_char(gTexturePiranhaPlant3, 0x000003E8U, 0x00000800U); // 0x0300B000
-    dma_textures_char(gTexturePiranhaPlant4, 0x000003E8U, 0x00000800U); // 0x0300B800
-    dma_textures_char(gTexturePiranhaPlant5, 0x000003E8U, 0x00000800U); // 0x0300C000
-    dma_textures_char(gTexturePiranhaPlant6, 0x000003E8U, 0x00000800U); // 0x0300C800
-    dma_textures_char(gTexturePiranhaPlant7, 0x000003E8U, 0x00000800U); // 0x0300D000
-    dma_textures_char(gTexturePiranhaPlant8, 0x000003E8U, 0x00000800U); // 0x0300D800
-    dma_textures_char(gTexturePiranhaPlant9, 0x000003E8U, 0x00000800U); // 0x0300E000
+    dma_textures(gTextureTrees3, 0x000003E8U, 0x00000800U); // 0x03009000
+    dma_textures(gTextureTrees7, 0x000003E8U, 0x00000800U); // 0x03009800
+    D_802BA058 = dma_textures(gTexturePiranhaPlant1, 0x000003E8U, 0x00000800U); // 0x0300A000
+    dma_textures(gTexturePiranhaPlant2, 0x000003E8U, 0x00000800U); // 0x0300A800
+    dma_textures(gTexturePiranhaPlant3, 0x000003E8U, 0x00000800U); // 0x0300B000
+    dma_textures(gTexturePiranhaPlant4, 0x000003E8U, 0x00000800U); // 0x0300B800
+    dma_textures(gTexturePiranhaPlant5, 0x000003E8U, 0x00000800U); // 0x0300C000
+    dma_textures(gTexturePiranhaPlant6, 0x000003E8U, 0x00000800U); // 0x0300C800
+    dma_textures(gTexturePiranhaPlant7, 0x000003E8U, 0x00000800U); // 0x0300D000
+    dma_textures(gTexturePiranhaPlant8, 0x000003E8U, 0x00000800U); // 0x0300D800
+    dma_textures(gTexturePiranhaPlant9, 0x000003E8U, 0x00000800U); // 0x0300E000
 }
 
 void RoyalRaceway::BeginPlay() {

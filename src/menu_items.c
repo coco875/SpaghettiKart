@@ -6534,8 +6534,8 @@ void render_menus(MenuItem* arg0) {
                 break;
             case COURSE_SELECT_OK:
                 func_800A8564(arg0);
-                int original_width = D_02004E80->width;
-                int height = D_02004E80->height;
+                int32_t original_width = D_02004E80->width;
+                int32_t height = D_02004E80->height;
                 D_02004E80->width = ResourceGetTexWidthByName(D_02004E80->textureData) * height /
                                     ResourceGetTexHeightByName(D_02004E80->textureData);
                 // D_02004E80->dX += (original_width - D_02004E80->width) / 2;

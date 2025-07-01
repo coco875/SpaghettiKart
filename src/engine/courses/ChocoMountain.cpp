@@ -74,7 +74,7 @@ ChocoMountain::ChocoMountain() {
     Props.Minimap.PlayerScaleFactor = 0.022f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = -16.0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Id = "mk:choco_mountain";
     Props.SetText(Props.Name, "choco mountain", sizeof(Props.Name));
@@ -135,8 +135,8 @@ ChocoMountain::ChocoMountain() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_CHOCO_MOUNTAIN;
 
     Props.WaterLevel = -80.0f;
-    for (int i = 0; i < 96; i++) {
-        fix_texture_segment((Gfx*) choco_mountain_dls[i], Props.textures);
+    for (size_t i = 0; i < 96; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) choco_mountain_dls[i], Props.textures);
     }
 }
 

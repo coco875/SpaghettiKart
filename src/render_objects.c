@@ -2079,8 +2079,8 @@ void render_texture_tile_rgba32_block(s16 x, s16 y, u8* texture, u32 width, u32 
 }
 
 void render_game_logo(s16 x, s16 y) {
-    int height = 128;
-    int width = ResourceGetTexWidthByName(logo_mario_kart_64) * height / ResourceGetTexHeightByName(logo_mario_kart_64);
+    int32_t height = 128;
+    int32_t width = ResourceGetTexWidthByName(logo_mario_kart_64) * height / ResourceGetTexHeightByName(logo_mario_kart_64);
     render_texture_tile_rgba32_block(x, y, logo_mario_kart_64, width, height);
 }
 
@@ -3460,7 +3460,7 @@ struct ObjectInterpData prevObject[OBJECT_LIST_SIZE] = { 0 };
 void func_800518F8(s32 objectIndex, s16 x, s16 y) {
 
     // Search all recorded objects for the one we're drawing
-    for (int i = 0; i < OBJECT_LIST_SIZE; i++) {
+    for (size_t i = 0; i < OBJECT_LIST_SIZE; i++) {
         if (objectIndex == prevObject[i].objectIndex) {
             // Coincidence!
             // Skip drawing the object this frame if it warped to the other side of the screen

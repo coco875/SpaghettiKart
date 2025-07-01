@@ -168,12 +168,8 @@ s32 add_unused_obj_index(s32* listIdx, s32* nextFree, s32 size) {
     }
     count = 0;
     id = &listIdx[*nextFree];
-    /**
-     * @todo This HAS to be a for-loop of some variety, but I can't make a for-loop to match.
-     * If you replace this with ```for(var_v1 = 0; var_v1 < size; var_v1++)```
-     * The diff gets massive.
-     */
-    for (count = 0; count != size; count++) {
+
+    for (count = 0; count < size; count++) {
         if (*id == NULL_OBJECT_ID) {
             objectIndex = find_unused_obj_index(id);
             *nextFree += 1;
@@ -2652,6 +2648,7 @@ void consume_item(s32 playerId) {
 }
 
 typedef struct {
+    u8 none;             // ITEM_NONE
     u8 banana;           // ITEM_BANANA
     u8 bananaBunch;      // ITEM_BANANA_BUNCH
     u8 greenShell;       // ITEM_GREEN_SHELL
@@ -2671,7 +2668,8 @@ typedef struct {
 
 // Each row corresponds to a rank, each column to an item
 ItemProbabilities grandPrixHumanProbabilityTable[] = {
-    { .banana = 30,
+    { .none = 0,
+      .banana = 30,
       .bananaBunch = 5,
       .greenShell = 30,
       .tripleGreenShell = 5,
@@ -2686,7 +2684,8 @@ ItemProbabilities grandPrixHumanProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 5,
       .greenShell = 5,
       .tripleGreenShell = 10,
@@ -2701,7 +2700,8 @@ ItemProbabilities grandPrixHumanProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 15,
       .superMushroom = 5 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 10,
@@ -2716,7 +2716,8 @@ ItemProbabilities grandPrixHumanProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 20,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -2731,7 +2732,8 @@ ItemProbabilities grandPrixHumanProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 20,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -2746,7 +2748,8 @@ ItemProbabilities grandPrixHumanProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 25,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -2761,7 +2764,8 @@ ItemProbabilities grandPrixHumanProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 25,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -2776,7 +2780,8 @@ ItemProbabilities grandPrixHumanProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 10,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -2794,7 +2799,8 @@ ItemProbabilities grandPrixHumanProbabilityTable[] = {
 };
 
 ItemProbabilities grandPrixCPUProbabilityTable[] = {
-    { .banana = 60,
+    { .none = 0,
+      .banana = 60,
       .bananaBunch = 0,
       .greenShell = 25,
       .tripleGreenShell = 0,
@@ -2809,7 +2815,8 @@ ItemProbabilities grandPrixCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 50,
+    { .none = 0,
+      .banana = 50,
       .bananaBunch = 0,
       .greenShell = 25,
       .tripleGreenShell = 5,
@@ -2824,7 +2831,8 @@ ItemProbabilities grandPrixCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 40,
+    { .none = 0,
+      .banana = 40,
       .bananaBunch = 0,
       .greenShell = 25,
       .tripleGreenShell = 10,
@@ -2839,7 +2847,8 @@ ItemProbabilities grandPrixCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 35,
+    { .none = 0,
+      .banana = 35,
       .bananaBunch = 0,
       .greenShell = 25,
       .tripleGreenShell = 15,
@@ -2854,7 +2863,8 @@ ItemProbabilities grandPrixCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 30,
+    { .none = 0,
+      .banana = 30,
       .bananaBunch = 0,
       .greenShell = 20,
       .tripleGreenShell = 20,
@@ -2869,7 +2879,8 @@ ItemProbabilities grandPrixCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 30,
+    { .none = 0,
+      .banana = 30,
       .bananaBunch = 0,
       .greenShell = 20,
       .tripleGreenShell = 20,
@@ -2884,7 +2895,8 @@ ItemProbabilities grandPrixCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 30,
+    { .none = 0,
+      .banana = 30,
       .bananaBunch = 0,
       .greenShell = 20,
       .tripleGreenShell = 20,
@@ -2899,7 +2911,8 @@ ItemProbabilities grandPrixCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 25,
+    { .none = 0,
+      .banana = 25,
       .bananaBunch = 0,
       .greenShell = 20,
       .tripleGreenShell = 20,
@@ -2917,7 +2930,8 @@ ItemProbabilities grandPrixCPUProbabilityTable[] = {
 };
 
 ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
-    { .banana = 30,
+    { .none = 5,
+      .banana = 25,
       .bananaBunch = 5,
       .greenShell = 30,
       .tripleGreenShell = 5,
@@ -2932,7 +2946,8 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 5,
+    { .none = 0,
+      .banana = 5,
       .bananaBunch = 5,
       .greenShell = 5,
       .tripleGreenShell = 10,
@@ -2947,12 +2962,13 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 15,
       .superMushroom = 5 },
-    { .banana = 3,
+    { .none = 3,
+      .banana = 3,
       .bananaBunch = 2,
       .greenShell = 0,
       .tripleGreenShell = 10,
       .redShell = 20,
-      .tripleRedShell = 20,
+      .tripleRedShell = 19,
       .blueSpinyShell = 0,
       .thunderbolt = 0,
       .fakeItemBox = 0,
@@ -2960,9 +2976,10 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .boo = 0,
       .mushroom = 5,
       .doubleMushroom = 0,
-      .tripleMushroom = 20,
-      .superMushroom = 10 },
-    { .banana = 5,
+      .tripleMushroom = 19,
+      .superMushroom = 9 },
+    { .none = 0,
+      .banana = 5,
       .bananaBunch = 0,
       .greenShell = 5,
       .tripleGreenShell = 5,
@@ -2977,7 +2994,8 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 20,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -2992,7 +3010,8 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .doubleMushroom = 5,
       .tripleMushroom = 25,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 5,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -3004,10 +3023,11 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .star = 20,
       .boo = 0,
       .mushroom = 5,
-      .doubleMushroom = 5,
+      .doubleMushroom = 0,
       .tripleMushroom = 25,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 5,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 5,
       .tripleGreenShell = 0,
@@ -3019,10 +3039,11 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .star = 30,
       .boo = 0,
       .mushroom = 5,
-      .doubleMushroom = 5,
+      .doubleMushroom = 0,
       .tripleMushroom = 10,
       .superMushroom = 10 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 5,
@@ -3040,7 +3061,8 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
 };
 
 ItemProbabilities versus2PlayerProbabilityTable[] = {
-    { .banana = 25,
+    { .none = 0,
+      .banana = 25,
       .bananaBunch = 10,
       .greenShell = 30,
       .tripleGreenShell = 5,
@@ -3055,7 +3077,8 @@ ItemProbabilities versus2PlayerProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 5,
       .greenShell = 0,
       .tripleGreenShell = 5,
@@ -3073,7 +3096,8 @@ ItemProbabilities versus2PlayerProbabilityTable[] = {
 };
 
 ItemProbabilities versus3PlayerProbabilityTable[] = {
-    { .banana = 35,
+    { .none = 0,
+      .banana = 35,
       .bananaBunch = 5,
       .greenShell = 30,
       .tripleGreenShell = 0,
@@ -3088,7 +3112,8 @@ ItemProbabilities versus3PlayerProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 5,
+    { .none = 0,
+      .banana = 5,
       .bananaBunch = 5,
       .greenShell = 0,
       .tripleGreenShell = 10,
@@ -3103,7 +3128,8 @@ ItemProbabilities versus3PlayerProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 20,
       .superMushroom = 5 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -3121,7 +3147,8 @@ ItemProbabilities versus3PlayerProbabilityTable[] = {
 };
 
 ItemProbabilities versus4PlayerProbabilityTable[] = {
-    { .banana = 35,
+    { .none = 0,
+      .banana = 35,
       .bananaBunch = 5,
       .greenShell = 30,
       .tripleGreenShell = 0,
@@ -3136,7 +3163,8 @@ ItemProbabilities versus4PlayerProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 0,
       .superMushroom = 0 },
-    { .banana = 5,
+    { .none = 0,
+      .banana = 5,
       .bananaBunch = 5,
       .greenShell = 5,
       .tripleGreenShell = 10,
@@ -3151,7 +3179,8 @@ ItemProbabilities versus4PlayerProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 25,
       .superMushroom = 0 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 5,
       .greenShell = 0,
       .tripleGreenShell = 5,
@@ -3166,7 +3195,8 @@ ItemProbabilities versus4PlayerProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 25,
       .superMushroom = 5 },
-    { .banana = 0,
+    { .none = 0,
+      .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
@@ -3183,7 +3213,8 @@ ItemProbabilities versus4PlayerProbabilityTable[] = {
       .superMushroom = 10 },
 };
 
-ItemProbabilities battleProbabilityCurve[] = { { .banana = 10,
+ItemProbabilities battleProbabilityCurve[] = { { .none = 0,
+                                                 .banana = 10,
                                                  .bananaBunch = 5,
                                                  .greenShell = 5,
                                                  .tripleGreenShell = 20,
@@ -3200,7 +3231,7 @@ ItemProbabilities battleProbabilityCurve[] = { { .banana = 10,
                                                  .superMushroom = 0 } };
 
 void getProbabilityArray(const ItemProbabilities* probStruct, u8* probArray) {
-    probArray[0] = 0;
+    probArray[ITEM_NONE] = probStruct->none;
     probArray[ITEM_BANANA] = probStruct->banana;
     probArray[ITEM_BANANA_BUNCH] = probStruct->bananaBunch;
     probArray[ITEM_GREEN_SHELL] = probStruct->greenShell;
@@ -3298,10 +3329,10 @@ u8 gen_random_item(s16 rank, s16 option) {
     u8 itemProbabilities[ITEM_MAX];
     getProbabilityArray(distributionTable, itemProbabilities);
 
-    for (int i = 0; i < ITEM_MAX; i++) {
+    for (size_t i = 0; i < ITEM_MAX; i++) {
         cumulativeProbability += itemProbabilities[i];
         if (rand < cumulativeProbability) {
-            randomItem = i; // + 1 to account for the ITEM_NONE spot
+            randomItem = i;
             break;
         }
     }

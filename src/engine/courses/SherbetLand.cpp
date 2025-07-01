@@ -60,7 +60,7 @@ SherbetLand::SherbetLand() {
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
     Props.Minimap.Colour = {72, 100, 255};
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "sherbet land", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "sherbet", sizeof(Props.DebugName));
@@ -123,11 +123,11 @@ SherbetLand::SherbetLand() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_FRAPPE_SNOWLAND;
 
     Props.WaterLevel = -18.0f;
-    for (int i = 0; i < 72; i++) {
-        fix_texture_segment((Gfx*) sherbet_land_dls[i], Props.textures);
+    for (size_t i = 0; i < 72; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) sherbet_land_dls[i], Props.textures);
     }
-    for (int i = 0; i < 72; i++) {
-        fix_texture_segment((Gfx*) sherbet_land_dls_2[i], Props.textures);
+    for (size_t i = 0; i < 72; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) sherbet_land_dls_2[i], Props.textures);
     }
 }
 

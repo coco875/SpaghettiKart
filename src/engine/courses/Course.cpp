@@ -27,81 +27,13 @@ extern "C" {
 extern StaffGhost* d_mario_raceway_staff_ghost;
 }
 
-static uintptr_t get_texture(size_t offset, const course_texture* textures) {
-    if (!(offset & 0x5000000)) {
-        return NULL;
-    }
-    size_t totalOffset = 0x5000000;
-
-    while (textures->addr) {
-        if (totalOffset == offset) {
-            return (uintptr_t) (textures->addr);
-        }
-        totalOffset += textures->data_size;
-        textures++;
-    }
-
-    printf("memory.c: get_texture()\nTEXTURE NOT FOUND DURING DISPLAYLIST EXTRACT\n");
-    printf("offset: 0x%X\n", offset);
-    return NULL;
-}
-
-void fix_texture_segment(Gfx* gfx, const course_texture* textures) {
-    char* name = NULL;
-    if (GameEngine_OTRSigCheck((char*) gfx)) {
-        name = (char*) gfx;
-        gfx = (Gfx*) LOAD_ASSET_RAW(gfx);
-    }
-    Gfx* iterator = gfx;
-    int i = 0;
-    u8 opcode;
-    while ((opcode = (iterator->words.w0 >> 24)) != (u8) G_ENDDL) {
-        if (opcode == G_DL) {
-            uintptr_t addr = iterator->words.w1;
-            if (!(addr & 0x400000000)) { // avoid segment address
-                fix_texture_segment((Gfx*) addr, textures);
-            }
-        } else if (opcode == G_DL_OTR_FILEPATH) {
-            char* fileName = (char*) iterator->words.w1;
-            Gfx* gfx2 = (Gfx*) ResourceGetDataByName((const char*) fileName);
-            if (((iterator->words.w0 >> (16)) & ((1U << 1) - 1)) == 0 && gfx2 != nullptr) {
-                fix_texture_segment(gfx2, textures);
-            }
-        } else if (opcode == G_DL_OTR_HASH) {
-            if (((iterator->words.w0 >> (16)) & ((1U << 1) - 1)) == 0) {
-                iterator++;
-                Gfx* gfx2 = (Gfx*) ResourceGetDataByCrc(((uint64_t) iterator->words.w0 << 32) + iterator->words.w1);
-                if (gfx2 != nullptr) {
-                    fix_texture_segment(gfx2, textures);
-                }
-            }
-        } else if (opcode == G_SETTIMG) {
-            // If this is a texture command, we need to fix the texture segment pointer
-            uintptr_t tex = iterator->words.w1 & (~1);
-            uintptr_t addr = get_texture(tex, textures);
-            if (addr != NULL) {
-                iterator->words.w1 = addr;
-            }
-        }
-
-        if (opcode == G_MARKER || opcode == G_MTX_OTR || opcode == G_VTX_OTR_FILEPATH || opcode == G_VTX_OTR_HASH) {
-            iterator++;
-        }
-        // Move to the next command in the display list
-        iterator++;
-        i++;
-    }
-}
-
-void resize_minimap(MinimapProps* minimap) {
-    int prevWidth = minimap->Width;
-    int prevHeight = minimap->Height;
-    if (prevHeight < prevWidth) {
+void ResizeMinimap(MinimapProps* minimap) {
+    if (minimap->Height < minimap->Width) {
+        minimap->Width = (minimap->Width * 64) / minimap->Height;
         minimap->Height = 64;
-        minimap->Width = (minimap->Width * 64) / prevHeight;
     } else {
+        minimap->Height = (minimap->Height * 64) / minimap->Width;
         minimap->Width = 64;
-        minimap->Height = (minimap->Height * 64) / prevWidth;
     }
 }
 

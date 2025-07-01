@@ -59,7 +59,7 @@ RainbowRoad::RainbowRoad() {
     Props.Minimap.PlayerScaleFactor = 0.0103f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "rainbow road", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "rainbow", sizeof(Props.DebugName));

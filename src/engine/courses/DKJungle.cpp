@@ -83,7 +83,7 @@ DKJungle::DKJungle() {
     Props.Minimap.PlayerScaleFactor = 0.0155f;
     Props.Minimap.FinishlineX = 0;
     Props.Minimap.FinishlineY = 0;
-    resize_minimap(&Props.Minimap);
+    ResizeMinimap(&Props.Minimap);
 
     Props.SetText(Props.Name, "d.k.'s jungle parkway", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "jungle", sizeof(Props.DebugName));
@@ -143,8 +143,8 @@ DKJungle::DKJungle() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_DK_JUNGLE;
 
     Props.WaterLevel = -475.0f;
-    for (int i = 0; i < 104; i++) {
-        fix_texture_segment((Gfx*) d_course_dks_jungle_parkway_unknown_dl_list[i], Props.textures);
+    for (size_t i = 0; i < 104; i++) {
+        replace_segmented_textures_with_o2r_textures((Gfx*) d_course_dks_jungle_parkway_unknown_dl_list[i], Props.textures);
     }
 }
 
@@ -189,9 +189,9 @@ f32 DKJungle::GetWaterLevel(FVector pos, Collision* collision) {
 }
 
 void DKJungle::LoadTextures() {
-    dma_textures_char(gTextureDksJungleParkwayKiwanoFruit1, 0x0000032FU, 0x00000400U); // 0x03009000
-    dma_textures_char(gTextureDksJungleParkwayKiwanoFruit2, 0x00000369U, 0x00000400U); // 0x03009800
-    dma_textures_char(gTextureDksJungleParkwayKiwanoFruit3, 0x00000364U, 0x00000400U); // 0x0300A000
+    dma_textures(gTextureDksJungleParkwayKiwanoFruit1, 0x0000032FU, 0x00000400U); // 0x03009000
+    dma_textures(gTextureDksJungleParkwayKiwanoFruit2, 0x00000369U, 0x00000400U); // 0x03009800
+    dma_textures(gTextureDksJungleParkwayKiwanoFruit3, 0x00000364U, 0x00000400U); // 0x0300A000
 }
 
 void DKJungle::BeginPlay() {
