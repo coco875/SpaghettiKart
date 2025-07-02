@@ -3339,7 +3339,7 @@ gGrassParticle:
   offset: 0x59408
   format: rgba16
 texture_69B960:
-  symbol: gTexture69B960
+  symbol: gTextureMusicNote
   type: texture
   mio0: true
   ctype: u16
@@ -3348,7 +3348,7 @@ texture_69B960:
   offset: 0x599F0
   format: i8
 texture_69BA28:
-  symbol: gTexture69BA28
+  symbol: gTextureSpeechBubble
   type: texture
   mio0: true
   ctype: u16
@@ -3402,7 +3402,7 @@ texture_69C1E8:
   offset: 0x5A278
   format: ia16
 texture_69C354:
-  symbol: gTexture69C354
+  symbol: gTextureSmokePuff
   type: texture
   mio0: true
   ctype: u16
