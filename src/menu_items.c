@@ -3045,7 +3045,7 @@ Gfx* func_80095E10(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 te
                    s32 srcWidth, s32 srcHeight, s32 screenX, s32 screenY, u8* textureData, u32 texWidth,
                    u32 texHeight) {
     gDPLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, texWidth, texHeight, srcX, srcY,
-                       srcX + srcWidth - 1, srcY + srcHeight, 0, G_TX_NOMIRROR | G_TX_WRAP,
+                       srcX + srcWidth - 1, srcY + srcHeight - 1, 0, G_TX_NOMIRROR | G_TX_WRAP,
                        G_TX_NOMIRROR | G_TX_WRAP, 0, 0, G_TX_NOLOD, G_TX_NOLOD);
     gSPWideTextureRectangle(displayListHead++, screenX << 2, screenY << 2, (screenX + srcWidth) << 2,
                             (screenY + srcHeight) << 2, G_TX_RENDERTILE, 0, 0, texScaleS, texScaleT);
