@@ -163,8 +163,8 @@ Variables</h2></td></tr>
 <div class="line">    gsSPDisplayList(<a class="code hl_variable" href="#a2d0ed68c89151bec5d738577632dbbc7">cloud_mesh_tri_0</a>),</div>
 <div class="line">    gsSPEndDisplayList(),</div>
 <div class="line">}</div>
-<div class="ttc" id="aCloud_8cpp_html_a2d0ed68c89151bec5d738577632dbbc7"><div class="ttname"><a href="#a2d0ed68c89151bec5d738577632dbbc7">cloud_mesh_tri_0</a></div><div class="ttdeci">Gfx cloud_mesh_tri_0[]</div><div class="ttdef"><b>Definition</b> Cloud.cpp:100</div></div>
-<div class="ttc" id="aCloud_8cpp_html_a8039b967c5b57c5c3537ed6f335e3ef1"><div class="ttname"><a href="#a8039b967c5b57c5c3537ed6f335e3ef1">mat_cloud_cutout</a></div><div class="ttdeci">Gfx mat_cloud_cutout[]</div><div class="ttdef"><b>Definition</b> Cloud.cpp:106</div></div>
+<div class="ttc" id="aCloud_8cpp_html_a2d0ed68c89151bec5d738577632dbbc7"><div class="ttname"><a href="#a2d0ed68c89151bec5d738577632dbbc7">cloud_mesh_tri_0</a></div><div class="ttdeci">Gfx cloud_mesh_tri_0[]</div><div class="ttdef"><b>Definition</b> Cloud.cpp:98</div></div>
+<div class="ttc" id="aCloud_8cpp_html_a8039b967c5b57c5c3537ed6f335e3ef1"><div class="ttname"><a href="#a8039b967c5b57c5c3537ed6f335e3ef1">mat_cloud_cutout</a></div><div class="ttdeci">Gfx mat_cloud_cutout[]</div><div class="ttdef"><b>Definition</b> Cloud.cpp:104</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -184,7 +184,7 @@ Variables</h2></td></tr>
 <div class="line">    gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),</div>
 <div class="line">    gsSPEndDisplayList(),</div>
 <div class="line">}</div>
-<div class="ttc" id="aCloud_8cpp_html_a161de0c5790c70dc1136dea3b3ce2265"><div class="ttname"><a href="#a161de0c5790c70dc1136dea3b3ce2265">cloud_mesh_vtx_0</a></div><div class="ttdeci">Vtx cloud_mesh_vtx_0[4]</div><div class="ttdef"><b>Definition</b> Cloud.cpp:93</div></div>
+<div class="ttc" id="aCloud_8cpp_html_a161de0c5790c70dc1136dea3b3ce2265"><div class="ttname"><a href="#a161de0c5790c70dc1136dea3b3ce2265">cloud_mesh_vtx_0</a></div><div class="ttdeci">Vtx cloud_mesh_vtx_0[4]</div><div class="ttdef"><b>Definition</b> Cloud.cpp:91</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -200,10 +200,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    {{ {0, 4, 4}, 0, {-524, -530}, {255, 255, 255, 166} }},</div>
-<div class="line">    {{ {0, -4, 4}, 0, {-530, 1516}, {255, 255, 255, 201} }},</div>
-<div class="line">    {{ {0, -4, -4}, 0, {1516, 1522}, {255, 255, 255, 188} }},</div>
-<div class="line">    {{ {0, 4, -4}, 0, {1522, -524}, {255, 255, 255, 154} }},</div>
+<div class="line">    { { { 0, 4, 4 }, 0, { -524, -530 }, { 255, 255, 255, 166 } } },</div>
+<div class="line">    { { { 0, -4, 4 }, 0, { -530, 1516 }, { 255, 255, 255, 201 } } },</div>
+<div class="line">    { { { 0, -4, -4 }, 0, { 1516, 1522 }, { 255, 255, 255, 188 } } },</div>
+<div class="line">    { { { 0, 4, -4 }, 0, { 1522, -524 }, { 255, 255, 255, 154 } } },</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -220,14 +220,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    {{ {0, -4, -4}, 0, {0, 0}, {0, 0, 0, 0} }},</div>
-<div class="line">    {{ {0, -4, 4}, 0, {0, 0}, {0, 0, 0, 0} }},</div>
-<div class="line">    {{ {0, 4, 4}, 0, {0, 0}, {0, 0, 0, 0} }},</div>
-<div class="line">    {{ {0, 4, -4}, 0, {0, 0}, {0, 0, 0, 0} }},</div>
-<div class="line">    {{ {0, -4, -4}, 0, {0, 0}, {0, 0, 0, 0} }},</div>
-<div class="line">    {{ {0, -4, 4}, 0, {0, 0}, {0, 0, 0, 0} }},</div>
-<div class="line">    {{ {0, 4, 4}, 0, {0, 0}, {0, 0, 0, 0} }},</div>
-<div class="line">    {{ {0, 4, -4}, 0, {0, 0}, {0, 0, 0, 0} }},</div>
+<div class="line">    { { { 0, -4, -4 }, 0, { 0, 0 }, { 0, 0, 0, 0 } } }, { { { 0, -4, 4 }, 0, { 0, 0 }, { 0, 0, 0, 0 } } },</div>
+<div class="line">    { { { 0, 4, 4 }, 0, { 0, 0 }, { 0, 0, 0, 0 } } },   { { { 0, 4, -4 }, 0, { 0, 0 }, { 0, 0, 0, 0 } } },</div>
+<div class="line">    { { { 0, -4, -4 }, 0, { 0, 0 }, { 0, 0, 0, 0 } } }, { { { 0, -4, 4 }, 0, { 0, 0 }, { 0, 0, 0, 0 } } },</div>
+<div class="line">    { { { 0, 4, 4 }, 0, { 0, 0 }, { 0, 0, 0, 0 } } },   { { { 0, 4, -4 }, 0, { 0, 0 }, { 0, 0, 0, 0 } } },</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -289,22 +285,29 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    gsSPSetGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_SHADING_SMOOTH),</div>
-<div class="line">    gsSPClearGeometryMode(G_CULL_FRONT | G_CULL_BACK | G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR | G_LOD | G_CLIPPING),</div>
+<div class="line">    gsSPClearGeometryMode(G_CULL_FRONT | G_CULL_BACK | G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR | G_LOD |</div>
+<div class="line">                          G_CLIPPING),</div>
 <div class="line">    gsDPPipeSync(),</div>
-<div class="line">    gsDPSetCombineLERP(TEXEL0, PRIMITIVE, PRIMITIVE, TEXEL1, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),</div>
-<div class="line">    gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20, G_AD_NOISE | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE | G_TD_CLAMP | G_TP_PERSP | G_CYC_2CYCLE | G_PM_NPRIMITIVE),</div>
+<div class="line">    gsDPSetCombineLERP(TEXEL0, PRIMITIVE, PRIMITIVE, TEXEL1, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0,</div>
+<div class="line">                       COMBINED),</div>
+<div class="line">    gsSPSetOtherMode(G_SETOTHERMODE_H, 4, 20,</div>
+<div class="line">                     G_AD_NOISE | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |</div>
+<div class="line">                         G_TD_CLAMP | G_TP_PERSP | G_CYC_2CYCLE | G_PM_NPRIMITIVE),</div>
 <div class="line">    gsSPSetOtherMode(G_SETOTHERMODE_L, 0, 32, G_AC_NONE | G_ZS_PIXEL | G_RM_FOG_SHADE_A | G_RM_AA_ZB_TEX_EDGE2),</div>
 <div class="line">    gsSPTexture(65535, 65535, 0, 0, 1),</div>
 <div class="line">    gsDPSetPrimColor(0, 0, 255, 220, 203, 255),</div>
-<div class="line">    gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, gTexture69C4E4),</div>
-<div class="line">    gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),</div>
+<div class="line">    gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, gGroundDust),</div>
+<div class="line">    gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0,</div>
+<div class="line">                G_TX_WRAP | G_TX_NOMIRROR, 0, 0),</div>
 <div class="line">    gsDPLoadBlock(7, 0, 0, 511, 512),</div>
 <div class="line">    gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 1, G_TX_WRAP | G_TX_NOMIRROR, 5, 1),</div>
 <div class="line">    gsDPSetTileSize(0, 98, 100, 124, 124),</div>
 <div class="line">    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, gTexture66C8F4),</div>
-<div class="line">    gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 128, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),</div>
+<div class="line">    gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 128, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0,</div>
+<div class="line">                G_TX_WRAP | G_TX_NOMIRROR, 0, 0),</div>
 <div class="line">    gsDPLoadBlock(6, 0, 0, 1023, 256),</div>
-<div class="line">    gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 128, 1, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),</div>
+<div class="line">    gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 128, 1, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR,</div>
+<div class="line">                5, 0),</div>
 <div class="line">    gsDPSetTileSize(1, 0, 0, 124, 124),</div>
 <div class="line">    gsSPEndDisplayList(),</div>
 <div class="line">}</div>

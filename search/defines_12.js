@@ -133,12 +133,13 @@ var searchData=
   ['sqr_130',['sqr',['../math__util_8h.html#adee8c6d2fc20a1194cf64c481e7b6353',1,'math_util.h']]],
   ['stacksize_131',['STACKSIZE',['../mk64_8h.html#a21d9543c516fffee84a7963224271f95',1,'mk64.h']]],
   ['star_5feffect_132',['STAR_EFFECT',['../defines_8h.html#a8162db60017841c732d51d0c3a4a5269',1,'defines.h']]],
-  ['star_5fsound_5feffect_133',['STAR_SOUND_EFFECT',['../defines_8h.html#aee266a50899889872809281fc533bf6b',1,'defines.h']]],
-  ['start_5fmenu_134',['START_MENU',['../defines_8h.html#a1f9423c18ac50fcb6645899b4a6e2bd3',1,'defines.h']]],
-  ['start_5fmenu_5ffrom_5fquit_135',['START_MENU_FROM_QUIT',['../defines_8h.html#a0976e0ab380716d82db18ceb5b43e75b',1,'defines.h']]],
-  ['startup_5flogo_5from_5fend_136',['STARTUP_LOGO_ROM_END',['../segments_8h.html#af2bfeaf6e27a9e9cfa20e109c4b23f94',1,'segments.h']]],
-  ['startup_5flogo_5from_5fstart_137',['STARTUP_LOGO_ROM_START',['../segments_8h.html#aafa03ea9c3a929c8050106c259a06089',1,'segments.h']]],
-  ['static_138',['STATIC',['../__Printf_8c.html#a10b2d890d871e1489bb02b7e70d9bdfb',1,'_Printf.c']]],
-  ['static_5fassert_139',['STATIC_ASSERT',['../macros_8h.html#a8ce491b27b644889db1ca99d8c99c24e',1,'macros.h']]],
-  ['stubbed_5fprintf_140',['stubbed_printf',['../internal_8h.html#a6ba6dded2f5902fce6f84e3e05dc5951',1,'internal.h']]]
+  ['star_5feffect_5fduration_133',['STAR_EFFECT_DURATION',['../defines_8h.html#a9b3de65f2f2b99a397c6fd5faa4952e1',1,'defines.h']]],
+  ['star_5fsound_5feffect_134',['STAR_SOUND_EFFECT',['../defines_8h.html#aee266a50899889872809281fc533bf6b',1,'defines.h']]],
+  ['start_5fmenu_135',['START_MENU',['../defines_8h.html#a1f9423c18ac50fcb6645899b4a6e2bd3',1,'defines.h']]],
+  ['start_5fmenu_5ffrom_5fquit_136',['START_MENU_FROM_QUIT',['../defines_8h.html#a0976e0ab380716d82db18ceb5b43e75b',1,'defines.h']]],
+  ['startup_5flogo_5from_5fend_137',['STARTUP_LOGO_ROM_END',['../segments_8h.html#af2bfeaf6e27a9e9cfa20e109c4b23f94',1,'segments.h']]],
+  ['startup_5flogo_5from_5fstart_138',['STARTUP_LOGO_ROM_START',['../segments_8h.html#aafa03ea9c3a929c8050106c259a06089',1,'segments.h']]],
+  ['static_139',['STATIC',['../__Printf_8c.html#a10b2d890d871e1489bb02b7e70d9bdfb',1,'_Printf.c']]],
+  ['static_5fassert_140',['STATIC_ASSERT',['../macros_8h.html#a8ce491b27b644889db1ca99d8c99c24e',1,'macros.h']]],
+  ['stubbed_5fprintf_141',['stubbed_printf',['../internal_8h.html#a6ba6dded2f5902fce6f84e3e05dc5951',1,'internal.h']]]
 ];

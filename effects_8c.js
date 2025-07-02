@@ -114,8 +114,8 @@ var effects_8c =
     [ "remove_lightning_effect", "effects_8c.html#a07ab364789868cafd49e8510b238d453", null ],
     [ "D_8018D900", "effects_8c.html#a182b175354c4b3b40e3cbf158e8d6bc3", null ],
     [ "D_8018D920", "effects_8c.html#a2e5bde7c91ceabaa4297a0d204a574bc", null ],
-    [ "D_8018D930", "effects_8c.html#afc5a4929bc094d9dbb4c15db436c7d03", null ],
     [ "D_8018D950", "effects_8c.html#a8eaf5883a76972e83f8fac89a8767311", null ],
     [ "D_8018D970", "effects_8c.html#aa3486768976d2ca4e3356f7f7a1fac67", null ],
-    [ "D_8018D990", "effects_8c.html#a2c7ebbb5b8a5f959ea6c612997ec0456", null ]
+    [ "D_8018D990", "effects_8c.html#a2c7ebbb5b8a5f959ea6c612997ec0456", null ],
+    [ "gPlayerStarEffectStartTime", "effects_8c.html#ace36006d53640fd62ef26deb46ccf0fe", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mario Kart 64: Building Starship</title>
+<title>Mario Kart 64: Building SpagettiKart</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -105,10 +105,10 @@ $(function(){initNavTree('md_docs_2BUILDING.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Building Starship</div></div>
+  <div class="headertitle"><div class="title">Building SpagettiKart</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="building-starship"></a></p>
+<div class="textblock"><p><a class="anchor" id="building-spagettikart"></a></p>
 <h1><a class="anchor" id="windows-1"></a>
 Windows</h1>
 <p>Requires:</p><ul>
@@ -145,8 +145,8 @@ Windows</h1>
 <div class="line">&amp; &#39;C:\Program Files\CMake\bin\cmake.exe&#39; --build .\build\x64</div>
 <div class="line"> </div>
 <div class="line"># Now you can run the executable in .\build\x64 or run in Visual Studio</div>
-</div><!-- fragment --><h2><a class="anchor" id="developing-starship"></a>
-Developing Starship</h2>
+</div><!-- fragment --><h2><a class="anchor" id="developing-spaghettikart"></a>
+Developing SpaghettiKart</h2>
 <p>With the cmake build system you have two options for working on the project:</p>
 <h3><a class="anchor" id="visual-studio"></a>
 Visual Studio</h3>
@@ -225,6 +225,8 @@ Build</h2>
 <div class="line"> </div>
 <div class="line"># Now you can run the executable in ./build-cmake/Spaghettify</div>
 <div class="line"># To develop the project open the repository in VSCode (or your preferred editor)</div>
+<div class="line"> </div>
+<div class="line"># System wide freezes may be due to low memory, add &quot;-j4&quot; to the end of the build command to use four cores.</div>
 </div><!-- fragment --><h2><a class="anchor" id="generate-a-distributable"></a>
 Generate a distributable</h2>
 <p>After compiling the project you can generate a distributable by running of the following: </p><div class="fragment"><div class="line"># Go to build folder</div>
@@ -241,7 +243,7 @@ Clean</h3>
 <div class="line">cmake --build build-cmake --target clean</div>
 </div><!-- fragment --><h1><a class="anchor" id="macos-1"></a>
 macOS</h1>
-<p>Requires Xcode (or xcode-tools) &amp;&amp; <code>sdl2, libpng, glew, ninja, cmake, nlohmann-json, libzip, vorbis-tools</code> (can be installed via homebrew, macports, etc)</p>
+<p>Requires Xcode (or xcode-tools) &amp;&amp; <code>sdl2, libpng, glew, ninja, cmake, nlohmann-json, libzip, vorbis-tools, sdl2_net, tinyxml2</code> (can be installed via homebrew, macports, etc)</p>
 <p><b>Important: For maximum performance make sure you have ninja build tools installed!</b></p>
 <p><em><a class="el" href="structNote.html">Note</a>: If you're using Visual Studio Code, the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools">cpack plugin</a> makes it very easy to just press run and debug.</em></p>
 <div class="fragment"><div class="line"># Clone the repo</div>

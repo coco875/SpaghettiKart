@@ -25,7 +25,6 @@ var searchData=
   ['gobjectparticle3_5fsize_22',['gObjectParticle3_SIZE',['../objects_8h.html#ab8eb52623ddafaa738b0234d1f40e446',1,'objects.h']]],
   ['gobjectparticle4_5fsize_23',['gObjectParticle4_SIZE',['../objects_8h.html#aa0b2f0590bfac947f05d609d8e6e5ed6',1,'objects.h']]],
   ['gpack_5frgb888_24',['GPACK_RGB888',['../defines_8h.html#a69522ff76a05664bd061ea34b0022a49',1,'defines.h']]],
-  ['gracestate_5fas_5fu16_25',['gRaceState_AS_U16',['../main_8c.html#ac504576ef220a8f96be7c10425754e5c',1,'main.c']]],
-  ['grand_5fprix_26',['GRAND_PRIX',['../defines_8h.html#a8243137b0c8b7200c20479738cdbe365',1,'defines.h']]],
-  ['grid_5fsize_27',['GRID_SIZE',['../defines_8h.html#a08246606c233e7785a497c09672f366f',1,'defines.h']]]
+  ['grand_5fprix_25',['GRAND_PRIX',['../defines_8h.html#a8243137b0c8b7200c20479738cdbe365',1,'defines.h']]],
+  ['grid_5fsize_26',['GRID_SIZE',['../defines_8h.html#a08246606c233e7785a497c09672f366f',1,'defines.h']]]
 ];

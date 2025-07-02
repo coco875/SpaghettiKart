@@ -1,6 +1,5 @@
 var main_8c =
 [
-    [ "gRaceState_AS_U16", "main_8c.html#ac504576ef220a8f96be7c10425754e5c", null ],
     [ "audio_init", "main_8c.html#a1057a490ba85ab32c800c0e3c9e85c78", null ],
     [ "calculate_delta_time", "main_8c.html#a3fea25080bd641666553317d98cdbdec", null ],
     [ "calculate_updaterate", "main_8c.html#a18d42ba3d154fd3abfb3dcdad0272cdc", null ],
@@ -161,7 +160,7 @@ var main_8c =
     [ "gPlayerTwo", "main_8c.html#a8d46561e10d019ff438d78c75101488b", null ],
     [ "gPlayerTwoCopy", "main_8c.html#a1bd4d5c53de2764bb2a85271d557d8a4", null ],
     [ "gPortFramebuffers", "main_8c.html#a8c5d3813c0c58c32e7c52a37b3a85bfe", null ],
-    [ "gRaceState", "main_8c.html#a0549b76e168733ddf5b985d6b80ab594", null ],
+    [ "gRaceState", "main_8c.html#a4bd0a5471e4135159d04309d3e2cf8d1", null ],
     [ "gScreenAspect", "main_8c.html#a5ba352e44958486fef83d7a2ae5da53d", null ],
     [ "gScreenModeSelection", "main_8c.html#a7f3d645aaf496e2e632e1caadffd3810", null ],
     [ "gSegmentTable", "main_8c.html#af260f7f79b8f94f285772d0f5a7daecd", null ],

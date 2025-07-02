@@ -161,6 +161,8 @@ Include dependency graph for Engine.cpp:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a29357c424545be61af4bd28d84fd344a" id="r_a29357c424545be61af4bd28d84fd344a"><td class="memItemLeft" align="right" valign="top">Fast::Interpreter *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29357c424545be61af4bd28d84fd344a">GetInterpreter</a> ()</td></tr>
 <tr class="separator:a29357c424545be61af4bd28d84fd344a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dbc85d342ddf9cbafed1cdeccd06fe0" id="r_a4dbc85d342ddf9cbafed1cdeccd06fe0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dbc85d342ddf9cbafed1cdeccd06fe0">CreateDirectoryRecursive</a> (std::string const &amp;dirName, std::error_code &amp;err)</td></tr>
+<tr class="separator:a4dbc85d342ddf9cbafed1cdeccd06fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e8387668c31bafe0218662b6d08976" id="r_a09e8387668c31bafe0218662b6d08976"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09e8387668c31bafe0218662b6d08976">GameEngine_GetInterpolationFrameCount</a> ()</td></tr>
 <tr class="separator:a09e8387668c31bafe0218662b6d08976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20514c4a46730dc918ea1e5bf293aa42" id="r_a20514c4a46730dc918ea1e5bf293aa42"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20514c4a46730dc918ea1e5bf293aa42">GameEngine_GetSampleRate</a> ()</td></tr>
@@ -187,6 +189,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad795831cf12593f8fe0dc95390d9dfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a223c8bc63f228dc11177515e38eff2db" id="r_a223c8bc63f228dc11177515e38eff2db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a223c8bc63f228dc11177515e38eff2db">GameEngine_OTRSigCheck</a> (const char *data)</td></tr>
 <tr class="separator:a223c8bc63f228dc11177515e38eff2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da2f86fab143dd6c2be01e2265264e7" id="r_a8da2f86fab143dd6c2be01e2265264e7"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8da2f86fab143dd6c2be01e2265264e7">GameEngine_ResourceGetTexTypeByName</a> (const char *name)</td></tr>
+<tr class="separator:a8da2f86fab143dd6c2be01e2265264e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d98290189b08a0a3f1dd4299855d027" id="r_a8d98290189b08a0a3f1dd4299855d027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d98290189b08a0a3f1dd4299855d027">Timer_Increment</a> (int32_t *address, int32_t value)</td></tr>
 <tr class="separator:a8d98290189b08a0a3f1dd4299855d027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75de7a8c0690e775d0455028c873e05d" id="r_a75de7a8c0690e775d0455028c873e05d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75de7a8c0690e775d0455028c873e05d">Timer_SetValue</a> (int32_t *address, int32_t value)</td></tr>
@@ -226,6 +230,27 @@ Variables</h2></td></tr>
 <tr class="separator:a16063a9508c9b27102e4a98729d8db04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a4dbc85d342ddf9cbafed1cdeccd06fe0" name="a4dbc85d342ddf9cbafed1cdeccd06fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbc85d342ddf9cbafed1cdeccd06fe0">&#9670;&#160;</a></span>CreateDirectoryRecursive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateDirectoryRecursive </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>dirName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::error_code &amp;</td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9d643d4ad53ffb04036755be5496c72e" name="a9d643d4ad53ffb04036755be5496c72e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d643d4ad53ffb04036755be5496c72e">&#9670;&#160;</a></span>GameEngine_GetAspectRatio()</h2>
 
@@ -444,6 +469,28 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="Engine_8cpp_a223c8bc63f228dc11177515e38eff2db_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a8da2f86fab143dd6c2be01e2265264e7" name="a8da2f86fab143dd6c2be01e2265264e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da2f86fab143dd6c2be01e2265264e7">&#9670;&#160;</a></span>GameEngine_ResourceGetTexTypeByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t GameEngine_ResourceGetTexTypeByName </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="Engine_8cpp_a8da2f86fab143dd6c2be01e2265264e7_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

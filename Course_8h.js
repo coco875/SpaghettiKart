@@ -6,5 +6,6 @@ var Course_8h =
     [ "Properties", "structProperties.html", "structProperties" ],
     [ "MinimapProps", "Course_8h.html#a89db40153c22dd024742de86f0677170", null ],
     [ "Properties", "Course_8h.html#a8ecef2d534cf6f255c04ca4378080410", null ],
-    [ "SkyboxColours", "Course_8h.html#ac7f336f5f580b2fcc002c314ae1a7f97", null ]
+    [ "SkyboxColours", "Course_8h.html#ac7f336f5f580b2fcc002c314ae1a7f97", null ],
+    [ "ResizeMinimap", "Course_8h.html#ab8fe8a85340279ffa324d3c475c49e29", null ]
 ];

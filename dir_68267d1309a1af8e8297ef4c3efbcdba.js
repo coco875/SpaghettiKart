@@ -17,7 +17,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "buffers.h", "buffers_8h.html", "buffers_8h" ],
     [ "camera.c", "camera_8c.html", "camera_8c" ],
     [ "camera.h", "camera_8h.html", "camera_8h" ],
-    [ "camera_junk.h", "camera__junk_8h.html", "camera__junk_8h" ],
     [ "code_800029B0.c", "code__800029B0_8c.html", "code__800029B0_8c" ],
     [ "code_800029B0.h", "code__800029B0_8h.html", "code__800029B0_8h" ],
     [ "code_80005FD0.c", "code__80005FD0_8c.html", "code__80005FD0_8c" ],

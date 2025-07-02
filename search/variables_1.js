@@ -35,7 +35,7 @@ var searchData=
   ['allaxisradius_32',['AllAxisRadius',['../classEditor_1_1Gizmo.html#a6f56ed961b20388de6ac86c396f9fda6',1,'Editor::Gizmo']]],
   ['allcoursetimetrialrecords_33',['allCourseTimeTrialRecords',['../structSaveData.html#af99eee38007ec1e42d9fb466faf8ac5b',1,'SaveData']]],
   ['allowpopout_34',['allowPopout',['../classShip_1_1Menu.html#a5b7426eeaa62381f46f9e13890a81c79',1,'Ship::Menu']]],
-  ['alpha_35',['alpha',['../structRGBA5551.html#a8e4b93a16be5353df9973a8672ef6d28',1,'RGBA5551::alpha'],['../structRGBA16.html#a23265999b7bfedc1640e44c331d67f06',1,'RGBA16::alpha']]],
+  ['alpha_35',['alpha',['../structRGBA5551.html#a8e4b93a16be5353df9973a8672ef6d28',1,'RGBA5551::alpha'],['../structUnkPlayerStruct258.html#a95aae09b08be7e412296c2cd21f29d7e',1,'UnkPlayerStruct258::alpha'],['../structRGBA16.html#a23265999b7bfedc1640e44c331d67f06',1,'RGBA16::alpha']]],
   ['alsolapcount_36',['alsoLapCount',['../structhud__player.html#a3bf6c6d74d60d7cf19c5aa483a8edde5',1,'hud_player']]],
   ['always_5fset_5fto_5fsomething_5fbut_5fnever_5fused_37',['always_set_to_something_but_never_used',['../structAnimation.html#af85d7839b1a8ea8eaac068a8c82cd955',1,'Animation']]],
   ['always_5fzero_5fnever_5fused_38',['always_zero_never_used',['../structArmature.html#a1f7bbd5d2d6eb7d572b3c0f2fe2dc5c1',1,'Armature::always_zero_never_used'],['../structAnimation.html#af94fdd03186279b9531f67158159b722',1,'Animation::always_zero_never_used']]],

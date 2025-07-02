@@ -49,7 +49,7 @@
 <script type="application/ecmascript">
 var viewWidth = 1360;
 var viewHeight = 644;
-var sectionId = 'dynsection-22';
+var sectionId = 'dynsection-25';
 </script>
 <script type="application/ecmascript" xlink:href="svg.min.js"/>
 <svg id="graph" class="graph">
@@ -284,7 +284,7 @@ var sectionId = 'dynsection-22';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="render__objects_8c.html#ae29301bb23161e8876c9a7a7ceb7af7d" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="render__objects_8c.html#ad69f6c31e8ec405650c6aebe1fea30f7" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="596.5,-562 503.5,-562 503.5,-543 596.5,-543 596.5,-562"/>
 <text text-anchor="middle" x="550" y="-550" font-family="Helvetica,sans-Serif" font-size="10.00">func_8004D37C</text>
 </a>
@@ -302,7 +302,7 @@ var sectionId = 'dynsection-22';
 <!-- Node16 -->
 <g id="Node000016" class="node">
 <title>Node16</title>
-<g id="a_Node000016"><a xlink:href="render__objects_8c.html#a639ce63bbb65fcb5acef68a9354a4de7" target="_top" xlink:title=" ">
+<g id="a_Node000016"><a xlink:href="render__objects_8c.html#a6adea057e7c6779a7d9a439e3e3315a1" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="596,-599 504,-599 504,-580 596,-580 596,-599"/>
 <text text-anchor="middle" x="550" y="-587" font-family="Helvetica,sans-Serif" font-size="10.00">func_8004D4E8</text>
 </a>
@@ -536,9 +536,9 @@ var sectionId = 'dynsection-22';
 <!-- Node21 -->
 <g id="Node000021" class="node">
 <title>Node21</title>
-<g id="a_Node000021"><a xlink:href="render__objects_8h.html#a13d694da59127bdbf6d56d99b07976c2" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="412,-93 321,-93 321,-74 412,-74 412,-93"/>
-<text text-anchor="middle" x="366.5" y="-81" font-family="Helvetica,sans-Serif" font-size="10.00">func_8004F168</text>
+<g id="a_Node000021"><a xlink:href="render__objects_8h.html#a2523f4bf6330cbf91e2fe70d2af0b2cb" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="436.5,-93 296.5,-93 296.5,-74 436.5,-74 436.5,-93"/>
+<text text-anchor="middle" x="366.5" y="-81" font-family="Helvetica,sans-Serif" font-size="10.00">draw_minimap_character</text>
 </a>
 </g>
 </g>

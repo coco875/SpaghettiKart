@@ -1,5 +1,10 @@
 var NAVTREEINDEX3 =
 {
+"Items_8cpp.html":[12,0,3,6,3,0],
+"Items_8h.html":[12,0,3,6,3,1],
+"Items_8h_source.html":[12,0,3,6,3,1],
+"KalimariDesert_8cpp.html":[12,0,3,6,1,20],
+"KalimariDesert_8cpp.html#a53c50d68019e888780a8b938078c6980":[12,0,3,6,1,20,1],
 "KalimariDesert_8cpp.html#ae27c3093cc2156a7f3165ad80b80b2cf":[12,0,3,6,1,20,0],
 "KalimariDesert_8h.html":[12,0,3,6,1,21],
 "KalimariDesert_8h.html#a53c50d68019e888780a8b938078c6980":[12,0,3,6,1,21,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX3 =
 "ResourceType_8h_source.html":[12,0,3,10,1,1,30],
 "ResourceUtil_8h.html":[12,0,3,10,1,0,20],
 "ResourceUtil_8h_source.html":[12,0,3,10,1,0,20],
-"RoyalRaceway_8cpp.html":[12,0,3,6,1,34],
-"RoyalRaceway_8cpp.html#a16768b11051ff2525aea44815a1a845d":[12,0,3,6,1,34,0],
-"RoyalRaceway_8cpp.html#abd8f2148ac79b42d3a5f36670490052a":[12,0,3,6,1,34,1],
-"RoyalRaceway_8h.html":[12,0,3,6,1,35],
-"RoyalRaceway_8h.html#abd8f2148ac79b42d3a5f36670490052a":[12,0,3,6,1,35,1],
-"RoyalRaceway_8h_source.html":[12,0,3,6,1,35]
+"RoyalRaceway_8cpp.html":[12,0,3,6,1,34]
 };

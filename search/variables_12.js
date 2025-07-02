@@ -21,7 +21,7 @@ var searchData=
   ['reason_18',['reason',['../structdisabledInfo.html#a1bdbab3677f1d256b1765431d2f45d71',1,'disabledInfo']]],
   ['recalculatevolume_19',['recalculateVolume',['../structSequencePlayer.html#a6c1f8b339beb96a7720cb4da4134442c',1,'SequencePlayer']]],
   ['records_20',['records',['../structCourseTimeTrialRecords.html#a3b556cec6168ce7530e88e6828c9fdfb',1,'CourseTimeTrialRecords']]],
-  ['red_21',['red',['../structRGBA5551.html#a4d36549539a3cbcc14986a8f08f082b8',1,'RGBA5551::red'],['../structRGBA16.html#a24d18626e8499bdafdf46e75676a5db1',1,'RGBA16::red']]],
+  ['red_21',['red',['../structRGBA5551.html#a4d36549539a3cbcc14986a8f08f082b8',1,'RGBA5551::red'],['../structUnkPlayerStruct258.html#a9ce810cdae63eb6a60c3c129a87d6c60',1,'UnkPlayerStruct258::red'],['../structRGBA16.html#a24d18626e8499bdafdf46e75676a5db1',1,'RGBA16::red']]],
   ['redcollision_22',['RedCollision',['../classEditor_1_1Gizmo.html#a89c58ed3fb0441e7a9229f0452d1ae92',1,'Editor::Gizmo']]],
   ['redrotatecollision_23',['RedRotateCollision',['../classEditor_1_1Gizmo.html#aee6bd09664ef9498900779f577417936',1,'Editor::Gizmo']]],
   ['redscalecollision_24',['RedScaleCollision',['../classEditor_1_1Gizmo.html#aea3edbcd02ee6216b2852f8e1ac3655a',1,'Editor::Gizmo']]],

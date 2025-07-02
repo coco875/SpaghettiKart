@@ -61,10 +61,11 @@ var actors_8c =
     [ "update_course_actors", "actors_8c.html#aa6387502059c64a81d32c944b39d78f9", null ],
     [ "D_802B8808", "actors_8c.html#aee52d8f8f750e46d9b79ec162523ada5", null ],
     [ "D_802B8810", "actors_8c.html#a074156bcbfcb24d6b691adf751bb8580", null ],
-    [ "D_802BA050", "actors_8c.html#a1dc0b2df5d743989d3890a12138e895a", null ],
-    [ "D_802BA054", "actors_8c.html#a656b6a6b3b44cbdaf50e199c090096ca", null ],
     [ "D_802BA058", "actors_8c.html#a2741a9b2edc8020f9e91b2479a2c0bc0", null ],
     [ "D_802BA260", "actors_8c.html#a2b82e9faa990a4e08cec2b04ae1dd3fa", null ],
     [ "gActorHotAirBalloonItemBox", "actors_8c.html#ac9f35b38faba86719bffdabca5e765bf", null ],
-    [ "gTLUTRedShell", "actors_8c.html#afddce2fe9d53b73eb98b25e6d354dd50", null ]
+    [ "gTextureBlueshell", "actors_8c.html#a42aae1ba1c56cbdc344031aedbfc2fe3", null ],
+    [ "gTLUTRedShell", "actors_8c.html#afddce2fe9d53b73eb98b25e6d354dd50", null ],
+    [ "texture_green_shell", "actors_8c.html#ac96134bf76dd3381f65d9d40b181bc61", null ],
+    [ "texture_red_shell", "actors_8c.html#abfcf28cc127868d90a6d0a61d250146d", null ]
 ];

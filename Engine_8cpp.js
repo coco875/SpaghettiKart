@@ -1,5 +1,6 @@
 var Engine_8cpp =
 [
+    [ "CreateDirectoryRecursive", "Engine_8cpp.html#a4dbc85d342ddf9cbafed1cdeccd06fe0", null ],
     [ "GameEngine_GetAspectRatio", "Engine_8cpp.html#a9d643d4ad53ffb04036755be5496c72e", null ],
     [ "GameEngine_GetGameVersion", "Engine_8cpp.html#ad795831cf12593f8fe0dc95390d9dfb4", null ],
     [ "GameEngine_GetInterpolationFrameCount", "Engine_8cpp.html#a09e8387668c31bafe0218662b6d08976", null ],
@@ -11,6 +12,7 @@ var Engine_8cpp =
     [ "GameEngine_LoadBank", "Engine_8cpp.html#a03cb9a33286c6d637c85d4c7a3fa1206", null ],
     [ "GameEngine_LoadSequence", "Engine_8cpp.html#a3b513214b3d3cdc02d44263d413c1d17", null ],
     [ "GameEngine_OTRSigCheck", "Engine_8cpp.html#a223c8bc63f228dc11177515e38eff2db", null ],
+    [ "GameEngine_ResourceGetTexTypeByName", "Engine_8cpp.html#a8da2f86fab143dd6c2be01e2265264e7", null ],
     [ "GameEngine_UnloadBank", "Engine_8cpp.html#a2344ca2afab428e3d87032587e876a49", null ],
     [ "GameEngine_UnloadSequence", "Engine_8cpp.html#af677f368019255777dade173129aa10a", null ],
     [ "GetInterpreter", "Engine_8cpp.html#a29357c424545be61af4bd28d84fd344a", null ],

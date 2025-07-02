@@ -159,6 +159,7 @@ $(function(){initNavTree('menu__items_8c.html',''); initResizable(true); });
 <code>#include &quot;<a class="el" href="Matrix_8h_source.html">engine/Matrix.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="HM__Intro_8h_source.html">src/engine/HM_Intro.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="FrameInterpolation_8h_source.html">src/port/interpolation/FrameInterpolation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="heap_8h_source.html">heap.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="player__selection_8h_source.html">assets/player_selection.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for menu_items.c:</div>
@@ -334,8 +335,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad129d5fc839c6e03c8d1399f72f53071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9490c92b9af2d9c1cc307fb09bcb7b6" id="r_ad9490c92b9af2d9c1cc307fb09bcb7b6"><td class="memItemLeft" align="right" valign="top">Gfx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9490c92b9af2d9c1cc307fb09bcb7b6">func_80095E10</a> (Gfx *displayListHead, s8 textureFormat, s32 texScaleS, s32 texScaleT, s32 srcX, s32 srcY, s32 srcWidth, s32 srcHeight, s32 screenX, s32 screenY, u8 *textureData, u32 texWidth, u32 texHeight)</td></tr>
 <tr class="separator:ad9490c92b9af2d9c1cc307fb09bcb7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae10f2d055ce2012884a6a18cacd3b6fc" id="r_ae10f2d055ce2012884a6a18cacd3b6fc"><td class="memItemLeft" align="right" valign="top">Gfx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae10f2d055ce2012884a6a18cacd3b6fc">func_800963F0</a> (Gfx *displayListHead, s8 textureFormat, s32 texScaleS, s32 texScaleT, f32 scaleX, f32 scaleY, s32 srcX, s32 srcY, s32 srcHeight, s32 srcWidth, s32 screenX, s32 screenY, u8 *textureData, u32 height, u32 width)</td></tr>
-<tr class="separator:ae10f2d055ce2012884a6a18cacd3b6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e470e4f186b8105553f9b4322aed077" id="r_a6e470e4f186b8105553f9b4322aed077"><td class="memItemLeft" align="right" valign="top">Gfx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e470e4f186b8105553f9b4322aed077">func_800963F0</a> (Gfx *displayListHead, s8 textureFormat, s32 texScaleS, s32 texScaleT, f32 scaleX, f32 scaleY, s32 srcX, s32 srcY, s32 srcHeight, s32 srcWidth, s32 screenX, s32 screenY, u8 *textureData, u32 texWidth, u32 texHeight)</td></tr>
+<tr class="separator:a6e470e4f186b8105553f9b4322aed077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e6e535c0feca5102aea56e21c636dca" id="r_a7e6e535c0feca5102aea56e21c636dca"><td class="memItemLeft" align="right" valign="top">Gfx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e6e535c0feca5102aea56e21c636dca">func_80096CD8</a> (Gfx *displayListHead, s32 xPos, s32 yPos, u32 width, u32 height)</td></tr>
 <tr class="separator:a7e6e535c0feca5102aea56e21c636dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aa04c603cd7b877a5009a97a0b41ed3" id="r_a6aa04c603cd7b877a5009a97a0b41ed3"><td class="memItemLeft" align="right" valign="top">Gfx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aa04c603cd7b877a5009a97a0b41ed3">func_80097A14</a> (Gfx *displayListHead, s8 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 arg7, u8 *arg8, u32 arg9, u32 argA)</td></tr>
@@ -384,8 +385,8 @@ Functions</h2></td></tr>
 <tr class="separator:a1a935d1655795dcf27dcef1cb73470b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af01b2a70a7e93b4f9f390ddb5a539a6f" id="r_af01b2a70a7e93b4f9f390ddb5a539a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01b2a70a7e93b4f9f390ddb5a539a6f">load_menu_img_mio0_forced</a> (<a class="el" href="structMenuTexture.html">MenuTexture</a> *addr)</td></tr>
 <tr class="separator:af01b2a70a7e93b4f9f390ddb5a539a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a351ed4a261a9c1587e1fbc5b436f20af" id="r_a351ed4a261a9c1587e1fbc5b436f20af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a351ed4a261a9c1587e1fbc5b436f20af">load_menu_img_comp_type</a> (<a class="el" href="structMenuTexture.html">MenuTexture</a> *addr, s32 compType)</td></tr>
-<tr class="separator:a351ed4a261a9c1587e1fbc5b436f20af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed1902cf7e54ee29af3623ee82aa6b1c" id="r_aed1902cf7e54ee29af3623ee82aa6b1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed1902cf7e54ee29af3623ee82aa6b1c">load_menu_img_comp_type</a> (<a class="el" href="structMenuTexture.html">MenuTexture</a> *texAddr, s32 compType)</td></tr>
+<tr class="separator:aed1902cf7e54ee29af3623ee82aa6b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac9784d4cb07c7215b987cd6977cac0a" id="r_aac9784d4cb07c7215b987cd6977cac0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac9784d4cb07c7215b987cd6977cac0a">func_80099958</a> (<a class="el" href="structMenuTexture.html">MenuTexture</a> *addr, s32 arg1, s32 arg2)</td></tr>
 <tr class="separator:aac9784d4cb07c7215b987cd6977cac0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6ec4c42ba222e5620f5c1b6aa2535cf" id="r_ac6ec4c42ba222e5620f5c1b6aa2535cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6ec4c42ba222e5620f5c1b6aa2535cf">func_80099A70</a> (void)</td></tr>
@@ -396,6 +397,8 @@ Functions</h2></td></tr>
 <tr class="separator:a80ec798e2d55b54cd3bcd7dfa05c62cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34e938762875c4c1d00067a4ab30e177" id="r_a34e938762875c4c1d00067a4ab30e177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34e938762875c4c1d00067a4ab30e177">func_80099E60</a> (<a class="el" href="structMenuTexture.html">MenuTexture</a> *arg0, s32 arg1, s32 arg2)</td></tr>
 <tr class="separator:a34e938762875c4c1d00067a4ab30e177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb491fbf848c6e5509054ad65807818b" id="r_abb491fbf848c6e5509054ad65807818b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb491fbf848c6e5509054ad65807818b">func_80099EC4</a> (void)</td></tr>
+<tr class="separator:abb491fbf848c6e5509054ad65807818b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab50e1eaa9ded7a80c9c14aaaeb533fbf" id="r_ab50e1eaa9ded7a80c9c14aaaeb533fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50e1eaa9ded7a80c9c14aaaeb533fbf">func_8009A238</a> (<a class="el" href="structMenuTexture.html">MenuTexture</a> *arg0, s32 arg1)</td></tr>
 <tr class="separator:ab50e1eaa9ded7a80c9c14aaaeb533fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8a43216551bc7fec0b6c1bbca329391" id="r_af8a43216551bc7fec0b6c1bbca329391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8a43216551bc7fec0b6c1bbca329391">func_8009A2F0</a> (<a class="el" href="structstruct__8018E0E8__entry.html">struct_8018E0E8_entry</a> *arg0)</td></tr>
@@ -460,10 +463,10 @@ Functions</h2></td></tr>
 <tr class="separator:a7ce80b05c85045464b43508403003739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad727451137a6166b04d9fdb8064eae" id="r_abad727451137a6166b04d9fdb8064eae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abad727451137a6166b04d9fdb8064eae">func_8009CA6C</a> (s32 arg0)</td></tr>
 <tr class="separator:abad727451137a6166b04d9fdb8064eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a642d421600345ce934fb9e23cb85d30e" id="r_a642d421600345ce934fb9e23cb85d30e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a642d421600345ce934fb9e23cb85d30e">func_8009CBE4</a> (s32 arg0, s32 arg1, s32 arg2)</td></tr>
-<tr class="separator:a642d421600345ce934fb9e23cb85d30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7012f3b29a8e4f4eb040dbdd604a704d" id="r_a7012f3b29a8e4f4eb040dbdd604a704d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7012f3b29a8e4f4eb040dbdd604a704d">func_8009CDDC</a> (s32 arg0, s32 arg1)</td></tr>
-<tr class="separator:a7012f3b29a8e4f4eb040dbdd604a704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96ad14b2ac29ca0f9e0e37f2f5a6f68" id="r_af96ad14b2ac29ca0f9e0e37f2f5a6f68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af96ad14b2ac29ca0f9e0e37f2f5a6f68">draw_fade_in</a> (s32 arg0, s32 arg1, s32 arg2)</td></tr>
+<tr class="separator:af96ad14b2ac29ca0f9e0e37f2f5a6f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f18e15d9809e4d599ef49ab30b19891" id="r_a7f18e15d9809e4d599ef49ab30b19891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f18e15d9809e4d599ef49ab30b19891">draw_black_fade_in</a> (s32 arg0, s32 arg1)</td></tr>
+<tr class="separator:a7f18e15d9809e4d599ef49ab30b19891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda5a476b70ec20d3f01e1c60b381939" id="r_aeda5a476b70ec20d3f01e1c60b381939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeda5a476b70ec20d3f01e1c60b381939">func_8009CDFC</a> (s32 arg0, s32 arg1)</td></tr>
 <tr class="separator:aeda5a476b70ec20d3f01e1c60b381939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a8e55be1315ed840571d9a15fb3d25d" id="r_a5a8e55be1315ed840571d9a15fb3d25d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a8e55be1315ed840571d9a15fb3d25d">func_8009CE1C</a> (void)</td></tr>
@@ -524,6 +527,12 @@ Functions</h2></td></tr>
 <tr class="separator:ac9e3b8307dec167812d18d72a541bf1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9ede5415daa7e54bf2e7b018b382884" id="r_af9ede5415daa7e54bf2e7b018b382884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9ede5415daa7e54bf2e7b018b382884">clear_menus</a> (void)</td></tr>
 <tr class="separator:af9ede5415daa7e54bf2e7b018b382884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283d25c5f642d50e28e226c563c205a7" id="r_a283d25c5f642d50e28e226c563c205a7"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a283d25c5f642d50e28e226c563c205a7">integral_part</a> (f32 arg0)</td></tr>
+<tr class="separator:a283d25c5f642d50e28e226c563c205a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96cbf2848b159f8d09e2479f90a874f7" id="r_a96cbf2848b159f8d09e2479f90a874f7"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96cbf2848b159f8d09e2479f90a874f7">fractional_part</a> (f32 arg0)</td></tr>
+<tr class="separator:a96cbf2848b159f8d09e2479f90a874f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d6ec0fb783aa79c66a9639a896a115" id="r_a35d6ec0fb783aa79c66a9639a896a115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35d6ec0fb783aa79c66a9639a896a115">resize_menu_texture</a> (<a class="el" href="structMenuTexture.html">MenuTexture</a> *mi)</td></tr>
+<tr class="separator:a35d6ec0fb783aa79c66a9639a896a115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26e863afe3f01335a6f0948f40b3f9cc" id="r_a26e863afe3f01335a6f0948f40b3f9cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26e863afe3f01335a6f0948f40b3f9cc">func_800A08D8</a> (u8 arg0, s32 column, s32 row)</td></tr>
 <tr class="separator:a26e863afe3f01335a6f0948f40b3f9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a674b7c0bdf91877f49e05765db1517be" id="r_a674b7c0bdf91877f49e05765db1517be"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a674b7c0bdf91877f49e05765db1517be">func_800A095C</a> (char *someString, s32 len, s32 column, s32 row)</td></tr>
@@ -853,12 +862,12 @@ Variables</h2></td></tr>
 <tr class="separator:af940989e5140c9b281220b4369ff6c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b555340bd4ad3fc1e7ac4bf81d2a228" id="r_a7b555340bd4ad3fc1e7ac4bf81d2a228"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b555340bd4ad3fc1e7ac4bf81d2a228">gCycleFlashMenu</a></td></tr>
 <tr class="separator:a7b555340bd4ad3fc1e7ac4bf81d2a228"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac02989cde888ae35ceb8293975ddf0a9" id="r_ac02989cde888ae35ceb8293975ddf0a9"><td class="memItemLeft" align="right" valign="top">s8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac02989cde888ae35ceb8293975ddf0a9">D_8018E7AC</a> [5]</td></tr>
-<tr class="separator:ac02989cde888ae35ceb8293975ddf0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1541998d238566ac009e34d42f3a4c0a" id="r_a1541998d238566ac009e34d42f3a4c0a"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1541998d238566ac009e34d42f3a4c0a">D_8018E7B8</a> [5]</td></tr>
-<tr class="separator:a1541998d238566ac009e34d42f3a4c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bcae43b686d09d2ee23bdc22f84b4ea" id="r_a9bcae43b686d09d2ee23bdc22f84b4ea"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bcae43b686d09d2ee23bdc22f84b4ea">D_8018E7D0</a> [5]</td></tr>
-<tr class="separator:a9bcae43b686d09d2ee23bdc22f84b4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab013e576dc5a54cbbd86b58b3b69e900" id="r_ab013e576dc5a54cbbd86b58b3b69e900"><td class="memItemLeft" align="right" valign="top">s8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab013e576dc5a54cbbd86b58b3b69e900">gTransitionType</a> [5]</td></tr>
+<tr class="separator:ab013e576dc5a54cbbd86b58b3b69e900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3476b052d43fdcbf9e8c032cd6d3f5e6" id="r_a3476b052d43fdcbf9e8c032cd6d3f5e6"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3476b052d43fdcbf9e8c032cd6d3f5e6">gTransitionDuration</a> [5]</td></tr>
+<tr class="separator:a3476b052d43fdcbf9e8c032cd6d3f5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af096f414c3a461b82966a7a9f80d45f4" id="r_af096f414c3a461b82966a7a9f80d45f4"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af096f414c3a461b82966a7a9f80d45f4">gCurrentTransitionTime</a> [5]</td></tr>
+<tr class="separator:af096f414c3a461b82966a7a9f80d45f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99ba300dccda227131029b26df21ab38" id="r_a99ba300dccda227131029b26df21ab38"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structUnkStruct__8018E7E8.html">UnkStruct_8018E7E8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99ba300dccda227131029b26df21ab38">D_8018E7E8</a> [<a class="el" href="menu__items_8h.html#adc33911608906a9dd505e68ca49fad14">D_8018E7E8_SIZE</a>]</td></tr>
 <tr class="separator:a99ba300dccda227131029b26df21ab38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a736a61592c751fa0d861545861cb509a" id="r_a736a61592c751fa0d861545861cb509a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structUnkStruct__8018E7E8.html">UnkStruct_8018E7E8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a736a61592c751fa0d861545861cb509a">D_8018E810</a> [<a class="el" href="menu__items_8h.html#a8b8c827c9bbff0c2964b2ed6abe5cfeb">D_8018E810_SIZE</a>]</td></tr>
@@ -955,8 +964,8 @@ Variables</h2></td></tr>
 <tr class="separator:a2de048c4d786d92eba25a95f190fa128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeffa726e05a2e717c14c0e27ff8ff8f" id="r_adeffa726e05a2e717c14c0e27ff8ff8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGBA16.html">RGBA16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeffa726e05a2e717c14c0e27ff8ff8f">D_800E74D0</a> []</td></tr>
 <tr class="separator:adeffa726e05a2e717c14c0e27ff8ff8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fafce9d9ab9bfb4b7369aacdf3182db" id="r_a3fafce9d9ab9bfb4b7369aacdf3182db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGBA16.html">RGBA16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fafce9d9ab9bfb4b7369aacdf3182db">D_800E74E8</a> []</td></tr>
-<tr class="separator:a3fafce9d9ab9bfb4b7369aacdf3182db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e5f4ff5ffb1267fa03421112e70abf" id="r_ab4e5f4ff5ffb1267fa03421112e70abf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRGBA16.html">RGBA16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4e5f4ff5ffb1267fa03421112e70abf">gBackgroundColor</a> []</td></tr>
+<tr class="separator:ab4e5f4ff5ffb1267fa03421112e70abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8616210d85b0010d7fdf1274f0d6454f" id="r_a8616210d85b0010d7fdf1274f0d6454f"><td class="memItemLeft" align="right" valign="top">const s16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8616210d85b0010d7fdf1274f0d6454f">gGlyphDisplayWidth</a> []</td></tr>
 <tr class="separator:a8616210d85b0010d7fdf1274f0d6454f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a073ba661bd0287e1793a08725e0ddb73" id="r_a073ba661bd0287e1793a08725e0ddb73"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a073ba661bd0287e1793a08725e0ddb73">gCupNames</a> []</td></tr>
@@ -1272,7 +1281,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a71c35904018819225254ca6f5b5696fd_cgraph.svg" width="100%" height="400"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a71c35904018819225254ca6f5b5696fd_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1396,6 +1405,37 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a87ff828f0134d42058cf8be2e012a8a3_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a7f18e15d9809e4d599ef49ab30b19891" name="a7f18e15d9809e4d599ef49ab30b19891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f18e15d9809e4d599ef49ab30b19891">&#9670;&#160;</a></span>draw_black_fade_in()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_black_fade_in </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg1</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a7f18e15d9809e4d599ef49ab30b19891_cgraph.svg" width="100%" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a7f18e15d9809e4d599ef49ab30b19891_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1807,6 +1847,42 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="af96ad14b2ac29ca0f9e0e37f2f5a6f68" name="af96ad14b2ac29ca0f9e0e37f2f5a6f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96ad14b2ac29ca0f9e0e37f2f5a6f68">&#9670;&#160;</a></span>draw_fade_in()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_fade_in </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_af96ad14b2ac29ca0f9e0e37f2f5a6f68_cgraph.svg" width="100%" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_af96ad14b2ac29ca0f9e0e37f2f5a6f68_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="a780c45c1d76dfbecd6464fbc545a9936" name="a780c45c1d76dfbecd6464fbc545a9936"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a780c45c1d76dfbecd6464fbc545a9936">&#9670;&#160;</a></span>draw_flash_select_case()</h2>
 
@@ -2013,6 +2089,28 @@ Here is the caller graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a22759c8446f89851d20e92cbf52730f7_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a96cbf2848b159f8d09e2479f90a874f7" name="a96cbf2848b159f8d09e2479f90a874f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96cbf2848b159f8d09e2479f90a874f7">&#9670;&#160;</a></span>fractional_part()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 fractional_part </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>arg0</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a96cbf2848b159f8d09e2479f90a874f7_cgraph.svg" width="282" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2224,7 +2322,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000039">Todo</a></b></dt><dd>These sizes need to be sizeof() for shiftability if possible </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000048">Todo</a></b></dt><dd>These sizes need to be sizeof() for shiftability if possible </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3407,8 +3505,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ae10f2d055ce2012884a6a18cacd3b6fc" name="ae10f2d055ce2012884a6a18cacd3b6fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae10f2d055ce2012884a6a18cacd3b6fc">&#9670;&#160;</a></span>func_800963F0()</h2>
+<a id="a6e470e4f186b8105553f9b4322aed077" name="a6e470e4f186b8105553f9b4322aed077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e470e4f186b8105553f9b4322aed077">&#9670;&#160;</a></span>func_800963F0()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3481,19 +3579,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>texWidth</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>width</em></span>&#160;)</td>
+          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>texHeight</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ae10f2d055ce2012884a6a18cacd3b6fc_icgraph.svg" width="100%" height="487"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a6e470e4f186b8105553f9b4322aed077_icgraph.svg" width="100%" height="487"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -4077,11 +4175,6 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a66e95f019bfd0b516ee71baf91daa2f6_cgraph.svg" width="384" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a66e95f019bfd0b516ee71baf91daa2f6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
@@ -4147,6 +4240,33 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="abb491fbf848c6e5509054ad65807818b" name="abb491fbf848c6e5509054ad65807818b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb491fbf848c6e5509054ad65807818b">&#9670;&#160;</a></span>func_80099EC4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void func_80099EC4 </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_abb491fbf848c6e5509054ad65807818b_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_abb491fbf848c6e5509054ad65807818b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="ab50e1eaa9ded7a80c9c14aaaeb533fbf" name="ab50e1eaa9ded7a80c9c14aaaeb533fbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab50e1eaa9ded7a80c9c14aaaeb533fbf">&#9670;&#160;</a></span>func_8009A238()</h2>
 
@@ -4190,7 +4310,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_af8a43216551bc7fec0b6c1bbca329391_cgraph.svg" width="638" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_af8a43216551bc7fec0b6c1bbca329391_cgraph.svg" width="539" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -4269,7 +4389,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ab0b57eabb503b4ecd8eabd136da96826_cgraph.svg" width="596" height="152"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ab0b57eabb503b4ecd8eabd136da96826_cgraph.svg" width="304" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -4337,7 +4457,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a542612c8fd0d6566ae6133119b5fe9a2_cgraph.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a542612c8fd0d6566ae6133119b5fe9a2_cgraph.svg" width="100%" height="512"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -4373,7 +4493,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a95b3021d5115ba9961b35c05cac3cd51_cgraph.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a95b3021d5115ba9961b35c05cac3cd51_cgraph.svg" width="100%" height="512"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -4441,7 +4561,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_af958f498a1781e584897c0f68028df0e_cgraph.svg" width="555" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_af958f498a1781e584897c0f68028df0e_cgraph.svg" width="384" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -4809,7 +4929,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a85f6ca108eb24cbbaa44a5df73194789_cgraph.svg" width="100%" height="475"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a85f6ca108eb24cbbaa44a5df73194789_cgraph.svg" width="656" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -4942,73 +5062,6 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_abad727451137a6166b04d9fdb8064eae_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="a642d421600345ce934fb9e23cb85d30e" name="a642d421600345ce934fb9e23cb85d30e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a642d421600345ce934fb9e23cb85d30e">&#9670;&#160;</a></span>func_8009CBE4()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void func_8009CBE4 </td>
-          <td>(</td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg0</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg2</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a642d421600345ce934fb9e23cb85d30e_cgraph.svg" width="100%" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a642d421600345ce934fb9e23cb85d30e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="a7012f3b29a8e4f4eb040dbdd604a704d" name="a7012f3b29a8e4f4eb040dbdd604a704d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7012f3b29a8e4f4eb040dbdd604a704d">&#9670;&#160;</a></span>func_8009CDDC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void func_8009CDDC </td>
-          <td>(</td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg0</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg1</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a7012f3b29a8e4f4eb040dbdd604a704d_cgraph.svg" width="100%" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a7012f3b29a8e4f4eb040dbdd604a704d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -6118,7 +6171,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a6331193031af439e18d5a386f428a302_cgraph.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a6331193031af439e18d5a386f428a302_cgraph.svg" width="100%" height="512"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -7281,7 +7334,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_affadf473bada8b35ccd30a46a44d1007_cgraph.svg" width="100%" height="414"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_affadf473bada8b35ccd30a46a44d1007_cgraph.svg" width="516" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -7496,7 +7549,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a84fac449a24918faac0e7cf3c152dd3d_cgraph.svg" width="100%" height="444"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a84fac449a24918faac0e7cf3c152dd3d_cgraph.svg" width="518" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -7518,7 +7571,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a16ac413daca9c5080b71fb911510720c_cgraph.svg" width="100%" height="481"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a16ac413daca9c5080b71fb911510720c_cgraph.svg" width="518" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -7594,7 +7647,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ad0f2847902bae95b2222b52f85d646be_cgraph.svg" width="100%" height="488"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ad0f2847902bae95b2222b52f85d646be_cgraph.svg" width="518" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -7773,7 +7826,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a8a96f1868eccb3a1c303ecb642df9f72_cgraph.svg" width="100%" height="444"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a8a96f1868eccb3a1c303ecb642df9f72_cgraph.svg" width="516" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -7827,7 +7880,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a29006c997d21572b6e5e5bd0b02146e3_cgraph.svg" width="100%" height="525"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a29006c997d21572b6e5e5bd0b02146e3_cgraph.svg" width="518" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -8858,7 +8911,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo</a></b></dt><dd>Move gGfxPool out of <a class="el" href="main_8h.html">main.h</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000045">Todo</a></b></dt><dd>Move gGfxPool out of <a class="el" href="main_8h.html">main.h</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -9011,6 +9064,28 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a283d25c5f642d50e28e226c563c205a7" name="a283d25c5f642d50e28e226c563c205a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a283d25c5f642d50e28e226c563c205a7">&#9670;&#160;</a></span>integral_part()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 integral_part </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>arg0</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a283d25c5f642d50e28e226c563c205a7_icgraph.svg" width="282" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a68e560d23390d5add7cb57ccd82e21ae" name="a68e560d23390d5add7cb57ccd82e21ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68e560d23390d5add7cb57ccd82e21ae">&#9670;&#160;</a></span>load_menu_img()</h2>
 
@@ -9038,8 +9113,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a351ed4a261a9c1587e1fbc5b436f20af" name="a351ed4a261a9c1587e1fbc5b436f20af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a351ed4a261a9c1587e1fbc5b436f20af">&#9670;&#160;</a></span>load_menu_img_comp_type()</h2>
+<a id="aed1902cf7e54ee29af3623ee82aa6b1c" name="aed1902cf7e54ee29af3623ee82aa6b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed1902cf7e54ee29af3623ee82aa6b1c">&#9670;&#160;</a></span>load_menu_img_comp_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9047,7 +9122,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void load_menu_img_comp_type </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structMenuTexture.html">MenuTexture</a> *</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+          <td class="paramtype"><a class="el" href="structMenuTexture.html">MenuTexture</a> *</td>          <td class="paramname"><span class="paramname"><em>texAddr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9059,12 +9134,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a351ed4a261a9c1587e1fbc5b436f20af_cgraph.svg" width="467" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_aed1902cf7e54ee29af3623ee82aa6b1c_cgraph.svg" width="368" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a351ed4a261a9c1587e1fbc5b436f20af_icgraph.svg" width="100%" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_aed1902cf7e54ee29af3623ee82aa6b1c_icgraph.svg" width="100%" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -9086,7 +9161,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_af01b2a70a7e93b4f9f390ddb5a539a6f_cgraph.svg" width="100%" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_af01b2a70a7e93b4f9f390ddb5a539a6f_cgraph.svg" width="583" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -10352,6 +10427,23 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a35d6ec0fb783aa79c66a9639a896a115" name="a35d6ec0fb783aa79c66a9639a896a115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d6ec0fb783aa79c66a9639a896a115">&#9670;&#160;</a></span>resize_menu_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resize_menu_texture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMenuTexture.html">MenuTexture</a> *</td>          <td class="paramname"><span class="paramname"><em>mi</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2d2758c3a87de891a40840727bef3306" name="a2d2758c3a87de891a40840727bef3306"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d2758c3a87de891a40840727bef3306">&#9670;&#160;</a></span>segmented_to_virtual_dupe()</h2>
 
@@ -11202,25 +11294,6 @@ Here is the caller graph for this function:</div>
 <div class="line">    { 0x00, 0xf3, 0xf3, 0xff },</div>
 <div class="line">    { 0xff, 0xa8, 0xc3, 0xff },</div>
 <div class="line">    { 0xff, 0xff, 0x00, 0xff },</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3fafce9d9ab9bfb4b7369aacdf3182db" name="a3fafce9d9ab9bfb4b7369aacdf3182db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fafce9d9ab9bfb4b7369aacdf3182db">&#9670;&#160;</a></span>D_800E74E8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structRGBA16.html">RGBA16</a> D_800E74E8[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    { 0xff, 0xaf, 0xaf, 0xff },</div>
-<div class="line">    { 0xaf, 0xff, 0xaf, 0xff },</div>
-<div class="line">    { 0xaf, 0xaf, 0xff, 0xff },</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -12364,8 +12437,8 @@ Here is the caller graph for this function:</div>
 <div class="line">    <a class="code hl_variable" href="textures_8c.html#aedeec770ff7b8b190fcfcbe09d7f1622">seg2_menu_3p_column</a>,</div>
 <div class="line">    <a class="code hl_variable" href="textures_8c.html#ab3cd133558343354e78b92dca19234bb">seg2_menu_4p_column</a>,</div>
 <div class="line">    <a class="code hl_variable" href="textures_8c.html#a0fc76801f6cd6ae1f3b0ec60b5067449">D_0200487C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a2a0996cf0ec616611b0c85bf28fab98b">D_020048A4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#acded27945c19afdbaea74a3e64340039">D_020048CC</a>,</div>
+<div class="line">    <a class="code hl_variable" href="textures_8c.html#a8d1031a5204316c3df4c77f27c5a9261">seg2_textureMenuLOption</a>,</div>
+<div class="line">    <a class="code hl_variable" href="textures_8c.html#a2aae0c0be6ddedfe146f234ebbaae216">seg2_textureMenuRData</a>,</div>
 <div class="line">    </div>
 <div class="line">    <a class="code hl_variable" href="textures_8c.html#a4e17f29ee6c84e9d79e506f50f0715e1">seg2_50_CC_texture</a>,</div>
 <div class="line">    <a class="code hl_variable" href="textures_8c.html#ab3372cd1fdaff5a31cb39e85a9b984b7">seg2_100_CC_texture</a>,</div>
@@ -12381,14 +12454,14 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="atextures_8c_html_a0985fe55ca53c870e6f28c5861057fa9"><div class="ttname"><a href="textures_8c.html#a0985fe55ca53c870e6f28c5861057fa9">seg2_menu_no_item_texture</a></div><div class="ttdeci">MenuTexture seg2_menu_no_item_texture[2]</div><div class="ttdoc">MenuTextures for Menu Without Item.</div><div class="ttdef"><b>Definition</b> textures.c:4354</div></div>
 <div class="ttc" id="atextures_8c_html_a0b38cd002f3f591ba9e944844632cb9c"><div class="ttname"><a href="textures_8c.html#a0b38cd002f3f591ba9e944844632cb9c">D_020049BC</a></div><div class="ttdeci">MenuTexture D_020049BC[2]</div><div class="ttdoc">MenuTextures for Menu With Item.</div><div class="ttdef"><b>Definition</b> textures.c:4363</div></div>
 <div class="ttc" id="atextures_8c_html_a0fc76801f6cd6ae1f3b0ec60b5067449"><div class="ttname"><a href="textures_8c.html#a0fc76801f6cd6ae1f3b0ec60b5067449">D_0200487C</a></div><div class="ttdeci">MenuTexture D_0200487C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4291</div></div>
-<div class="ttc" id="atextures_8c_html_a2a0996cf0ec616611b0c85bf28fab98b"><div class="ttname"><a href="textures_8c.html#a2a0996cf0ec616611b0c85bf28fab98b">D_020048A4</a></div><div class="ttdeci">MenuTexture D_020048A4[2]</div><div class="ttdoc">MenuTexture for Menu L Option.</div><div class="ttdef"><b>Definition</b> textures.c:4300</div></div>
+<div class="ttc" id="atextures_8c_html_a2aae0c0be6ddedfe146f234ebbaae216"><div class="ttname"><a href="textures_8c.html#a2aae0c0be6ddedfe146f234ebbaae216">seg2_textureMenuRData</a></div><div class="ttdeci">MenuTexture seg2_textureMenuRData[2]</div><div class="ttdoc">MenuTexture for Menu R Option.</div><div class="ttdef"><b>Definition</b> textures.c:4309</div></div>
 <div class="ttc" id="atextures_8c_html_a4e17f29ee6c84e9d79e506f50f0715e1"><div class="ttname"><a href="textures_8c.html#a4e17f29ee6c84e9d79e506f50f0715e1">seg2_50_CC_texture</a></div><div class="ttdeci">MenuTexture seg2_50_CC_texture[2]</div><div class="ttdoc">MenuTexture for Menu 50cc.</div><div class="ttdef"><b>Definition</b> textures.c:4318</div></div>
 <div class="ttc" id="atextures_8c_html_a71d6ba0ee79e7dc8874ebcd4e1b00469"><div class="ttname"><a href="textures_8c.html#a71d6ba0ee79e7dc8874ebcd4e1b00469">seg2_extra_CC_texture</a></div><div class="ttdeci">MenuTexture seg2_extra_CC_texture[2]</div><div class="ttdoc">MenuTexture for Menu Extra.</div><div class="ttdef"><b>Definition</b> textures.c:4345</div></div>
 <div class="ttc" id="atextures_8c_html_a735761dbb0ba75585a14a9bbffb08052"><div class="ttname"><a href="textures_8c.html#a735761dbb0ba75585a14a9bbffb08052">seg2_data_texture</a></div><div class="ttdeci">MenuTexture seg2_data_texture[2]</div><div class="ttdoc">MenuTextures for Menu Data.</div><div class="ttdef"><b>Definition</b> textures.c:4390</div></div>
 <div class="ttc" id="atextures_8c_html_a7d41f8dee98eb288fa91c6c8d4fbe6bf"><div class="ttname"><a href="textures_8c.html#a7d41f8dee98eb288fa91c6c8d4fbe6bf">seg2_game_select_texture</a></div><div class="ttdeci">MenuTexture seg2_game_select_texture[2]</div><div class="ttdoc">MenuTexture for the game select menu.</div><div class="ttdef"><b>Definition</b> textures.c:4201</div></div>
+<div class="ttc" id="atextures_8c_html_a8d1031a5204316c3df4c77f27c5a9261"><div class="ttname"><a href="textures_8c.html#a8d1031a5204316c3df4c77f27c5a9261">seg2_textureMenuLOption</a></div><div class="ttdeci">MenuTexture seg2_textureMenuLOption[2]</div><div class="ttdoc">MenuTexture for Menu L Option.</div><div class="ttdef"><b>Definition</b> textures.c:4300</div></div>
 <div class="ttc" id="atextures_8c_html_ab3372cd1fdaff5a31cb39e85a9b984b7"><div class="ttname"><a href="textures_8c.html#ab3372cd1fdaff5a31cb39e85a9b984b7">seg2_100_CC_texture</a></div><div class="ttdeci">MenuTexture seg2_100_CC_texture[2]</div><div class="ttdoc">MenuTexture for Menu 100cc.</div><div class="ttdef"><b>Definition</b> textures.c:4327</div></div>
 <div class="ttc" id="atextures_8c_html_aba53ee13633e8a48c05c82f272beca03"><div class="ttname"><a href="textures_8c.html#aba53ee13633e8a48c05c82f272beca03">seg2_150_CC_texture</a></div><div class="ttdeci">MenuTexture seg2_150_CC_texture[2]</div><div class="ttdoc">MenuTexture for Menu 150cc.</div><div class="ttdef"><b>Definition</b> textures.c:4336</div></div>
-<div class="ttc" id="atextures_8c_html_acded27945c19afdbaea74a3e64340039"><div class="ttname"><a href="textures_8c.html#acded27945c19afdbaea74a3e64340039">D_020048CC</a></div><div class="ttdeci">MenuTexture D_020048CC[2]</div><div class="ttdoc">MenuTexture for Menu R Option.</div><div class="ttdef"><b>Definition</b> textures.c:4309</div></div>
 <div class="ttc" id="atextures_8c_html_adf29c05778c8a9aeb7210a8cc0913d50"><div class="ttname"><a href="textures_8c.html#adf29c05778c8a9aeb7210a8cc0913d50">D_020049E4</a></div><div class="ttdeci">MenuTexture D_020049E4[2]</div><div class="ttdoc">MenuTextures for Menu Begin.</div><div class="ttdef"><b>Definition</b> textures.c:4372</div></div>
 </div><!-- fragment -->
 </div>
@@ -12970,48 +13043,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac02989cde888ae35ceb8293975ddf0a9" name="ac02989cde888ae35ceb8293975ddf0a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac02989cde888ae35ceb8293975ddf0a9">&#9670;&#160;</a></span>D_8018E7AC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">s8 D_8018E7AC[5]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1541998d238566ac009e34d42f3a4c0a" name="a1541998d238566ac009e34d42f3a4c0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1541998d238566ac009e34d42f3a4c0a">&#9670;&#160;</a></span>D_8018E7B8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">u32 D_8018E7B8[5]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9bcae43b686d09d2ee23bdc22f84b4ea" name="a9bcae43b686d09d2ee23bdc22f84b4ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bcae43b686d09d2ee23bdc22f84b4ea">&#9670;&#160;</a></span>D_8018E7D0</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">u32 D_8018E7D0[5]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a99ba300dccda227131029b26df21ab38" name="a99ba300dccda227131029b26df21ab38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99ba300dccda227131029b26df21ab38">&#9670;&#160;</a></span>D_8018E7E8</h2>
 
@@ -13150,6 +13181,25 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="ab4e5f4ff5ffb1267fa03421112e70abf" name="ab4e5f4ff5ffb1267fa03421112e70abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e5f4ff5ffb1267fa03421112e70abf">&#9670;&#160;</a></span>gBackgroundColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRGBA16.html">RGBA16</a> gBackgroundColor[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { 0xff, 0xaf, 0xaf, 0xff },</div>
+<div class="line">    { 0xaf, 0xff, 0xaf, 0xff },</div>
+<div class="line">    { 0xaf, 0xaf, 0xff, 0xff },</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af2ed2c8270962f5eb2a5377fc9490b3c" name="af2ed2c8270962f5eb2a5377fc9490b3c"></a>
@@ -13453,6 +13503,20 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="af096f414c3a461b82966a7a9f80d45f4" name="af096f414c3a461b82966a7a9f80d45f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af096f414c3a461b82966a7a9f80d45f4">&#9670;&#160;</a></span>gCurrentTransitionTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">u32 gCurrentTransitionTime[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7b555340bd4ad3fc1e7ac4bf81d2a228" name="a7b555340bd4ad3fc1e7ac4bf81d2a228"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b555340bd4ad3fc1e7ac4bf81d2a228">&#9670;&#160;</a></span>gCycleFlashMenu</h2>
 
@@ -13604,270 +13668,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a2d3b29b7737247a1d807f6985148fb09">D_0200211C</a>, <a class="code hl_variable" href="textures_8c.html#ad3784e267ed4fb24ba5cf564b4a92cd5">D_02002144</a>, <a class="code hl_variable" href="textures_8c.html#a068586a794522678c2d9a29ef4646ec6">D_0200216C</a>, <a class="code hl_variable" href="textures_8c.html#afb1452a02c80556d8e95cbbe7fe465cf">D_02002194</a>, <a class="code hl_variable" href="textures_8c.html#a6f1ab4cd442d712018ca0c8157434b0e">D_020021BC</a>, <a class="code hl_variable" href="textures_8c.html#a97d7b917b5ee4c9dc306dc2be8663018">D_020021E4</a>, <a class="code hl_variable" href="textures_8c.html#ad8ef842e56689645463da3b23d352ec3">D_0200220C</a>, <a class="code hl_variable" href="textures_8c.html#a9b2dd2809f6cb89c2075a349309ee5cc">D_02002234</a>, <a class="code hl_variable" href="textures_8c.html#a5bdebaafc184bb1407c05c1ff7c3aaae">D_0200225C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#ad3c3a104f491e1caffc965d1ca8fc45d">D_02002284</a>, <a class="code hl_variable" href="textures_8c.html#aa3496a44170274ce5f1936b26b243bed">D_020022AC</a>, <a class="code hl_variable" href="textures_8c.html#a7327ff2597ac2bae8a3f9024eb96323e">D_020022D4</a>, <a class="code hl_variable" href="textures_8c.html#aa2e52951a8fc861ed029c0daa2063d65">D_020022FC</a>, <a class="code hl_variable" href="textures_8c.html#a479d5747ea6bf9468428ce7baed64da0">D_02002324</a>, <a class="code hl_variable" href="textures_8c.html#af0f726b84ff4fb644e41119415e625cf">D_0200234C</a>, <a class="code hl_variable" href="textures_8c.html#ab68c0155ffdfc75207cdb66a818eb5be">D_02002374</a>, <a class="code hl_variable" href="textures_8c.html#aec1ad98806ee41e7fda05ae383060fb9">D_0200239C</a>, <a class="code hl_variable" href="textures_8c.html#a215a63fc169352ddbbb1a8f27986488b">D_020023C4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a2c6aa6902560064b707dd5990a39df06">D_020023EC</a>, <a class="code hl_variable" href="textures_8c.html#ae26823e74920c311f0671045f9f1339b">D_02002414</a>, <a class="code hl_variable" href="textures_8c.html#a6b8285455da878b240dbb2c4c9856d55">D_0200243C</a>, <a class="code hl_variable" href="textures_8c.html#aacc6a337182f24c29de9c9c703936d4e">D_02002464</a>, <a class="code hl_variable" href="textures_8c.html#adb8a477b54c8900aab5142f4b82cce15">D_0200248C</a>, <a class="code hl_variable" href="textures_8c.html#a552fdf5621fcaf9d4402d9817b0bad67">D_020024B4</a>, <a class="code hl_variable" href="textures_8c.html#ade1770e8fa37088fa81e58a666022375">D_020024DC</a>, <a class="code hl_variable" href="textures_8c.html#a73d3f21900cd6ad9270f81a7a9dbc4de">D_02002504</a>, <a class="code hl_variable" href="textures_8c.html#a6ad677b21da616dc87a415c3e2d1d7ec">D_0200252C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a8bd40f551a2bf30f0fb1581f72e4d17b">D_02002554</a>, <a class="code hl_variable" href="textures_8c.html#a8e105752b45c738352ae3a2d0ff309f4">D_0200257C</a>, <a class="code hl_variable" href="textures_8c.html#af93c685345db8c2fa84ef8552ccc4c8b">D_020025A4</a>, <a class="code hl_variable" href="textures_8c.html#a63e827fdc0043a135ac5ffe8a569691c">D_02004584</a>, <a class="code hl_variable" href="textures_8c.html#a4bde7ab41f9f10e68e2eacad3f849d1f">D_0200261C</a>, <a class="code hl_variable" href="textures_8c.html#abe469784534e444b1076e92d2236c491">D_02002694</a>, <a class="code hl_variable" href="textures_8c.html#aec60a487398447a959b24f5018749c99">D_020026BC</a>, <a class="code hl_variable" href="textures_8c.html#af097dc86eb636f5d1497538bba2f51b9">D_020026E4</a>, <a class="code hl_variable" href="textures_8c.html#abecd94592d509ab8f669fcfac99080f3">D_0200270C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a2e2221ad14c88beaf1d51667be48ea39">D_02002734</a>, <a class="code hl_variable" href="textures_8c.html#a33df32f06bc9e4b7302df3b04ca9a1ff">D_0200275C</a>, <a class="code hl_variable" href="textures_8c.html#a5fb159d433b9d8a56d2e1e0725ad31de">D_02002784</a>, <a class="code hl_variable" href="textures_8c.html#ada523d8c8d31b561f4673ad3778142e2">D_020027AC</a>, <a class="code hl_variable" href="textures_8c.html#a0b89656c7059f12df0088c0f3f60ebd4">D_020027D4</a>, <a class="code hl_variable" href="textures_8c.html#a4d6932b6b208a5bc7ec36bfdf1afe799">D_020027FC</a>, <a class="code hl_variable" href="textures_8c.html#acb41ae03cc64a778d623a755e722f7c9">D_020025CC</a>, <a class="code hl_variable" href="textures_8c.html#a08879feb3b6de78c2e75ad21c3981e82">D_02002644</a>, <a class="code hl_variable" href="textures_8c.html#a30f0845bb069024ea9b886a4370a22d8">D_020025F4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a0b15ee0d875cf42571ea82f75ded2e30">D_0200266C</a>, <a class="code hl_variable" href="textures_8c.html#afac089012b6e66022aaa296730d7b0e4">D_02004534</a>, <a class="code hl_variable" href="textures_8c.html#a63e827fdc0043a135ac5ffe8a569691c">D_02004584</a>, <a class="code hl_variable" href="textures_8c.html#a9402bf65d23ad7997b539c370623463d">D_02002824</a>, <a class="code hl_variable" href="textures_8c.html#a407c74519f6e88a01b7fe68c627dfaa9">D_0200284C</a>, <a class="code hl_variable" href="textures_8c.html#ae55bb2696e9224eaec1504e5f74c5e5f">D_02002874</a>, <a class="code hl_variable" href="textures_8c.html#a6061f063a865121ca9a2dd2012bf6d31">D_0200289C</a>, <a class="code hl_variable" href="textures_8c.html#ac5bbaaab53ae539e6f548c764d56e3f0">D_020028C4</a>, <a class="code hl_variable" href="textures_8c.html#aa4b2119aef891551b6fbdf1b6a4643fc">D_020028EC</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#aa4d8e7a6ad4de3fdc3bf8efbcc2f592a">D_02002F54</a>, <a class="code hl_variable" href="textures_8c.html#a085046cac81fb6306e7d95296f3e40f4">D_02002914</a>, <a class="code hl_variable" href="textures_8c.html#a0373c3ea72a4822cbc89a2b8051c736e">D_02002F7C</a>, <a class="code hl_variable" href="textures_8c.html#a619e2163afc69eeeae9281e92a89ed5c">D_0200293C</a>, <a class="code hl_variable" href="textures_8c.html#af627380ae29646f143a2f3bfe408bdf0">D_02002FA4</a>, <a class="code hl_variable" href="textures_8c.html#a5b5c3c02b2ad53fef75fec0dc269a5e9">D_02002964</a>, <a class="code hl_variable" href="textures_8c.html#af9254b7a15078281c16e5a8c1c96fa30">D_02002FCC</a>, <a class="code hl_variable" href="textures_8c.html#ac99d372398a6eba4a54ab89862056011">D_0200298C</a>, <a class="code hl_variable" href="textures_8c.html#ac98d22f62af810323892238d9ab04794">D_02002FF4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a252900498119e669ea20edf742dcf650">D_020029B4</a>, <a class="code hl_variable" href="textures_8c.html#a78965410f10ddde2d7e08bcc1214dafd">D_0200301C</a>, <a class="code hl_variable" href="textures_8c.html#a0472c59f4f338133d0c27eababa440cf">D_020029DC</a>, <a class="code hl_variable" href="textures_8c.html#a8790795fcdfd406ceffadd0a1c6021da">D_02003044</a>, <a class="code hl_variable" href="textures_8c.html#a007c011834c417b4f6016c446546cbe0">D_02002A04</a>, <a class="code hl_variable" href="textures_8c.html#ae7ceab722febeeb80392e6f68633a272">D_0200306C</a>, <a class="code hl_variable" href="textures_8c.html#a63f63ba30acc48ccd0d009b84efb33ea">D_02002A2C</a>, <a class="code hl_variable" href="textures_8c.html#aa4709ec99e53e81fed75120793ac6d6a">D_02003094</a>, <a class="code hl_variable" href="textures_8c.html#a5b83b165b32da6d675319412d0ddd912">D_02002A54</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a1a468a7a73ef3eea63f091d531201957">D_020030BC</a>, <a class="code hl_variable" href="textures_8c.html#a5eb20e6c3e724ea36732cb29e6c3c89b">D_02002A7C</a>, <a class="code hl_variable" href="textures_8c.html#ab290955f6921201063ceaf29f1824644">D_020030E4</a>, <a class="code hl_variable" href="textures_8c.html#a0321867665e1c5e4eeb0fb3b9bfa569c">D_02002AA4</a>, <a class="code hl_variable" href="textures_8c.html#a0cb308a7788561d162248b6e16bebf20">D_0200310C</a>, <a class="code hl_variable" href="textures_8c.html#aa122f70e626bb2f210c1a866ecaeefee">D_020033B4</a>, <a class="code hl_variable" href="textures_8c.html#a21ed7b2f2c179558215ce0875de3e933">D_02002ACC</a>, <a class="code hl_variable" href="textures_8c.html#af4bb5e175604f0c0aebfe9e9cb26626e">D_02003134</a>, <a class="code hl_variable" href="textures_8c.html#a6cd0b47054b27a747be921ed1d0fd3f7">D_02002AF4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#adbc76320d864d22b88b9ed4d3f5ba556">D_0200315C</a>, <a class="code hl_variable" href="textures_8c.html#a1088d10ad91d721a1e6b8cabe57eda5a">D_02002B1C</a>, <a class="code hl_variable" href="textures_8c.html#ae1719d313f08a641d3bd0e414b7456c3">D_02003184</a>, <a class="code hl_variable" href="textures_8c.html#a92355cfa5b3c1af169e9a1185f224fcc">D_02002B44</a>, <a class="code hl_variable" href="textures_8c.html#a4265f8f7284b74d2763060f7ec580299">D_02002B6C</a>, <a class="code hl_variable" href="textures_8c.html#ac0e3c1ab85c9402517543717a118cbe9">D_02002B94</a>, <a class="code hl_variable" href="textures_8c.html#ac8c27218cc6ca84c5870e6669368c11f">D_02002BBC</a>, <a class="code hl_variable" href="textures_8c.html#a20a37dd3d99b4b00fb133f8962bf5003">D_02002BE4</a>, <a class="code hl_variable" href="textures_8c.html#a687201b9c6e5d4b32597c7e899378074">D_02002C0C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#ad63e04a4dccccf9fc124ce67f0f4186a">D_020031AC</a>, <a class="code hl_variable" href="textures_8c.html#a153f4a30d45b3a82465167e8c7d09da0">D_02003274</a>, <a class="code hl_variable" href="textures_8c.html#a2aa55568ad9a90a2757706de8347b96a">D_02002C34</a>, <a class="code hl_variable" href="textures_8c.html#a524860002eb00c70d3aadd9b8df423f4">D_020031D4</a>, <a class="code hl_variable" href="textures_8c.html#a25b9846114027bab4a85c93d7efe0a4a">D_0200329C</a>, <a class="code hl_variable" href="textures_8c.html#ac90e5c6446404bba860e9064b2dae61b">D_02002C5C</a>, <a class="code hl_variable" href="textures_8c.html#acf058cb99cc0be69bdfa77c234bb25fb">D_020031FC</a>, <a class="code hl_variable" href="textures_8c.html#a1ae1ab5469bf42451511d1175820d603">D_020032C4</a>, <a class="code hl_variable" href="textures_8c.html#a06c7e56055b5bd08964024029e2e16ea">D_02002C84</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#ab8c0cda1aad8144a1e3dcb50394f1565">D_02003224</a>, <a class="code hl_variable" href="textures_8c.html#adbd679012a76d50d4ef60aaca9b134cc">D_020032EC</a>, <a class="code hl_variable" href="textures_8c.html#adb248583c1f081e31b9e1023d26d63c3">D_02002CAC</a>, <a class="code hl_variable" href="textures_8c.html#a3533fcd1026ef321cfd9ae802c524ae9">D_0200324C</a>, <a class="code hl_variable" href="textures_8c.html#acbec4fee64705ecce4fdd2aa11888fc7">D_02003314</a>, <a class="code hl_variable" href="textures_8c.html#a5a477c3e4c561d801a055c15940368ea">D_02002CD4</a>, <a class="code hl_variable" href="textures_8c.html#a6b286e035be341715af19c029268e991">D_02002CFC</a>, <a class="code hl_variable" href="textures_8c.html#a95eb0ffafcb19c1dfdc45e7ff8ec957a">D_02002D24</a>, <a class="code hl_variable" href="textures_8c.html#ab3ec5fbe00690064d75d7e85758f96b4">D_02002D4C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a5bce461a8404817720a8c4f19aa69d8d">D_02002D74</a>, <a class="code hl_variable" href="textures_8c.html#a3d24b788dcf0b115cfeb996d19b1c765">D_0200333C</a>, <a class="code hl_variable" href="textures_8c.html#ad9b4b711752c9be3c887ab9a82b02c91">D_02002D9C</a>, <a class="code hl_variable" href="textures_8c.html#a2a1c6f6c1a5dde7cd06a4214d84e4050">D_02003364</a>, <a class="code hl_variable" href="textures_8c.html#a18385986b27ee9767bed5d8c431e11c4">D_02002DC4</a>, <a class="code hl_variable" href="textures_8c.html#aeb29a5a65fb06f7654433d022ebdf06e">D_0200338C</a>, <a class="code hl_variable" href="textures_8c.html#a42d28431f00eebf97c45e5c96bd7cd1f">D_02002DEC</a>, <a class="code hl_variable" href="textures_8c.html#a0a98e319007bb1451a49d264e59517fe">D_02002E14</a>, <a class="code hl_variable" href="textures_8c.html#a7e536dcec0919c4894ad719722f50b06">D_02002E3C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#ad2540f0c134e4e7be1bd9288e623c218">D_02002E64</a>, <a class="code hl_variable" href="textures_8c.html#a735113a24c410c51accd10ecbeb7b2d1">D_02002E8C</a>, <a class="code hl_variable" href="textures_8c.html#af5a242c43e39e6603afbbf415854a3d1">D_02002EB4</a>, <a class="code hl_variable" href="textures_8c.html#abc5d73e6683013b0eaa12e478a3d6457">D_02002EDC</a>, <a class="code hl_variable" href="textures_8c.html#a5b1efcb734160dcb75a96a61fc4db3cb">D_02002F04</a>, <a class="code hl_variable" href="textures_8c.html#af0b159be2b6d07d22fa633b09c54580e">D_02002F2C</a>, <a class="code hl_variable" href="textures_8c.html#a698ebb924353c0c303e45998ced1800e">D_020033DC</a>, <a class="code hl_variable" href="textures_8c.html#a536f2a574454ee21e63c5844be8f3b45">D_02003404</a>, <a class="code hl_variable" href="textures_8c.html#a236d5213e69879c8898967effd606d9a">D_0200342C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a60eb77bb60366512bafabe6a5ce97beb">D_02003454</a>, <a class="code hl_variable" href="textures_8c.html#a6de4b0e82ef9936143450338f006de98">D_0200347C</a>, <a class="code hl_variable" href="textures_8c.html#a7b2fb901c06ce3cebfe83dc656630408">D_020034A4</a>, <a class="code hl_variable" href="textures_8c.html#a13df1d24103a237be06b2b321f5c6d91">D_020034CC</a>, <a class="code hl_variable" href="textures_8c.html#a300dd666c4bd3f10d9d48fe84f588c3d">D_020034F4</a>, <a class="code hl_variable" href="textures_8c.html#ab7627f0d3d323d48e0e6bbe9d6191b57">D_0200351C</a>, <a class="code hl_variable" href="textures_8c.html#a35dc3d6d268cb8a7ead3a4a9c8c2deab">D_02003544</a>, <a class="code hl_variable" href="textures_8c.html#a4d259dc342d894ef7b28b457c90e6035">D_0200356C</a>, <a class="code hl_variable" href="textures_8c.html#a08cd0300c67fb6e5ba495c9c44b2b5fe">D_02003BD4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#addfc1cb8063c70ea9e4defd27b172758">D_02003594</a>, <a class="code hl_variable" href="textures_8c.html#a93fd2e7597178c6e62fd3c32f636e69d">D_02003BFC</a>, <a class="code hl_variable" href="textures_8c.html#aa0ee02b4cc2011d337040e16affd4d7d">D_020035BC</a>, <a class="code hl_variable" href="textures_8c.html#a173d4bcb749b612befba205b4f1fd373">D_02003C24</a>, <a class="code hl_variable" href="textures_8c.html#acb126b9ba4498259d90fd8731327eacf">D_020035E4</a>, <a class="code hl_variable" href="textures_8c.html#adf852ba895eb5965bb35f5f64b68faf1">D_02003C4C</a>, <a class="code hl_variable" href="textures_8c.html#a313434a65ad044370052773dca4733e5">D_0200360C</a>, <a class="code hl_variable" href="textures_8c.html#af17eaae50fe51aa1d65152438a90d1ba">D_02003C74</a>, <a class="code hl_variable" href="textures_8c.html#ac0ef21a3f568f01788d5428436179966">D_02003634</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a12532f8cff4653e98ebb32f88aab87cc">D_02003C9C</a>, <a class="code hl_variable" href="textures_8c.html#a77590021542b0d698c1ced5812783bff">D_0200365C</a>, <a class="code hl_variable" href="textures_8c.html#a4ebd17e47b1b4c73bfd4c5fc5afc0fac">D_02003CC4</a>, <a class="code hl_variable" href="textures_8c.html#a35b803dbf6b6431db9515c96daea24ce">D_02003684</a>, <a class="code hl_variable" href="textures_8c.html#a0df9a22b4c880f155ec2a491b0fef9c4">D_02003CEC</a>, <a class="code hl_variable" href="textures_8c.html#a6e6f4c7977e2262759fd40fe572663b7">D_020036AC</a>, <a class="code hl_variable" href="textures_8c.html#a35929545f79846eed002358304f4d524">D_02003D14</a>, <a class="code hl_variable" href="textures_8c.html#abe4737130a4185202b4b6ea78fb14338">D_020036D4</a>, <a class="code hl_variable" href="textures_8c.html#adde0752133605c256d7e4b20fb46baae">D_02003D3C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a588e112df5d26480e4bf50ccdb2aa3e0">D_020036FC</a>, <a class="code hl_variable" href="textures_8c.html#a797a722d881efacd9441c3d8b9d52633">D_02003D64</a>, <a class="code hl_variable" href="textures_8c.html#af2ffa7e21b32df198f55f0d0320acbec">D_02003724</a>, <a class="code hl_variable" href="textures_8c.html#a817c58a8d27a2451f342ae38e35ea099">D_02003D8C</a>, <a class="code hl_variable" href="textures_8c.html#a0474709b7e442e0209557b166523bb46">D_02004034</a>, <a class="code hl_variable" href="textures_8c.html#aa761d86cb80731b8fc72907b458b2122">D_0200374C</a>, <a class="code hl_variable" href="textures_8c.html#ab67e0d14ebf496e2555ae3bbb848a61e">D_02003DB4</a>, <a class="code hl_variable" href="textures_8c.html#a459bd1b5b9e81b4eb5cb8cce21e07938">D_02003774</a>, <a class="code hl_variable" href="textures_8c.html#abe6c72ca5ae8ab0964234600520d4300">D_02003DDC</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#ada2ae28667bc3b927381d0677a1a1565">D_0200379C</a>, <a class="code hl_variable" href="textures_8c.html#a44910038cba33582ce0ce48a5c0e6bf4">D_02003E04</a>, <a class="code hl_variable" href="textures_8c.html#a4dff93d324c61df4e8c5ef71b7068b73">D_020037C4</a>, <a class="code hl_variable" href="textures_8c.html#af463391d23200b0cae69cbbe1452035b">D_020037EC</a>, <a class="code hl_variable" href="textures_8c.html#a9795634d08c4d48fc48ac2977448f198">D_02003814</a>, <a class="code hl_variable" href="textures_8c.html#aea45bc274dd9b8c313e7c272d5f74e72">D_0200383C</a>, <a class="code hl_variable" href="textures_8c.html#a1a0695a3f40002ab65a13a404286314d">D_02003864</a>, <a class="code hl_variable" href="textures_8c.html#ad257ad3c3cd31a52546ed71fdfd291bc">D_0200388C</a>, <a class="code hl_variable" href="textures_8c.html#aae026c1880d09133daa0dc6cbc7fc957">D_02003E2C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a85265806383ad0e582807f9f4700c0fb">D_02003EF4</a>, <a class="code hl_variable" href="textures_8c.html#af40c0ca48189125bfeac5b0611024eb9">D_020038B4</a>, <a class="code hl_variable" href="textures_8c.html#abb5071bb0336309b57706ca49238e267">D_02003E54</a>, <a class="code hl_variable" href="textures_8c.html#ad9160a5e2a0025bb166171454503a356">D_02003F1C</a>, <a class="code hl_variable" href="textures_8c.html#a4f6cf12ae63e45c1cea516d1a25a9416">D_020038DC</a>, <a class="code hl_variable" href="textures_8c.html#a2b302e2a419dd9ed6345c47841d2bae9">D_02003E7C</a>, <a class="code hl_variable" href="textures_8c.html#abb48ec977ae985f195c1f78afcb813f1">D_02003F44</a>, <a class="code hl_variable" href="textures_8c.html#ad29dd6284eeec1f555bbfa65764cfafe">D_02003904</a>, <a class="code hl_variable" href="textures_8c.html#abb9c7782a24c9902c98a553f282d578c">D_02003EA4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a46661db6a61eec19af5cb7c6af7911c4">D_02003F6C</a>, <a class="code hl_variable" href="textures_8c.html#a37ad652e60447ecfab677f338a34b1ed">D_0200392C</a>, <a class="code hl_variable" href="textures_8c.html#a58572207c69810a5ba6a23bb36d4c10f">D_02003ECC</a>, <a class="code hl_variable" href="textures_8c.html#ad8ba99e1b6a302bb3795d174b7083543">D_02003F94</a>, <a class="code hl_variable" href="textures_8c.html#a2ee2f641bf7dedb02513ce550d99f83d">D_02003954</a>, <a class="code hl_variable" href="textures_8c.html#a654c1ca888ede0da8f0a4cd7c8269de5">D_0200397C</a>, <a class="code hl_variable" href="textures_8c.html#a60f183c0dd64edc6655e62033414f2ed">D_020039A4</a>, <a class="code hl_variable" href="textures_8c.html#ad56c068aa1fada4e7034ad46a4e61b65">D_020039CC</a>, <a class="code hl_variable" href="textures_8c.html#a2684a5e06fbc52ca8bc38c26a5fdcffa">D_020039F4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a9cb77fcad992de853b9ad90cb09734a1">D_02003FBC</a>, <a class="code hl_variable" href="textures_8c.html#ad2bfd4fe9e3efd81151ba88a2be635dd">D_02003A1C</a>, <a class="code hl_variable" href="textures_8c.html#adb5e0a37cddbab9dd01e9b8e71e6dda7">D_02003FE4</a>, <a class="code hl_variable" href="textures_8c.html#a731ece480e4f0670ba43cb3e05e0d133">D_02003A44</a>, <a class="code hl_variable" href="textures_8c.html#a8a491da9784ab21060071720f6a9ba63">D_0200400C</a>, <a class="code hl_variable" href="textures_8c.html#ab32b1d2db0867013d6a03914109fda31">D_02003A6C</a>, <a class="code hl_variable" href="textures_8c.html#ace22bfe09283f78390fcd8a8fb1fcaa4">D_02003A94</a>, <a class="code hl_variable" href="textures_8c.html#a98d2cf41f4986cc88f3dc5c2274be8f1">D_02003ABC</a>, <a class="code hl_variable" href="textures_8c.html#afa7425861a4d1191fac67c8fca4f9a58">D_02003AE4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a6f52cf45e6b7f1f578f004ddeb78a695">D_02003B0C</a>, <a class="code hl_variable" href="textures_8c.html#a50d5d7314e5ec084a128f739ad2d44f7">D_02003B34</a>, <a class="code hl_variable" href="textures_8c.html#a40ac92bce767849b1e7badc790208669">D_02003B5C</a>, <a class="code hl_variable" href="textures_8c.html#a1e2830d548102983c0f40562476a7711">D_02003B84</a>, <a class="code hl_variable" href="textures_8c.html#a8d56507507d035c972eeb629d5c87530">D_02003BAC</a>, <a class="code hl_variable" href="textures_8c.html#aec0ebfe3cae8f92ff778a58c184d777c">D_0200405C</a>, <a class="code hl_variable" href="textures_8c.html#a88aad6ac0170738727d9cadf8e6587c9">D_02004084</a>, <a class="code hl_variable" href="textures_8c.html#a3f01202bf12e8e28a148b16193f0a13f">D_020040AC</a>, <a class="code hl_variable" href="textures_8c.html#a8eb0f0a76c13a434e257c247772309e0">D_020040D4</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a2d6b105c82a89a024d4c29c3210bc58c">D_020040FC</a>, <a class="code hl_variable" href="textures_8c.html#a9ce376c0aabed1c40c0d66c29ece6237">D_020043CC</a>, <a class="code hl_variable" href="textures_8c.html#adb947fb47d7e967eb8b014666621c098">D_02004444</a>, <a class="code hl_variable" href="textures_8c.html#a32484b45004e5cdb655ec59b5f883926">D_0200437C</a>, <a class="code hl_variable" href="textures_8c.html#a170b9049836ed32ca675070518bcb41c">D_020043F4</a>, <a class="code hl_variable" href="textures_8c.html#a1c2eea1d3854585d55aa89f2ce78d456">D_02004124</a>, <a class="code hl_variable" href="textures_8c.html#a4ab34679b4ab246aa5d165711f4ba41b">D_0200414C</a>, <a class="code hl_variable" href="textures_8c.html#ad00ff8d111e49a026201badf75f0fce3">D_02004174</a>, <a class="code hl_variable" href="textures_8c.html#a83e9809ba272a6b314f463f9230ae46e">D_0200419C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a230f1faac518c86a969a29703b2dc605">D_020041C4</a>, <a class="code hl_variable" href="textures_8c.html#aa91597c8b53b950e4a6846dad52600ce">D_020041EC</a>, <a class="code hl_variable" href="textures_8c.html#a25ab1c92dd2ad5d257ccb79078fd00ec">D_02004214</a>, <a class="code hl_variable" href="textures_8c.html#a29a07016d0222cc57bd2f0752e71d8f8">D_0200423C</a>, <a class="code hl_variable" href="textures_8c.html#a5585b48f02271211d19f207793adbc2c">D_02004264</a>, <a class="code hl_variable" href="textures_8c.html#a4d1b9318dbeda00cd93d147ac7d764e6">D_0200428C</a>, <a class="code hl_variable" href="textures_8c.html#a09bc5e3a11ffff9bb8b28d70c27bd1cc">D_020042B4</a>, <a class="code hl_variable" href="textures_8c.html#a6c7ffb249a81d7f607fa05899f896976">D_020042DC</a>, <a class="code hl_variable" href="textures_8c.html#a4e548ed1b1c6198d58128ac5522f8115">D_02004354</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#a51c59640c257e64d458c5cb780f435d4">D_020043A4</a>, <a class="code hl_variable" href="textures_8c.html#ac42b51c951d07a928324d6677bc38ece">D_0200441C</a>, <a class="code hl_variable" href="textures_8c.html#a105c331329a016543bcc8d0b73e37f76">D_0200446C</a>, <a class="code hl_variable" href="textures_8c.html#a7da68641247803d864edeab46882cd19">D_02004494</a>, <a class="code hl_variable" href="textures_8c.html#a82a986128a77233fb75755bd11508585">D_020044BC</a>, <a class="code hl_variable" href="textures_8c.html#a5372d95d6824d5c2871fac7d4cea26b5">D_02004304</a>, <a class="code hl_variable" href="textures_8c.html#ac949bd27c13a697d0ef10303c3a45bd4">D_0200432C</a>, <a class="code hl_variable" href="textures_8c.html#a7d506bfffca3cdec3f8fff0a243684f2">D_020044E4</a>, <a class="code hl_variable" href="textures_8c.html#a0b204a7c731b9397e9c8bcdb5fe6e238">D_0200450C</a>,</div>
-<div class="line">    <a class="code hl_variable" href="textures_8c.html#afac089012b6e66022aaa296730d7b0e4">D_02004534</a>, <a class="code hl_variable" href="textures_8c.html#ab8e90913ba0d3c546490354bf85d5b17">D_0200455C</a>,</div>
-<div class="line">}</div>
-<div class="ttc" id="atextures_8c_html_a007c011834c417b4f6016c446546cbe0"><div class="ttname"><a href="textures_8c.html#a007c011834c417b4f6016c446546cbe0">D_02002A04</a></div><div class="ttdeci">MenuTexture D_02002A04[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2564</div></div>
-<div class="ttc" id="atextures_8c_html_a0321867665e1c5e4eeb0fb3b9bfa569c"><div class="ttname"><a href="textures_8c.html#a0321867665e1c5e4eeb0fb3b9bfa569c">D_02002AA4</a></div><div class="ttdeci">MenuTexture D_02002AA4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2600</div></div>
-<div class="ttc" id="atextures_8c_html_a0373c3ea72a4822cbc89a2b8051c736e"><div class="ttname"><a href="textures_8c.html#a0373c3ea72a4822cbc89a2b8051c736e">D_02002F7C</a></div><div class="ttdeci">MenuTexture D_02002F7C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2879</div></div>
-<div class="ttc" id="atextures_8c_html_a0472c59f4f338133d0c27eababa440cf"><div class="ttname"><a href="textures_8c.html#a0472c59f4f338133d0c27eababa440cf">D_020029DC</a></div><div class="ttdeci">MenuTexture D_020029DC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2555</div></div>
-<div class="ttc" id="atextures_8c_html_a0474709b7e442e0209557b166523bb46"><div class="ttname"><a href="textures_8c.html#a0474709b7e442e0209557b166523bb46">D_02004034</a></div><div class="ttdeci">MenuTexture D_02004034[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3842</div></div>
-<div class="ttc" id="atextures_8c_html_a068586a794522678c2d9a29ef4646ec6"><div class="ttname"><a href="textures_8c.html#a068586a794522678c2d9a29ef4646ec6">D_0200216C</a></div><div class="ttdeci">MenuTexture D_0200216C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2069</div></div>
-<div class="ttc" id="atextures_8c_html_a06c7e56055b5bd08964024029e2e16ea"><div class="ttname"><a href="textures_8c.html#a06c7e56055b5bd08964024029e2e16ea">D_02002C84</a></div><div class="ttdeci">MenuTexture D_02002C84[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2708</div></div>
-<div class="ttc" id="atextures_8c_html_a085046cac81fb6306e7d95296f3e40f4"><div class="ttname"><a href="textures_8c.html#a085046cac81fb6306e7d95296f3e40f4">D_02002914</a></div><div class="ttdeci">MenuTexture D_02002914[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2510</div></div>
-<div class="ttc" id="atextures_8c_html_a08879feb3b6de78c2e75ad21c3981e82"><div class="ttname"><a href="textures_8c.html#a08879feb3b6de78c2e75ad21c3981e82">D_02002644</a></div><div class="ttdeci">MenuTexture D_02002644[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2348</div></div>
-<div class="ttc" id="atextures_8c_html_a08cd0300c67fb6e5ba495c9c44b2b5fe"><div class="ttname"><a href="textures_8c.html#a08cd0300c67fb6e5ba495c9c44b2b5fe">D_02003BD4</a></div><div class="ttdeci">MenuTexture D_02003BD4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3590</div></div>
-<div class="ttc" id="atextures_8c_html_a09bc5e3a11ffff9bb8b28d70c27bd1cc"><div class="ttname"><a href="textures_8c.html#a09bc5e3a11ffff9bb8b28d70c27bd1cc">D_020042B4</a></div><div class="ttdeci">MenuTexture D_020042B4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3986</div></div>
-<div class="ttc" id="atextures_8c_html_a0a98e319007bb1451a49d264e59517fe"><div class="ttname"><a href="textures_8c.html#a0a98e319007bb1451a49d264e59517fe">D_02002E14</a></div><div class="ttdeci">MenuTexture D_02002E14[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2798</div></div>
-<div class="ttc" id="atextures_8c_html_a0b15ee0d875cf42571ea82f75ded2e30"><div class="ttname"><a href="textures_8c.html#a0b15ee0d875cf42571ea82f75ded2e30">D_0200266C</a></div><div class="ttdeci">MenuTexture D_0200266C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2357</div></div>
-<div class="ttc" id="atextures_8c_html_a0b204a7c731b9397e9c8bcdb5fe6e238"><div class="ttname"><a href="textures_8c.html#a0b204a7c731b9397e9c8bcdb5fe6e238">D_0200450C</a></div><div class="ttdeci">MenuTexture D_0200450C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4121</div></div>
-<div class="ttc" id="atextures_8c_html_a0b89656c7059f12df0088c0f3f60ebd4"><div class="ttname"><a href="textures_8c.html#a0b89656c7059f12df0088c0f3f60ebd4">D_020027D4</a></div><div class="ttdeci">MenuTexture D_020027D4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2438</div></div>
-<div class="ttc" id="atextures_8c_html_a0cb308a7788561d162248b6e16bebf20"><div class="ttname"><a href="textures_8c.html#a0cb308a7788561d162248b6e16bebf20">D_0200310C</a></div><div class="ttdeci">MenuTexture D_0200310C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2969</div></div>
-<div class="ttc" id="atextures_8c_html_a0df9a22b4c880f155ec2a491b0fef9c4"><div class="ttname"><a href="textures_8c.html#a0df9a22b4c880f155ec2a491b0fef9c4">D_02003CEC</a></div><div class="ttdeci">MenuTexture D_02003CEC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3653</div></div>
-<div class="ttc" id="atextures_8c_html_a105c331329a016543bcc8d0b73e37f76"><div class="ttname"><a href="textures_8c.html#a105c331329a016543bcc8d0b73e37f76">D_0200446C</a></div><div class="ttdeci">MenuTexture D_0200446C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4085</div></div>
-<div class="ttc" id="atextures_8c_html_a1088d10ad91d721a1e6b8cabe57eda5a"><div class="ttname"><a href="textures_8c.html#a1088d10ad91d721a1e6b8cabe57eda5a">D_02002B1C</a></div><div class="ttdeci">MenuTexture D_02002B1C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2627</div></div>
-<div class="ttc" id="atextures_8c_html_a12532f8cff4653e98ebb32f88aab87cc"><div class="ttname"><a href="textures_8c.html#a12532f8cff4653e98ebb32f88aab87cc">D_02003C9C</a></div><div class="ttdeci">MenuTexture D_02003C9C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3635</div></div>
-<div class="ttc" id="atextures_8c_html_a13df1d24103a237be06b2b321f5c6d91"><div class="ttname"><a href="textures_8c.html#a13df1d24103a237be06b2b321f5c6d91">D_020034CC</a></div><div class="ttdeci">MenuTexture D_020034CC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3185</div></div>
-<div class="ttc" id="atextures_8c_html_a153f4a30d45b3a82465167e8c7d09da0"><div class="ttname"><a href="textures_8c.html#a153f4a30d45b3a82465167e8c7d09da0">D_02003274</a></div><div class="ttdeci">MenuTexture D_02003274[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3050</div></div>
-<div class="ttc" id="atextures_8c_html_a170b9049836ed32ca675070518bcb41c"><div class="ttname"><a href="textures_8c.html#a170b9049836ed32ca675070518bcb41c">D_020043F4</a></div><div class="ttdeci">MenuTexture D_020043F4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4058</div></div>
-<div class="ttc" id="atextures_8c_html_a173d4bcb749b612befba205b4f1fd373"><div class="ttname"><a href="textures_8c.html#a173d4bcb749b612befba205b4f1fd373">D_02003C24</a></div><div class="ttdeci">MenuTexture D_02003C24[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3608</div></div>
-<div class="ttc" id="atextures_8c_html_a18385986b27ee9767bed5d8c431e11c4"><div class="ttname"><a href="textures_8c.html#a18385986b27ee9767bed5d8c431e11c4">D_02002DC4</a></div><div class="ttdeci">MenuTexture D_02002DC4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2780</div></div>
-<div class="ttc" id="atextures_8c_html_a1a0695a3f40002ab65a13a404286314d"><div class="ttname"><a href="textures_8c.html#a1a0695a3f40002ab65a13a404286314d">D_02003864</a></div><div class="ttdeci">MenuTexture D_02003864[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3392</div></div>
-<div class="ttc" id="atextures_8c_html_a1a468a7a73ef3eea63f091d531201957"><div class="ttname"><a href="textures_8c.html#a1a468a7a73ef3eea63f091d531201957">D_020030BC</a></div><div class="ttdeci">MenuTexture D_020030BC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2951</div></div>
-<div class="ttc" id="atextures_8c_html_a1ae1ab5469bf42451511d1175820d603"><div class="ttname"><a href="textures_8c.html#a1ae1ab5469bf42451511d1175820d603">D_020032C4</a></div><div class="ttdeci">MenuTexture D_020032C4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3068</div></div>
-<div class="ttc" id="atextures_8c_html_a1c2eea1d3854585d55aa89f2ce78d456"><div class="ttname"><a href="textures_8c.html#a1c2eea1d3854585d55aa89f2ce78d456">D_02004124</a></div><div class="ttdeci">MenuTexture D_02004124[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3896</div></div>
-<div class="ttc" id="atextures_8c_html_a1e2830d548102983c0f40562476a7711"><div class="ttname"><a href="textures_8c.html#a1e2830d548102983c0f40562476a7711">D_02003B84</a></div><div class="ttdeci">MenuTexture D_02003B84[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3572</div></div>
-<div class="ttc" id="atextures_8c_html_a20a37dd3d99b4b00fb133f8962bf5003"><div class="ttname"><a href="textures_8c.html#a20a37dd3d99b4b00fb133f8962bf5003">D_02002BE4</a></div><div class="ttdeci">MenuTexture D_02002BE4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2672</div></div>
-<div class="ttc" id="atextures_8c_html_a215a63fc169352ddbbb1a8f27986488b"><div class="ttname"><a href="textures_8c.html#a215a63fc169352ddbbb1a8f27986488b">D_020023C4</a></div><div class="ttdeci">MenuTexture D_020023C4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2204</div></div>
-<div class="ttc" id="atextures_8c_html_a21ed7b2f2c179558215ce0875de3e933"><div class="ttname"><a href="textures_8c.html#a21ed7b2f2c179558215ce0875de3e933">D_02002ACC</a></div><div class="ttdeci">MenuTexture D_02002ACC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2609</div></div>
-<div class="ttc" id="atextures_8c_html_a230f1faac518c86a969a29703b2dc605"><div class="ttname"><a href="textures_8c.html#a230f1faac518c86a969a29703b2dc605">D_020041C4</a></div><div class="ttdeci">MenuTexture D_020041C4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3932</div></div>
-<div class="ttc" id="atextures_8c_html_a236d5213e69879c8898967effd606d9a"><div class="ttname"><a href="textures_8c.html#a236d5213e69879c8898967effd606d9a">D_0200342C</a></div><div class="ttdeci">MenuTexture D_0200342C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3149</div></div>
-<div class="ttc" id="atextures_8c_html_a252900498119e669ea20edf742dcf650"><div class="ttname"><a href="textures_8c.html#a252900498119e669ea20edf742dcf650">D_020029B4</a></div><div class="ttdeci">MenuTexture D_020029B4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2546</div></div>
-<div class="ttc" id="atextures_8c_html_a25ab1c92dd2ad5d257ccb79078fd00ec"><div class="ttname"><a href="textures_8c.html#a25ab1c92dd2ad5d257ccb79078fd00ec">D_02004214</a></div><div class="ttdeci">MenuTexture D_02004214[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3950</div></div>
-<div class="ttc" id="atextures_8c_html_a25b9846114027bab4a85c93d7efe0a4a"><div class="ttname"><a href="textures_8c.html#a25b9846114027bab4a85c93d7efe0a4a">D_0200329C</a></div><div class="ttdeci">MenuTexture D_0200329C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3059</div></div>
-<div class="ttc" id="atextures_8c_html_a2684a5e06fbc52ca8bc38c26a5fdcffa"><div class="ttname"><a href="textures_8c.html#a2684a5e06fbc52ca8bc38c26a5fdcffa">D_020039F4</a></div><div class="ttdeci">MenuTexture D_020039F4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3482</div></div>
-<div class="ttc" id="atextures_8c_html_a29a07016d0222cc57bd2f0752e71d8f8"><div class="ttname"><a href="textures_8c.html#a29a07016d0222cc57bd2f0752e71d8f8">D_0200423C</a></div><div class="ttdeci">MenuTexture D_0200423C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3959</div></div>
-<div class="ttc" id="atextures_8c_html_a2a1c6f6c1a5dde7cd06a4214d84e4050"><div class="ttname"><a href="textures_8c.html#a2a1c6f6c1a5dde7cd06a4214d84e4050">D_02003364</a></div><div class="ttdeci">MenuTexture D_02003364[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3104</div></div>
-<div class="ttc" id="atextures_8c_html_a2aa55568ad9a90a2757706de8347b96a"><div class="ttname"><a href="textures_8c.html#a2aa55568ad9a90a2757706de8347b96a">D_02002C34</a></div><div class="ttdeci">MenuTexture D_02002C34[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2690</div></div>
-<div class="ttc" id="atextures_8c_html_a2b302e2a419dd9ed6345c47841d2bae9"><div class="ttname"><a href="textures_8c.html#a2b302e2a419dd9ed6345c47841d2bae9">D_02003E7C</a></div><div class="ttdeci">MenuTexture D_02003E7C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3743</div></div>
-<div class="ttc" id="atextures_8c_html_a2c6aa6902560064b707dd5990a39df06"><div class="ttname"><a href="textures_8c.html#a2c6aa6902560064b707dd5990a39df06">D_020023EC</a></div><div class="ttdeci">MenuTexture D_020023EC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2213</div></div>
-<div class="ttc" id="atextures_8c_html_a2d3b29b7737247a1d807f6985148fb09"><div class="ttname"><a href="textures_8c.html#a2d3b29b7737247a1d807f6985148fb09">D_0200211C</a></div><div class="ttdeci">MenuTexture D_0200211C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2051</div></div>
-<div class="ttc" id="atextures_8c_html_a2d6b105c82a89a024d4c29c3210bc58c"><div class="ttname"><a href="textures_8c.html#a2d6b105c82a89a024d4c29c3210bc58c">D_020040FC</a></div><div class="ttdeci">MenuTexture D_020040FC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3887</div></div>
-<div class="ttc" id="atextures_8c_html_a2e2221ad14c88beaf1d51667be48ea39"><div class="ttname"><a href="textures_8c.html#a2e2221ad14c88beaf1d51667be48ea39">D_02002734</a></div><div class="ttdeci">MenuTexture D_02002734[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2402</div></div>
-<div class="ttc" id="atextures_8c_html_a2ee2f641bf7dedb02513ce550d99f83d"><div class="ttname"><a href="textures_8c.html#a2ee2f641bf7dedb02513ce550d99f83d">D_02003954</a></div><div class="ttdeci">MenuTexture D_02003954[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3446</div></div>
-<div class="ttc" id="atextures_8c_html_a300dd666c4bd3f10d9d48fe84f588c3d"><div class="ttname"><a href="textures_8c.html#a300dd666c4bd3f10d9d48fe84f588c3d">D_020034F4</a></div><div class="ttdeci">MenuTexture D_020034F4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3194</div></div>
-<div class="ttc" id="atextures_8c_html_a30f0845bb069024ea9b886a4370a22d8"><div class="ttname"><a href="textures_8c.html#a30f0845bb069024ea9b886a4370a22d8">D_020025F4</a></div><div class="ttdeci">MenuTexture D_020025F4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2330</div></div>
-<div class="ttc" id="atextures_8c_html_a313434a65ad044370052773dca4733e5"><div class="ttname"><a href="textures_8c.html#a313434a65ad044370052773dca4733e5">D_0200360C</a></div><div class="ttdeci">MenuTexture D_0200360C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3257</div></div>
-<div class="ttc" id="atextures_8c_html_a32484b45004e5cdb655ec59b5f883926"><div class="ttname"><a href="textures_8c.html#a32484b45004e5cdb655ec59b5f883926">D_0200437C</a></div><div class="ttdeci">MenuTexture D_0200437C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4031</div></div>
-<div class="ttc" id="atextures_8c_html_a33df32f06bc9e4b7302df3b04ca9a1ff"><div class="ttname"><a href="textures_8c.html#a33df32f06bc9e4b7302df3b04ca9a1ff">D_0200275C</a></div><div class="ttdeci">MenuTexture D_0200275C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2411</div></div>
-<div class="ttc" id="atextures_8c_html_a3533fcd1026ef321cfd9ae802c524ae9"><div class="ttname"><a href="textures_8c.html#a3533fcd1026ef321cfd9ae802c524ae9">D_0200324C</a></div><div class="ttdeci">MenuTexture D_0200324C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3041</div></div>
-<div class="ttc" id="atextures_8c_html_a35929545f79846eed002358304f4d524"><div class="ttname"><a href="textures_8c.html#a35929545f79846eed002358304f4d524">D_02003D14</a></div><div class="ttdeci">MenuTexture D_02003D14[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3662</div></div>
-<div class="ttc" id="atextures_8c_html_a35b803dbf6b6431db9515c96daea24ce"><div class="ttname"><a href="textures_8c.html#a35b803dbf6b6431db9515c96daea24ce">D_02003684</a></div><div class="ttdeci">MenuTexture D_02003684[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3284</div></div>
-<div class="ttc" id="atextures_8c_html_a35dc3d6d268cb8a7ead3a4a9c8c2deab"><div class="ttname"><a href="textures_8c.html#a35dc3d6d268cb8a7ead3a4a9c8c2deab">D_02003544</a></div><div class="ttdeci">MenuTexture D_02003544[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3212</div></div>
-<div class="ttc" id="atextures_8c_html_a37ad652e60447ecfab677f338a34b1ed"><div class="ttname"><a href="textures_8c.html#a37ad652e60447ecfab677f338a34b1ed">D_0200392C</a></div><div class="ttdeci">MenuTexture D_0200392C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3437</div></div>
-<div class="ttc" id="atextures_8c_html_a3d24b788dcf0b115cfeb996d19b1c765"><div class="ttname"><a href="textures_8c.html#a3d24b788dcf0b115cfeb996d19b1c765">D_0200333C</a></div><div class="ttdeci">MenuTexture D_0200333C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3095</div></div>
-<div class="ttc" id="atextures_8c_html_a3f01202bf12e8e28a148b16193f0a13f"><div class="ttname"><a href="textures_8c.html#a3f01202bf12e8e28a148b16193f0a13f">D_020040AC</a></div><div class="ttdeci">MenuTexture D_020040AC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3869</div></div>
-<div class="ttc" id="atextures_8c_html_a407c74519f6e88a01b7fe68c627dfaa9"><div class="ttname"><a href="textures_8c.html#a407c74519f6e88a01b7fe68c627dfaa9">D_0200284C</a></div><div class="ttdeci">MenuTexture D_0200284C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2465</div></div>
-<div class="ttc" id="atextures_8c_html_a40ac92bce767849b1e7badc790208669"><div class="ttname"><a href="textures_8c.html#a40ac92bce767849b1e7badc790208669">D_02003B5C</a></div><div class="ttdeci">MenuTexture D_02003B5C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3563</div></div>
-<div class="ttc" id="atextures_8c_html_a4265f8f7284b74d2763060f7ec580299"><div class="ttname"><a href="textures_8c.html#a4265f8f7284b74d2763060f7ec580299">D_02002B6C</a></div><div class="ttdeci">MenuTexture D_02002B6C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2645</div></div>
-<div class="ttc" id="atextures_8c_html_a42d28431f00eebf97c45e5c96bd7cd1f"><div class="ttname"><a href="textures_8c.html#a42d28431f00eebf97c45e5c96bd7cd1f">D_02002DEC</a></div><div class="ttdeci">MenuTexture D_02002DEC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2789</div></div>
-<div class="ttc" id="atextures_8c_html_a44910038cba33582ce0ce48a5c0e6bf4"><div class="ttname"><a href="textures_8c.html#a44910038cba33582ce0ce48a5c0e6bf4">D_02003E04</a></div><div class="ttdeci">MenuTexture D_02003E04[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3716</div></div>
-<div class="ttc" id="atextures_8c_html_a459bd1b5b9e81b4eb5cb8cce21e07938"><div class="ttname"><a href="textures_8c.html#a459bd1b5b9e81b4eb5cb8cce21e07938">D_02003774</a></div><div class="ttdeci">MenuTexture D_02003774[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3338</div></div>
-<div class="ttc" id="atextures_8c_html_a46661db6a61eec19af5cb7c6af7911c4"><div class="ttname"><a href="textures_8c.html#a46661db6a61eec19af5cb7c6af7911c4">D_02003F6C</a></div><div class="ttdeci">MenuTexture D_02003F6C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3797</div></div>
-<div class="ttc" id="atextures_8c_html_a479d5747ea6bf9468428ce7baed64da0"><div class="ttname"><a href="textures_8c.html#a479d5747ea6bf9468428ce7baed64da0">D_02002324</a></div><div class="ttdeci">MenuTexture D_02002324[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2168</div></div>
-<div class="ttc" id="atextures_8c_html_a4ab34679b4ab246aa5d165711f4ba41b"><div class="ttname"><a href="textures_8c.html#a4ab34679b4ab246aa5d165711f4ba41b">D_0200414C</a></div><div class="ttdeci">MenuTexture D_0200414C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3905</div></div>
-<div class="ttc" id="atextures_8c_html_a4bde7ab41f9f10e68e2eacad3f849d1f"><div class="ttname"><a href="textures_8c.html#a4bde7ab41f9f10e68e2eacad3f849d1f">D_0200261C</a></div><div class="ttdeci">MenuTexture D_0200261C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2339</div></div>
-<div class="ttc" id="atextures_8c_html_a4d1b9318dbeda00cd93d147ac7d764e6"><div class="ttname"><a href="textures_8c.html#a4d1b9318dbeda00cd93d147ac7d764e6">D_0200428C</a></div><div class="ttdeci">MenuTexture D_0200428C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3977</div></div>
-<div class="ttc" id="atextures_8c_html_a4d259dc342d894ef7b28b457c90e6035"><div class="ttname"><a href="textures_8c.html#a4d259dc342d894ef7b28b457c90e6035">D_0200356C</a></div><div class="ttdeci">MenuTexture D_0200356C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3221</div></div>
-<div class="ttc" id="atextures_8c_html_a4d6932b6b208a5bc7ec36bfdf1afe799"><div class="ttname"><a href="textures_8c.html#a4d6932b6b208a5bc7ec36bfdf1afe799">D_020027FC</a></div><div class="ttdeci">MenuTexture D_020027FC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2447</div></div>
-<div class="ttc" id="atextures_8c_html_a4dff93d324c61df4e8c5ef71b7068b73"><div class="ttname"><a href="textures_8c.html#a4dff93d324c61df4e8c5ef71b7068b73">D_020037C4</a></div><div class="ttdeci">MenuTexture D_020037C4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3356</div></div>
-<div class="ttc" id="atextures_8c_html_a4e548ed1b1c6198d58128ac5522f8115"><div class="ttname"><a href="textures_8c.html#a4e548ed1b1c6198d58128ac5522f8115">D_02004354</a></div><div class="ttdeci">MenuTexture D_02004354[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4022</div></div>
-<div class="ttc" id="atextures_8c_html_a4ebd17e47b1b4c73bfd4c5fc5afc0fac"><div class="ttname"><a href="textures_8c.html#a4ebd17e47b1b4c73bfd4c5fc5afc0fac">D_02003CC4</a></div><div class="ttdeci">MenuTexture D_02003CC4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3644</div></div>
-<div class="ttc" id="atextures_8c_html_a4f6cf12ae63e45c1cea516d1a25a9416"><div class="ttname"><a href="textures_8c.html#a4f6cf12ae63e45c1cea516d1a25a9416">D_020038DC</a></div><div class="ttdeci">MenuTexture D_020038DC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3419</div></div>
-<div class="ttc" id="atextures_8c_html_a50d5d7314e5ec084a128f739ad2d44f7"><div class="ttname"><a href="textures_8c.html#a50d5d7314e5ec084a128f739ad2d44f7">D_02003B34</a></div><div class="ttdeci">MenuTexture D_02003B34[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3554</div></div>
-<div class="ttc" id="atextures_8c_html_a51c59640c257e64d458c5cb780f435d4"><div class="ttname"><a href="textures_8c.html#a51c59640c257e64d458c5cb780f435d4">D_020043A4</a></div><div class="ttdeci">MenuTexture D_020043A4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4040</div></div>
-<div class="ttc" id="atextures_8c_html_a524860002eb00c70d3aadd9b8df423f4"><div class="ttname"><a href="textures_8c.html#a524860002eb00c70d3aadd9b8df423f4">D_020031D4</a></div><div class="ttdeci">MenuTexture D_020031D4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3014</div></div>
-<div class="ttc" id="atextures_8c_html_a536f2a574454ee21e63c5844be8f3b45"><div class="ttname"><a href="textures_8c.html#a536f2a574454ee21e63c5844be8f3b45">D_02003404</a></div><div class="ttdeci">MenuTexture D_02003404[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3140</div></div>
-<div class="ttc" id="atextures_8c_html_a5372d95d6824d5c2871fac7d4cea26b5"><div class="ttname"><a href="textures_8c.html#a5372d95d6824d5c2871fac7d4cea26b5">D_02004304</a></div><div class="ttdeci">MenuTexture D_02004304[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4004</div></div>
-<div class="ttc" id="atextures_8c_html_a552fdf5621fcaf9d4402d9817b0bad67"><div class="ttname"><a href="textures_8c.html#a552fdf5621fcaf9d4402d9817b0bad67">D_020024B4</a></div><div class="ttdeci">MenuTexture D_020024B4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2258</div></div>
-<div class="ttc" id="atextures_8c_html_a5585b48f02271211d19f207793adbc2c"><div class="ttname"><a href="textures_8c.html#a5585b48f02271211d19f207793adbc2c">D_02004264</a></div><div class="ttdeci">MenuTexture D_02004264[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3968</div></div>
-<div class="ttc" id="atextures_8c_html_a58572207c69810a5ba6a23bb36d4c10f"><div class="ttname"><a href="textures_8c.html#a58572207c69810a5ba6a23bb36d4c10f">D_02003ECC</a></div><div class="ttdeci">MenuTexture D_02003ECC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3761</div></div>
-<div class="ttc" id="atextures_8c_html_a588e112df5d26480e4bf50ccdb2aa3e0"><div class="ttname"><a href="textures_8c.html#a588e112df5d26480e4bf50ccdb2aa3e0">D_020036FC</a></div><div class="ttdeci">MenuTexture D_020036FC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3311</div></div>
-<div class="ttc" id="atextures_8c_html_a5a477c3e4c561d801a055c15940368ea"><div class="ttname"><a href="textures_8c.html#a5a477c3e4c561d801a055c15940368ea">D_02002CD4</a></div><div class="ttdeci">MenuTexture D_02002CD4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2726</div></div>
-<div class="ttc" id="atextures_8c_html_a5b1efcb734160dcb75a96a61fc4db3cb"><div class="ttname"><a href="textures_8c.html#a5b1efcb734160dcb75a96a61fc4db3cb">D_02002F04</a></div><div class="ttdeci">MenuTexture D_02002F04[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2852</div></div>
-<div class="ttc" id="atextures_8c_html_a5b5c3c02b2ad53fef75fec0dc269a5e9"><div class="ttname"><a href="textures_8c.html#a5b5c3c02b2ad53fef75fec0dc269a5e9">D_02002964</a></div><div class="ttdeci">MenuTexture D_02002964[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2528</div></div>
-<div class="ttc" id="atextures_8c_html_a5b83b165b32da6d675319412d0ddd912"><div class="ttname"><a href="textures_8c.html#a5b83b165b32da6d675319412d0ddd912">D_02002A54</a></div><div class="ttdeci">MenuTexture D_02002A54[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2582</div></div>
-<div class="ttc" id="atextures_8c_html_a5bce461a8404817720a8c4f19aa69d8d"><div class="ttname"><a href="textures_8c.html#a5bce461a8404817720a8c4f19aa69d8d">D_02002D74</a></div><div class="ttdeci">MenuTexture D_02002D74[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2762</div></div>
-<div class="ttc" id="atextures_8c_html_a5bdebaafc184bb1407c05c1ff7c3aaae"><div class="ttname"><a href="textures_8c.html#a5bdebaafc184bb1407c05c1ff7c3aaae">D_0200225C</a></div><div class="ttdeci">MenuTexture D_0200225C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2123</div></div>
-<div class="ttc" id="atextures_8c_html_a5eb20e6c3e724ea36732cb29e6c3c89b"><div class="ttname"><a href="textures_8c.html#a5eb20e6c3e724ea36732cb29e6c3c89b">D_02002A7C</a></div><div class="ttdeci">MenuTexture D_02002A7C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2591</div></div>
-<div class="ttc" id="atextures_8c_html_a5fb159d433b9d8a56d2e1e0725ad31de"><div class="ttname"><a href="textures_8c.html#a5fb159d433b9d8a56d2e1e0725ad31de">D_02002784</a></div><div class="ttdeci">MenuTexture D_02002784[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2420</div></div>
-<div class="ttc" id="atextures_8c_html_a6061f063a865121ca9a2dd2012bf6d31"><div class="ttname"><a href="textures_8c.html#a6061f063a865121ca9a2dd2012bf6d31">D_0200289C</a></div><div class="ttdeci">MenuTexture D_0200289C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2483</div></div>
-<div class="ttc" id="atextures_8c_html_a60eb77bb60366512bafabe6a5ce97beb"><div class="ttname"><a href="textures_8c.html#a60eb77bb60366512bafabe6a5ce97beb">D_02003454</a></div><div class="ttdeci">MenuTexture D_02003454[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3158</div></div>
-<div class="ttc" id="atextures_8c_html_a60f183c0dd64edc6655e62033414f2ed"><div class="ttname"><a href="textures_8c.html#a60f183c0dd64edc6655e62033414f2ed">D_020039A4</a></div><div class="ttdeci">MenuTexture D_020039A4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3464</div></div>
-<div class="ttc" id="atextures_8c_html_a619e2163afc69eeeae9281e92a89ed5c"><div class="ttname"><a href="textures_8c.html#a619e2163afc69eeeae9281e92a89ed5c">D_0200293C</a></div><div class="ttdeci">MenuTexture D_0200293C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2519</div></div>
-<div class="ttc" id="atextures_8c_html_a63e827fdc0043a135ac5ffe8a569691c"><div class="ttname"><a href="textures_8c.html#a63e827fdc0043a135ac5ffe8a569691c">D_02004584</a></div><div class="ttdeci">MenuTexture D_02004584[1]</div><div class="ttdoc">unknown empty MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4148</div></div>
-<div class="ttc" id="atextures_8c_html_a63f63ba30acc48ccd0d009b84efb33ea"><div class="ttname"><a href="textures_8c.html#a63f63ba30acc48ccd0d009b84efb33ea">D_02002A2C</a></div><div class="ttdeci">MenuTexture D_02002A2C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2573</div></div>
-<div class="ttc" id="atextures_8c_html_a654c1ca888ede0da8f0a4cd7c8269de5"><div class="ttname"><a href="textures_8c.html#a654c1ca888ede0da8f0a4cd7c8269de5">D_0200397C</a></div><div class="ttdeci">MenuTexture D_0200397C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3455</div></div>
-<div class="ttc" id="atextures_8c_html_a687201b9c6e5d4b32597c7e899378074"><div class="ttname"><a href="textures_8c.html#a687201b9c6e5d4b32597c7e899378074">D_02002C0C</a></div><div class="ttdeci">MenuTexture D_02002C0C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2681</div></div>
-<div class="ttc" id="atextures_8c_html_a698ebb924353c0c303e45998ced1800e"><div class="ttname"><a href="textures_8c.html#a698ebb924353c0c303e45998ced1800e">D_020033DC</a></div><div class="ttdeci">MenuTexture D_020033DC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3131</div></div>
-<div class="ttc" id="atextures_8c_html_a6ad677b21da616dc87a415c3e2d1d7ec"><div class="ttname"><a href="textures_8c.html#a6ad677b21da616dc87a415c3e2d1d7ec">D_0200252C</a></div><div class="ttdeci">MenuTexture D_0200252C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2285</div></div>
-<div class="ttc" id="atextures_8c_html_a6b286e035be341715af19c029268e991"><div class="ttname"><a href="textures_8c.html#a6b286e035be341715af19c029268e991">D_02002CFC</a></div><div class="ttdeci">MenuTexture D_02002CFC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2735</div></div>
-<div class="ttc" id="atextures_8c_html_a6b8285455da878b240dbb2c4c9856d55"><div class="ttname"><a href="textures_8c.html#a6b8285455da878b240dbb2c4c9856d55">D_0200243C</a></div><div class="ttdeci">MenuTexture D_0200243C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2231</div></div>
-<div class="ttc" id="atextures_8c_html_a6c7ffb249a81d7f607fa05899f896976"><div class="ttname"><a href="textures_8c.html#a6c7ffb249a81d7f607fa05899f896976">D_020042DC</a></div><div class="ttdeci">MenuTexture D_020042DC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3995</div></div>
-<div class="ttc" id="atextures_8c_html_a6cd0b47054b27a747be921ed1d0fd3f7"><div class="ttname"><a href="textures_8c.html#a6cd0b47054b27a747be921ed1d0fd3f7">D_02002AF4</a></div><div class="ttdeci">MenuTexture D_02002AF4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2618</div></div>
-<div class="ttc" id="atextures_8c_html_a6de4b0e82ef9936143450338f006de98"><div class="ttname"><a href="textures_8c.html#a6de4b0e82ef9936143450338f006de98">D_0200347C</a></div><div class="ttdeci">MenuTexture D_0200347C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3167</div></div>
-<div class="ttc" id="atextures_8c_html_a6e6f4c7977e2262759fd40fe572663b7"><div class="ttname"><a href="textures_8c.html#a6e6f4c7977e2262759fd40fe572663b7">D_020036AC</a></div><div class="ttdeci">MenuTexture D_020036AC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3293</div></div>
-<div class="ttc" id="atextures_8c_html_a6f1ab4cd442d712018ca0c8157434b0e"><div class="ttname"><a href="textures_8c.html#a6f1ab4cd442d712018ca0c8157434b0e">D_020021BC</a></div><div class="ttdeci">MenuTexture D_020021BC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2087</div></div>
-<div class="ttc" id="atextures_8c_html_a6f52cf45e6b7f1f578f004ddeb78a695"><div class="ttname"><a href="textures_8c.html#a6f52cf45e6b7f1f578f004ddeb78a695">D_02003B0C</a></div><div class="ttdeci">MenuTexture D_02003B0C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3545</div></div>
-<div class="ttc" id="atextures_8c_html_a731ece480e4f0670ba43cb3e05e0d133"><div class="ttname"><a href="textures_8c.html#a731ece480e4f0670ba43cb3e05e0d133">D_02003A44</a></div><div class="ttdeci">MenuTexture D_02003A44[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3500</div></div>
-<div class="ttc" id="atextures_8c_html_a7327ff2597ac2bae8a3f9024eb96323e"><div class="ttname"><a href="textures_8c.html#a7327ff2597ac2bae8a3f9024eb96323e">D_020022D4</a></div><div class="ttdeci">MenuTexture D_020022D4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2150</div></div>
-<div class="ttc" id="atextures_8c_html_a735113a24c410c51accd10ecbeb7b2d1"><div class="ttname"><a href="textures_8c.html#a735113a24c410c51accd10ecbeb7b2d1">D_02002E8C</a></div><div class="ttdeci">MenuTexture D_02002E8C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2825</div></div>
-<div class="ttc" id="atextures_8c_html_a73d3f21900cd6ad9270f81a7a9dbc4de"><div class="ttname"><a href="textures_8c.html#a73d3f21900cd6ad9270f81a7a9dbc4de">D_02002504</a></div><div class="ttdeci">MenuTexture D_02002504[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2276</div></div>
-<div class="ttc" id="atextures_8c_html_a77590021542b0d698c1ced5812783bff"><div class="ttname"><a href="textures_8c.html#a77590021542b0d698c1ced5812783bff">D_0200365C</a></div><div class="ttdeci">MenuTexture D_0200365C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3275</div></div>
-<div class="ttc" id="atextures_8c_html_a78965410f10ddde2d7e08bcc1214dafd"><div class="ttname"><a href="textures_8c.html#a78965410f10ddde2d7e08bcc1214dafd">D_0200301C</a></div><div class="ttdeci">MenuTexture D_0200301C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2915</div></div>
-<div class="ttc" id="atextures_8c_html_a797a722d881efacd9441c3d8b9d52633"><div class="ttname"><a href="textures_8c.html#a797a722d881efacd9441c3d8b9d52633">D_02003D64</a></div><div class="ttdeci">MenuTexture D_02003D64[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3680</div></div>
-<div class="ttc" id="atextures_8c_html_a7b2fb901c06ce3cebfe83dc656630408"><div class="ttname"><a href="textures_8c.html#a7b2fb901c06ce3cebfe83dc656630408">D_020034A4</a></div><div class="ttdeci">MenuTexture D_020034A4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3176</div></div>
-<div class="ttc" id="atextures_8c_html_a7d506bfffca3cdec3f8fff0a243684f2"><div class="ttname"><a href="textures_8c.html#a7d506bfffca3cdec3f8fff0a243684f2">D_020044E4</a></div><div class="ttdeci">MenuTexture D_020044E4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4112</div></div>
-<div class="ttc" id="atextures_8c_html_a7da68641247803d864edeab46882cd19"><div class="ttname"><a href="textures_8c.html#a7da68641247803d864edeab46882cd19">D_02004494</a></div><div class="ttdeci">MenuTexture D_02004494[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4094</div></div>
-<div class="ttc" id="atextures_8c_html_a7e536dcec0919c4894ad719722f50b06"><div class="ttname"><a href="textures_8c.html#a7e536dcec0919c4894ad719722f50b06">D_02002E3C</a></div><div class="ttdeci">MenuTexture D_02002E3C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2807</div></div>
-<div class="ttc" id="atextures_8c_html_a817c58a8d27a2451f342ae38e35ea099"><div class="ttname"><a href="textures_8c.html#a817c58a8d27a2451f342ae38e35ea099">D_02003D8C</a></div><div class="ttdeci">MenuTexture D_02003D8C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3689</div></div>
-<div class="ttc" id="atextures_8c_html_a82a986128a77233fb75755bd11508585"><div class="ttname"><a href="textures_8c.html#a82a986128a77233fb75755bd11508585">D_020044BC</a></div><div class="ttdeci">MenuTexture D_020044BC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4103</div></div>
-<div class="ttc" id="atextures_8c_html_a83e9809ba272a6b314f463f9230ae46e"><div class="ttname"><a href="textures_8c.html#a83e9809ba272a6b314f463f9230ae46e">D_0200419C</a></div><div class="ttdeci">MenuTexture D_0200419C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3923</div></div>
-<div class="ttc" id="atextures_8c_html_a85265806383ad0e582807f9f4700c0fb"><div class="ttname"><a href="textures_8c.html#a85265806383ad0e582807f9f4700c0fb">D_02003EF4</a></div><div class="ttdeci">MenuTexture D_02003EF4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3770</div></div>
-<div class="ttc" id="atextures_8c_html_a8790795fcdfd406ceffadd0a1c6021da"><div class="ttname"><a href="textures_8c.html#a8790795fcdfd406ceffadd0a1c6021da">D_02003044</a></div><div class="ttdeci">MenuTexture D_02003044[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2924</div></div>
-<div class="ttc" id="atextures_8c_html_a88aad6ac0170738727d9cadf8e6587c9"><div class="ttname"><a href="textures_8c.html#a88aad6ac0170738727d9cadf8e6587c9">D_02004084</a></div><div class="ttdeci">MenuTexture D_02004084[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3860</div></div>
-<div class="ttc" id="atextures_8c_html_a8a491da9784ab21060071720f6a9ba63"><div class="ttname"><a href="textures_8c.html#a8a491da9784ab21060071720f6a9ba63">D_0200400C</a></div><div class="ttdeci">MenuTexture D_0200400C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3833</div></div>
-<div class="ttc" id="atextures_8c_html_a8bd40f551a2bf30f0fb1581f72e4d17b"><div class="ttname"><a href="textures_8c.html#a8bd40f551a2bf30f0fb1581f72e4d17b">D_02002554</a></div><div class="ttdeci">MenuTexture D_02002554[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2294</div></div>
-<div class="ttc" id="atextures_8c_html_a8d56507507d035c972eeb629d5c87530"><div class="ttname"><a href="textures_8c.html#a8d56507507d035c972eeb629d5c87530">D_02003BAC</a></div><div class="ttdeci">MenuTexture D_02003BAC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3581</div></div>
-<div class="ttc" id="atextures_8c_html_a8e105752b45c738352ae3a2d0ff309f4"><div class="ttname"><a href="textures_8c.html#a8e105752b45c738352ae3a2d0ff309f4">D_0200257C</a></div><div class="ttdeci">MenuTexture D_0200257C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2303</div></div>
-<div class="ttc" id="atextures_8c_html_a8eb0f0a76c13a434e257c247772309e0"><div class="ttname"><a href="textures_8c.html#a8eb0f0a76c13a434e257c247772309e0">D_020040D4</a></div><div class="ttdeci">MenuTexture D_020040D4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3878</div></div>
-<div class="ttc" id="atextures_8c_html_a92355cfa5b3c1af169e9a1185f224fcc"><div class="ttname"><a href="textures_8c.html#a92355cfa5b3c1af169e9a1185f224fcc">D_02002B44</a></div><div class="ttdeci">MenuTexture D_02002B44[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2636</div></div>
-<div class="ttc" id="atextures_8c_html_a93fd2e7597178c6e62fd3c32f636e69d"><div class="ttname"><a href="textures_8c.html#a93fd2e7597178c6e62fd3c32f636e69d">D_02003BFC</a></div><div class="ttdeci">MenuTexture D_02003BFC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3599</div></div>
-<div class="ttc" id="atextures_8c_html_a9402bf65d23ad7997b539c370623463d"><div class="ttname"><a href="textures_8c.html#a9402bf65d23ad7997b539c370623463d">D_02002824</a></div><div class="ttdeci">MenuTexture D_02002824[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2456</div></div>
-<div class="ttc" id="atextures_8c_html_a95eb0ffafcb19c1dfdc45e7ff8ec957a"><div class="ttname"><a href="textures_8c.html#a95eb0ffafcb19c1dfdc45e7ff8ec957a">D_02002D24</a></div><div class="ttdeci">MenuTexture D_02002D24[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2744</div></div>
-<div class="ttc" id="atextures_8c_html_a9795634d08c4d48fc48ac2977448f198"><div class="ttname"><a href="textures_8c.html#a9795634d08c4d48fc48ac2977448f198">D_02003814</a></div><div class="ttdeci">MenuTexture D_02003814[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3374</div></div>
-<div class="ttc" id="atextures_8c_html_a97d7b917b5ee4c9dc306dc2be8663018"><div class="ttname"><a href="textures_8c.html#a97d7b917b5ee4c9dc306dc2be8663018">D_020021E4</a></div><div class="ttdeci">MenuTexture D_020021E4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2096</div></div>
-<div class="ttc" id="atextures_8c_html_a98d2cf41f4986cc88f3dc5c2274be8f1"><div class="ttname"><a href="textures_8c.html#a98d2cf41f4986cc88f3dc5c2274be8f1">D_02003ABC</a></div><div class="ttdeci">MenuTexture D_02003ABC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3527</div></div>
-<div class="ttc" id="atextures_8c_html_a9b2dd2809f6cb89c2075a349309ee5cc"><div class="ttname"><a href="textures_8c.html#a9b2dd2809f6cb89c2075a349309ee5cc">D_02002234</a></div><div class="ttdeci">MenuTexture D_02002234[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2114</div></div>
-<div class="ttc" id="atextures_8c_html_a9cb77fcad992de853b9ad90cb09734a1"><div class="ttname"><a href="textures_8c.html#a9cb77fcad992de853b9ad90cb09734a1">D_02003FBC</a></div><div class="ttdeci">MenuTexture D_02003FBC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3815</div></div>
-<div class="ttc" id="atextures_8c_html_a9ce376c0aabed1c40c0d66c29ece6237"><div class="ttname"><a href="textures_8c.html#a9ce376c0aabed1c40c0d66c29ece6237">D_020043CC</a></div><div class="ttdeci">MenuTexture D_020043CC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4049</div></div>
-<div class="ttc" id="atextures_8c_html_aa0ee02b4cc2011d337040e16affd4d7d"><div class="ttname"><a href="textures_8c.html#aa0ee02b4cc2011d337040e16affd4d7d">D_020035BC</a></div><div class="ttdeci">MenuTexture D_020035BC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3239</div></div>
-<div class="ttc" id="atextures_8c_html_aa122f70e626bb2f210c1a866ecaeefee"><div class="ttname"><a href="textures_8c.html#aa122f70e626bb2f210c1a866ecaeefee">D_020033B4</a></div><div class="ttdeci">MenuTexture D_020033B4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3122</div></div>
-<div class="ttc" id="atextures_8c_html_aa2e52951a8fc861ed029c0daa2063d65"><div class="ttname"><a href="textures_8c.html#aa2e52951a8fc861ed029c0daa2063d65">D_020022FC</a></div><div class="ttdeci">MenuTexture D_020022FC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2159</div></div>
-<div class="ttc" id="atextures_8c_html_aa3496a44170274ce5f1936b26b243bed"><div class="ttname"><a href="textures_8c.html#aa3496a44170274ce5f1936b26b243bed">D_020022AC</a></div><div class="ttdeci">MenuTexture D_020022AC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2141</div></div>
-<div class="ttc" id="atextures_8c_html_aa4709ec99e53e81fed75120793ac6d6a"><div class="ttname"><a href="textures_8c.html#aa4709ec99e53e81fed75120793ac6d6a">D_02003094</a></div><div class="ttdeci">MenuTexture D_02003094[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2942</div></div>
-<div class="ttc" id="atextures_8c_html_aa4b2119aef891551b6fbdf1b6a4643fc"><div class="ttname"><a href="textures_8c.html#aa4b2119aef891551b6fbdf1b6a4643fc">D_020028EC</a></div><div class="ttdeci">MenuTexture D_020028EC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2501</div></div>
-<div class="ttc" id="atextures_8c_html_aa4d8e7a6ad4de3fdc3bf8efbcc2f592a"><div class="ttname"><a href="textures_8c.html#aa4d8e7a6ad4de3fdc3bf8efbcc2f592a">D_02002F54</a></div><div class="ttdeci">MenuTexture D_02002F54[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2870</div></div>
-<div class="ttc" id="atextures_8c_html_aa761d86cb80731b8fc72907b458b2122"><div class="ttname"><a href="textures_8c.html#aa761d86cb80731b8fc72907b458b2122">D_0200374C</a></div><div class="ttdeci">MenuTexture D_0200374C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3329</div></div>
-<div class="ttc" id="atextures_8c_html_aa91597c8b53b950e4a6846dad52600ce"><div class="ttname"><a href="textures_8c.html#aa91597c8b53b950e4a6846dad52600ce">D_020041EC</a></div><div class="ttdeci">MenuTexture D_020041EC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3941</div></div>
-<div class="ttc" id="atextures_8c_html_aacc6a337182f24c29de9c9c703936d4e"><div class="ttname"><a href="textures_8c.html#aacc6a337182f24c29de9c9c703936d4e">D_02002464</a></div><div class="ttdeci">MenuTexture D_02002464[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2240</div></div>
-<div class="ttc" id="atextures_8c_html_aae026c1880d09133daa0dc6cbc7fc957"><div class="ttname"><a href="textures_8c.html#aae026c1880d09133daa0dc6cbc7fc957">D_02003E2C</a></div><div class="ttdeci">MenuTexture D_02003E2C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3725</div></div>
-<div class="ttc" id="atextures_8c_html_ab290955f6921201063ceaf29f1824644"><div class="ttname"><a href="textures_8c.html#ab290955f6921201063ceaf29f1824644">D_020030E4</a></div><div class="ttdeci">MenuTexture D_020030E4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2960</div></div>
-<div class="ttc" id="atextures_8c_html_ab32b1d2db0867013d6a03914109fda31"><div class="ttname"><a href="textures_8c.html#ab32b1d2db0867013d6a03914109fda31">D_02003A6C</a></div><div class="ttdeci">MenuTexture D_02003A6C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3509</div></div>
-<div class="ttc" id="atextures_8c_html_ab3ec5fbe00690064d75d7e85758f96b4"><div class="ttname"><a href="textures_8c.html#ab3ec5fbe00690064d75d7e85758f96b4">D_02002D4C</a></div><div class="ttdeci">MenuTexture D_02002D4C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2753</div></div>
-<div class="ttc" id="atextures_8c_html_ab67e0d14ebf496e2555ae3bbb848a61e"><div class="ttname"><a href="textures_8c.html#ab67e0d14ebf496e2555ae3bbb848a61e">D_02003DB4</a></div><div class="ttdeci">MenuTexture D_02003DB4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3698</div></div>
-<div class="ttc" id="atextures_8c_html_ab68c0155ffdfc75207cdb66a818eb5be"><div class="ttname"><a href="textures_8c.html#ab68c0155ffdfc75207cdb66a818eb5be">D_02002374</a></div><div class="ttdeci">MenuTexture D_02002374[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2186</div></div>
-<div class="ttc" id="atextures_8c_html_ab7627f0d3d323d48e0e6bbe9d6191b57"><div class="ttname"><a href="textures_8c.html#ab7627f0d3d323d48e0e6bbe9d6191b57">D_0200351C</a></div><div class="ttdeci">MenuTexture D_0200351C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3203</div></div>
-<div class="ttc" id="atextures_8c_html_ab8c0cda1aad8144a1e3dcb50394f1565"><div class="ttname"><a href="textures_8c.html#ab8c0cda1aad8144a1e3dcb50394f1565">D_02003224</a></div><div class="ttdeci">MenuTexture D_02003224[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3032</div></div>
-<div class="ttc" id="atextures_8c_html_ab8e90913ba0d3c546490354bf85d5b17"><div class="ttname"><a href="textures_8c.html#ab8e90913ba0d3c546490354bf85d5b17">D_0200455C</a></div><div class="ttdeci">MenuTexture D_0200455C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4139</div></div>
-<div class="ttc" id="atextures_8c_html_abb48ec977ae985f195c1f78afcb813f1"><div class="ttname"><a href="textures_8c.html#abb48ec977ae985f195c1f78afcb813f1">D_02003F44</a></div><div class="ttdeci">MenuTexture D_02003F44[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3788</div></div>
-<div class="ttc" id="atextures_8c_html_abb5071bb0336309b57706ca49238e267"><div class="ttname"><a href="textures_8c.html#abb5071bb0336309b57706ca49238e267">D_02003E54</a></div><div class="ttdeci">MenuTexture D_02003E54[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3734</div></div>
-<div class="ttc" id="atextures_8c_html_abb9c7782a24c9902c98a553f282d578c"><div class="ttname"><a href="textures_8c.html#abb9c7782a24c9902c98a553f282d578c">D_02003EA4</a></div><div class="ttdeci">MenuTexture D_02003EA4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3752</div></div>
-<div class="ttc" id="atextures_8c_html_abc5d73e6683013b0eaa12e478a3d6457"><div class="ttname"><a href="textures_8c.html#abc5d73e6683013b0eaa12e478a3d6457">D_02002EDC</a></div><div class="ttdeci">MenuTexture D_02002EDC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2843</div></div>
-<div class="ttc" id="atextures_8c_html_abe469784534e444b1076e92d2236c491"><div class="ttname"><a href="textures_8c.html#abe469784534e444b1076e92d2236c491">D_02002694</a></div><div class="ttdeci">MenuTexture D_02002694[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2366</div></div>
-<div class="ttc" id="atextures_8c_html_abe4737130a4185202b4b6ea78fb14338"><div class="ttname"><a href="textures_8c.html#abe4737130a4185202b4b6ea78fb14338">D_020036D4</a></div><div class="ttdeci">MenuTexture D_020036D4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3302</div></div>
-<div class="ttc" id="atextures_8c_html_abe6c72ca5ae8ab0964234600520d4300"><div class="ttname"><a href="textures_8c.html#abe6c72ca5ae8ab0964234600520d4300">D_02003DDC</a></div><div class="ttdeci">MenuTexture D_02003DDC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3707</div></div>
-<div class="ttc" id="atextures_8c_html_abecd94592d509ab8f669fcfac99080f3"><div class="ttname"><a href="textures_8c.html#abecd94592d509ab8f669fcfac99080f3">D_0200270C</a></div><div class="ttdeci">MenuTexture D_0200270C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2393</div></div>
-<div class="ttc" id="atextures_8c_html_ac0e3c1ab85c9402517543717a118cbe9"><div class="ttname"><a href="textures_8c.html#ac0e3c1ab85c9402517543717a118cbe9">D_02002B94</a></div><div class="ttdeci">MenuTexture D_02002B94[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2654</div></div>
-<div class="ttc" id="atextures_8c_html_ac0ef21a3f568f01788d5428436179966"><div class="ttname"><a href="textures_8c.html#ac0ef21a3f568f01788d5428436179966">D_02003634</a></div><div class="ttdeci">MenuTexture D_02003634[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3266</div></div>
-<div class="ttc" id="atextures_8c_html_ac42b51c951d07a928324d6677bc38ece"><div class="ttname"><a href="textures_8c.html#ac42b51c951d07a928324d6677bc38ece">D_0200441C</a></div><div class="ttdeci">MenuTexture D_0200441C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4067</div></div>
-<div class="ttc" id="atextures_8c_html_ac5bbaaab53ae539e6f548c764d56e3f0"><div class="ttname"><a href="textures_8c.html#ac5bbaaab53ae539e6f548c764d56e3f0">D_020028C4</a></div><div class="ttdeci">MenuTexture D_020028C4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2492</div></div>
-<div class="ttc" id="atextures_8c_html_ac8c27218cc6ca84c5870e6669368c11f"><div class="ttname"><a href="textures_8c.html#ac8c27218cc6ca84c5870e6669368c11f">D_02002BBC</a></div><div class="ttdeci">MenuTexture D_02002BBC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2663</div></div>
-<div class="ttc" id="atextures_8c_html_ac90e5c6446404bba860e9064b2dae61b"><div class="ttname"><a href="textures_8c.html#ac90e5c6446404bba860e9064b2dae61b">D_02002C5C</a></div><div class="ttdeci">MenuTexture D_02002C5C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2699</div></div>
-<div class="ttc" id="atextures_8c_html_ac949bd27c13a697d0ef10303c3a45bd4"><div class="ttname"><a href="textures_8c.html#ac949bd27c13a697d0ef10303c3a45bd4">D_0200432C</a></div><div class="ttdeci">MenuTexture D_0200432C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4013</div></div>
-<div class="ttc" id="atextures_8c_html_ac98d22f62af810323892238d9ab04794"><div class="ttname"><a href="textures_8c.html#ac98d22f62af810323892238d9ab04794">D_02002FF4</a></div><div class="ttdeci">MenuTexture D_02002FF4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2906</div></div>
-<div class="ttc" id="atextures_8c_html_ac99d372398a6eba4a54ab89862056011"><div class="ttname"><a href="textures_8c.html#ac99d372398a6eba4a54ab89862056011">D_0200298C</a></div><div class="ttdeci">MenuTexture D_0200298C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2537</div></div>
-<div class="ttc" id="atextures_8c_html_acb126b9ba4498259d90fd8731327eacf"><div class="ttname"><a href="textures_8c.html#acb126b9ba4498259d90fd8731327eacf">D_020035E4</a></div><div class="ttdeci">MenuTexture D_020035E4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3248</div></div>
-<div class="ttc" id="atextures_8c_html_acb41ae03cc64a778d623a755e722f7c9"><div class="ttname"><a href="textures_8c.html#acb41ae03cc64a778d623a755e722f7c9">D_020025CC</a></div><div class="ttdeci">MenuTexture D_020025CC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2321</div></div>
-<div class="ttc" id="atextures_8c_html_acbec4fee64705ecce4fdd2aa11888fc7"><div class="ttname"><a href="textures_8c.html#acbec4fee64705ecce4fdd2aa11888fc7">D_02003314</a></div><div class="ttdeci">MenuTexture D_02003314[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3086</div></div>
-<div class="ttc" id="atextures_8c_html_ace22bfe09283f78390fcd8a8fb1fcaa4"><div class="ttname"><a href="textures_8c.html#ace22bfe09283f78390fcd8a8fb1fcaa4">D_02003A94</a></div><div class="ttdeci">MenuTexture D_02003A94[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3518</div></div>
-<div class="ttc" id="atextures_8c_html_acf058cb99cc0be69bdfa77c234bb25fb"><div class="ttname"><a href="textures_8c.html#acf058cb99cc0be69bdfa77c234bb25fb">D_020031FC</a></div><div class="ttdeci">MenuTexture D_020031FC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3023</div></div>
-<div class="ttc" id="atextures_8c_html_ad00ff8d111e49a026201badf75f0fce3"><div class="ttname"><a href="textures_8c.html#ad00ff8d111e49a026201badf75f0fce3">D_02004174</a></div><div class="ttdeci">MenuTexture D_02004174[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3914</div></div>
-<div class="ttc" id="atextures_8c_html_ad2540f0c134e4e7be1bd9288e623c218"><div class="ttname"><a href="textures_8c.html#ad2540f0c134e4e7be1bd9288e623c218">D_02002E64</a></div><div class="ttdeci">MenuTexture D_02002E64[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2816</div></div>
-<div class="ttc" id="atextures_8c_html_ad257ad3c3cd31a52546ed71fdfd291bc"><div class="ttname"><a href="textures_8c.html#ad257ad3c3cd31a52546ed71fdfd291bc">D_0200388C</a></div><div class="ttdeci">MenuTexture D_0200388C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3401</div></div>
-<div class="ttc" id="atextures_8c_html_ad29dd6284eeec1f555bbfa65764cfafe"><div class="ttname"><a href="textures_8c.html#ad29dd6284eeec1f555bbfa65764cfafe">D_02003904</a></div><div class="ttdeci">MenuTexture D_02003904[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3428</div></div>
-<div class="ttc" id="atextures_8c_html_ad2bfd4fe9e3efd81151ba88a2be635dd"><div class="ttname"><a href="textures_8c.html#ad2bfd4fe9e3efd81151ba88a2be635dd">D_02003A1C</a></div><div class="ttdeci">MenuTexture D_02003A1C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3491</div></div>
-<div class="ttc" id="atextures_8c_html_ad3784e267ed4fb24ba5cf564b4a92cd5"><div class="ttname"><a href="textures_8c.html#ad3784e267ed4fb24ba5cf564b4a92cd5">D_02002144</a></div><div class="ttdeci">MenuTexture D_02002144[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2060</div></div>
-<div class="ttc" id="atextures_8c_html_ad3c3a104f491e1caffc965d1ca8fc45d"><div class="ttname"><a href="textures_8c.html#ad3c3a104f491e1caffc965d1ca8fc45d">D_02002284</a></div><div class="ttdeci">MenuTexture D_02002284[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2132</div></div>
-<div class="ttc" id="atextures_8c_html_ad56c068aa1fada4e7034ad46a4e61b65"><div class="ttname"><a href="textures_8c.html#ad56c068aa1fada4e7034ad46a4e61b65">D_020039CC</a></div><div class="ttdeci">MenuTexture D_020039CC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3473</div></div>
-<div class="ttc" id="atextures_8c_html_ad63e04a4dccccf9fc124ce67f0f4186a"><div class="ttname"><a href="textures_8c.html#ad63e04a4dccccf9fc124ce67f0f4186a">D_020031AC</a></div><div class="ttdeci">MenuTexture D_020031AC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3005</div></div>
-<div class="ttc" id="atextures_8c_html_ad8ba99e1b6a302bb3795d174b7083543"><div class="ttname"><a href="textures_8c.html#ad8ba99e1b6a302bb3795d174b7083543">D_02003F94</a></div><div class="ttdeci">MenuTexture D_02003F94[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3806</div></div>
-<div class="ttc" id="atextures_8c_html_ad8ef842e56689645463da3b23d352ec3"><div class="ttname"><a href="textures_8c.html#ad8ef842e56689645463da3b23d352ec3">D_0200220C</a></div><div class="ttdeci">MenuTexture D_0200220C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2105</div></div>
-<div class="ttc" id="atextures_8c_html_ad9160a5e2a0025bb166171454503a356"><div class="ttname"><a href="textures_8c.html#ad9160a5e2a0025bb166171454503a356">D_02003F1C</a></div><div class="ttdeci">MenuTexture D_02003F1C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3779</div></div>
-<div class="ttc" id="atextures_8c_html_ad9b4b711752c9be3c887ab9a82b02c91"><div class="ttname"><a href="textures_8c.html#ad9b4b711752c9be3c887ab9a82b02c91">D_02002D9C</a></div><div class="ttdeci">MenuTexture D_02002D9C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2771</div></div>
-<div class="ttc" id="atextures_8c_html_ada2ae28667bc3b927381d0677a1a1565"><div class="ttname"><a href="textures_8c.html#ada2ae28667bc3b927381d0677a1a1565">D_0200379C</a></div><div class="ttdeci">MenuTexture D_0200379C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3347</div></div>
-<div class="ttc" id="atextures_8c_html_ada523d8c8d31b561f4673ad3778142e2"><div class="ttname"><a href="textures_8c.html#ada523d8c8d31b561f4673ad3778142e2">D_020027AC</a></div><div class="ttdeci">MenuTexture D_020027AC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2429</div></div>
-<div class="ttc" id="atextures_8c_html_adb248583c1f081e31b9e1023d26d63c3"><div class="ttname"><a href="textures_8c.html#adb248583c1f081e31b9e1023d26d63c3">D_02002CAC</a></div><div class="ttdeci">MenuTexture D_02002CAC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2717</div></div>
-<div class="ttc" id="atextures_8c_html_adb5e0a37cddbab9dd01e9b8e71e6dda7"><div class="ttname"><a href="textures_8c.html#adb5e0a37cddbab9dd01e9b8e71e6dda7">D_02003FE4</a></div><div class="ttdeci">MenuTexture D_02003FE4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3824</div></div>
-<div class="ttc" id="atextures_8c_html_adb8a477b54c8900aab5142f4b82cce15"><div class="ttname"><a href="textures_8c.html#adb8a477b54c8900aab5142f4b82cce15">D_0200248C</a></div><div class="ttdeci">MenuTexture D_0200248C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2249</div></div>
-<div class="ttc" id="atextures_8c_html_adb947fb47d7e967eb8b014666621c098"><div class="ttname"><a href="textures_8c.html#adb947fb47d7e967eb8b014666621c098">D_02004444</a></div><div class="ttdeci">MenuTexture D_02004444[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4076</div></div>
-<div class="ttc" id="atextures_8c_html_adbc76320d864d22b88b9ed4d3f5ba556"><div class="ttname"><a href="textures_8c.html#adbc76320d864d22b88b9ed4d3f5ba556">D_0200315C</a></div><div class="ttdeci">MenuTexture D_0200315C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2987</div></div>
-<div class="ttc" id="atextures_8c_html_adbd679012a76d50d4ef60aaca9b134cc"><div class="ttname"><a href="textures_8c.html#adbd679012a76d50d4ef60aaca9b134cc">D_020032EC</a></div><div class="ttdeci">MenuTexture D_020032EC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3077</div></div>
-<div class="ttc" id="atextures_8c_html_adde0752133605c256d7e4b20fb46baae"><div class="ttname"><a href="textures_8c.html#adde0752133605c256d7e4b20fb46baae">D_02003D3C</a></div><div class="ttdeci">MenuTexture D_02003D3C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3671</div></div>
-<div class="ttc" id="atextures_8c_html_addfc1cb8063c70ea9e4defd27b172758"><div class="ttname"><a href="textures_8c.html#addfc1cb8063c70ea9e4defd27b172758">D_02003594</a></div><div class="ttdeci">MenuTexture D_02003594[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3230</div></div>
-<div class="ttc" id="atextures_8c_html_ade1770e8fa37088fa81e58a666022375"><div class="ttname"><a href="textures_8c.html#ade1770e8fa37088fa81e58a666022375">D_020024DC</a></div><div class="ttdeci">MenuTexture D_020024DC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2267</div></div>
-<div class="ttc" id="atextures_8c_html_adf852ba895eb5965bb35f5f64b68faf1"><div class="ttname"><a href="textures_8c.html#adf852ba895eb5965bb35f5f64b68faf1">D_02003C4C</a></div><div class="ttdeci">MenuTexture D_02003C4C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3617</div></div>
-<div class="ttc" id="atextures_8c_html_ae1719d313f08a641d3bd0e414b7456c3"><div class="ttname"><a href="textures_8c.html#ae1719d313f08a641d3bd0e414b7456c3">D_02003184</a></div><div class="ttdeci">MenuTexture D_02003184[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2996</div></div>
-<div class="ttc" id="atextures_8c_html_ae26823e74920c311f0671045f9f1339b"><div class="ttname"><a href="textures_8c.html#ae26823e74920c311f0671045f9f1339b">D_02002414</a></div><div class="ttdeci">MenuTexture D_02002414[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2222</div></div>
-<div class="ttc" id="atextures_8c_html_ae55bb2696e9224eaec1504e5f74c5e5f"><div class="ttname"><a href="textures_8c.html#ae55bb2696e9224eaec1504e5f74c5e5f">D_02002874</a></div><div class="ttdeci">MenuTexture D_02002874[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2474</div></div>
-<div class="ttc" id="atextures_8c_html_ae7ceab722febeeb80392e6f68633a272"><div class="ttname"><a href="textures_8c.html#ae7ceab722febeeb80392e6f68633a272">D_0200306C</a></div><div class="ttdeci">MenuTexture D_0200306C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2933</div></div>
-<div class="ttc" id="atextures_8c_html_aea45bc274dd9b8c313e7c272d5f74e72"><div class="ttname"><a href="textures_8c.html#aea45bc274dd9b8c313e7c272d5f74e72">D_0200383C</a></div><div class="ttdeci">MenuTexture D_0200383C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3383</div></div>
-<div class="ttc" id="atextures_8c_html_aeb29a5a65fb06f7654433d022ebdf06e"><div class="ttname"><a href="textures_8c.html#aeb29a5a65fb06f7654433d022ebdf06e">D_0200338C</a></div><div class="ttdeci">MenuTexture D_0200338C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3113</div></div>
-<div class="ttc" id="atextures_8c_html_aec0ebfe3cae8f92ff778a58c184d777c"><div class="ttname"><a href="textures_8c.html#aec0ebfe3cae8f92ff778a58c184d777c">D_0200405C</a></div><div class="ttdeci">MenuTexture D_0200405C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3851</div></div>
-<div class="ttc" id="atextures_8c_html_aec1ad98806ee41e7fda05ae383060fb9"><div class="ttname"><a href="textures_8c.html#aec1ad98806ee41e7fda05ae383060fb9">D_0200239C</a></div><div class="ttdeci">MenuTexture D_0200239C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2195</div></div>
-<div class="ttc" id="atextures_8c_html_aec60a487398447a959b24f5018749c99"><div class="ttname"><a href="textures_8c.html#aec60a487398447a959b24f5018749c99">D_020026BC</a></div><div class="ttdeci">MenuTexture D_020026BC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2375</div></div>
-<div class="ttc" id="atextures_8c_html_af097dc86eb636f5d1497538bba2f51b9"><div class="ttname"><a href="textures_8c.html#af097dc86eb636f5d1497538bba2f51b9">D_020026E4</a></div><div class="ttdeci">MenuTexture D_020026E4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2384</div></div>
-<div class="ttc" id="atextures_8c_html_af0b159be2b6d07d22fa633b09c54580e"><div class="ttname"><a href="textures_8c.html#af0b159be2b6d07d22fa633b09c54580e">D_02002F2C</a></div><div class="ttdeci">MenuTexture D_02002F2C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2861</div></div>
-<div class="ttc" id="atextures_8c_html_af0f726b84ff4fb644e41119415e625cf"><div class="ttname"><a href="textures_8c.html#af0f726b84ff4fb644e41119415e625cf">D_0200234C</a></div><div class="ttdeci">MenuTexture D_0200234C[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2177</div></div>
-<div class="ttc" id="atextures_8c_html_af17eaae50fe51aa1d65152438a90d1ba"><div class="ttname"><a href="textures_8c.html#af17eaae50fe51aa1d65152438a90d1ba">D_02003C74</a></div><div class="ttdeci">MenuTexture D_02003C74[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3626</div></div>
-<div class="ttc" id="atextures_8c_html_af2ffa7e21b32df198f55f0d0320acbec"><div class="ttname"><a href="textures_8c.html#af2ffa7e21b32df198f55f0d0320acbec">D_02003724</a></div><div class="ttdeci">MenuTexture D_02003724[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3320</div></div>
-<div class="ttc" id="atextures_8c_html_af40c0ca48189125bfeac5b0611024eb9"><div class="ttname"><a href="textures_8c.html#af40c0ca48189125bfeac5b0611024eb9">D_020038B4</a></div><div class="ttdeci">MenuTexture D_020038B4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3410</div></div>
-<div class="ttc" id="atextures_8c_html_af463391d23200b0cae69cbbe1452035b"><div class="ttname"><a href="textures_8c.html#af463391d23200b0cae69cbbe1452035b">D_020037EC</a></div><div class="ttdeci">MenuTexture D_020037EC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3365</div></div>
-<div class="ttc" id="atextures_8c_html_af4bb5e175604f0c0aebfe9e9cb26626e"><div class="ttname"><a href="textures_8c.html#af4bb5e175604f0c0aebfe9e9cb26626e">D_02003134</a></div><div class="ttdeci">MenuTexture D_02003134[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2978</div></div>
-<div class="ttc" id="atextures_8c_html_af5a242c43e39e6603afbbf415854a3d1"><div class="ttname"><a href="textures_8c.html#af5a242c43e39e6603afbbf415854a3d1">D_02002EB4</a></div><div class="ttdeci">MenuTexture D_02002EB4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2834</div></div>
-<div class="ttc" id="atextures_8c_html_af627380ae29646f143a2f3bfe408bdf0"><div class="ttname"><a href="textures_8c.html#af627380ae29646f143a2f3bfe408bdf0">D_02002FA4</a></div><div class="ttdeci">MenuTexture D_02002FA4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2888</div></div>
-<div class="ttc" id="atextures_8c_html_af9254b7a15078281c16e5a8c1c96fa30"><div class="ttname"><a href="textures_8c.html#af9254b7a15078281c16e5a8c1c96fa30">D_02002FCC</a></div><div class="ttdeci">MenuTexture D_02002FCC[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2897</div></div>
-<div class="ttc" id="atextures_8c_html_af93c685345db8c2fa84ef8552ccc4c8b"><div class="ttname"><a href="textures_8c.html#af93c685345db8c2fa84ef8552ccc4c8b">D_020025A4</a></div><div class="ttdeci">MenuTexture D_020025A4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2312</div></div>
-<div class="ttc" id="atextures_8c_html_afa7425861a4d1191fac67c8fca4f9a58"><div class="ttname"><a href="textures_8c.html#afa7425861a4d1191fac67c8fca4f9a58">D_02003AE4</a></div><div class="ttdeci">MenuTexture D_02003AE4[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:3536</div></div>
-<div class="ttc" id="atextures_8c_html_afac089012b6e66022aaa296730d7b0e4"><div class="ttname"><a href="textures_8c.html#afac089012b6e66022aaa296730d7b0e4">D_02004534</a></div><div class="ttdeci">MenuTexture D_02004534[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:4130</div></div>
-<div class="ttc" id="atextures_8c_html_afb1452a02c80556d8e95cbbe7fe465cf"><div class="ttname"><a href="textures_8c.html#afb1452a02c80556d8e95cbbe7fe465cf">D_02002194</a></div><div class="ttdeci">MenuTexture D_02002194[2]</div><div class="ttdoc">unknown MenuTexture</div><div class="ttdef"><b>Definition</b> textures.c:2078</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a60009b231d11157f9e03570614bab8b5" name="a60009b231d11157f9e03570614bab8b5"></a>
@@ -14228,6 +14029,34 @@ Here is the caller graph for this function:</div>
 <div class="line">    <span class="stringliteral">&quot;CONTINUE GAME&quot;</span>, <span class="stringliteral">&quot;RETRY&quot;</span>, <span class="stringliteral">&quot;COURSE CHANGE&quot;</span>, <span class="stringliteral">&quot;DRIVER CHANGE&quot;</span>, <span class="stringliteral">&quot;QUIT&quot;</span>, <span class="stringliteral">&quot;REPLAY&quot;</span>, <span class="stringliteral">&quot;SAVE GHOST&quot;</span>,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a3476b052d43fdcbf9e8c032cd6d3f5e6" name="a3476b052d43fdcbf9e8c032cd6d3f5e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3476b052d43fdcbf9e8c032cd6d3f5e6">&#9670;&#160;</a></span>gTransitionDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">u32 gTransitionDuration[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab013e576dc5a54cbbd86b58b3b69e900" name="ab013e576dc5a54cbbd86b58b3b69e900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab013e576dc5a54cbbd86b58b3b69e900">&#9670;&#160;</a></span>gTransitionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s8 gTransitionType[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="abd5d24c826f7fa0e334dd23690f689a8" name="abd5d24c826f7fa0e334dd23690f689a8"></a>

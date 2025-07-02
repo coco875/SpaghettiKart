@@ -8,6 +8,7 @@ var structItemProbabilities =
     [ "fakeItemBox", "structItemProbabilities.html#ae0723816bc40cff491d514e256e54618", null ],
     [ "greenShell", "structItemProbabilities.html#a40d9132215d0c6f557f86e1b302c695a", null ],
     [ "mushroom", "structItemProbabilities.html#a0d9a0fc2bd984a13b62af2e803ab9777", null ],
+    [ "none", "structItemProbabilities.html#a387ef98d6fabfdea00f95643f8783c1c", null ],
     [ "redShell", "structItemProbabilities.html#a7f52ba01a6dd55c6d00e88983cd1b1f0", null ],
     [ "star", "structItemProbabilities.html#a2006036fa9258fc207d5eeff0023c400", null ],
     [ "superMushroom", "structItemProbabilities.html#a9c98281275afbf7f7c7358cf874dc535", null ],

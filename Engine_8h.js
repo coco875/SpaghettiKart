@@ -11,6 +11,7 @@ var Engine_8h =
     [ "GameEngine_LoadBank", "Engine_8h.html#a6efd084dccf3fe3a1293f6c86d2d45ed", null ],
     [ "GameEngine_LoadSequence", "Engine_8h.html#ac7bc08bf26369dc0cacc664b072a427f", null ],
     [ "GameEngine_ProcessGfxCommands", "Engine_8h.html#a46ad9315bfdcb31c03bf3541a1fb935f", null ],
+    [ "GameEngine_ResourceGetTexTypeByName", "Engine_8h.html#a8da2f86fab143dd6c2be01e2265264e7", null ],
     [ "GameEngine_UnloadBank", "Engine_8h.html#a2cade37b28aec2f0c4e7b546a12939f4", null ],
     [ "GameEngine_UnloadSequence", "Engine_8h.html#a090be9f36d74b54951798478450cf472", null ],
     [ "OTRCalculateCenterOfAreaFromLeftEdge", "Engine_8h.html#acb7976888628f12ad709757f72eabffb", null ],

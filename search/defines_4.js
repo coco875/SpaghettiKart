@@ -72,5 +72,6 @@ var searchData=
   ['dmem_5fbuf_5fsize_69',['DMEM_BUF_SIZE',['../mixer_8c.html#ad15aafa36ae4106e1bb5a20d9aad1c3b',1,'mixer.c']]],
   ['double_5fsize_5fon_5f64_5fbit_70',['DOUBLE_SIZE_ON_64_BIT',['../mk64_8h.html#a51ce46b2d0444f5227456740ff11f1ec',1,'mk64.h']]],
   ['draw_5fcode_71',['DRAW_CODE',['../crash__screen_8c.html#a6e86d9bd5fab8cd3013afe8a9d74d1dd',1,'crash_screen.c']]],
-  ['dvdl_72',['DVDL',['../debug_8h.html#a24dcc0e2be4e5fd7da6da57d3477edea',1,'debug.h']]]
+  ['drifting_5feffect_72',['DRIFTING_EFFECT',['../defines_8h.html#a3e226e3ad50d318aa0e7dfa1be372961',1,'defines.h']]],
+  ['dvdl_73',['DVDL',['../debug_8h.html#a24dcc0e2be4e5fd7da6da57d3477edea',1,'debug.h']]]
 ];

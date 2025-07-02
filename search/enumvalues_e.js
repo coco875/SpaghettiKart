@@ -31,6 +31,12 @@ var searchData=
   ['player_5ftwo_28',['PLAYER_TWO',['../defines_8h.html#a698be281bf8b3216136b9440f534ca11aa494501c3a6f919c22d62a1114dafa1c',1,'defines.h']]],
   ['playeranimationdata_29',['PlayerAnimationData',['../namespaceMK64.html#a7bd07479273b52e702ac4baf9081791dac6c7b1a18bc3d7f3a74ea89d6c704288',1,'MK64']]],
   ['podium_5fceremony_30',['PODIUM_CEREMONY',['../classOBombKart.html#a8e4601861010249f2213d909b9daa116aa882ef61deec707c8d5b3a4555940469',1,'OBombKart::PODIUM_CEREMONY'],['../classOCheepCheep.html#ab849039ff9800afd54d47f8d97a14517a00d203c563119c842e7f1a01e3843b53',1,'OCheepCheep::PODIUM_CEREMONY'],['../classOTrophy.html#a00b69561b52ab9167e373ce37702aea0a6b21fcd9cacc074692728f2568c7883e',1,'OTrophy::PODIUM_CEREMONY']]],
-  ['pop_5fmatrix_31',['POP_MATRIX',['../animation_8h.html#a52e412534f1af21caf39f50ea61280cea5ddedc4a6115d6b8a69589e57bdadd69',1,'animation.h']]],
-  ['purple_32',['Purple',['../namespaceUIWidgets.html#ab518b3979a369a95a6e490c6d8f87d26a2b67f0b08aa6a5047d2ef6a161a9e44e',1,'UIWidgets']]]
+  ['pool_5f1_5fparticle_5ftype_5f4_31',['POOL_1_PARTICLE_TYPE_4',['../common__structs_8h.html#a716891f13e6eacddeab1f963e3cf858aa124baea464ffe15e8cb7d48bec8ebd63',1,'common_structs.h']]],
+  ['pool_5f1_5fparticle_5ftype_5f5_32',['POOL_1_PARTICLE_TYPE_5',['../common__structs_8h.html#a716891f13e6eacddeab1f963e3cf858aa5dcea5928fbab8cff099d67dd8a6f66d',1,'common_structs.h']]],
+  ['pool_5f1_5fparticle_5ftype_5f6_33',['POOL_1_PARTICLE_TYPE_6',['../common__structs_8h.html#a716891f13e6eacddeab1f963e3cf858aa0ce72cb679e628d28a5433f17c6837e2',1,'common_structs.h']]],
+  ['pool_5f1_5fparticle_5ftype_5f7_34',['POOL_1_PARTICLE_TYPE_7',['../common__structs_8h.html#a716891f13e6eacddeab1f963e3cf858aa1ce76ae7bac0f45e3071bf6fe4d470b3',1,'common_structs.h']]],
+  ['pool_5f1_5fparticle_5ftype_5f8_35',['POOL_1_PARTICLE_TYPE_8',['../common__structs_8h.html#a716891f13e6eacddeab1f963e3cf858aae222346dd52faec867d1443d15eaceb3',1,'common_structs.h']]],
+  ['pool_5f1_5fparticle_5ftype_5f9_36',['POOL_1_PARTICLE_TYPE_9',['../common__structs_8h.html#a716891f13e6eacddeab1f963e3cf858aa447676bd34a11ca7c6194bffd8eacd9d',1,'common_structs.h']]],
+  ['pop_5fmatrix_37',['POP_MATRIX',['../animation_8h.html#a52e412534f1af21caf39f50ea61280cea5ddedc4a6115d6b8a69589e57bdadd69',1,'animation.h']]],
+  ['purple_38',['Purple',['../namespaceUIWidgets.html#ab518b3979a369a95a6e490c6d8f87d26a2b67f0b08aa6a5047d2ef6a161a9e44e',1,'UIWidgets']]]
 ];

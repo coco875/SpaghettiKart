@@ -123,9 +123,10 @@ var searchData=
   ['cpu_5fstrategy_5fwait_5fend_5fboo_120',['CPU_STRATEGY_WAIT_END_BOO',['../code__80005FD0_8h.html#a6a3987fc720b4d6bdb1566d092553bcaa23e89ccc1e32e224b2fde1d4b0bf0f26',1,'code_80005FD0.h']]],
   ['cpu_5fstrategy_5fwait_5finit_5fbanana_5fbunch_121',['CPU_STRATEGY_WAIT_INIT_BANANA_BUNCH',['../code__80005FD0_8h.html#a6a3987fc720b4d6bdb1566d092553bcaa2e0e4ccece366f65c620c7c7c8ab1645',1,'code_80005FD0.h']]],
   ['cpu_5fstrategy_5fwait_5fnext_5fitem_122',['CPU_STRATEGY_WAIT_NEXT_ITEM',['../code__80005FD0_8h.html#a6a3987fc720b4d6bdb1566d092553bcaa09738f0b6759abc88eb2863db2418153',1,'code_80005FD0.h']]],
-  ['credits_123',['CREDITS',['../classOPenguin.html#a48226183c47973cde1507a8b94544887a9a7eb7361d9670d8e12a4ea2dafa15e5',1,'OPenguin']]],
-  ['crush_124',['CRUSH',['../classABowserStatue.html#abec00f96819a2d47146b6c8fb1bef31da18a08e56e0d44bac31f810e4c4bb23ce',1,'ABowserStatue']]],
-  ['cutscene_125',['Cutscene',['../namespaceMK64.html#a7bd07479273b52e702ac4baf9081791dacc0fb4be485eda00316d2aa8284ca80e',1,'MK64']]],
-  ['cw_126',['CW',['../classOBombKart.html#a8e4601861010249f2213d909b9daa116ab2ccc83b3e49cbb9771e6ab10354dba1',1,'OBombKart']]],
-  ['cyan_127',['Cyan',['../namespaceUIWidgets.html#ab518b3979a369a95a6e490c6d8f87d26aa132c584cd3ae34427f723222beb7423',1,'UIWidgets']]]
+  ['cpu_5ftable_123',['CPU_TABLE',['../update__objects_8c.html#a983c7e9680b59aebe0e1403f7beed001a2b4b953457c439da73d1b4fda956296e',1,'update_objects.c']]],
+  ['credits_124',['CREDITS',['../classOPenguin.html#a48226183c47973cde1507a8b94544887a9a7eb7361d9670d8e12a4ea2dafa15e5',1,'OPenguin']]],
+  ['crush_125',['CRUSH',['../classABowserStatue.html#abec00f96819a2d47146b6c8fb1bef31da18a08e56e0d44bac31f810e4c4bb23ce',1,'ABowserStatue']]],
+  ['cutscene_126',['Cutscene',['../namespaceMK64.html#a7bd07479273b52e702ac4baf9081791dacc0fb4be485eda00316d2aa8284ca80e',1,'MK64']]],
+  ['cw_127',['CW',['../classOBombKart.html#a8e4601861010249f2213d909b9daa116ab2ccc83b3e49cbb9771e6ab10354dba1',1,'OBombKart']]],
+  ['cyan_128',['Cyan',['../namespaceUIWidgets.html#ab518b3979a369a95a6e490c6d8f87d26aa132c584cd3ae34427f723222beb7423',1,'UIWidgets']]]
 ];

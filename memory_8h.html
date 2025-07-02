@@ -114,10 +114,11 @@ $(function(){initNavTree('memory_8h.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="common__structs_8h_source.html">common_structs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="course__offsets_8h_source.html">course_offsets.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for memory.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="memory_8h__incl.svg" width="166" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="memory_8h__incl.svg" width="647" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="memory_8h_source.html">Go to the source code of this file.</a></p>
@@ -170,6 +171,8 @@ Functions</h2></td></tr>
 <tr class="separator:acfa1920251f9853845fd01e205c02345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa451ab6cba53432f3d979f493e148010" id="r_aa451ab6cba53432f3d979f493e148010"><td class="memItemLeft" align="right" valign="top">Gfx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa451ab6cba53432f3d979f493e148010">segmented_gfx_to_virtual</a> (const void *)</td></tr>
 <tr class="separator:aa451ab6cba53432f3d979f493e148010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcad15cde6603a7c29ee6c9133da317b" id="r_afcad15cde6603a7c29ee6c9133da317b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcad15cde6603a7c29ee6c9133da317b">replace_segmented_textures_with_o2r_textures</a> (Gfx *gfx, const <a class="el" href="structcourse__texture.html">course_texture</a> *textures)</td></tr>
+<tr class="separator:afcad15cde6603a7c29ee6c9133da317b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c0c87d5c791d9405698582f9128f4ec" id="r_a7c0c87d5c791d9405698582f9128f4ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c0c87d5c791d9405698582f9128f4ec">move_segment_table_to_dmem</a> (void)</td></tr>
 <tr class="separator:a7c0c87d5c791d9405698582f9128f4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21fe0071920d58ced611cf984996eab8" id="r_a21fe0071920d58ced611cf984996eab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21fe0071920d58ced611cf984996eab8">initialize_memory_pool</a> (void)</td></tr>
@@ -213,8 +216,8 @@ Functions</h2></td></tr>
 <tr class="separator:a871b62b55eca3e10de592b1b09ac1ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7eede738f2a0af1893bb5e5c5e52dca" id="r_ab7eede738f2a0af1893bb5e5c5e52dca"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7eede738f2a0af1893bb5e5c5e52dca">func_802A8348</a> (s32, s32, s32)</td></tr>
 <tr class="separator:ab7eede738f2a0af1893bb5e5c5e52dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cef615dd2798a4c87031a8b4f9b7f17" id="r_a8cef615dd2798a4c87031a8b4f9b7f17"><td class="memItemLeft" align="right" valign="top">u8 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cef615dd2798a4c87031a8b4f9b7f17">dma_textures</a> (const char *, size_t, size_t)</td></tr>
-<tr class="separator:a8cef615dd2798a4c87031a8b4f9b7f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56dd580b5f9113b83709d1f11181e6a7" id="r_a56dd580b5f9113b83709d1f11181e6a7"><td class="memItemLeft" align="right" valign="top">u8 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56dd580b5f9113b83709d1f11181e6a7">dma_textures</a> (const char *texture, size_t arg1, size_t arg2)</td></tr>
+<tr class="separator:a56dd580b5f9113b83709d1f11181e6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3291d400b4e265559e894e400cdea4ae" id="r_a3291d400b4e265559e894e400cdea4ae"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3291d400b4e265559e894e400cdea4ae">MIO0_0F</a> (u8 *, uintptr_t, uintptr_t)</td></tr>
 <tr class="separator:a3291d400b4e265559e894e400cdea4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21fe83456f822726fd10e0b190923172" id="r_a21fe83456f822726fd10e0b190923172"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21fe83456f822726fd10e0b190923172">func_802A8844</a> (void)</td></tr>
@@ -439,8 +442,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8cef615dd2798a4c87031a8b4f9b7f17" name="a8cef615dd2798a4c87031a8b4f9b7f17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cef615dd2798a4c87031a8b4f9b7f17">&#9670;&#160;</a></span>dma_textures()</h2>
+<a id="a56dd580b5f9113b83709d1f11181e6a7" name="a56dd580b5f9113b83709d1f11181e6a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56dd580b5f9113b83709d1f11181e6a7">&#9670;&#160;</a></span>dma_textures()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -465,12 +468,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8h_a8cef615dd2798a4c87031a8b4f9b7f17_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8h_a56dd580b5f9113b83709d1f11181e6a7_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8h_a8cef615dd2798a4c87031a8b4f9b7f17_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8h_a56dd580b5f9113b83709d1f11181e6a7_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1038,6 +1041,37 @@ Here is the caller graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8h_a7c0c87d5c791d9405698582f9128f4ec_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="afcad15cde6603a7c29ee6c9133da317b" name="afcad15cde6603a7c29ee6c9133da317b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcad15cde6603a7c29ee6c9133da317b">&#9670;&#160;</a></span>replace_segmented_textures_with_o2r_textures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void replace_segmented_textures_with_o2r_textures </td>
+          <td>(</td>
+          <td class="paramtype">Gfx *</td>          <td class="paramname"><span class="paramname"><em>gfx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcourse__texture.html">course_texture</a> *</td>          <td class="paramname"><span class="paramname"><em>textures</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="memory_8h_afcad15cde6603a7c29ee6c9133da317b_cgraph.svg" width="575" height="92"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8h_afcad15cde6603a7c29ee6c9133da317b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

@@ -43,7 +43,7 @@ var searchData=
   ['blinktimer_40',['blinkTimer',['../structhud__player.html#addcf13b10195eedb4d4406f7cfc0bc23',1,'hud_player']]],
   ['block_5ffort_5fdls_41',['block_fort_dls',['../BlockFort_8cpp.html#ae3b44e5ad8a16cd087a7d3c3f6b7cbaf',1,'BlockFort.cpp']]],
   ['block_5ffort_5ftextures_42',['block_fort_textures',['../BlockFort_8cpp.html#abb217b645e20fd1fe7145faff9606faf',1,'block_fort_textures:&#160;BlockFort.cpp'],['../BlockFort_8h.html#abb217b645e20fd1fe7145faff9606faf',1,'block_fort_textures:&#160;BlockFort.cpp']]],
-  ['blue_43',['blue',['../structRGBA5551.html#a9bf78153ebe70ec31632082c59c89eab',1,'RGBA5551::blue'],['../structRGBA16.html#a2732f22bd8fb457c86798d162fa8bbdb',1,'RGBA16::blue']]],
+  ['blue_43',['blue',['../structRGBA5551.html#a9bf78153ebe70ec31632082c59c89eab',1,'RGBA5551::blue'],['../structUnkPlayerStruct258.html#a5bdee580e21d26160cc970b7a46f0a2b',1,'UnkPlayerStruct258::blue'],['../structRGBA16.html#a2732f22bd8fb457c86798d162fa8bbdb',1,'RGBA16::blue']]],
   ['bluecollision_44',['BlueCollision',['../classEditor_1_1Gizmo.html#ae09acf8cb40a615c9fc0540c09b5795a',1,'Editor::Gizmo']]],
   ['bluerotatecollision_45',['BlueRotateCollision',['../classEditor_1_1Gizmo.html#a056836df83e3729555600c491fc6d956',1,'Editor::Gizmo']]],
   ['bluescalecollision_46',['BlueScaleCollision',['../classEditor_1_1Gizmo.html#af664f0afe82884440999441caa26753a',1,'Editor::Gizmo']]],

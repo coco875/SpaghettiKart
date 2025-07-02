@@ -132,7 +132,7 @@ $(function(){initNavTree('memory_8c.html',''); initResizable(true); });
 <code>#include &quot;<a class="el" href="all__course__model_8h_source.html">courses/all_course_model.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="all__course__offsets_8h_source.html">courses/all_course_offsets.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="defines_8h_source.html">defines.h</a>&quot;</code><br />
-<code>#include &lt;<a class="el" href="course__offsets_8h_source.html">course_offsets.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="course__offsets_8h_source.html">course_offsets.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Course_8h_source.html">engine/courses/Course.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="stdio_8h_source.html">stdio.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="Game_8h_source.html">port/Game.h</a>&quot;</code><br />
@@ -180,6 +180,10 @@ Functions</h2></td></tr>
 <tr class="separator:a77ae507b52deee791759fdecd862a956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f7f3165d1a5092720aa26d9502bb678" id="r_a8f7f3165d1a5092720aa26d9502bb678"><td class="memItemLeft" align="right" valign="top">Gfx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f7f3165d1a5092720aa26d9502bb678">segmented_gfx_to_virtual</a> (const void *addr)</td></tr>
 <tr class="separator:a8f7f3165d1a5092720aa26d9502bb678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d05c87787ed9f7836213fabd5902ad8" id="r_a4d05c87787ed9f7836213fabd5902ad8"><td class="memItemLeft" align="right" valign="top">static uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d05c87787ed9f7836213fabd5902ad8">get_texture2</a> (size_t offset, const <a class="el" href="structcourse__texture.html">course_texture</a> *textures)</td></tr>
+<tr class="separator:a4d05c87787ed9f7836213fabd5902ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcad15cde6603a7c29ee6c9133da317b" id="r_afcad15cde6603a7c29ee6c9133da317b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcad15cde6603a7c29ee6c9133da317b">replace_segmented_textures_with_o2r_textures</a> (Gfx *gfx, const <a class="el" href="structcourse__texture.html">course_texture</a> *textures)</td></tr>
+<tr class="separator:afcad15cde6603a7c29ee6c9133da317b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c0c87d5c791d9405698582f9128f4ec" id="r_a7c0c87d5c791d9405698582f9128f4ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c0c87d5c791d9405698582f9128f4ec">move_segment_table_to_dmem</a> (void)</td></tr>
 <tr class="separator:a7c0c87d5c791d9405698582f9128f4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a608e942142c4d0fae59c75c891f0bc1c" id="r_a608e942142c4d0fae59c75c891f0bc1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a608e942142c4d0fae59c75c891f0bc1c">initialize_memory_pool</a> ()</td></tr>
@@ -308,8 +312,8 @@ Variables</h2></td></tr>
 <tr class="separator:a2c62cbc3dde8015cb2cda46e7f5efeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a100da07df567da24c0deb145de8094" id="r_a4a100da07df567da24c0deb145de8094"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a100da07df567da24c0deb145de8094">sPackedSeekPosition</a></td></tr>
 <tr class="separator:a4a100da07df567da24c0deb145de8094"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a779cd7fca0281632f41c15dbab8b52b2" id="r_a779cd7fca0281632f41c15dbab8b52b2"><td class="memItemLeft" align="right" valign="top">static u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a779cd7fca0281632f41c15dbab8b52b2">sMemoryPool</a> [0xFFFFF]</td></tr>
-<tr class="separator:a779cd7fca0281632f41c15dbab8b52b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858b086d3b0b10b5ba111676f16e970c" id="r_a858b086d3b0b10b5ba111676f16e970c"><td class="memItemLeft" align="right" valign="top">static u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a858b086d3b0b10b5ba111676f16e970c">sMemoryPool</a> [0xFFFFFFF]</td></tr>
+<tr class="separator:a858b086d3b0b10b5ba111676f16e970c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fbe607cbb34960f0419dcdd1f76e1e1" id="r_a8fbe607cbb34960f0419dcdd1f76e1e1"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fbe607cbb34960f0419dcdd1f76e1e1">sPoolEnd</a> = <a class="el" href="memory__pool_8c.html#afd9f792a1f297c9829bb3d02f883427c">sMemoryPool</a> + sizeof(<a class="el" href="memory__pool_8c.html#afd9f792a1f297c9829bb3d02f883427c">sMemoryPool</a>)</td></tr>
 <tr class="separator:a8fbe607cbb34960f0419dcdd1f76e1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71ce9258e8a04f5657f17394b9fa8ac9" id="r_a71ce9258e8a04f5657f17394b9fa8ac9"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71ce9258e8a04f5657f17394b9fa8ac9">sPoolFreeSpace</a></td></tr>
@@ -928,6 +932,40 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a4d05c87787ed9f7836213fabd5902ad8" name="a4d05c87787ed9f7836213fabd5902ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d05c87787ed9f7836213fabd5902ad8">&#9670;&#160;</a></span>get_texture2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uintptr_t get_texture2 </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcourse__texture.html">course_texture</a> *</td>          <td class="paramname"><span class="paramname"><em>textures</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8c_a4d05c87787ed9f7836213fabd5902ad8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="a608e942142c4d0fae59c75c891f0bc1c" name="a608e942142c4d0fae59c75c891f0bc1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a608e942142c4d0fae59c75c891f0bc1c">&#9670;&#160;</a></span>initialize_memory_pool()</h2>
 
@@ -1296,6 +1334,37 @@ Here is the caller graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8c_a7c0c87d5c791d9405698582f9128f4ec_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="afcad15cde6603a7c29ee6c9133da317b" name="afcad15cde6603a7c29ee6c9133da317b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcad15cde6603a7c29ee6c9133da317b">&#9670;&#160;</a></span>replace_segmented_textures_with_o2r_textures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void replace_segmented_textures_with_o2r_textures </td>
+          <td>(</td>
+          <td class="paramtype">Gfx *</td>          <td class="paramname"><span class="paramname"><em>gfx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcourse__texture.html">course_texture</a> *</td>          <td class="paramname"><span class="paramname"><em>textures</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="memory_8c_afcad15cde6603a7c29ee6c9133da317b_cgraph.svg" width="575" height="92"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="memory_8c_afcad15cde6603a7c29ee6c9133da317b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -2405,8 +2474,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a779cd7fca0281632f41c15dbab8b52b2" name="a779cd7fca0281632f41c15dbab8b52b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a779cd7fca0281632f41c15dbab8b52b2">&#9670;&#160;</a></span>sMemoryPool</h2>
+<a id="a858b086d3b0b10b5ba111676f16e970c" name="a858b086d3b0b10b5ba111676f16e970c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a858b086d3b0b10b5ba111676f16e970c">&#9670;&#160;</a></span>sMemoryPool</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2415,7 +2484,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">u8 sMemoryPool[0xFFFFF]</td>
+          <td class="memname">u8 sMemoryPool[0xFFFFFFF]</td>
         </tr>
       </table>
   </td>
