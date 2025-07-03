@@ -3728,6 +3728,8 @@ void load_track_path(s32 pathIndex) {
             if (!bInvalidPath) {
                 var_v0 = func_80011014(pathDest, path, sp24, pathIndex);
                 gPathCountByPathIndex[pathIndex] = (u16) var_v0;
+            } else {
+                printf("PathTable is invalid. It has %d path points\n  It may also be missing the end tag.\n", i);
             }
         }
     }
