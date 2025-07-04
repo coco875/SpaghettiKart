@@ -244,6 +244,20 @@ void PortMenu::AddSettings() {
                 .DefaultValue(1));
 #endif
 
+    AddWidget(path, "Anisotropic Filtering (AF): %d", WIDGET_CVAR_SLIDER_INT)
+        .CVar(CVAR_ANISOTROPIC_FILTERING)
+        .Callback([](WidgetInfo& info) {
+            Ship::Context::GetInstance()->GetWindow()->SetAnisotropicFilteringLevel(CVarGetInteger(CVAR_ANISOTROPIC_FILTERING, 1));
+        })
+        .Options(
+            IntSliderOptions()
+                .Tooltip("Activates Anisotropic Filtering (AF) from 1x up to 16x, to improve the quality of "
+                         "textures at oblique viewing angles.\n"
+                         "Higher sample count will result in sharper textures at angles, but may reduce performance.")
+                .Min(1)
+                .Max(16)
+                .DefaultValue(1));
+
     AddWidget(path, "Current FPS: %d", WIDGET_CVAR_SLIDER_INT)
         .CVar("gInterpolationFPS")
         .Callback([](WidgetInfo& info) {
