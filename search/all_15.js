@@ -948,7 +948,7 @@ var searchData=
   ['star_945',['star',['../structItemProbabilities.html#a2006036fa9258fc207d5eeff0023c400',1,'ItemProbabilities']]],
   ['star_5fcup_946',['STAR_CUP',['../defines_8h.html#ae701751e4c86a447b2b7d96715151241a2b273443feed8d212377eafc452015b8',1,'defines.h']]],
   ['star_5feffect_947',['STAR_EFFECT',['../defines_8h.html#a8162db60017841c732d51d0c3a4a5269',1,'defines.h']]],
-  ['star_5feffect_5fduration_948',['STAR_EFFECT_DURATION',['../defines_8h.html#a9b3de65f2f2b99a397c6fd5faa4952e1',1,'defines.h']]],
+  ['star_5feffect_5fduration_948',['STAR_EFFECT_DURATION',['../defines_8h.html#a9b3de65f2f2b99a397c6fd5faa4952e1',1,'STAR_EFFECT_DURATION:&#160;defines.h'],['../defines_8h.html#a9b3de65f2f2b99a397c6fd5faa4952e1',1,'STAR_EFFECT_DURATION:&#160;defines.h']]],
   ['star_5fsound_5feffect_949',['STAR_SOUND_EFFECT',['../defines_8h.html#aee266a50899889872809281fc533bf6b',1,'defines.h']]],
   ['stardata_950',['StarData',['../structStarData.html',1,'']]],
   ['staremitter_951',['StarEmitter',['../classStarEmitter.html',1,'StarEmitter'],['../classStarEmitter.html#ab2c28241db65e861db8972a103b334aa',1,'StarEmitter::StarEmitter()']]],

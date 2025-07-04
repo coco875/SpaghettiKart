@@ -1,5 +1,10 @@
 var NAVTREEINDEX68 =
 {
+"structEuAudioCmd.html#a73b7194b0b4a3f110110489703db82df":[11,0,115,12],
+"structEuAudioCmd.html#a7471e14ccc5988f858400815f7cc791e":[11,0,115,8],
+"structEuAudioCmd.html#a7ba659e77d517bec320acfefdbb45b70":[11,0,115,6],
+"structEuAudioCmd.html#a95993d0cb757c03dcee975f5c3fd86c7":[11,0,115,4],
+"structEuAudioCmd.html#a97a7720c1b2c0d5571b907b1d0e9869a":[11,0,115,0],
 "structEuAudioCmd.html#a9adf9f827ee4c4ba0c92dfc2d6b80d92":[11,0,115,5],
 "structEuAudioCmd.html#abd560698a2e9a6552341de8fafee0ede":[11,0,115,1],
 "structEuAudioCmd.html#af56a649f0c5d7031dea8e604793fa1e9":[11,0,115,11],
@@ -244,10 +249,5 @@ var NAVTREEINDEX68 =
 "structKiwanoFruit.html#ac3f39d0c46c091b04cb44a6dbc51a478":[11,0,146,6],
 "structKiwanoFruit.html#adf70a7f3dc53798340be6b62a77cdf43":[11,0,146,7],
 "structKiwanoFruit.html#af729769e8645be38eacc0d73e46f442f":[11,0,146,5],
-"structM64ScriptState.html":[11,0,151],
-"structM64ScriptState.html#a1aae4070b924b65d1a69253f2f5bf565":[11,0,151,0],
-"structM64ScriptState.html#a3722f02366a20f7f2c075c03af593bcc":[11,0,151,2],
-"structM64ScriptState.html#a55c9181d0f0d8aa6001e77ea57b330b1":[11,0,151,3],
-"structM64ScriptState.html#ac0b70c21099f0e964bb0e294ef4cb74f":[11,0,151,1],
-"structMK64_1_1MinimapTexture.html":[10,0,5,5]
+"structM64ScriptState.html":[11,0,151]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"bowsers__castle__vertices_8h_source.html":[12,0,2,0,14],
-"box__truck_2render_8inc_8c.html":[12,0,3,0,2,0],
 "box__truck_2render_8inc_8c.html#a959b9756711fe631bb33a7870be5937c":[12,0,3,0,2,0,0],
 "box__truck_2render_8inc_8c_source.html":[12,0,3,0,2,0],
 "bstring_8h.html":[12,0,3,9,31],
@@ -126,7 +124,6 @@ var NAVTREEINDEX7 =
 "ceremony__and__credits_8c.html#a062488170301821c06a4e2c38ec1c201":[12,0,3,5,2,52],
 "ceremony__and__credits_8c.html#a06c90172d5b2ac28a3dc1fc564e02feb":[12,0,3,5,2,124],
 "ceremony__and__credits_8c.html#a08e9dc3c81aee6cb8532ff8091549f18":[12,0,3,5,2,142],
-"ceremony__and__credits_8c.html#a09d05c4f13230c6e07b8a43dad3a2a59":[12,0,3,5,2,95],
 "ceremony__and__credits_8c.html#a0a694fdf400ede563edb5c6a1343d07b":[12,0,3,5,2,5],
 "ceremony__and__credits_8c.html#a0cfc0497fcbdbeed3cd13dfcf3607547":[12,0,3,5,2,62],
 "ceremony__and__credits_8c.html#a0e382a2ed277280a209cb2860559ea15":[12,0,3,5,2,85],
@@ -174,6 +171,7 @@ var NAVTREEINDEX7 =
 "ceremony__and__credits_8c.html#a513e36d3f7a9dd44fdb8aae694e2ee16":[12,0,3,5,2,10],
 "ceremony__and__credits_8c.html#a5177f9b023f4f75ab9b0b767b70e2557":[12,0,3,5,2,115],
 "ceremony__and__credits_8c.html#a53bc41b708fd9b7fb8e0b8c3a0ef32e3":[12,0,3,5,2,16],
+"ceremony__and__credits_8c.html#a546dfcebf716759ee6bd1def2ca537f2":[12,0,3,5,2,95],
 "ceremony__and__credits_8c.html#a54d0e7659526c6d13495a4d91c4e528e":[12,0,3,5,2,3],
 "ceremony__and__credits_8c.html#a551da4976d8f8abf7cb191c0bfbef85d":[12,0,3,5,2,121],
 "ceremony__and__credits_8c.html#a55b4e78aa7b5e0205e1c2019aef610ff":[12,0,3,5,2,54],
@@ -249,5 +247,7 @@ var NAVTREEINDEX7 =
 "ceremony__and__credits_8c.html#ae536c5125cf4b0f00a7a986342b8d897":[12,0,3,5,2,116],
 "ceremony__and__credits_8c.html#ae68f2b462a9b90f0a251c466859df0c7":[12,0,3,5,2,31],
 "ceremony__and__credits_8c.html#ae909875fc93fc6b134a8dfd6218bd2ed":[12,0,3,5,2,26],
-"ceremony__and__credits_8c.html#aea394add4c9214deadc2b58b3eedaabd":[12,0,3,5,2,135]
+"ceremony__and__credits_8c.html#aea394add4c9214deadc2b58b3eedaabd":[12,0,3,5,2,135],
+"ceremony__and__credits_8c.html#aed398d4f2353243d48ad2b45d9348964":[12,0,3,5,2,137],
+"ceremony__and__credits_8c.html#aeecbc0801f7140ebd3d6299c73c2a862":[12,0,3,5,2,123]
 };

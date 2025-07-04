@@ -10,8 +10,6 @@ var mk64_8h =
     [ "GET_LOW_S16_OF_32", "mk64_8h.html#a9a7148f465d059060f7d5ede941220ed", null ],
     [ "GET_LOW_U16_OF_32", "mk64_8h.html#a4d89102c02d67844cdc36a19cadc0b85", null ],
     [ "GFX_GET_OPCODE", "mk64_8h.html#a6e3f1e0c50ed96c9874d794db5059917", null ],
-    [ "gMKLoadTextureTile", "mk64_8h.html#a7514fd3bdf4672b67a9e98faab6c4c49", null ],
-    [ "gMKLoadTextureTile_4b", "mk64_8h.html#a486ab40c4578180d2adc43034e977b63", null ],
     [ "MACRO_COLOR_FLAG", "mk64_8h.html#ab34a07fcda62ff7494db5d447db8f436", null ],
     [ "SCREEN_HEIGHT", "mk64_8h.html#a6974d08a74da681b3957b2fead2608b8", null ],
     [ "SCREEN_WIDTH", "mk64_8h.html#a2cd109632a6dcccaa80b43561b1ab700", null ],

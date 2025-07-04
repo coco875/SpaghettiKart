@@ -18,13 +18,11 @@ var searchData=
   ['global_5fasm_15',['GLOBAL_ASM',['../macros_8h.html#a93a390d3f6c6f748f9ce929cf323168a',1,'macros.h']]],
   ['glue_16',['GLUE',['../macros_8h.html#af3ddc5a73ff88a58733f0879ce37196d',1,'macros.h']]],
   ['glue2_17',['GLUE2',['../macros_8h.html#a8aacf963fc7253845c961ed3912d78a2',1,'macros.h']]],
-  ['gmkloadtexturetile_18',['gMKLoadTextureTile',['../mk64_8h.html#a7514fd3bdf4672b67a9e98faab6c4c49',1,'mk64.h']]],
-  ['gmkloadtexturetile_5f4b_19',['gMKLoadTextureTile_4b',['../mk64_8h.html#a486ab40c4578180d2adc43034e977b63',1,'mk64.h']]],
-  ['gobjectparticle1_5fsize_20',['gObjectParticle1_SIZE',['../objects_8h.html#a79d35b578ced171185fe9c36bda0118b',1,'objects.h']]],
-  ['gobjectparticle2_5fsize_21',['gObjectParticle2_SIZE',['../objects_8h.html#a811b7dfa2a561724dbdd568f8f99dd1a',1,'objects.h']]],
-  ['gobjectparticle3_5fsize_22',['gObjectParticle3_SIZE',['../objects_8h.html#ab8eb52623ddafaa738b0234d1f40e446',1,'objects.h']]],
-  ['gobjectparticle4_5fsize_23',['gObjectParticle4_SIZE',['../objects_8h.html#aa0b2f0590bfac947f05d609d8e6e5ed6',1,'objects.h']]],
-  ['gpack_5frgb888_24',['GPACK_RGB888',['../defines_8h.html#a69522ff76a05664bd061ea34b0022a49',1,'defines.h']]],
-  ['grand_5fprix_25',['GRAND_PRIX',['../defines_8h.html#a8243137b0c8b7200c20479738cdbe365',1,'defines.h']]],
-  ['grid_5fsize_26',['GRID_SIZE',['../defines_8h.html#a08246606c233e7785a497c09672f366f',1,'defines.h']]]
+  ['gobjectparticle1_5fsize_18',['gObjectParticle1_SIZE',['../objects_8h.html#a79d35b578ced171185fe9c36bda0118b',1,'objects.h']]],
+  ['gobjectparticle2_5fsize_19',['gObjectParticle2_SIZE',['../objects_8h.html#a811b7dfa2a561724dbdd568f8f99dd1a',1,'objects.h']]],
+  ['gobjectparticle3_5fsize_20',['gObjectParticle3_SIZE',['../objects_8h.html#ab8eb52623ddafaa738b0234d1f40e446',1,'objects.h']]],
+  ['gobjectparticle4_5fsize_21',['gObjectParticle4_SIZE',['../objects_8h.html#aa0b2f0590bfac947f05d609d8e6e5ed6',1,'objects.h']]],
+  ['gpack_5frgb888_22',['GPACK_RGB888',['../defines_8h.html#a69522ff76a05664bd061ea34b0022a49',1,'defines.h']]],
+  ['grand_5fprix_23',['GRAND_PRIX',['../defines_8h.html#a8243137b0c8b7200c20479738cdbe365',1,'defines.h']]],
+  ['grid_5fsize_24',['GRID_SIZE',['../defines_8h.html#a08246606c233e7785a497c09672f366f',1,'defines.h']]]
 ];

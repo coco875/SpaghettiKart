@@ -1,5 +1,10 @@
 var NAVTREEINDEX71 =
 {
+"structProperties.html#a03cd75aab731622f02d631906ab7d481":[11,0,221,7],
+"structProperties.html#a065b83567002440e6f6a7dd133e9939c":[11,0,221,24],
+"structProperties.html#a24374f73c91c6c4f9096690f1baf5d8b":[11,0,221,19],
+"structProperties.html#a2e98c1e2daf66a1c8450e105f7ba5a4b":[11,0,221,6],
+"structProperties.html#a316fd9e1ee2dd9d91994a62086dd079d":[11,0,221,10],
 "structProperties.html#a387dfb070695c9b1e218c5469512bc52":[11,0,221,9],
 "structProperties.html#a4c4b787ed2d18f881ac2ce43a1568660":[11,0,221,2],
 "structProperties.html#a57f5f55c332a9e4a14ab6853352a693c":[11,0,221,21],
@@ -244,10 +249,5 @@ var NAVTREEINDEX71 =
 "structSF64_1_1Vec3s.html#a388c270910ea1d020e85776f08ec6510":[11,0,4,28,2],
 "structSF64_1_1Vec3s.html#adc6534a77ca3c5c5f1783c692d288fe8":[10,0,8,28,3],
 "structSF64_1_1Vec3s.html#adc6534a77ca3c5c5f1783c692d288fe8":[11,0,4,28,3],
-"structSF64_1_1Vec3sData.html":[10,0,8,30],
-"structSF64_1_1Vec3sData.html":[11,0,4,30],
-"structSF64_1_1Vec3sData.html#a62269a03e63d52fa6e380e33b48b0eec":[10,0,8,30,1],
-"structSF64_1_1Vec3sData.html#a62269a03e63d52fa6e380e33b48b0eec":[11,0,4,30,1],
-"structSF64_1_1Vec3sData.html#acb45d28c0563d8ae9ccb782a9d634b75":[10,0,8,30,3],
-"structSF64_1_1Vec3sData.html#acb45d28c0563d8ae9ccb782a9d634b75":[11,0,4,30,3]
+"structSF64_1_1Vec3sData.html":[10,0,8,30]
 };

@@ -95,7 +95,7 @@ var ceremony__and__credits_8c =
     [ "wrap_func_8028100C", "ceremony__and__credits_8c.html#a39be85debf1eb9136b57b7f6faa2a318", null ],
     [ "D_802856B0", "ceremony__and__credits_8c.html#a90b71c3f885a7d2ca209c2d710d37255", null ],
     [ "D_802856B4", "ceremony__and__credits_8c.html#a9f23246e6469d5a406755f02a96b4c5e", null ],
-    [ "D_802856BC", "ceremony__and__credits_8c.html#a09d05c4f13230c6e07b8a43dad3a2a59", null ],
+    [ "D_802856BC", "ceremony__and__credits_8c.html#a546dfcebf716759ee6bd1def2ca537f2", null ],
     [ "D_802856C4", "ceremony__and__credits_8c.html#a0f90b69b7866d17451bccba643391157", null ],
     [ "D_802856C8", "ceremony__and__credits_8c.html#a1525c9cf835854d3415a309ae5309340", null ],
     [ "D_802856DC", "ceremony__and__credits_8c.html#aa541fc201d6e5afd3fea4d074c5db77a", null ],

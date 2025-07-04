@@ -1,8 +1,8 @@
 var effects_8c =
 [
     [ "EFFECT_BLACKLIST_USE_ITEM", "effects_8c.html#a465ee5e517c2e55e1bb1d93f02b45e0b", null ],
-    [ "apply_boo_effect", "effects_8c.html#a0a426d7a6a86f3f43d2d48c0dba16a35", null ],
-    [ "apply_boo_sound_effect", "effects_8c.html#a6e21e42b0229fe1e1829bd8909527e2b", null ],
+    [ "apply_boo_effect", "effects_8c.html#a1a4dae35e70897080437d2f53647bce7", null ],
+    [ "apply_boo_sound_effect", "effects_8c.html#a3bed0c3da44bfea1616d42194ba2f527", null ],
     [ "apply_boost_effect", "effects_8c.html#a16c1b4e4ea9cc5bb21fcc653ea8fbf6d", null ],
     [ "apply_boost_ramp_asphalt_effect", "effects_8c.html#ac55046882f414754683d1b973e064e3c", null ],
     [ "apply_boost_ramp_asphalt_sound_effect", "effects_8c.html#a525127b997f2f6a0a48d4d9ecda6cdbb", null ],
@@ -29,7 +29,7 @@ var effects_8c =
     [ "func_8008C528", "effects_8c.html#a6fc4c8f6786be15941bfce0c8575b7cf", null ],
     [ "func_8008C62C", "effects_8c.html#a471c72ada7ef4c346a9eba5997b1d861", null ],
     [ "func_8008C6D0", "effects_8c.html#ad164a912d7ef76f24e7b5cfb9169c16f", null ],
-    [ "func_8008C73C", "effects_8c.html#af25de8f70a7ecb552619235df793b951", null ],
+    [ "func_8008C73C", "effects_8c.html#acb89ce6ca51659908a598e5da0deeb3e", null ],
     [ "func_8008C8C4", "effects_8c.html#a105203221e314be241a95e006b62ef80", null ],
     [ "func_8008C9EC", "effects_8c.html#a41dee69311b24e28d2d9df5c6499acbf", null ],
     [ "func_8008CDC0", "effects_8c.html#abeb13f8e836713bdee19de586bb6adb9", null ],
@@ -54,9 +54,9 @@ var effects_8c =
     [ "func_8008F494", "effects_8c.html#a71c3c746ea434e798865e3256180ee0a", null ],
     [ "func_8008F5A4", "effects_8c.html#afcf39ca15166fb7561402462930cd979", null ],
     [ "func_8008F86C", "effects_8c.html#ae1bacd987d7f12fc5960f838a7dbe137", null ],
-    [ "func_8008FB30", "effects_8c.html#a46d8d97f33dcfea927972f9c9cb6ece4", null ],
+    [ "func_8008FB30", "effects_8c.html#acf5f63c4161df4bae4d9b0d47492fa75", null ],
     [ "func_8008FC1C", "effects_8c.html#a3e0ed6c7a74b44fb93f8d8c5fd4727a6", null ],
-    [ "func_8008FC64", "effects_8c.html#a0fb4928e7128ee9e78ae7eedb5d2192e", null ],
+    [ "func_8008FC64", "effects_8c.html#a8a9a075cd223847aee7eeb82e05ce907", null ],
     [ "func_8008FCDC", "effects_8c.html#a9543ba376f1aae1af5a00fbf80013c6f", null ],
     [ "func_8008FD4C", "effects_8c.html#a1c7552c4a370cc015c2726e40f1fdb06", null ],
     [ "func_8008FDA8", "effects_8c.html#a4f1f03319c66529aa9beb3d55e9c4e85", null ],
@@ -114,8 +114,8 @@ var effects_8c =
     [ "remove_lightning_effect", "effects_8c.html#a07ab364789868cafd49e8510b238d453", null ],
     [ "D_8018D900", "effects_8c.html#a182b175354c4b3b40e3cbf158e8d6bc3", null ],
     [ "D_8018D920", "effects_8c.html#a2e5bde7c91ceabaa4297a0d204a574bc", null ],
-    [ "D_8018D950", "effects_8c.html#a8eaf5883a76972e83f8fac89a8767311", null ],
-    [ "D_8018D970", "effects_8c.html#aa3486768976d2ca4e3356f7f7a1fac67", null ],
     [ "D_8018D990", "effects_8c.html#a2c7ebbb5b8a5f959ea6c612997ec0456", null ],
+    [ "gPlayerBooEffectStartTime", "effects_8c.html#a34c2e460e9c7318f5336e9fabe8ccea7", null ],
+    [ "gPlayerOtherScreensAlpha", "effects_8c.html#aeede777dd194576c3deab20baac8812b", null ],
     [ "gPlayerStarEffectStartTime", "effects_8c.html#ace36006d53640fd62ef26deb46ccf0fe", null ]
 ];

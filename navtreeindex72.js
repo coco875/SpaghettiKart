@@ -1,5 +1,10 @@
 var NAVTREEINDEX72 =
 {
+"structSF64_1_1Vec3sData.html":[11,0,4,30],
+"structSF64_1_1Vec3sData.html#a62269a03e63d52fa6e380e33b48b0eec":[10,0,8,30,1],
+"structSF64_1_1Vec3sData.html#a62269a03e63d52fa6e380e33b48b0eec":[11,0,4,30,1],
+"structSF64_1_1Vec3sData.html#acb45d28c0563d8ae9ccb782a9d634b75":[10,0,8,30,3],
+"structSF64_1_1Vec3sData.html#acb45d28c0563d8ae9ccb782a9d634b75":[11,0,4,30,3],
 "structSF64_1_1Vec3sData.html#adfcb61335499d1f9b28435d7c5d6dc58":[10,0,8,30,0],
 "structSF64_1_1Vec3sData.html#adfcb61335499d1f9b28435d7c5d6dc58":[11,0,4,30,0],
 "structSF64_1_1Vec3sData.html#afc6ac609c0735afc4d8c6c28c3cad6a4":[10,0,8,30,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX72 =
 "structSoundCharacteristics.html#aa73d78cbb44d656e932ead93f907612a":[11,0,252,12],
 "structSoundCharacteristics.html#ac33e1e3c09646337435bc116839b4c75":[11,0,252,8],
 "structSoundCharacteristics.html#ad543f04b8b3c903dd7b60c8c23dbe9e6":[11,0,252,7],
-"structSoundCharacteristics.html#aef79409427b23e6314bcbe12e4157729":[11,0,252,0],
-"structSoundCharacteristics.html#af61da05719188f6ab5b0bb0fe7765375":[11,0,252,6],
-"structSoundCharacteristics.html#afe6d8a04574b04b7152b25c5afe166bc":[11,0,252,14],
-"structSoundMultiPool.html":[11,0,253],
-"structSoundMultiPool.html#a9a72b154bd09a211baecb8f2976157b4":[11,0,253,0],
-"structSoundMultiPool.html#ae26f6edcb58e56220c5b5a92d42902cd":[11,0,253,2]
+"structSoundCharacteristics.html#aef79409427b23e6314bcbe12e4157729":[11,0,252,0]
 };

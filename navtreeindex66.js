@@ -1,5 +1,10 @@
 var NAVTREEINDEX66 =
 {
+"structALInstrument.html#ac66f9d02bc16b60dc63642a041d07940":[11,0,45,0],
+"structALInstrument.html#ac6fa98c1fca59a01701c2bc5bbe44daf":[11,0,45,8],
+"structALInstrument.html#ae47dcc1b7c69f023f2a3a103d8be0ab0":[11,0,45,10],
+"structALInstrument.html#af08ba88d76d1a98e1d208fa25bded19d":[11,0,45,14],
+"structALInstrument.html#af17c9cdf8bab0d46f033b09143bd1918":[11,0,45,5],
 "structALInstrument.html#afc66acaf3969ce79cc5826f1ecc076e1":[11,0,45,7],
 "structALInstrument.html#afd15fea6296d2f9a4310da1af9b70e6e":[11,0,45,1],
 "structALKeyMap.html":[11,0,46],
@@ -244,10 +249,5 @@ var NAVTREEINDEX66 =
 "structBombKart.html#ad7a1a6a174453a96410a6215a746f343":[11,0,80,6],
 "structBombKartSpawn.html":[11,0,81],
 "structBombKartSpawn.html#a2433b7d49cd9dbe30178490a1c5996a0":[11,0,81,6],
-"structBombKartSpawn.html#a25fe99726407a9478d5993b6344bc382":[11,0,81,0],
-"structBombKartSpawn.html#aa5a1b58b434f18873799513b06f82022":[11,0,81,3],
-"structBombKartSpawn.html#ab18c65ba3270593b6670ef45a16270b5":[11,0,81,5],
-"structBombKartSpawn.html#af1f4926d93bde76f108119f5bc18aff9":[11,0,81,2],
-"structBombKartSpawn.html#af23e6dc210468dbf7b9c256ea8865b87":[11,0,81,1],
-"structBombKartSpawn.html#afd74dec68c253ef7b2f20f5828b64872":[11,0,81,4]
+"structBombKartSpawn.html#a25fe99726407a9478d5993b6344bc382":[11,0,81,0]
 };

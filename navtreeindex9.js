@@ -1,8 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"classABus.html#a72ca8420de7269d6490e0010ba0567c5":[11,0,27,16],
-"classABus.html#a74320f8811f317a821f344241a803957":[11,0,27,11],
-"classABus.html#a78f0864f8c8543a73a2b383062f2667f":[11,0,27,7],
 "classABus.html#a7a21e1500177bc8d10bcdd7fa6147bb1":[11,0,27,19],
 "classABus.html#a7a336a937ab5280dd4ccb38e0367c752":[11,0,27,4],
 "classABus.html#a87dc2dc6acf1394471385b70a51037df":[11,0,27,18],
@@ -249,5 +246,8 @@ var NAVTREEINDEX9 =
 "classBowsersCastle.html#ae64ee563ee54bf5c516da8c780cfc4bd":[11,0,82,6],
 "classBowsersCastle.html#af4af3372707ecff2076b28e964ffd32a":[11,0,82,13],
 "classBowsersCastle.html#af670116693c9440f1f6ff5d26a7a18f8":[11,0,82,9],
-"classBowsersCastle.html#af7a56545bb924c696b97734bbc70758e":[11,0,82,10]
+"classBowsersCastle.html#af7a56545bb924c696b97734bbc70758e":[11,0,82,10],
+"classChocoMountain.html":[11,0,86],
+"classChocoMountain.html#a2262e70982782ab6da29bc53f735d457":[11,0,86,4],
+"classChocoMountain.html#a2fedbb1b96c35a5e5ae5b5cecd737b7f":[11,0,86,12]
 };

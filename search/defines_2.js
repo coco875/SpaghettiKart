@@ -22,7 +22,7 @@ var searchData=
   ['bomb_5fstate_5fstationary_19',['BOMB_STATE_STATIONARY',['../bomb__kart_8h.html#a5ca28a405707226930e06ee84dde962a',1,'bomb_kart.h']]],
   ['bomb_5fstate_5funknown_20',['BOMB_STATE_UNKNOWN',['../bomb__kart_8h.html#a14d8fd83d315fce49f6415fab5e22aa5',1,'bomb_kart.h']]],
   ['boo_5feffect_21',['BOO_EFFECT',['../defines_8h.html#a097e621533b6b47ca98facc0a937437c',1,'defines.h']]],
-  ['boo_5feffect_5fduration_22',['BOO_EFFECT_DURATION',['../defines_8h.html#af29e5e7ed94bacd716a7bd4437bc625b',1,'defines.h']]],
+  ['boo_5feffect_5fduration_22',['BOO_EFFECT_DURATION',['../defines_8h.html#af29e5e7ed94bacd716a7bd4437bc625b',1,'BOO_EFFECT_DURATION:&#160;defines.h'],['../defines_8h.html#af29e5e7ed94bacd716a7bd4437bc625b',1,'BOO_EFFECT_DURATION:&#160;defines.h']]],
   ['boo_5fsound_5feffect_23',['BOO_SOUND_EFFECT',['../defines_8h.html#a3dac4f01a0671a836f2b17cc2ef2d0e7',1,'defines.h']]],
   ['boost_5feffect_24',['BOOST_EFFECT',['../defines_8h.html#a0a6d61b5ffca45b285a90df934373af4',1,'defines.h']]],
   ['boost_5framp_5fasphalt_5feffect_25',['BOOST_RAMP_ASPHALT_EFFECT',['../defines_8h.html#a121f2d36faaecc8c1e2486617b49595f',1,'defines.h']]],

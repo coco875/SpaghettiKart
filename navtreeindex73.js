@@ -1,5 +1,10 @@
 var NAVTREEINDEX73 =
 {
+"structSoundCharacteristics.html#af61da05719188f6ab5b0bb0fe7765375":[11,0,252,6],
+"structSoundCharacteristics.html#afe6d8a04574b04b7152b25c5afe166bc":[11,0,252,14],
+"structSoundMultiPool.html":[11,0,253],
+"structSoundMultiPool.html#a9a72b154bd09a211baecb8f2976157b4":[11,0,253,0],
+"structSoundMultiPool.html#ae26f6edcb58e56220c5b5a92d42902cd":[11,0,253,2],
 "structSoundMultiPool.html#aeaad151fd1e59a21a034efa00385bcf0":[11,0,253,1],
 "structSplineControlPoint.html":[11,0,254],
 "structSplineControlPoint.html#a152d68920abe7000d46964cdb924aef4":[11,0,254,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX73 =
 "structUIWidgets_1_1IntSliderOptions.html#a35572dc6856a8b9cb641440618d20c1a":[11,0,7,4,1],
 "structUIWidgets_1_1IntSliderOptions.html#a36cc2a03c84c8a4cc82553cbd8cf1300":[10,0,11,5,14],
 "structUIWidgets_1_1IntSliderOptions.html#a36cc2a03c84c8a4cc82553cbd8cf1300":[11,0,7,4,14],
-"structUIWidgets_1_1IntSliderOptions.html#a3780816abc3bc7bbce45109ebae46ff5":[10,0,11,5,2],
-"structUIWidgets_1_1IntSliderOptions.html#a3780816abc3bc7bbce45109ebae46ff5":[11,0,7,4,2],
-"structUIWidgets_1_1IntSliderOptions.html#a40ef9e299408f886a4f309878d67b3ef":[10,0,11,5,13],
-"structUIWidgets_1_1IntSliderOptions.html#a40ef9e299408f886a4f309878d67b3ef":[11,0,7,4,13],
-"structUIWidgets_1_1IntSliderOptions.html#a66e518c178bbbf5d10a646c623b22b54":[10,0,11,5,6],
-"structUIWidgets_1_1IntSliderOptions.html#a66e518c178bbbf5d10a646c623b22b54":[11,0,7,4,6]
+"structUIWidgets_1_1IntSliderOptions.html#a3780816abc3bc7bbce45109ebae46ff5":[10,0,11,5,2]
 };

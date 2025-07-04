@@ -133,7 +133,7 @@ var searchData=
   ['sqr_130',['sqr',['../math__util_8h.html#adee8c6d2fc20a1194cf64c481e7b6353',1,'math_util.h']]],
   ['stacksize_131',['STACKSIZE',['../mk64_8h.html#a21d9543c516fffee84a7963224271f95',1,'mk64.h']]],
   ['star_5feffect_132',['STAR_EFFECT',['../defines_8h.html#a8162db60017841c732d51d0c3a4a5269',1,'defines.h']]],
-  ['star_5feffect_5fduration_133',['STAR_EFFECT_DURATION',['../defines_8h.html#a9b3de65f2f2b99a397c6fd5faa4952e1',1,'defines.h']]],
+  ['star_5feffect_5fduration_133',['STAR_EFFECT_DURATION',['../defines_8h.html#a9b3de65f2f2b99a397c6fd5faa4952e1',1,'STAR_EFFECT_DURATION:&#160;defines.h'],['../defines_8h.html#a9b3de65f2f2b99a397c6fd5faa4952e1',1,'STAR_EFFECT_DURATION:&#160;defines.h']]],
   ['star_5fsound_5feffect_134',['STAR_SOUND_EFFECT',['../defines_8h.html#aee266a50899889872809281fc533bf6b',1,'defines.h']]],
   ['start_5fmenu_135',['START_MENU',['../defines_8h.html#a1f9423c18ac50fcb6645899b4a6e2bd3',1,'defines.h']]],
   ['start_5fmenu_5ffrom_5fquit_136',['START_MENU_FROM_QUIT',['../defines_8h.html#a0976e0ab380716d82db18ceb5b43e75b',1,'defines.h']]],

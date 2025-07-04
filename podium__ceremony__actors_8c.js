@@ -2,6 +2,7 @@ var podium__ceremony__actors_8c =
 [
     [ "balloon_update", "podium__ceremony__actors_8c.html#a38aa81affcc000fdb2c9c09dc2990dc3", null ],
     [ "balloons_and_fireworks_init", "podium__ceremony__actors_8c.html#a627072a12cb9f239d1e7b629161b4b45", null ],
+    [ "clear_podium_actors", "podium__ceremony__actors_8c.html#a56dc31ecee5eccaf1d621947e36dcd1c", null ],
     [ "find_available_entry", "podium__ceremony__actors_8c.html#a7af822e673ca2eb51ebe9d4a10d6d86b", null ],
     [ "firework_cone_update_and_spawn_burst", "podium__ceremony__actors_8c.html#a7604a8b5c90084c9c85780649132f8f1", null ],
     [ "firework_update", "podium__ceremony__actors_8c.html#ab11c7750e17800d6220b0e2a3ed479d0", null ],

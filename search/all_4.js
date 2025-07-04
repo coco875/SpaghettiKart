@@ -155,7 +155,7 @@ var searchData=
   ['boo8_152',['boo8',['../some__data_8c.html#a4e8d33dd2097a1ae559b3dc93ced9a93',1,'some_data.c']]],
   ['boo9_153',['boo9',['../some__data_8c.html#aeb92d888aaa53142a3e98b66fbb58d76',1,'some_data.c']]],
   ['boo_5feffect_154',['BOO_EFFECT',['../defines_8h.html#a097e621533b6b47ca98facc0a937437c',1,'defines.h']]],
-  ['boo_5feffect_5fduration_155',['BOO_EFFECT_DURATION',['../defines_8h.html#af29e5e7ed94bacd716a7bd4437bc625b',1,'defines.h']]],
+  ['boo_5feffect_5fduration_155',['BOO_EFFECT_DURATION',['../defines_8h.html#af29e5e7ed94bacd716a7bd4437bc625b',1,'BOO_EFFECT_DURATION:&#160;defines.h'],['../defines_8h.html#af29e5e7ed94bacd716a7bd4437bc625b',1,'BOO_EFFECT_DURATION:&#160;defines.h']]],
   ['boo_5fframes_2eh_156',['boo_frames.h',['../boo__frames_8h.html',1,'']]],
   ['boo_5fsound_5feffect_157',['BOO_SOUND_EFFECT',['../defines_8h.html#a3dac4f01a0671a836f2b17cc2ef2d0e7',1,'defines.h']]],
   ['booexit_158',['BooExit',['../classOBoos.html#a7978ba6a56cdfa9ffba006b17eea9924',1,'OBoos']]],

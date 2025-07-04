@@ -150,6 +150,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7af822e673ca2eb51ebe9d4a10d6d86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f084b11598b111cbea7b52e49b26c8b" id="r_a8f084b11598b111cbea7b52e49b26c8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCeremonyActor.html">CeremonyActor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f084b11598b111cbea7b52e49b26c8b">new_actor</a> (<a class="el" href="structActorInitParams.html">ActorInitParams</a> *arg0)</td></tr>
 <tr class="separator:a8f084b11598b111cbea7b52e49b26c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56dc31ecee5eccaf1d621947e36dcd1c" id="r_a56dc31ecee5eccaf1d621947e36dcd1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56dc31ecee5eccaf1d621947e36dcd1c">clear_podium_actors</a> ()</td></tr>
+<tr class="separator:a56dc31ecee5eccaf1d621947e36dcd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac704186b642f21eef90523a8545c17" id="r_a1ac704186b642f21eef90523a8545c17"><td class="memItemLeft" align="right" valign="top">u16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ac704186b642f21eef90523a8545c17">random_u16_credits</a> (void)</td></tr>
 <tr class="separator:a1ac704186b642f21eef90523a8545c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75ee72f9d8cc3f7bbb219fdeb11a3916" id="r_a75ee72f9d8cc3f7bbb219fdeb11a3916"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75ee72f9d8cc3f7bbb219fdeb11a3916">random_float_between_0_and_1</a> (void)</td></tr>
@@ -278,6 +280,28 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="podium__ceremony__actors_8c_a627072a12cb9f239d1e7b629161b4b45_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a56dc31ecee5eccaf1d621947e36dcd1c" name="a56dc31ecee5eccaf1d621947e36dcd1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56dc31ecee5eccaf1d621947e36dcd1c">&#9670;&#160;</a></span>clear_podium_actors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear_podium_actors </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="podium__ceremony__actors_8c_a56dc31ecee5eccaf1d621947e36dcd1c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -605,7 +629,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <dl class="bug"><dt><b><a class="el" href="bug.html#_bug000008">Bug</a></b></dt><dd>No null check. </dd></dl>
 <dl class="bug"><dt><b><a class="el" href="bug.html#_bug000009">Bug</a></b></dt><dd></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo</a></b></dt><dd>More indepth error checking/return value </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo</a></b></dt><dd>More indepth error checking/return value </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1181,11 +1205,11 @@ Here is the caller graph for this function:</div>
 <div class="line">    </div>
 <div class="line">    { <a class="code hl_function" href="#a7604a8b5c90084c9c85780649132f8f1">firework_cone_update_and_spawn_burst</a>, 0, <a class="code hl_function" href="#ab11c7750e17800d6220b0e2a3ed479d0">firework_update</a> },</div>
 <div class="line">}</div>
-<div class="ttc" id="apodium__ceremony__actors_8c_html_a38551bdcc35c2924e98f7bc94739af48"><div class="ttname"><a href="#a38551bdcc35c2924e98f7bc94739af48">unused_80280FA0</a></div><div class="ttdeci">void unused_80280FA0(UNUSED CeremonyActor *actor)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:301</div></div>
-<div class="ttc" id="apodium__ceremony__actors_8c_html_a38aa81affcc000fdb2c9c09dc2990dc3"><div class="ttname"><a href="#a38aa81affcc000fdb2c9c09dc2990dc3">balloon_update</a></div><div class="ttdeci">void balloon_update(CeremonyActor *actor)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:176</div></div>
-<div class="ttc" id="apodium__ceremony__actors_8c_html_a6a59fd212ccc54ff35efb8e9613126d6"><div class="ttname"><a href="#a6a59fd212ccc54ff35efb8e9613126d6">unused_80280FA8</a></div><div class="ttdeci">void unused_80280FA8(UNUSED CeremonyActor *actor)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:304</div></div>
-<div class="ttc" id="apodium__ceremony__actors_8c_html_a7604a8b5c90084c9c85780649132f8f1"><div class="ttname"><a href="#a7604a8b5c90084c9c85780649132f8f1">firework_cone_update_and_spawn_burst</a></div><div class="ttdeci">void firework_cone_update_and_spawn_burst(Firework *cone)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:196</div></div>
-<div class="ttc" id="apodium__ceremony__actors_8c_html_ab11c7750e17800d6220b0e2a3ed479d0"><div class="ttname"><a href="#ab11c7750e17800d6220b0e2a3ed479d0">firework_update</a></div><div class="ttdeci">void firework_update(Firework *actor)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:263</div></div>
+<div class="ttc" id="apodium__ceremony__actors_8c_html_a38551bdcc35c2924e98f7bc94739af48"><div class="ttname"><a href="#a38551bdcc35c2924e98f7bc94739af48">unused_80280FA0</a></div><div class="ttdeci">void unused_80280FA0(UNUSED CeremonyActor *actor)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:305</div></div>
+<div class="ttc" id="apodium__ceremony__actors_8c_html_a38aa81affcc000fdb2c9c09dc2990dc3"><div class="ttname"><a href="#a38aa81affcc000fdb2c9c09dc2990dc3">balloon_update</a></div><div class="ttdeci">void balloon_update(CeremonyActor *actor)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:180</div></div>
+<div class="ttc" id="apodium__ceremony__actors_8c_html_a6a59fd212ccc54ff35efb8e9613126d6"><div class="ttname"><a href="#a6a59fd212ccc54ff35efb8e9613126d6">unused_80280FA8</a></div><div class="ttdeci">void unused_80280FA8(UNUSED CeremonyActor *actor)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:308</div></div>
+<div class="ttc" id="apodium__ceremony__actors_8c_html_a7604a8b5c90084c9c85780649132f8f1"><div class="ttname"><a href="#a7604a8b5c90084c9c85780649132f8f1">firework_cone_update_and_spawn_burst</a></div><div class="ttdeci">void firework_cone_update_and_spawn_burst(Firework *cone)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:200</div></div>
+<div class="ttc" id="apodium__ceremony__actors_8c_html_ab11c7750e17800d6220b0e2a3ed479d0"><div class="ttname"><a href="#ab11c7750e17800d6220b0e2a3ed479d0">firework_update</a></div><div class="ttdeci">void firework_update(Firework *actor)</div><div class="ttdef"><b>Definition</b> podium_ceremony_actors.c:267</div></div>
 </div><!-- fragment -->
 </div>
 </div>
