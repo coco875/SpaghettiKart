@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mario Kart 64: Actors</title>
+<title>Mario Kart 64: Texture Pack</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,7 +79,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('actorsmenu.html',''); initResizable(true); });
+$(function(){initNavTree('md_docs_2textures-pack.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -105,79 +105,27 @@ $(function(){initNavTree('actorsmenu.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Actors</div></div>
+  <div class="headertitle"><div class="title">Texture Pack</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Actors are dynamic game objects usually subject to game physics such as gravity, force, and collision. They might move around the map, spin, or interactive in some manner. Alternatively, static game objects cannot move and cannot be interacted with. They can use collision but not physics. A course model and Mario Raceway's Pipe are examples of static objects. Any of the items or player karts are examples of dynamic game objects; actors. <br  />
-</p>
-<p>mk64 contains two systems for implementing actors. They have been deemed as actors and objects, albeit an explicit or categorical difference between the two has yet to be determined. The running theory is that the systems were designed by different developers that were perhaps not communicating resulting in game objects being randomly distributed between the two. <br  />
-</p>
-<p>The two main variables to concern yourself with are <code>gActorList</code> and <code>gObjectList</code>; the core containers of the two systems. <br  />
-</p>
-<p><a class="el" href="code__800029B0_8c.html#a1f5d4f72f8fd53ac6a42c0bf2b2d8a61">gActorList</a> contains: </p><div class="fragment"><div class="line">trees, bushes, falling rocks, kiwano-fruit, banana, shells, piranha-plant, train wheels, rail-road crossing, cows, yoshi-valley&#39;s egg, spinning signs, palm trees, paddle for the paddle-wheeled boat, wheels for cars/trucks, etc.</div>
-</div><!-- fragment --><p> The actor code has two main parts; the update code and the render code. The update code alters the position/rotation of the object whereas the render code displays the object on the screen. <br  />
-</p>
-<p><a class="el" href="code__80057C60_8c.html#abe0fe02214b0a75893d23c760d2f6695">gObjectList</a> contains: </p><div class="fragment"><div class="line">thwomps, bowser fire-breath, moles, hedgehogs, snowmen, crabs, particles, leaves, etc (also, probably penguins and birds).</div>
-</div><!-- fragment --><p> The object system is much more complex than actors and is not well documented.  
-<br>
-<div class="pagebutton">
-<a class="pagea" href="actors.html">
-<div class="pagelink">
-  <div class="pageimg"><img width=320 src="buttonimage.png" /></div>
-  <div class="content">
-    <div class="pageheading">Actors</div>
-    <div class="pagedescription">
-      <p>Some actor stuff</p>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-
-<div class="pagebutton">
-<a class="pagea" href="objects.html">
-<div class="pagelink">
-  <div class="pageimg"><img width=320 src="buttonimage.png" /></div>
-  <div class="content">
-    <div class="pageheading">Objects</div>
-    <div class="pagedescription">
-      <p>Some object stuff</p>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-
-<div class="pagebutton">
-<a class="pagea" href="vehicles.html">
-<div class="pagelink">
-  <div class="pageimg"><img width=320 src="buttonimage.png" /></div>
-  <div class="content">
-    <div class="pageheading">Vehicles</div>
-    <div class="pagedescription">
-      <p>Trains, boats, cars, trucks, and more.</p>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-
-<div class="pagebutton">
-<a class="pagea" href="items.html">
-<div class="pagelink">
-  <div class="pageimg"><img width=320 src="buttonimage.png" /></div>
-  <div class="content">
-    <div class="pageheading">Items</div>
-    <div class="pagedescription">
-      <p>Item Pickups</p>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-
-</p>
-<p><a class="el" href="actors.html#actors">Actors</a> <a class="el" href="controlflow.html#objects">Objects</a> <a class="el" href="vehicles.html">Vehicles</a> <a class="el" href="items.html">Items</a> </p>
+<div class="textblock"><p><a class="anchor" id="texture-pack"></a></p>
+<p>To replace textures you should only create a zip file with textures to replace at the same path as mk64.o2r. Only png, jpg and bmp files are supported. </p>
+<h1><a class="anchor" id="example"></a>
+Example:</h1>
+<p>You want to change other_textures/logo_mario_kart_64 then you just need to create a zip file with the following structure: </p><div class="fragment"><div class="line">textures_pack.zip</div>
+<div class="line">└── other_textures</div>
+<div class="line">    └── logo_mario_kart_64.png</div>
+</div><!-- fragment --><h1><a class="anchor" id="tools-to-help-1"></a>
+Tools To Help</h1>
+<p>To extract textures from the game you can use <a href="https://github.com/coco875/convert-texture-o2r/releases">convert-texture-o2r</a>. Just place the <code>convert-texture-o2r</code> executable in the same folder as <code>mk64.o2r</code> and drag and drop the <code>mk64.o2r</code> file on it or run it through command line: </p><div class="fragment"><div class="line">convert-texture-o2r mk64.o2r</div>
+</div><!-- fragment --><p> This will create a <code>textures</code> folder with all the textures extracted from the game.</p>
+<h1><a class="anchor" id="future-plans-1"></a>
+Future plans</h1>
+<ul>
+<li>Make name more meaningful and uniform. (example: change <code>texture_69B140</code>). You can suggest name or make a PR to help rename them/organise them.</li>
+<li>Support dds files.</li>
+<li>move texture in a subfolder. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

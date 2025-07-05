@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mario Kart 64: Actors</title>
+<title>Mario Kart 64: Custom characters</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,7 +79,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('actorsmenu.html',''); initResizable(true); });
+$(function(){initNavTree('md_docs_2custom-characters.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -105,79 +105,55 @@ $(function(){initNavTree('actorsmenu.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Actors</div></div>
+  <div class="headertitle"><div class="title">Custom characters</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Actors are dynamic game objects usually subject to game physics such as gravity, force, and collision. They might move around the map, spin, or interactive in some manner. Alternatively, static game objects cannot move and cannot be interacted with. They can use collision but not physics. A course model and Mario Raceway's Pipe are examples of static objects. Any of the items or player karts are examples of dynamic game objects; actors. <br  />
-</p>
-<p>mk64 contains two systems for implementing actors. They have been deemed as actors and objects, albeit an explicit or categorical difference between the two has yet to be determined. The running theory is that the systems were designed by different developers that were perhaps not communicating resulting in game objects being randomly distributed between the two. <br  />
-</p>
-<p>The two main variables to concern yourself with are <code>gActorList</code> and <code>gObjectList</code>; the core containers of the two systems. <br  />
-</p>
-<p><a class="el" href="code__800029B0_8c.html#a1f5d4f72f8fd53ac6a42c0bf2b2d8a61">gActorList</a> contains: </p><div class="fragment"><div class="line">trees, bushes, falling rocks, kiwano-fruit, banana, shells, piranha-plant, train wheels, rail-road crossing, cows, yoshi-valley&#39;s egg, spinning signs, palm trees, paddle for the paddle-wheeled boat, wheels for cars/trucks, etc.</div>
-</div><!-- fragment --><p> The actor code has two main parts; the update code and the render code. The update code alters the position/rotation of the object whereas the render code displays the object on the screen. <br  />
-</p>
-<p><a class="el" href="code__80057C60_8c.html#abe0fe02214b0a75893d23c760d2f6695">gObjectList</a> contains: </p><div class="fragment"><div class="line">thwomps, bowser fire-breath, moles, hedgehogs, snowmen, crabs, particles, leaves, etc (also, probably penguins and birds).</div>
-</div><!-- fragment --><p> The object system is much more complex than actors and is not well documented.  
-<br>
-<div class="pagebutton">
-<a class="pagea" href="actors.html">
-<div class="pagelink">
-  <div class="pageimg"><img width=320 src="buttonimage.png" /></div>
-  <div class="content">
-    <div class="pageheading">Actors</div>
-    <div class="pagedescription">
-      <p>Some actor stuff</p>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-
-<div class="pagebutton">
-<a class="pagea" href="objects.html">
-<div class="pagelink">
-  <div class="pageimg"><img width=320 src="buttonimage.png" /></div>
-  <div class="content">
-    <div class="pageheading">Objects</div>
-    <div class="pagedescription">
-      <p>Some object stuff</p>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-
-<div class="pagebutton">
-<a class="pagea" href="vehicles.html">
-<div class="pagelink">
-  <div class="pageimg"><img width=320 src="buttonimage.png" /></div>
-  <div class="content">
-    <div class="pageheading">Vehicles</div>
-    <div class="pagedescription">
-      <p>Trains, boats, cars, trucks, and more.</p>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-
-<div class="pagebutton">
-<a class="pagea" href="items.html">
-<div class="pagelink">
-  <div class="pageimg"><img width=320 src="buttonimage.png" /></div>
-  <div class="content">
-    <div class="pageheading">Items</div>
-    <div class="pagedescription">
-      <p>Item Pickups</p>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-
-</p>
-<p><a class="el" href="actors.html#actors">Actors</a> <a class="el" href="controlflow.html#objects">Objects</a> <a class="el" href="vehicles.html">Vehicles</a> <a class="el" href="items.html">Items</a> </p>
+<div class="textblock"><p><a class="anchor" id="custom-characters"></a></p>
+<p>Custom characters can only replace existing characters for now.</p>
+<ol type="1">
+<li>Download the Kart Setup blender file included with this post(Slightly altered .blender file provided by the Overkart server with some adjustments to the animation to export for Spaghetti, thanks again Andrat for permission to post this and a huge thanks to the Overkart 64 community in general.) <a href="MK64_Spaghetti_Adjusted_Kart_Setup.blend">Kart Setup.blend</a></li>
+<li>Replace Mario with your character, and handle weights of the skeleton as needed to make them move properly.</li>
+<li>Set the path a valid one(the included path is what Andrat had setup for his original kart setup) but make sure the name matches a listed kart name below and ends with ###, this will ensure it is 3 digits(example path/to/export/toad_kart/toad_kart_frame###)</li>
+<li>Render the animation at whatever power of 2 of 64x64 you want(64x64, 128x128, 256x256 and so on),</li>
+<li>In the above toad example, zip up the toad_kart folder and rename it to a .o2r file.</li>
+<li>Put it in mods folder and run.</li>
+</ol>
+<h1><a class="anchor" id="examples-for-all-characters"></a>
+Examples for all characters:</h1>
+<p>mario_kart/mario_kart_frame###</p>
+<p>luigi_kart/luigi_kart_frame###</p>
+<p>peach_kart/peach_kart_frame###</p>
+<p>wario_kart/wario_kart_frame###</p>
+<p>toad_kart/toad_kart_frame###</p>
+<p>donkeykong_kart/donkeykong_kart_frame###</p>
+<p>bowser_kart/bowser_kart_frame###</p>
+<p>yoshi_kart/yoshi_kart_frame###</p>
+<h1><a class="anchor" id="additional-files"></a>
+Additional Files</h1>
+<p>Some other files to look out for(still using toad as a example)</p>
+<p>placement icon = common_data/common_texture_portrait_toad.png Original frame is 32x32</p>
+<p>player selection frames = player_selection/toad_face_00.png ~ toad_face_16.png Original frames is 64x64 (note that Donkeykong uses donkey_kong here instead)</p>
+<p>player select nameplate = texture_tkmk00/gTextureNameToad.png Original frame is 64x12 (note that Donkeykong uses DK here instead)</p>
+<h2><a class="anchor" id="tips"></a>
+Tips</h2>
+<h3><a class="anchor" id="change-viewport-render-settings"></a>
+Change Viewport Render Settings</h3>
+<p>Assuming your using the overkart setup kart.</p>
+<p>In object mode, select View -&gt; Cameras -&gt; Active <a class="el" href="structCamera.html">Camera</a></p>
+<p>Set your render resolution and path as shown in the image below</p>
+<p>Then render your animation by selecting View -&gt; Viewport Render <a class="el" href="structAnimation.html">Animation</a></p>
+<p><img src="change_viewport.png" alt="Viewport Render Settings" class="inline"/></p>
+<h2><a class="anchor" id="tools-to-help"></a>
+Tools To Help</h2>
+<ul>
+<li>There is <a href="https://vinievex.itch.io/racer-ready-up">Racer Ready-Up</a> which is a tool to help you create custom characters for SpaghettiKart.</li>
+</ul>
+<h2><a class="anchor" id="future-plans"></a>
+Future plans</h2>
+<ul>
+<li>Support for custom characters that do not replace existing ones.</li>
+<li>Support 3d models for characters. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
