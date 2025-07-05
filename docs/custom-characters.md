@@ -36,7 +36,7 @@ Then render your animation by selecting View -> Viewport Render Animation
 ![Viewport Render Settings](change_viewport.png)
 
 ## Tools To Help
-* There is Racer [Ready-Up](https://vinievex.itch.io/racer-ready-up) which is a tool to help you create custom characters for SpaghettiKart.
+* There is [Racer Ready-Up](https://vinievex.itch.io/racer-ready-up) which is a tool to help you create custom characters for SpaghettiKart.
 
 ## Future plans
 * Support for custom characters that do not replace existing ones.
