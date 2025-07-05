@@ -10,17 +10,28 @@ Custom characters can only replace existing characters for now.
 
 # Examples for all characters:
 mario_kart/mario_kart_frame###
+
 luigi_kart/luigi_kart_frame###
+
 peach_kart/peach_kart_frame###
+
 wario_kart/wario_kart_frame###
+
 toad_kart/toad_kart_frame###
+
 donkeykong_kart/donkeykong_kart_frame###
+
 bowser_kart/bowser_kart_frame###
+
 yoshi_kart/yoshi_kart_frame###
 
+
 Some other files to look out for(still using toad as a example)
+
 placement icon = common_data/common_texture_portrait_toad.png Original frame is 32x32
+
 player selection frames = player_selection/toad_face_00.png ~ toad_face_16.png Original frames is 64x64 (note that Donkeykong uses donkey_kong here instead)
+
 player select nameplate = texture_tkmk00/gTextureNameToad.png Original frame is 64x12 (note that Donkeykong uses DK here instead) 
 
 ## Tips
