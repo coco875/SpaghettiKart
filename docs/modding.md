@@ -3,13 +3,13 @@ Modding are really early stages so a lot of features are not implemented yet. We
 
 * Textures Pack
     * Some texture might not be possible to change yet, but most of them can be changed.
-    * [link](textures_pack.md)
+    * [link](textures-pack.md)
 * Custom Tracks (CT)
     * Custom tracks are reserved for advanced users. We plan to simply the process in the future.
-    * [link](custom_track.md)
+    * [link](custom-track.md)
 * Custom Characters
     * Custom characters can only replace existing characters for now. We plan to allow to add new characters in the future.
-    * [link](custom_characters.md)
+    * [link](custom-characters.md)
 * Custom Music
     * Custom music are not supported yet. We plan to add support for custom music in the future.
 * 3D Models For Characters
