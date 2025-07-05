@@ -6,7 +6,7 @@ Modding are really early stages so a lot of features are not implemented yet. We
     * [link](textures_pack.md)
 * Custom Tracks (CT)
     * Custom tracks are reserved for advanced users. We plan to simply the process in the future.
-    * [link](custom_tracks.md)
+    * [link](custom_track.md)
 * Custom Characters
     * Custom characters can only replace existing characters for now. We plan to allow to add new characters in the future.
     * [link](custom_characters.md)
