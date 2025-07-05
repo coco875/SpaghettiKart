@@ -498,36 +498,88 @@ void func_80027EDC(Player* player, s8 playerId) {
     }
 }
 
+u16 check_player_camera_collision_rubberbanding(Player* player, Camera* camera, f32 arg2, f32 arg3) {
+    UNUSED f32 pad[6];
+    f32 sp64;
+    f32 sp60;
+    f32 sp5C;
+    f32 sp58;
+    f32 sp54;
+    f32 sp50;
+    f32 sp4C;
+    f32 sp48;
+    f32 sp44;
+    s16 var_v0;
+    u16 ret;
+
+    if (CVarGetInteger("gDisableRubberbanding", 0) != 0) {
+        return true;
+    }
+
+    ret = false;
+    switch (gActiveScreenMode) { /* irregular */
+        case SCREEN_MODE_1P:
+            var_v0 = 0x293C;
+            break;
+        case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
+        case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
+            var_v0 = 0x3058;
+            break;
+        case SCREEN_MODE_3P_4P_SPLITSCREEN:
+            var_v0 = 0x1FFE;
+            break;
+        default:
+            if (1) {}
+            var_v0 = 0x1FFE;
+            break;
+    }
+    sp4C = (arg2 * coss((camera->rot[1] - var_v0))) + camera->pos[2];
+    sp58 = (arg2 * sins((camera->rot[1] - var_v0))) + camera->pos[0];
+    sp48 = (arg2 * coss((camera->rot[1] + var_v0))) + camera->pos[2];
+    sp54 = (arg2 * sins((camera->rot[1] + var_v0))) + camera->pos[0];
+    sp44 = (arg3 * coss((camera->rot[1] + 0x5FFA))) + camera->pos[2];
+    sp50 = (arg3 * sins((camera->rot[1] + 0x5FFA))) + camera->pos[0];
+
+    sp64 = ((sp4C - player->pos[2]) * (sp54 - player->pos[0])) - ((sp48 - player->pos[2]) * (sp58 - player->pos[0]));
+    sp60 = ((sp48 - player->pos[2]) * (sp50 - player->pos[0])) - ((sp44 - player->pos[2]) * (sp54 - player->pos[0]));
+    sp5C = ((sp44 - player->pos[2]) * (sp58 - player->pos[0])) - ((sp4C - player->pos[2]) * (sp50 - player->pos[0]));
+
+    if (((sp64 >= 0) && (sp60 >= 0) && (sp5C >= 0)) || (((sp64) <= 0) && (sp60 <= 0) && (sp5C <= 0))) {
+        ret = true;
+    }
+    return ret;
+}
+
 void func_80028864(Player* player, Camera* camera, s8 playerId, s8 screenId) {
     u16 sp1E;
 
     if (!(player->type & PLAYER_START_SEQUENCE)) {
         switch (gActiveScreenMode) {
             case SCREEN_MODE_1P:
-                sp1E = check_player_camera_collision(player, camera1, (f32) D_8016557C, 0.0f);
+                sp1E = check_player_camera_collision_rubberbanding(player, camera1, (f32) D_8016557C, 0.0f);
                 break;
             case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
             case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
-                sp1E = check_player_camera_collision(player, camera1, (f32) D_8016557C, 0.0f);
+                sp1E = check_player_camera_collision_rubberbanding(player, camera1, (f32) D_8016557C, 0.0f);
                 if (sp1E == 1) {
                     break;
                 }
-                sp1E = check_player_camera_collision(player, camera2, (f32) D_8016557C, 0.0f);
+                sp1E = check_player_camera_collision_rubberbanding(player, camera2, (f32) D_8016557C, 0.0f);
                 break;
             case SCREEN_MODE_3P_4P_SPLITSCREEN:
-                sp1E = check_player_camera_collision(player, camera1, (f32) D_8016557C, 0.0f);
+                sp1E = check_player_camera_collision_rubberbanding(player, camera1, (f32) D_8016557C, 0.0f);
                 if (sp1E == 1) {
                     break;
                 }
-                sp1E = check_player_camera_collision(player, camera2, (f32) D_8016557C, 0.0f);
+                sp1E = check_player_camera_collision_rubberbanding(player, camera2, (f32) D_8016557C, 0.0f);
                 if (sp1E == 1) {
                     break;
                 }
-                sp1E = check_player_camera_collision(player, camera3, (f32) D_8016557C, 0.0f);
+                sp1E = check_player_camera_collision_rubberbanding(player, camera3, (f32) D_8016557C, 0.0f);
                 if (sp1E == 1) {
                     break;
                 }
-                sp1E = check_player_camera_collision(player, camera4, (f32) D_8016557C, 0.0f);
+                sp1E = check_player_camera_collision_rubberbanding(player, camera4, (f32) D_8016557C, 0.0f);
                 break;
         }
         if ((sp1E == 1) || ((player->type & PLAYER_INVISIBLE_OR_BOMB) == PLAYER_INVISIBLE_OR_BOMB) ||
