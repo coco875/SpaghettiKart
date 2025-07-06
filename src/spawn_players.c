@@ -32,7 +32,7 @@ f32 D_80165210[8];
 f32 D_80165230[8];
 UNUSED f32 D_80165250[8];
 s16 D_80165270[8];
-f32 D_80165280[8];
+f32 gPlayerCurrentSpeed[8];
 f32 D_801652A0[8];
 s32 D_801652C0[8];
 s32 D_801652E0[8];
@@ -178,7 +178,7 @@ void spawn_player(Player* player, s8 playerIndex, f32 startingRow, f32 startingC
     player->unk_044 = 0;
     player->unk_046 = 0;
     player->soundEffects = 0;
-    player->unk_0C6 = 0xFF;
+    player->alpha = ALPHA_MAX;
 
     player->unk_206 = 0;
     player->slopeAccel = 0;
@@ -300,10 +300,10 @@ void spawn_player(Player* player, s8 playerIndex, f32 startingRow, f32 startingC
     D_801652E0[playerIndex] = 0;
     D_801652C0[playerIndex] = 0;
     D_80165020[playerIndex] = 0;
-    D_80165070[playerIndex][0] = 0.0f;
-    D_80165070[playerIndex][1] = 0.0f;
-    D_80165070[playerIndex][2] = 0.0f;
-    D_80165280[playerIndex] = 0.0f;
+    gPlayerLastVelocity[playerIndex][0] = 0.0f;
+    gPlayerLastVelocity[playerIndex][1] = 0.0f;
+    gPlayerLastVelocity[playerIndex][2] = 0.0f;
+    gPlayerCurrentSpeed[playerIndex] = 0.0f;
     D_801652A0[playerIndex] = 0.0f;
     gPlayerIsThrottleActive[playerIndex] = 0;
     D_80165400[playerIndex] = 0;

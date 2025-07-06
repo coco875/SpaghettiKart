@@ -2976,7 +2976,7 @@ Gfx* func_80095BD0(Gfx* displayListHead, u8* arg1, f32 arg2, f32 arg3, u32 arg4,
 
     displayListHead = AddTextMatrix(displayListHead, mf);
     // gSPMatrix(displayListHead++, mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
-    gMKLoadTextureTile_4b(displayListHead++, arg1, G_IM_FMT_I, arg4, 0, 0, 0, arg4, arg5, 0, G_TX_NOMIRROR | G_TX_WRAP,
+    gDPLoadTextureTile_4b(displayListHead++, arg1, G_IM_FMT_I, arg4, 0, 0, 0, arg4, arg5+2, 0, G_TX_NOMIRROR | G_TX_WRAP,
                           G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOLOD);
     switch (arg4) {
         default:
@@ -3018,7 +3018,7 @@ Gfx* func_80095BD0_wide_right(Gfx* displayListHead, u8* arg1, f32 arg2, f32 arg3
     displayListHead = AddTextMatrix(displayListHead, mf);
     // gSPMatrix(displayListHead++, VIRTUAL_TO_PHYSICAL(&gGfxPool->mtxEffect[gMatrixEffectCount++]),
     //           G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
-    gMKLoadTextureTile_4b(displayListHead++, arg1, G_IM_FMT_I, arg4, 0, 0, 0, arg4, arg5, 0, G_TX_NOMIRROR | G_TX_WRAP,
+    gDPLoadTextureTile_4b(displayListHead++, arg1, G_IM_FMT_I, arg4, 0, 0, 0, arg4-1, arg5-1, 0, G_TX_NOMIRROR | G_TX_WRAP,
                           G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOLOD);
     switch (arg4) {
         default:
@@ -3045,7 +3045,7 @@ Gfx* func_80095E10(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 te
                    s32 srcWidth, s32 srcHeight, s32 screenX, s32 screenY, u8* textureData, u32 texWidth,
                    u32 texHeight) {
     gDPLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, texWidth, texHeight, srcX, srcY,
-                       srcX + srcWidth - 1, srcY + srcHeight, 0, G_TX_NOMIRROR | G_TX_WRAP,
+                       srcX + srcWidth - 1, srcY + srcHeight - 1, 0, G_TX_NOMIRROR | G_TX_WRAP,
                        G_TX_NOMIRROR | G_TX_WRAP, 0, 0, G_TX_NOLOD, G_TX_NOLOD);
     gSPWideTextureRectangle(displayListHead++, screenX << 2, screenY << 2, (screenX + srcWidth) << 2,
                             (screenY + srcHeight) << 2, G_TX_RENDERTILE, 0, 0, texScaleS, texScaleT);
@@ -3252,7 +3252,7 @@ Gfx* func_80097A14(Gfx* displayListHead, s8 arg1, s32 arg2, s32 arg3, s32 arg4, 
 }
 
 Gfx* func_80097AE4(Gfx* displayListHead, s8 textureFormat, s32 destX, s32 destY, u8* textureData, s32 sourceWidth) {
-    gMKLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, 64, 64, 0, 0, sourceWidth, 32, 0,
+    gDPLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, 64, 64, 0, 0, sourceWidth - 1, 32-1, 0,
                        G_TX_NOMIRROR | G_TX_WRAP, G_TX_NOMIRROR | G_TX_WRAP, 5, 5, G_TX_NOLOD, G_TX_NOLOD);
     gSPWideTextureRectangle(displayListHead++, destX << 2, destY << 2, (destX + sourceWidth) << 2, (destY + 64) << 2, 0,
                             0, 0, 1024, 1024);
@@ -3285,10 +3285,10 @@ Gfx* func_80098558(Gfx* displayListHead, u32 arg1, u32 arg2, u32 arg3, u32 arg4,
     arg5Copy = arg5;
     for (var_v0 = arg2; var_v0 < arg4; var_v0 += 0x20) {
         for (var_a3 = arg1; var_a3 < arg3; var_a3 += 0x20) {
-            gMKLoadTextureTile(displayListHead++, sMenuTextureList, G_IM_FMT_RGBA, G_IM_SIZ_16b, arg8, 0, var_a3,
-                               var_v0, var_a3 + 0x20, var_v0 + 0x20, 0, G_TX_NOMIRROR | G_TX_WRAP,
+            gDPLoadTextureTile(displayListHead++, sMenuTextureList, G_IM_FMT_RGBA, G_IM_SIZ_16b, arg8, 0, var_a3,
+                               var_v0, var_a3 + 32-1, var_v0 + 32-1, 0, G_TX_NOMIRROR | G_TX_WRAP,
                                G_TX_NOMIRROR | G_TX_WRAP, 5, 5, G_TX_NOLOD, G_TX_NOLOD);
-            gSPTextureRectangle(displayListHead++, arg5 << 2, arg6 << 2, (arg5 + 0x20) << 2, (arg6 + 0x20) << 2, 0, 0,
+            gSPTextureRectangle(displayListHead++, arg5 << 2, arg6 << 2, (arg5 + 32) << 2, (arg6 + 32) << 2, 0, 0,
                                 0, 1024, 1024);
             arg5 += 0x20;
         }
@@ -3319,13 +3319,13 @@ Gfx* func_800987D0(Gfx* displayListHead, u32 arg1, u32 arg2, u32 width, u32 heig
     columnCopy = column;
     for (var_v0_2 = arg2; (u32) var_v0_2 < height; var_v0_2 += 0x20) {
         for (var_a2 = arg1; (u32) var_a2 < width; var_a2 += 0x20) {
-            gMKLoadTextureTile(displayListHead++, sMenuTextureList, G_IM_FMT_RGBA, G_IM_SIZ_16b, textureWidth, 0,
-                               var_a2, var_v0_2, var_a2 + 0x20, var_v0_2 + 0x20, 0, G_TX_NOMIRROR | G_TX_WRAP,
+            gDPLoadTextureTile(displayListHead++, sMenuTextureList, G_IM_FMT_RGBA, G_IM_SIZ_16b, textureWidth, 0,
+                               var_a2, var_v0_2, var_a2 + 32 - 1, var_v0_2 + 32 - 1, 0, G_TX_NOMIRROR | G_TX_WRAP,
                                G_TX_NOMIRROR | G_TX_WRAP, 5, 5, G_TX_NOLOD, G_TX_NOLOD);
             temp_f6 = (temp_f18 * ((temp_f0 * (column - 0xA0)) + (temp_f24 * (row - 0x78)))) + 160.0f;
             temp_f4_2 = (temp_f18 * ((-temp_f24 * (column - 0xA0)) + (temp_f0 * (row - 0x78)))) + 120.0f;
-            gSPTextureRectangle(displayListHead++, temp_f6 * 4, temp_f4_2 * 4, ((temp_f6 + 0x20) ^ 0) * 4,
-                                ((temp_f4_2 + 0x20) ^ 0) * 4, 0, 0, 0, 1024, 1024);
+            gSPTextureRectangle(displayListHead++, temp_f6 * 4, temp_f4_2 * 4, ((temp_f6 + 32) ^ 0) * 4,
+                                ((temp_f4_2 + 32) ^ 0) * 4, 0, 0, 0, 1024, 1024);
             column += 0x20;
         }
         column = columnCopy;
@@ -4526,10 +4526,10 @@ Gfx* render_menu_textures(Gfx* arg0, MenuTexture* arg1, s32 column, s32 row) {
         if (temp_v0_3 != NULL) {
             if (gTransitionType[4] != 4) {
                 arg0 = func_80095E10(arg0, var_s4, 0x00000400, 0x00000400, 0, 0, arg1->width, arg1->height,
-                                     arg1->dX + column, arg1->dY + row, temp_v0_3, arg1->width, arg1->height);
+                                     arg1->dX + column, arg1->dY + row, arg1->textureData, arg1->width, arg1->height);
             } else {
                 arg0 = func_800987D0(arg0, 0U, 0U, arg1->width, arg1->height, arg1->dX + column, arg1->dY + row,
-                                     temp_v0_3, arg1->width, arg1->height);
+                                     arg1->textureData, arg1->width, arg1->height);
             }
         }
         arg1++;
@@ -4615,17 +4615,16 @@ Gfx* print_letter(Gfx* arg0, MenuTexture* glyphTexture, f32 arg2, f32 arg3, s32 
         if (var_v0 != 0) {
             var_s0++;
         } else {
-            temp_v0_2 = (u8*) func_8009B8C4(var_s0->textureData);
-            if (temp_v0_2 != 0) {
+            if (var_s0->textureData != 0) {
                 switch (mode) {
                     case 1:
                         gSPDisplayList(arg0++, D_020077F8);
-                        arg0 = func_80095BD0(arg0, temp_v0_2, var_s0->dX + arg2, var_s0->dY + arg3, var_s0->width,
+                        arg0 = func_80095BD0(arg0, var_s0->textureData, var_s0->dX + arg2, var_s0->dY + arg3, var_s0->width,
                                              var_s0->height, scaleX, scaleY);
                         break;
                     case 2:
                         gSPDisplayList(arg0++, D_02007818);
-                        arg0 = func_80095BD0(arg0, temp_v0_2, var_s0->dX + arg2, var_s0->dY + arg3, var_s0->width,
+                        arg0 = func_80095BD0(arg0, var_s0->textureData, var_s0->dX + arg2, var_s0->dY + arg3, var_s0->width,
                                              var_s0->height, scaleX, scaleY);
                         break;
                 }
@@ -7034,7 +7033,7 @@ void func_800A143C(MenuItem* arg0, s32 arg1) {
         case 1:
         case 4:
             gDisplayListHead =
-                func_8009BC9C(gDisplayListHead, segmented_to_virtual_dupe(gMenuTexturesTrackSelection[arg1 + 1]),
+                func_8009BC9C(gDisplayListHead, gMenuTexturesTrackSelection[arg1 + 1],
                               arg0->column, arg0->row, 2, arg0->param1);
             break;
     }

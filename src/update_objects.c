@@ -3254,11 +3254,11 @@ void verify_probability_table(char* str, const ItemProbabilities* probs, int16_t
 #ifndef _DEBUG
     return;
 #endif
-    u8 itemProbabilities[ITEM_MAX - 1];
+    u8 itemProbabilities[ITEM_MAX];
 
     getProbabilityArray(probs, itemProbabilities);
     size_t count = 0;
-    for (size_t i = 0; i < ITEM_MAX - 1; i++) {
+    for (size_t i = 0; i < ITEM_MAX; i++) {
         //printf("prob %d ", itemProbabilities[i]);
         count += itemProbabilities[i];
     }
