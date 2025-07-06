@@ -1,5 +1,6 @@
 var NAVTREEINDEX72 =
 {
+"structSF64_1_1Vec3iu.html#a5bd45826a5bee51e20c0cef90a255773":[13,0,8,27,2],
 "structSF64_1_1Vec3iu.html#a5bd45826a5bee51e20c0cef90a255773":[14,0,4,27,2],
 "structSF64_1_1Vec3iu.html#acbad3170b0dd808932cbef8a1afb8854":[13,0,8,27,3],
 "structSF64_1_1Vec3iu.html#acbad3170b0dd808932cbef8a1afb8854":[14,0,4,27,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX72 =
 "structSound.html#a70931607825e2e45674276b664a25621":[14,0,250,4],
 "structSound.html#a76da5ca3575e9d2752a7fc7dad75723d":[14,0,250,2],
 "structSound.html#ab9d2762840c1e7690e3dc064d3723909":[14,0,250,0],
-"structSound.html#ae9563d52dd89f0da38cbecc620c0b31d":[14,0,250,5],
-"structSoundAllocPool.html":[14,0,251]
+"structSound.html#ae9563d52dd89f0da38cbecc620c0b31d":[14,0,250,5]
 };

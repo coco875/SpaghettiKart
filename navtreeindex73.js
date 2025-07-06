@@ -1,5 +1,6 @@
 var NAVTREEINDEX73 =
 {
+"structSoundAllocPool.html":[14,0,251],
 "structSoundAllocPool.html#a4810f3affb467677d5681d7e1f078604":[14,0,251,1],
 "structSoundAllocPool.html#a56a22e94e79711b13cd9fa6b4207655d":[14,0,251,2],
 "structSoundAllocPool.html#a9b2b1c76eab64b571efb98902d779b6b":[14,0,251,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX73 =
 "structUIWidgets_1_1FloatSliderOptions.html#aa7c4093fbff4d453ee37ea020e396a2f":[13,0,11,4,5],
 "structUIWidgets_1_1FloatSliderOptions.html#aa7c4093fbff4d453ee37ea020e396a2f":[14,0,7,3,5],
 "structUIWidgets_1_1FloatSliderOptions.html#abccef23b4c23bc2171c0f6ee7d4343f6":[13,0,11,4,16],
-"structUIWidgets_1_1FloatSliderOptions.html#abccef23b4c23bc2171c0f6ee7d4343f6":[14,0,7,3,16],
-"structUIWidgets_1_1FloatSliderOptions.html#ac30d6ae344b54ca98ae74a034f6b832f":[13,0,11,4,21]
+"structUIWidgets_1_1FloatSliderOptions.html#abccef23b4c23bc2171c0f6ee7d4343f6":[14,0,7,3,16]
 };

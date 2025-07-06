@@ -191,10 +191,10 @@
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="render__player_8c.html#a186c5153f31e17a40d17238b1149f63d" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="721.5,-1770.25 598.5,-1770.25 598.5,-1740.25 721.5,-1740.25 721.5,-1770.25"/>
-<text text-anchor="start" x="606.5" y="-1758.25" font-family="Helvetica,sans-Serif" font-size="10.00">check_player_camera</text>
-<text text-anchor="middle" x="660" y="-1747.25" font-family="Helvetica,sans-Serif" font-size="10.00">_collision</text>
+<g id="a_Node000008"><a xlink:href="player__controller_8c.html#adce6624ed2f446a37322e79b96a6f84b" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="729,-1770.25 591,-1770.25 591,-1740.25 729,-1740.25 729,-1770.25"/>
+<text text-anchor="start" x="599" y="-1758.25" font-family="Helvetica,sans-Serif" font-size="10.00">check_player_camera</text>
+<text text-anchor="middle" x="660" y="-1747.25" font-family="Helvetica,sans-Serif" font-size="10.00">_collision_rubberbanding</text>
 </a>
 </g>
 </g>
