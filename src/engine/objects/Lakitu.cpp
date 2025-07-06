@@ -108,41 +108,55 @@ void OLakitu::Draw(s32 cameraId) {
         if (func_80072354(objectIndex, 2) != 0) {
             s32 width = object->textureWidth;
             s32 height = object->textureHeight;
-            s32 heighthalf = height / 2;
-            Vtx* vtx = object->vertex;
             rsp_set_matrix_transformation(object->pos, object->orientation, object->sizeScaling);
             gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D007D78);
             s32 heightIndex;
-            s32 vertexIndex = 0;
 
             gDPLoadTLUT_pal256(gDisplayListHead++, object->activeTLUT);
             gDPLoadTextureTile(gDisplayListHead++, object->activeTexture, G_IM_FMT_CI, G_IM_SIZ_8b, width, height, 0, 0,
-                               width - 1, height - 1, 0, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_MIRROR | G_TX_WRAP,
-                               G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOLOD); // freaking ugly fix
-            gSPVertex(gDisplayListHead++, (uintptr_t) vtx, 4, 0);
+                               width - 1, height - 1, 0, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMIRROR | G_TX_CLAMP,
+                               G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD, G_TX_NOLOD);
+            gSPVertex(gDisplayListHead++, (uintptr_t) object->vertex, 4, 0);
             gSPDisplayList(gDisplayListHead++, (Gfx*) common_rectangle_display);
             gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
         } else {
-            func_800485C4(object->pos, object->orientation, object->sizeScaling, (s32) object->primAlpha,
-                          (u8*) object->activeTLUT, (u8*) object->activeTexture, object->vertex,
-                          (s32) object->textureWidth, (s32) object->textureHeight, (s32) object->textureWidth,
-                          (s32) object->textureHeight / 2);
+            s32 width = object->textureWidth;
+            s32 height = object->textureHeight;
+            rsp_set_matrix_transformation(object->pos, object->orientation, object->sizeScaling);
+            gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D007E98);
+            gDPSetAlphaCompare(gDisplayListHead++, G_AC_DITHER);
+            gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_XLU_SURF, G_RM_AA_ZB_XLU_SURF2);
+
+            set_transparency(object->primAlpha);
+            s32 heightIndex;
+
+            gDPLoadTLUT_pal256(gDisplayListHead++, object->activeTLUT);
+            rsp_load_texture((u8*) object->activeTexture, width, height);
+            gSPVertex(gDisplayListHead++, (uintptr_t) object->vertex, 4, 0);
+            gSPDisplayList(gDisplayListHead++, (Gfx*) common_rectangle_display);
         }
-        if (gScreenModeSelection == SCREEN_MODE_1P) {
-            var_f0 = object->pos[0] - camera->pos[0];
-            var_f2 = object->pos[2] - camera->pos[2];
-            if (var_f0 < 0.0f) {
-                var_f0 = -var_f0;
-            }
-            if (var_f2 < 0.0f) {
-                var_f2 = -var_f2;
-            }
-            if ((var_f0 + var_f2) <= 200.0) {
-                func_8004A630(&D_8018C0B0[cameraId], object->pos, 0.35f);
-            }
+        gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
+
+        gDPSetAlphaCompare(gDisplayListHead++, G_AC_NONE);
+        func_800485C4(object->pos, object->orientation, object->sizeScaling, (s32) object->primAlpha,
+                      (u8*) object->activeTLUT, (u8*) object->activeTexture, object->vertex, (s32) object->textureWidth,
+                      (s32) object->textureHeight, (s32) object->textureWidth, (s32) object->textureHeight / 2);
+    }
+    if (gScreenModeSelection == SCREEN_MODE_1P) {
+        var_f0 = object->pos[0] - camera->pos[0];
+        var_f2 = object->pos[2] - camera->pos[2];
+        if (var_f0 < 0.0f) {
+            var_f0 = -var_f0;
+        }
+        if (var_f2 < 0.0f) {
+            var_f2 = -var_f2;
+        }
+        if ((var_f0 + var_f2) <= 200.0) {
+            func_8004A630(&D_8018C0B0[cameraId], object->pos, 0.35f);
         }
     }
-    FrameInterpolation_RecordCloseChild();
+}
+FrameInterpolation_RecordCloseChild();
 }
 
 void OLakitu::func_80079114(s32 objectIndex, s32 playerId, s32 arg2) {
