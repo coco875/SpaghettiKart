@@ -134,29 +134,25 @@ void OLakitu::Draw(s32 cameraId) {
             rsp_load_texture((u8*) object->activeTexture, width, height);
             gSPVertex(gDisplayListHead++, (uintptr_t) object->vertex, 4, 0);
             gSPDisplayList(gDisplayListHead++, (Gfx*) common_rectangle_display);
-        }
-        gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
+            gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 
-        gDPSetAlphaCompare(gDisplayListHead++, G_AC_NONE);
-        func_800485C4(object->pos, object->orientation, object->sizeScaling, (s32) object->primAlpha,
-                      (u8*) object->activeTLUT, (u8*) object->activeTexture, object->vertex, (s32) object->textureWidth,
-                      (s32) object->textureHeight, (s32) object->textureWidth, (s32) object->textureHeight / 2);
-    }
-    if (gScreenModeSelection == SCREEN_MODE_1P) {
-        var_f0 = object->pos[0] - camera->pos[0];
-        var_f2 = object->pos[2] - camera->pos[2];
-        if (var_f0 < 0.0f) {
-            var_f0 = -var_f0;
+            gDPSetAlphaCompare(gDisplayListHead++, G_AC_NONE);
         }
-        if (var_f2 < 0.0f) {
-            var_f2 = -var_f2;
-        }
-        if ((var_f0 + var_f2) <= 200.0) {
-            func_8004A630(&D_8018C0B0[cameraId], object->pos, 0.35f);
+        if (gScreenModeSelection == SCREEN_MODE_1P) {
+            var_f0 = object->pos[0] - camera->pos[0];
+            var_f2 = object->pos[2] - camera->pos[2];
+            if (var_f0 < 0.0f) {
+                var_f0 = -var_f0;
+            }
+            if (var_f2 < 0.0f) {
+                var_f2 = -var_f2;
+            }
+            if ((var_f0 + var_f2) <= 200.0) {
+                func_8004A630(&D_8018C0B0[cameraId], object->pos, 0.35f);
+            }
         }
     }
-}
-FrameInterpolation_RecordCloseChild();
+    FrameInterpolation_RecordCloseChild();
 }
 
 void OLakitu::func_80079114(s32 objectIndex, s32 playerId, s32 arg2) {
@@ -235,7 +231,6 @@ void OLakitu::init_obj_lakitu_starter_and_checkered_flag(s32 objectIndex, s32 pl
         objectIndex,
         (u8*) load_lakitu_tlut_x64(common_tlut_lakitu_countdown, ARRAY_COUNT(common_tlut_lakitu_countdown)),
         sLakituTextures, 56, (u16) 72);
-    Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_lakitu);
     gObjectList[objectIndex].vertex = fixed_common_vtx_lakitu;
     gObjectList[objectIndex].sizeScaling = 0.15f;
     clear_object_flag(objectIndex, 0x00000010);
@@ -353,18 +348,44 @@ static const char* sLakituCheckeredList[] = {
     gTextureLakituCheckeredFlag31, gTextureLakituCheckeredFlag32
 };
 
+Vtx fixed_common_vtx_also_lakitu[] = {
+    { { { -36, -27, 0 }, 0, { 0, 0 }, { 255, 255, 255, 255 } } },
+    { { { 35, -27, 0 }, 0, { 4544, 0 }, { 255, 255, 255, 255 } } },
+    { { { 35, 27, 0 }, 0, { 4544, 3456 }, { 255, 255, 255, 255 } } },
+    { { { -36, 27, 0 }, 0, { 0, 3456 }, { 255, 255, 255, 255 } } },
+    { { { -40, -24, 0 }, 0, { 0, 0 }, { 255, 255, 255, 255 } } },
+    { { { 40, -24, 0 }, 0, { 5056, 0 }, { 255, 255, 255, 255 } } },
+    { { { 40, 0, 0 }, 0, { 5056, 1472 }, { 255, 255, 255, 255 } } },
+    { { { -40, 0, 0 }, 0, { 0, 1472 }, { 255, 255, 255, 255 } } },
+    { { { -40, 0, 0 }, 0, { 0, 0 }, { 255, 255, 255, 255 } } },
+    { { { 40, 0, 0 }, 0, { 5056, 0 }, { 255, 255, 255, 255 } } },
+    { { { 40, 24, 0 }, 0, { 5056, 1472 }, { 255, 255, 255, 255 } } },
+    { { { -40, 24, 0 }, 0, { 0, 1472 }, { 255, 255, 255, 255 } } },
+    { { { -48, -8, 0 }, 0, { 0, 0 }, { 255, 255, 255, 255 } } },
+    { { { 47, -8, 0 }, 0, { 6080, 0 }, { 255, 255, 255, 255 } } },
+    { { { 47, 7, 0 }, 0, { 6080, 960 }, { 255, 255, 255, 255 } } },
+    { { { -48, 7, 0 }, 0, { 0, 960 }, { 255, 255, 255, 255 } } },
+    { { { -56, -16, 0 }, 0, { 0, 0 }, { 255, 255, 255, 255 } } },
+    { { { 55, -16, 0 }, 0, { 7104, 0 }, { 255, 255, 255, 255 } } },
+    { { { 55, 15, 0 }, 0, { 7104, 1984 }, { 255, 255, 255, 255 } } },
+    { { { -56, 15, 0 }, 0, { 0, 1984 }, { 255, 255, 255, 255 } } },
+    { { { -56, -16, 0 }, 0, { 0, 0 }, { 0, 0, 0, 255 } } },
+    { { { 55, -16, 0 }, 0, { 7104, 0 }, { 0, 0, 0, 255 } } },
+    { { { 55, 15, 0 }, 0, { 7104, 1984 }, { 0, 0, 0, 255 } } },
+    { { { -56, 15, 0 }, 0, { 0, 1984 }, { 0, 0, 0, 255 } } },
+};
+
 void OLakitu::init_obj_lakitu_checkered_flag(s32 objectIndex, s32 playerIndex) {
     Object* object;
 
     OLakitu::func_800791F0(objectIndex, playerIndex);
 
     u8* tex = (u8*) LOAD_ASSET_RAW(common_tlut_lakitu_checkered_flag);
-    Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_also_lakitu);
 
     init_texture_object(objectIndex, (u8*) tex, sLakituCheckeredList, 0x48U, (u16) 0x00000038);
     object = &gObjectList[objectIndex];
     object->activeTexture = *gObjectList[objectIndex].textureList;
-    object->vertex = vtx;
+    object->vertex = fixed_common_vtx_also_lakitu;
     object->pos[2] = 5000.0f;
     object->pos[1] = 5000.0f;
     object->pos[0] = 5000.0f;
@@ -436,14 +457,20 @@ void OLakitu::func_8007993C(s32 objectIndex, Player* player) {
 static const char* sLakituFishingTextures[] = { gTextureLakituFishing1, gTextureLakituFishing2, gTextureLakituFishing3,
                                                 gTextureLakituFishing4 };
 
+Vtx fixed_D_0D005F30[] = {
+    { { { -10, -35, 0 }, 0, { 0, 0 }, { 255, 255, 255, 255 } } },
+    { { { 45, -35, 0 }, 0, { 3520, 0 }, { 255, 255, 255, 255 } } },
+    { { { 45, 35, 0 }, 0, { 3520, 4480 }, { 255, 255, 255, 255 } } },
+    { { { -10, 35, 0 }, 0, { 0, 4480 }, { 255, 255, 255, 255 } } },
+};
+
 void OLakitu::init_obj_lakitu_red_flag_fishing(s32 objectIndex, s32 arg1) {
 
     u8* tlut = (u8*) LOAD_ASSET_RAW(common_tlut_lakitu_fishing);
-    Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(D_0D005F30);
 
     OLakitu::func_800791F0(objectIndex, arg1);
     init_texture_object(objectIndex, tlut, sLakituFishingTextures, 0x38U, (u16) 0x00000048);
-    gObjectList[objectIndex].vertex = vtx;
+    gObjectList[objectIndex].vertex = fixed_D_0D005F30;
     gObjectList[objectIndex].sizeScaling = 0.15f;
     func_80086E70(objectIndex);
     clear_object_flag(objectIndex, 0x00000010);
@@ -623,12 +650,11 @@ void OLakitu::func_8007A060(s32 objectIndex, s32 playerIndex) {
     OLakitu::func_800791F0(objectIndex, playerIndex);
 
     u8* tlut = (u8*) LOAD_ASSET_RAW(common_tlut_lakitu_second_lap);
-    Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_also_lakitu);
 
     init_texture_object(objectIndex, tlut, sLakituSecondLapTextures, 0x48U, (u16) 0x00000038);
     object = &gObjectList[objectIndex];
     object->activeTexture = *gObjectList[objectIndex].textureList;
-    object->vertex = vtx;
+    object->vertex = fixed_common_vtx_also_lakitu;
     object->pos[2] = 5000.0f;
     object->pos[1] = 5000.0f;
     object->pos[0] = 5000.0f;
@@ -682,12 +708,11 @@ void OLakitu::func_8007A228(s32 objectIndex, s32 playerIndex) {
     OLakitu::func_800791F0(objectIndex, playerIndex);
 
     u8* tlut = (u8*) LOAD_ASSET_RAW(common_tlut_lakitu_final_lap);
-    Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_also_lakitu);
 
     init_texture_object(objectIndex, tlut, sLakituFinalLapTextures, 0x48U, (u16) 0x00000038);
     object = &gObjectList[objectIndex];
     object->activeTexture = *gObjectList[objectIndex].textureList;
-    object->vertex = vtx;
+    object->vertex = fixed_common_vtx_also_lakitu;
     object->pos[2] = 5000.0f;
     object->pos[1] = 5000.0f;
     object->pos[0] = 5000.0f;
@@ -740,11 +765,10 @@ void OLakitu::func_8007A3F0(s32 objectIndex, s32 arg1) {
     OLakitu::func_800791F0(objectIndex, arg1);
 
     u8* tlut = (u8*) LOAD_ASSET_RAW(common_tlut_lakitu_reverse);
-    Vtx* vtx = (Vtx*) LOAD_ASSET_RAW(common_vtx_also_lakitu);
 
     init_texture_object(objectIndex, tlut, sLakituReverseTextures, 72, (u16) 56);
     gObjectList[objectIndex].activeTexture = *gObjectList[objectIndex].textureList;
-    gObjectList[objectIndex].vertex = vtx;
+    gObjectList[objectIndex].vertex = fixed_common_vtx_also_lakitu;
     gObjectList[objectIndex].pos[2] = var;
     gObjectList[objectIndex].pos[1] = var;
     gObjectList[objectIndex].pos[0] = var;
