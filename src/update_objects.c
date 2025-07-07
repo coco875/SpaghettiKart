@@ -756,7 +756,10 @@ void update_neon_texture(s32 objectIndex) {
     // I have no idea why this typecast works
     gObjectList[objectIndex].activeTLUT =
         (u8*) ((u32*) gObjectList[objectIndex].tlutList + (gObjectList[objectIndex].textureListIndex * 128));
-    gObjectList[objectIndex].activeTexture = gObjectList[objectIndex].textureList;
+    int idx = gObjectList[objectIndex].textureListIndex;
+    char* texture = gObjectList[objectIndex].textureList[idx];
+    gObjectList[objectIndex].activeTexture =
+        gObjectList[objectIndex].textureList[gObjectList[objectIndex].textureListIndex];
 }
 
 void func_80073514(s32 objectIndex) {
@@ -3259,10 +3262,10 @@ void verify_probability_table(char* str, const ItemProbabilities* probs, int16_t
     getProbabilityArray(probs, itemProbabilities);
     size_t count = 0;
     for (size_t i = 0; i < ITEM_MAX; i++) {
-        //printf("prob %d ", itemProbabilities[i]);
+        // printf("prob %d ", itemProbabilities[i]);
         count += itemProbabilities[i];
     }
-    //printf("\n");
+    // printf("\n");
 
     if (count != 100) {
         printf("update_objects.c::verify_probability_table\n  %s table for rank %d is imba %d/100\n", str, rank, count);
@@ -3289,7 +3292,7 @@ u8 gen_random_item(s16 rank, s16 option) {
 
     switch (gModeSelection) {
         case GRAND_PRIX:
-            switch(option) {
+            switch (option) {
                 case HUMAN_TABLE:
                     distributionTable = &grandPrixHumanProbabilityTable[rank];
                     verify_probability_table("Human", distributionTable, rank);
@@ -4099,14 +4102,16 @@ void func_80085BB4(s32 objectIndex) {
     object_next_state(objectIndex);
 }
 
-const char* sNeonMushroomList[] = { d_course_rainbow_road_neon_mushroom };
+const char* sNeonMushroomList[] = { d_course_rainbow_road_neon_mushroom1, d_course_rainbow_road_neon_mushroom2,
+                                    d_course_rainbow_road_neon_mushroom3, d_course_rainbow_road_neon_mushroom4,
+                                    d_course_rainbow_road_neon_mushroom5 };
 
 void init_obj_neon_mushroom(s32 objectIndex) {
     set_obj_origin_pos(objectIndex, xOrientation * -1431.0, 827.0f, -2957.0f);
     init_texture_object(objectIndex,
                         load_lakitu_tlut_x64(d_course_rainbow_road_neon_mushroom_tlut_list,
                                              ARRAY_COUNT(d_course_rainbow_road_neon_mushroom_tlut_list)),
-                        d_course_rainbow_road_neon_mushroom, 0x40U, (u16) 0x00000040);
+                        sNeonMushroomList, 0x40U, (u16) 0x00000040);
     func_80085BB4(objectIndex);
 }
 
@@ -4142,14 +4147,16 @@ void func_80085CA0(s32 objectIndex) {
     }
 }
 
-const char* sNeonList[] = { d_course_rainbow_road_neon_mario };
+const char* sNeonMarioList[] = { d_course_rainbow_road_neon_mario1, d_course_rainbow_road_neon_mario2,
+                            d_course_rainbow_road_neon_mario3, d_course_rainbow_road_neon_mario4,
+                            d_course_rainbow_road_neon_mario5 };
 
 void func_80085DB8(s32 objectIndex) {
     set_obj_origin_pos(objectIndex, xOrientation * 799.0, 1193.0f, -5891.0f);
     init_texture_object(objectIndex,
                         load_lakitu_tlut_x64(d_course_rainbow_road_neon_mario_tlut_list,
                                              ARRAY_COUNT(d_course_rainbow_road_neon_mario_tlut_list)),
-                        d_course_rainbow_road_neon_mario, 0x40U, (u16) 0x00000040);
+                        sNeonMarioList, 0x40U, (u16) 0x00000040);
     func_80085BB4(objectIndex);
 }
 
@@ -4176,14 +4183,16 @@ void func_80085E38(s32 objectIndex) {
     }
 }
 
-const char* sNeonBooList[] = { d_course_rainbow_road_neon_boo };
+const char* sNeonBooList[] = { d_course_rainbow_road_neon_boo1, d_course_rainbow_road_neon_boo2,
+                               d_course_rainbow_road_neon_boo3, d_course_rainbow_road_neon_boo4,
+                               d_course_rainbow_road_neon_boo5 };
 
 void func_80085EF8(s32 objectIndex) {
     set_obj_origin_pos(objectIndex, xOrientation * -2013.0, 555.0f, 0.0f);
     init_texture_object(objectIndex,
                         load_lakitu_tlut_x64(d_course_rainbow_road_neon_boo_tlut_list,
                                              ARRAY_COUNT(d_course_rainbow_road_neon_boo_tlut_list)),
-                        d_course_rainbow_road_neon_boo, 0x40U, (u16) 0x00000040);
+                        sNeonBooList, 0x40U, (u16) 0x00000040);
     func_80085BB4(objectIndex);
 }
 
@@ -4229,7 +4238,7 @@ void func_80085F74(s32 objectIndex) {
 void func_80086074(s32 objectIndex, s32 arg1) {
     set_obj_origin_pos(objectIndex, D_800E6734[arg1][0] * xOrientation, D_800E6734[arg1][1], D_800E6734[arg1][2]);
     init_texture_object(objectIndex, d_course_rainbow_road_static_tluts[arg1],
-                        d_course_rainbow_road_static_textures[arg1], 64, 64);
+                        &d_course_rainbow_road_static_textures[arg1], 64, 64);
     func_80085BB4(objectIndex);
 }
 #else
