@@ -279,10 +279,14 @@ Functions</h2></td></tr>
 <tr class="separator:a8051db7229d932b267fdec53a1e794eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa1d2583978658f8524340b7b94544b1" id="r_afa1d2583978658f8524340b7b94544b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa1d2583978658f8524340b7b94544b1">print_text2</a> (s32 column, s32 row, char *text, s32 tracking, f32 scaleX, f32 scaleY, s32 arg6)</td></tr>
 <tr class="separator:afa1d2583978658f8524340b7b94544b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5abcef085b1e2089c54ea352ab09c9e2" id="r_a5abcef085b1e2089c54ea352ab09c9e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5abcef085b1e2089c54ea352ab09c9e2">print_text2_wide</a> (s32 column, s32 row, char *text, s32 tracking, f32 scaleX, f32 scaleY, s32 arg6)</td></tr>
+<tr class="separator:a5abcef085b1e2089c54ea352ab09c9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51a08d17a71783b05d2688b3e4f1e88c" id="r_a51a08d17a71783b05d2688b3e4f1e88c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51a08d17a71783b05d2688b3e4f1e88c">func_800939C8</a> (s32 column, s32 row, char *text, s32 tracking, f32 scaleX, f32 scaleY)</td></tr>
 <tr class="separator:a51a08d17a71783b05d2688b3e4f1e88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24be09f5258f7b9e60f78e51ad9b5c73" id="r_a24be09f5258f7b9e60f78e51ad9b5c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24be09f5258f7b9e60f78e51ad9b5c73">text_draw</a> (s32 column, s32 row, char *text, s32 tracking, f32 scaleX, f32 scaleY)</td></tr>
 <tr class="separator:a24be09f5258f7b9e60f78e51ad9b5c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae50e7ba196b45d70439274d82e043027" id="r_ae50e7ba196b45d70439274d82e043027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae50e7ba196b45d70439274d82e043027">text_draw_wide</a> (s32 column, s32 row, char *text, s32 tracking, f32 scaleX, f32 scaleY)</td></tr>
+<tr class="separator:ae50e7ba196b45d70439274d82e043027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cc677f84eccb008ce70c4b051701cb6" id="r_a6cc677f84eccb008ce70c4b051701cb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cc677f84eccb008ce70c4b051701cb6">func_80093A30</a> (s32 arg0)</td></tr>
 <tr class="separator:a6cc677f84eccb008ce70c4b051701cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa84b20fe3916cb4beb4b6dfb28584da3" id="r_aa84b20fe3916cb4beb4b6dfb28584da3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa84b20fe3916cb4beb4b6dfb28584da3">func_80093A5C</a> (u32 arg0)</td></tr>
@@ -2322,7 +2326,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000039">Todo</a></b></dt><dd>These sizes need to be sizeof() for shiftability if possible </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000041">Todo</a></b></dt><dd>These sizes need to be sizeof() for shiftability if possible </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3419,7 +3423,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ad129d5fc839c6e03c8d1399f72f53071_icgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ad129d5fc839c6e03c8d1399f72f53071_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -8911,7 +8915,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo</a></b></dt><dd>Move gGfxPool out of <a class="el" href="main_8h.html">main.h</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000038">Todo</a></b></dt><dd>Move gGfxPool out of <a class="el" href="main_8h.html">main.h</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -9393,7 +9397,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a4a007ea44e7ab306e6126af44f75814a_icgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a4a007ea44e7ab306e6126af44f75814a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -9818,6 +9822,62 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_afa1d2583978658f8524340b7b94544b1_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a5abcef085b1e2089c54ea352ab09c9e2" name="a5abcef085b1e2089c54ea352ab09c9e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5abcef085b1e2089c54ea352ab09c9e2">&#9670;&#160;</a></span>print_text2_wide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_text2_wide </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>column</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>tracking</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>scaleX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>scaleY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg6</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a5abcef085b1e2089c54ea352ab09c9e2_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a5abcef085b1e2089c54ea352ab09c9e2_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -10649,6 +10709,57 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="menu__items_8c_a24be09f5258f7b9e60f78e51ad9b5c73_icgraph.svg" width="664" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae50e7ba196b45d70439274d82e043027" name="ae50e7ba196b45d70439274d82e043027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae50e7ba196b45d70439274d82e043027">&#9670;&#160;</a></span>text_draw_wide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void text_draw_wide </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>column</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>tracking</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>scaleX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>scaleY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ae50e7ba196b45d70439274d82e043027_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="menu__items_8c_ae50e7ba196b45d70439274d82e043027_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

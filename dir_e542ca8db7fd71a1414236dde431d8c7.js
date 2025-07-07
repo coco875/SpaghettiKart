@@ -10,7 +10,7 @@ var dir_e542ca8db7fd71a1414236dde431d8c7 =
     [ "ChainChomp.h", "ChainChomp_8h.html", "ChainChomp_8h" ],
     [ "CheepCheep.cpp", "CheepCheep_8cpp.html", "CheepCheep_8cpp" ],
     [ "CheepCheep.h", "CheepCheep_8h.html", "CheepCheep_8h" ],
-    [ "Crab.cpp", "Crab_8cpp.html", null ],
+    [ "Crab.cpp", "Crab_8cpp.html", "Crab_8cpp" ],
     [ "Crab.h", "Crab_8h.html", "Crab_8h" ],
     [ "Flagpole.cpp", "Flagpole_8cpp.html", null ],
     [ "Flagpole.h", "Flagpole_8h.html", "Flagpole_8h" ],

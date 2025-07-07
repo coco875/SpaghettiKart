@@ -16,7 +16,6 @@ var ImguiUI_8cpp =
     [ "gMenuSelection", "ImguiUI_8cpp.html#a6c59bf49fd855f9c1fa23898fb9d4df4", null ],
     [ "GameUI::mConsoleWindow", "namespaceGameUI.html#ad578e6e03a0f0901d9bd3f505d76a152", null ],
     [ "GameUI::mContentBrowserWindow", "namespaceGameUI.html#ac706231c321fb011884fe479328bb1ed", null ],
-    [ "GameUI::mGameMenuBar", "namespaceGameUI.html#a06702cbac3b6bc84ac9457252e4d2ed4", null ],
     [ "GameUI::mGfxDebuggerWindow", "namespaceGameUI.html#a0a095cd5e52838f92ff9f8d1c0a71064", null ],
     [ "GameUI::mInputEditorWindow", "namespaceGameUI.html#a16125af0f2e0e8d2237e7a1c4e470a99", null ],
     [ "GameUI::mMultiplayerWindow", "namespaceGameUI.html#a035f5c73130973d69afe5c365d4ecf27", null ],

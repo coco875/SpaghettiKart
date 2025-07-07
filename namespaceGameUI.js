@@ -61,7 +61,6 @@ var namespaceGameUI =
     [ "mContentBrowserWindow", "namespaceGameUI.html#ac706231c321fb011884fe479328bb1ed", null ],
     [ "menuThemeOptions", "namespaceGameUI.html#a3d46807cc832ea9dce8ac8d36836343f", null ],
     [ "messageColor", "namespaceGameUI.html#a8294545d5526359ddf2ceb19c6016f1b", null ],
-    [ "mGameMenuBar", "namespaceGameUI.html#a06702cbac3b6bc84ac9457252e4d2ed4", null ],
     [ "mGfxDebuggerWindow", "namespaceGameUI.html#a0a095cd5e52838f92ff9f8d1c0a71064", null ],
     [ "mInputEditorWindow", "namespaceGameUI.html#a16125af0f2e0e8d2237e7a1c4e470a99", null ],
     [ "minVerticalPixelCount", "namespaceGameUI.html#a788dd35f406532d68d11b07681fecc40", null ],

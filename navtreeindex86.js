@@ -1,5 +1,16 @@
 var NAVTREEINDEX86 =
 {
+"update__objects_8c.html#a7287ce41d3273781208262a3ecc03118":[15,0,3,69,49],
+"update__objects_8c.html#a72bfa9a1971cae127a9e6539f9a38684":[15,0,3,69,94],
+"update__objects_8c.html#a73baf566f784645307e6515a2528537d":[15,0,3,69,152],
+"update__objects_8c.html#a7418a677e56b8fae58e4830a9fd5955e":[15,0,3,69,229],
+"update__objects_8c.html#a7472eb289d568ef282eeedaaf05654a1":[15,0,3,69,217],
+"update__objects_8c.html#a74b3e5bf86dbf348bd01976b87c0732a":[15,0,3,69,86],
+"update__objects_8c.html#a75b557e879b556e596088376a24763f7":[15,0,3,69,55],
+"update__objects_8c.html#a77160ca84eead36749ab8b1ac1ef987b":[15,0,3,69,65],
+"update__objects_8c.html#a7798b724f1595162e8f73d28dfeaf978":[15,0,3,69,70],
+"update__objects_8c.html#a7ae045370ff625cdd99a034e8940ec55":[15,0,3,69,34],
+"update__objects_8c.html#a7c574d70f5e63dbdb8afaf8112d2eb26":[15,0,3,69,51],
 "update__objects_8c.html#a7cccb4f6d5faf49ab0e338bab2e9f535":[15,0,3,69,160],
 "update__objects_8c.html#a7d9457500a57829bf6c622122fd2393c":[15,0,3,69,6],
 "update__objects_8c.html#a7ec6746b9a66e965cab16e89f8d8ecd6":[15,0,3,69,113],
@@ -238,13 +249,5 @@ var NAVTREEINDEX86 =
 "yoshi__valley_2course__offsets_8c.html#a48888abc87daebecf0c3f4678bf95eed":[15,0,0,20,0,3],
 "yoshi__valley_2course__offsets_8c.html#a61a71e37adc556ceee903b2fbeeef169":[15,0,0,20,0,4],
 "yoshi__valley_2course__offsets_8c.html#a960edbc8698401e040375c3e020e5eed":[15,0,0,20,0,2],
-"yoshi__valley__data_8h.html":[15,0,2,0,78],
-"yoshi__valley__data_8h.html#a3c65c73eef4a3b1af8c2d16ee461e1e6":[15,0,2,0,78,0],
-"yoshi__valley__data_8h_source.html":[15,0,2,0,78],
-"yoshi__valley__displaylists_8h.html":[15,0,2,0,79],
-"yoshi__valley__displaylists_8h.html#ae99718e4c54714908687bc875677fbf7":[15,0,2,0,79,0],
-"yoshi__valley__displaylists_8h_source.html":[15,0,2,0,79],
-"yoshi__valley__vertices_8h.html":[15,0,2,0,80],
-"yoshi__valley__vertices_8h.html#ad27b63f4487198e1902b64319926d0c3":[15,0,2,0,80,0],
-"yoshi__valley__vertices_8h_source.html":[15,0,2,0,80]
+"yoshi__valley__data_8h.html":[15,0,2,0,78]
 };

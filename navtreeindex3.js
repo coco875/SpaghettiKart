@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"ImguiUI_8h_source.html":[15,0,3,10,2,5],
 "Items_8cpp.html":[15,0,3,6,3,0],
 "Items_8h.html":[15,0,3,6,3,1],
 "Items_8h_source.html":[15,0,3,6,3,1],
@@ -17,13 +18,16 @@ var NAVTREEINDEX3 =
 "KoopaTroopaBeach_8h.html#ae74e61e0ad680ea0e147c088b13f81f1":[15,0,3,6,1,23,1],
 "KoopaTroopaBeach_8h_source.html":[15,0,3,6,1,23],
 "Lakitu_8cpp.html":[15,0,3,6,4,20],
-"Lakitu_8cpp.html#a0a66dfbe0d168a6d3c399920034f8d5c":[15,0,3,6,4,20,3],
-"Lakitu_8cpp.html#a0def6e22926424943f00852245565537":[15,0,3,6,4,20,1],
-"Lakitu_8cpp.html#a4722768e4734af3123008ead62486617":[15,0,3,6,4,20,4],
-"Lakitu_8cpp.html#a60c6a69449720d514d1f6569c45f626e":[15,0,3,6,4,20,0],
-"Lakitu_8cpp.html#a989fc1c2c04e4382c77c28ff1b309bcb":[15,0,3,6,4,20,5],
-"Lakitu_8cpp.html#aa278e9a8cd7e330e85a8437be7688a52":[15,0,3,6,4,20,6],
-"Lakitu_8cpp.html#aadb92787b2b05ff38854f8bcd71cc845":[15,0,3,6,4,20,2],
+"Lakitu_8cpp.html#a0a66dfbe0d168a6d3c399920034f8d5c":[15,0,3,6,4,20,6],
+"Lakitu_8cpp.html#a0def6e22926424943f00852245565537":[15,0,3,6,4,20,4],
+"Lakitu_8cpp.html#a29a4e2ebd41fee7079eaa116dec67178":[15,0,3,6,4,20,2],
+"Lakitu_8cpp.html#a3cfbb09a0476eacbab0900cbcc8c9d65":[15,0,3,6,4,20,0],
+"Lakitu_8cpp.html#a4722768e4734af3123008ead62486617":[15,0,3,6,4,20,7],
+"Lakitu_8cpp.html#a49f1211086c8edef1562a4a2f24cc4b7":[15,0,3,6,4,20,1],
+"Lakitu_8cpp.html#a60c6a69449720d514d1f6569c45f626e":[15,0,3,6,4,20,3],
+"Lakitu_8cpp.html#a989fc1c2c04e4382c77c28ff1b309bcb":[15,0,3,6,4,20,8],
+"Lakitu_8cpp.html#aa278e9a8cd7e330e85a8437be7688a52":[15,0,3,6,4,20,9],
+"Lakitu_8cpp.html#aadb92787b2b05ff38854f8bcd71cc845":[15,0,3,6,4,20,5],
 "Lakitu_8h.html":[15,0,3,6,4,21],
 "Lakitu_8h_source.html":[15,0,3,6,4,21],
 "Light_8cpp.html":[15,0,3,6,2,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "ResolutionEditor_8cpp.html":[15,0,3,10,2,15],
 "ResolutionEditor_8h.html":[15,0,3,10,2,16],
 "ResolutionEditor_8h_source.html":[15,0,3,10,2,16],
-"ResourceType_8h.html":[15,0,3,10,1,1,30],
-"ResourceType_8h_source.html":[15,0,3,10,1,1,30],
-"ResourceUtil_8h.html":[15,0,3,10,1,0,20],
-"ResourceUtil_8h_source.html":[15,0,3,10,1,0,20],
-"RoyalRaceway_8cpp.html":[15,0,3,6,1,34]
+"ResourceType_8h.html":[15,0,3,10,1,1,30]
 };

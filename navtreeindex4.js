@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"ResourceType_8h_source.html":[15,0,3,10,1,1,30],
+"ResourceUtil_8h.html":[15,0,3,10,1,0,20],
+"ResourceUtil_8h_source.html":[15,0,3,10,1,0,20],
+"RoyalRaceway_8cpp.html":[15,0,3,6,1,34],
 "RoyalRaceway_8cpp.html#a16768b11051ff2525aea44815a1a845d":[15,0,3,6,1,34,0],
 "RoyalRaceway_8cpp.html#abd8f2148ac79b42d3a5f36670490052a":[15,0,3,6,1,34,1],
 "RoyalRaceway_8h.html":[15,0,3,6,1,35],
@@ -57,8 +61,10 @@ var NAVTREEINDEX4 =
 "Smoke_8h.html#ac60a65eb1961690e911d769968e4c863":[15,0,3,6,27,1],
 "Smoke_8h_source.html":[15,0,3,6,27],
 "Snowman_8cpp.html":[15,0,3,6,4,34],
-"Snowman_8cpp.html#a0821481cef22ca86852da3d54ec9f4bf":[15,0,3,6,4,34,1],
-"Snowman_8cpp.html#a360f7c499181e0b40e2b3c40828c020d":[15,0,3,6,4,34,0],
+"Snowman_8cpp.html#a0821481cef22ca86852da3d54ec9f4bf":[15,0,3,6,4,34,3],
+"Snowman_8cpp.html#a360f7c499181e0b40e2b3c40828c020d":[15,0,3,6,4,34,2],
+"Snowman_8cpp.html#a4dc27b4e28b0df9a28e549ec68f31176":[15,0,3,6,4,34,1],
+"Snowman_8cpp.html#afaca2f24176f9f651c85b8f90f1914c1":[15,0,3,6,4,34,0],
 "Snowman_8h.html":[15,0,3,6,4,35],
 "Snowman_8h_source.html":[15,0,3,6,4,35],
 "SpaghettiGui_8cpp.html":[15,0,3,10,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX4 =
 "__Litob_8c.html#aaaba3b0ab7920d422a61fe9e22600dd0":[15,0,3,9,28,1],
 "__Printf_8c.html":[15,0,3,9,29],
 "__Printf_8c.html#a10b2d890d871e1489bb02b7e70d9bdfb":[15,0,3,9,29,3],
-"__Printf_8c.html#a39bb05c90efce6c6790c5d58d271d72d":[15,0,3,9,29,4],
-"__Printf_8c.html#a4d0d03ac98a65cf288e4c2ce265e7094":[15,0,3,9,29,6],
-"__Printf_8c.html#a4ee3dcc71cd84a3ea6d024651b4cafad":[15,0,3,9,29,8],
-"__Printf_8c.html#a5a33028196be271f183bd8aff867d897":[15,0,3,9,29,0],
-"__Printf_8c.html#a693ec549fe145d11ba1c780dbecda450":[15,0,3,9,29,10],
-"__Printf_8c.html#a78be9534200581ba7896f384d8b4c6ca":[15,0,3,9,29,7],
-"__Printf_8c.html#aa730182efed14513bcdb1de045dfc434":[15,0,3,9,29,9]
+"__Printf_8c.html#a39bb05c90efce6c6790c5d58d271d72d":[15,0,3,9,29,4]
 };

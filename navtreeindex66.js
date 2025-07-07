@@ -1,5 +1,16 @@
 var NAVTREEINDEX66 =
 {
+"structALADPCMloop.html#a3346f736d48ac20161233b9a065a7205":[14,0,40,1],
+"structALADPCMloop.html#a520bead3b69cf83f5ea552cec4ae2e3a":[14,0,40,3],
+"structALADPCMloop.html#a77efa500c195e50e91fd3cb1a5e751a4":[14,0,40,2],
+"structALADPCMloop.html#a79a950184af0347c58501e770a27b07b":[14,0,40,0],
+"structALBankFile.html":[14,0,43],
+"structALBankFile.html#a01c1cee5df95ccd5db0690f34e742ad2":[14,0,43,1],
+"structALBankFile.html#a0248bb12530179de5061822eacdaf91e":[14,0,43,0],
+"structALBankFile.html#ab94aa3f283c52419547e417151e84bfb":[14,0,43,2],
+"structALBank__s.html":[14,0,42],
+"structALBank__s.html#a09c8b064e5f89189e117b0927941b2a0":[14,0,42,2],
+"structALBank__s.html#a0bf3563b4c60b580a2b09422de6eebce":[14,0,42,4],
 "structALBank__s.html#a51e528879a570e855363b7a47d00acaf":[14,0,42,1],
 "structALBank__s.html#a52c6d304efe60e4efd36a8b92c03d548":[14,0,42,3],
 "structALBank__s.html#a9a04d0e24c6392eed59ddcc31d0251e3":[14,0,42,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX66 =
 "structBananaActor.html#ae924710af4c69beea980be8be2f7ad0e":[14,0,75,5],
 "structBananaActor.html#af75dd2dea48081a38272afd39b13b0e6":[14,0,75,9],
 "structBananaBunchParent.html":[14,0,76],
-"structBananaBunchParent.html#a1797405069f8c96889c9aeb59f5adbde":[14,0,76,4],
-"structBananaBunchParent.html#a2bfe2004c8d1a9f6d97c9fa1d614fe03":[14,0,76,1],
-"structBananaBunchParent.html#a4ea1e279d4c3e9c579dd740973c746fc":[14,0,76,5],
-"structBananaBunchParent.html#a51be60b0ee4aaf0418157b25163904c2":[14,0,76,8],
-"structBananaBunchParent.html#a523049b0bb754bb1474e316a939734e1":[14,0,76,9],
-"structBananaBunchParent.html#a9da96b458e7d1f0ddd3130cd3443cf36":[14,0,76,11],
-"structBananaBunchParent.html#abe346356b3aaefdd530f6e119deef37a":[14,0,76,2],
-"structBananaBunchParent.html#abed61c26331a3ddf65be3ff692da89ae":[14,0,76,0],
-"structBananaBunchParent.html#ace9ff16f10758860c1c120eb60d9cfc4":[14,0,76,10],
-"structBananaBunchParent.html#ad308ed0758aef4141ec5e6de8b8101f8":[14,0,76,12],
-"structBananaBunchParent.html#ae1c190eae7f8f237b5a37aa109a3e7b5":[14,0,76,7],
-"structBananaBunchParent.html#ae8c91dc7d2c31c3f0b10b7cbc1952f5c":[14,0,76,3]
+"structBananaBunchParent.html#a1797405069f8c96889c9aeb59f5adbde":[14,0,76,4]
 };

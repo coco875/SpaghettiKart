@@ -1,5 +1,16 @@
 var NAVTREEINDEX71 =
 {
+"structPlayer.html#af525c0ce41fb6f4f2be1b23707dcef84":[14,0,213,95],
+"structPlayer.html#af68a201da4cc5a0628252a352d147767":[14,0,213,9],
+"structPlayer.html#af7bfe96c5524c007e5671a63c51c3234":[14,0,213,71],
+"structPlayer.html#afba5277754b3f1755c637a6d104b8606":[14,0,213,58],
+"structPlayer.html#afc95659ebd1e147d67dc301c27071e65":[14,0,213,92],
+"structPlayer.html#afcab3a1868cf268853db8ecc3502f434":[14,0,213,103],
+"structPlayer.html#afd5bcd9bdb20066664a1f7be8fa29f07":[14,0,213,70],
+"structPlayer.html#aff7447121b2e0bd051e58a276fce7b36":[14,0,213,31],
+"structPoolSplit.html":[14,0,216],
+"structPoolSplit.html#a032ee33fb54cbd6eea6c67964b5d2aa2":[14,0,216,2],
+"structPoolSplit.html#a0e988945af59d7ca4b1ae41eb97e3554":[14,0,216,0],
 "structPoolSplit.html#a573b5f0745a8ad7c723b003545988170":[14,0,216,1],
 "structPoolSplit.html#a8b3aa0f7abfe6076fb6b59e6d5825a15":[14,0,216,3],
 "structPoolSplit2.html":[14,0,217],
@@ -238,16 +249,5 @@ var NAVTREEINDEX71 =
 "structSF64_1_1Vec3fData.html#adc94f7e03edc2fc618626a39d63b6363":[14,0,4,25,0],
 "structSF64_1_1Vec3fData.html#aec0fd4c1bf34ba59a69314263a0d436b":[13,0,8,25,2],
 "structSF64_1_1Vec3fData.html#aec0fd4c1bf34ba59a69314263a0d436b":[14,0,4,25,2],
-"structSF64_1_1Vec3i.html":[13,0,8,26],
-"structSF64_1_1Vec3i.html":[14,0,4,26],
-"structSF64_1_1Vec3i.html#a0c9c8a6ef544c980ddd1c086f3f22fcc":[13,0,8,26,3],
-"structSF64_1_1Vec3i.html#a0c9c8a6ef544c980ddd1c086f3f22fcc":[14,0,4,26,3],
-"structSF64_1_1Vec3i.html#a13c81e396d2ee748614bc5cb42ff30ba":[13,0,8,26,0],
-"structSF64_1_1Vec3i.html#a13c81e396d2ee748614bc5cb42ff30ba":[14,0,4,26,0],
-"structSF64_1_1Vec3i.html#a734152511f6b627df9a864264b5462c9":[13,0,8,26,1],
-"structSF64_1_1Vec3i.html#a734152511f6b627df9a864264b5462c9":[14,0,4,26,1],
-"structSF64_1_1Vec3i.html#ab05c47dc5e5925e153be2ed17a33ff9d":[13,0,8,26,2],
-"structSF64_1_1Vec3i.html#ab05c47dc5e5925e153be2ed17a33ff9d":[14,0,4,26,2],
-"structSF64_1_1Vec3iu.html":[13,0,8,27],
-"structSF64_1_1Vec3iu.html":[14,0,4,27]
+"structSF64_1_1Vec3i.html":[13,0,8,26]
 };

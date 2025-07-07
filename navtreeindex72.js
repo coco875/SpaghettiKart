@@ -1,5 +1,16 @@
 var NAVTREEINDEX72 =
 {
+"structSF64_1_1Vec3i.html":[14,0,4,26],
+"structSF64_1_1Vec3i.html#a0c9c8a6ef544c980ddd1c086f3f22fcc":[13,0,8,26,3],
+"structSF64_1_1Vec3i.html#a0c9c8a6ef544c980ddd1c086f3f22fcc":[14,0,4,26,3],
+"structSF64_1_1Vec3i.html#a13c81e396d2ee748614bc5cb42ff30ba":[13,0,8,26,0],
+"structSF64_1_1Vec3i.html#a13c81e396d2ee748614bc5cb42ff30ba":[14,0,4,26,0],
+"structSF64_1_1Vec3i.html#a734152511f6b627df9a864264b5462c9":[13,0,8,26,1],
+"structSF64_1_1Vec3i.html#a734152511f6b627df9a864264b5462c9":[14,0,4,26,1],
+"structSF64_1_1Vec3i.html#ab05c47dc5e5925e153be2ed17a33ff9d":[13,0,8,26,2],
+"structSF64_1_1Vec3i.html#ab05c47dc5e5925e153be2ed17a33ff9d":[14,0,4,26,2],
+"structSF64_1_1Vec3iu.html":[13,0,8,27],
+"structSF64_1_1Vec3iu.html":[14,0,4,27],
 "structSF64_1_1Vec3iu.html#a5bd45826a5bee51e20c0cef90a255773":[13,0,8,27,2],
 "structSF64_1_1Vec3iu.html#a5bd45826a5bee51e20c0cef90a255773":[14,0,4,27,2],
 "structSF64_1_1Vec3iu.html#acbad3170b0dd808932cbef8a1afb8854":[13,0,8,27,3],
@@ -238,16 +249,5 @@ var NAVTREEINDEX72 =
 "structSkyboxColours.html#a2be030d439269ee112dad8c957c4b018":[14,0,247,2],
 "structSkyboxColours.html#a2f0d950679a557ad46d5fa4a5ac7680a":[14,0,247,7],
 "structSkyboxColours.html#a5fc79df7b53785df0805278ab362bbf6":[14,0,247,6],
-"structSkyboxColours.html#a97f193351ea4b1931e7c2ae691008c42":[14,0,247,5],
-"structSkyboxColours.html#ab0925054e9155d18a93065bba12c0019":[14,0,247,4],
-"structSnowmanSpawn.html":[14,0,249],
-"structSnowmanSpawn.html#a0c1d4813f32b0f0074b8770996e2c192":[14,0,249,1],
-"structSnowmanSpawn.html#af7232660ed73569f632b7b299c320cc0":[14,0,249,0],
-"structSound.html":[14,0,250],
-"structSound.html#a19b4ab45a574128c12423c7ae6fa693e":[14,0,250,3],
-"structSound.html#a58b1b08b974347c7837d8ab8d67355b3":[14,0,250,1],
-"structSound.html#a70931607825e2e45674276b664a25621":[14,0,250,4],
-"structSound.html#a76da5ca3575e9d2752a7fc7dad75723d":[14,0,250,2],
-"structSound.html#ab9d2762840c1e7690e3dc064d3723909":[14,0,250,0],
-"structSound.html#ae9563d52dd89f0da38cbecc620c0b31d":[14,0,250,5]
+"structSkyboxColours.html#a97f193351ea4b1931e7c2ae691008c42":[14,0,247,5]
 };

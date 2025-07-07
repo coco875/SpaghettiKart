@@ -1,5 +1,8 @@
 var Lakitu_8cpp =
 [
+    [ "fixed_common_vtx_also_lakitu", "Lakitu_8cpp.html#a3cfbb09a0476eacbab0900cbcc8c9d65", null ],
+    [ "fixed_common_vtx_lakitu", "Lakitu_8cpp.html#a49f1211086c8edef1562a4a2f24cc4b7", null ],
+    [ "fixed_D_0D005F30", "Lakitu_8cpp.html#a29a4e2ebd41fee7079eaa116dec67178", null ],
     [ "gPlayerCount", "Lakitu_8cpp.html#a60c6a69449720d514d1f6569c45f626e", null ],
     [ "sLakituCheckeredList", "Lakitu_8cpp.html#a0def6e22926424943f00852245565537", null ],
     [ "sLakituFinalLapTextures", "Lakitu_8cpp.html#aadb92787b2b05ff38854f8bcd71cc845", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX6 =
 {
+"actors__extended_8c.html#a34694840e4ed5e496ed3ba98429b0558":[15,0,3,11,2,15],
+"actors__extended_8c.html#a37199f633d5cab2cbbc3c506b177a68e":[15,0,3,11,2,8],
+"actors__extended_8c.html#a407d30d307b990cf22e979f7180477e5":[15,0,3,11,2,1],
+"actors__extended_8c.html#a47255ea9aa07316c48b95fd7a97ac40d":[15,0,3,11,2,24],
+"actors__extended_8c.html#a58a90bceb7852ff16b389f2bba53817f":[15,0,3,11,2,23],
+"actors__extended_8c.html#a6c53567ce07da53daa086cb9b09076a1":[15,0,3,11,2,13],
 "actors__extended_8c.html#a78ba9cbef20b4e33a02f2d21004e0194":[15,0,3,11,2,18],
 "actors__extended_8c.html#a78e98c146f1f4dd6e3608016486172a4":[15,0,3,11,2,10],
 "actors__extended_8c.html#a87d7f1fdb71b4ffb9b0b6961d5f4fb65":[15,0,3,11,2,7],
@@ -28,7 +34,7 @@ var NAVTREEINDEX6 =
 "align__asset__macro_8h.html#a22c983081ec2a149d2abe5d4c45648ea":[15,0,2,4,0],
 "align__asset__macro_8h.html#a79a4b47022d9d400a75e30aecb495845":[15,0,2,4,1],
 "align__asset__macro_8h.html#a8b59e27ac08d0690cb93f94535229a8f":[15,0,2,4,2],
-"align__asset__macro_8h.html#abf1f4abc8462daf6ec3ec191853dbb06":[15,0,2,4,3],
+"align__asset__macro_8h.html#ac080f5860e6330eba94536eb08638ee2":[15,0,2,4,3],
 "align__asset__macro_8h_source.html":[15,0,2,4],
 "all__course__data_8h.html":[15,0,0,21],
 "all__course__data_8h_source.html":[15,0,0,21],
@@ -243,11 +249,5 @@ var NAVTREEINDEX6 =
 "bowsers__castle__data_8h.html#a73e851d2edebf2c5c91a808275a8aece":[15,0,2,0,12,1],
 "bowsers__castle__data_8h.html#ae84f7e8f9496e50de0fa84c8c2b84b53":[15,0,2,0,12,0],
 "bowsers__castle__data_8h_source.html":[15,0,2,0,12],
-"bowsers__castle__displaylists_8h.html":[15,0,2,0,13],
-"bowsers__castle__displaylists_8h.html#a897f9a178e9eb5873cfbdfc5d0c5e86c":[15,0,2,0,13,0],
-"bowsers__castle__displaylists_8h_source.html":[15,0,2,0,13],
-"bowsers__castle__vertices_8h.html":[15,0,2,0,14],
-"bowsers__castle__vertices_8h.html#a94618f8cde464504b5b489ed4f0ce9f3":[15,0,2,0,14,0],
-"bowsers__castle__vertices_8h_source.html":[15,0,2,0,14],
-"box__truck_2render_8inc_8c.html":[15,0,3,0,2,0]
+"bowsers__castle__displaylists_8h.html":[15,0,2,0,13]
 };
