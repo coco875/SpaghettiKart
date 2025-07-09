@@ -230,7 +230,7 @@ var update__objects_8c =
     [ "grandPrixHardCPUProbabilityTable", "update__objects_8c.html#ac78d55855f6ac4c8ab5924a104673f2d", null ],
     [ "grandPrixHumanProbabilityTable", "update__objects_8c.html#adfd1db5c51a580afd112557b3310a4b8", null ],
     [ "sNeonBooList", "update__objects_8c.html#a45c1a75871dff82a372eff3bb0525384", null ],
-    [ "sNeonList", "update__objects_8c.html#ab6d4bdf45c595f1d48bcbcdb48eddad8", null ],
+    [ "sNeonMarioList", "update__objects_8c.html#a2ee7ebb7b18c0c33a3a2354c7d2c0445", null ],
     [ "sNeonMushroomList", "update__objects_8c.html#a4921ebe69cc0c7b565834fb5cdae6be8", null ],
     [ "versus2PlayerProbabilityTable", "update__objects_8c.html#a3f36661504e32bc1def2cf19922f7c6f", null ],
     [ "versus3PlayerProbabilityTable", "update__objects_8c.html#a7418a677e56b8fae58e4830a9fd5955e", null ],

@@ -1,10 +1,5 @@
 var NAVTREEINDEX66 =
 {
-"structALADPCMloop.html#a3346f736d48ac20161233b9a065a7205":[14,0,40,1],
-"structALADPCMloop.html#a520bead3b69cf83f5ea552cec4ae2e3a":[14,0,40,3],
-"structALADPCMloop.html#a77efa500c195e50e91fd3cb1a5e751a4":[14,0,40,2],
-"structALADPCMloop.html#a79a950184af0347c58501e770a27b07b":[14,0,40,0],
-"structALBankFile.html":[14,0,43],
 "structALBankFile.html#a01c1cee5df95ccd5db0690f34e742ad2":[14,0,43,1],
 "structALBankFile.html#a0248bb12530179de5061822eacdaf91e":[14,0,43,0],
 "structALBankFile.html#ab94aa3f283c52419547e417151e84bfb":[14,0,43,2],
@@ -249,5 +244,10 @@ var NAVTREEINDEX66 =
 "structBananaActor.html#ae924710af4c69beea980be8be2f7ad0e":[14,0,75,5],
 "structBananaActor.html#af75dd2dea48081a38272afd39b13b0e6":[14,0,75,9],
 "structBananaBunchParent.html":[14,0,76],
-"structBananaBunchParent.html#a1797405069f8c96889c9aeb59f5adbde":[14,0,76,4]
+"structBananaBunchParent.html#a1797405069f8c96889c9aeb59f5adbde":[14,0,76,4],
+"structBananaBunchParent.html#a2bfe2004c8d1a9f6d97c9fa1d614fe03":[14,0,76,1],
+"structBananaBunchParent.html#a4ea1e279d4c3e9c579dd740973c746fc":[14,0,76,5],
+"structBananaBunchParent.html#a51be60b0ee4aaf0418157b25163904c2":[14,0,76,8],
+"structBananaBunchParent.html#a523049b0bb754bb1474e316a939734e1":[14,0,76,9],
+"structBananaBunchParent.html#a9da96b458e7d1f0ddd3130cd3443cf36":[14,0,76,11]
 };

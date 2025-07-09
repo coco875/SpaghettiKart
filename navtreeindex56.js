@@ -1,11 +1,5 @@
 var NAVTREEINDEX56 =
 {
-"race__logic_8h.html#a18aa11908bd75450e1cc7a07038adce5":[15,0,3,11,13,15],
-"race__logic_8h.html#a1b2815c62b11e33e3c74d7fd65af5edc":[15,0,3,11,13,30],
-"race__logic_8h.html#a2645116d52469ec9b45c668d694e98c4":[15,0,3,11,13,10],
-"race__logic_8h.html#a26fc0e5f675f4602960709d90df9ac8f":[15,0,3,11,13,33],
-"race__logic_8h.html#a2ac76336684bc3948c759d35cf5435b2":[15,0,3,11,13,32],
-"race__logic_8h.html#a2cdab5a73f43b56fbd9b4f0ddf58c386":[15,0,3,11,13,7],
 "race__logic_8h.html#a3189893b0ea5d4a7b1d679edc52d78ed":[15,0,3,11,13,28],
 "race__logic_8h.html#a356c21937c0221ceae8f34442bb2e820":[15,0,3,11,13,23],
 "race__logic_8h.html#a3e9f9e3af8403dbedd2e08adb6342fe7":[15,0,3,11,13,9],
@@ -172,7 +166,7 @@ var NAVTREEINDEX56 =
 "render__objects_8c.html#a01136bcb8f763bd80f4cb9296988d0ad":[15,0,3,57,367],
 "render__objects_8c.html#a01bc499dd41ca4911d4e2e8e1b34a806":[15,0,3,57,30],
 "render__objects_8c.html#a01f1c93f475b407a8e57888c6a6dd45b":[15,0,3,57,37],
-"render__objects_8c.html#a0433e2713faf1ef0bfde2211d9afeb94":[15,0,3,57,394],
+"render__objects_8c.html#a0433e2713faf1ef0bfde2211d9afeb94":[15,0,3,57,395],
 "render__objects_8c.html#a054978ffa85702d6deb73675527cce8d":[15,0,3,57,191],
 "render__objects_8c.html#a0624454f7798ff22171facee57a00d36":[15,0,3,57,238],
 "render__objects_8c.html#a097c657af30994ba520f680ab2dc3cc4":[15,0,3,57,224],
@@ -249,5 +243,11 @@ var NAVTREEINDEX56 =
 "render__objects_8c.html#a3f7bd2bfde9d90760d75bda8f7afd289":[15,0,3,57,31],
 "render__objects_8c.html#a3f975d18ee5251f96fa16bfec205399d":[15,0,3,57,165],
 "render__objects_8c.html#a401de8a91f3434ba7a99c1441f02abd1":[15,0,3,57,357],
-"render__objects_8c.html#a404f8b26356c02f9300618e92eb7eb52":[15,0,3,57,130]
+"render__objects_8c.html#a404f8b26356c02f9300618e92eb7eb52":[15,0,3,57,130],
+"render__objects_8c.html#a408325fcc3220e98ee4b4c2356caea1b":[15,0,3,57,2],
+"render__objects_8c.html#a4164bd4b6d2dade0feea952d18c2056c":[15,0,3,57,200],
+"render__objects_8c.html#a42d051e0c41afb54803bffd1a3a19e91":[15,0,3,57,185],
+"render__objects_8c.html#a42e3cb3afac22eef271b1b17664b97f4":[15,0,3,57,155],
+"render__objects_8c.html#a43a64a8f125ef65a4233d8fed4ef1089":[15,0,3,57,172],
+"render__objects_8c.html#a44ec9b797d303fdee99ad5ec0c0827be":[15,0,3,57,156]
 };

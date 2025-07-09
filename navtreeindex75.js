@@ -1,10 +1,5 @@
 var NAVTREEINDEX75 =
 {
-"structUnk__800E9F7C.html#a87c83f2ccddc2e170a2ac29a27a67502":[14,0,306,9],
-"structUnk__800E9F7C.html#aaf16346504718babc5e50ab18d945e68":[14,0,306,12],
-"structUnk__800E9F7C.html#ae8fed38a7f135f9e08adf0c2ae48518b":[14,0,306,7],
-"structUnk__800E9F7C.html#aff5da45aa2a91d4e2c8a88237fd81984":[14,0,306,0],
-"structUnk__800EA06C.html":[14,0,307],
 "structUnk__800EA06C.html#a47df6d2468982fc1601dc0f822aad05c":[14,0,307,0],
 "structUnk__800EA06C.html#a79076344cd4e05fe2c18969ea303301e":[14,0,307,1],
 "structUnk__8018EFD8.html":[14,0,308],
@@ -249,5 +244,10 @@ var NAVTREEINDEX75 =
 "struct____OSThreadContext.html#af9379c2223768103f41cea04c19bcb86":[14,0,19,39],
 "struct____OSThreadContext.html#afd618336af19bdbf7ae7f38de8d9a8f8":[14,0,19,33],
 "struct____OSThreadprofile__s.html":[14,0,20],
-"struct____OSThreadprofile__s.html#a0c442ea9649b43c79487aafe0bab8d11":[14,0,20,2]
+"struct____OSThreadprofile__s.html#a0c442ea9649b43c79487aafe0bab8d11":[14,0,20,2],
+"struct____OSThreadprofile__s.html#a7341bc2e601d2ba4b44f43b34c3775d1":[14,0,20,0],
+"struct____OSThreadprofile__s.html#af240d20f2ed49aad6e1782ca1c31e457":[14,0,20,1],
+"struct____osThreadTail.html":[14,0,21],
+"struct____osThreadTail.html#a1dce50ccddfccd2ab527894819c7b42a":[14,0,21,0],
+"struct____osThreadTail.html#a9f1bda85addc90a22c413145e1b46afb":[14,0,21,1]
 };

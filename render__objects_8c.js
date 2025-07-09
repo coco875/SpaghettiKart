@@ -386,6 +386,7 @@ var render__objects_8c =
     [ "set_minimap_finishline_position", "render__objects_8c.html#ad5b7b39bf3dd9c1145b3e330b0556c81", null ],
     [ "set_transparency", "render__objects_8c.html#ad92ac25c074d6586a5b7c7331fccdb21", null ],
     [ "common_texture_minimap_progress", "render__objects_8c.html#a9badd55811806038e08cd69adf35d888", null ],
+    [ "common_vtx_neon", "render__objects_8c.html#a826f3868493f0fa252b8fb29e234d675", null ],
     [ "D_800E45C0", "render__objects_8c.html#a85dd8613d1847a63d953317f439858eb", null ],
     [ "D_800E4620", "render__objects_8c.html#a47ab13d41ae4729eef1f1d843508f311", null ],
     [ "D_800E46B0", "render__objects_8c.html#ab597fcd1a5fe6ad728f02605aae588ec", null ],

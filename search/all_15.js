@@ -678,7 +678,7 @@ var searchData=
   ['smolespawns3_675',['sMoleSpawns3',['../MooMooFarm_8cpp.html#aa92b51b3fc8234fa04392135ef9fbbd9',1,'MooMooFarm.cpp']]],
   ['snaptosurface_676',['SnapToSurface',['../classEditor_1_1Gizmo.html#a54b42be97a0c5fdbef53fcc394d26b98',1,'Editor::Gizmo']]],
   ['sneonboolist_677',['sNeonBooList',['../update__objects_8c.html#a45c1a75871dff82a372eff3bb0525384',1,'update_objects.c']]],
-  ['sneonlist_678',['sNeonList',['../update__objects_8c.html#ab6d4bdf45c595f1d48bcbcdb48eddad8',1,'update_objects.c']]],
+  ['sneonmariolist_678',['sNeonMarioList',['../update__objects_8c.html#a2ee7ebb7b18c0c33a3a2354c7d2c0445',1,'update_objects.c']]],
   ['sneonmushroomlist_679',['sNeonMushroomList',['../update__objects_8c.html#a4921ebe69cc0c7b565834fb5cdae6be8',1,'update_objects.c']]],
   ['snetworkthread_680',['sNetworkThread',['../networking_8c.html#af426cbe6146eb96e332760cdb7b1330f',1,'networking.c']]],
   ['snextaudiosptask_681',['sNextAudioSPTask',['../main_8c.html#a400f2d70bc82560a81bed876f0314be7',1,'sNextAudioSPTask:&#160;main.c'],['../main_8h.html#a400f2d70bc82560a81bed876f0314be7',1,'sNextAudioSPTask:&#160;main.c']]],

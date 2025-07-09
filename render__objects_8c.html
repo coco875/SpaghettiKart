@@ -953,6 +953,8 @@ Variables</h2></td></tr>
 <tr class="separator:a9badd55811806038e08cd69adf35d888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0433e2713faf1ef0bfde2211d9afeb94" id="r_a0433e2713faf1ef0bfde2211d9afeb94"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structObjectInterpData.html">ObjectInterpData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0433e2713faf1ef0bfde2211d9afeb94">prevObject</a> [<a class="el" href="objects_8h.html#af7ef5aaeef379ad60dbcd28caaa320ea">OBJECT_LIST_SIZE</a>] = { 0 }</td></tr>
 <tr class="separator:a0433e2713faf1ef0bfde2211d9afeb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826f3868493f0fa252b8fb29e234d675" id="r_a826f3868493f0fa252b8fb29e234d675"><td class="memItemLeft" align="right" valign="top">Vtx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a826f3868493f0fa252b8fb29e234d675">common_vtx_neon</a> []</td></tr>
+<tr class="separator:a826f3868493f0fa252b8fb29e234d675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6088a59e24cb2f16a35bae39e6551fd3" id="r_a6088a59e24cb2f16a35bae39e6551fd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__structs_8h.html#acae9cd4e955edf4d0d8a7f03b042c7db">Vec3iu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6088a59e24cb2f16a35bae39e6551fd3">D_800E46F8A</a> []</td></tr>
 <tr class="separator:a6088a59e24cb2f16a35bae39e6551fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad340f891a8f35e13e2dd60eef604158f" id="r_ad340f891a8f35e13e2dd60eef604158f"><td class="memItemLeft" align="right" valign="top">u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad340f891a8f35e13e2dd60eef604158f">D_800E471CA</a> []</td></tr>
@@ -1168,7 +1170,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="render__objects_8c_a8c64fbe4bff7ffa49273321d6f1b03be_icgraph.svg" width="100%" height="481"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="render__objects_8c_a8c64fbe4bff7ffa49273321d6f1b03be_icgraph.svg" width="604" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -17626,6 +17628,27 @@ Here is the caller graph for this function:</div>
 <div class="line">    common_texture_minimap_mario, common_texture_minimap_luigi,  common_texture_minimap_yoshi,</div>
 <div class="line">    common_texture_minimap_toad,  common_texture_minimap_dk,     common_texture_minimap_wario,</div>
 <div class="line">    common_texture_minimap_peach, common_texture_minimap_bowser,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a826f3868493f0fa252b8fb29e234d675" name="a826f3868493f0fa252b8fb29e234d675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826f3868493f0fa252b8fb29e234d675">&#9670;&#160;</a></span>common_vtx_neon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vtx common_vtx_neon[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { { { -32, -31, 0 }, 0, { 0, 0 }, { 255, 255, 255, 255 } } },</div>
+<div class="line">    { { { 31, -31, 0 }, 0, { 4032, 0 }, { 255, 255, 255, 255 } } },</div>
+<div class="line">    { { { 31, 31, 0 }, 0, { 4032, 3968 }, { 255, 255, 255, 255 } } },</div>
+<div class="line">    { { { -32, 31, 0 }, 0, { 0, 3968 }, { 255, 255, 255, 255 } } },</div>
+<div class="line"> </div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
