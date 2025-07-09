@@ -4051,7 +4051,7 @@ void render_object_neon(s32 cameraId) {
                 rsp_set_matrix_transformation(object->pos, object->orientation, object->sizeScaling);
                 gSPDisplayList(gDisplayListHead++, D_0D007D78);
                 gDPLoadTLUT_pal256(gDisplayListHead++, object->activeTLUT);
-                rsp_load_texture(object->activeTexture, 64, 46);
+                rsp_load_texture(object->activeTexture, 64, 64);
                 gSPVertex(gDisplayListHead++, common_vtx_neon, 4, 0);
                 gSPDisplayList(gDisplayListHead++, common_rectangle_display);
                 gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
