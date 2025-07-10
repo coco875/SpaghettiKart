@@ -35,7 +35,7 @@
 #include "render_player.h"
 #include "render_courses.h"
 #include "actors.h"
-#include "staff_ghosts.h"
+#include "replays.h"
 #include <debug.h>
 #include "crash_screen.h"
 #include "buffers/gfx_output_buffer.h"

@@ -7,7 +7,7 @@
 #include <sounds.h>
 #include "camera.h"
 #include "waypoints.h"
-#include "staff_ghosts.h"
+#include "replays.h"
 #include "main.h"
 #include "code_800029B0.h"
 #include "code_80057C60.h"

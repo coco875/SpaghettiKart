@@ -18,7 +18,7 @@ extern "C" {
 #include "assets/common_data.h"
 #include "render_objects.h"
 #include "save.h"
-#include "staff_ghosts.h"
+#include "replays.h"
 #include "code_800029B0.h"
 #include "render_courses.h"
 #include "collision.h"
