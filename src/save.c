@@ -249,8 +249,8 @@ u32 func_800B4DF4(u8* arr) {
 
 // Get a time trial record, infer course index
 s32 func_800B4E24(s32 recordIndex) {
-    return func_800B4DF4(gSaveData.allCourseTimeTrialRecords.cupRecords[(((GetCupIndex() * 4) + gCourseIndexInCup) / 4)]
-                             .courseRecords[(((GetCupIndex() * 4) + gCourseIndexInCup) % 4)]
+    return func_800B4DF4(gSaveData.allCourseTimeTrialRecords.cupRecords[GetCupIndex()]
+                             .courseRecords[GetCupCursorPosition()]
                              .records[recordIndex]);
 }
 
@@ -263,8 +263,8 @@ u32 func_800B4EB4(s32 recordIndex, s32 courseIndex) {
 
 // Get Best Lap record of the inferred course index
 s32 func_800B4F2C(void) {
-    return func_800B4DF4(gSaveData.allCourseTimeTrialRecords.cupRecords[(((GetCupIndex() * 4) + gCourseIndexInCup) / 4)]
-                             .courseRecords[(((GetCupIndex() * 4) + gCourseIndexInCup) % 4)]
+    return func_800B4DF4(gSaveData.allCourseTimeTrialRecords.cupRecords[GetCupIndex()]
+                             .courseRecords[GetCupCursorPosition()]
                              .records[TIME_TRIAL_1LAP_RECORD]);
 }
 
@@ -282,7 +282,7 @@ s32 func_800B5020(u32 time, s32 charId) {
     s32 j;
     CourseTimeTrialRecords* tt;
 
-    course = GetCupIndex() * 4 + gCourseIndexInCup;
+    course = GetCupIndex() * 4 + GetCupCursorPosition();
     tt = &gSaveData.allCourseTimeTrialRecords.cupRecords[course / 4].courseRecords[course % 4];
 
     i = 0;
@@ -329,7 +329,7 @@ s32 func_800B5218(void) {
     s32 checkLapIndex;
     s32 character;
     s32 lapBitmask;
-    recordIndex = (GetCupIndex() * 4) + gCourseIndexInCup;
+    recordIndex = (GetCupIndex() * 4) + GetCupCursorPosition();
     recordPointer =
         &gSaveData.allCourseTimeTrialRecords.cupRecords[recordIndex / 4].courseRecords[recordIndex % 4].records[0][0];
     lapBitmask = 1;
@@ -782,7 +782,7 @@ s32 func_800B6178(s32 arg0) {
         if (var_v0 == 0) {
             temp_s3->ghostDataSaved = 1;
             if (gGamestate == 4) {
-                temp_s3->courseIndex = (GetCupIndex() * 4) + gCourseIndexInCup;
+                temp_s3->courseIndex = (GetCupIndex() * 4) + GetCupCursorPosition();
             }
             temp_s3->unk_00 = D_80162DFC;
             temp_s3->characterId = (u8) D_80162DE0;
@@ -831,7 +831,7 @@ s32 func_800B63F0(s32 arg0) {
     func_80005AE8(gPlayerThree);
 
     phi_s3 = 0;
-    if (((GetCupIndex() * 4) + gCourseIndexInCup) != D_8018EE10[arg0].courseIndex) {
+    if (((GetCupIndex() * 4) + GetCupCursorPosition()) != D_8018EE10[arg0].courseIndex) {
         phi_s3 = 2;
     } else if (D_80162DFC != D_8018EE10[arg0].unk_00) {
         phi_s3 = 3;
