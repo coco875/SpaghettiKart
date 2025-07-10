@@ -1,5 +1,5 @@
-#ifndef STAFF_GHOSTS_H
-#define STAFF_GHOSTS_H
+#ifndef REPLAYS_H
+#define REPLAYS_H
 
 #include <libultraship.h>
 #include <common_structs.h>
@@ -43,4 +43,4 @@ extern u8* sReplayGhostBuffer;
 extern size_t sReplayGhostBufferSize;
 extern u32* sPlayerGhostReplay;
 
-#endif /* STAFF_GHOSTS_H */
+#endif /* REPLAYS_H */

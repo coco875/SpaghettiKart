@@ -9,7 +9,7 @@
 #include "code_800029B0.h"
 #include "buffers.h"
 #include "save.h"
-#include "staff_ghosts.h"
+#include "replays.h"
 #include "code_8006E9C0.h"
 #include "menu_items.h"
 #include "code_80057C60.h"
