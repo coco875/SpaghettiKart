@@ -341,7 +341,7 @@ void Course::WhatDoesThisDoAI(Player* player, int8_t playerId) {
 }
 
 void Course::SetStaffGhost() {
-    D_80162DD6 = 1;
+    bCourseGhostDisabled = 1;
     D_80162DF4 = 1;
 }
 

@@ -827,7 +827,7 @@ s32 func_800B63F0(s32 arg0) {
     s32 phi_s3;
 
     func_800051C4();
-    D_80162DD6 = 1;
+    bCourseGhostDisabled = 1;
     func_80005AE8(gPlayerThree);
 
     phi_s3 = 0;
@@ -866,16 +866,16 @@ s32 func_800B64EC(s32 arg0) {
         return -1;
     }
 
-    sReplayGhostDecompressed = (u32*) &D_802BFB80.arraySize8[0][D_80162DC8][3];
+    sPlayerGhostReplay = (u32*) &D_802BFB80.arraySize8[0][D_80162DC8][3];
     temp_v0 =
         osPfsReadWriteFile(&gControllerPak1FileHandle, gControllerPak1FileNote, PFS_READ,
-                           (arg0 * (sizeof(u8) * 0x1000)) + 0x100, sizeof(u8) * 0x1000, (u8*) sReplayGhostDecompressed);
+                           (arg0 * (sizeof(u8) * 0x1000)) + 0x100, sizeof(u8) * 0x1000, (u8*) sPlayerGhostReplay);
     if (temp_v0 == 0) {
         // clang-format off
         phi_s1 = (u8 *) &D_8018EE10[arg0]; temp_s0 = 0; while (1) {
             // clang-format on
 
-            if (phi_s1[7] != func_800B60E8(temp_s0, (u8*) sReplayGhostDecompressed)) {
+            if (phi_s1[7] != func_800B60E8(temp_s0, (u8*) sPlayerGhostReplay)) {
                 D_8018EE10[arg0].ghostDataSaved = 0;
                 return -2;
             }
@@ -883,7 +883,7 @@ s32 func_800B64EC(s32 arg0) {
             ++phi_s1;
             if ((++temp_s0) == 0x3C) {
                 func_8000522C();
-                D_80162DD4 = 0;
+                bPlayerGhostDisabled = 0;
                 D_80162DE0 = (s32) D_8018EE10[arg0].characterId;
                 D_80162DFC = D_8018EE10[arg0].unk_00;
                 break;

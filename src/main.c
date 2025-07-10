@@ -826,7 +826,7 @@ void race_logic_loop(void) {
     func_802A4EF4();
 
     if (gModeSelection == TIME_TRIALS) {
-        staff_ghosts_loop();
+        replays_loop();
     }
 
     // Wait for all racers to load
