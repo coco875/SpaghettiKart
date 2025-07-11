@@ -16,7 +16,7 @@
 #include "code_80057C60.h"
 #include "collision.h"
 #include "render_courses.h"
-#include "staff_ghosts.h"
+#include "replays.h"
 #include "code_80005FD0.h"
 #include "render_player.h"
 #include "podium_ceremony_actors.h"
@@ -596,14 +596,14 @@ void spawn_players_versus_one_player(f32* arg0, f32* arg1, f32 arg2) {
     } else if (D_8015F890 != 1) {
         spawn_player(gPlayerOne, 0, arg0[0], arg1[0], arg2, 32768.0f, gCharacterSelections[0],
                      PLAYER_EXISTS | PLAYER_START_SEQUENCE | PLAYER_HUMAN);
-        if (D_80162DD4 == 0) {
+        if (bPlayerGhostDisabled == 0) {
             spawn_player(gPlayerTwo, 1, arg0[0], arg1[0], arg2, 32768.0f, D_80162DE0,
                          PLAYER_EXISTS | PLAYER_HUMAN | PLAYER_START_SEQUENCE | PLAYER_INVISIBLE_OR_BOMB);
         } else {
             spawn_player(gPlayerTwo, 1, arg0[0], arg1[0], arg2, 32768.0f, gCharacterSelections[0],
                          PLAYER_START_SEQUENCE | PLAYER_CPU);
         }
-        if (D_80162DD6 == 0) {
+        if (bCourseGhostDisabled == 0) {
             spawn_player(gPlayerThree, 2, arg0[0], arg1[0], arg2, 32768.0f, D_80162DE4,
                          PLAYER_EXISTS | PLAYER_HUMAN | PLAYER_START_SEQUENCE | PLAYER_INVISIBLE_OR_BOMB);
         } else {
@@ -620,7 +620,7 @@ void spawn_players_versus_one_player(f32* arg0, f32* arg1, f32 arg2) {
             spawn_player(gPlayerTwo, 1, arg0[0], arg1[0], arg2, 32768.0f, gCharacterSelections[0],
                          PLAYER_START_SEQUENCE | PLAYER_CPU);
         }
-        if (D_80162DD6 == 0) {
+        if (bCourseGhostDisabled == 0) {
             spawn_player(gPlayerThree, 2, arg0[0], arg1[0], arg2, 32768.0f, D_80162DE4,
                          PLAYER_EXISTS | PLAYER_HUMAN | PLAYER_START_SEQUENCE | PLAYER_INVISIBLE_OR_BOMB);
         } else {
