@@ -3105,6 +3105,18 @@ Gfx* func_80095E10(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 te
     return displayListHead;
 }
 
+// a vertion to fix cup and trophy
+Gfx* func_80095E10_alt(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 texScaleT, s32 srcX, s32 srcY,
+                       s32 srcWidth, s32 srcHeight, s32 screenX, s32 screenY, u8* textureData, u32 texWidth,
+                       u32 texHeight) {
+    gDPLoadTextureTile(displayListHead++, textureData, textureFormat, G_IM_SIZ_16b, texWidth, texHeight, srcX, srcY,
+                       srcX + srcWidth - 1, srcY + srcHeight + 2, 0, G_TX_NOMIRROR | G_TX_WRAP,
+                       G_TX_NOMIRROR | G_TX_WRAP, 0, 0, G_TX_NOLOD, G_TX_NOLOD);
+    gSPWideTextureRectangle(displayListHead++, screenX << 2, screenY << 2, (screenX + srcWidth) << 2,
+                            (screenY + srcHeight) << 2, G_TX_RENDERTILE, 0, 0, texScaleS, texScaleT);
+    return displayListHead;
+}
+
 Gfx* func_800963F0(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 texScaleT, f32 scaleX, f32 scaleY,
                    s32 srcX, s32 srcY, s32 srcHeight, s32 srcWidth, s32 screenX, s32 screenY, u8* textureData,
                    u32 texWidth, u32 texHeight) {
@@ -4245,6 +4257,14 @@ void func_8009A76C(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
     }
 }
 
+void func_8009A76C_alt(s32 arg0, s32 arg1, s32 arg2) {
+    struct_8018DEE0_entry* temp = &D_8018DEE0[arg0];
+    if (temp->visible & 0x80000000) {
+        func_8009A878(temp);
+        gDisplayListHead = func_8009C434_alt(gDisplayListHead, temp, arg1, arg2);
+    }
+}
+
 void func_8009A7EC(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4) {
     struct_8018DEE0_entry* temp = &D_8018DEE0[arg0];
     if (temp->visible & 0x80000000) {
@@ -4590,6 +4610,45 @@ Gfx* render_menu_textures(Gfx* arg0, MenuTexture* arg1, s32 column, s32 row) {
     return arg0;
 }
 
+Gfx* render_menu_textures_alt(Gfx* arg0, MenuTexture* arg1, s32 column, s32 row) {
+    u8* temp_v0_3;
+    s8 var_s4;
+
+    while (arg1->textureData != NULL) {
+        var_s4 = 0;
+        switch (arg1->type) {
+            case 0:
+                gSPDisplayList(arg0++, D_02007708);
+                break;
+            case 1:
+                gSPDisplayList(arg0++, D_02007728);
+                break;
+            case 2:
+                gSPDisplayList(arg0++, D_02007748);
+                break;
+            case 3:
+                gSPDisplayList(arg0++, D_02007768);
+                var_s4 = 3;
+                break;
+            case 4:
+                gSPDisplayList(arg0++, D_02007788);
+                break;
+            default:
+                gSPDisplayList(arg0++, D_02007728);
+                break;
+        }
+        if (gTransitionType[4] != 4) {
+            arg0 = func_80095E10_alt(arg0, var_s4, 0x00000400, 0x00000400, 0, 0, arg1->width, arg1->height,
+                                     arg1->dX + column, arg1->dY + row, arg1->textureData, arg1->width, arg1->height);
+        } else {
+            arg0 = func_800987D0(arg0, 0U, 0U, arg1->width, arg1->height, arg1->dX + column, arg1->dY + row,
+                                 arg1->textureData, arg1->width, arg1->height);
+        }
+        arg1++;
+    }
+    return arg0;
+}
+
 Gfx* func_8009BC9C(Gfx* arg0, MenuTexture* texProps, s32 arg2, s32 arg3, s32 arg4, s32 width) {
     MenuTexture* textureProps = segmented_to_virtual_dupe(texProps);
     u8* texture;
@@ -4834,6 +4893,40 @@ Gfx* func_8009C434(Gfx* arg0, struct_8018DEE0_entry* arg1, s32 arg2, s32 arg3, s
                     break;
             }
         }
+        var_s0++;
+    }
+    return arg0;
+}
+
+Gfx* func_8009C434_alt(Gfx* arg0, struct_8018DEE0_entry* arg1, s32 arg2, s32 arg3) {
+    s32 var_t0;
+    s32 var_t1;
+    Gfx* temp;
+    MenuTexture* var_s0;
+
+    var_s0 = arg1->textureSequence[arg1->sequenceIndex].mk64Texture;
+    temp = D_02007728;
+    while (var_s0->textureData != NULL) {
+        var_t1 = 0;
+        switch (var_s0->type) {
+            default:
+                gSPDisplayList(arg0++, temp);
+                break;
+            case 0:
+                gSPDisplayList(arg0++, D_02007708);
+                break;
+            case 1:
+                gSPDisplayList(arg0++, temp);
+                break;
+            case 3:
+                gSPDisplayList(arg0++, D_02007768);
+                var_t1 = 3;
+                break;
+        }
+
+        arg0 = func_80095E10_alt(arg0, var_t1, 0x00000400, 0x00000400, 0, 0, var_s0->width, var_s0->height,
+                                 var_s0->dX + arg2, var_s0->dY + arg3, (u8*) var_s0->textureData, var_s0->width,
+                                 var_s0->height);
         var_s0++;
     }
     return arg0;
@@ -7079,9 +7172,8 @@ void func_800A143C(MenuItem* arg0, s32 arg1) {
         case 0:
         case 2:
         case 3:
-            gDisplayListHead =
-                render_menu_textures(gDisplayListHead, gMenuTexturesTrackSelection[arg1 + 1],
-                                     arg0->column, arg0->row);
+            gDisplayListHead = render_menu_textures_alt(gDisplayListHead, gMenuTexturesTrackSelection[arg1 + 1],
+                                                        arg0->column, arg0->row);
             break;
         case 1:
         case 4:
@@ -9674,7 +9766,7 @@ void render_battle_introduction(UNUSED MenuItem* arg0) {
 
 void func_800A8EC0(MenuItem* arg0) {
     if (arg0->param2 != 0) {
-        func_8009A76C(arg0->D_8018DEE0_index, arg0->column, arg0->row, -1);
+        func_8009A76C_alt(arg0->D_8018DEE0_index, arg0->column, arg0->row);
         set_text_color(TEXT_YELLOW);
         print_text_mode_1(arg0->column + 0x20, arg0->row + 0x28, gCupText[arg0->param2], 0, 0.7f, 0.7f);
     }
