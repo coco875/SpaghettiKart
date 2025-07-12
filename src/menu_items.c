@@ -3104,7 +3104,7 @@ Gfx* func_80095E10(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 te
     return displayListHead;
 }
 
-// a vertion to fix cup and trophy
+// Cup select menu, an alt version to fix cup and trophy
 Gfx* func_80095E10_alt(Gfx* displayListHead, s8 textureFormat, s32 texScaleS, s32 texScaleT, s32 srcX, s32 srcY,
                        s32 srcWidth, s32 srcHeight, s32 screenX, s32 screenY, u8* textureData, u32 texWidth,
                        u32 texHeight) {
