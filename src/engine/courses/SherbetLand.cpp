@@ -108,7 +108,7 @@ SherbetLand::SherbetLand() {
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
-    Props.CloudTexture = (u8*) LOAD_ASSET_RAW(gTextureExhaust1);
+    Props.CloudTexture = (u8*) gTextureExhaust1;
     Props.Clouds = gSherbetLandClouds;
     Props.CloudList = gSherbetLandClouds;
 

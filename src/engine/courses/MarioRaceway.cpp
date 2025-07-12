@@ -134,7 +134,7 @@ MarioRaceway::MarioRaceway() {
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
-    Props.CloudTexture = (uint8_t*) LOAD_ASSET_RAW(gTextureExhaust5);
+    Props.CloudTexture = (uint8_t*) gTextureExhaust5;
     Props.Clouds = gKalimariDesertClouds;
     Props.CloudList = gLuigiRacewayClouds;
 

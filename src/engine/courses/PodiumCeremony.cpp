@@ -143,7 +143,7 @@ PodiumCeremony::PodiumCeremony() {
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
-    Props.CloudTexture = (u8*) LOAD_ASSET_RAW(gTextureExhaust4);
+    Props.CloudTexture = (u8*) gTextureExhaust4;
     Props.Clouds = NULL; // no clouds
     Props.CloudList = NULL;
 

@@ -113,7 +113,7 @@ KalimariDesert::KalimariDesert() {
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
 
-    Props.CloudTexture = (u8*) LOAD_ASSET_RAW(gTextureExhaust5);
+    Props.CloudTexture = (u8*) gTextureExhaust5;
     Props.Clouds = gKalimariDesertClouds;
     Props.CloudList = gKalimariDesertClouds;
 
