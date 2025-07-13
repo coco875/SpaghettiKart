@@ -546,7 +546,9 @@ void init_cloud_object(s32 objectIndex, s32 arg1, CloudData* arg2) {
         func_80073404(objectIndex, 0x40U, 0x20U, D_0D005FB0);
     } else {
         temp_v0->activeTexture = CM_GetProps()->CloudTexture;
-        if (strcmp(CM_GetProps()->CloudTexture, gTextureExhaust0) == 0 || strcmp(CM_GetProps()->CloudTexture, gTextureExhaust1) == 0 || strcmp(CM_GetProps()->CloudTexture, gTextureExhaust2) == 0) {
+        if (strcmp(CM_GetProps()->CloudTexture, gTextureExhaust0) == 0 ||
+            strcmp(CM_GetProps()->CloudTexture, gTextureExhaust1) == 0 ||
+            strcmp(CM_GetProps()->CloudTexture, gTextureExhaust2) == 0) {
             func_80073404(objectIndex, 0x40U, 0x20U, cloudvtx2[arg2->subType]);
         } else {
             func_80073404(objectIndex, 0x40U, 0x20U, cloudvtx[arg2->subType]);
