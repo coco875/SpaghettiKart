@@ -3498,7 +3498,7 @@ Gfx* draw_box_fill_wide(Gfx* displayListHead, s32 ulx, s32 uly, s32 lrx, s32 lry
     gSPDisplayList(displayListHead++, D_02008030);
     gDPSetFillColor(displayListHead++, (GPACK_RGBA5551(red, green, (u32) blue, alpha) << 0x10 |
                                         GPACK_RGBA5551(red, green, (u32) blue, alpha)));
-    gDPFillWideRectangle(displayListHead++, OTRGetDimensionFromLeftEdge(ulx), uly, OTRGetDimensionFromRightEdge(lrx),
+    gDPFillWideRectangle(displayListHead++, OTRGetDimensionFromLeftEdge(ulx) - 1, uly, OTRGetDimensionFromRightEdge(lrx) + 1,
                          lry);
     gDPFillRectangle(displayListHead++, ulx, uly, lrx, lry);
     gSPDisplayList(displayListHead++, D_02008058);
@@ -6366,6 +6366,24 @@ void add_menu_item(s32 type, s32 column, s32 row, s8 priority) {
 GLOBAL_ASM("asm/non_matchings/menu_items/add_menu_item.s")
 #endif
 
+static void draw_debug(void) {
+    if (CVarGetInteger("gEnableDebugMode", 0) != 0) {
+        set_text_color(TEXT_RED);
+        print_text1_right(0x138, 0xEA, "DEBUG", 0, 0.5f, 0.5f);
+    }
+}
+
+static void draw_version(void) {
+    s32 column = 0x138;
+
+    if (CVarGetInteger("gEnableDebugMode", 0) != 0) {
+        column -= (s32) ((f32) (get_string_width("DEBUG") + 5 )) * 0.5f;
+    }
+
+    set_text_color(TEXT_GREEN);
+    print_text1_right(column, 0xEA, SPAGHETTI_VERSION, 0, 0.5f, 0.5f);
+}
+
 #ifdef NON_MATCHING
 // https://decomp.me/scratch/MatRp
 // Biggest diff left is in the case 0x12 though 0x19 handling. Not really sure what's going on there
@@ -6508,6 +6526,10 @@ void render_menus(MenuItem* arg0) {
             case MENU_ITEM_UI_GAME_SELECT:
                 gDisplayListHead =
                     render_menu_textures(gDisplayListHead, seg2_game_select_texture, arg0->column, arg0->row);
+                if (CVarGetInteger("gShowSpaghettiVersion", true)) {
+                    draw_version();
+                    draw_debug();
+                }
                 break;
             case MENU_ITEM_UI_1P_GAME:
             case MENU_ITEM_UI_2P_GAME:
@@ -8703,8 +8725,8 @@ void func_800A6154(MenuItem* arg0) {
         pause_menu_item_box_cursor(arg0, &sp6C);
     }
     if (arg0->param2 > 0) {
-        gDisplayListHead = func_80098FC8(gDisplayListHead, 0, 0, 0x0000013F, arg0->param2);
-        gDisplayListHead = func_80098FC8(gDisplayListHead, 0, 0xEF - arg0->param2, 0x0000013F, 0x000000EF);
+        gDisplayListHead = func_80098FC8_wide(gDisplayListHead, 0, 0, 0x0000013F, arg0->param2);
+        gDisplayListHead = func_80098FC8_wide(gDisplayListHead, 0, 0xEF - arg0->param2, 0x0000013F, 0x000000EF);
     }
 }
 
