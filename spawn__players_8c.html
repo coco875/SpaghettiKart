@@ -129,7 +129,7 @@ $(function(){initNavTree('spawn__players_8c.html',''); initResizable(true); });
 <code>#include &quot;<a class="el" href="code__80057C60_8h_source.html">code_80057C60.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="collision_8h_source.html">collision.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="render__courses_8h_source.html">render_courses.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="staff__ghosts_8h_source.html">staff_ghosts.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="replays_8h_source.html">replays.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="code__80005FD0_8h_source.html">code_80005FD0.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="render__player_8h_source.html">render_player.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="podium__ceremony__actors_8h_source.html">podium_ceremony_actors.h</a>&quot;</code><br />
@@ -205,8 +205,8 @@ Variables</h2></td></tr>
 <tr class="separator:a559515f3880b03471102b759c0ca3b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dcf8951e29d15c6032604bee6020e31" id="r_a0dcf8951e29d15c6032604bee6020e31"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dcf8951e29d15c6032604bee6020e31">gPlayerCurrentSpeed</a> [8]</td></tr>
 <tr class="separator:a0dcf8951e29d15c6032604bee6020e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacaaa40c27aced61100facc6862ec744" id="r_aacaaa40c27aced61100facc6862ec744"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacaaa40c27aced61100facc6862ec744">D_801652A0</a> [8]</td></tr>
-<tr class="separator:aacaaa40c27aced61100facc6862ec744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbdc589eb83f64900700c40a4009f9af" id="r_abbdc589eb83f64900700c40a4009f9af"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbdc589eb83f64900700c40a4009f9af">gPlayerWaterLevel</a> [8]</td></tr>
+<tr class="separator:abbdc589eb83f64900700c40a4009f9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a787da0fb73d34b942af79d4cea1bfb7f" id="r_a787da0fb73d34b942af79d4cea1bfb7f"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a787da0fb73d34b942af79d4cea1bfb7f">D_801652C0</a> [8]</td></tr>
 <tr class="separator:a787da0fb73d34b942af79d4cea1bfb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4016afd86907f803065b2ee53a4d649b" id="r_a4016afd86907f803065b2ee53a4d649b"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4016afd86907f803065b2ee53a4d649b">D_801652E0</a> [8]</td></tr>
@@ -227,8 +227,8 @@ Variables</h2></td></tr>
 <tr class="separator:a29f6533e17484dd3b0cd259964fc1846"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89350191378d3599b7afe30dd29b2854" id="r_a89350191378d3599b7afe30dd29b2854"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89350191378d3599b7afe30dd29b2854">gPlayerIsThrottleActive</a> [8]</td></tr>
 <tr class="separator:a89350191378d3599b7afe30dd29b2854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abef4d391f65e2bd224318abb46f880fe" id="r_abef4d391f65e2bd224318abb46f880fe"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abef4d391f65e2bd224318abb46f880fe">D_80165400</a> [8]</td></tr>
-<tr class="separator:abef4d391f65e2bd224318abb46f880fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941961dee4962eea5a2eaa8cbf032c3d" id="r_a941961dee4962eea5a2eaa8cbf032c3d"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a941961dee4962eea5a2eaa8cbf032c3d">gPlayerAButtonComboActiveThisFrame</a> [8]</td></tr>
+<tr class="separator:a941961dee4962eea5a2eaa8cbf032c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6235b90c4fda30dd64cc7268f8a4c53d" id="r_a6235b90c4fda30dd64cc7268f8a4c53d"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6235b90c4fda30dd64cc7268f8a4c53d">gFrameSinceLastACombo</a> [8]</td></tr>
 <tr class="separator:a6235b90c4fda30dd64cc7268f8a4c53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c333a98eb9761dafc0033a6ea9a78a9" id="r_a8c333a98eb9761dafc0033a6ea9a78a9"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c333a98eb9761dafc0033a6ea9a78a9">gCountASwitch</a> [8]</td></tr>
@@ -239,8 +239,8 @@ Variables</h2></td></tr>
 <tr class="separator:a1e8391878c61909360f486e2f876a5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af91b04968cf23ed2ace337eca1e20923" id="r_af91b04968cf23ed2ace337eca1e20923"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af91b04968cf23ed2ace337eca1e20923">gPlayerIsBrakeActive</a> [8]</td></tr>
 <tr class="separator:af91b04968cf23ed2ace337eca1e20923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcd186495be392ea2167664ce030da14" id="r_adcd186495be392ea2167664ce030da14"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcd186495be392ea2167664ce030da14">D_801654C0</a> [8]</td></tr>
-<tr class="separator:adcd186495be392ea2167664ce030da14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec085946e6e855f75695f07caab4c6b8" id="r_aec085946e6e855f75695f07caab4c6b8"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec085946e6e855f75695f07caab4c6b8">gPlayerBButtonComboActiveThisFrame</a> [8]</td></tr>
+<tr class="separator:aec085946e6e855f75695f07caab4c6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6adc28726b19a541088209dc75b2f7f7" id="r_a6adc28726b19a541088209dc75b2f7f7"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6adc28726b19a541088209dc75b2f7f7">gFrameSinceLastBCombo</a> [8]</td></tr>
 <tr class="separator:a6adc28726b19a541088209dc75b2f7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06860d6cd4c6493aa9eacd1d5ebe6418" id="r_a06860d6cd4c6493aa9eacd1d5ebe6418"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06860d6cd4c6493aa9eacd1d5ebe6418">gCountBChangement</a> [8]</td></tr>
@@ -299,13 +299,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    a = <a class="code hl_define" href="#a2570dc81a51135eddff01c799994f684">calc_a</a>(50, table[<a class="code hl_define" href="defines_8h.html#a3aa8951f5d490e4f7c381143fd66e8ee">CC_50</a>][player-&gt;characterId], 150, table[<a class="code hl_define" href="defines_8h.html#a7f414af5293a3216eae978df3b0594db">CC_150</a>][player-&gt;characterId]); \</div>
-<div class="line">    b = <a class="code hl_define" href="#afca0f7e6a7fc5d3e6f51a6426cfb755a">calc_b</a>(50, table[<a class="code hl_define" href="defines_8h.html#a3aa8951f5d490e4f7c381143fd66e8ee">CC_50</a>][player-&gt;characterId], a);                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line">    a = <a class="code hl_define" href="code__80005FD0_8c.html#a2570dc81a51135eddff01c799994f684">calc_a</a>(50, table[<a class="code hl_define" href="defines_8h.html#a3aa8951f5d490e4f7c381143fd66e8ee">CC_50</a>][player-&gt;characterId], 150, table[<a class="code hl_define" href="defines_8h.html#a7f414af5293a3216eae978df3b0594db">CC_150</a>][player-&gt;characterId]); \</div>
+<div class="line">    b = <a class="code hl_define" href="code__80005FD0_8c.html#afca0f7e6a7fc5d3e6f51a6426cfb755a">calc_b</a>(50, table[<a class="code hl_define" href="defines_8h.html#a3aa8951f5d490e4f7c381143fd66e8ee">CC_50</a>][player-&gt;characterId], a);                                       \</div>
 <div class="line">    player-&gt;field = a * CVarGetFloat(<span class="stringliteral">&quot;gCustomCC&quot;</span>, 150.0f) + b;</div>
-<div class="ttc" id="adefines_8h_html_a3aa8951f5d490e4f7c381143fd66e8ee"><div class="ttname"><a href="defines_8h.html#a3aa8951f5d490e4f7c381143fd66e8ee">CC_50</a></div><div class="ttdeci">#define CC_50</div><div class="ttdoc">Options for gCCSelection CC stands for cubic-centimetres. It measures engine displacement composed fr...</div><div class="ttdef"><b>Definition</b> defines.h:136</div></div>
-<div class="ttc" id="adefines_8h_html_a7f414af5293a3216eae978df3b0594db"><div class="ttname"><a href="defines_8h.html#a7f414af5293a3216eae978df3b0594db">CC_150</a></div><div class="ttdeci">#define CC_150</div><div class="ttdef"><b>Definition</b> defines.h:138</div></div>
-<div class="ttc" id="aspawn__players_8c_html_a2570dc81a51135eddff01c799994f684"><div class="ttname"><a href="#a2570dc81a51135eddff01c799994f684">calc_a</a></div><div class="ttdeci">#define calc_a(x, y, x2, y2)</div></div>
-<div class="ttc" id="aspawn__players_8c_html_afca0f7e6a7fc5d3e6f51a6426cfb755a"><div class="ttname"><a href="#afca0f7e6a7fc5d3e6f51a6426cfb755a">calc_b</a></div><div class="ttdeci">#define calc_b(x, y, b)</div></div>
+<div class="ttc" id="acode__80005FD0_8c_html_a2570dc81a51135eddff01c799994f684"><div class="ttname"><a href="code__80005FD0_8c.html#a2570dc81a51135eddff01c799994f684">calc_a</a></div><div class="ttdeci">#define calc_a(x, y, x2, y2)</div></div>
+<div class="ttc" id="acode__80005FD0_8c_html_afca0f7e6a7fc5d3e6f51a6426cfb755a"><div class="ttname"><a href="code__80005FD0_8c.html#afca0f7e6a7fc5d3e6f51a6426cfb755a">calc_b</a></div><div class="ttdeci">#define calc_b(x, y, b)</div></div>
+<div class="ttc" id="adefines_8h_html_a3aa8951f5d490e4f7c381143fd66e8ee"><div class="ttname"><a href="defines_8h.html#a3aa8951f5d490e4f7c381143fd66e8ee">CC_50</a></div><div class="ttdeci">#define CC_50</div><div class="ttdoc">Options for gCCSelection CC stands for cubic-centimetres. It measures engine displacement composed fr...</div><div class="ttdef"><b>Definition</b> defines.h:157</div></div>
+<div class="ttc" id="adefines_8h_html_a7f414af5293a3216eae978df3b0594db"><div class="ttname"><a href="defines_8h.html#a7f414af5293a3216eae978df3b0594db">CC_150</a></div><div class="ttdeci">#define CC_150</div><div class="ttdef"><b>Definition</b> defines.h:159</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1092,20 +1092,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aacaaa40c27aced61100facc6862ec744" name="aacaaa40c27aced61100facc6862ec744"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacaaa40c27aced61100facc6862ec744">&#9670;&#160;</a></span>D_801652A0</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">f32 D_801652A0[8]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a787da0fb73d34b942af79d4cea1bfb7f" name="a787da0fb73d34b942af79d4cea1bfb7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a787da0fb73d34b942af79d4cea1bfb7f">&#9670;&#160;</a></span>D_801652C0</h2>
 
@@ -1198,34 +1184,6 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structPlayer.html">Player</a>* D_801653C0[8]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abef4d391f65e2bd224318abb46f880fe" name="abef4d391f65e2bd224318abb46f880fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abef4d391f65e2bd224318abb46f880fe">&#9670;&#160;</a></span>D_80165400</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">s32 D_80165400[8]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adcd186495be392ea2167664ce030da14" name="adcd186495be392ea2167664ce030da14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcd186495be392ea2167664ce030da14">&#9670;&#160;</a></span>D_801654C0</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">s32 D_801654C0[8]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1498,6 +1456,34 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a941961dee4962eea5a2eaa8cbf032c3d" name="a941961dee4962eea5a2eaa8cbf032c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941961dee4962eea5a2eaa8cbf032c3d">&#9670;&#160;</a></span>gPlayerAButtonComboActiveThisFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s32 gPlayerAButtonComboActiveThisFrame[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec085946e6e855f75695f07caab4c6b8" name="aec085946e6e855f75695f07caab4c6b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec085946e6e855f75695f07caab4c6b8">&#9670;&#160;</a></span>gPlayerBButtonComboActiveThisFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s32 gPlayerBButtonComboActiveThisFrame[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0dcf8951e29d15c6032604bee6020e31" name="a0dcf8951e29d15c6032604bee6020e31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0dcf8951e29d15c6032604bee6020e31">&#9670;&#160;</a></span>gPlayerCurrentSpeed</h2>
 
@@ -1534,6 +1520,20 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">bool gPlayerIsThrottleActive[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbdc589eb83f64900700c40a4009f9af" name="abbdc589eb83f64900700c40a4009f9af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbdc589eb83f64900700c40a4009f9af">&#9670;&#160;</a></span>gPlayerWaterLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 gPlayerWaterLevel[8]</td>
         </tr>
       </table>
 </div><div class="memdoc">

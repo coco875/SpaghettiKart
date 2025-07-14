@@ -65,6 +65,8 @@ var searchData=
   ['hm64_5ftext_5f001_5fmesh_5fvtx_5f1_62',['hm64_Text_001_mesh_vtx_1',['../powered_8c.html#a1caab08f6d1c4d1075856efb9afe8c2c',1,'hm64_Text_001_mesh_vtx_1:&#160;powered.c'],['../powered_8h.html#a1caab08f6d1c4d1075856efb9afe8c2c',1,'hm64_Text_001_mesh_vtx_1:&#160;powered.c']]],
   ['hm64_5ftext_5f001_5fmesh_5fvtx_5fcull_63',['hm64_Text_001_mesh_vtx_cull',['../powered_8c.html#a60906a5f443ea3ab0a351b15da1f5604',1,'hm64_Text_001_mesh_vtx_cull:&#160;powered.c'],['../powered_8h.html#a60906a5f443ea3ab0a351b15da1f5604',1,'hm64_Text_001_mesh_vtx_cull:&#160;powered.c']]],
   ['hop_64',['Hop',['../classACloud.html#a384a1bf7a9868578e8ce46a687c00729',1,'ACloud::Hop'],['../classAFinishline.html#ae9e0e349029cf72ca55900cead2bce1f',1,'AFinishline::Hop']]],
-  ['horizontalpixelcount_65',['horizontalPixelCount',['../namespaceGameUI.html#ae5899d332097130bdf2794bffd97de1a',1,'GameUI']]],
-  ['hud_66',['Hud',['../structWorld_1_1Matrix.html#aa85085e44ed6943d9089b1834f9d07d0',1,'World::Matrix']]]
+  ['hopframecounter_65',['hopFrameCounter',['../structPlayer.html#a69f86baaaebdf03323b95eb771fd99d0',1,'Player']]],
+  ['hopverticaloffset_66',['hopVerticalOffset',['../structPlayer.html#aa3d81d78f1cce34a89a0f83d50f78733',1,'Player']]],
+  ['horizontalpixelcount_67',['horizontalPixelCount',['../namespaceGameUI.html#ae5899d332097130bdf2794bffd97de1a',1,'GameUI']]],
+  ['hud_68',['Hud',['../structWorld_1_1Matrix.html#aa85085e44ed6943d9089b1834f9d07d0',1,'World::Matrix']]]
 ];

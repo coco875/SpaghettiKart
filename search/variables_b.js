@@ -8,12 +8,13 @@ var searchData=
   ['karthopacceleration_5',['kartHopAcceleration',['../structPlayer.html#a11630c0032e510c8f922229e4a3ea951',1,'Player']]],
   ['karthopjerk_6',['kartHopJerk',['../structPlayer.html#a7c77f4ab3073982c21c24b64b03b86c9',1,'Player']]],
   ['karthopvelocity_7',['kartHopVelocity',['../structPlayer.html#a92679d6b5f04ba37d5d9ee5e4192db2f',1,'Player']]],
-  ['karts_8',['Karts',['../structWorld_1_1Matrix.html#a9e160bd02384446d47ada02f4968ca30',1,'World::Matrix']]],
-  ['keybase_9',['keyBase',['../structALKeyMap.html#aec1f90a35507d4ec74039b5b480f9014',1,'ALKeyMap']]],
-  ['keymap_10',['keyMap',['../structALSound__s.html#aff53a80677e56bccd8a77015b3fa8c47',1,'ALSound_s']]],
-  ['keymax_11',['keyMax',['../structALKeyMap.html#a4baa8c969cb232cfefd38fa32ee98bde',1,'ALKeyMap']]],
-  ['keymin_12',['keyMin',['../structALKeyMap.html#a423b1ebc7949a62d3bff8cc8a6e26552',1,'ALKeyMap']]],
-  ['koopa_5ftroopa_5fbeach_5fdls_13',['koopa_troopa_beach_dls',['../KoopaTroopaBeach_8cpp.html#a9f075766aa777eed598e36c987005631',1,'KoopaTroopaBeach.cpp']]],
-  ['koopa_5ftroopa_5fbeach_5fdls2_14',['koopa_troopa_beach_dls2',['../course__offsets_8h.html#a69ce56dedc90a6e392b23a2e0f6c95d8',1,'koopa_troopa_beach_dls2:&#160;course_offsets.c'],['../koopa__troopa__beach_2course__offsets_8c.html#a69ce56dedc90a6e392b23a2e0f6c95d8',1,'koopa_troopa_beach_dls2:&#160;course_offsets.c']]],
-  ['koopa_5ftroopa_5fbeach_5ftextures_15',['koopa_troopa_beach_textures',['../KoopaTroopaBeach_8cpp.html#ae74e61e0ad680ea0e147c088b13f81f1',1,'koopa_troopa_beach_textures:&#160;KoopaTroopaBeach.cpp'],['../KoopaTroopaBeach_8h.html#ae74e61e0ad680ea0e147c088b13f81f1',1,'koopa_troopa_beach_textures:&#160;KoopaTroopaBeach.cpp']]]
+  ['kartpropulsionstrength_8',['kartPropulsionStrength',['../structPlayer.html#a3c874f89bbbddc704819a22c81f4748a',1,'Player']]],
+  ['karts_9',['Karts',['../structWorld_1_1Matrix.html#a9e160bd02384446d47ada02f4968ca30',1,'World::Matrix']]],
+  ['keybase_10',['keyBase',['../structALKeyMap.html#aec1f90a35507d4ec74039b5b480f9014',1,'ALKeyMap']]],
+  ['keymap_11',['keyMap',['../structALSound__s.html#aff53a80677e56bccd8a77015b3fa8c47',1,'ALSound_s']]],
+  ['keymax_12',['keyMax',['../structALKeyMap.html#a4baa8c969cb232cfefd38fa32ee98bde',1,'ALKeyMap']]],
+  ['keymin_13',['keyMin',['../structALKeyMap.html#a423b1ebc7949a62d3bff8cc8a6e26552',1,'ALKeyMap']]],
+  ['koopa_5ftroopa_5fbeach_5fdls_14',['koopa_troopa_beach_dls',['../KoopaTroopaBeach_8cpp.html#a9f075766aa777eed598e36c987005631',1,'KoopaTroopaBeach.cpp']]],
+  ['koopa_5ftroopa_5fbeach_5fdls2_15',['koopa_troopa_beach_dls2',['../course__offsets_8h.html#a69ce56dedc90a6e392b23a2e0f6c95d8',1,'koopa_troopa_beach_dls2:&#160;course_offsets.c'],['../koopa__troopa__beach_2course__offsets_8c.html#a69ce56dedc90a6e392b23a2e0f6c95d8',1,'koopa_troopa_beach_dls2:&#160;course_offsets.c']]],
+  ['koopa_5ftroopa_5fbeach_5ftextures_16',['koopa_troopa_beach_textures',['../KoopaTroopaBeach_8cpp.html#ae74e61e0ad680ea0e147c088b13f81f1',1,'koopa_troopa_beach_textures:&#160;KoopaTroopaBeach.cpp'],['../KoopaTroopaBeach_8h.html#ae74e61e0ad680ea0e147c088b13f81f1',1,'koopa_troopa_beach_textures:&#160;KoopaTroopaBeach.cpp']]]
 ];

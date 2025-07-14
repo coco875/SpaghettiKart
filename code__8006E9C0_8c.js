@@ -24,5 +24,7 @@ var code__8006E9C0_8c =
     [ "init_star_object", "code__8006E9C0_8c.html#a2e1170fd8a18dbe09ee7d4a2bea8a8b3", null ],
     [ "init_stars", "code__8006E9C0_8c.html#a60668034c4dbddceebb8a6fb822f9206", null ],
     [ "load_mario_kart_64_logo", "code__8006E9C0_8c.html#a76bd4b421a02ca09a11fa607fa9b5851", null ],
-    [ "reset_object_variable", "code__8006E9C0_8c.html#a90b6f11f43c81c8c033805cfddb8fc89", null ]
+    [ "reset_object_variable", "code__8006E9C0_8c.html#a90b6f11f43c81c8c033805cfddb8fc89", null ],
+    [ "cloudvtx", "code__8006E9C0_8c.html#a86860c73ccac021967c9de5a22986c69", null ],
+    [ "cloudvtx2", "code__8006E9C0_8c.html#ac2e03bab413badd9cbd27948e7216504", null ]
 ];

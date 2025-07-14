@@ -109,7 +109,12 @@ $(function(){initNavTree('md_docs_2custom-track.html',''); initResizable(true); 
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="custom-tracks"></a></p>
-<p><a class="el" href="structNote.html">Note</a> that this doc is a work-in-progress and has been hastily written to provide a very basic guide to get people started. It is not all encompassing and may be missing important information. A better manual will be drafted in the future.</p>
+<p>This guide is</p><ul>
+<li>Hastily written</li>
+<li>Made for advanced users</li>
+<li>A work-in-progress</li>
+</ul>
+<p>This guide is not all encompassing and may be missing important information. A better manual will be drafted in the future.</p>
 <h1><a class="anchor" id="dependencies"></a>
 Dependencies</h1>
 <ul>
@@ -128,9 +133,17 @@ How to use</h1>
 </ul>
 </li>
 </ul>
+<h1><a class="anchor" id="materials"></a>
+Materials</h1>
+<ul>
+<li>Youtube tutorials discuss how materials work.</li>
+<li>Fast64 often defaults to a CI8 palette texture, always change <code>Format</code> to <code>RGBA-16 bit</code> or <code>RGBA-32 bit</code> The Colour Index (CI8) format can cause issues if not used correctly. It's easy to confuse this as directly below this box it says <code>RGBA 16-bit</code> Example of incorrect texture format: <img src="https://github.com/user-attachments/assets/518bd16e-3d16-43f9-9767-fc73ea2ab5f8" alt="image" width="677" height="777" class="inline"/></li>
+</ul>
+<p>Example of correct texture format <img src="https://github.com/user-attachments/assets/2cce483b-7fcb-435b-924e-3443e2976e95" alt="image" width="627" height="205" class="inline"/></p>
 <h1><a class="anchor" id="export"></a>
 Export</h1>
 <ul>
+<li>Check <code>Ignore Textures Restrictions</code> failing to do so may result in errors <img src="https://github.com/user-attachments/assets/60f084d3-aef4-429c-889f-2e2d74473e1a" alt="image" width="318" height="315" class="inline"/></li>
 <li>FAST64 MUST BE SET TO F3DEX MODE (The others <em>should</em> work but they don't)</li>
 <li>Select the empty and click the SpaghettiKart and <a class="el" href="classHarbour.html">Harbour</a> Masters profiles</li>
 <li>Name: Track name here</li>
