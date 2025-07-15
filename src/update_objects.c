@@ -205,7 +205,7 @@ void func_80072180(void) {
     if (gModeSelection == TIME_TRIALS) {
         if (((gPlayerOne->type & PLAYER_EXISTS) != 0) &&
             ((gPlayerOne->type & (PLAYER_INVISIBLE_OR_BOMB | PLAYER_CPU)) == 0)) {
-            D_80162DF8 = 1;
+            gPostTimeTrialReplayCannotSave = 1;
         }
     }
 }
@@ -756,7 +756,10 @@ void update_neon_texture(s32 objectIndex) {
     // I have no idea why this typecast works
     gObjectList[objectIndex].activeTLUT =
         (u8*) ((u32*) gObjectList[objectIndex].tlutList + (gObjectList[objectIndex].textureListIndex * 128));
-    gObjectList[objectIndex].activeTexture = gObjectList[objectIndex].textureList;
+    int idx = gObjectList[objectIndex].textureListIndex;
+    char* texture = gObjectList[objectIndex].textureList[idx];
+    gObjectList[objectIndex].activeTexture =
+        gObjectList[objectIndex].textureList[gObjectList[objectIndex].textureListIndex];
 }
 
 void func_80073514(s32 objectIndex) {
@@ -2349,13 +2352,13 @@ void func_80078288(s32 objectIndex) {
             break;
         case 1:
             if (gGamestate != 9) {
-                sp3A = ((gPlayerOneCopy->speed / 18) * 216) / 2;
+                sp3A = ((gPlayerOne->speed / 18) * 216) / 2;
                 sp3E = (random_int(0x000FU) - sp3A) + 0x2D;
                 sp3C = random_int(0x012CU) + 0x1E;
                 temp_t6 = camera1->rot[1] + ((s32) (random_int(0x3000U) - 0x1800) / (s16) ((sp3A / 15) + 1));
-                gObjectList[objectIndex].origin_pos[0] = gPlayerOneCopy->pos[0] + (sins(temp_t6) * sp3C);
-                gObjectList[objectIndex].origin_pos[1] = sp3E + gPlayerOneCopy->unk_074;
-                gObjectList[objectIndex].origin_pos[2] = gPlayerOneCopy->pos[2] + (coss(temp_t6) * sp3C);
+                gObjectList[objectIndex].origin_pos[0] = gPlayerOne->pos[0] + (sins(temp_t6) * sp3C);
+                gObjectList[objectIndex].origin_pos[1] = sp3E + gPlayerOne->unk_074;
+                gObjectList[objectIndex].origin_pos[2] = gPlayerOne->pos[2] + (coss(temp_t6) * sp3C);
                 gObjectList[objectIndex].unk_0C4 = random_int(0x0400U) + 0x100;
                 gObjectList[objectIndex].unk_01C[0] = (f32) (((f32) random_int(0x0064U) * 0.03) + 2.0);
                 gObjectList[objectIndex].velocity[1] = (f32) (-0.3 - (f64) (f32) (random_int(0x0032U) * 0.01));
@@ -2962,9 +2965,9 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 15,
       .superMushroom = 5 },
-    { .none = 3,
-      .banana = 3,
-      .bananaBunch = 2,
+    { .none = 0,
+      .banana = 5,
+      .bananaBunch = 3,
       .greenShell = 0,
       .tripleGreenShell = 10,
       .redShell = 20,
@@ -3006,17 +3009,17 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .fakeItemBox = 5,
       .star = 15,
       .boo = 0,
-      .mushroom = 5,
-      .doubleMushroom = 5,
+      .mushroom = 10,
+      .doubleMushroom = 0,
       .tripleMushroom = 25,
       .superMushroom = 10 },
-    { .none = 5,
+    { .none = 0,
       .banana = 0,
       .bananaBunch = 0,
       .greenShell = 0,
       .tripleGreenShell = 0,
       .redShell = 5,
-      .tripleRedShell = 20,
+      .tripleRedShell = 25,
       .blueSpinyShell = 10,
       .thunderbolt = 0,
       .fakeItemBox = 0,
@@ -3026,13 +3029,13 @@ ItemProbabilities grandPrixHardCPUProbabilityTable[] = {
       .doubleMushroom = 0,
       .tripleMushroom = 25,
       .superMushroom = 10 },
-    { .none = 5,
+    { .none = 0,
       .banana = 0,
       .bananaBunch = 0,
       .greenShell = 5,
       .tripleGreenShell = 0,
       .redShell = 5,
-      .tripleRedShell = 20,
+      .tripleRedShell = 25,
       .blueSpinyShell = 10,
       .thunderbolt = 0,
       .fakeItemBox = 0,
@@ -3259,10 +3262,10 @@ void verify_probability_table(char* str, const ItemProbabilities* probs, int16_t
     getProbabilityArray(probs, itemProbabilities);
     size_t count = 0;
     for (size_t i = 0; i < ITEM_MAX; i++) {
-        //printf("prob %d ", itemProbabilities[i]);
+        // printf("prob %d ", itemProbabilities[i]);
         count += itemProbabilities[i];
     }
-    //printf("\n");
+    // printf("\n");
 
     if (count != 100) {
         printf("update_objects.c::verify_probability_table\n  %s table for rank %d is imba %d/100\n", str, rank, count);
@@ -3289,7 +3292,7 @@ u8 gen_random_item(s16 rank, s16 option) {
 
     switch (gModeSelection) {
         case GRAND_PRIX:
-            switch(option) {
+            switch (option) {
                 case HUMAN_TABLE:
                     distributionTable = &grandPrixHumanProbabilityTable[rank];
                     verify_probability_table("Human", distributionTable, rank);
@@ -3355,15 +3358,19 @@ u8 hard_cpu_gen_random_item(UNUSED s32 arg0, s16 rank) {
     return gen_random_item(rank, HARD_CPU_TABLE);
 }
 
-s16 func_8007AFB0(s32 objectIndex, s32 arg1) {
+s16 func_8007AFB0(s32 objectIndex, s32 playerId) {
     UNUSED s32 pad[3];
     s16 randomItem;
 
-    randomItem = gen_random_item_human(gLapCountByPlayerId[arg1], gGPCurrentRaceRankByPlayerId[arg1]);
+    randomItem = gen_random_item_human(gLapCountByPlayerId[playerId], gGPCurrentRaceRankByPlayerId[playerId]);
 
-    if (playerHUD[arg1].itemOverride != 0) {
-        randomItem = (s16) playerHUD[arg1].itemOverride;
-        playerHUD[arg1].itemOverride = 0;
+    if (randomItem == ITEM_NONE) {
+        play_sound2(SOUND_MENU_FILE_NOT_FOUND);
+    }
+
+    if (playerHUD[playerId].itemOverride != 0) {
+        randomItem = (s16) playerHUD[playerId].itemOverride;
+        playerHUD[playerId].itemOverride = 0;
     }
 
     func_800729B4(objectIndex, (s32) randomItem);
@@ -3377,7 +3384,7 @@ s32 func_8007B040(s32 objectIndex, s32 playerId) {
     s32 var_a3;
     s32 var_t3;
     s32 temp_a0;
-    s32 var_v1;
+    s32 item;
     s32 sp50[4];
     s32 sp40[4];
     s32 var_v1_2;
@@ -3387,14 +3394,24 @@ s32 func_8007B040(s32 objectIndex, s32 playerId) {
     var_a3 = 0;
     var_t3 = 0;
     if (gModeSelection == GRAND_PRIX) {
+        // Boo item
         if (random_int(0x0064U) < 0x51) {
-            var_v1 = gen_random_item_human(gLapCountByPlayerId[playerId], gGPCurrentRaceRankByPlayerId[playerId]);
+            item = gen_random_item_human(gLapCountByPlayerId[playerId], gGPCurrentRaceRankByPlayerId[playerId]);
+            // ITEM_NONE is not a valid item for ghost, randomize again
+            size_t attempts = 0;
+            while (item == ITEM_NONE && attempts < 200) {
+                item = gen_random_item_human(gLapCountByPlayerId[playerId], gGPCurrentRaceRankByPlayerId[playerId]);
+                attempts++;
+            }
+            if (attempts >= 200) {
+                printf("[update_objects.c] [func_8007B040]: Item table has ITEM_NONE set to 100 percent.\n");
+            }
         } else {
-            var_v1 = 0;
+            item = 0;
             func_800C9060(playerId, 0x1900A058U);
         }
         var_t3 = 1;
-        gObjectList[objectIndex].textureListIndex = gObjectList[objectIndex].unk_0A2 = var_v1;
+        gObjectList[objectIndex].textureListIndex = gObjectList[objectIndex].unk_0A2 = item;
     } else {
         for (var_v1_2 = 0; var_v1_2 < gPlayerCountSelection1; var_v1_2++) {
             temp_a0 = gItemWindowObjectByPlayerId[var_v1_2];
@@ -3407,11 +3424,11 @@ s32 func_8007B040(s32 objectIndex, s32 playerId) {
             }
         }
         if (var_a3 != 0) {
-            var_v1 = random_int(var_a3);
-            temp_a1 = sp40[var_v1];
+            item = random_int(var_a3);
+            temp_a1 = sp40[item];
             gObjectList[objectIndex].unk_0A2 = temp_a1;
             gObjectList[objectIndex].textureListIndex = temp_a1;
-            temp_v1 = sp50[var_v1];
+            temp_v1 = sp50[item];
             gObjectList[objectIndex].unk_0D1 = temp_v1;
             temp_a0 = gItemWindowObjectByPlayerId[temp_v1];
             sp38 = &gPlayerOne[temp_v1];
@@ -4085,14 +4102,16 @@ void func_80085BB4(s32 objectIndex) {
     object_next_state(objectIndex);
 }
 
-const char* sNeonMushroomList[] = { d_course_rainbow_road_neon_mushroom };
+const char* sNeonMushroomList[] = { d_course_rainbow_road_neon_mushroom1, d_course_rainbow_road_neon_mushroom2,
+                                    d_course_rainbow_road_neon_mushroom3, d_course_rainbow_road_neon_mushroom4,
+                                    d_course_rainbow_road_neon_mushroom5 };
 
 void init_obj_neon_mushroom(s32 objectIndex) {
     set_obj_origin_pos(objectIndex, xOrientation * -1431.0, 827.0f, -2957.0f);
     init_texture_object(objectIndex,
                         load_lakitu_tlut_x64(d_course_rainbow_road_neon_mushroom_tlut_list,
                                              ARRAY_COUNT(d_course_rainbow_road_neon_mushroom_tlut_list)),
-                        d_course_rainbow_road_neon_mushroom, 0x40U, (u16) 0x00000040);
+                        sNeonMushroomList, 0x40U, (u16) 0x00000040);
     func_80085BB4(objectIndex);
 }
 
@@ -4128,14 +4147,16 @@ void func_80085CA0(s32 objectIndex) {
     }
 }
 
-const char* sNeonList[] = { d_course_rainbow_road_neon_mario };
+const char* sNeonMarioList[] = { d_course_rainbow_road_neon_mario1, d_course_rainbow_road_neon_mario2,
+                            d_course_rainbow_road_neon_mario3, d_course_rainbow_road_neon_mario4,
+                            d_course_rainbow_road_neon_mario5 };
 
 void func_80085DB8(s32 objectIndex) {
     set_obj_origin_pos(objectIndex, xOrientation * 799.0, 1193.0f, -5891.0f);
     init_texture_object(objectIndex,
                         load_lakitu_tlut_x64(d_course_rainbow_road_neon_mario_tlut_list,
                                              ARRAY_COUNT(d_course_rainbow_road_neon_mario_tlut_list)),
-                        d_course_rainbow_road_neon_mario, 0x40U, (u16) 0x00000040);
+                        sNeonMarioList, 0x40U, (u16) 0x00000040);
     func_80085BB4(objectIndex);
 }
 
@@ -4162,14 +4183,16 @@ void func_80085E38(s32 objectIndex) {
     }
 }
 
-const char* sNeonBooList[] = { d_course_rainbow_road_neon_boo };
+const char* sNeonBooList[] = { d_course_rainbow_road_neon_boo1, d_course_rainbow_road_neon_boo2,
+                               d_course_rainbow_road_neon_boo3, d_course_rainbow_road_neon_boo4,
+                               d_course_rainbow_road_neon_boo5 };
 
 void func_80085EF8(s32 objectIndex) {
     set_obj_origin_pos(objectIndex, xOrientation * -2013.0, 555.0f, 0.0f);
     init_texture_object(objectIndex,
                         load_lakitu_tlut_x64(d_course_rainbow_road_neon_boo_tlut_list,
                                              ARRAY_COUNT(d_course_rainbow_road_neon_boo_tlut_list)),
-                        d_course_rainbow_road_neon_boo, 0x40U, (u16) 0x00000040);
+                        sNeonBooList, 0x40U, (u16) 0x00000040);
     func_80085BB4(objectIndex);
 }
 
@@ -4215,7 +4238,7 @@ void func_80085F74(s32 objectIndex) {
 void func_80086074(s32 objectIndex, s32 arg1) {
     set_obj_origin_pos(objectIndex, D_800E6734[arg1][0] * xOrientation, D_800E6734[arg1][1], D_800E6734[arg1][2]);
     init_texture_object(objectIndex, d_course_rainbow_road_static_tluts[arg1],
-                        d_course_rainbow_road_static_textures[arg1], 64, 64);
+                        &d_course_rainbow_road_static_textures[arg1], 64, 64);
     func_80085BB4(objectIndex);
 }
 #else

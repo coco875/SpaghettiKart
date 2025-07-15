@@ -619,7 +619,7 @@ struct Actor* CM_GetActor(size_t index) {
 size_t CM_FindActorIndex(Actor* actor) {
     // Move the ptr back to look at the vtable.
     // This gets us the proper C++ class instead of just the variables used in C.
-    AActor* a = reinterpret_cast<AActor*>((char*) actor - sizeof(void*));
+    AActor* a = reinterpret_cast<AActor*>(reinterpret_cast<char*>(actor) - sizeof(void*));
     auto actors = gWorldInstance.Actors;
 
     auto it = std::find(actors.begin(), actors.end(), static_cast<AActor*>(a));
@@ -627,7 +627,7 @@ size_t CM_FindActorIndex(Actor* actor) {
         return std::distance(actors.begin(), it);
     }
     printf("FindActorIndex() actor not found\n");
-    return 0;
+    return -1;
 }
 
 void CM_DeleteActor(size_t index) {
@@ -809,6 +809,22 @@ extern "C"
 
     CustomEngineInit();
 
+    switch(CVarGetInteger("gSkipIntro", 0)) {
+        case 0:
+            gMenuSelection = HARBOUR_MASTERS_MENU;
+            break;
+        case 1:
+            gMenuSelection = LOGO_INTRO_MENU;
+            break;
+        case 2:
+            gMenuSelection = START_MENU;
+            break;
+        case 3:
+            gMenuSelection = MAIN_MENU;
+            break;
+    }
+
+    // Debug mode override gSkipIntro
     if (CVarGetInteger("gEnableDebugMode", 0) == true) {
         gMenuSelection = START_MENU;
     }

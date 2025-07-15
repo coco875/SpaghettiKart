@@ -5,6 +5,7 @@
 
 #include <libultraship.h>
 #include <libultra/gbi.h>
+#include <stdio.h>
 #include <mk64.h>
 #include <align_asset_macro.h>
 #include <macros.h>
@@ -2080,7 +2081,8 @@ void render_texture_tile_rgba32_block(s16 x, s16 y, u8* texture, u32 width, u32 
 
 void render_game_logo(s16 x, s16 y) {
     int32_t height = 128;
-    int32_t width = ResourceGetTexWidthByName(logo_mario_kart_64) * height / ResourceGetTexHeightByName(logo_mario_kart_64);
+    int32_t width =
+        ResourceGetTexWidthByName(logo_mario_kart_64) * height / ResourceGetTexHeightByName(logo_mario_kart_64);
     render_texture_tile_rgba32_block(x, y, logo_mario_kart_64, width, height);
 }
 
@@ -2698,13 +2700,27 @@ void func_8004EB38(s32 playerId) {
     }
 }
 
+void render_digital_speedometer(s32 playerIdx) {
+    char str[16];
+    f32 speed = (gPlayers[playerIdx].speed / 18.0f) * 216.0f;
+    set_text_color(TEXT_YELLOW);
+
+    size_t len = (size_t) snprintf(str, sizeof(str), "%.2f", speed);
+    if (len >= sizeof(str)) {
+        printf("[render_objects.c] [render_digital_speedometer] str buffer too small, characters were discarded!\n");
+    }
+
+    text_draw_wide(270, 224, str, 0, 0.5f, 0.5f);
+}
+
 // render the speedometer for the player
-void func_8004ED40(s32 arg0) {
+void render_speedometer(s32 playerIdx) {
     gSPClearGeometryMode(gDisplayListHead++, G_ZBUFFER);
-    func_8004A2F4(playerHUD[arg0].speedometerX, playerHUD[arg0].speedometerY, 0U, 1.0f,
+    func_8004A2F4(playerHUD[playerIdx].speedometerX, playerHUD[playerIdx].speedometerY, 0U, 1.0f,
                   // RGBA
                   CM_GetProps()->Minimap.Colour.r, CM_GetProps()->Minimap.Colour.g, CM_GetProps()->Minimap.Colour.b,
                   0xFF, LOAD_ASSET(common_texture_speedometer), LOAD_ASSET(D_0D0064B0), 64, 96, 64, 48);
+    // x, y, needle rot
     func_8004A258(D_8018CFEC, D_8018CFF4, D_8016579E, 1.0f, common_texture_speedometer_needle, D_0D005FF0, 0x40, 0x20,
                   0x40, 0x20);
 }
@@ -2732,8 +2748,8 @@ void func_8004EF9C(s32 arg0) {
 
     temp_v0 = CM_GetPropsCourseId(arg0)->Minimap.Width;
     temp_t0 = CM_GetPropsCourseId(arg0)->Minimap.Height;
-    func_8004D37C(0x00000104, 0x0000003C, CM_GetPropsCourseId(arg0)->Minimap.Texture, 0x000000FF, 0x000000FF, 0x000000FF,
-                  0x000000FF, temp_v0, temp_t0, temp_v0, temp_t0);
+    func_8004D37C(0x00000104, 0x0000003C, CM_GetPropsCourseId(arg0)->Minimap.Texture, 0x000000FF, 0x000000FF,
+                  0x000000FF, 0x000000FF, temp_v0, temp_t0, temp_v0, temp_t0);
 }
 
 void set_minimap_finishline_position(s32 playerId) {
@@ -2797,7 +2813,7 @@ void draw_minimap_character(s32 arg0, s32 playerId, s32 characterId) {
 
         x = (center - (CM_GetProps()->Minimap.Width / 2)) + CM_GetProps()->Minimap.PlayerX + (s16) (thing0);
         y = (CM_GetProps()->Minimap.Pos[arg0].Y - (CM_GetProps()->Minimap.Height / 2)) +
-                  CM_GetProps()->Minimap.PlayerY + (s16) (thing1);
+            CM_GetProps()->Minimap.PlayerY + (s16) (thing1);
         if (characterId != 8) {
             if ((gGPCurrentRaceRankByPlayerId[playerId] == 0) && (gModeSelection != 3) && (gModeSelection != 1)) {
                 func_80046424(x, y, player->rotation[1] + 0x8000, 1.0f,
@@ -2819,7 +2835,6 @@ void draw_minimap_character(s32 arg0, s32 playerId, s32 characterId) {
 
     // @port Resume Interpolation, if interpolated later remove this tag
     FrameInterpolation_ShouldInterpolateFrame(true);
-
 }
 #else
 GLOBAL_ASM("asm/non_matchings/render_objects/draw_minimap_character.s")
@@ -3528,7 +3543,6 @@ void func_80051ABC(s16 arg0, s32 arg1) {
 
             func_800519D4(objectIndex, object->unk_09C, arg0 - object->unk_09E);
             FrameInterpolation_RecordCloseChild();
-
         }
     } else {
         func_8004B6C4(255, 255, 255);
@@ -4012,6 +4026,14 @@ void func_80055EF4(s32 objectIndex, UNUSED s32 arg1) {
     }
 }
 
+Vtx common_vtx_neon[] = {
+    { { { -32, -31, 0 }, 0, { 0, 0 }, { 255, 255, 255, 255 } } },
+    { { { 31, -31, 0 }, 0, { 4032, 0 }, { 255, 255, 255, 255 } } },
+    { { { 31, 31, 0 }, 0, { 4032, 3968 }, { 255, 255, 255, 255 } } },
+    { { { -32, 31, 0 }, 0, { 0, 3968 }, { 255, 255, 255, 255 } } },
+
+};
+
 void render_object_neon(s32 cameraId) {
     Camera* camera;
     s32 objectIndex;
@@ -4025,10 +4047,14 @@ void render_object_neon(s32 cameraId) {
             FrameInterpolation_RecordOpenChild(object, TAG_OBJECT((objectIndex << 8) + i));
             if ((object->state >= 2) && (is_obj_index_flag_status_inactive(objectIndex, 0x00080000) != 0) &&
                 (is_object_visible_on_camera(objectIndex, camera, 0x2AABU) != 0)) {
-                Vtx* vtx = (Vtx*) LOAD_ASSET(common_vtx_hedgehog);
                 object->orientation[1] = angle_between_object_camera(objectIndex, camera);
-                draw_2d_texture_at(object->pos, object->orientation, object->sizeScaling, (u8*) object->activeTLUT,
-                                   object->activeTexture, vtx, 0x00000040, 0x00000040, 0x00000040, 0x00000020);
+                rsp_set_matrix_transformation(object->pos, object->orientation, object->sizeScaling);
+                gSPDisplayList(gDisplayListHead++, D_0D007D78);
+                gDPLoadTLUT_pal256(gDisplayListHead++, object->activeTLUT);
+                rsp_load_texture(object->activeTexture, 64, 64);
+                gSPVertex(gDisplayListHead++, common_vtx_neon, 4, 0);
+                gSPDisplayList(gDisplayListHead++, common_rectangle_display);
+                gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
             }
             FrameInterpolation_RecordCloseChild();
         }

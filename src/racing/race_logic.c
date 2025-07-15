@@ -1,4 +1,5 @@
 #include <libultraship.h>
+#include <stdio.h>
 #include <macros.h>
 #include <mk64.h>
 #include <common_structs.h>
@@ -6,7 +7,7 @@
 #include <sounds.h>
 #include "camera.h"
 #include "waypoints.h"
-#include "staff_ghosts.h"
+#include "replays.h"
 #include "main.h"
 #include "code_800029B0.h"
 #include "code_80057C60.h"
@@ -774,7 +775,7 @@ void func_8028F970(void) {
             gIsGamePaused = (controller - gControllerOne) + 1;
             controller->buttonPressed = 0;
             func_800C9F90(1);
-            D_80162DF0 = 1;
+            gPauseTriggered = 1;
             if (gModeSelection == TIME_TRIALS) {
                 if (gPlayerOne->type & (PLAYER_EXISTS | PLAYER_INVISIBLE_OR_BOMB)) {
                     func_80005AE8(gPlayerOne);
@@ -791,25 +792,24 @@ void func_8028F970(void) {
     }
 
     if (gEnableDebugMode) {
-        if (gModeSelection == BATTLE) {
-            // do stuff?
-        } else {
+        if (gModeSelection != BATTLE) { // Skip laps
             if (gControllerOne->buttonPressed & U_JPAD) {
                 gLapCountByPlayerId[0] = 2;
+                play_sound2(SOUND_MENU_OPTION);
+                printf("[race_logic.c] [func_8028F970] Skipped laps for player 1\n");
             }
             if (gControllerOne->buttonPressed & R_JPAD) {
                 gLapCountByPlayerId[0] = 2;
                 gLapCountByPlayerId[1] = 2;
+                play_sound2(SOUND_MENU_OPTION);
+                printf("[race_logic.c] [func_8028F970] Skipped laps for players 1 & 2\n");
             }
             if (gControllerOne->buttonPressed & D_JPAD) {
-                gLapCountByPlayerId[0] = 2;
-                gLapCountByPlayerId[1] = 2;
-                gLapCountByPlayerId[2] = 2;
-                gLapCountByPlayerId[3] = 2;
-                gLapCountByPlayerId[4] = 2;
-                gLapCountByPlayerId[5] = 2;
-                gLapCountByPlayerId[6] = 2;
-                gLapCountByPlayerId[7] = 2;
+                for (size_t i = 0; i < NUM_PLAYERS; i++) {
+                    gLapCountByPlayerId[i] = 2;
+                }
+                play_sound2(SOUND_MENU_OPTION);
+                printf("[race_logic.c] [func_8028F970] Skipped laps for all players\n");
             }
         }
     }
@@ -907,7 +907,7 @@ void func_8028FCBC(void) {
                 D_800DC5B0 = 0;
                 D_800DC5B8 = 1;
                 CM_SpawnStarterLakitu(); // func_80078F64();
-                if ((gModeSelection == TIME_TRIALS) && (D_80162DD6 == 0)) {
+                if ((gModeSelection == TIME_TRIALS) && (bCourseGhostDisabled == 0)) {
                     phi_v0_4 = 0x1;
                     //! @warning this used to be < gCurrentCourseId
                     // Hopefully this is equivallent.
@@ -1196,15 +1196,15 @@ void func_80290B14(void) {
 
     switch (gActiveScreenMode) {
         case SCREEN_MODE_1P:
-            func_8001EE98(gPlayerOneCopy, camera1, 0);
+            func_8001EE98(gPlayerOne, camera1, 0);
             break;
         case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
         case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
-            func_8001EE98(gPlayerOneCopy, camera1, 0);
-            func_8001EE98(gPlayerTwoCopy, camera2, 1);
+            func_8001EE98(gPlayerOne, camera1, 0);
+            func_8001EE98(gPlayerTwo, camera2, 1);
             break;
         case SCREEN_MODE_3P_4P_SPLITSCREEN:
-            func_8001EE98(gPlayerOneCopy, camera1, 0);
+            func_8001EE98(gPlayerOne, camera1, 0);
             func_8001EE98(gPlayerTwo, camera2, 1);
             func_8001EE98(gPlayerThree, camera3, 2);
             func_8001EE98(gPlayerFour, camera4, 3);

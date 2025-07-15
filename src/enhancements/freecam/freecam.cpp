@@ -74,6 +74,13 @@ void freecam(Camera* camera, Player* player, s8 index) {
     static bool enabled = false; // Tracks previous activation state
     bool freecamEnabled = CVarGetInteger("gFreecam", 0);
 
+    // Freecam can only activate in single player mode
+    if (gActiveScreenMode != SCREEN_MODE_1P) {
+        enabled = false;
+        freecamEnabled = false;
+        CVarSetInteger("gFreecam", false);
+    }
+    
     if (freecamEnabled && !enabled) {
         enabled = true; // Mark that freecam was activated
         on_freecam();
@@ -88,7 +95,7 @@ void freecam(Camera* camera, Player* player, s8 index) {
     } else {
         func_8001E45C(camera, player, index);
         // Required if freecam were to use its own camera instead of borrowing the player camera
-        //func_8001EE98(gPlayerOneCopy, camera, index);
+        //func_8001EE98(gPlayerOne, camera, index);
     }
 }
 
