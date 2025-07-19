@@ -27,3 +27,33 @@
     - 0x132B50
     - 0x000000
     - 0x145470
+
+93c63590767b5ac7c7ca6c5b1657a10c8332720b:
+  name: Mario Kart 64 [ES]
+  path: yamls/us
+  config:
+    gbi: F3DEX_MK64
+    sort: OFFSET
+    enums:
+      - include/defines.h
+    output:
+      binary: mk64.o2r
+      headers: include/assets
+      code: assets/code
+  segments:
+    - 0x000000
+    - 0x000000
+    - 0x12AAE0
+    - 0x000000
+    - 0x000000
+    - 0x000000
+    - 0x825800
+    - 0x000000
+    - 0x000000
+    - 0x88CD70
+    - 0x729A30
+    - 0x821D10
+    - 0x7FA3C0
+    - 0x132B50
+    - 0x000000
+    - 0x145470
