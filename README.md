@@ -16,7 +16,7 @@ SpaghettiKart does not include any copyrighted assets.  You are required to prov
 
 ### 1. Verify your ROM dump
 The US ROM is the only supported version. You can verify you have dumped a supported copy of the game by using the SHA-1 File Checksum Online at https://www.romhacking.net/hash/. The hash for a US ROM is SHA-1: 579C48E211AE952530FFC8738709F078D5DD215E.
-The spanish ROMHack is also supported, and its hash is SHA-1: 93C63590767B5AC7C7CA6C5B1657A10C8332720B - You need to patch your US Rom with https://romhack.ing/database/content/entry/tNNv5JQBNs8FWu0C8IZ4/mario-kart-64-spanish-translation/
+The Spanish ROM-Hack is also supported, and its hash is SHA-1: 93C63590767B5AC7C7CA6C5B1657A10C8332720B - You need to patch your US Rom with https://romhack.ing/database/content/entry/tNNv5JQBNs8FWu0C8IZ4/mario-kart-64-spanish-translation/
 
 ### 2. Verify your ROM is in .z64 format
 Your ROM needs to be in .z64 format. If it's in .n64 format, use the following to convert it to a .z64: https://hack64.net/tools/swapper.php
