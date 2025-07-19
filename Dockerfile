@@ -61,4 +61,7 @@ RUN wget https://github.com/nih-at/libzip/releases/download/v1.10.1/libzip-1.10.
     cd ../.. && \
     rm -rf libzip-1.10.1.tar.gz libzip-1.10.1
 
+# allow to fetch tag
+RUN git config --global --add safe.directory /project
+
 WORKDIR /project
