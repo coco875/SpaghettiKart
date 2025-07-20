@@ -1,5 +1,8 @@
 var NAVTREEINDEX26 =
 {
+"code__80281C40_8c.html#a79d5ebef4182f8032494bb1e732d2365":[15,0,3,5,8,9],
+"code__80281C40_8c.html#a842179882c14c4fb7cd0c0f40a22818d":[15,0,3,5,8,7],
+"code__80281C40_8c.html#a8b833db89ee69fe3e47914a25aa1d8a2":[15,0,3,5,8,2],
 "code__80281C40_8c.html#ab5bd4c2d6a7aebc416355a5b976df802":[15,0,3,5,8,1],
 "code__80281C40_8c.html#ae07ff21e9da506afeb2a9a390ee9346e":[15,0,3,5,8,4],
 "code__80281C40_8c.html#af6f6a1f0caec6d086a4ab98602a6670e":[15,0,3,5,8,3],
@@ -184,12 +187,12 @@ var NAVTREEINDEX26 =
 "controlflow.html#actors-1":[1,2,4,2],
 "controlflow.html#code-breakdown":[1,2,4],
 "controlflow.html#course-folder":[1,2,4,4,0],
-"controlflow.html#courses":[1,2,4,4],
+"controlflow.html#courses-1":[1,2,4,4],
 "controlflow.html#ending":[1,2,4,8],
 "controlflow.html#engine":[1,2,4,6],
 "controlflow.html#math":[1,2,4,7],
 "controlflow.html#menus":[1,2,4,0],
-"controlflow.html#objects":[1,2,4,3],
+"controlflow.html#objects-1":[1,2,4,3],
 "controlflow.html#overall-control-flow":[1,2,2],
 "controlflow.html#paradigm":[1,2,0],
 "controlflow.html#players":[1,2,4,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX26 =
 "controller_8h.html#aa962180453c026d747ebef163e571966":[15,0,3,9,35,62],
 "controller_8h.html#aab452241c8ea115165a20157fc64fb9e":[15,0,3,9,35,54],
 "controller_8h.html#aaf6c8114103d1dac92addff01f710e01":[15,0,3,9,35,24],
-"controller_8h.html#ab19dc53e7991a55743de1b757bec850e":[15,0,3,9,35,58],
-"controller_8h.html#ab58627f83d7b5069c7d442eb1c05f014":[15,0,3,9,35,73],
-"controller_8h.html#ab89cab8105b9c81909fbacd600814466":[15,0,3,9,35,31],
-"controller_8h.html#ac0f1bb81601cedc5fc5868fc7e500b88":[15,0,3,9,35,52]
+"controller_8h.html#ab19dc53e7991a55743de1b757bec850e":[15,0,3,9,35,58]
 };

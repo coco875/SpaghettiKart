@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"ImguiUI_8cpp.html#adf4d73301961430d50d7edd96f92ce38":[15,0,3,10,2,4,0],
+"ImguiUI_8h.html":[15,0,3,10,2,5],
 "ImguiUI_8h_source.html":[15,0,3,10,2,5],
 "Items_8cpp.html":[15,0,3,6,3,0],
 "Items_8h.html":[15,0,3,6,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "Registry_8h.html":[15,0,3,6,25],
 "Registry_8h_source.html":[15,0,3,6,25],
 "ResolutionEditor_8cpp.html":[15,0,3,10,2,15],
-"ResolutionEditor_8h.html":[15,0,3,10,2,16],
-"ResolutionEditor_8h_source.html":[15,0,3,10,2,16],
-"ResourceType_8h.html":[15,0,3,10,1,1,30]
+"ResolutionEditor_8h.html":[15,0,3,10,2,16]
 };

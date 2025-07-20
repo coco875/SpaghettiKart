@@ -126,6 +126,7 @@ var Game_8h =
     [ "SetCourseById", "Game_8h.html#a24c17fb197ea8720e0544c07db4e25dc", null ],
     [ "SetCourseFromCup", "Game_8h.html#a3bd5b6d5945f1342484ffda8e361d0d1", null ],
     [ "SetCupCursorPosition", "Game_8h.html#ae22f9eac795eb716b246a295a38e5343", null ],
+    [ "SetMarioRaceway", "Game_8h.html#aeea6e29785f2f2cdd48874c08e5c02a1", null ],
     [ "WorldNextCup", "Game_8h.html#abdb3ad7cafa1977c6b7da7dbed8a7df6", null ],
     [ "WorldPreviousCup", "Game_8h.html#aa8c27c9a84fd3362f3cdce18720d5a4e", null ],
     [ "gTrophyIndex", "Game_8h.html#a64d8699124ee0fb6d04c76e786ef28ef", null ]

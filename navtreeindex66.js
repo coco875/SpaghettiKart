@@ -1,5 +1,11 @@
 var NAVTREEINDEX66 =
 {
+"start__game_8c.html#ad5005dd4d4815984962d3087fbd0e584":[15,0,3,8,4,8],
+"startup__logo_8h.html":[15,0,2,0,65],
+"startup__logo_8h.html#ad14267be5e72eb89e1de409b78e022b3":[15,0,2,0,65,0],
+"startup__logo_8h_source.html":[15,0,2,0,65],
+"stdarg_8h.html":[15,0,2,1,1],
+"stdarg_8h.html#a1763b4d5c9d8e5a9bed197b316e3586a":[15,0,2,1,1,1],
 "stdarg_8h.html#a1c295ecce41e71a2ba213e32e7a5c346":[15,0,2,1,1,0],
 "stdarg_8h.html#a6e6fde95f2a221e9bcd58fa102bd90ff":[15,0,2,1,1,2],
 "stdarg_8h.html#ac4689fee617f24306933fd79ce206fcc":[15,0,2,1,1,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX66 =
 "structAudioSessionSettings.html#a38f8c2f423cd8e270ea2e2abc023ce11":[14,0,72,8],
 "structAudioSessionSettings.html#a5dc790239abd49d372c105d831cc6173":[14,0,72,6],
 "structAudioSessionSettings.html#a7857d8f97c68b29e1151015c2b89f6d3":[14,0,72,1],
-"structAudioSessionSettings.html#ad0c517937406fc909fc1fa8fc98d8cc7":[14,0,72,2],
-"structAudioSessionSettings.html#adefa51428b36a65c49975c0734bd0edd":[14,0,72,7],
-"structAudioSessionSettings.html#adfd24bd912b4000c5a671f1af61cc6f0":[14,0,72,5],
-"structAudioSessionSettings.html#aed304a9789477e4452784d5c59633e8a":[14,0,72,4],
-"structAudioSessionSettings.html#af13eb0c5d9cad56c3f5a91475ee61ce2":[14,0,72,3],
-"structAudioSessionSettings.html#af4d7b25e319222ecea839dc99b5c1489":[14,0,72,0],
-"structAudioSessionSettingsEU.html":[14,0,73]
+"structAudioSessionSettings.html#ad0c517937406fc909fc1fa8fc98d8cc7":[14,0,72,2]
 };

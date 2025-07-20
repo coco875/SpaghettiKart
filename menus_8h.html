@@ -107,6 +107,7 @@ $(function(){initNavTree('menus_8h.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -132,6 +133,15 @@ This graph shows which files directly or indirectly include this file:</div>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionGameModePack.html">GameModePack</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ab22b0871698c822a77c2204c78bb9d63" id="r_ab22b0871698c822a77c2204c78bb9d63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab22b0871698c822a77c2204c78bb9d63">NUM_ROWS_GAME_MODE_MENU</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ab22b0871698c822a77c2204c78bb9d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fd5aa95e2805ac403df68e0c197724" id="r_ab3fd5aa95e2805ac403df68e0c197724"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3fd5aa95e2805ac403df68e0c197724">NUM_COLUMN_GAME_MODE_SUB_MENU</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ab3fd5aa95e2805ac403df68e0c197724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f75747091112b7703f55ef0d0d2cd44" id="r_a8f75747091112b7703f55ef0d0d2cd44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f75747091112b7703f55ef0d0d2cd44">NUM_ROWS_GAME_MODE_SUB_MENU</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a8f75747091112b7703f55ef0d0d2cd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -436,8 +446,8 @@ Variables</h2></td></tr>
 <tr class="separator:afbc2ce4280f53d6c7a60439114cb0c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2873945dd43149115e800c1d6223557e" id="r_a2873945dd43149115e800c1d6223557e"><td class="memItemLeft" align="right" valign="top">s8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2873945dd43149115e800c1d6223557e">gGameModeMenuColumn</a> []</td></tr>
 <tr class="separator:a2873945dd43149115e800c1d6223557e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa236fba2fd26d13b7c0de03f3dad775b" id="r_aa236fba2fd26d13b7c0de03f3dad775b"><td class="memItemLeft" align="right" valign="top">s8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa236fba2fd26d13b7c0de03f3dad775b">gGameModeSubMenuColumn</a> [4][3]</td></tr>
-<tr class="separator:aa236fba2fd26d13b7c0de03f3dad775b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb265aebc678c823d5bbf1c1a24f641a" id="r_adb265aebc678c823d5bbf1c1a24f641a"><td class="memItemLeft" align="right" valign="top">s8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb265aebc678c823d5bbf1c1a24f641a">gGameModeSubMenuColumn</a> [<a class="el" href="#ab3fd5aa95e2805ac403df68e0c197724">NUM_COLUMN_GAME_MODE_SUB_MENU</a>][<a class="el" href="#a8f75747091112b7703f55ef0d0d2cd44">NUM_ROWS_GAME_MODE_SUB_MENU</a>]</td></tr>
+<tr class="separator:adb265aebc678c823d5bbf1c1a24f641a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb69fde563b1c13c84b24b19f3b49dd5" id="r_abb69fde563b1c13c84b24b19f3b49dd5"><td class="memItemLeft" align="right" valign="top">s8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb69fde563b1c13c84b24b19f3b49dd5">gNextDemoId</a></td></tr>
 <tr class="separator:abb69fde563b1c13c84b24b19f3b49dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57fe07151f509d6744b8d1c833092441" id="r_a57fe07151f509d6744b8d1c833092441"><td class="memItemLeft" align="right" valign="top">s8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57fe07151f509d6744b8d1c833092441">gControllerPakSelectedTableRow</a></td></tr>
@@ -469,6 +479,49 @@ Variables</h2></td></tr>
 <tr class="memitem:a482e5aa8d8581771ca9514a26b64fcfd" id="r_a482e5aa8d8581771ca9514a26b64fcfd"><td class="memItemLeft" align="right" valign="top">const union <a class="el" href="unionGameModePack.html">GameModePack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a482e5aa8d8581771ca9514a26b64fcfd">sSoundMenuPack</a></td></tr>
 <tr class="separator:a482e5aa8d8581771ca9514a26b64fcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ab3fd5aa95e2805ac403df68e0c197724" name="ab3fd5aa95e2805ac403df68e0c197724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3fd5aa95e2805ac403df68e0c197724">&#9670;&#160;</a></span>NUM_COLUMN_GAME_MODE_SUB_MENU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_COLUMN_GAME_MODE_SUB_MENU&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab22b0871698c822a77c2204c78bb9d63" name="ab22b0871698c822a77c2204c78bb9d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22b0871698c822a77c2204c78bb9d63">&#9670;&#160;</a></span>NUM_ROWS_GAME_MODE_MENU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_ROWS_GAME_MODE_MENU&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f75747091112b7703f55ef0d0d2cd44" name="a8f75747091112b7703f55ef0d0d2cd44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f75747091112b7703f55ef0d0d2cd44">&#9670;&#160;</a></span>NUM_ROWS_GAME_MODE_SUB_MENU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_ROWS_GAME_MODE_SUB_MENU&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a7f62630c81408d135636dbd375bc5e0e" name="a7f62630c81408d135636dbd375bc5e0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f62630c81408d135636dbd375bc5e0e">&#9670;&#160;</a></span>ControllerPakMenuSelectionTypes</h2>
@@ -1671,8 +1724,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa236fba2fd26d13b7c0de03f3dad775b" name="aa236fba2fd26d13b7c0de03f3dad775b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa236fba2fd26d13b7c0de03f3dad775b">&#9670;&#160;</a></span>gGameModeSubMenuColumn</h2>
+<a id="adb265aebc678c823d5bbf1c1a24f641a" name="adb265aebc678c823d5bbf1c1a24f641a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb265aebc678c823d5bbf1c1a24f641a">&#9670;&#160;</a></span>gGameModeSubMenuColumn</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1681,7 +1734,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">s8 gGameModeSubMenuColumn[4][3]</td>
+          <td class="memname">s8 gGameModeSubMenuColumn[<a class="el" href="#ab3fd5aa95e2805ac403df68e0c197724">NUM_COLUMN_GAME_MODE_SUB_MENU</a>][<a class="el" href="#a8f75747091112b7703f55ef0d0d2cd44">NUM_ROWS_GAME_MODE_SUB_MENU</a>]</td>
         </tr>
       </table>
   </td>

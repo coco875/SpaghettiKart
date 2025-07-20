@@ -1,6 +1,9 @@
 var menus_8h =
 [
     [ "GameModePack", "unionGameModePack.html", "unionGameModePack" ],
+    [ "NUM_COLUMN_GAME_MODE_SUB_MENU", "menus_8h.html#ab3fd5aa95e2805ac403df68e0c197724", null ],
+    [ "NUM_ROWS_GAME_MODE_MENU", "menus_8h.html#ab22b0871698c822a77c2204c78bb9d63", null ],
+    [ "NUM_ROWS_GAME_MODE_SUB_MENU", "menus_8h.html#a8f75747091112b7703f55ef0d0d2cd44", null ],
     [ "ControllerPakMenuSelectionTypes", "menus_8h.html#a7f62630c81408d135636dbd375bc5e0e", [
       [ "CONTROLLER_PAK_MENU_NONE", "menus_8h.html#a7f62630c81408d135636dbd375bc5e0eaf30452a8d13850522683692e54e16632", null ],
       [ "CONTROLLER_PAK_MENU_SELECT_RECORD", "menus_8h.html#a7f62630c81408d135636dbd375bc5e0ea1bc13aa7e0da1583bda7303fade72e85", null ],
@@ -177,7 +180,7 @@ var menus_8h =
     [ "gFadeModeSelection", "menus_8h.html#ac97ac152213b5573c793469d53e7383b", null ],
     [ "gGameModeMenuColumn", "menus_8h.html#a2873945dd43149115e800c1d6223557e", null ],
     [ "gGameModePlayerSelection", "menus_8h.html#ae63970c228ba4b239602b80b69c7e965", null ],
-    [ "gGameModeSubMenuColumn", "menus_8h.html#aa236fba2fd26d13b7c0de03f3dad775b", null ],
+    [ "gGameModeSubMenuColumn", "menus_8h.html#adb265aebc678c823d5bbf1c1a24f641a", null ],
     [ "gGhostPlayerInit", "menus_8h.html#a541976407e77962ef3d85371da61ea91", null ],
     [ "gIntroModelPosX", "menus_8h.html#aa4b1fc1f5319ee787b44ddcc7af891dc", null ],
     [ "gIntroModelPosY", "menus_8h.html#aee0695ba634beb31c9c28efcd8227758", null ],

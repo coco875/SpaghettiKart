@@ -1,5 +1,8 @@
 var NAVTREEINDEX33 =
 {
+"globals_defs.html":[15,1,6,0],
+"globals_defs_a.html":[15,1,6,1],
+"globals_defs_b.html":[15,1,6,2],
 "globals_defs_c.html":[15,1,6,3],
 "globals_defs_d.html":[15,1,6,4],
 "globals_defs_e.html":[15,1,6,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX33 =
 "hardware_8h.html#a46eef774c6670d30da448d344d12295f":[15,0,3,9,49,40],
 "hardware_8h.html#a4821f69a5605c2618cd4dc4d3f60979c":[15,0,3,9,49,15],
 "hardware_8h.html#a4a3c93b6b0e710a39f1eaba88f74b412":[15,0,3,9,49,23],
-"hardware_8h.html#a4b1c40d95d5de54f094184b453af2b9d":[15,0,3,9,49,68],
-"hardware_8h.html#a516a6a8811f1fe646481475b96fb783b":[15,0,3,9,49,65],
-"hardware_8h.html#a53d9f99bd26a77569e2b052afe2c66d0":[15,0,3,9,49,33],
-"hardware_8h.html#a542644a8d4207743fc96528c181c5601":[15,0,3,9,49,34]
+"hardware_8h.html#a4b1c40d95d5de54f094184b453af2b9d":[15,0,3,9,49,68]
 };

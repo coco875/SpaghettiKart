@@ -399,7 +399,7 @@ var searchData=
   ['_5ftender_396',['_tender',['../classKalimariDesert.html#a67e01b01c3a43ca9702c1e82588bb554',1,'KalimariDesert']]],
   ['_5ftoads_5fturnpike_5fvertexsegmentromend_397',['_toads_turnpike_vertexSegmentRomEnd',['../courseTable_8h.html#a091e2369d2a8ff2b740d988c46e45c1e',1,'courseTable.h']]],
   ['_5ftoads_5fturnpike_5fvertexsegmentromstart_398',['_toads_turnpike_vertexSegmentRomStart',['../courseTable_8h.html#a39e41a0f584696f3065cfa8781cb376b',1,'courseTable.h']]],
-  ['_5ftoggle_399',['_toggle',['../classOPenguin.html#aef5cdca5197179b869d210a8e68783b5',1,'OPenguin::_toggle'],['../classOSeagull.html#a796433ca1465ee9f2614079a6609dad1',1,'OSeagull::_toggle']]],
+  ['_5ftoggle_399',['_toggle',['../classOPenguin.html#aef5cdca5197179b869d210a8e68783b5',1,'OPenguin::_toggle'],['../classOSeagull.html#a796433ca1465ee9f2614079a6609dad1',1,'OSeagull::_toggle'],['../classOTrophy.html#a4ca051131f7359fd3579a12c537d538e',1,'OTrophy::_toggle']]],
   ['_5ftogglevisibility_400',['_toggleVisibility',['../classOTrophy.html#adf51e58365355cc693acd5ff051bc555',1,'OTrophy']]],
   ['_5ftrigtablessegmentromstart_401',['_trigTablesSegmentRomStart',['../segments_8h.html#a407f4be2e020c9618562f7853e5adc95',1,'segments.h']]],
   ['_5ftrigtablessegmentsize_402',['_trigTablesSegmentSize',['../segments_8h.html#afd88ef6454e0c8a5e141f558584c4bfb',1,'segments.h']]],

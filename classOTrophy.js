@@ -27,6 +27,7 @@ var classOTrophy =
     [ "_isMod", "classOTrophy.html#a03168e7545fe42e1a9a6b5d0a1a76921", null ],
     [ "_oldPos", "classOTrophy.html#afeec2bd72339d52e595186b1ee3d1b99", null ],
     [ "_spawnPos", "classOTrophy.html#aa5e93e6b452f1a6da2b473ea2821bf0d", null ],
+    [ "_toggle", "classOTrophy.html#a4ca051131f7359fd3579a12c537d538e", null ],
     [ "_toggleVisibility", "classOTrophy.html#adf51e58365355cc693acd5ff051bc555", null ],
     [ "_trophy", "classOTrophy.html#a47d31d870d1f0ede68013a0cf47d79f7", null ]
 ];

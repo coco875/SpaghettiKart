@@ -130,6 +130,7 @@ var Game_8cpp =
     [ "SetCourseById", "Game_8cpp.html#a24c17fb197ea8720e0544c07db4e25dc", null ],
     [ "SetCourseFromCup", "Game_8cpp.html#a3bd5b6d5945f1342484ffda8e361d0d1", null ],
     [ "SetCupCursorPosition", "Game_8cpp.html#ae22f9eac795eb716b246a295a38e5343", null ],
+    [ "SetMarioRaceway", "Game_8cpp.html#aeea6e29785f2f2cdd48874c08e5c02a1", null ],
     [ "Timer_Update", "Game_8cpp.html#abc93fc9d498c7fcfc15432efab9aa056", null ],
     [ "WorldNextCup", "Game_8cpp.html#abdb3ad7cafa1977c6b7da7dbed8a7df6", null ],
     [ "WorldPreviousCup", "Game_8cpp.html#aa8c27c9a84fd3362f3cdce18720d5a4e", null ],

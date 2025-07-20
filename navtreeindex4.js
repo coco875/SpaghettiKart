@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"ResolutionEditor_8h_source.html":[15,0,3,10,2,16],
+"ResourceType_8h.html":[15,0,3,10,1,1,30],
 "ResourceType_8h_source.html":[15,0,3,10,1,1,30],
 "ResourceUtil_8h.html":[15,0,3,10,1,0,20],
 "ResourceUtil_8h_source.html":[15,0,3,10,1,0,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "__Litob_8c.html#a6ac7d11a56af31a55035980e2fed464a":[15,0,3,9,28,0],
 "__Litob_8c.html#a75faeb327e553b0143afa43797096f2a":[15,0,3,9,28,2],
 "__Litob_8c.html#aaaba3b0ab7920d422a61fe9e22600dd0":[15,0,3,9,28,1],
-"__Printf_8c.html":[15,0,3,9,29],
-"__Printf_8c.html#a10b2d890d871e1489bb02b7e70d9bdfb":[15,0,3,9,29,3],
-"__Printf_8c.html#a39bb05c90efce6c6790c5d58d271d72d":[15,0,3,9,29,4]
+"__Printf_8c.html":[15,0,3,9,29]
 };
