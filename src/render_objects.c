@@ -4114,8 +4114,8 @@ void func_800563DC(s32 objectIndex, s32 cameraId, s32 arg2) {
     gSPDisplayList(gDisplayListHead++, D_0D007E98);
     func_8004B310(arg2);
 
-    int heigh = 0x00000020;
-    int width = 0x00000020;
+    int heigh = 32;
+    int width = 32;
 
     gDPLoadTLUT_pal256(gDisplayListHead++, common_tlut_bomb);
     rsp_load_texture((u8*) common_texture_bomb[residue], width, heigh);
