@@ -14,10 +14,6 @@ typedef struct ControllerPak {
     std::fstream file;
 } ControllerPak;
 
-// extern std::filesystem::path config_path;
-// const std::u8string save_folder = u8"saves";
-// std::filesystem::path save_folder_path = config_path / save_folder;
-
 void Pfs_PakHeader_Write(u32* file_size, u32* game_code, u16* company_code, u8* ext_name, u8* game_name, u8 fileIndex) {
     ControllerPak pak;
 
@@ -87,28 +83,6 @@ void Pfs_PakHeader_Read(u32* file_size, u32* game_code, u16* company_code, char*
     pak.header.close();
 }
 
-// void Pfs_ByteSwapFile(u8* buffer, size_t size) {
-//     uint8_t c0, c1, c2, c3;
-
-//     for (size_t i = 0; i < size; i += 4) {
-//         c0 = buffer[i + 0];
-//         c1 = buffer[i + 1];
-//         c2 = buffer[i + 2];
-//         c3 = buffer[i + 3];
-
-//         buffer[i + 3] = c0;
-//         buffer[i + 2] = c1;
-//         buffer[i + 1] = c2;
-//         buffer[i + 0] = c3;
-//     }
-// }
-
-// void ByteSwapCopy(uint8_t* dst, uint8_t* src, size_t size_bytes) {
-//     for (size_t i = 0; i < size_bytes; i++) {
-//         dst[i] = src[i ^ 3];
-//     }
-// }
-
 extern "C" s32 osPfsIsPlug(OSMesgQueue* queue, u8* pattern) {
     *pattern = 1;
     return PFS_NO_ERROR;
@@ -129,26 +103,6 @@ extern "C" s32 osPfsInit(OSMesgQueue* queue, OSPfs* pfs, int channel) {
 
     return PFS_NO_ERROR;
 }
-
-// extern "C" void osPfsInitPak_recomp(uint8_t* rdram, recomp_context* ctx) {
-//     int32_t queue = _arg<0, int32_t>(rdram, ctx);
-//     OSPfs* pfs = _arg<1, OSPfs*>(rdram, ctx);
-//     s32 channel = _arg<2, s32>(rdram, ctx);
-
-//     pfs->queue = queue;
-//     pfs->channel = channel;
-//     pfs->status = 0x1;
-
-//     ControllerPak pak;
-
-//     // If a header file doesn't exist, create it.
-//     if (!std::filesystem::exists("controllerPak_header.sav")) {
-//         pak.header.open("controllerPak_header.sav", std::ios::binary | std::ios::in | std::ios::out | std::ios::trunc);
-//         pak.header.close();
-//     }
-
-//     ctx->r2 = 0; // PFS_NO_ERROR
-// }
 
 extern "C" s32 osPfsFreeBlocks(OSPfs* pfs, s32* bytes_not_used) {
     ControllerPak pak;
@@ -186,12 +140,11 @@ extern "C" s32 osPfsFreeBlocks(OSPfs* pfs, s32* bytes_not_used) {
     return PFS_NO_ERROR;
 }
 
-extern "C" s32 osPfsAllocateFile(OSPfs* pfs, u16 company_code, u32 game_code, u8* game_name, u8* ext_name, int file_size_in_bytes,
-                      s32* file_no) {
+extern "C" s32 osPfsAllocateFile(OSPfs* pfs, u16 company_code, u32 game_code, u8* game_name, u8* ext_name,
+                                 int file_size_in_bytes, s32* file_no) {
 
     if ((company_code == 0) || (game_code == 0)) {
         return PFS_ERR_INVALID;
-        return;
     }
 
     ControllerPak pak;
@@ -213,21 +166,26 @@ extern "C" s32 osPfsAllocateFile(OSPfs* pfs, u16 company_code, u32 game_code, u8
         }
     }
 
-    Pfs_PakHeader_Write((u32*)&file_size_in_bytes, &game_code, &company_code, ext_name, game_name, freeFileIndex);
+    if (freeFileIndex == MAX_FILES) {
+        return PFS_DIR_FULL;
+    }
+
+    Pfs_PakHeader_Write((u32*) &file_size_in_bytes, &game_code, &company_code, ext_name, game_name, freeFileIndex);
 
     /* Create empty file */
-
     char filename[100];
     sprintf(filename, "controllerPak_file_%d.sav", freeFileIndex);
     pak.file.open(filename, std::ios::binary | std::ios::in | std::ios::out | std::ios::trunc);
 
     file_size_in_bytes = (file_size_in_bytes + 31) & ~31;
 
-    u8* zero_block = (u8*) malloc(file_size_in_bytes);
-    memset(zero_block, 0, file_size_in_bytes);
+    char* zero_block = (char*) malloc(file_size_in_bytes);
+    for (size_t i = 0; i < file_size_in_bytes; i++) {
+        zero_block[i] = 0;
+    }
 
     pak.file.seekp(0, std::ios::beg);
-    pak.file.write((char*) zero_block, file_size_in_bytes);
+    pak.file.write(zero_block, file_size_in_bytes);
 
     free(zero_block);
 
@@ -248,7 +206,7 @@ extern "C" s32 osPfsFileState(OSPfs* pfs, s32 file_no, OSPfsState* state) {
     // should pass the state of the requested file_no to the incoming state pointer,
     // games call this function 16 times, once per file
     // fills the incoming state with the information inside the header of the pak.
-    // If a header file doesn't exist, create it.
+
     char filename[100];
     sprintf(filename, "controllerPak_file_%d.sav", file_no);
     if (!std::filesystem::exists(filename)) {
@@ -318,28 +276,18 @@ extern "C" s32 osPfsReadWriteFile(OSPfs* pfs, s32 file_no, u8 flag, int offset, 
         return PFS_ERR_INVALID;
     }
 
-    u8* swapBuffer = (u8*) malloc(size_in_bytes);
     if (flag == 0) {
         pak.file.seekg(offset, std::ios::beg);
-        pak.file.read((char*) swapBuffer, size_in_bytes);
-        memcpy(data_buffer, swapBuffer, size_in_bytes);
-        // ByteSwapCopy(data_buffer, swapBuffer, size_in_bytes);
+        pak.file.read((char*) data_buffer, size_in_bytes);
     } else {
-        memcpy(swapBuffer, data_buffer, size_in_bytes);
-        // ByteSwapCopy(swapBuffer, data_buffer, size_in_bytes);
         pak.file.seekp(offset, std::ios::beg);
-        pak.file.write((char*) swapBuffer, size_in_bytes);
+        pak.file.write((char*) data_buffer, size_in_bytes);
     }
-    free(swapBuffer);
 
     pak.file.close();
 
     return PFS_NO_ERROR;
 }
-
-// extern "C" void osPfsChecker_recomp(uint8_t* rdram, recomp_context* ctx) {
-//     ctx->r2 = 0; // PFS_NO_ERROR
-// }
 
 extern "C" s32 osPfsNumFiles(OSPfs* pfs, s32* max_files, s32* files_used) {
     u8 files = 0;
@@ -382,8 +330,7 @@ extern "C" s32 osPfsDeleteFile(OSPfs* pfs, u16 company_code, u32 game_code, u8* 
         if ((company_code_ == 0) || (game_code_ == 0)) {
             continue;
         } else {
-            if ((game_code == game_code_) && (company_code == company_code_) &&
-                (strcmp((const char*) game_name, (const char*) game_name_) == 0) &&
+            if ((game_code == game_code_) && (strcmp((const char*) game_name, (const char*) game_name_) == 0) &&
                 strcmp((const char*) ext_name, (const char*) ext_name_) == 0) {
                 // File found
 
@@ -400,9 +347,12 @@ extern "C" s32 osPfsDeleteFile(OSPfs* pfs, u16 company_code, u32 game_code, u8* 
 
                 // Zero out the header for this file.
                 u8* zero_block = (u8*) malloc(sizeof(OSPfsState));
-                memset(zero_block, 0, sizeof(OSPfsState));
+                for (size_t i = 0; i < sizeof(OSPfsState); i++) {
+                    zero_block[i] = 0;
+                }
                 pak.header.seekp(seek + 0x0, std::ios::beg);
                 pak.header.write((char*) zero_block, sizeof(OSPfsState));
+
                 free(zero_block);
 
                 pak.header.close();
@@ -419,7 +369,3 @@ extern "C" s32 osPfsDeleteFile(OSPfs* pfs, u16 company_code, u32 game_code, u8* 
     // File not found
     return PFS_ERR_INVALID;
 }
-
-// extern "C" void osPfsRepairId_recomp(uint8_t* rdram, recomp_context* ctx) {
-//     _return<s32>(ctx, 0); // PFS_NO_ERROR
-// }

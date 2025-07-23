@@ -1395,7 +1395,7 @@ void func_80091B78(void) {
         if (osEepromProbe(&gSIEventMesgQueue) != 0) {
             load_save_data();
         }
-        if (func_80091D74() != 0 || true) {
+        if (func_80091D74() != 0) {
             gMenuSelection = CONTROLLER_PAK_MENU;
         }
     }
@@ -1445,13 +1445,13 @@ s32 func_80091D74(void) {
     UNUSED s32 pad[10];
     s32 i;
 
-    if (!gControllerBits) {
+    if (!gControllerBits && false) {
         return 0;
     }
-    if ((!gControllerStatuses[0].status) & CONT_CARD_ON) {
+    if ((!gControllerStatuses[0].status) & CONT_CARD_ON && false) {
         return 0;
     }
-    if (!(gControllerOne->button & START_BUTTON)) {
+    if (!(gControllerOne->button & START_BUTTON) && false) {
         return 0;
     }
     osPfsIsPlug(&gSIEventMesgQueue, &sp67);
