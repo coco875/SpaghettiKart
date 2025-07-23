@@ -780,7 +780,7 @@ s32 func_800B6178(s32 arg0) {
         }
     } else {
         var_v0 =
-            osPfsReadWriteFile(&gControllerPak1FileHandle, gControllerPak1FileNote, 1U,
+            osPfsReadWriteFile(&gControllerPak1FileHandle, gControllerPak1FileNote, PFS_WRITE,
                                (arg0 * (sizeof(u8) * 0x10000)) + 0x100, sizeof(u8) * 0x10000, (u8*) sReplayGhostBuffer);
         if (var_v0 == 0) {
             temp_s3->ghostDataSaved = 1;
@@ -863,35 +863,25 @@ s32 func_800B63F0(s32 arg0) {
 s32 func_800B64EC(s32 arg0) {
     s32 temp_s0;
     s32 temp_v0;
-    u8* phi_s1;
 
     if ((arg0 != 0) && (arg0 != 1)) {
         return -1;
     }
 
     sPlayerGhostReplay = (u32*) &D_802BFB80.arraySize8[0][D_80162DC8][3];
-    temp_v0 =
-        osPfsReadWriteFile(&gControllerPak1FileHandle, gControllerPak1FileNote, PFS_READ,
-                           (arg0 * (sizeof(u8) * 0x1000)) + 0x100, sizeof(u8) * 0x1000, (u8*) sPlayerGhostReplay);
+    temp_v0 = osPfsReadWriteFile(&gControllerPak1FileHandle, gControllerPak1FileNote, PFS_READ,
+                                 (arg0 * (sizeof(u8) * 0x10000)) + 0x100, sizeof(u8) * 0x10000, (u8*) sPlayerGhostReplay);
     if (temp_v0 == 0) {
-        // clang-format off
-        phi_s1 = (u8 *) &D_8018EE10[arg0]; temp_s0 = 0; while (1) {
-            // clang-format on
-
-            if (D_8018EE10[arg0].unk_07[temp_s0] != func_800B60E8(temp_s0, (u8*) sPlayerGhostReplay)) {
+        for (int i = 0; i < 0x3C; i++) {
+            if (D_8018EE10[arg0].unk_07[i] != func_800B60E8(i, (u8*) sPlayerGhostReplay)) {
                 D_8018EE10[arg0].ghostDataSaved = 0;
                 return -2;
             }
-
-            ++phi_s1;
-            if ((++temp_s0) == 0x3C) {
-                func_8000522C();
-                bPlayerGhostDisabled = 0;
-                D_80162DE0 = (s32) D_8018EE10[arg0].characterId;
-                D_80162DFC = D_8018EE10[arg0].unk_00;
-                break;
-            }
         }
+        func_8000522C();
+        bPlayerGhostDisabled = 0;
+        D_80162DE0 = (s32) D_8018EE10[arg0].characterId;
+        D_80162DFC = D_8018EE10[arg0].unk_00;
     }
 
     return temp_v0;
@@ -910,7 +900,7 @@ s32 func_800B65F4(s32 arg0, s32 arg1) {
             return -1;
     }
     writeStatus =
-        osPfsReadWriteFile(&gControllerPak2FileHandle, gControllerPak2FileNote, 0U,
+        osPfsReadWriteFile(&gControllerPak2FileHandle, gControllerPak2FileNote, PFS_READ,
                            (arg0 * (sizeof(u8) * 0x10000)) + 0x100, sizeof(u8) * 0x10000, (u8*) sReplayGhostBuffer);
     if (writeStatus == 0) {
         temp_s3 = &((struct_8018EE10_entry*) gSomeDLBuffer)[arg0];
