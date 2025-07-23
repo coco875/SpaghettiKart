@@ -327,7 +327,9 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: docker build . -t spaghetti
       - name: Confiure
-        run: docker run --rm -v ${PWD}:/project spaghetti cmake -H. -Bbuild-cmake -GNinja -DCMAKE_BUILD_TYPE=Release
+        run: |
+          docker run --rm -v ${PWD}:/project spaghetti git config --global --add safe.directory /project
+          docker run --rm -v ${PWD}:/project spaghetti cmake -H. -Bbuild-cmake -GNinja -DCMAKE_BUILD_TYPE=Release
       - name: Build spaghetti
         run: docker run --rm -v ${PWD}:/project spaghetti cmake --build build-cmake --config Release -j$(nproc)
 
