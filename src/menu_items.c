@@ -1395,7 +1395,7 @@ void func_80091B78(void) {
         if (osEepromProbe(&gSIEventMesgQueue) != 0) {
             load_save_data();
         }
-        if (func_80091D74() != 0) {
+        if (func_80091D74() != 0 || true) {
             gMenuSelection = CONTROLLER_PAK_MENU;
         }
     }
