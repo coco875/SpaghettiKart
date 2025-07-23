@@ -28,7 +28,7 @@ var NAVTREE =
     [ "Actors", "actorsmenu.html", "actorsmenu" ],
     [ "Understanding the Basics", "basics.html", "basics" ],
     [ "Building SpagettiKart", "md_docs_2BUILDING.html", [
-      [ "Windows", "md_docs_2BUILDING.html#windows", [
+      [ "Windows", "md_docs_2BUILDING.html#windows-1", [
         [ "Developing SpaghettiKart", "md_docs_2BUILDING.html#developing-spaghettikart", [
           [ "Visual Studio", "md_docs_2BUILDING.html#visual-studio", null ],
           [ "Visual Studio Code or another editor", "md_docs_2BUILDING.html#visual-studio-code-or-another-editor", null ]
@@ -38,18 +38,18 @@ var NAVTREE =
           [ "Clean", "md_docs_2BUILDING.html#clean", null ]
         ] ]
       ] ],
-      [ "Linux", "md_docs_2BUILDING.html#linux", [
+      [ "Linux", "md_docs_2BUILDING.html#linux-1", [
         [ "Clone the repo and enter the directory", "md_docs_2BUILDING.html#clone-the-repo-and-enter-the-directory", null ],
         [ "Manual", "md_docs_2BUILDING.html#manual", [
           [ "Install dependencies", "md_docs_2BUILDING.html#install-dependencies", [
             [ "Debian/Ubuntu", "md_docs_2BUILDING.html#debianubuntu", null ],
-            [ "Arch", "md_docs_2BUILDING.html#arch", null ],
-            [ "Fedora", "md_docs_2BUILDING.html#fedora", null ],
+            [ "Arch", "md_docs_2BUILDING.html#arch-1", null ],
+            [ "Fedora", "md_docs_2BUILDING.html#fedora-1", null ],
             [ "openSUSE", "md_docs_2BUILDING.html#opensuse", null ]
           ] ],
           [ "Build", "md_docs_2BUILDING.html#build", null ]
         ] ],
-        [ "Docker", "md_docs_2BUILDING.html#docker", [
+        [ "Docker", "md_docs_2BUILDING.html#docker-1", [
           [ "Create the docker container", "md_docs_2BUILDING.html#create-the-docker-container", null ],
           [ "Configure the project", "md_docs_2BUILDING.html#configure-the-project", null ],
           [ "Compile the project", "md_docs_2BUILDING.html#compile-the-project", null ]
@@ -59,7 +59,7 @@ var NAVTREE =
           [ "Clean", "md_docs_2BUILDING.html#clean-1", null ]
         ] ]
       ] ],
-      [ "macOS", "md_docs_2BUILDING.html#macos", [
+      [ "macOS", "md_docs_2BUILDING.html#macos-1", [
         [ "Generating a distributable", "md_docs_2BUILDING.html#generating-a-distributable", null ],
         [ "Additional CMake Targets", "md_docs_2BUILDING.html#additional-cmake-targets-2", [
           [ "Clean", "md_docs_2BUILDING.html#clean-2", null ]
@@ -203,52 +203,52 @@ var NAVTREEINDEX =
 "miniaudio_8h.html#a3c2fbf7563d9b9c7929003e44f81aa37a6f6a038458a98147aef4f8862eac1da8",
 "miniaudio_8h.html#a64e723da835a05dc9c53601caf3ec9a5a6f2df56bf70e9863aeadc665cfd53170",
 "miniaudio_8h.html#a8e77ba34b5253be29e5deae839ecbf46aa59f24f514faa78ef652bc6b54e0f214",
-"miniaudio_8h.html#ab9b51d84adb0c23c0f3c791d2d24bed0",
-"miniaudio_8h.html#adbacdee407404b57935b9aac3e29edd7",
-"mixer_8c.html#ad1f6f4daa4db1146391a32f7744ecfcd",
-"namespaceGameUI.html#acd54167732cc642bf12c0c84bb052c97",
-"namespacepfd.html#ab888b234398a273a027aebdeb7d5269f",
-"osEepromProbe_8c.html#a0fd5c533855a3970d450221de82beefc",
-"path__spawn__metadata_8h.html",
-"player__controller_8c.html#a6f44b07e387daa69d970f213ba55334a",
-"player__controller_8h.html#aeffdbb54b2a18ca66d5fe8f44b942ff3",
-"profiler_8h.html",
-"render__objects_8c.html#a0f077b9b03b813485f0c45fd516a346c",
-"render__objects_8c.html#aaab3d66e866737e450b04b2efc376b7d",
-"render__objects_8h.html#a48845dc2fff7bf56950fb44118f97848",
-"render__objects_8h.html#aeec3b572babc64a2dbd4d745fe0957d8",
-"replays_8c.html#a0eb82092a448ee36c1e468dfa4765ce6",
-"save_8h.html#ad4724da1441ca44603fb73b6c66f89f1",
-"ship2__model_8h_source.html",
-"skybox__and__splitscreen_8c.html#a499e9f29e241ca3ab115fda541a146ac",
-"sounds_8h.html#ad5c3461c52d2fdc3a45f89ca9d0a82f8",
-"starship__model_8h.html#a6995972a9b8c39ac2cbfee728773eaec",
-"structAudioBankSound.html#a72a6fe189b2af80e66e27e59e1091504",
-"structCourseTimeTrialRecords.html#ad1c5445784e4ecc217c3f89faaeebc62",
-"structItemProbabilities.html#a387ef98d6fabfdea00f95643f8783c1c",
-"structNotePool.html#af26fcc95191d3421f77c078dca55e610",
-"structPlayer.html#a44205fe43375896401b0303b0f1dc58f",
+"miniaudio_8h.html#ab9770910de029dfcec62175ea6ca44c7",
+"miniaudio_8h.html#adb852c0b0c8dafa4876eb3f00d1d9b55",
+"mixer_8c.html#ad15aafa36ae4106e1bb5a20d9aad1c3b",
+"namespaceGameUI.html#ac706231c321fb011884fe479328bb1ed",
+"namespacepfd.html#aae00cd25e23dcc7e3a3c1f7678d1762c",
+"osEepromProbe_8c.html",
+"path__spawn__metadata_8c.html#aff0cf43668bf5133962be53f680bddbe",
+"player__controller_8c.html#a6e5c0e67e55deda79c1b6c3be77cd8c4",
+"player__controller_8h.html#aee5b914a1ddf7362e30f2473024f442c",
+"profiler_8c.html#af496289e1627efbeb535f764087dd40b",
+"render__objects_8c.html#a0eef4ab8ba8d0cfd0950067f759fecb2",
+"render__objects_8c.html#aaa8db08f147bc6819144cf35c0e91935",
+"render__objects_8h.html#a4852677791dfcaa24b1e72d8f4ffe214",
+"render__objects_8h.html#aedc1394b2a213931860ed69df1ea090a",
+"replays_8c.html#a0a5ecd7326c14f60dc23b1d25ff10599",
+"save_8h.html#ad310f5c72ffd1a7e078903c9e10037b1",
+"ship2__model_8h.html#affabcb53f5bbf99ed7fefcb9ee7af7f2",
+"skybox__and__splitscreen_8c.html#a48751c54a38756b9474b566084b5e56a",
+"sounds_8h.html#accdc6dfaa039039a066acbc8cac43bfb",
+"starship__model_8h.html#a67cb391ff911c4d6e78595e1f51d4b0d",
+"structAudioBankSound.html#a5809c38d8d1b258c056580bf3f64f3a2",
+"structCourseTimeTrialRecords.html#a91e118cf346d05af5de32d3e3e237710",
+"structItemProbabilities.html#a2006036fa9258fc207d5eeff0023c400",
+"structNotePool.html#ae6ac803349d6c44d17ec6c68b3ac0c0d",
+"structPlayer.html#a440328bf0f1cf22b9a1f10833d577d69",
 "structSF64_1_1JointKey.html#a5104d642d7bfdc76c6f6a7cd9973e340",
-"structSequencePlayer.html#a7365d7f4cd14457acf350a93483454e1",
+"structSequencePlayer.html#a6c1f8b339beb96a7720cb4da4134442c",
 "structUIWidgets_1_1CheckboxOptions.html",
-"structUnkStruct__800DC5EC.html#a5f04fbc7a1f855f72c7fcdda34cb5880",
-"struct____OSInode.html",
-"structma__biquad.html#a7fa954d1e32f44d594e00e019138f130",
-"structma__delay__config.html#afe531066b5b614f667dfa7bb57ef1c62",
-"structma__engine__node.html#ac88df4f9bf3ca5f137eadf41dee3b084",
-"structma__node__base.html#a591b0012a501b7b44087c29ab7cbc8fb",
-"structma__resource__manager__data__source__config.html#ab9af6e59bd4bc17065103d10be010022",
-"structstruct__80283430.html#a39933e42ccbcd192e188bc3cb16dbf7e",
-"textures_8c.html#a0571df28bbf37b9158859f44baa490e1",
-"textures_8c.html#a5b032d5cab4327578b932a7b11185336",
-"textures_8c.html#abc37542d4fa6591212974d194b3a726f",
-"textures_8h.html#a11e15565e985e09b64f9266552271fb2",
-"textures_8h.html#a67433b9fe8686872fee667340054927b",
-"textures_8h.html#ac8f7ad1bc37e5160f00401614b03c050",
-"track_8c.html#a47cf09f2a6630875e72b77c757495574",
-"track_8h.html#a62a108a221549fbd0ef417060f559207",
-"update__objects_8c.html#a0bbcf658cc179abdfa00efd79207efed",
-"vehicles_8h.html#a7dd94b807c565ffabd9a4650a0a75faa"
+"structUnkStruct__800DC5EC.html#a5c8a580503c8c3dd49306bd0ec5b4fd5",
+"struct____OSDir.html#af0417044f6d23d2df1739843a4efe722",
+"structma__biquad.html#a680c820c01950fbf60e7ae04e5dbc933",
+"structma__delay__config.html#aca32fa343865619dcf82fcf7a4077599",
+"structma__engine__node.html#ac3c8c5ad25b7ac1723aea2df197a16f2",
+"structma__node__base.html#a34c12ad8e7ce3a507cd23a3038f484c6",
+"structma__resource__manager__data__source__config.html#a8ad9501f0db1a9670345da2e987dee68",
+"structstruct__80283430.html#a386ac012baba0f478fdfc0b789e3be50",
+"textures_8c.html#a056c8bf540a66d074d3794978406ea2e",
+"textures_8c.html#a5ac8fa596d8a48cbfda79c9a6e6c820a",
+"textures_8c.html#abb9c7782a24c9902c98a553f282d578c",
+"textures_8h.html#a11a6f1589199d7c562e105ae602a3935",
+"textures_8h.html#a6736bafb1d6528f852b02ae8c269f321",
+"textures_8h.html#ac8c27218cc6ca84c5870e6669368c11f",
+"track_8c.html#a46d16239ba5becf85ef8212f1325d8ea",
+"track_8h.html#a625484e06787d7f4137102aa261caa8d",
+"update__objects_8c.html#a0b8b409c069a5db09c88c870e23260ab",
+"vehicles_8h.html#a7bb7f90607adbbc2d74f3b248f820e09"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
