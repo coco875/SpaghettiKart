@@ -152,6 +152,7 @@ endif()
 
 # fix LTO breaks debug information on Apple/Ninja
 if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "AppleClang")
+    add_link_options("LINKER:-object_path_lto,$<TARGET_PROPERTY:NAME>_lto.o")
     add_link_options("LINKER:-cache_path_lto,${CMAKE_BINARY_DIR}/LTOCache")
 endif()
 
