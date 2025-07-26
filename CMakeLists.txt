@@ -150,10 +150,10 @@ else()
     set(COMMON_CXX_FLAGS "")
 endif()
 
-# fix LTO breaks debug information on Apple/Ninja
-if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "AppleClang")
-    add_link_options("LINKER:-object_path_lto,$<TARGET_PROPERTY:NAME>_lto.o")
-    add_link_options("LINKER:-cache_path_lto,${CMAKE_BINARY_DIR}/LTOCache")
+# fix LTO breaks debug information on Apple/Ninja https://gitlab.kitware.com/cmake/cmake/-/issues/25202
+if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "AppleClang" AND "${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
+    add_link_options("-fno-lto")
+    add_compile_options("-fno-lto")
 endif()
 
 ################################################################################
