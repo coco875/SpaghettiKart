@@ -14,16 +14,16 @@ typedef struct ControllerPak {
     std::fstream file;
 } ControllerPak;
 
-void Pfs_PakHeader_Write(u32* file_size, u32* game_code, u16* company_code, u8* ext_name, u8* game_name, u8 fileIndex) {
+bool Pfs_PakHeader_Write(u32* file_size, u32* game_code, u16* company_code, u8* ext_name, u8* game_name, u8 fileIndex) {
     ControllerPak pak;
 
     pak.header.open("controllerPak_header.sav", std::ios::binary | std::ios::in | std::ios::out);
 
     if (!pak.header.good()) {
-        assert(false);
+        return false;
     }
     if (!pak.header.is_open()) {
-        assert(false);
+        return false;
     }
 
     /* Set file parameters to header */
@@ -46,19 +46,20 @@ void Pfs_PakHeader_Write(u32* file_size, u32* game_code, u16* company_code, u8* 
     pak.header.write((char*) game_name, GAME_NAME_SIZE);
 
     pak.header.close();
+    return true;
 }
 
-void Pfs_PakHeader_Read(u32* file_size, u32* game_code, u16* company_code, char* ext_name, char* game_name,
+bool Pfs_PakHeader_Read(u32* file_size, u32* game_code, u16* company_code, char* ext_name, char* game_name,
                         u8 fileIndex) {
     ControllerPak pak;
 
     pak.header.open("controllerPak_header.sav", std::ios::binary | std::ios::in | std::ios::out);
 
     if (!pak.header.good()) {
-        assert(false);
+        return false;
     }
     if (!pak.header.is_open()) {
-        assert(false);
+        return false;
     }
 
     /* Set file parameters to header */
@@ -81,6 +82,7 @@ void Pfs_PakHeader_Read(u32* file_size, u32* game_code, u16* company_code, char*
     pak.header.read((char*) game_name, GAME_NAME_SIZE);
 
     pak.header.close();
+    return true;
 }
 
 extern "C" s32 osPfsIsPlug(OSMesgQueue* queue, u8* pattern) {
@@ -110,10 +112,10 @@ extern "C" s32 osPfsFreeBlocks(OSPfs* pfs, s32* bytes_not_used) {
     pak.header.open("controllerPak_header.sav", std::ios::binary | std::ios::in | std::ios::out);
 
     if (!pak.header.good()) {
-        assert(false);
+        return PFS_ERR_INVALID;
     }
     if (!pak.header.is_open()) {
-        assert(false);
+        return PFS_ERR_INVALID;
     }
 
     s32 usedSpace = 0;
@@ -124,7 +126,9 @@ extern "C" s32 osPfsFreeBlocks(OSPfs* pfs, s32* bytes_not_used) {
         char ext_name[EXT_NAME_SIZE] = { 0 };
         char game_name[GAME_NAME_SIZE] = { 0 };
 
-        Pfs_PakHeader_Read(&file_size, &game_code, &company_code, ext_name, game_name, i);
+        if (!Pfs_PakHeader_Read(&file_size, &game_code, &company_code, ext_name, game_name, i)) {
+            return PFS_ERR_INVALID;
+        }
 
         if ((company_code == 0) || (game_code == 0)) {
             continue;
@@ -158,7 +162,9 @@ extern "C" s32 osPfsAllocateFile(OSPfs* pfs, u16 company_code, u32 game_code, u8
         char ext_name_[EXT_NAME_SIZE] = { 0 };
         char game_name_[GAME_NAME_SIZE] = { 0 };
 
-        Pfs_PakHeader_Read(&file_size_, &game_code_, &company_code_, ext_name_, game_name_, i);
+        if (!Pfs_PakHeader_Read(&file_size_, &game_code_, &company_code_, ext_name_, game_name_, i)) {
+            return PFS_ERR_INVALID;
+        }
 
         if ((company_code_ == 0) || (game_code_ == 0)) {
             freeFileIndex = i;
@@ -170,7 +176,9 @@ extern "C" s32 osPfsAllocateFile(OSPfs* pfs, u16 company_code, u32 game_code, u8
         return PFS_DIR_FULL;
     }
 
-    Pfs_PakHeader_Write((u32*) &file_size_in_bytes, &game_code, &company_code, ext_name, game_name, freeFileIndex);
+    if (!Pfs_PakHeader_Write((u32*) &file_size_in_bytes, &game_code, &company_code, ext_name, game_name, freeFileIndex)) {
+        return PFS_ERR_INVALID;
+    }
 
     /* Create empty file */
     char filename[100];
@@ -214,7 +222,9 @@ extern "C" s32 osPfsFileState(OSPfs* pfs, s32 file_no, OSPfsState* state) {
     }
 
     /* Read game info from pak */
-    Pfs_PakHeader_Read(&file_size, &game_code, &company_code, ext_name, game_name, file_no);
+    if (!Pfs_PakHeader_Read(&file_size, &game_code, &company_code, ext_name, game_name, file_no)) {
+        return PFS_ERR_INVALID;
+    }
 
     state->file_size = file_size;
     state->company_code = game_code;
@@ -240,7 +250,9 @@ extern "C" s32 osPfsFindFile(OSPfs* pfs, u16 company_code, u32 game_code, u8* ga
         char ext_name_[EXT_NAME_SIZE] = { 0 };
         char game_name_[GAME_NAME_SIZE] = { 0 };
 
-        Pfs_PakHeader_Read(&file_size_, &game_code_, &company_code_, ext_name_, game_name_, i);
+        if (!Pfs_PakHeader_Read(&file_size_, &game_code_, &company_code_, ext_name_, game_name_, i)) {
+            return PFS_ERR_INVALID;
+        }
 
         if ((company_code_ == 0) || (game_code_ == 0)) {
             continue;
@@ -298,7 +310,9 @@ extern "C" s32 osPfsNumFiles(OSPfs* pfs, s32* max_files, s32* files_used) {
         char ext_name[EXT_NAME_SIZE] = { 0 };
         char game_name[GAME_NAME_SIZE] = { 0 };
 
-        Pfs_PakHeader_Read(&file_size, &game_code, &company_code, ext_name, game_name, i);
+        if (!Pfs_PakHeader_Read(&file_size, &game_code, &company_code, ext_name, game_name, i)) {
+            return PFS_ERR_INVALID;
+        }
 
         if ((company_code != 0) || (game_code != 0)) {
             files++;
@@ -325,7 +339,9 @@ extern "C" s32 osPfsDeleteFile(OSPfs* pfs, u16 company_code, u32 game_code, u8* 
         char ext_name_[4] = { 0 };
         char game_name_[16] = { 0 };
 
-        Pfs_PakHeader_Read(&file_size_, &game_code_, &company_code_, ext_name_, game_name_, i);
+        if (!Pfs_PakHeader_Read(&file_size_, &game_code_, &company_code_, ext_name_, game_name_, i)) {
+            return PFS_ERR_INVALID;
+        }
 
         if ((company_code_ == 0) || (game_code_ == 0)) {
             continue;
@@ -337,10 +353,10 @@ extern "C" s32 osPfsDeleteFile(OSPfs* pfs, u16 company_code, u32 game_code, u8* 
                 pak.header.open("controllerPak_header.sav", std::ios::binary | std::ios::in | std::ios::out);
 
                 if (!pak.header.good()) {
-                    assert(false);
+                    return PFS_ERR_INVALID;
                 }
                 if (!pak.header.is_open()) {
-                    assert(false);
+                    return PFS_ERR_INVALID;
                 }
 
                 u32 seek = i * sizeof(OSPfsState);
