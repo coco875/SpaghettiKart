@@ -1,0 +1,58 @@
+:config:
+  segments:
+    - [0x06, 0x885A10]
+    - [0x07, 0x800000]
+  header:
+    code:
+      - '#include <libultraship.h>'
+    header:
+      - '#include <libultraship.h>'
+      - '#include <libultra/gbi.h>'
+      - '#include <align_asset_macro.h>'
+    references_packed_displaylists: true
+d_course_dks_jungle_parkway_unknown_waypoints:
+  symbol: d_course_dks_jungle_parkway_unknown_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x71F0
+  count: 102
+d_course_dks_jungle_parkway_unknown_waypoints2:
+  symbol: d_course_dks_jungle_parkway_unknown_waypoints2
+  type: mk64:TRACK_PATH
+  offset: 0x7520
+  count: 32
+d_course_dks_jungle_parkway_track_waypoints:
+  symbol: d_course_dks_jungle_parkway_track_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x7620
+  count: 787
+d_course_dks_jungle_parkway_unknown_light1:
+  symbol: d_course_dks_jungle_parkway_unknown_light1
+  type: lights
+  offset: 0x9DE8
+d_course_dks_jungle_parkway_unknown_light2:
+  symbol: d_course_dks_jungle_parkway_unknown_light2
+  type: lights
+  offset: 0x9E00
+d_course_dks_jungle_parkway_unknown_light3:
+  symbol: d_course_dks_jungle_parkway_unknown_light3
+  type: lights
+  offset: 0x9E18
+d_course_dks_jungle_parkway_unknown_light4:
+  symbol: d_course_dks_jungle_parkway_unknown_light4
+  type: lights
+  offset: 0x9E30
+d_course_dks_jungle_parkway_item_box_spawns:
+  symbol: d_course_dks_jungle_parkway_item_box_spawns
+  type: mk64:spawn_data
+  offset: 0x13EC0
+  count: 23
+d_course_dks_jungle_parkway_tree_spawn:
+  symbol: d_course_dks_jungle_parkway_tree_spawn
+  type: mk64:unk_spawn_data
+  offset: 0x13F78
+  count: 96
+d_course_dks_jungle_parkway_addr:
+  symbol: d_course_dks_jungle_parkway_addr
+  type: mk64:track_sections
+  offset: 0x14338
+  count: 115

@@ -590,7 +590,7 @@ Vtx* gPlayerVtx[] = { gPlayerOneVtx,  gPlayerTwoVtx, gPlayerThreeVtx, gPlayerFou
 
 f32 gCharacterSize[] = { MARIO_SIZE, LUIGI_SIZE, YOSHI_SIZE, TOAD_SIZE, DK_SIZE, WARIO_SIZE, PEACH_SIZE, BOWSER_SIZE };
 
-u32 gKartMarioWheels0[] = { 672, 588, 504, 420, 336, 252, 168, 84, 0 };
+u32 gKartMarioWheels0[] = { 84*8, 84*7, 84*6, 84*5, 84*4, 84*3, 84*2, 84, 0 };
 u32 gKartMarioWheels1[] = { 1076, 1076, 996, 916, 916, 916, 836, 756, 756 };
 
 u32 gKartLuigiWheels0[] = { 672, 588, 504, 420, 336, 252, 168, 84, 0 };
@@ -713,10 +713,10 @@ u32 gKartWarioWheels1[] = { 1076, 1076, 996, 916, 916, 916, 836, 756, 756 };
 //     gKartWario189Wheel0
 // };
 
-u32* D_800DDE34[] = { gKartMarioWheels0, gKartLuigiWheels0, gKartYoshiWheels0, gKartToadWheels0,
+u32* gPaletteWheel0Offset[] = { gKartMarioWheels0, gKartLuigiWheels0, gKartYoshiWheels0, gKartToadWheels0,
                       gKartDKWheels0,    gKartWarioWheels0, gKartPeachWheels0, gKartBowserWheels0 };
 
-u32* D_800DDE54[] = { gKartMarioWheels1, gKartLuigiWheels1, gKartYoshiWheels1, gKartToadWheels1,
+u32* gPaletteWheel1Offset[] = { gKartMarioWheels1, gKartLuigiWheels1, gKartYoshiWheels1, gKartToadWheels1,
                       gKartDKWheels1,    gKartWarioWheels1, gKartPeachWheels1, gKartBowserWheels1 };
 
 const char** wheelPtr[] = {
@@ -1958,20 +1958,22 @@ void func_80026A48(Player* player, s8 arg1) {
 
 // Properly define struct pointers, see buffers.h comment for more information.
 #ifdef AVOID_UB
-#define D_802F1F80_WHEEL(a, screenId, playerId) &gPlayerPalettesList[a][screenId][playerId].wheel_palette
+#define PLAYER_WHEEL_MACRO(a, screenId, playerId) &gPlayerPalettesList[a][screenId][playerId].wheel_palette
 #else
-#define D_802F1F80_WHEEL(a, screenId, playerId) &gPlayerPalettesList[a][screenId][(PlayerId * 0x100) + 0xC0]
+#define PLAYER_WHEEL_MACRO(a, screenId, playerId) &gPlayerPalettesList[a][screenId][(PlayerId * 0x100) + 0xC0]
 #endif
+
+// 80 bytes between each wheel palette
+u32 wheel_offset[] = { 1076, 1076, 996, 916, 916, 916, 836, 756, 756 };
 
 void update_wheel_palette(Player* player, s8 playerId, s8 screenId, s8 arg3) {
     s16 frameId = gLastAnimFrameSelector[screenId][playerId];
     s16 groupId = gLastAnimGroupSelector[screenId][playerId];
     s16 tyreSpeed = player->tyreSpeed;
-    s16 temp_num = 0x40; // setting this as a variable gets rid of regalloc
 
     u8 character = player->characterId;
-    u32 wheel0 = (D_800DDE34[player->characterId][groupId]);
-    u32 wheel1 = (D_800DDE54[player->characterId][groupId]);
+    u32 wheel0 = 84*(8-groupId);
+    u32 wheel1 = wheel_offset[groupId];
 
     if (((player->effects & 0x4000) == 0x4000) && ((player->type & PLAYER_START_SEQUENCE) == 0)) {
         if (((player->effects & 0x80) != 0x80) && ((player->effects & 0x40) != 0x40) &&
@@ -1979,23 +1981,23 @@ void update_wheel_palette(Player* player, s8 playerId, s8 screenId, s8 arg3) {
             ((player->effects & 0x800000) != 0x800000) && ((player->unk_044 & 0x800) == 0)) {
 
             if (frameId <= 20) {
-                int32_t offset = (((frameId * temp_num * 4) + ((tyreSpeed >> 8) * 0x40)) * 2) / 0x80;
+                int32_t offset = (frameId << 2) + (tyreSpeed >> 8);
                 load_wheel_palette_non_blocking(player, wheelPtr[character][wheel0 + offset],
-                                                D_802F1F80_WHEEL(arg3, screenId, playerId), 0x80);
+                                                PLAYER_WHEEL_MACRO(arg3, screenId, playerId), 0x80);
             } else {
-                int32_t offset = (((((frameId - 21) * (temp_num * 4) + ((tyreSpeed >> 8) * 0x40)) + 0x600)) * 2) / 0x80;
+                int32_t offset = ((frameId - 21) << 2) + (tyreSpeed >> 8) + 0x18;
                 load_wheel_palette_non_blocking(player, wheelPtr[character][wheel1 + offset],
-                                                D_802F1F80_WHEEL(arg3, screenId, playerId), 0x80);
+                                                PLAYER_WHEEL_MACRO(arg3, screenId, playerId), 0x80);
             }
         } else {
             if (frameId == 0) {
-                int32_t offset = (((frameId * temp_num * 4) + ((tyreSpeed >> 8) * 0x40)) * 2) / 0x80;
+                int32_t offset = (frameId << 2) + (tyreSpeed >> 8);
                 load_wheel_palette_non_blocking(player, wheelPtr[character][wheel0 + offset],
-                                                D_802F1F80_WHEEL(arg3, screenId, playerId), 0x80);
+                                                PLAYER_WHEEL_MACRO(arg3, screenId, playerId), 0x80);
             } else {
-                int32_t offset = (((frameId * temp_num * 4) + ((tyreSpeed >> 8) * 0x40)) * 2) / 0x80;
+                int32_t offset = (frameId << 2) + (tyreSpeed >> 8);
                 load_wheel_palette_non_blocking(player, wheelPtr[character][wheel1 + offset],
-                                                D_802F1F80_WHEEL(arg3, screenId, playerId), 0x80);
+                                                PLAYER_WHEEL_MACRO(arg3, screenId, playerId), 0x80);
             }
         }
     } else {
@@ -2004,30 +2006,30 @@ void update_wheel_palette(Player* player, s8 playerId, s8 screenId, s8 arg3) {
             ((player->effects & 0x20000) != 0x20000) && ((player->unk_044 & 0x800) == 0)) {
 
             if (frameId <= 20) {
-                int32_t offset = (((frameId * temp_num * 4) + ((tyreSpeed >> 8) * 0x40)) * 2) / 0x80;
+                int32_t offset = (frameId << 2) + (tyreSpeed >> 8);
                 load_wheel_palette_non_blocking(player, wheelPtr[character][wheel0 + offset],
-                                                D_802F1F80_WHEEL(arg3, screenId, playerId), 0x80);
+                                                PLAYER_WHEEL_MACRO(arg3, screenId, playerId), 0x80);
             } else {
 
-                int32_t offset = (((((frameId - 21) * (temp_num * 4) + ((tyreSpeed >> 8) * 0x40)) + 0x600)) * 2) / 0x80;
+                int32_t offset = ((frameId - 21) << 2) + (tyreSpeed >> 8) + 0x18;
                 load_wheel_palette_non_blocking(player, wheelPtr[character][wheel1 + offset],
-                                                D_802F1F80_WHEEL(arg3, screenId, playerId), 0x80);
+                                                PLAYER_WHEEL_MACRO(arg3, screenId, playerId), 0x80);
             }
         } else {
             if (frameId == 0) {
-                int32_t offset = (((frameId * temp_num * 4) + ((tyreSpeed >> 8) * 0x40)) * 2) / 0x80;
+                int32_t offset = (frameId << 2) + (tyreSpeed >> 8);
                 load_wheel_palette_non_blocking(player, wheelPtr[character][wheel0 + offset],
-                                                D_802F1F80_WHEEL(arg3, screenId, playerId), 0x80);
+                                                PLAYER_WHEEL_MACRO(arg3, screenId, playerId), 0x80);
             } else {
-                int32_t offset = (((frameId * temp_num * 4) + ((tyreSpeed >> 8) * 0x40)) * 2) / 0x80;
+                int32_t offset = (frameId << 2) + (tyreSpeed >> 8);
                 load_wheel_palette_non_blocking(player, wheelPtr[character][wheel1 + offset],
-                                                D_802F1F80_WHEEL(arg3, screenId, playerId), 0x80);
+                                                PLAYER_WHEEL_MACRO(arg3, screenId, playerId), 0x80);
             }
         }
     }
 }
 
-#undef D_802F1F80_WHEEL
+#undef PLAYER_WHEEL_MACRO
 
 UNUSED void func_8002701C(void) {
 }

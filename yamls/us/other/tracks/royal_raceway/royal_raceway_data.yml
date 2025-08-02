@@ -1,0 +1,42 @@
+:config:
+  segments:
+    - [0x06, 0x84ABD0]
+    - [0x07, 0x800000]
+  header:
+    code:
+      - '#include <libultraship.h>'
+    header:
+      - '#include <libultraship.h>'
+      - '#include <libultra/gbi.h>'
+      - '#include <align_asset_macro.h>'
+    references_packed_displaylists: true
+d_course_royal_raceway_unknown_waypoints:
+  symbol: d_course_royal_raceway_unknown_waypoints
+  offset: 0xB5B8
+  count: 78
+  type: mk64:TRACK_PATH
+d_course_royal_raceway_track_waypoints:
+  symbol: d_course_royal_raceway_track_waypoints
+  offset: 0xB828
+  count: 903
+  type: mk64:TRACK_PATH
+d_course_royal_raceway_piranha_plant_spawn:
+  symbol: d_course_royal_raceway_piranha_plant_spawn
+  type: mk64:spawn_data
+  count: 17
+  offset: 0xD9F0
+d_course_royal_raceway_tree_spawn:
+  symbol: d_course_royal_raceway_tree_spawn
+  type: mk64:spawn_data
+  count: 33
+  offset: 0xDA80
+d_course_royal_raceway_item_box_spawns:
+  symbol: d_course_royal_raceway_item_box_spawns
+  type: mk64:spawn_data
+  count: 21
+  offset: 0xDB88
+d_course_royal_raceway_addr:
+  symbol: d_course_royal_raceway_addr
+  type: mk64:track_sections
+  offset: 0xDC28
+  count: 119

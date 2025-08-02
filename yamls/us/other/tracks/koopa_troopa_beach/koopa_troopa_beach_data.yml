@@ -1,0 +1,67 @@
+:config:
+  segments:
+    - [0x06, 0x842E40]
+    - [0x07, 0x800000]
+  header:
+    code:
+      - '#include <libultraship.h>'
+    header:
+      - '#include <libultraship.h>'
+      - '#include <libultra/gbi.h>'
+      - '#include <align_asset_macro.h>'
+    references_packed_displaylists: true
+  tables:
+    d_course_koopa_troopa_beach_crab_frames:
+      range: [0xD828, 0x13828]
+      mode: APPEND
+d_course_koopa_troopa_beach_unknown_waypoints:
+  symbol: d_course_koopa_troopa_beach_unknown_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0xADE0
+  count: 62
+d_course_koopa_troopa_beach_unknown_waypoints1:
+  symbol: d_course_koopa_troopa_beach_unknown_waypoints1
+  type: mk64:TRACK_PATH
+  offset: 0xAFD0
+  count: 59
+d_course_koopa_troopa_beach_track_waypoints:
+  symbol: d_course_koopa_troopa_beach_track_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0xB1A8
+  count: 609
+d_course_koopa_troopa_beach_track_waypoints_2:
+  symbol: d_course_koopa_troopa_beach_track_waypoints_2
+  type: mk64:TRACK_PATH
+  offset: 0xC4B0
+  count: 559
+d_course_koopa_troopa_beach_light1:
+  symbol: d_course_koopa_troopa_beach_light1
+  type: lights
+  offset: 0x14BE8
+d_course_koopa_troopa_beach_light2:
+  symbol: d_course_koopa_troopa_beach_light2
+  type: lights
+  offset: 0x16B78
+d_course_koopa_troopa_beach_light3:
+  symbol: d_course_koopa_troopa_beach_light3
+  type: lights
+  offset: 0x18858
+d_course_koopa_troopa_beach_light4:
+  symbol: d_course_koopa_troopa_beach_light4
+  type: lights
+  offset: 0x18BA8
+d_course_koopa_troopa_beach_item_box_spawns:
+  symbol: d_course_koopa_troopa_beach_item_box_spawns
+  type: mk64:spawn_data
+  offset: 0x18E78
+  count: 31
+d_course_koopa_troopa_beach_tree_spawn:
+  symbol: d_course_koopa_troopa_beach_tree_spawn
+  type: mk64:spawn_data
+  offset: 0x18F70
+  count: 13
+d_course_koopa_troopa_beach_addr:
+  symbol: d_course_koopa_troopa_beach_addr
+  type: mk64:track_sections
+  offset: 0x18FD8
+  count: 106

@@ -1350,7 +1350,7 @@ void load_kart_palette(Player* player, s8 playerId, s8 screenId, s8 buffer) {
 #else
             size = ResourceGetTexSizeByName(gKartPalettes[player->characterId]);
             asset = (u8*) LOAD_ASSET(gKartPalettes[player->characterId]);
-            memcpy(&gPlayerPalettesList[buffer][screenId][playerId].kart_palette[0], asset, size);
+            memcpy(&temp_s0->kart_palette[0], asset, size);
 #endif
 
             break;
@@ -1366,7 +1366,7 @@ void load_kart_palette(Player* player, s8 playerId, s8 screenId, s8 buffer) {
 #else
             size = ResourceGetTexSizeByName(gKartPalettes[player->characterId]);
             asset = (u8*) LOAD_ASSET(gKartPalettes[player->characterId]);
-            memcpy(&gPlayerPalettesList[buffer][screenId][playerId].kart_palette[0], asset, size);
+            memcpy(&temp_s0->kart_palette[0], asset, size);
 #endif
 
             break;

@@ -1,0 +1,32 @@
+:config:
+  segments:
+    - [0x06, 0x8804A0]
+    - [0x07, 0x800000]
+  header:
+    code:
+      - '#include <libultraship.h>'
+    header:
+      - '#include <libultraship.h>'
+      - '#include <libultra/gbi.h>'
+      - '#include <align_asset_macro.h>'
+    references_packed_displaylists: true
+d_course_wario_stadium_unknown_waypoints:
+  symbol: d_course_wario_stadium_unknown_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x56A0
+  count: 77
+d_course_wario_stadium_track_waypoints:
+  symbol: d_course_wario_stadium_track_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x5908
+  count: 1401
+d_course_wario_stadium_item_box_spawns:
+  symbol: d_course_wario_stadium_item_box_spawns
+  type: mk64:spawn_data
+  offset: 0xCB40
+  count: 31
+d_course_wario_stadium_addr:
+  symbol: d_course_wario_stadium_addr
+  type: mk64:track_sections
+  offset: 0xCC38
+  count: 32

@@ -1,0 +1,42 @@
+:config:
+  segments:
+    - [0x06, 0x8666a0]
+    - [0x07, 0x800000]
+  header:
+    code:
+      - '#include <libultraship.h>'
+    header:
+      - '#include <libultraship.h>'
+      - '#include <libultra/gbi.h>'
+      - '#include <align_asset_macro.h>'
+    references_packed_displaylists: true
+d_course_kalimari_desert_unknown_waypoints:
+  symbol: d_course_kalimari_desert_unknown_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x6ac8
+  count: 51
+d_course_kalimari_desert_track_unknown_waypoints:
+  symbol: d_course_kalimari_desert_track_unknown_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x6c60
+  count: 76
+d_course_kalimari_desert_track_waypoints:
+  symbol: d_course_kalimari_desert_track_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x6ec0
+  count: 664
+d_course_kalimari_desert_item_box_spawns:
+  symbol: d_course_kalimari_desert_item_box_spawns
+  type: mk64:spawn_data
+  offset: 0x22e88
+  count: 16
+d_course_kalimari_desert_cactus_spawn:
+  symbol: d_course_kalimari_desert_cactus_spawn
+  type: mk64:spawn_data
+  offset: 0x22f08
+  count: 45
+d_course_kalimari_desert_addr:
+  symbol: d_course_kalimari_desert_addr
+  type: mk64:track_sections
+  offset: 0x23070
+  count: 102

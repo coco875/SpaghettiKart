@@ -1,0 +1,36 @@
+:config:
+  segments:
+    - [0x06, 0x831DC0]
+    - [0x07, 0x800000]
+  header:
+    code:
+      - '#include <libultraship.h>'
+    header:
+      - '#include <libultraship.h>'
+      - '#include <libultra/gbi.h>'
+      - '#include <align_asset_macro.h>'
+    references_packed_displaylists: true
+  tables:
+    d_course_banshee_boardwalk_bat:
+      range: [0x7DB8, 0x95B8]
+      mode: APPEND
+d_course_banshee_boardwalk_unknown_waypoints:
+  symbol: d_course_banshee_boardwalk_unknown_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x4578
+  count: 79
+d_course_banshee_boardwalk_track_waypoints:
+  symbol: d_course_banshee_boardwalk_track_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x47F0
+  count: 658
+d_course_banshee_boardwalk_item_box_spawns:
+  symbol: d_course_banshee_boardwalk_item_box_spawns
+  type: mk64:spawn_data
+  offset: 0xB3D0
+  count: 17
+d_course_banshee_boardwalk_track_sections:
+  symbol: d_course_banshee_boardwalk_track_sections
+  type: mk64:track_sections
+  offset: 0xB458
+  count: 49

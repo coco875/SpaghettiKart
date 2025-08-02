@@ -1,0 +1,37 @@
+:config:
+  segments:
+    - [0x06, 0x83F740]
+    - [0x07, 0x800000]
+  header:
+    code:
+      - '#include <libultraship.h>'
+    header:
+      - '#include <libultraship.h>'
+      - '#include <libultra/gbi.h>'
+      - '#include <align_asset_macro.h>'
+    references_packed_displaylists: true
+d_course_frappe_snowland_unknown_waypoints:
+  symbol: d_course_frappe_snowland_unknown_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x34A0
+  count: 73
+d_course_frappe_snowland_track_waypoints:
+  symbol: d_course_frappe_snowland_track_waypoints
+  type: mk64:TRACK_PATH
+  offset: 0x36E8
+  count: 647
+d_course_frappe_snowland_tree_spawns:
+  symbol: d_course_frappe_snowland_tree_spawns
+  type: mk64:spawn_data
+  offset: 0x7718
+  count: 31
+d_course_frappe_snowland_item_box_spawns:
+  symbol: d_course_frappe_snowland_item_box_spawns
+  type: mk64:spawn_data
+  offset: 0x7810
+  count: 16
+d_course_frappe_snowland_addr:
+  symbol: d_course_frappe_snowland_addr
+  type: mk64:track_sections
+  offset: 0x79A0
+  count: 48
