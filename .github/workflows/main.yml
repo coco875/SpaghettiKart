@@ -50,7 +50,7 @@ jobs:
     strategy:
       matrix:
         config: [Release, Debug]
-        toolchain: [v143, clang-cl]
+        toolchain: [v143, clang-cl-msvc.cmake]
     steps:
       - uses: actions/checkout@v4
         with:
