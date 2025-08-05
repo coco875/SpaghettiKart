@@ -668,7 +668,8 @@ include(ExternalProject)
 ExternalProject_Add(TorchExternal
     PREFIX TorchExternal
     SOURCE_DIR ${CMAKE_SOURCE_DIR}/torch
-    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/torch
+    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/torch 
+               -DBUILD_STORMLIB=${BUILD_STORMLIB}
 )
 
 ExternalProject_Get_Property(TorchExternal install_dir)
