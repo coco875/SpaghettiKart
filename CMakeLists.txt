@@ -171,7 +171,7 @@ endif()
 ################################################################################
 # Global configuration types
 ################################################################################
-if (MSVC)
+if (MSVC OR CMAKE_CXX_SIMULATE_ID STREQUAL "MSVC")
     set(CMAKE_C_FLAGS_DEBUG "/Od /Zi /DNDEBUG ${COMMON_C_FLAGS}")
     set(CMAKE_CXX_FLAGS_DEBUG "/Od /Zi /DNDEBUG ${COMMON_CXX_FLAGS}")
     set(CMAKE_C_FLAGS_RELEASE "/O2 /GL /DNDEBUG ${COMMON_C_FLAGS}")
