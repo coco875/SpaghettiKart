@@ -82,6 +82,17 @@ set(VCPKG_TRIPLET x64-windows-static)
 set(VCPKG_TARGET_TRIPLET x64-windows-static)
 vcpkg_bootstrap()
 # vcpkg_install_packages(zlib bzip2 libzip libpng sdl2 sdl2-net glew glfw3 nlohmann-json tinyxml2 spdlog libogg libvorbis)
+if (${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
+    FetchContent_Declare(
+        vcpkg-triplets
+        GIT_REPOSITORY https://github.com/Neumann-A/my-vcpkg-triplets
+        GIT_TAG master
+    )
+    FetchContent_MakeAvailable(vcpkg-triplets)
+    set(ENV{VCPKG_OVERLAY_TRIPLETS} "${vcpkg-triplets_SOURCE_DIR}")
+    set(VCPKG_TRIPLET x64-win-llvm)
+    set(VCPKG_TARGET_TRIPLET x64-win-llvm)
+endif()
 vcpkg_install_packages()
 
 set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
