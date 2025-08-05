@@ -504,7 +504,7 @@ endif()
 
 if(USE_NETWORKING)
     if(MSVC)
-        vcpkg_install_packages(sdl2-net)
+        # vcpkg_install_packages(sdl2-net)
     endif()
     include_directories(${SDL2_NET_INCLUDE_DIRS})
     target_compile_definitions(${PROJECT_NAME} PRIVATE USE_NETWORKING)
