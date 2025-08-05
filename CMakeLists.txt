@@ -154,9 +154,7 @@ if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU|Clang|AppleClang")
     set(COMMON_C_FLAGS "${COMMON_FLAGS} -Wno-int-conversion -Werror-implicit-function-declaration -Wno-incompatible-pointer-types")
     set(COMMON_CXX_FLAGS "${COMMON_FLAGS} -Wno-c++11-narrowing -Wno-deprecated-enum-enum-conversion -fpermissive -fomit-frame-pointer")
 elseif (MSVC)
-    set(COMMON_FLAGS "/fp:fast \
-            /GL"
-    )
+    set(COMMON_FLAGS "/fp:fast")
     set(COMMON_C_FLAGS "${COMMON_FLAGS}")
     set(COMMON_CXX_FLAGS "${COMMON_FLAGS}")
 else()
@@ -176,8 +174,8 @@ endif()
 if (MSVC)
     set(CMAKE_C_FLAGS_DEBUG "/Od /Zi /DNDEBUG ${COMMON_C_FLAGS}")
     set(CMAKE_CXX_FLAGS_DEBUG "/Od /Zi /DNDEBUG ${COMMON_CXX_FLAGS}")
-    set(CMAKE_C_FLAGS_RELEASE "/O2 /DNDEBUG ${COMMON_C_FLAGS}")
-    set(CMAKE_CXX_FLAGS_RELEASE "/O2 /DNDEBUG ${COMMON_CXX_FLAGS}")
+    set(CMAKE_C_FLAGS_RELEASE "/O2 /GL /DNDEBUG ${COMMON_C_FLAGS}")
+    set(CMAKE_CXX_FLAGS_RELEASE "/O2 /GL /DNDEBUG ${COMMON_CXX_FLAGS}")
 else()
     set(CMAKE_C_FLAGS_DEBUG "-g -DNDEBUG ${COMMON_C_FLAGS}")
     set(CMAKE_CXX_FLAGS_DEBUG "-g -DNDEBUG ${COMMON_CXX_FLAGS}")
@@ -598,7 +596,8 @@ if(MSVC)
               /OPT:REF;
               /OPT:ICF;
               /INCREMENTAL:NO;
-              /FORCE:MULTIPLE
+              /FORCE:MULTIPLE;
+              /LTCG
           >
           /MANIFEST:NO;
           /DEBUG;
