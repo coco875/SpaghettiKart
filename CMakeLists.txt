@@ -136,7 +136,11 @@ endif()
 ################################################################################
 # Compiler specific configuration types
 ################################################################################
-if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU|Clang|AppleClang")
+if (MSVC)
+    set(COMMON_FLAGS "/fp:fast")
+    set(COMMON_C_FLAGS "${COMMON_FLAGS}")
+    set(COMMON_CXX_FLAGS "${COMMON_FLAGS}")
+elseif ("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU|Clang|AppleClang")
     set(COMMON_FLAGS "-Wall -Wextra -Wno-error \
             -Wno-return-type \
             -Wno-unused-parameter \
@@ -153,10 +157,6 @@ if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU|Clang|AppleClang")
 
     set(COMMON_C_FLAGS "${COMMON_FLAGS} -Wno-int-conversion -Werror-implicit-function-declaration -Wno-incompatible-pointer-types")
     set(COMMON_CXX_FLAGS "${COMMON_FLAGS} -Wno-c++11-narrowing -Wno-deprecated-enum-enum-conversion -fpermissive -fomit-frame-pointer")
-elseif (MSVC)
-    set(COMMON_FLAGS "/fp:fast")
-    set(COMMON_C_FLAGS "${COMMON_FLAGS}")
-    set(COMMON_CXX_FLAGS "${COMMON_FLAGS}")
 else()
     set(COMMON_C_FLAGS "")
     set(COMMON_CXX_FLAGS "")
