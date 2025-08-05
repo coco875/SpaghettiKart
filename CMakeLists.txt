@@ -102,7 +102,7 @@ endif()
 execute_process(COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/config.yml" "${CMAKE_BINARY_DIR}/config.yml")
 execute_process(COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/yamls/" "${CMAKE_BINARY_DIR}/yamls/")
 
-if (MSVC)
+if (MSVC OR CMAKE_CXX_SIMULATE_ID STREQUAL "MSVC")
 set(CPP "${CMAKE_C_COMPILER}" "/EP")
 else()
 set(CPP "${CMAKE_C_COMPILER}" "-E" "-P" "-Wno-trigraphs" "-x" "c")
@@ -136,7 +136,7 @@ endif()
 ################################################################################
 # Compiler specific configuration types
 ################################################################################
-if (MSVC)
+if (MSVC OR CMAKE_CXX_SIMULATE_ID STREQUAL "MSVC")
     set(COMMON_FLAGS "/fp:fast")
     set(COMMON_C_FLAGS "${COMMON_FLAGS}")
     set(COMMON_CXX_FLAGS "${COMMON_FLAGS}")
@@ -321,7 +321,7 @@ endif()
 ################################################################################
 # MSVC runtime library
 ################################################################################
-if (MSVC)
+if (MSVC OR CMAKE_CXX_SIMULATE_ID STREQUAL "MSVC")
   if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
 	  get_property(MSVC_RUNTIME_LIBRARY_DEFAULT TARGET ${PROJECT_NAME} PROPERTY MSVC_RUNTIME_LIBRARY)
 	  if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
@@ -548,7 +548,7 @@ endif()
 ################################################################################
 # Compile and link options
 ################################################################################
-if(MSVC)
+if(MSVC OR CMAKE_CXX_SIMULATE_ID STREQUAL "MSVC")
   if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
       target_compile_options(${PROJECT_NAME} PRIVATE
           $<$<CONFIG:Debug>:
@@ -673,7 +673,7 @@ ExternalProject_Add(TorchExternal
 )
 
 ExternalProject_Get_Property(TorchExternal install_dir)
-if (MSVC)
+if (MSVC OR CMAKE_CXX_SIMULATE_ID STREQUAL "MSVC")
   set(TORCH_EXECUTABLE ${install_dir}/src/TorchExternal-build/$<CONFIGURATION>/torch)
 else()
   set(TORCH_EXECUTABLE ${install_dir}/src/TorchExternal-build/torch)
