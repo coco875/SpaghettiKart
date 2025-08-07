@@ -24,17 +24,20 @@
 #include "effects.h"
 #include "collision.h"
 #include "audio/external.h"
-#include <assets/common_data.h>
+#include <assets/models/common_data.h>
 #include "courses/all_course_data.h"
 #include "main.h"
-#include <assets/other_textures.h>
-#include <assets/mario_raceway_data.h>
-#include <assets/luigi_raceway_data.h>
-#include <assets/dks_jungle_parkway_data.h>
-#include <assets/wario_stadium_data.h>
-#include <assets/frappe_snowland_data.h>
+#include <assets/textures/other_textures.h>
+#include <assets/models/tracks/mario_raceway/mario_raceway_data.h>
+#include <assets/models/tracks/luigi_raceway/luigi_raceway_data.h>
+#include <assets/models/tracks/dks_jungle_parkway/dks_jungle_parkway_data.h>
+#include <assets/other/tracks/dks_jungle_parkway/dks_jungle_parkway_data.h>
+#include <assets/models/tracks/wario_stadium/wario_stadium_data.h>
+#include <assets/models/tracks/frappe_snowland/frappe_snowland_data.h>
 #include "port/Game.h"
 #include "port/interpolation/FrameInterpolation.h"
+
+#include <assets/other/tracks/moo_moo_farm/moo_moo_farm_data.h>
 
 // Appears to be textures
 // or tluts

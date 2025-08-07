@@ -208,13 +208,13 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_18E38[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_18E38[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_18E38";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_18EB8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_18EB8";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_18EB8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_18EB8";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_18F58[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_18F58";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_18EB8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_18EB8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_18F58[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_18F58";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_18F58[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_18F58";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_18FF8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_18FF8";
 
@@ -222,13 +222,13 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_18FF8[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19020[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19020";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19030[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19030";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19030[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19030";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_190E8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_190E8";
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19030[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19030";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_190E8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_190E8";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_190E8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_190E8";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19168[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19168";
 
@@ -238,17 +238,17 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_192B0[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_192B0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_192B0";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19390[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19390";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19390[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19390";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19450[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19450";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19390[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19390";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19450[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19450";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_194E0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_194E0";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19450[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19450";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_194E0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_194E0";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_194E0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_194E0";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19518[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19518";
 
@@ -268,17 +268,17 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_truck_unknown_model19[]
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_truck_unknown_model20[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_truck_unknown_model20";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19CF8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19CF8";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19CF8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19CF8";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19D68[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19D68";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19CF8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19CF8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19D68[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19D68";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19DD8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19DD8";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19D68[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19D68";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19DD8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19DD8";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19DD8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19DD8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19DF0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19DF0";
 
@@ -286,13 +286,13 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19E00[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19E00[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19E00";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19E38[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19E38";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19E38[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19E38";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19EA0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19EA0";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19E38[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19E38";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_19EA0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_19EA0";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19EA0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19EA0";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_19F08[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_19F08";
 
@@ -314,17 +314,17 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_truck_unknown_model23[]
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_truck_unknown_model24[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_truck_unknown_model24";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1A4B8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1A4B8";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1A4B8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1A4B8";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1A4B8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1A4B8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1A528[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1A528";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1A528[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1A528";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1A5E0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1A5E0";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1A5E0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1A5E0";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1A5E0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1A5E0";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1A5F8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1A5F8";
 
@@ -386,15 +386,15 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1B6D8[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1B6D8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1B6D8";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1B758[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1B758";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1B758[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1B758";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1B758[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1B758";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1B778[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1B778";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1B788[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1B788";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1B788[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1B788";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1B788[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1B788";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1B810[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1B810";
 
@@ -408,9 +408,9 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1BC78[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1BC78[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1BC78";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1BD48[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1BD48";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1BD48[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1BD48";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1BD48[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1BD48";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1BE18[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1BE18";
 
@@ -454,17 +454,17 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1C6E8[] = "__OTR__mo
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1C700[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1C700";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1C710[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1C710";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1C710[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1C710";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1C710[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1C710";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1C770[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1C770";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1C770[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1C770";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1C7D0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1C7D0";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1C7D0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1C7D0";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1C7D0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1C7D0";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1CA88[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1CA88";
 
@@ -540,17 +540,17 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_tanker_truck_unknown_mo
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_tanker_truck_unknown_model14[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_tanker_truck_unknown_model14";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E288[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E288";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E288[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E288";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E288[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E288";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E318[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E318";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E318[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E318";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E3A8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E3A8";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E3A8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E3A8";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E3A8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E3A8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E438[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E438";
 
@@ -558,25 +558,25 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E438[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E458[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E458";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E468[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E468";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E468[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E468";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E508[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E508";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E468[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E468";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E508[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E508";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E810[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E810";
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E508[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E508";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E810[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E810";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E810[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E810";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E8A0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E8A0";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E8A0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E8A0";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E970[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E970";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1E970[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1E970";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1E970[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1E970";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1EA40[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1EA40";
 
@@ -634,13 +634,13 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1F8C0[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1F8C0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1F8C0";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1F938[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1F938";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1F938[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1F938";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1F9A8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1F9A8";
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1F938[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1F938";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1F9A8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1F9A8";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1F9A8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1F9A8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1F9D0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1F9D0";
 
@@ -652,29 +652,29 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1FCD8[] = "__OTR__mo
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FCD8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FCD8";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FD58[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FD58";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1FD58[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1FD58";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FDD0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FDD0";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FD58[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FD58";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1FDD0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1FDD0";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FDD0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FDD0";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FE50[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FE50";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1FE50[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1FE50";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FEC8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FEC8";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1FEC8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1FEC8";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FF50[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FF50";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FEC8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FEC8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1FF50[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1FF50";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FFC8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FFC8";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FF50[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FF50";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_1FFC8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_1FFC8";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_1FFC8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_1FFC8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_20008[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_20008";
 
@@ -694,19 +694,19 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_20450[] = "__OTR__mo
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_20450[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_20450";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_204F8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_204F8";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_204F8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_204F8";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_204F8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_204F8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_20510[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_20510";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_20520[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_20520";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_20520[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_20520";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_20598[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_20598";
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_20520[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_20520";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_20598[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_20598";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_20598[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_20598";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_205A8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_205A8";
 
@@ -742,23 +742,23 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_car_unknown_model14[] =
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_car_unknown_model15[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_car_unknown_model15";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21648[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21648";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21648[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_21648";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_216D8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_216D8";
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21648[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21648";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_216D8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_216D8";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21768[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21768";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_216D8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_216D8";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21768[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_21768";
 
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21768[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21768";
+
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21780[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21780";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21790[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_21790";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21790[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21790";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21790[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_21790";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21820[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_21820";
 
@@ -772,17 +772,17 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21950[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21950[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21950";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21A28[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21A28";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21A28[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_21A28";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21C78[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21C78";
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21A28[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21A28";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21C78[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_21C78";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21CD0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21CD0";
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21C78[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21C78";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_21CD0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_21CD0";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21CD0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21CD0";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_21D28[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_21D28";
 
@@ -826,13 +826,13 @@ static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_22A68[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_22A68[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_22A68";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_22AF8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_22AF8";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_22AF8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_22AF8";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_22B88[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_22B88";
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_22AF8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_22AF8";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_22B88[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_22B88";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_22B88[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_22B88";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_22BA0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_22BA0";
 
@@ -856,9 +856,9 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_22D60[] = "__OTR__mo
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_22D60[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_22D60";
 
-static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_22E38[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_22E38";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_22E38[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_22E38";
+
+static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_22E38[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_22E38";
 
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_23040[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_23040";
 
@@ -880,9 +880,9 @@ static const ALIGN_ASSET(2) char d_course_toads_turnpike_car_unknown_model31[] =
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_car_unknown_model32[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_car_unknown_model32";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_23538[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_23538";
-
 static const ALIGN_ASSET(2) char toads_turnpike_data_seg6_gfx_23538[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/toads_turnpike_data_seg6_gfx_23538";
+
+static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_23538[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_23538";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_dl_23600[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_data/d_course_toads_turnpike_dl_23600";
 

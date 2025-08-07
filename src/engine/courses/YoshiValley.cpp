@@ -10,8 +10,8 @@
 #include "engine/objects/BombKart.h"
 #include "engine/objects/Hedgehog.h"
 #include "engine/objects/Flagpole.h"
-#include "assets/yoshi_valley_data.h"
-#include "assets/boo_frames.h"
+#include "assets/models/tracks/yoshi_valley/yoshi_valley_data.h"
+#include "assets/other/tracks/yoshi_valley/yoshi_valley_data.h"
 
 extern "C" {
     #include "main.h"
@@ -27,7 +27,7 @@ extern "C" {
     #include "code_80005FD0.h"
     #include "spawn_players.h"
     #include "render_objects.h"
-    #include "assets/common_data.h"
+    #include "assets/models/common_data.h"
     #include "save.h"
     #include "replays.h"
     #include "actors.h"

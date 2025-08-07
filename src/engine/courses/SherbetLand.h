@@ -4,9 +4,9 @@
 #include "Course.h"
 
 extern "C" {
-    #include "assets/sherbet_land_vertices.h"
-    #include "assets/sherbet_land_displaylists.h"
-    #include "assets/sherbet_land_data.h"
+    #include "assets/models/tracks/sherbet_land/sherbet_land_vertices.h"
+    #include "assets/models/tracks/sherbet_land/sherbet_land_displaylists.h"
+    #include "assets/models/tracks/sherbet_land/sherbet_land_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

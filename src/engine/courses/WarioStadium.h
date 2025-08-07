@@ -4,9 +4,9 @@
 #include "Course.h"
 
 extern "C" {
-#include "assets/wario_stadium_vertices.h"
-#include "assets/wario_stadium_displaylists.h"
-#include "assets/wario_stadium_data.h"
+#include "assets/models/tracks/wario_stadium/wario_stadium_vertices.h"
+#include "assets/models/tracks/wario_stadium/wario_stadium_displaylists.h"
+#include "assets/models/tracks/wario_stadium/wario_stadium_data.h"
 #include "course_offsets.h"
 #include "camera.h"
 #include "data/some_data.h"

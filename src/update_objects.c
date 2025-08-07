@@ -19,7 +19,7 @@
 #include "code_80057C60.h"
 #include "code_8006E9C0.h"
 #include "code_80086E70.h"
-#include <assets/common_data.h>
+#include <assets/models/common_data.h>
 #include "audio/external.h"
 #include "sounds.h"
 #include <actors.h>
@@ -30,16 +30,19 @@
 #include "menu_items.h"
 #include "podium_ceremony_actors.h"
 #include "courses/all_course_data.h"
-#include <assets/ceremony_data.h>
+#include <assets/models/ceremony_data.h>
 #include "src/ending/ceremony_and_credits.h"
 #include "menus.h"
-#include <assets/other_textures.h>
+#include <assets/textures/other_textures.h>
 #include "data/some_data.h"
 #include "memory.h"
 #include "courses/all_course_offsets.h"
 #include "courses/all_course_data.h"
-#include <assets/boo_frames.h>
+#include <assets/textures/boo_frames.h>
 #include "port/Game.h"
+#include <assets/textures/tracks/banshee_boardwalk/banshee_boardwalk_data.h>
+#include <assets/textures/tracks/sherbet_land/sherbet_land_data.h>
+#include <assets/textures/tracks/rainbow_road/rainbow_road_data.h>
 
 float OTRGetAspectRatio(void);
 

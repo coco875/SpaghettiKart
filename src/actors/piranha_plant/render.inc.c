@@ -1,8 +1,8 @@
 #include <actors.h>
 #include <main.h>
 #include <libultra/gbi.h>
-#include <assets/mario_raceway_data.h>
-#include <assets/royal_raceway_data.h>
+#include <assets/models/tracks/mario_raceway/mario_raceway_data.h>
+#include <assets/models/tracks/royal_raceway/royal_raceway_data.h>
 
 /**
  * @brief Renders the piranha plant actor.

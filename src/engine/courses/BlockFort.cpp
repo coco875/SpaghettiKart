@@ -6,7 +6,8 @@
 #include "BlockFort.h"
 #include "World.h"
 #include "engine/objects/BombKart.h"
-#include "assets/block_fort_data.h"
+#include "assets/models/tracks/block_fort/block_fort_data.h"
+#include "assets/other/tracks/block_fort/block_fort_data.h"
 
 extern "C" {
 #include "main.h"
@@ -22,7 +23,7 @@ extern "C" {
 #include "code_80005FD0.h"
 #include "spawn_players.h"
 #include "render_objects.h"
-#include "assets/common_data.h"
+#include "assets/models/common_data.h"
 #include "save.h"
 #include "replays.h"
 #include "actors.h"

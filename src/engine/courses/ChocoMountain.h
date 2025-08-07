@@ -4,9 +4,9 @@
 #include "Course.h"
 
 extern "C" {
-    #include "assets/choco_mountain_vertices.h"
-    #include "assets/choco_mountain_displaylists.h"
-    #include "assets/choco_mountain_data.h"
+    #include "assets/models/tracks/choco_mountain/choco_mountain_vertices.h"
+    #include "assets/models/tracks/choco_mountain/choco_mountain_displaylists.h"
+    #include "assets/models/tracks/choco_mountain/choco_mountain_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

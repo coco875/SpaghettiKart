@@ -7,9 +7,9 @@
 #include "World.h"
 
 extern "C" {
-    #include "assets/koopa_troopa_beach_vertices.h"
-    #include "assets/koopa_troopa_beach_displaylists.h"
-    #include "assets/koopa_troopa_beach_data.h"
+    #include "assets/models/tracks/koopa_troopa_beach/koopa_troopa_beach_vertices.h"
+    #include "assets/models/tracks/koopa_troopa_beach/koopa_troopa_beach_displaylists.h"
+    #include "assets/models/tracks/koopa_troopa_beach/koopa_troopa_beach_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

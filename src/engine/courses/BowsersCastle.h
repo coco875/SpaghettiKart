@@ -4,9 +4,9 @@
 #include "Course.h"
 
 extern "C" {
-    #include "assets/bowsers_castle_vertices.h"
-    #include "assets/bowsers_castle_displaylists.h"
-    #include "assets/bowsers_castle_data.h"
+    #include "assets/models/tracks/bowsers_castle/bowsers_castle_vertices.h"
+    #include "assets/models/tracks/bowsers_castle/bowsers_castle_displaylists.h"
+    #include "assets/models/tracks/bowsers_castle/bowsers_castle_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

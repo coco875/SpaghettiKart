@@ -7,7 +7,8 @@
 #include "World.h"
 #include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
-#include "assets/royal_raceway_data.h"
+#include "assets/models/tracks/royal_raceway/royal_raceway_data.h"
+#include "assets/other/tracks/royal_raceway/royal_raceway_data.h"
 #include "engine/objects/GrandPrixBalloons.h"
 
 extern "C" {
@@ -24,7 +25,7 @@ extern "C" {
     #include "code_80005FD0.h"
     #include "spawn_players.h"
     #include "render_objects.h"
-    #include "assets/common_data.h"
+    #include "assets/models/common_data.h"
     #include "save.h"
     #include "replays.h"
     #include "actors.h"

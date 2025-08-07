@@ -15,7 +15,7 @@ extern "C" {
 #include "some_data.h"
 #include "code_8006E9C0.h"
 #include "code_8003DC40.h"
-#include "assets/common_data.h"
+#include "assets/models/common_data.h"
 #include "render_objects.h"
 #include "save.h"
 #include "replays.h"

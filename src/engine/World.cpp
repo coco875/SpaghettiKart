@@ -17,8 +17,8 @@ extern "C" {
 #include "defines.h"
 #include "audio/external.h"
 #include "menus.h"
-#include "common_data.h"
-#include "mario_raceway_data.h"
+#include "assets/models/common_data.h"
+#include "assets/models/tracks/mario_raceway/mario_raceway_data.h"
 }
 
 World::World() {}

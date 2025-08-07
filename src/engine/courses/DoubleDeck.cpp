@@ -6,7 +6,8 @@
 #include "DoubleDeck.h"
 #include "World.h"
 #include "engine/objects/BombKart.h"
-#include "assets/double_deck_data.h"
+#include "assets/models/tracks/double_deck/double_deck_data.h"
+#include "assets/other/tracks/double_deck/double_deck_data.h"
 
 extern "C" {
     #include "main.h"
@@ -22,7 +23,7 @@ extern "C" {
     #include "code_80005FD0.h"
     #include "spawn_players.h"
     #include "render_objects.h"
-    #include "assets/common_data.h"
+    #include "assets/models/common_data.h"
     #include "save.h"
     #include "replays.h"
     #include "actors.h"

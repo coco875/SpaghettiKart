@@ -725,7 +725,7 @@ extern "C" int32_t GameEngine_ResourceGetTexTypeByName(const char* name) {
         return (int16_t) res->Type;
     }
 
-    SPDLOG_ERROR("Given texture path is a non-existent resource");
+    SPDLOG_ERROR("Given texture path {} is a non-existent resource", name);
     return -1;
 }
 

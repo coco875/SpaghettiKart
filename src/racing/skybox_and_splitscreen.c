@@ -9,7 +9,7 @@
 #include <common_structs.h>
 #include "memory.h"
 #include "../camera.h"
-#include <assets/common_data.h>
+#include <assets/models/common_data.h>
 #include "render_player.h"
 #include "code_80057C60.h"
 #include "menu_items.h"

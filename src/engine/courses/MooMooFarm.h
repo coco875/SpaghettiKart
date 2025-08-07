@@ -5,9 +5,9 @@
 #include "engine/objects/Mole.h"
 
 extern "C" {
-    #include "assets/moo_moo_farm_vertices.h"
-    #include "assets/moo_moo_farm_displaylists.h"
-    #include "assets/moo_moo_farm_data.h"
+    #include "assets/models/tracks/moo_moo_farm/moo_moo_farm_vertices.h"
+    #include "assets/models/tracks/moo_moo_farm/moo_moo_farm_displaylists.h"
+    #include "assets/models/tracks/moo_moo_farm/moo_moo_farm_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

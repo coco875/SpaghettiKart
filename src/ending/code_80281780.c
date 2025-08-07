@@ -3,7 +3,7 @@
 #include <defines.h>
 #include <segments.h>
 #include <mk64.h>
-#include <assets/royal_raceway_displaylists.h>
+#include <assets/models/tracks/royal_raceway/royal_raceway_displaylists.h>
 
 #include "code_80281780.h"
 #include "memory.h"

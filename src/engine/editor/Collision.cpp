@@ -6,7 +6,7 @@
 
 extern "C" {
 #include "main.h"
-#include "other_textures.h"
+#include "assets/textures/other_textures.h"
 }
 
 namespace Editor {

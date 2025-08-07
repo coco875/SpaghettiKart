@@ -23,9 +23,9 @@
 #include "courses/all_course_data.h"
 #include "courses/all_course_packed.h"
 #include "menus.h"
-#include <assets/other_textures.h>
-#include <assets/mario_raceway_data.h>
-#include <assets/moo_moo_farm_data.h>
+#include <assets/textures/other_textures.h>
+#include <assets/models/tracks/mario_raceway/mario_raceway_data.h>
+#include <assets/models/tracks/moo_moo_farm/moo_moo_farm_data.h>
 #include "port/Game.h"
 
 extern s32 D_802BA038;

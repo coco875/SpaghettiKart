@@ -7,7 +7,8 @@
 #include "World.h"
 #include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
-#include "assets/moo_moo_farm_data.h"
+#include "assets/models/tracks/moo_moo_farm/moo_moo_farm_data.h"
+#include "assets/other/tracks/moo_moo_farm/moo_moo_farm_data.h"
 #include "engine/objects/MoleGroup.h"
 #include "engine/objects/Mole.h"
 
@@ -25,7 +26,7 @@ extern "C" {
     #include "code_80005FD0.h"
     #include "spawn_players.h"
     #include "render_objects.h"
-    #include "assets/common_data.h"
+    #include "assets/models/common_data.h"
     #include "save.h"
     #include "replays.h"
     #include "actors.h"

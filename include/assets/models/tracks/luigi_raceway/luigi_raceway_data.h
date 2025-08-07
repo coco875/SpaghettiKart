@@ -266,31 +266,31 @@ static const ALIGN_ASSET(2) char d_course_luigi_raceway_unknown_model7[] = "__OT
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_unknown_model8[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_unknown_model8";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F588[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F588";
-
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_F588[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_F588";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F630[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F630";
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F588[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F588";
 
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_F630[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_F630";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F640[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F640";
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F630[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F630";
 
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_F640[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_F640";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F650[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F650";
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F640[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F640";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F660[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F660";
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F650[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F650";
 
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_F660[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_F660";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F718[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F718";
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F660[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F660";
 
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_F718[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_F718";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F728[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F728";
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F718[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F718";
 
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_F728[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_F728";
+
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F728[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F728";
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_F938[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_F938";
 
@@ -310,9 +310,9 @@ static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FA00[] = "__OTR__mode
 
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_FA00[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_FA00";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FA10[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FA10";
-
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_FA10[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_FA10";
+
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FA10[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FA10";
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FA20[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FA20";
 
@@ -328,13 +328,13 @@ static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_FB20[] = "__OTR__mo
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FB20[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FB20";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FBB8[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FBB8";
-
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_FBB8[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_FBB8";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FBC8[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FBC8";
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FBB8[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FBB8";
 
 static const ALIGN_ASSET(2) char luigi_raceway_data_seg6_gfx_FBC8[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/luigi_raceway_data_seg6_gfx_FBC8";
+
+static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FBC8[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FBC8";
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_dl_FBE0[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_data/d_course_luigi_raceway_dl_FBE0";
 

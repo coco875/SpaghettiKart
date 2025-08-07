@@ -4,9 +4,9 @@
 #include "Course.h"
 
 extern "C" {
-    #include "assets/dks_jungle_parkway_vertices.h"
-    #include "assets/dks_jungle_parkway_displaylists.h"
-    #include "assets/dks_jungle_parkway_data.h"
+    #include "assets/models/tracks/dks_jungle_parkway/dks_jungle_parkway_vertices.h"
+    #include "assets/models/tracks/dks_jungle_parkway/dks_jungle_parkway_displaylists.h"
+    #include "assets/models/tracks/dks_jungle_parkway/dks_jungle_parkway_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

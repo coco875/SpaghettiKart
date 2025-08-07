@@ -248,31 +248,31 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod2_locomotiv
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod2_locomotive_model21[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_unknown_lod2_locomotive_model21";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B7C0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B7C0";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1B7C0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1B7C0";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B850[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B850";
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B7C0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B7C0";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1B850[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1B850";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B950[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B950";
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B850[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B850";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1B950[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1B950";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B968[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B968";
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B950[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B950";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1B968[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1B968";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1B978[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1B978";
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B968[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B968";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B990[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B990";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1B978[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1B978";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1B990[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1B990";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1BD18[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1BD18";
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1B990[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1B990";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1BD18[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1BD18";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1BD18[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1BD18";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1BD58[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1BD58";
 
@@ -286,9 +286,9 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1BF90[] = "__OTR__m
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1BF90[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1BF90";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1C0B0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1C0B0";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1C0B0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1C0B0";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1C0B0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1C0B0";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1C0E0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1C0E0";
 
@@ -348,9 +348,9 @@ static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1D178[] = "__OTR_
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D178[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1D178";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1D418[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1D418";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D418[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1D418";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1D418[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1D418";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D450[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1D450";
 
@@ -364,13 +364,13 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D598[] = "__OTR__m
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1D598[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1D598";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D630[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1D630";
-
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1D630[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1D630";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D660[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1D660";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D630[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1D630";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1D660[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1D660";
+
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D660[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1D660";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1D670[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1D670";
 
@@ -402,13 +402,13 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod0_locomotiv
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod0_locomotive_model13[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_unknown_lod0_locomotive_model13";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E2C8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E2C8";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E2C8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E2C8";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E358[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E358";
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E2C8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E2C8";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E358[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E358";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E358[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E358";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E458[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E458";
 
@@ -428,25 +428,25 @@ static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E6D8[] = "__OTR_
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E6D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E6D8";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E710[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E710";
-
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E710[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E710";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E800[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E800";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E710[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E710";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E800[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E800";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E858[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E858";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E800[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E800";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E858[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E858";
+
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E858[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E858";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E8D0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E8D0";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E8D0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E8D0";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E900[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E900";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E900[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E900";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1E900[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1E900";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1E910[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1E910";
 
@@ -460,25 +460,25 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod2_tender_mo
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod2_tender_model4[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_unknown_lod2_tender_model4";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1EFD8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1EFD8";
-
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1EFD8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1EFD8";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F050[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F050";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1EFD8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1EFD8";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F050[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F050";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F0D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F0D8";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F050[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F050";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F0D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F0D8";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F1F8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F1F8";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F0D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F0D8";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F1F8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F1F8";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F218[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F218";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F1F8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F1F8";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F218[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F218";
+
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F218[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F218";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F228[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F228";
 
@@ -496,9 +496,9 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F5E0[] = "__OTR__m
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F5E0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F5E0";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F6E0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F6E0";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F6E0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F6E0";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F6E0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F6E0";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F6F8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F6F8";
 
@@ -518,9 +518,9 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F988[] = "__OTR__m
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F988[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F988";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F9D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F9D8";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_1F9D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_1F9D8";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1F9D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1F9D8";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_1FAD0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_1FAD0";
 
@@ -560,17 +560,17 @@ static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_20578[] = "__OTR_
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20578[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20578";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20610[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20610";
-
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_20610[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_20610";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20620[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20620";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20610[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20610";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_20620[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_20620";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20630[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20630";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20620[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20620";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_20630[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_20630";
+
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20630[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20630";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20688[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20688";
 
@@ -580,9 +580,9 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_208A0[] = "__OTR__m
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_208A0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_208A0";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20928[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20928";
-
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_20928[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_20928";
+
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20928[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20928";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_20980[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_20980";
 
@@ -618,9 +618,9 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod1_carriage_
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod1_carriage_chassis_model8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_unknown_lod1_carriage_chassis_model8";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_21178[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_21178";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21178[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21178";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_21178[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_21178";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21200[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21200";
 
@@ -670,13 +670,13 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod0_carriage_
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_unknown_lod0_carriage_model5[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_unknown_lod0_carriage_model5";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_219D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_219D8";
-
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_219D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_219D8";
 
-static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_21A60[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_21A60";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_219D8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_219D8";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21A60[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21A60";
+
+static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_21A60[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_21A60";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21A70[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21A70";
 
@@ -692,13 +692,13 @@ static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21AE8[] = "__OTR__m
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_21AE8[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_21AE8";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21BC0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21BC0";
-
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_21BC0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_21BC0";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21C10[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21C10";
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21BC0[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21BC0";
 
 static const ALIGN_ASSET(2) char kalimari_desert_data_seg6_gfx_21C10[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/kalimari_desert_data_seg6_gfx_21C10";
+
+static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21C10[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21C10";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_dl_21C58[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_data/d_course_kalimari_desert_dl_21C58";
 

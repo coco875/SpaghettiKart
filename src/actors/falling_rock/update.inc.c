@@ -1,7 +1,7 @@
 #include <actors.h>
 #include <code_800029B0.h>
 #include <main.h>
-#include <assets/choco_mountain_data.h>
+#include <assets/models/tracks/choco_mountain/choco_mountain_data.h>
 
 void func_8029CF0C(struct ActorSpawnData* spawnData, struct FallingRock* rock) {
 #ifndef TARGET_N64

@@ -1,7 +1,7 @@
 #include <actors.h>
 #include <libultra/gbi.h>
 #include <main.h>
-#include "assets/other_textures.h"
+#include "assets/textures/other_textures.h"
 // #include <assets/dks_jungle_parkway_data.h>
 
 /**

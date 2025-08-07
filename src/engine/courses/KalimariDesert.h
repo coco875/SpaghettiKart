@@ -6,9 +6,9 @@
 #include "engine/vehicles/Train.h"
 
 extern "C" {
-    #include "assets/kalimari_desert_vertices.h"
-    #include "assets/kalimari_desert_displaylists.h"
-    #include "assets/kalimari_desert_data.h"
+    #include "assets/models/tracks/kalimari_desert/kalimari_desert_vertices.h"
+    #include "assets/models/tracks/kalimari_desert/kalimari_desert_displaylists.h"
+    #include "assets/models/tracks/kalimari_desert/kalimari_desert_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

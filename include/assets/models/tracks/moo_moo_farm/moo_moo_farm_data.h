@@ -12,9 +12,9 @@ static const ALIGN_ASSET(2) char d_course_moo_moo_farm_dl_30[] = "__OTR__models/
 
 static const ALIGN_ASSET(2) char moo_moo_farm_data_seg6_gfx_30[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/moo_moo_farm_data_seg6_gfx_30";
 
-static const ALIGN_ASSET(2) char d_course_moo_moo_farm_dl_48[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/d_course_moo_moo_farm_dl_48";
-
 static const ALIGN_ASSET(2) char moo_moo_farm_data_seg6_gfx_48[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/moo_moo_farm_data_seg6_gfx_48";
+
+static const ALIGN_ASSET(2) char d_course_moo_moo_farm_dl_48[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/d_course_moo_moo_farm_dl_48";
 
 static const ALIGN_ASSET(2) char d_course_moo_moo_farm_dl_60[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/d_course_moo_moo_farm_dl_60";
 
@@ -212,9 +212,9 @@ static const ALIGN_ASSET(2) char d_course_moo_moo_farm_unknown_model1[] = "__OTR
 
 static const ALIGN_ASSET(2) char d_course_moo_moo_farm_unknown_model2[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/d_course_moo_moo_farm_unknown_model2";
 
-static const ALIGN_ASSET(2) char d_course_moo_moo_farm_dl_13B88[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/d_course_moo_moo_farm_dl_13B88";
-
 static const ALIGN_ASSET(2) char moo_moo_farm_data_seg6_gfx_13B88[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/moo_moo_farm_data_seg6_gfx_13B88";
+
+static const ALIGN_ASSET(2) char d_course_moo_moo_farm_dl_13B88[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/d_course_moo_moo_farm_dl_13B88";
 
 static const ALIGN_ASSET(2) char d_course_moo_moo_farm_dl_cow1[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_data/d_course_moo_moo_farm_dl_cow1";
 

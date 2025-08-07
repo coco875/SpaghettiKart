@@ -4,9 +4,9 @@
 #include "Course.h"
 
 extern "C" {
-    #include "assets/toads_turnpike_vertices.h"
-    #include "assets/toads_turnpike_displaylists.h"
-    #include "assets/toads_turnpike_data.h"
+    #include "assets/models/tracks/toads_turnpike/toads_turnpike_vertices.h"
+    #include "assets/models/tracks/toads_turnpike/toads_turnpike_displaylists.h"
+    #include "assets/models/tracks/toads_turnpike/toads_turnpike_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

@@ -4,9 +4,9 @@
 #include "Course.h"
 
 extern "C" {
-    #include "assets/banshee_boardwalk_vertices.h"
-    #include "assets/banshee_boardwalk_displaylists.h"
-    #include "assets/banshee_boardwalk_data.h"
+    #include "assets/models/tracks/banshee_boardwalk/banshee_boardwalk_vertices.h"
+    #include "assets/models/tracks/banshee_boardwalk/banshee_boardwalk_displaylists.h"
+    #include "assets/models/tracks/banshee_boardwalk/banshee_boardwalk_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

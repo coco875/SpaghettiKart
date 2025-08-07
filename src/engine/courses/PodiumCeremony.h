@@ -5,9 +5,9 @@
 #include "Course.h"
 
 extern "C" {
-    #include "assets/royal_raceway_vertices.h"
-    #include "assets/royal_raceway_displaylists.h"
-    #include "assets/royal_raceway_data.h"
+    #include "assets/models/tracks/royal_raceway/royal_raceway_vertices.h"
+    #include "assets/models/tracks/royal_raceway/royal_raceway_displaylists.h"
+    #include "assets/models/tracks/royal_raceway/royal_raceway_data.h"
     #include "course_offsets.h"
     #include "camera.h"
     #include "data/some_data.h"

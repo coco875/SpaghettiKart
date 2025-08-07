@@ -4,9 +4,9 @@
 #include <libultra/gbi.h>
 #include <align_asset_macro.h>
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_0[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_0";
-
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_0[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_0";
+
+static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_0[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_0";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_20[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_20";
 
@@ -254,27 +254,27 @@ static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_lights_9E18[] = "_
 
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_lights_9E30[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_lights_9E30";
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_DE48[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_DE48";
-
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_DE48[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_DE48";
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_DF30[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_DF30";
+static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_DE48[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_DE48";
 
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_DF30[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_DF30";
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E030[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E030";
+static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_DF30[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_DF30";
 
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E030[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E030";
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E048[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E048";
+static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E030[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E030";
 
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E048[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E048";
 
+static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E048[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E048";
+
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_railings_dl[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_railings_dl";
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E068[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E068";
-
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E068[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E068";
+
+static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E068[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E068";
 
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E150[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E150";
 
@@ -284,45 +284,45 @@ static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E238[] = "__OT
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E238[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E238";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E250[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E250";
-
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E250[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E250";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E310[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E310";
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E250[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E250";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E310[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E310";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E320[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E320";
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E310[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E310";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E320[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E320";
+
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E320[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E320";
 
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E578[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E578";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E578[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E578";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E588[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E588";
-
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E588[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E588";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E618[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E618";
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E588[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E588";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E618[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E618";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E628[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E628";
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E618[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E618";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E628[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E628";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E688[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E688";
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E628[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E628";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E688[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E688";
+
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E688[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E688";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E6E8[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E6E8";
 
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E6E8[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E6E8";
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E700[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E700";
-
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_E700[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_E700";
+
+static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_E700[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_E700";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_boat_dl[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_boat_dl";
 
@@ -332,13 +332,13 @@ static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_paddle_boat_paddle_
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_paddle_boat_paddle_model3[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_paddle_boat_paddle_model3";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_FAE0[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_FAE0";
-
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_FAE0[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_FAE0";
 
-static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_FC08[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_FC08";
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_FAE0[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_FAE0";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_dl_FC08[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/d_course_dks_jungle_parkway_dl_FC08";
+
+static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_FC08[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_FC08";
 
 static const ALIGN_ASSET(2) char dks_jungle_parkway_data_seg6_gfx_FC18[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_data/dks_jungle_parkway_data_seg6_gfx_FC18";
 

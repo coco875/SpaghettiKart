@@ -7,7 +7,8 @@
 #include "World.h"
 #include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
-#include "assets/dks_jungle_parkway_data.h"
+#include "assets/models/tracks/dks_jungle_parkway/dks_jungle_parkway_data.h"
+#include "assets/other/tracks/dks_jungle_parkway/dks_jungle_parkway_data.h"
 
 #include "engine/vehicles/Boat.h"
 #include "engine/vehicles/Utils.h"
@@ -27,7 +28,7 @@ extern "C" {
     #include "code_80005FD0.h"
     #include "spawn_players.h"
     #include "render_objects.h"
-    #include "assets/common_data.h"
+    #include "assets/models/common_data.h"
     #include "save.h"
     #include "replays.h"
     #include "actors.h"

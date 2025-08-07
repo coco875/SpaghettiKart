@@ -4,7 +4,7 @@
 #include <libultraship.h>
 #include <libultra/types.h>
 #include <libultra/gbi.h>
-#include <assets/other_textures.h>
+#include <assets/textures/other_textures.h>
 #include "animation.h"
 
 typedef struct {

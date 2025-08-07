@@ -4,9 +4,9 @@
 #include "Course.h"
 
 extern "C" {
-#include "assets/luigi_raceway_vertices.h"
-#include "assets/luigi_raceway_displaylists.h"
-#include "assets/luigi_raceway_data.h"
+#include "assets/models/tracks/luigi_raceway/luigi_raceway_vertices.h"
+#include "assets/models/tracks/luigi_raceway/luigi_raceway_displaylists.h"
+#include "assets/models/tracks/luigi_raceway/luigi_raceway_data.h"
 #include "course_offsets.h"
 #include "camera.h"
 #include "data/some_data.h"

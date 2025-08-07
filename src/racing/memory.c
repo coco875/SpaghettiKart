@@ -570,7 +570,11 @@ u8* dma_textures(const char* texture, size_t arg1, size_t arg2) {
     mio0decode((u8*) temp_a0, temp_v0);
     gNextFreeMemoryAddress += arg2;
 #else
-    strncpy(temp_v0, texture, arg2);
+    int res = strncpy(temp_v0, texture, arg2);
+    if (res != 0) {
+        printf("Failed to copy texture: %s\n", texture);
+        return NULL;
+    }
     // strcpy(temp_v0, texture);
 #endif
     return temp_v0;
