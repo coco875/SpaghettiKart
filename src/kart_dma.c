@@ -5,14 +5,14 @@
 #include <common_structs.h>
 #include "kart_dma.h"
 #include "defines.h"
-#include <assets/textures/kart/mario_kart.h>
-#include <assets/textures/kart/luigi_kart.h>
-#include <assets/textures/kart/peach_kart.h>
-#include <assets/textures/kart/yoshi_kart.h>
-#include <assets/textures/kart/toad_kart.h>
-#include <assets/textures/kart/bowser_kart.h>
-#include <assets/textures/kart/wario_kart.h>
-#include <assets/textures/kart/donkeykong_kart.h>
+#include <assets/textures/karts/mario_kart.h>
+#include <assets/textures/karts/luigi_kart.h>
+#include <assets/textures/karts/peach_kart.h>
+#include <assets/textures/karts/yoshi_kart.h>
+#include <assets/textures/karts/toad_kart.h>
+#include <assets/textures/karts/bowser_kart.h>
+#include <assets/textures/karts/wario_kart.h>
+#include <assets/textures/karts/donkeykong_kart.h>
 #include "render_player.h"
 
 // Seemingly the largest compressed size for a frame for a given character
