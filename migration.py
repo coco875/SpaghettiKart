@@ -1,6 +1,8 @@
 import os
+import shutil
 
 folder = "MK64 Reloaded (SK)"
+new_folder = folder + "_Migrated"
 
 path_change = [
     ["banshee_boardwalk_data", "textures/tracks/banshee_boardwalk/banshee_boardwalk_data"],
@@ -37,6 +39,20 @@ path_change = [
     ["yoshis_valley_data", "textures/tracks/yoshis_valley/yoshis_valley_data"],
 ]
 
+def gen_list_kart_frame(name:str):
+    return [(f"{name}_frame{int(i):03d}", [f"{name}_frame{int(i):03d}_wheel{j}" for j in range(4)]) for i in range(320)]
+
+# duplicate kart textures
+names_replacement = []
+names_replacement += gen_list_kart_frame("bowser_kart")
+names_replacement += gen_list_kart_frame("donkeykong_kart")
+names_replacement += gen_list_kart_frame("luigi_kart")
+names_replacement += gen_list_kart_frame("mario_kart")
+names_replacement += gen_list_kart_frame("peach_kart")
+names_replacement += gen_list_kart_frame("toad_kart")
+names_replacement += gen_list_kart_frame("wario_kart")
+names_replacement += gen_list_kart_frame("yoshi_kart")
+
 def walk_directory(path):
     for root, dirs, files in os.walk(path):
         for filename in files:
@@ -44,8 +60,17 @@ def walk_directory(path):
 
 for path in walk_directory(folder):
     for old, new in path_change:
-        if old in path:
+        if path.replace(folder + os.sep, "").startswith(old):
             new_path = path.replace(old, new)
+            new_path = new_path.replace(folder, new_folder)
             os.makedirs(os.path.dirname(new_path), exist_ok=True)
-            os.rename(path, new_path)
-            break
+            for name, new_files in names_replacement:
+                if name in path:
+                    for new_file in new_files:
+                        new_file_path = new_path.replace(name, new_file)
+                        # copy the file to the new path
+                        shutil.copy2(path, new_file_path)
+                    break
+            else:
+                # if no kart frame replacement was found, just copy the file to the new path
+                shutil.copy2(path, new_path)
