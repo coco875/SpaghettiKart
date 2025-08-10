@@ -6,11 +6,7 @@
 
 static const ALIGN_ASSET(2) char d_course_rainbow_road_dl_0[] = "__OTR__models/tracks/rainbow_road/rainbow_road_data/d_course_rainbow_road_dl_0";
 
-static const ALIGN_ASSET(2) char rainbow_road_data_seg6_gfx_0[] = "__OTR__models/tracks/rainbow_road/rainbow_road_data/rainbow_road_data_seg6_gfx_0";
-
 static const ALIGN_ASSET(2) char d_course_rainbow_road_dl_80[] = "__OTR__models/tracks/rainbow_road/rainbow_road_data/d_course_rainbow_road_dl_80";
-
-static const ALIGN_ASSET(2) char rainbow_road_data_seg6_gfx_80[] = "__OTR__models/tracks/rainbow_road/rainbow_road_data/rainbow_road_data_seg6_gfx_80";
 
 static const ALIGN_ASSET(2) char d_course_rainbow_road_dl_D8[] = "__OTR__models/tracks/rainbow_road/rainbow_road_data/d_course_rainbow_road_dl_D8";
 

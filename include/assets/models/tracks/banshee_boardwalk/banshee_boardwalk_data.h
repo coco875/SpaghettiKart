@@ -6,19 +6,13 @@
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_0[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_0";
 
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_0[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_0";
-
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_8[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_8";
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_38[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_38";
 
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_38[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_38";
-
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_40[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_40";
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_68[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_68";
-
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_68[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_68";
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_A0[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_A0";
 
@@ -242,21 +236,11 @@ static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_cheep_cheep10[] = "_
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_7650[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_7650";
 
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_7650[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_7650";
-
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_78C0[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_78C0";
-
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_78C0[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_78C0";
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_7978[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_7978";
 
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_7978[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_7978";
-
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_7B38[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_7B38";
-
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_7B38[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_7B38";
-
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_7B78[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_7B78";
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_7B78[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_7B78";
 
@@ -270,17 +254,9 @@ static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_lights_A038[] = "__
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_A850[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_A850";
 
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_A850[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_A850";
-
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_A900[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_A900";
 
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_A900[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_A900";
-
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_A9B0[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_A9B0";
-
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_A9B0[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_A9B0";
-
-static const ALIGN_ASSET(2) char banshee_boardwalk_data_seg6_gfx_A9C8[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/banshee_boardwalk_data_seg6_gfx_A9C8";
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_dl_A9C8[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_data/d_course_banshee_boardwalk_dl_A9C8";
 

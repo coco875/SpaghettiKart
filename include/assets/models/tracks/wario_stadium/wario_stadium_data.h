@@ -230,11 +230,7 @@ static const ALIGN_ASSET(2) char d_course_wario_stadium_sign_head_model4[] = "__
 
 static const ALIGN_ASSET(2) char d_course_wario_stadium_dl_C890[] = "__OTR__models/tracks/wario_stadium/wario_stadium_data/d_course_wario_stadium_dl_C890";
 
-static const ALIGN_ASSET(2) char wario_stadium_data_seg6_gfx_C890[] = "__OTR__models/tracks/wario_stadium/wario_stadium_data/wario_stadium_data_seg6_gfx_C890";
-
 static const ALIGN_ASSET(2) char d_course_wario_stadium_dl_CA50[] = "__OTR__models/tracks/wario_stadium/wario_stadium_data/d_course_wario_stadium_dl_CA50";
-
-static const ALIGN_ASSET(2) char wario_stadium_data_seg6_gfx_CA50[] = "__OTR__models/tracks/wario_stadium/wario_stadium_data/wario_stadium_data_seg6_gfx_CA50";
 
 static const ALIGN_ASSET(2) char d_course_wario_stadium_dl_sign[] = "__OTR__models/tracks/wario_stadium/wario_stadium_data/d_course_wario_stadium_dl_sign";
 

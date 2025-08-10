@@ -6,11 +6,7 @@
 
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_dl_0[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_data/d_course_yoshi_valley_dl_0";
 
-static const ALIGN_ASSET(2) char yoshi_valley_data_seg6_gfx_0[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_data/yoshi_valley_data_seg6_gfx_0";
-
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_dl_20[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_data/d_course_yoshi_valley_dl_20";
-
-static const ALIGN_ASSET(2) char yoshi_valley_data_seg6_gfx_20[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_data/yoshi_valley_data_seg6_gfx_20";
 
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_dl_40[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_data/d_course_yoshi_valley_dl_40";
 

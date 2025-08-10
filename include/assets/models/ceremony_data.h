@@ -25,27 +25,15 @@ static const ALIGN_ASSET(2) char ceremony_data_seg11_vtx_E50[] = "__OTR__models/
 
 static const ALIGN_ASSET(2) char silver_trophy_dl[] = "__OTR__models/ceremony_data/silver_trophy_dl";
 
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_FE0[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_FE0";
-
 static const ALIGN_ASSET(2) char silver_trophy_dl2[] = "__OTR__models/ceremony_data/silver_trophy_dl2";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_10B8[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_10B8";
 
 static const ALIGN_ASSET(2) char silver_trophy_dl3[] = "__OTR__models/ceremony_data/silver_trophy_dl3";
 
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_1188[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_1188";
-
 static const ALIGN_ASSET(2) char silver_trophy_dl4[] = "__OTR__models/ceremony_data/silver_trophy_dl4";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_1260[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_1260";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_1418[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_1418";
 
 static const ALIGN_ASSET(2) char silver_trophy_dl5[] = "__OTR__models/ceremony_data/silver_trophy_dl5";
 
 static const ALIGN_ASSET(2) char silver_trophy_dl6[] = "__OTR__models/ceremony_data/silver_trophy_dl6";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_14D0[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_14D0";
 
 static const ALIGN_ASSET(2) char ceremony_data_seg11_vtx_1580[] = "__OTR__models/ceremony_data/ceremony_data_seg11_vtx_1580";
 
@@ -89,37 +77,19 @@ static const ALIGN_ASSET(2) char ceremony_data_seg11_vtx_4520[] = "__OTR__models
 
 static const ALIGN_ASSET(2) char gold_trophy_dl[] = "__OTR__models/ceremony_data/gold_trophy_dl";
 
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_5E70[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_5E70";
-
 static const ALIGN_ASSET(2) char gold_trophy_dl2[] = "__OTR__models/ceremony_data/gold_trophy_dl2";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_5F20[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_5F20";
 
 static const ALIGN_ASSET(2) char gold_trophy_dl3[] = "__OTR__models/ceremony_data/gold_trophy_dl3";
 
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_5FD0[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_5FD0";
-
 static const ALIGN_ASSET(2) char gold_trophy_dl4[] = "__OTR__models/ceremony_data/gold_trophy_dl4";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_6218[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_6218";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_62C8[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_62C8";
 
 static const ALIGN_ASSET(2) char gold_trophy_dl5[] = "__OTR__models/ceremony_data/gold_trophy_dl5";
 
 static const ALIGN_ASSET(2) char gold_trophy_dl6[] = "__OTR__models/ceremony_data/gold_trophy_dl6";
 
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_6518[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_6518";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_6720[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_6720";
-
 static const ALIGN_ASSET(2) char gold_trophy_dl7[] = "__OTR__models/ceremony_data/gold_trophy_dl7";
 
 static const ALIGN_ASSET(2) char gold_trophy_dl8[] = "__OTR__models/ceremony_data/gold_trophy_dl8";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_6880[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_6880";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_6948[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_6948";
 
 static const ALIGN_ASSET(2) char gold_trophy_dl9[] = "__OTR__models/ceremony_data/gold_trophy_dl9";
 
@@ -143,11 +113,7 @@ static const ALIGN_ASSET(2) char ceremony_data_seg11_vtx_74D0[] = "__OTR__models
 
 static const ALIGN_ASSET(2) char podium_dl[] = "__OTR__models/ceremony_data/podium_dl";
 
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_7510[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_7510";
-
 static const ALIGN_ASSET(2) char podium_dl2[] = "__OTR__models/ceremony_data/podium_dl2";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_75E0[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_75E0";
 
 static const ALIGN_ASSET(2) char podium_dl3[] = "__OTR__models/ceremony_data/podium_dl3";
 
@@ -159,11 +125,7 @@ static const ALIGN_ASSET(2) char ceremony_data_seg11_vtx_7708[] = "__OTR__models
 
 static const ALIGN_ASSET(2) char ceremony_data_seg11_lights_7748[] = "__OTR__models/ceremony_data/ceremony_data_seg11_lights_7748";
 
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_7F60[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_7F60";
-
 static const ALIGN_ASSET(2) char podium2_dl[] = "__OTR__models/ceremony_data/podium2_dl";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_8030[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_8030";
 
 static const ALIGN_ASSET(2) char podium2_dl2[] = "__OTR__models/ceremony_data/podium2_dl2";
 
@@ -177,11 +139,7 @@ static const ALIGN_ASSET(2) char ceremony_data_seg11_vtx_8870[] = "__OTR__models
 
 static const ALIGN_ASSET(2) char ceremony_data_seg11_vtx_8970[] = "__OTR__models/ceremony_data/ceremony_data_seg11_vtx_8970";
 
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_89B0[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_89B0";
-
 static const ALIGN_ASSET(2) char podium3_dl[] = "__OTR__models/ceremony_data/podium3_dl";
-
-static const ALIGN_ASSET(2) char ceremony_data_seg11_gfx_8A80[] = "__OTR__models/ceremony_data/ceremony_data_seg11_gfx_8A80";
 
 static const ALIGN_ASSET(2) char podium3_dl2[] = "__OTR__models/ceremony_data/podium3_dl2";
 

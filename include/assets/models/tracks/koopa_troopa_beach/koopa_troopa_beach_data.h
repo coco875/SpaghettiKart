@@ -6,11 +6,7 @@
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_0[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_0";
 
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_0[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_0";
-
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_48[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_48";
-
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_48[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_48";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_90[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_90";
 
@@ -634,11 +630,7 @@ static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_tree_model[] = "__O
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_unknown_model4[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_unknown_model4";
 
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18520[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18520";
-
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18520[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18520";
-
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_185E8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_185E8";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_185E8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_185E8";
 
@@ -646,11 +638,7 @@ static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_tree_top1[] = "_
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18608[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18608";
 
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18608[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18608";
-
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_186A8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_186A8";
-
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_186A8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_186A8";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_tree_trunk1[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_tree_trunk1";
 
@@ -662,21 +650,13 @@ static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_lights_18858[] = "
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18870[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18870";
 
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18870[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18870";
-
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18938[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18938";
 
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18938[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18938";
-
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_tree_top2[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_tree_top2";
-
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18958[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18958";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18958[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18958";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_189F8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_189F8";
-
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_189F8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_189F8";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_tree_trunk2[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_tree_trunk2";
 
@@ -686,21 +666,13 @@ static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_unknown_model6[] = 
 
 static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_lights_18BA8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_lights_18BA8";
 
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18BC0[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18BC0";
-
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18BC0[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18BC0";
-
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18C88[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18C88";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18C88[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18C88";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_tree_top3[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_tree_top3";
 
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18CA8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18CA8";
-
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18CA8[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18CA8";
-
-static const ALIGN_ASSET(2) char koopa_troopa_beach_data_seg6_gfx_18D48[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/koopa_troopa_beach_data_seg6_gfx_18D48";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_dl_18D48[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_data/d_course_koopa_troopa_beach_dl_18D48";
 

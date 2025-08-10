@@ -300,13 +300,9 @@ static const ALIGN_ASSET(2) char d_course_sherbet_land_model3[] = "__OTR__models
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_model4[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_model4";
 
-static const ALIGN_ASSET(2) char sherbet_land_data_seg6_gfx_70E8[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/sherbet_land_data_seg6_gfx_70E8";
-
 static const ALIGN_ASSET(2) char d_course_sherbet_land_dl_70E8[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_dl_70E8";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_dl_7208[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_dl_7208";
-
-static const ALIGN_ASSET(2) char sherbet_land_data_seg6_gfx_7208[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/sherbet_land_data_seg6_gfx_7208";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_dl_ice_block[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_dl_ice_block";
 
@@ -326,21 +322,15 @@ static const ALIGN_ASSET(2) char sherbet_land_data_seg6_lights_72D0[] = "__OTR__
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_penguin_eyes_model[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_penguin_eyes_model";
 
-static const ALIGN_ASSET(2) char sherbet_land_data_seg6_gfx_8368[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/sherbet_land_data_seg6_gfx_8368";
-
 static const ALIGN_ASSET(2) char d_course_sherbet_land_dl_8368[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_dl_8368";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_penguin_nose_model[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_penguin_nose_model";
-
-static const ALIGN_ASSET(2) char sherbet_land_data_seg6_gfx_83D8[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/sherbet_land_data_seg6_gfx_83D8";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_dl_83D8[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_dl_83D8";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_penguin_head_model1[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_penguin_head_model1";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_penguin_head_model2[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_penguin_head_model2";
-
-static const ALIGN_ASSET(2) char sherbet_land_data_seg6_gfx_85B0[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/sherbet_land_data_seg6_gfx_85B0";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_dl_85B0[] = "__OTR__models/tracks/sherbet_land/sherbet_land_data/d_course_sherbet_land_dl_85B0";
 
