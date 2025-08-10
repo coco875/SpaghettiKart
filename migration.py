@@ -40,7 +40,7 @@ path_change = [
 ]
 
 def gen_list_kart_frame(name:str):
-    return [(f"{name}_frame{int(i):03d}", [f"{name}_frame{int(i):03d}_wheel{j}" for j in range(4)]) for i in range(320)]
+    return [(f"{name}_frame{int(i):03d}", [f"{name}_frame{int(i):03d}_wheel{j}" for j in range(4)]) for i in range(289)]
 
 # duplicate kart textures
 names_replacement = []
