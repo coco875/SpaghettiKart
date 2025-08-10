@@ -5,11 +5,11 @@
 
 static const ALIGN_ASSET(2) char gKartMario000Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame000_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario000Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame000_wheel2";
+static const ALIGN_ASSET(2) char gKartMario000Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame000_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario000Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame000_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario000Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame000_wheel0";
+static const ALIGN_ASSET(2) char gKartMario000Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame000_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario001Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame001_wheel0";
 
@@ -19,35 +19,35 @@ static const ALIGN_ASSET(2) char gKartMario001Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario001Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame001_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario002Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame002_wheel1";
+static const ALIGN_ASSET(2) char gKartMario002Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame002_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario002Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame002_wheel3";
+static const ALIGN_ASSET(2) char gKartMario002Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame002_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario002Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame002_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario002Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame002_wheel0";
+static const ALIGN_ASSET(2) char gKartMario002Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame002_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario003Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame003_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario003Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame003_wheel1";
+static const ALIGN_ASSET(2) char gKartMario003Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame003_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario003Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame003_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario003Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame003_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario004Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame004_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario004Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame004_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario004Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame004_wheel1";
+static const ALIGN_ASSET(2) char gKartMario003Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame003_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario004Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame004_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario005Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame005_wheel1";
+static const ALIGN_ASSET(2) char gKartMario004Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame004_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario004Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame004_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario004Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame004_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario005Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame005_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario005Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame005_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario005Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame005_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario005Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame005_wheel0";
 
@@ -61,33 +61,33 @@ static const ALIGN_ASSET(2) char gKartMario006Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario007Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame007_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario007Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame007_wheel3";
+static const ALIGN_ASSET(2) char gKartMario007Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame007_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario007Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame007_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario007Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame007_wheel1";
+static const ALIGN_ASSET(2) char gKartMario007Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame007_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario008Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame008_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario008Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame008_wheel1";
+static const ALIGN_ASSET(2) char gKartMario008Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame008_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario008Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame008_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario008Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame008_wheel3";
+static const ALIGN_ASSET(2) char gKartMario008Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame008_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario009Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame009_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario009Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame009_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario009Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame009_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario009Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame009_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario009Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame009_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario009Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame009_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario010Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame010_wheel1";
-
 static const ALIGN_ASSET(2) char gKartMario010Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame010_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario010Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame010_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario010Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame010_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario010Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame010_wheel2";
 
@@ -109,35 +109,35 @@ static const ALIGN_ASSET(2) char gKartMario012Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario013Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame013_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario013Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame013_wheel1";
+static const ALIGN_ASSET(2) char gKartMario013Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame013_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario013Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame013_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario013Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame013_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario014Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame014_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario014Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame014_wheel2";
+static const ALIGN_ASSET(2) char gKartMario013Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame013_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario014Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame014_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario014Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame014_wheel1";
 
+static const ALIGN_ASSET(2) char gKartMario014Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame014_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario014Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame014_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario015Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame015_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario015Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame015_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario015Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame015_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario015Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame015_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario016Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame016_wheel3";
+static const ALIGN_ASSET(2) char gKartMario015Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame015_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario016Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame016_wheel2";
+static const ALIGN_ASSET(2) char gKartMario015Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame015_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario016Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame016_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario016Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame016_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario016Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame016_wheel0";
+static const ALIGN_ASSET(2) char gKartMario016Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame016_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario016Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame016_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario017Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame017_wheel0";
 
@@ -155,21 +155,21 @@ static const ALIGN_ASSET(2) char gKartMario018Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario018Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame018_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario019Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame019_wheel0";
+
 static const ALIGN_ASSET(2) char gKartMario019Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame019_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario019Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame019_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario019Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame019_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario019Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame019_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario020Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame020_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario020Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame020_wheel2";
+static const ALIGN_ASSET(2) char gKartMario020Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame020_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario020Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame020_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario020Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame020_wheel0";
+static const ALIGN_ASSET(2) char gKartMario020Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame020_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario021Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame021_wheel0";
 
@@ -179,13 +179,13 @@ static const ALIGN_ASSET(2) char gKartMario021Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario021Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame021_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario022Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame022_wheel1";
+static const ALIGN_ASSET(2) char gKartMario022Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame022_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario022Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame022_wheel3";
+static const ALIGN_ASSET(2) char gKartMario022Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame022_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario022Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame022_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario022Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame022_wheel0";
+static const ALIGN_ASSET(2) char gKartMario022Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame022_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario023Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame023_wheel0";
 
@@ -197,19 +197,19 @@ static const ALIGN_ASSET(2) char gKartMario023Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario024Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame024_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario024Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame024_wheel2";
-
 static const ALIGN_ASSET(2) char gKartMario024Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame024_wheel1";
 
+static const ALIGN_ASSET(2) char gKartMario024Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame024_wheel2";
+
 static const ALIGN_ASSET(2) char gKartMario024Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame024_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario025Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame025_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario025Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame025_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario025Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame025_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario025Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame025_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario025Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame025_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario026Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame026_wheel0";
 
@@ -221,27 +221,27 @@ static const ALIGN_ASSET(2) char gKartMario026Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario027Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame027_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario027Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame027_wheel3";
+static const ALIGN_ASSET(2) char gKartMario027Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame027_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario027Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame027_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario027Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame027_wheel1";
+static const ALIGN_ASSET(2) char gKartMario027Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame027_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario028Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame028_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario028Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame028_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario028Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame028_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario028Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame028_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario028Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame028_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario028Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame028_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario029Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame029_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario029Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame029_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario029Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame029_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario029Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame029_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario029Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame029_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario030Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame030_wheel0";
 
@@ -253,11 +253,11 @@ static const ALIGN_ASSET(2) char gKartMario030Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario031Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame031_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario031Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame031_wheel1";
+static const ALIGN_ASSET(2) char gKartMario031Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame031_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario031Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame031_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario031Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame031_wheel3";
+static const ALIGN_ASSET(2) char gKartMario031Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame031_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario032Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame032_wheel0";
 
@@ -267,11 +267,11 @@ static const ALIGN_ASSET(2) char gKartMario032Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario032Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame032_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario033Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame033_wheel0";
+
 static const ALIGN_ASSET(2) char gKartMario033Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame033_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario033Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame033_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario033Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame033_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario033Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame033_wheel1";
 
@@ -283,13 +283,13 @@ static const ALIGN_ASSET(2) char gKartMario034Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario034Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame034_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario035Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame035_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario035Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame035_wheel2";
+static const ALIGN_ASSET(2) char gKartMario035Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame035_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario035Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame035_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario035Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame035_wheel0";
+static const ALIGN_ASSET(2) char gKartMario035Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame035_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario035Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame035_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario036Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame036_wheel0";
 
@@ -301,35 +301,35 @@ static const ALIGN_ASSET(2) char gKartMario036Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario037Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame037_wheel0";
 
+static const ALIGN_ASSET(2) char gKartMario037Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame037_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario037Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame037_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario037Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame037_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario037Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame037_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario038Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame038_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario038Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame038_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario038Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame038_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario038Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame038_wheel0";
+static const ALIGN_ASSET(2) char gKartMario038Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame038_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario039Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame039_wheel1";
+static const ALIGN_ASSET(2) char gKartMario038Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario039Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame039_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario039Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame039_wheel3";
+static const ALIGN_ASSET(2) char gKartMario039Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame039_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario039Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame039_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario040Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame040_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario040Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame040_wheel3";
+static const ALIGN_ASSET(2) char gKartMario039Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame039_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario040Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame040_wheel1";
 
+static const ALIGN_ASSET(2) char gKartMario040Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame040_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario040Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame040_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario040Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame040_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario041Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame041_wheel0";
 
@@ -339,13 +339,13 @@ static const ALIGN_ASSET(2) char gKartMario041Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario041Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame041_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario042Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame042_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario042Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame042_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario042Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame042_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario042Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame042_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario042Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame042_wheel3";
+static const ALIGN_ASSET(2) char gKartMario042Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame042_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario043Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame043_wheel0";
 
@@ -355,13 +355,13 @@ static const ALIGN_ASSET(2) char gKartMario043Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario043Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame043_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario044Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame044_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario044Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame044_wheel3";
+static const ALIGN_ASSET(2) char gKartMario044Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame044_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario044Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame044_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario044Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame044_wheel0";
+static const ALIGN_ASSET(2) char gKartMario044Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame044_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario044Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame044_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario045Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame045_wheel0";
 
@@ -371,13 +371,13 @@ static const ALIGN_ASSET(2) char gKartMario045Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario045Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame045_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario046Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame046_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario046Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame046_wheel1";
+static const ALIGN_ASSET(2) char gKartMario046Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame046_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario046Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame046_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario046Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame046_wheel3";
+static const ALIGN_ASSET(2) char gKartMario046Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame046_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario046Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame046_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario047Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame047_wheel0";
 
@@ -387,21 +387,21 @@ static const ALIGN_ASSET(2) char gKartMario047Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario047Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame047_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario048Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame048_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario048Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame048_wheel2";
-
 static const ALIGN_ASSET(2) char gKartMario048Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame048_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario048Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame048_wheel1";
 
+static const ALIGN_ASSET(2) char gKartMario048Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame048_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario048Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame048_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario049Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame049_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario049Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame049_wheel1";
+static const ALIGN_ASSET(2) char gKartMario049Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame049_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario049Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame049_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario049Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame049_wheel3";
+static const ALIGN_ASSET(2) char gKartMario049Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame049_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario050Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame050_wheel0";
 
@@ -429,11 +429,11 @@ static const ALIGN_ASSET(2) char gKartMario052Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario053Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame053_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario053Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame053_wheel3";
+static const ALIGN_ASSET(2) char gKartMario053Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame053_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario053Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame053_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario053Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame053_wheel1";
+static const ALIGN_ASSET(2) char gKartMario053Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame053_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario054Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame054_wheel0";
 
@@ -443,29 +443,29 @@ static const ALIGN_ASSET(2) char gKartMario054Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario054Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame054_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario055Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame055_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario055Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame055_wheel2";
+
 static const ALIGN_ASSET(2) char gKartMario055Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame055_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario055Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame055_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario055Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame055_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario055Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame055_wheel3";
+static const ALIGN_ASSET(2) char gKartMario056Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame056_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario056Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame056_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario056Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame056_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario056Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame056_wheel2";
-
 static const ALIGN_ASSET(2) char gKartMario056Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame056_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario057Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame057_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario057Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame057_wheel2";
+static const ALIGN_ASSET(2) char gKartMario056Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame056_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario057Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame057_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario057Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame057_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario057Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame057_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario057Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame057_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario058Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame058_wheel0";
 
@@ -483,13 +483,13 @@ static const ALIGN_ASSET(2) char gKartMario059Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario059Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame059_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario060Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame060_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario060Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame060_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario060Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame060_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario060Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame060_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario060Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame060_wheel1";
+static const ALIGN_ASSET(2) char gKartMario060Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame060_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario061Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame061_wheel0";
 
@@ -501,11 +501,11 @@ static const ALIGN_ASSET(2) char gKartMario061Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario062Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame062_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario062Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame062_wheel3";
+static const ALIGN_ASSET(2) char gKartMario062Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame062_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario062Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame062_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario062Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame062_wheel1";
+static const ALIGN_ASSET(2) char gKartMario062Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame062_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario063Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame063_wheel0";
 
@@ -515,13 +515,13 @@ static const ALIGN_ASSET(2) char gKartMario063Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario063Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame063_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario064Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame064_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario064Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame064_wheel1";
+static const ALIGN_ASSET(2) char gKartMario064Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame064_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario064Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame064_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario064Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame064_wheel3";
+static const ALIGN_ASSET(2) char gKartMario064Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame064_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario064Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame064_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario065Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame065_wheel0";
 
@@ -531,21 +531,21 @@ static const ALIGN_ASSET(2) char gKartMario065Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario065Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame065_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario066Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame066_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario066Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame066_wheel2";
-
 static const ALIGN_ASSET(2) char gKartMario066Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame066_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario066Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame066_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario067Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame067_wheel1";
+static const ALIGN_ASSET(2) char gKartMario066Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame066_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario067Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame067_wheel2";
+static const ALIGN_ASSET(2) char gKartMario066Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame066_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario067Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame067_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario067Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame067_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario067Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame067_wheel0";
+static const ALIGN_ASSET(2) char gKartMario067Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame067_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario067Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame067_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario068Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame068_wheel0";
 
@@ -555,13 +555,13 @@ static const ALIGN_ASSET(2) char gKartMario068Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario068Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame068_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario069Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame069_wheel1";
+static const ALIGN_ASSET(2) char gKartMario069Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame069_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario069Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame069_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario069Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame069_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario069Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame069_wheel0";
+static const ALIGN_ASSET(2) char gKartMario069Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame069_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario070Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame070_wheel0";
 
@@ -571,13 +571,13 @@ static const ALIGN_ASSET(2) char gKartMario070Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario070Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame070_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario071Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame071_wheel3";
+static const ALIGN_ASSET(2) char gKartMario071Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame071_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario071Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame071_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario071Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame071_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario071Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame071_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario071Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame071_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario072Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame072_wheel0";
 
@@ -587,9 +587,9 @@ static const ALIGN_ASSET(2) char gKartMario072Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario072Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame072_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario073Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame073_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario073Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame073_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario073Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame073_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario073Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame073_wheel1";
 
@@ -611,29 +611,29 @@ static const ALIGN_ASSET(2) char gKartMario075Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario075Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame075_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario076Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame076_wheel3";
+static const ALIGN_ASSET(2) char gKartMario076Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame076_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario076Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame076_wheel1";
+static const ALIGN_ASSET(2) char gKartMario076Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame076_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario076Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame076_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario076Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame076_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario077Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame077_wheel1";
+static const ALIGN_ASSET(2) char gKartMario076Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame076_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario077Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame077_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario077Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame077_wheel3";
+static const ALIGN_ASSET(2) char gKartMario077Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame077_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario077Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame077_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario078Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame078_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario078Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame078_wheel1";
+static const ALIGN_ASSET(2) char gKartMario077Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame077_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario078Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame078_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario078Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame078_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario078Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame078_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario078Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame078_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario079Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame079_wheel0";
 
@@ -645,35 +645,35 @@ static const ALIGN_ASSET(2) char gKartMario079Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario080Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame080_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario080Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame080_wheel3";
+static const ALIGN_ASSET(2) char gKartMario080Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame080_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario080Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame080_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario080Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame080_wheel1";
+static const ALIGN_ASSET(2) char gKartMario080Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame080_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario081Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame081_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario081Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame081_wheel1";
+static const ALIGN_ASSET(2) char gKartMario081Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame081_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario081Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame081_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario081Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame081_wheel3";
+static const ALIGN_ASSET(2) char gKartMario081Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame081_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario082Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame082_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario082Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame082_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario082Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame082_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario082Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame082_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario082Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame082_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario082Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame082_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario083Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame083_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario083Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario083Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame083_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario083Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame083_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario083Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario084Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame084_wheel0";
 
@@ -685,35 +685,35 @@ static const ALIGN_ASSET(2) char gKartMario084Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario085Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame085_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario085Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame085_wheel3";
+static const ALIGN_ASSET(2) char gKartMario085Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame085_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario085Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame085_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario085Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame085_wheel1";
+static const ALIGN_ASSET(2) char gKartMario085Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame085_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario086Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame086_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario086Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame086_wheel1";
+static const ALIGN_ASSET(2) char gKartMario086Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame086_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario086Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame086_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario086Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame086_wheel3";
+static const ALIGN_ASSET(2) char gKartMario086Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame086_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario087Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame087_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario087Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame087_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario087Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame087_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario087Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame087_wheel2";
 
+static const ALIGN_ASSET(2) char gKartMario087Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame087_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario088Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame088_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario088Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame088_wheel1";
+static const ALIGN_ASSET(2) char gKartMario088Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame088_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario088Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame088_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario088Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame088_wheel3";
+static const ALIGN_ASSET(2) char gKartMario088Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame088_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario089Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame089_wheel0";
 
@@ -725,11 +725,11 @@ static const ALIGN_ASSET(2) char gKartMario089Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario090Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame090_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario090Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame090_wheel3";
+static const ALIGN_ASSET(2) char gKartMario090Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame090_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario090Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame090_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario090Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame090_wheel1";
+static const ALIGN_ASSET(2) char gKartMario090Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame090_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario091Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame091_wheel0";
 
@@ -743,17 +743,17 @@ static const ALIGN_ASSET(2) char gKartMario092Wheel0[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario092Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame092_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario092Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame092_wheel2";
-
 static const ALIGN_ASSET(2) char gKartMario092Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame092_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario093Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame093_wheel0";
+static const ALIGN_ASSET(2) char gKartMario092Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame092_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario093Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame093_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario093Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame093_wheel2";
+static const ALIGN_ASSET(2) char gKartMario093Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame093_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario093Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame093_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario093Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame093_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario094Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame094_wheel0";
 
@@ -773,19 +773,19 @@ static const ALIGN_ASSET(2) char gKartMario095Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario096Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame096_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario096Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame096_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario096Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame096_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario096Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame096_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario097Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame097_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario097Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame097_wheel0";
+static const ALIGN_ASSET(2) char gKartMario096Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame096_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario097Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame097_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario097Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame097_wheel1";
+
 static const ALIGN_ASSET(2) char gKartMario097Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame097_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario097Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame097_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario098Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame098_wheel0";
 
@@ -813,11 +813,11 @@ static const ALIGN_ASSET(2) char gKartMario100Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario101Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame101_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario101Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame101_wheel1";
-
 static const ALIGN_ASSET(2) char gKartMario101Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame101_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario101Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame101_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario101Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame101_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario102Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame102_wheel0";
 
@@ -837,27 +837,27 @@ static const ALIGN_ASSET(2) char gKartMario103Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario104Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame104_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario104Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame104_wheel1";
+static const ALIGN_ASSET(2) char gKartMario104Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame104_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario104Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame104_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario104Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame104_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario105Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame105_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario105Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame105_wheel2";
+static const ALIGN_ASSET(2) char gKartMario104Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame104_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario105Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame105_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario105Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame105_wheel1";
 
+static const ALIGN_ASSET(2) char gKartMario105Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame105_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario105Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame105_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario106Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame106_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario106Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame106_wheel1";
+static const ALIGN_ASSET(2) char gKartMario106Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame106_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario106Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame106_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario106Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame106_wheel3";
+static const ALIGN_ASSET(2) char gKartMario106Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame106_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario107Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame107_wheel0";
 
@@ -869,11 +869,11 @@ static const ALIGN_ASSET(2) char gKartMario107Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario108Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame108_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario108Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame108_wheel3";
+static const ALIGN_ASSET(2) char gKartMario108Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame108_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario108Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame108_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario108Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame108_wheel1";
+static const ALIGN_ASSET(2) char gKartMario108Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame108_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario109Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame109_wheel0";
 
@@ -887,17 +887,17 @@ static const ALIGN_ASSET(2) char gKartMario110Wheel0[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario110Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame110_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario110Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame110_wheel2";
-
 static const ALIGN_ASSET(2) char gKartMario110Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame110_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario111Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame111_wheel0";
+static const ALIGN_ASSET(2) char gKartMario110Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame110_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario111Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame111_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario111Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame111_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario111Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame111_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario111Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame111_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario112Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame112_wheel0";
 
@@ -907,29 +907,29 @@ static const ALIGN_ASSET(2) char gKartMario112Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario112Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame112_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario113Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame113_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario113Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame113_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario113Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame113_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario113Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame113_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario114Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame114_wheel3";
+static const ALIGN_ASSET(2) char gKartMario113Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame113_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario114Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame114_wheel2";
+static const ALIGN_ASSET(2) char gKartMario113Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame113_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario114Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame114_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario114Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame114_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario115Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame115_wheel1";
+static const ALIGN_ASSET(2) char gKartMario114Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame114_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario115Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame115_wheel0";
+static const ALIGN_ASSET(2) char gKartMario114Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame114_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario115Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame115_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario115Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame115_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario115Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame115_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario115Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame115_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario116Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame116_wheel0";
 
@@ -949,27 +949,27 @@ static const ALIGN_ASSET(2) char gKartMario117Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario118Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame118_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario118Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame118_wheel3";
+static const ALIGN_ASSET(2) char gKartMario118Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame118_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario118Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame118_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario118Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame118_wheel1";
+static const ALIGN_ASSET(2) char gKartMario118Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame118_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario119Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame119_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario119Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame119_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario119Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame119_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario119Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame119_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario119Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame119_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario119Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame119_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario120Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame120_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario120Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame120_wheel3";
+static const ALIGN_ASSET(2) char gKartMario120Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame120_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario120Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame120_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario120Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame120_wheel1";
+static const ALIGN_ASSET(2) char gKartMario120Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame120_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario121Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame121_wheel0";
 
@@ -981,11 +981,11 @@ static const ALIGN_ASSET(2) char gKartMario121Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario122Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame122_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario122Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame122_wheel1";
+static const ALIGN_ASSET(2) char gKartMario122Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame122_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario122Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame122_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario122Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame122_wheel3";
+static const ALIGN_ASSET(2) char gKartMario122Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame122_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario123Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame123_wheel0";
 
@@ -995,13 +995,13 @@ static const ALIGN_ASSET(2) char gKartMario123Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario123Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame123_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario124Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame124_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario124Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame124_wheel1";
-
 static const ALIGN_ASSET(2) char gKartMario124Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame124_wheel0";
 
+static const ALIGN_ASSET(2) char gKartMario124Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame124_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario124Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame124_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario124Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame124_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario125Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame125_wheel0";
 
@@ -1021,27 +1021,27 @@ static const ALIGN_ASSET(2) char gKartMario126Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario127Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame127_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario127Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame127_wheel3";
+static const ALIGN_ASSET(2) char gKartMario127Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame127_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario127Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame127_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario127Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame127_wheel1";
+static const ALIGN_ASSET(2) char gKartMario127Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame127_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario128Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame128_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario128Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame128_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario128Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame128_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario128Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame128_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario128Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame128_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario128Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame128_wheel3";
+static const ALIGN_ASSET(2) char gKartMario129Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario129Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame129_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario129Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame129_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario129Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame129_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario129Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario130Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame130_wheel0";
 
@@ -1071,9 +1071,9 @@ static const ALIGN_ASSET(2) char gKartMario133Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario133Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame133_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario133Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame133_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario133Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame133_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario133Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame133_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario134Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame134_wheel0";
 
@@ -1093,27 +1093,27 @@ static const ALIGN_ASSET(2) char gKartMario135Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario136Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame136_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario136Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame136_wheel3";
+static const ALIGN_ASSET(2) char gKartMario136Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame136_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario136Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame136_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario136Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame136_wheel1";
+static const ALIGN_ASSET(2) char gKartMario136Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame136_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario137Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame137_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario137Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame137_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario137Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame137_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario137Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame137_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario137Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame137_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario137Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame137_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario138Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame138_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario138Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame138_wheel3";
+static const ALIGN_ASSET(2) char gKartMario138Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame138_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario138Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame138_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario138Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame138_wheel1";
+static const ALIGN_ASSET(2) char gKartMario138Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame138_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario139Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame139_wheel0";
 
@@ -1125,11 +1125,11 @@ static const ALIGN_ASSET(2) char gKartMario139Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario140Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame140_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario140Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame140_wheel1";
+static const ALIGN_ASSET(2) char gKartMario140Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame140_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario140Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame140_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario140Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame140_wheel3";
+static const ALIGN_ASSET(2) char gKartMario140Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame140_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario141Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame141_wheel0";
 
@@ -1139,21 +1139,21 @@ static const ALIGN_ASSET(2) char gKartMario141Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario141Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame141_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario142Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame142_wheel0";
+
 static const ALIGN_ASSET(2) char gKartMario142Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame142_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario142Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame142_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario142Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame142_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario142Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame142_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario143Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame143_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario143Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame143_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario143Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame143_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario143Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame143_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario143Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame143_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario144Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame144_wheel0";
 
@@ -1163,29 +1163,29 @@ static const ALIGN_ASSET(2) char gKartMario144Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario144Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame144_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario145Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame145_wheel1";
+static const ALIGN_ASSET(2) char gKartMario145Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame145_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario145Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame145_wheel3";
+static const ALIGN_ASSET(2) char gKartMario145Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame145_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario145Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame145_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario145Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame145_wheel0";
+static const ALIGN_ASSET(2) char gKartMario145Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame145_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario146Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame146_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario146Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame146_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario146Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame146_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario146Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame146_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario146Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame146_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario146Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame146_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario147Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame147_wheel3";
+static const ALIGN_ASSET(2) char gKartMario147Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame147_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario147Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame147_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario147Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame147_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario147Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame147_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario147Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame147_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario148Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame148_wheel0";
 
@@ -1195,13 +1195,13 @@ static const ALIGN_ASSET(2) char gKartMario148Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario148Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame148_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario149Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame149_wheel0";
+
 static const ALIGN_ASSET(2) char gKartMario149Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame149_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario149Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame149_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario149Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame149_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario149Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame149_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario150Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame150_wheel0";
 
@@ -1211,21 +1211,23 @@ static const ALIGN_ASSET(2) char gKartMario150Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario150Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame150_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario151Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame151_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario151Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame151_wheel1";
-
 static const ALIGN_ASSET(2) char gKartMario151Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame151_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario151Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame151_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario151Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame151_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario151Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame151_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario152Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame152_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario152Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame152_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario152Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame152_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario152Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame152_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario152Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame152_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario152Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame152_wheel0";
+static const ALIGN_ASSET(2) char gKartMario153Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame153_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario153Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame153_wheel1";
 
@@ -1233,39 +1235,39 @@ static const ALIGN_ASSET(2) char gKartMario153Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario153Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame153_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario153Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame153_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario154Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame154_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario154Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame154_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario154Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame154_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario154Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame154_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario155Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame155_wheel1";
+static const ALIGN_ASSET(2) char gKartMario154Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame154_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario155Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame155_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario155Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame155_wheel2";
+static const ALIGN_ASSET(2) char gKartMario154Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame154_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario155Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame155_wheel0";
 
+static const ALIGN_ASSET(2) char gKartMario155Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame155_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario155Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame155_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario155Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame155_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario156Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame156_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario156Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame156_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario156Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame156_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario156Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame156_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario156Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame156_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario157Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame157_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario157Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame157_wheel2";
+static const ALIGN_ASSET(2) char gKartMario157Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame157_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario157Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame157_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario157Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame157_wheel0";
+static const ALIGN_ASSET(2) char gKartMario157Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame157_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario157Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame157_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario158Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame158_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario158Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame158_wheel1";
 
@@ -1273,47 +1275,45 @@ static const ALIGN_ASSET(2) char gKartMario158Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario158Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame158_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario158Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame158_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario159Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame159_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario159Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame159_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario159Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame159_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario159Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame159_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario159Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame159_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario159Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame159_wheel1";
+
 static const ALIGN_ASSET(2) char gKartMario160Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame160_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario160Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame160_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario160Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame160_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario160Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame160_wheel1";
 
+static const ALIGN_ASSET(2) char gKartMario160Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame160_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario160Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame160_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario161Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame161_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario161Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame161_wheel1";
+static const ALIGN_ASSET(2) char gKartMario161Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame161_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario161Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame161_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario161Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame161_wheel3";
+static const ALIGN_ASSET(2) char gKartMario161Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame161_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario162Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame162_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario162Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame162_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario162Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame162_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario162Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame162_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario162Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame162_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario162Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame162_wheel0";
+static const ALIGN_ASSET(2) char gKartMario163Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame163_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario163Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame163_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario163Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame163_wheel0";
+static const ALIGN_ASSET(2) char gKartMario163Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame163_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario163Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame163_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario163Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame163_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario164Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame164_wheel0";
 
@@ -1325,27 +1325,27 @@ static const ALIGN_ASSET(2) char gKartMario164Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario165Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame165_wheel0";
 
+static const ALIGN_ASSET(2) char gKartMario165Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame165_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario165Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame165_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario165Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame165_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario165Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame165_wheel3";
+static const ALIGN_ASSET(2) char gKartMario166Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame166_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario166Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame166_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario166Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame166_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario166Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame166_wheel2";
-
 static const ALIGN_ASSET(2) char gKartMario166Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame166_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario167Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame167_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario167Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame167_wheel2";
+static const ALIGN_ASSET(2) char gKartMario166Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame166_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario167Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame167_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario167Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame167_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario167Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame167_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario167Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame167_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario168Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame168_wheel0";
 
@@ -1355,21 +1355,21 @@ static const ALIGN_ASSET(2) char gKartMario168Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario168Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame168_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario169Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame169_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario169Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame169_wheel2";
+static const ALIGN_ASSET(2) char gKartMario169Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame169_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario169Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame169_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario169Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame169_wheel0";
+static const ALIGN_ASSET(2) char gKartMario169Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame169_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario170Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame170_wheel0";
+static const ALIGN_ASSET(2) char gKartMario169Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame169_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario170Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame170_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario170Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame170_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario170Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame170_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario170Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame170_wheel3";
+static const ALIGN_ASSET(2) char gKartMario170Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame170_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario171Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame171_wheel0";
 
@@ -1379,13 +1379,15 @@ static const ALIGN_ASSET(2) char gKartMario171Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario171Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame171_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario172Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame172_wheel3";
+static const ALIGN_ASSET(2) char gKartMario172Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame172_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario172Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame172_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario172Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame172_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario172Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame172_wheel0";
+static const ALIGN_ASSET(2) char gKartMario172Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame172_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario173Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame173_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario173Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame173_wheel1";
 
@@ -1393,23 +1395,21 @@ static const ALIGN_ASSET(2) char gKartMario173Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario173Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame173_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario173Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame173_wheel0";
+static const ALIGN_ASSET(2) char gKartMario174Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame174_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario174Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame174_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario174Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame174_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario174Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame174_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario174Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame174_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario174Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame174_wheel3";
+static const ALIGN_ASSET(2) char gKartMario175Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame175_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario175Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame175_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario175Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame175_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario175Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame175_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario175Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame175_wheel0";
+static const ALIGN_ASSET(2) char gKartMario175Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame175_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario176Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame176_wheel0";
 
@@ -1419,13 +1419,15 @@ static const ALIGN_ASSET(2) char gKartMario176Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario176Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame176_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario177Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame177_wheel0";
+
 static const ALIGN_ASSET(2) char gKartMario177Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame177_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario177Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame177_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario177Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame177_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario177Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame177_wheel0";
+static const ALIGN_ASSET(2) char gKartMario178Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame178_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario178Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame178_wheel1";
 
@@ -1433,23 +1435,21 @@ static const ALIGN_ASSET(2) char gKartMario178Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario178Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame178_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario178Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame178_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario179Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame179_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario179Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame179_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario179Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame179_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario179Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame179_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario179Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame179_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario179Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame179_wheel1";
+
 static const ALIGN_ASSET(2) char gKartMario180Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame180_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario180Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame180_wheel3";
+static const ALIGN_ASSET(2) char gKartMario180Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame180_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario180Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame180_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario180Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame180_wheel1";
+static const ALIGN_ASSET(2) char gKartMario180Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame180_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario181Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame181_wheel0";
 
@@ -1459,29 +1459,29 @@ static const ALIGN_ASSET(2) char gKartMario181Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario181Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame181_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario182Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame182_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario182Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame182_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario182Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame182_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario182Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame182_wheel2";
 
+static const ALIGN_ASSET(2) char gKartMario182Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame182_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario183Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame183_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario183Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame183_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario183Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame183_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario183Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame183_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario183Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame183_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario184Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame184_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario184Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame184_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario184Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame184_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario184Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame184_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario184Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame184_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario185Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame185_wheel0";
 
@@ -1491,13 +1491,13 @@ static const ALIGN_ASSET(2) char gKartMario185Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario185Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame185_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario186Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame186_wheel1";
+
 static const ALIGN_ASSET(2) char gKartMario186Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame186_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario186Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame186_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario186Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame186_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario186Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame186_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario187Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame187_wheel0";
 
@@ -1507,11 +1507,11 @@ static const ALIGN_ASSET(2) char gKartMario187Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario187Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame187_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario188Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame188_wheel1";
+
 static const ALIGN_ASSET(2) char gKartMario188Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame188_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario188Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame188_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario188Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame188_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario188Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame188_wheel0";
 
@@ -1531,29 +1531,29 @@ static const ALIGN_ASSET(2) char gKartMario190Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario190Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame190_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario191Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame191_wheel3";
+static const ALIGN_ASSET(2) char gKartMario191Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame191_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario191Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame191_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario191Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame191_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario191Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame191_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario192Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame192_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario192Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame192_wheel0";
+static const ALIGN_ASSET(2) char gKartMario191Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame191_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario192Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame192_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario192Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame192_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario193Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame193_wheel0";
+static const ALIGN_ASSET(2) char gKartMario192Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame192_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario193Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame193_wheel3";
+static const ALIGN_ASSET(2) char gKartMario192Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame192_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario193Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame193_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario193Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame193_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario193Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame193_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario193Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame193_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario194Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame194_wheel0";
 
@@ -1565,11 +1565,11 @@ static const ALIGN_ASSET(2) char gKartMario194Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario195Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame195_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario195Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame195_wheel1";
+static const ALIGN_ASSET(2) char gKartMario195Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame195_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario195Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame195_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario195Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame195_wheel3";
+static const ALIGN_ASSET(2) char gKartMario195Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame195_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario196Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame196_wheel0";
 
@@ -1579,13 +1579,13 @@ static const ALIGN_ASSET(2) char gKartMario196Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario196Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame196_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario197Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame197_wheel2";
+static const ALIGN_ASSET(2) char gKartMario197Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame197_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario197Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame197_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario197Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame197_wheel1";
+static const ALIGN_ASSET(2) char gKartMario197Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame197_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario197Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame197_wheel0";
+static const ALIGN_ASSET(2) char gKartMario197Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame197_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario198Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame198_wheel0";
 
@@ -1619,13 +1619,13 @@ static const ALIGN_ASSET(2) char gKartMario201Wheel0[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario201Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame201_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario202Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame202_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario202Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame202_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario202Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame202_wheel2";
+static const ALIGN_ASSET(2) char gKartMario202Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame202_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario202Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame202_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario202Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame202_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario203Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame203_wheel0";
 
@@ -1637,11 +1637,11 @@ static const ALIGN_ASSET(2) char gKartMario203Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario204Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame204_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario204Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame204_wheel3";
+static const ALIGN_ASSET(2) char gKartMario204Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame204_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario204Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame204_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario204Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame204_wheel1";
+static const ALIGN_ASSET(2) char gKartMario204Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame204_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario205Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame205_wheel0";
 
@@ -1651,13 +1651,13 @@ static const ALIGN_ASSET(2) char gKartMario205Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario205Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame205_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario206Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame206_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario206Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame206_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario206Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame206_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario206Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame206_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario206Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame206_wheel1";
+static const ALIGN_ASSET(2) char gKartMario206Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame206_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario207Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame207_wheel0";
 
@@ -1765,27 +1765,27 @@ static const ALIGN_ASSET(2) char gKartMario219Wheel1[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario220Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame220_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario220Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame220_wheel2";
+static const ALIGN_ASSET(2) char gKartMario220Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame220_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario220Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame220_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario220Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame220_wheel0";
+static const ALIGN_ASSET(2) char gKartMario220Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame220_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario221Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame221_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario221Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame221_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario221Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame221_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario221Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame221_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario221Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame221_wheel3";
+static const ALIGN_ASSET(2) char gKartMario222Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame222_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario222Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame222_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario222Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame222_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario222Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame222_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario222Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame222_wheel0";
+static const ALIGN_ASSET(2) char gKartMario222Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame222_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario223Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame223_wheel0";
 
@@ -1795,29 +1795,29 @@ static const ALIGN_ASSET(2) char gKartMario223Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario223Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame223_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario224Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame224_wheel3";
+static const ALIGN_ASSET(2) char gKartMario224Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame224_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario224Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame224_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario224Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame224_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario224Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame224_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario225Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame225_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario225Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame225_wheel1";
+static const ALIGN_ASSET(2) char gKartMario224Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame224_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario225Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame225_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario225Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame225_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario226Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame226_wheel3";
+static const ALIGN_ASSET(2) char gKartMario225Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame225_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario226Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame226_wheel2";
+static const ALIGN_ASSET(2) char gKartMario225Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame225_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario226Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame226_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario226Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame226_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario226Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame226_wheel0";
+static const ALIGN_ASSET(2) char gKartMario226Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame226_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario226Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame226_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario227Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame227_wheel0";
 
@@ -1837,19 +1837,19 @@ static const ALIGN_ASSET(2) char gKartMario228Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario229Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame229_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario229Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame229_wheel2";
+
 static const ALIGN_ASSET(2) char gKartMario229Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame229_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario229Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame229_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario229Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame229_wheel2";
+static const ALIGN_ASSET(2) char gKartMario230Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame230_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario230Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame230_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario230Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame230_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario230Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame230_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario230Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame230_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario231Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame231_wheel0";
 
@@ -1859,13 +1859,13 @@ static const ALIGN_ASSET(2) char gKartMario231Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario231Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame231_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario232Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame232_wheel1";
+static const ALIGN_ASSET(2) char gKartMario232Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame232_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario232Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame232_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario232Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame232_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario232Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame232_wheel0";
+static const ALIGN_ASSET(2) char gKartMario232Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame232_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario233Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame233_wheel0";
 
@@ -1875,21 +1875,21 @@ static const ALIGN_ASSET(2) char gKartMario233Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario233Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame233_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario234Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame234_wheel0";
+
 static const ALIGN_ASSET(2) char gKartMario234Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame234_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario234Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame234_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario234Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame234_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario234Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame234_wheel0";
+static const ALIGN_ASSET(2) char gKartMario235Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame235_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario235Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame235_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario235Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame235_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario235Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame235_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario235Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame235_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario236Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame236_wheel0";
 
@@ -1901,35 +1901,35 @@ static const ALIGN_ASSET(2) char gKartMario236Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario237Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame237_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario237Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame237_wheel3";
+static const ALIGN_ASSET(2) char gKartMario237Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame237_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario237Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame237_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario237Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame237_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario238Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame238_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario238Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame238_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario238Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame238_wheel2";
+static const ALIGN_ASSET(2) char gKartMario237Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame237_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario238Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame238_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario239Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame239_wheel3";
+static const ALIGN_ASSET(2) char gKartMario238Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame238_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario238Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame238_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario238Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame238_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario239Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame239_wheel1";
 
+static const ALIGN_ASSET(2) char gKartMario239Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame239_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario239Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame239_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario239Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame239_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario239Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame239_wheel0";
+static const ALIGN_ASSET(2) char gKartMario240Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame240_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario240Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame240_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario240Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame240_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario240Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame240_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario240Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame240_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario241Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame241_wheel0";
 
@@ -1939,29 +1939,29 @@ static const ALIGN_ASSET(2) char gKartMario241Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario241Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame241_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario242Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame242_wheel1";
+static const ALIGN_ASSET(2) char gKartMario242Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame242_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario242Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame242_wheel3";
+static const ALIGN_ASSET(2) char gKartMario242Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame242_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario242Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame242_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario242Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame242_wheel0";
+static const ALIGN_ASSET(2) char gKartMario242Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame242_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario243Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame243_wheel0";
+static const ALIGN_ASSET(2) char gKartMario243Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame243_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario243Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame243_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario243Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame243_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario243Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame243_wheel3";
+static const ALIGN_ASSET(2) char gKartMario243Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame243_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario244Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame244_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario244Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame244_wheel3";
+static const ALIGN_ASSET(2) char gKartMario244Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame244_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario244Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame244_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario244Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame244_wheel1";
+static const ALIGN_ASSET(2) char gKartMario244Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame244_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario245Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame245_wheel0";
 
@@ -1979,21 +1979,21 @@ static const ALIGN_ASSET(2) char gKartMario246Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario246Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame246_wheel3";
 
+static const ALIGN_ASSET(2) char gKartMario247Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame247_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario247Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame247_wheel2";
+
 static const ALIGN_ASSET(2) char gKartMario247Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame247_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario247Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame247_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario247Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame247_wheel2";
+static const ALIGN_ASSET(2) char gKartMario248Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame248_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario247Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame247_wheel3";
+static const ALIGN_ASSET(2) char gKartMario248Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame248_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario248Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame248_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario248Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame248_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario248Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame248_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario248Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame248_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario249Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame249_wheel0";
 
@@ -2005,35 +2005,35 @@ static const ALIGN_ASSET(2) char gKartMario249Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario250Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame250_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario250Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame250_wheel1";
+static const ALIGN_ASSET(2) char gKartMario250Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame250_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario250Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame250_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario250Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame250_wheel3";
+static const ALIGN_ASSET(2) char gKartMario250Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame250_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario251Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame251_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario251Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame251_wheel3";
+static const ALIGN_ASSET(2) char gKartMario251Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame251_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario251Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame251_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario251Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame251_wheel1";
+static const ALIGN_ASSET(2) char gKartMario251Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame251_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario252Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame252_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario252Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame252_wheel1";
+static const ALIGN_ASSET(2) char gKartMario252Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame252_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario252Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame252_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario252Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame252_wheel3";
+static const ALIGN_ASSET(2) char gKartMario252Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame252_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario253Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame253_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario253Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame253_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario253Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame253_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario253Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame253_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario253Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame253_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario253Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame253_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario254Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame254_wheel0";
 
@@ -2051,13 +2051,13 @@ static const ALIGN_ASSET(2) char gKartMario255Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario255Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame255_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario256Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame256_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario256Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame256_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario256Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame256_wheel2";
-
 static const ALIGN_ASSET(2) char gKartMario256Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame256_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario256Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame256_wheel0";
+
+static const ALIGN_ASSET(2) char gKartMario256Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame256_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario257Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame257_wheel0";
 
@@ -2069,19 +2069,19 @@ static const ALIGN_ASSET(2) char gKartMario257Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario258Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame258_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario258Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame258_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario258Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame258_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario258Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame258_wheel2";
 
+static const ALIGN_ASSET(2) char gKartMario258Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame258_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario259Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame259_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario259Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame259_wheel1";
+static const ALIGN_ASSET(2) char gKartMario259Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame259_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario259Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame259_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario259Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame259_wheel3";
+static const ALIGN_ASSET(2) char gKartMario259Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame259_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario260Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame260_wheel0";
 
@@ -2109,11 +2109,11 @@ static const ALIGN_ASSET(2) char gKartMario262Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario263Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame263_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario263Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame263_wheel3";
+static const ALIGN_ASSET(2) char gKartMario263Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame263_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario263Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame263_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario263Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame263_wheel1";
+static const ALIGN_ASSET(2) char gKartMario263Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame263_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario264Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame264_wheel0";
 
@@ -2123,13 +2123,13 @@ static const ALIGN_ASSET(2) char gKartMario264Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario264Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame264_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario265Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame265_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario265Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame265_wheel1";
-
 static const ALIGN_ASSET(2) char gKartMario265Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame265_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario265Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame265_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario265Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame265_wheel1";
+
+static const ALIGN_ASSET(2) char gKartMario265Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame265_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario266Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame266_wheel0";
 
@@ -2139,21 +2139,21 @@ static const ALIGN_ASSET(2) char gKartMario266Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario266Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame266_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario267Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame267_wheel3";
+static const ALIGN_ASSET(2) char gKartMario267Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame267_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario267Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame267_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario267Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame267_wheel0";
-
 static const ALIGN_ASSET(2) char gKartMario267Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame267_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario268Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame268_wheel1";
+static const ALIGN_ASSET(2) char gKartMario267Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame267_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario268Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame268_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario268Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame268_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario268Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame268_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario268Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame268_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario269Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame269_wheel0";
 
@@ -2165,19 +2165,19 @@ static const ALIGN_ASSET(2) char gKartMario269Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario270Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame270_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario270Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame270_wheel1";
+static const ALIGN_ASSET(2) char gKartMario270Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame270_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario270Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame270_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario270Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame270_wheel3";
+static const ALIGN_ASSET(2) char gKartMario270Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame270_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario271Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame271_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario271Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame271_wheel3";
+static const ALIGN_ASSET(2) char gKartMario271Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame271_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario271Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame271_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario271Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame271_wheel1";
+static const ALIGN_ASSET(2) char gKartMario271Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame271_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario272Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame272_wheel0";
 
@@ -2189,19 +2189,19 @@ static const ALIGN_ASSET(2) char gKartMario272Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario273Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame273_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario273Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame273_wheel3";
+static const ALIGN_ASSET(2) char gKartMario273Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame273_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario273Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame273_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario273Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame273_wheel1";
+static const ALIGN_ASSET(2) char gKartMario273Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame273_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario274Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame274_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario274Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame274_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario274Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame274_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario274Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame274_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario274Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame274_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario274Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame274_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario275Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame275_wheel0";
 
@@ -2219,13 +2219,13 @@ static const ALIGN_ASSET(2) char gKartMario276Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario276Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame276_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario277Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame277_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario277Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame277_wheel1";
-
 static const ALIGN_ASSET(2) char gKartMario277Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame277_wheel0";
 
+static const ALIGN_ASSET(2) char gKartMario277Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame277_wheel3";
+
 static const ALIGN_ASSET(2) char gKartMario277Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame277_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario277Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame277_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario278Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame278_wheel0";
 
@@ -2237,19 +2237,19 @@ static const ALIGN_ASSET(2) char gKartMario278Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario279Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame279_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario279Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame279_wheel1";
+static const ALIGN_ASSET(2) char gKartMario279Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame279_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario279Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame279_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario279Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame279_wheel3";
+static const ALIGN_ASSET(2) char gKartMario279Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame279_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario280Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame280_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario280Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame280_wheel3";
+static const ALIGN_ASSET(2) char gKartMario280Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame280_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario280Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame280_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario280Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame280_wheel1";
+static const ALIGN_ASSET(2) char gKartMario280Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame280_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario281Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame281_wheel0";
 
@@ -2261,27 +2261,27 @@ static const ALIGN_ASSET(2) char gKartMario281Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario282Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame282_wheel0";
 
-static const ALIGN_ASSET(2) char gKartMario282Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame282_wheel3";
+static const ALIGN_ASSET(2) char gKartMario282Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame282_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario282Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame282_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario282Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame282_wheel1";
+static const ALIGN_ASSET(2) char gKartMario282Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame282_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario283Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame283_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario283Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame283_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario283Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame283_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario283Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame283_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario283Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame283_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario283Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame283_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario284Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame284_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario284Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame284_wheel1";
 
 static const ALIGN_ASSET(2) char gKartMario284Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame284_wheel2";
 
 static const ALIGN_ASSET(2) char gKartMario284Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame284_wheel3";
+
+static const ALIGN_ASSET(2) char gKartMario284Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame284_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario285Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame285_wheel0";
 
@@ -2291,13 +2291,13 @@ static const ALIGN_ASSET(2) char gKartMario285Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario285Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame285_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario286Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame286_wheel3";
-
 static const ALIGN_ASSET(2) char gKartMario286Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame286_wheel1";
 
-static const ALIGN_ASSET(2) char gKartMario286Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame286_wheel0";
+static const ALIGN_ASSET(2) char gKartMario286Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame286_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario286Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame286_wheel2";
+
+static const ALIGN_ASSET(2) char gKartMario286Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame286_wheel0";
 
 static const ALIGN_ASSET(2) char gKartMario287Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame287_wheel0";
 
@@ -2307,269 +2307,77 @@ static const ALIGN_ASSET(2) char gKartMario287Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartMario287Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame287_wheel3";
 
-static const ALIGN_ASSET(2) char gKartMario288Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame288_wheel0";
+static const ALIGN_ASSET(2) char gKartMario288Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame288_wheel3";
 
 static const ALIGN_ASSET(2) char gKartMario288Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame288_wheel1";
 
+static const ALIGN_ASSET(2) char gKartMario288Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame288_wheel0";
+
 static const ALIGN_ASSET(2) char gKartMario288Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame288_wheel2";
 
-static const ALIGN_ASSET(2) char gKartMario288Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame288_wheel3";
+static const ALIGN_ASSET(2) char gKartMario305[] = "__OTR__textures/karts/mario_kart/mario_kart_frame305";
 
-static const ALIGN_ASSET(2) char gKartMario289Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame289_wheel0";
+static const ALIGN_ASSET(2) char gKartMario306[] = "__OTR__textures/karts/mario_kart/mario_kart_frame306";
 
-static const ALIGN_ASSET(2) char gKartMario289Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame289_wheel3";
+static const ALIGN_ASSET(2) char gKartMario307[] = "__OTR__textures/karts/mario_kart/mario_kart_frame307";
 
-static const ALIGN_ASSET(2) char gKartMario289Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame289_wheel2";
+static const ALIGN_ASSET(2) char gKartMario308[] = "__OTR__textures/karts/mario_kart/mario_kart_frame308";
 
-static const ALIGN_ASSET(2) char gKartMario289Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame289_wheel1";
+static const ALIGN_ASSET(2) char gKartMario309[] = "__OTR__textures/karts/mario_kart/mario_kart_frame309";
 
-static const ALIGN_ASSET(2) char gKartMario290Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame290_wheel0";
+static const ALIGN_ASSET(2) char gKartMario310[] = "__OTR__textures/karts/mario_kart/mario_kart_frame310";
 
-static const ALIGN_ASSET(2) char gKartMario290Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame290_wheel1";
+static const ALIGN_ASSET(2) char gKartMario311[] = "__OTR__textures/karts/mario_kart/mario_kart_frame311";
 
-static const ALIGN_ASSET(2) char gKartMario290Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame290_wheel2";
+static const ALIGN_ASSET(2) char gKartMario312[] = "__OTR__textures/karts/mario_kart/mario_kart_frame312";
 
-static const ALIGN_ASSET(2) char gKartMario290Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame290_wheel3";
+static const ALIGN_ASSET(2) char gKartMario313[] = "__OTR__textures/karts/mario_kart/mario_kart_frame313";
 
-static const ALIGN_ASSET(2) char gKartMario291Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame291_wheel0";
+static const ALIGN_ASSET(2) char gKartMario314[] = "__OTR__textures/karts/mario_kart/mario_kart_frame314";
 
-static const ALIGN_ASSET(2) char gKartMario291Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame291_wheel3";
+static const ALIGN_ASSET(2) char gKartMario315[] = "__OTR__textures/karts/mario_kart/mario_kart_frame315";
 
-static const ALIGN_ASSET(2) char gKartMario291Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame291_wheel2";
+static const ALIGN_ASSET(2) char gKartMario316[] = "__OTR__textures/karts/mario_kart/mario_kart_frame316";
 
-static const ALIGN_ASSET(2) char gKartMario291Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame291_wheel1";
+static const ALIGN_ASSET(2) char gKartMario317[] = "__OTR__textures/karts/mario_kart/mario_kart_frame317";
 
-static const ALIGN_ASSET(2) char gKartMario292Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame292_wheel0";
+static const ALIGN_ASSET(2) char gKartMario318[] = "__OTR__textures/karts/mario_kart/mario_kart_frame318";
 
-static const ALIGN_ASSET(2) char gKartMario292Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame292_wheel1";
+static const ALIGN_ASSET(2) char gKartMario319[] = "__OTR__textures/karts/mario_kart/mario_kart_frame319";
 
-static const ALIGN_ASSET(2) char gKartMario292Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame292_wheel2";
+static const ALIGN_ASSET(2) char gKartMario320[] = "__OTR__textures/karts/mario_kart/mario_kart_frame320";
 
-static const ALIGN_ASSET(2) char gKartMario292Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame292_wheel3";
+static const ALIGN_ASSET(2) char gKartMario303[] = "__OTR__textures/karts/mario_kart/mario_kart_frame303";
 
-static const ALIGN_ASSET(2) char gKartMario293Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame293_wheel0";
+static const ALIGN_ASSET(2) char gKartMario304[] = "__OTR__textures/karts/mario_kart/mario_kart_frame304";
 
-static const ALIGN_ASSET(2) char gKartMario293Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame293_wheel1";
+static const ALIGN_ASSET(2) char gKartMario289[] = "__OTR__textures/karts/mario_kart/mario_kart_frame289";
 
-static const ALIGN_ASSET(2) char gKartMario293Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame293_wheel2";
+static const ALIGN_ASSET(2) char gKartMario290[] = "__OTR__textures/karts/mario_kart/mario_kart_frame290";
 
-static const ALIGN_ASSET(2) char gKartMario293Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame293_wheel3";
+static const ALIGN_ASSET(2) char gKartMario291[] = "__OTR__textures/karts/mario_kart/mario_kart_frame291";
 
-static const ALIGN_ASSET(2) char gKartMario294Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame294_wheel0";
+static const ALIGN_ASSET(2) char gKartMario292[] = "__OTR__textures/karts/mario_kart/mario_kart_frame292";
 
-static const ALIGN_ASSET(2) char gKartMario294Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame294_wheel1";
+static const ALIGN_ASSET(2) char gKartMario293[] = "__OTR__textures/karts/mario_kart/mario_kart_frame293";
 
-static const ALIGN_ASSET(2) char gKartMario294Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame294_wheel2";
+static const ALIGN_ASSET(2) char gKartMario294[] = "__OTR__textures/karts/mario_kart/mario_kart_frame294";
 
-static const ALIGN_ASSET(2) char gKartMario294Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame294_wheel3";
+static const ALIGN_ASSET(2) char gKartMario295[] = "__OTR__textures/karts/mario_kart/mario_kart_frame295";
 
-static const ALIGN_ASSET(2) char gKartMario295Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame295_wheel3";
+static const ALIGN_ASSET(2) char gKartMario297[] = "__OTR__textures/karts/mario_kart/mario_kart_frame297";
 
-static const ALIGN_ASSET(2) char gKartMario295Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame295_wheel2";
+static const ALIGN_ASSET(2) char gKartMario296[] = "__OTR__textures/karts/mario_kart/mario_kart_frame296";
 
-static const ALIGN_ASSET(2) char gKartMario295Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame295_wheel0";
+static const ALIGN_ASSET(2) char gKartMario302[] = "__OTR__textures/karts/mario_kart/mario_kart_frame302";
 
-static const ALIGN_ASSET(2) char gKartMario295Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame295_wheel1";
+static const ALIGN_ASSET(2) char gKartMario301[] = "__OTR__textures/karts/mario_kart/mario_kart_frame301";
 
-static const ALIGN_ASSET(2) char gKartMario296Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame296_wheel1";
+static const ALIGN_ASSET(2) char gKartMario299[] = "__OTR__textures/karts/mario_kart/mario_kart_frame299";
 
-static const ALIGN_ASSET(2) char gKartMario296Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame296_wheel2";
+static const ALIGN_ASSET(2) char gKartMario300[] = "__OTR__textures/karts/mario_kart/mario_kart_frame300";
 
-static const ALIGN_ASSET(2) char gKartMario296Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame296_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario296Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame296_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario297Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame297_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario297Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame297_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario297Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame297_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario297Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame297_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario298Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame298_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario298Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame298_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario298Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame298_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario298Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame298_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario299Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame299_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario299Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame299_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario299Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame299_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario299Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame299_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario300Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame300_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario300Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame300_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario300Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame300_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario300Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame300_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario301Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame301_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario301Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame301_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario301Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame301_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario301Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame301_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario302Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame302_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario302Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame302_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario302Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame302_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario302Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame302_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario303Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame303_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario303Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame303_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario303Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame303_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario303Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame303_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario304Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame304_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario304Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame304_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario304Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame304_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario304Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame304_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario305Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame305_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario305Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame305_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario305Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame305_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario305Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame305_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario306Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame306_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario306Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame306_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario306Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame306_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario306Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame306_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario307Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame307_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario307Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame307_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario307Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame307_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario307Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame307_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario308Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame308_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario308Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame308_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario308Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame308_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario308Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame308_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario309Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame309_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario309Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame309_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario309Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame309_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario309Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame309_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario310Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame310_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario310Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame310_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario310Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame310_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario310Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame310_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario311Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame311_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario311Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame311_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario311Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame311_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario311Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame311_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario312Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame312_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario312Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame312_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario312Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame312_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario312Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame312_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario313Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame313_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario313Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame313_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario313Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame313_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario313Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame313_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario314Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame314_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario314Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame314_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario314Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame314_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario314Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame314_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario315Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame315_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario315Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame315_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario315Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame315_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario315Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame315_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario316Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame316_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario316Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame316_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario316Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame316_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario316Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame316_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario317Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame317_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario317Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame317_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario317Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame317_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario317Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame317_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario318Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame318_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario318Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame318_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario318Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame318_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario318Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame318_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario319Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame319_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario319Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame319_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario319Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame319_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario319Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame319_wheel3";
-
-static const ALIGN_ASSET(2) char gKartMario320Wheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_frame320_wheel0";
-
-static const ALIGN_ASSET(2) char gKartMario320Wheel1[] = "__OTR__textures/karts/mario_kart/mario_kart_frame320_wheel1";
-
-static const ALIGN_ASSET(2) char gKartMario320Wheel2[] = "__OTR__textures/karts/mario_kart/mario_kart_frame320_wheel2";
-
-static const ALIGN_ASSET(2) char gKartMario320Wheel3[] = "__OTR__textures/karts/mario_kart/mario_kart_frame320_wheel3";
+static const ALIGN_ASSET(2) char gKartMario298[] = "__OTR__textures/karts/mario_kart/mario_kart_frame298";
 
 static const ALIGN_ASSET(2) char gKartMario000TlutWheel0[] = "__OTR__textures/karts/mario_kart/mario_kart_000_tlut_wheel_0";
 

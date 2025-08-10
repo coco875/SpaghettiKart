@@ -12730,8 +12730,8 @@ wario_kart_frame288_wheel3:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_288_tlut_wheel_3
-wario_kart_frame289_wheel0:
-  symbol: gKartWario289Wheel0
+wario_kart_frame289:
+  symbol: gKartWario289
   type: texture
   offset: 0x6D1CC
   ctype: u8
@@ -12741,8 +12741,8 @@ wario_kart_frame289_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame289_wheel1:
-  symbol: gKartWario289Wheel1
+wario_kart_frame290:
+  symbol: gKartWario290
   type: texture
   offset: 0x6D1CC
   ctype: u8
@@ -12751,9 +12751,9 @@ wario_kart_frame289_wheel1:
   height: 64
   format: CI8
   tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame289_wheel2:
-  symbol: gKartWario289Wheel2
+  tlut_wheel: wario_kart_000_tlut_wheel_0
+wario_kart_frame291:
+  symbol: gKartWario291
   type: texture
   offset: 0x6D1CC
   ctype: u8
@@ -12762,9 +12762,9 @@ wario_kart_frame289_wheel2:
   height: 64
   format: CI8
   tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame289_wheel3:
-  symbol: gKartWario289Wheel3
+  tlut_wheel: wario_kart_000_tlut_wheel_0
+wario_kart_frame292:
+  symbol: gKartWario292
   type: texture
   offset: 0x6D1CC
   ctype: u8
@@ -12773,11 +12773,11 @@ wario_kart_frame289_wheel3:
   height: 64
   format: CI8
   tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame290_wheel0:
-  symbol: gKartWario290Wheel0
+  tlut_wheel: wario_kart_000_tlut_wheel_0
+wario_kart_frame293:
+  symbol: gKartWario293
   type: texture
-  offset: 0x6D790
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -12785,43 +12785,10 @@ wario_kart_frame290_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame290_wheel1:
-  symbol: gKartWario290Wheel1
+wario_kart_frame294:
+  symbol: gKartWario294
   type: texture
-  offset: 0x6D790
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame290_wheel2:
-  symbol: gKartWario290Wheel2
-  type: texture
-  offset: 0x6D790
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame290_wheel3:
-  symbol: gKartWario290Wheel3
-  type: texture
-  offset: 0x6D790
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame291_wheel0:
-  symbol: gKartWario291Wheel0
-  type: texture
-  offset: 0x6DD94
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -12829,43 +12796,10 @@ wario_kart_frame291_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame291_wheel1:
-  symbol: gKartWario291Wheel1
+wario_kart_frame295:
+  symbol: gKartWario295
   type: texture
-  offset: 0x6DD94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame291_wheel2:
-  symbol: gKartWario291Wheel2
-  type: texture
-  offset: 0x6DD94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame291_wheel3:
-  symbol: gKartWario291Wheel3
-  type: texture
-  offset: 0x6DD94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame292_wheel0:
-  symbol: gKartWario292Wheel0
-  type: texture
-  offset: 0x6E3AC
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -12873,43 +12807,10 @@ wario_kart_frame292_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame292_wheel1:
-  symbol: gKartWario292Wheel1
+wario_kart_frame296:
+  symbol: gKartWario296
   type: texture
-  offset: 0x6E3AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame292_wheel2:
-  symbol: gKartWario292Wheel2
-  type: texture
-  offset: 0x6E3AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame292_wheel3:
-  symbol: gKartWario292Wheel3
-  type: texture
-  offset: 0x6E3AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame293_wheel0:
-  symbol: gKartWario293Wheel0
-  type: texture
-  offset: 0x6EA14
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -12917,43 +12818,10 @@ wario_kart_frame293_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame293_wheel1:
-  symbol: gKartWario293Wheel1
+wario_kart_frame297:
+  symbol: gKartWario297
   type: texture
-  offset: 0x6EA14
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame293_wheel2:
-  symbol: gKartWario293Wheel2
-  type: texture
-  offset: 0x6EA14
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame293_wheel3:
-  symbol: gKartWario293Wheel3
-  type: texture
-  offset: 0x6EA14
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame294_wheel0:
-  symbol: gKartWario294Wheel0
-  type: texture
-  offset: 0x6EFD4
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -12961,43 +12829,10 @@ wario_kart_frame294_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame294_wheel1:
-  symbol: gKartWario294Wheel1
+wario_kart_frame298:
+  symbol: gKartWario298
   type: texture
-  offset: 0x6EFD4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame294_wheel2:
-  symbol: gKartWario294Wheel2
-  type: texture
-  offset: 0x6EFD4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame294_wheel3:
-  symbol: gKartWario294Wheel3
-  type: texture
-  offset: 0x6EFD4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame295_wheel0:
-  symbol: gKartWario295Wheel0
-  type: texture
-  offset: 0x6F5D4
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13005,43 +12840,10 @@ wario_kart_frame295_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame295_wheel1:
-  symbol: gKartWario295Wheel1
+wario_kart_frame299:
+  symbol: gKartWario299
   type: texture
-  offset: 0x6F5D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame295_wheel2:
-  symbol: gKartWario295Wheel2
-  type: texture
-  offset: 0x6F5D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame295_wheel3:
-  symbol: gKartWario295Wheel3
-  type: texture
-  offset: 0x6F5D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame296_wheel0:
-  symbol: gKartWario296Wheel0
-  type: texture
-  offset: 0x6FBEC
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13049,43 +12851,10 @@ wario_kart_frame296_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame296_wheel1:
-  symbol: gKartWario296Wheel1
+wario_kart_frame300:
+  symbol: gKartWario300
   type: texture
-  offset: 0x6FBEC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame296_wheel2:
-  symbol: gKartWario296Wheel2
-  type: texture
-  offset: 0x6FBEC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame296_wheel3:
-  symbol: gKartWario296Wheel3
-  type: texture
-  offset: 0x6FBEC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame297_wheel0:
-  symbol: gKartWario297Wheel0
-  type: texture
-  offset: 0x70220
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13093,43 +12862,10 @@ wario_kart_frame297_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame297_wheel1:
-  symbol: gKartWario297Wheel1
+wario_kart_frame301:
+  symbol: gKartWario301
   type: texture
-  offset: 0x70220
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame297_wheel2:
-  symbol: gKartWario297Wheel2
-  type: texture
-  offset: 0x70220
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame297_wheel3:
-  symbol: gKartWario297Wheel3
-  type: texture
-  offset: 0x70220
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame298_wheel0:
-  symbol: gKartWario298Wheel0
-  type: texture
-  offset: 0x707EC
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13137,43 +12873,10 @@ wario_kart_frame298_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame298_wheel1:
-  symbol: gKartWario298Wheel1
+wario_kart_frame302:
+  symbol: gKartWario302
   type: texture
-  offset: 0x707EC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame298_wheel2:
-  symbol: gKartWario298Wheel2
-  type: texture
-  offset: 0x707EC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame298_wheel3:
-  symbol: gKartWario298Wheel3
-  type: texture
-  offset: 0x707EC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame299_wheel0:
-  symbol: gKartWario299Wheel0
-  type: texture
-  offset: 0x70E24
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13181,43 +12884,10 @@ wario_kart_frame299_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame299_wheel1:
-  symbol: gKartWario299Wheel1
+wario_kart_frame303:
+  symbol: gKartWario303
   type: texture
-  offset: 0x70E24
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame299_wheel2:
-  symbol: gKartWario299Wheel2
-  type: texture
-  offset: 0x70E24
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame299_wheel3:
-  symbol: gKartWario299Wheel3
-  type: texture
-  offset: 0x70E24
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame300_wheel0:
-  symbol: gKartWario300Wheel0
-  type: texture
-  offset: 0x71438
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13225,43 +12895,10 @@ wario_kart_frame300_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame300_wheel1:
-  symbol: gKartWario300Wheel1
+wario_kart_frame304:
+  symbol: gKartWario304
   type: texture
-  offset: 0x71438
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame300_wheel2:
-  symbol: gKartWario300Wheel2
-  type: texture
-  offset: 0x71438
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame300_wheel3:
-  symbol: gKartWario300Wheel3
-  type: texture
-  offset: 0x71438
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame301_wheel0:
-  symbol: gKartWario301Wheel0
-  type: texture
-  offset: 0x719D4
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13269,43 +12906,10 @@ wario_kart_frame301_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame301_wheel1:
-  symbol: gKartWario301Wheel1
+wario_kart_frame305:
+  symbol: gKartWario305
   type: texture
-  offset: 0x719D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame301_wheel2:
-  symbol: gKartWario301Wheel2
-  type: texture
-  offset: 0x719D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame301_wheel3:
-  symbol: gKartWario301Wheel3
-  type: texture
-  offset: 0x719D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame302_wheel0:
-  symbol: gKartWario302Wheel0
-  type: texture
-  offset: 0x71F40
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13313,43 +12917,10 @@ wario_kart_frame302_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame302_wheel1:
-  symbol: gKartWario302Wheel1
+wario_kart_frame306:
+  symbol: gKartWario306
   type: texture
-  offset: 0x71F40
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame302_wheel2:
-  symbol: gKartWario302Wheel2
-  type: texture
-  offset: 0x71F40
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame302_wheel3:
-  symbol: gKartWario302Wheel3
-  type: texture
-  offset: 0x71F40
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame303_wheel0:
-  symbol: gKartWario303Wheel0
-  type: texture
-  offset: 0x72504
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13357,43 +12928,10 @@ wario_kart_frame303_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame303_wheel1:
-  symbol: gKartWario303Wheel1
+wario_kart_frame307:
+  symbol: gKartWario307
   type: texture
-  offset: 0x72504
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame303_wheel2:
-  symbol: gKartWario303Wheel2
-  type: texture
-  offset: 0x72504
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame303_wheel3:
-  symbol: gKartWario303Wheel3
-  type: texture
-  offset: 0x72504
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame304_wheel0:
-  symbol: gKartWario304Wheel0
-  type: texture
-  offset: 0x72B1C
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13401,43 +12939,10 @@ wario_kart_frame304_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame304_wheel1:
-  symbol: gKartWario304Wheel1
+wario_kart_frame308:
+  symbol: gKartWario308
   type: texture
-  offset: 0x72B1C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame304_wheel2:
-  symbol: gKartWario304Wheel2
-  type: texture
-  offset: 0x72B1C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame304_wheel3:
-  symbol: gKartWario304Wheel3
-  type: texture
-  offset: 0x72B1C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame305_wheel0:
-  symbol: gKartWario305Wheel0
-  type: texture
-  offset: 0x73148
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13445,43 +12950,10 @@ wario_kart_frame305_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame305_wheel1:
-  symbol: gKartWario305Wheel1
+wario_kart_frame309:
+  symbol: gKartWario309
   type: texture
-  offset: 0x73148
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame305_wheel2:
-  symbol: gKartWario305Wheel2
-  type: texture
-  offset: 0x73148
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame305_wheel3:
-  symbol: gKartWario305Wheel3
-  type: texture
-  offset: 0x73148
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame306_wheel0:
-  symbol: gKartWario306Wheel0
-  type: texture
-  offset: 0x73694
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13489,43 +12961,10 @@ wario_kart_frame306_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame306_wheel1:
-  symbol: gKartWario306Wheel1
+wario_kart_frame310:
+  symbol: gKartWario310
   type: texture
-  offset: 0x73694
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame306_wheel2:
-  symbol: gKartWario306Wheel2
-  type: texture
-  offset: 0x73694
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame306_wheel3:
-  symbol: gKartWario306Wheel3
-  type: texture
-  offset: 0x73694
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame307_wheel0:
-  symbol: gKartWario307Wheel0
-  type: texture
-  offset: 0x73CA4
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13533,43 +12972,10 @@ wario_kart_frame307_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame307_wheel1:
-  symbol: gKartWario307Wheel1
+wario_kart_frame311:
+  symbol: gKartWario311
   type: texture
-  offset: 0x73CA4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame307_wheel2:
-  symbol: gKartWario307Wheel2
-  type: texture
-  offset: 0x73CA4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame307_wheel3:
-  symbol: gKartWario307Wheel3
-  type: texture
-  offset: 0x73CA4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame308_wheel0:
-  symbol: gKartWario308Wheel0
-  type: texture
-  offset: 0x742F0
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13577,43 +12983,10 @@ wario_kart_frame308_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame308_wheel1:
-  symbol: gKartWario308Wheel1
+wario_kart_frame312:
+  symbol: gKartWario312
   type: texture
-  offset: 0x742F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame308_wheel2:
-  symbol: gKartWario308Wheel2
-  type: texture
-  offset: 0x742F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame308_wheel3:
-  symbol: gKartWario308Wheel3
-  type: texture
-  offset: 0x742F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame309_wheel0:
-  symbol: gKartWario309Wheel0
-  type: texture
-  offset: 0x74924
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13621,43 +12994,10 @@ wario_kart_frame309_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame309_wheel1:
-  symbol: gKartWario309Wheel1
+wario_kart_frame313:
+  symbol: gKartWario313
   type: texture
-  offset: 0x74924
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame309_wheel2:
-  symbol: gKartWario309Wheel2
-  type: texture
-  offset: 0x74924
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame309_wheel3:
-  symbol: gKartWario309Wheel3
-  type: texture
-  offset: 0x74924
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame310_wheel0:
-  symbol: gKartWario310Wheel0
-  type: texture
-  offset: 0x74F04
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13665,43 +13005,10 @@ wario_kart_frame310_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame310_wheel1:
-  symbol: gKartWario310Wheel1
+wario_kart_frame314:
+  symbol: gKartWario314
   type: texture
-  offset: 0x74F04
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame310_wheel2:
-  symbol: gKartWario310Wheel2
-  type: texture
-  offset: 0x74F04
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame310_wheel3:
-  symbol: gKartWario310Wheel3
-  type: texture
-  offset: 0x74F04
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame311_wheel0:
-  symbol: gKartWario311Wheel0
-  type: texture
-  offset: 0x75500
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13709,43 +13016,10 @@ wario_kart_frame311_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame311_wheel1:
-  symbol: gKartWario311Wheel1
+wario_kart_frame315:
+  symbol: gKartWario315
   type: texture
-  offset: 0x75500
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame311_wheel2:
-  symbol: gKartWario311Wheel2
-  type: texture
-  offset: 0x75500
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame311_wheel3:
-  symbol: gKartWario311Wheel3
-  type: texture
-  offset: 0x75500
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame312_wheel0:
-  symbol: gKartWario312Wheel0
-  type: texture
-  offset: 0x75B04
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13753,43 +13027,10 @@ wario_kart_frame312_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame312_wheel1:
-  symbol: gKartWario312Wheel1
+wario_kart_frame316:
+  symbol: gKartWario316
   type: texture
-  offset: 0x75B04
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame312_wheel2:
-  symbol: gKartWario312Wheel2
-  type: texture
-  offset: 0x75B04
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame312_wheel3:
-  symbol: gKartWario312Wheel3
-  type: texture
-  offset: 0x75B04
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame313_wheel0:
-  symbol: gKartWario313Wheel0
-  type: texture
-  offset: 0x760F8
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13797,43 +13038,10 @@ wario_kart_frame313_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame313_wheel1:
-  symbol: gKartWario313Wheel1
+wario_kart_frame317:
+  symbol: gKartWario317
   type: texture
-  offset: 0x760F8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame313_wheel2:
-  symbol: gKartWario313Wheel2
-  type: texture
-  offset: 0x760F8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame313_wheel3:
-  symbol: gKartWario313Wheel3
-  type: texture
-  offset: 0x760F8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame314_wheel0:
-  symbol: gKartWario314Wheel0
-  type: texture
-  offset: 0x766C8
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13841,43 +13049,10 @@ wario_kart_frame314_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame314_wheel1:
-  symbol: gKartWario314Wheel1
+wario_kart_frame318:
+  symbol: gKartWario318
   type: texture
-  offset: 0x766C8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame314_wheel2:
-  symbol: gKartWario314Wheel2
-  type: texture
-  offset: 0x766C8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame314_wheel3:
-  symbol: gKartWario314Wheel3
-  type: texture
-  offset: 0x766C8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame315_wheel0:
-  symbol: gKartWario315Wheel0
-  type: texture
-  offset: 0x76CF8
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13885,43 +13060,10 @@ wario_kart_frame315_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame315_wheel1:
-  symbol: gKartWario315Wheel1
+wario_kart_frame319:
+  symbol: gKartWario319
   type: texture
-  offset: 0x76CF8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame315_wheel2:
-  symbol: gKartWario315Wheel2
-  type: texture
-  offset: 0x76CF8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame315_wheel3:
-  symbol: gKartWario315Wheel3
-  type: texture
-  offset: 0x76CF8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame316_wheel0:
-  symbol: gKartWario316Wheel0
-  type: texture
-  offset: 0x7731C
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13929,43 +13071,10 @@ wario_kart_frame316_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame316_wheel1:
-  symbol: gKartWario316Wheel1
+wario_kart_frame320:
+  symbol: gKartWario320
   type: texture
-  offset: 0x7731C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame316_wheel2:
-  symbol: gKartWario316Wheel2
-  type: texture
-  offset: 0x7731C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame316_wheel3:
-  symbol: gKartWario316Wheel3
-  type: texture
-  offset: 0x7731C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame317_wheel0:
-  symbol: gKartWario317Wheel0
-  type: texture
-  offset: 0x778D4
+  offset: 0x6D1CC
   ctype: u8
   mio0: true
   width: 64
@@ -13973,171 +13082,6 @@ wario_kart_frame317_wheel0:
   format: CI8
   tlut_symbol: wario_kart_palette
   tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame317_wheel1:
-  symbol: gKartWario317Wheel1
-  type: texture
-  offset: 0x778D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame317_wheel2:
-  symbol: gKartWario317Wheel2
-  type: texture
-  offset: 0x778D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame317_wheel3:
-  symbol: gKartWario317Wheel3
-  type: texture
-  offset: 0x778D4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame318_wheel0:
-  symbol: gKartWario318Wheel0
-  type: texture
-  offset: 0x77E3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame318_wheel1:
-  symbol: gKartWario318Wheel1
-  type: texture
-  offset: 0x77E3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame318_wheel2:
-  symbol: gKartWario318Wheel2
-  type: texture
-  offset: 0x77E3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame318_wheel3:
-  symbol: gKartWario318Wheel3
-  type: texture
-  offset: 0x77E3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame319_wheel0:
-  symbol: gKartWario319Wheel0
-  type: texture
-  offset: 0x783C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame319_wheel1:
-  symbol: gKartWario319Wheel1
-  type: texture
-  offset: 0x783C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame319_wheel2:
-  symbol: gKartWario319Wheel2
-  type: texture
-  offset: 0x783C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame319_wheel3:
-  symbol: gKartWario319Wheel3
-  type: texture
-  offset: 0x783C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
-wario_kart_frame320_wheel0:
-  symbol: gKartWario320Wheel0
-  type: texture
-  offset: 0x78990
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_0
-wario_kart_frame320_wheel1:
-  symbol: gKartWario320Wheel1
-  type: texture
-  offset: 0x78990
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_1
-wario_kart_frame320_wheel2:
-  symbol: gKartWario320Wheel2
-  type: texture
-  offset: 0x78990
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_2
-wario_kart_frame320_wheel3:
-  symbol: gKartWario320Wheel3
-  type: texture
-  offset: 0x78990
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: wario_kart_palette
-  tlut_wheel: wario_kart_000_tlut_wheel_3
 wario_kart_000_tlut_wheel_0:
   symbol: gKartWario000TlutWheel0
   type: texture

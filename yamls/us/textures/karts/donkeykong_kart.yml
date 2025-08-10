@@ -12730,8 +12730,8 @@ donkeykong_kart_frame288_wheel3:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_288_tlut_wheel_3
-donkeykong_kart_frame289_wheel0:
-  symbol: gKartDK289Wheel0
+donkeykong_kart_frame289:
+  symbol: gKartDK289
   type: texture
   offset: 0x80058
   ctype: u8
@@ -12741,8 +12741,8 @@ donkeykong_kart_frame289_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame289_wheel1:
-  symbol: gKartDK289Wheel1
+donkeykong_kart_frame290:
+  symbol: gKartDK290
   type: texture
   offset: 0x80058
   ctype: u8
@@ -12751,9 +12751,9 @@ donkeykong_kart_frame289_wheel1:
   height: 64
   format: CI8
   tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame289_wheel2:
-  symbol: gKartDK289Wheel2
+  tlut_wheel: donkeykong_kart_000_tlut_wheel_0
+donkeykong_kart_frame291:
+  symbol: gKartDK291
   type: texture
   offset: 0x80058
   ctype: u8
@@ -12762,9 +12762,9 @@ donkeykong_kart_frame289_wheel2:
   height: 64
   format: CI8
   tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame289_wheel3:
-  symbol: gKartDK289Wheel3
+  tlut_wheel: donkeykong_kart_000_tlut_wheel_0
+donkeykong_kart_frame292:
+  symbol: gKartDK292
   type: texture
   offset: 0x80058
   ctype: u8
@@ -12773,11 +12773,11 @@ donkeykong_kart_frame289_wheel3:
   height: 64
   format: CI8
   tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame290_wheel0:
-  symbol: gKartDK290Wheel0
+  tlut_wheel: donkeykong_kart_000_tlut_wheel_0
+donkeykong_kart_frame293:
+  symbol: gKartDK293
   type: texture
-  offset: 0x80708
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -12785,43 +12785,10 @@ donkeykong_kart_frame290_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame290_wheel1:
-  symbol: gKartDK290Wheel1
+donkeykong_kart_frame294:
+  symbol: gKartDK294
   type: texture
-  offset: 0x80708
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame290_wheel2:
-  symbol: gKartDK290Wheel2
-  type: texture
-  offset: 0x80708
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame290_wheel3:
-  symbol: gKartDK290Wheel3
-  type: texture
-  offset: 0x80708
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame291_wheel0:
-  symbol: gKartDK291Wheel0
-  type: texture
-  offset: 0x80DC8
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -12829,43 +12796,10 @@ donkeykong_kart_frame291_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame291_wheel1:
-  symbol: gKartDK291Wheel1
+donkeykong_kart_frame295:
+  symbol: gKartDK295
   type: texture
-  offset: 0x80DC8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame291_wheel2:
-  symbol: gKartDK291Wheel2
-  type: texture
-  offset: 0x80DC8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame291_wheel3:
-  symbol: gKartDK291Wheel3
-  type: texture
-  offset: 0x80DC8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame292_wheel0:
-  symbol: gKartDK292Wheel0
-  type: texture
-  offset: 0x8146C
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -12873,43 +12807,10 @@ donkeykong_kart_frame292_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame292_wheel1:
-  symbol: gKartDK292Wheel1
+donkeykong_kart_frame296:
+  symbol: gKartDK296
   type: texture
-  offset: 0x8146C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame292_wheel2:
-  symbol: gKartDK292Wheel2
-  type: texture
-  offset: 0x8146C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame292_wheel3:
-  symbol: gKartDK292Wheel3
-  type: texture
-  offset: 0x8146C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame293_wheel0:
-  symbol: gKartDK293Wheel0
-  type: texture
-  offset: 0x81B3C
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -12917,43 +12818,10 @@ donkeykong_kart_frame293_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame293_wheel1:
-  symbol: gKartDK293Wheel1
+donkeykong_kart_frame297:
+  symbol: gKartDK297
   type: texture
-  offset: 0x81B3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame293_wheel2:
-  symbol: gKartDK293Wheel2
-  type: texture
-  offset: 0x81B3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame293_wheel3:
-  symbol: gKartDK293Wheel3
-  type: texture
-  offset: 0x81B3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame294_wheel0:
-  symbol: gKartDK294Wheel0
-  type: texture
-  offset: 0x82190
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -12961,43 +12829,10 @@ donkeykong_kart_frame294_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame294_wheel1:
-  symbol: gKartDK294Wheel1
+donkeykong_kart_frame298:
+  symbol: gKartDK298
   type: texture
-  offset: 0x82190
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame294_wheel2:
-  symbol: gKartDK294Wheel2
-  type: texture
-  offset: 0x82190
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame294_wheel3:
-  symbol: gKartDK294Wheel3
-  type: texture
-  offset: 0x82190
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame295_wheel0:
-  symbol: gKartDK295Wheel0
-  type: texture
-  offset: 0x82818
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13005,43 +12840,10 @@ donkeykong_kart_frame295_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame295_wheel1:
-  symbol: gKartDK295Wheel1
+donkeykong_kart_frame299:
+  symbol: gKartDK299
   type: texture
-  offset: 0x82818
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame295_wheel2:
-  symbol: gKartDK295Wheel2
-  type: texture
-  offset: 0x82818
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame295_wheel3:
-  symbol: gKartDK295Wheel3
-  type: texture
-  offset: 0x82818
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame296_wheel0:
-  symbol: gKartDK296Wheel0
-  type: texture
-  offset: 0x82F00
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13049,43 +12851,10 @@ donkeykong_kart_frame296_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame296_wheel1:
-  symbol: gKartDK296Wheel1
+donkeykong_kart_frame300:
+  symbol: gKartDK300
   type: texture
-  offset: 0x82F00
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame296_wheel2:
-  symbol: gKartDK296Wheel2
-  type: texture
-  offset: 0x82F00
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame296_wheel3:
-  symbol: gKartDK296Wheel3
-  type: texture
-  offset: 0x82F00
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame297_wheel0:
-  symbol: gKartDK297Wheel0
-  type: texture
-  offset: 0x83644
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13093,43 +12862,10 @@ donkeykong_kart_frame297_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame297_wheel1:
-  symbol: gKartDK297Wheel1
+donkeykong_kart_frame301:
+  symbol: gKartDK301
   type: texture
-  offset: 0x83644
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame297_wheel2:
-  symbol: gKartDK297Wheel2
-  type: texture
-  offset: 0x83644
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame297_wheel3:
-  symbol: gKartDK297Wheel3
-  type: texture
-  offset: 0x83644
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame298_wheel0:
-  symbol: gKartDK298Wheel0
-  type: texture
-  offset: 0x83D1C
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13137,43 +12873,10 @@ donkeykong_kart_frame298_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame298_wheel1:
-  symbol: gKartDK298Wheel1
+donkeykong_kart_frame302:
+  symbol: gKartDK302
   type: texture
-  offset: 0x83D1C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame298_wheel2:
-  symbol: gKartDK298Wheel2
-  type: texture
-  offset: 0x83D1C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame298_wheel3:
-  symbol: gKartDK298Wheel3
-  type: texture
-  offset: 0x83D1C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame299_wheel0:
-  symbol: gKartDK299Wheel0
-  type: texture
-  offset: 0x84468
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13181,43 +12884,10 @@ donkeykong_kart_frame299_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame299_wheel1:
-  symbol: gKartDK299Wheel1
+donkeykong_kart_frame303:
+  symbol: gKartDK303
   type: texture
-  offset: 0x84468
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame299_wheel2:
-  symbol: gKartDK299Wheel2
-  type: texture
-  offset: 0x84468
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame299_wheel3:
-  symbol: gKartDK299Wheel3
-  type: texture
-  offset: 0x84468
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame300_wheel0:
-  symbol: gKartDK300Wheel0
-  type: texture
-  offset: 0x84B4C
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13225,43 +12895,10 @@ donkeykong_kart_frame300_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame300_wheel1:
-  symbol: gKartDK300Wheel1
+donkeykong_kart_frame304:
+  symbol: gKartDK304
   type: texture
-  offset: 0x84B4C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame300_wheel2:
-  symbol: gKartDK300Wheel2
-  type: texture
-  offset: 0x84B4C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame300_wheel3:
-  symbol: gKartDK300Wheel3
-  type: texture
-  offset: 0x84B4C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame301_wheel0:
-  symbol: gKartDK301Wheel0
-  type: texture
-  offset: 0x851E8
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13269,43 +12906,10 @@ donkeykong_kart_frame301_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame301_wheel1:
-  symbol: gKartDK301Wheel1
+donkeykong_kart_frame305:
+  symbol: gKartDK305
   type: texture
-  offset: 0x851E8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame301_wheel2:
-  symbol: gKartDK301Wheel2
-  type: texture
-  offset: 0x851E8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame301_wheel3:
-  symbol: gKartDK301Wheel3
-  type: texture
-  offset: 0x851E8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame302_wheel0:
-  symbol: gKartDK302Wheel0
-  type: texture
-  offset: 0x858B0
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13313,43 +12917,10 @@ donkeykong_kart_frame302_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame302_wheel1:
-  symbol: gKartDK302Wheel1
+donkeykong_kart_frame306:
+  symbol: gKartDK306
   type: texture
-  offset: 0x858B0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame302_wheel2:
-  symbol: gKartDK302Wheel2
-  type: texture
-  offset: 0x858B0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame302_wheel3:
-  symbol: gKartDK302Wheel3
-  type: texture
-  offset: 0x858B0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame303_wheel0:
-  symbol: gKartDK303Wheel0
-  type: texture
-  offset: 0x85FD0
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13357,43 +12928,10 @@ donkeykong_kart_frame303_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame303_wheel1:
-  symbol: gKartDK303Wheel1
+donkeykong_kart_frame307:
+  symbol: gKartDK307
   type: texture
-  offset: 0x85FD0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame303_wheel2:
-  symbol: gKartDK303Wheel2
-  type: texture
-  offset: 0x85FD0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame303_wheel3:
-  symbol: gKartDK303Wheel3
-  type: texture
-  offset: 0x85FD0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame304_wheel0:
-  symbol: gKartDK304Wheel0
-  type: texture
-  offset: 0x8673C
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13401,43 +12939,10 @@ donkeykong_kart_frame304_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame304_wheel1:
-  symbol: gKartDK304Wheel1
+donkeykong_kart_frame308:
+  symbol: gKartDK308
   type: texture
-  offset: 0x8673C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame304_wheel2:
-  symbol: gKartDK304Wheel2
-  type: texture
-  offset: 0x8673C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame304_wheel3:
-  symbol: gKartDK304Wheel3
-  type: texture
-  offset: 0x8673C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame305_wheel0:
-  symbol: gKartDK305Wheel0
-  type: texture
-  offset: 0x86EB4
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13445,43 +12950,10 @@ donkeykong_kart_frame305_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame305_wheel1:
-  symbol: gKartDK305Wheel1
+donkeykong_kart_frame309:
+  symbol: gKartDK309
   type: texture
-  offset: 0x86EB4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame305_wheel2:
-  symbol: gKartDK305Wheel2
-  type: texture
-  offset: 0x86EB4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame305_wheel3:
-  symbol: gKartDK305Wheel3
-  type: texture
-  offset: 0x86EB4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame306_wheel0:
-  symbol: gKartDK306Wheel0
-  type: texture
-  offset: 0x874B8
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13489,43 +12961,10 @@ donkeykong_kart_frame306_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame306_wheel1:
-  symbol: gKartDK306Wheel1
+donkeykong_kart_frame310:
+  symbol: gKartDK310
   type: texture
-  offset: 0x874B8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame306_wheel2:
-  symbol: gKartDK306Wheel2
-  type: texture
-  offset: 0x874B8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame306_wheel3:
-  symbol: gKartDK306Wheel3
-  type: texture
-  offset: 0x874B8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame307_wheel0:
-  symbol: gKartDK307Wheel0
-  type: texture
-  offset: 0x87BA0
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13533,43 +12972,10 @@ donkeykong_kart_frame307_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame307_wheel1:
-  symbol: gKartDK307Wheel1
+donkeykong_kart_frame311:
+  symbol: gKartDK311
   type: texture
-  offset: 0x87BA0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame307_wheel2:
-  symbol: gKartDK307Wheel2
-  type: texture
-  offset: 0x87BA0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame307_wheel3:
-  symbol: gKartDK307Wheel3
-  type: texture
-  offset: 0x87BA0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame308_wheel0:
-  symbol: gKartDK308Wheel0
-  type: texture
-  offset: 0x88264
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13577,43 +12983,10 @@ donkeykong_kart_frame308_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame308_wheel1:
-  symbol: gKartDK308Wheel1
+donkeykong_kart_frame312:
+  symbol: gKartDK312
   type: texture
-  offset: 0x88264
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame308_wheel2:
-  symbol: gKartDK308Wheel2
-  type: texture
-  offset: 0x88264
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame308_wheel3:
-  symbol: gKartDK308Wheel3
-  type: texture
-  offset: 0x88264
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame309_wheel0:
-  symbol: gKartDK309Wheel0
-  type: texture
-  offset: 0x88908
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13621,43 +12994,10 @@ donkeykong_kart_frame309_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame309_wheel1:
-  symbol: gKartDK309Wheel1
+donkeykong_kart_frame313:
+  symbol: gKartDK313
   type: texture
-  offset: 0x88908
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame309_wheel2:
-  symbol: gKartDK309Wheel2
-  type: texture
-  offset: 0x88908
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame309_wheel3:
-  symbol: gKartDK309Wheel3
-  type: texture
-  offset: 0x88908
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame310_wheel0:
-  symbol: gKartDK310Wheel0
-  type: texture
-  offset: 0x88F94
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13665,43 +13005,10 @@ donkeykong_kart_frame310_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame310_wheel1:
-  symbol: gKartDK310Wheel1
+donkeykong_kart_frame314:
+  symbol: gKartDK314
   type: texture
-  offset: 0x88F94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame310_wheel2:
-  symbol: gKartDK310Wheel2
-  type: texture
-  offset: 0x88F94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame310_wheel3:
-  symbol: gKartDK310Wheel3
-  type: texture
-  offset: 0x88F94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame311_wheel0:
-  symbol: gKartDK311Wheel0
-  type: texture
-  offset: 0x89600
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13709,43 +13016,10 @@ donkeykong_kart_frame311_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame311_wheel1:
-  symbol: gKartDK311Wheel1
+donkeykong_kart_frame315:
+  symbol: gKartDK315
   type: texture
-  offset: 0x89600
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame311_wheel2:
-  symbol: gKartDK311Wheel2
-  type: texture
-  offset: 0x89600
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame311_wheel3:
-  symbol: gKartDK311Wheel3
-  type: texture
-  offset: 0x89600
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame312_wheel0:
-  symbol: gKartDK312Wheel0
-  type: texture
-  offset: 0x89D18
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13753,43 +13027,10 @@ donkeykong_kart_frame312_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame312_wheel1:
-  symbol: gKartDK312Wheel1
+donkeykong_kart_frame316:
+  symbol: gKartDK316
   type: texture
-  offset: 0x89D18
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame312_wheel2:
-  symbol: gKartDK312Wheel2
-  type: texture
-  offset: 0x89D18
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame312_wheel3:
-  symbol: gKartDK312Wheel3
-  type: texture
-  offset: 0x89D18
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame313_wheel0:
-  symbol: gKartDK313Wheel0
-  type: texture
-  offset: 0x8A434
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13797,43 +13038,10 @@ donkeykong_kart_frame313_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame313_wheel1:
-  symbol: gKartDK313Wheel1
+donkeykong_kart_frame317:
+  symbol: gKartDK317
   type: texture
-  offset: 0x8A434
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame313_wheel2:
-  symbol: gKartDK313Wheel2
-  type: texture
-  offset: 0x8A434
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame313_wheel3:
-  symbol: gKartDK313Wheel3
-  type: texture
-  offset: 0x8A434
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame314_wheel0:
-  symbol: gKartDK314Wheel0
-  type: texture
-  offset: 0x8AB10
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13841,43 +13049,10 @@ donkeykong_kart_frame314_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame314_wheel1:
-  symbol: gKartDK314Wheel1
+donkeykong_kart_frame318:
+  symbol: gKartDK318
   type: texture
-  offset: 0x8AB10
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame314_wheel2:
-  symbol: gKartDK314Wheel2
-  type: texture
-  offset: 0x8AB10
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame314_wheel3:
-  symbol: gKartDK314Wheel3
-  type: texture
-  offset: 0x8AB10
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame315_wheel0:
-  symbol: gKartDK315Wheel0
-  type: texture
-  offset: 0x8B284
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13885,43 +13060,10 @@ donkeykong_kart_frame315_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame315_wheel1:
-  symbol: gKartDK315Wheel1
+donkeykong_kart_frame319:
+  symbol: gKartDK319
   type: texture
-  offset: 0x8B284
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame315_wheel2:
-  symbol: gKartDK315Wheel2
-  type: texture
-  offset: 0x8B284
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame315_wheel3:
-  symbol: gKartDK315Wheel3
-  type: texture
-  offset: 0x8B284
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame316_wheel0:
-  symbol: gKartDK316Wheel0
-  type: texture
-  offset: 0x8B9AC
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13929,43 +13071,10 @@ donkeykong_kart_frame316_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame316_wheel1:
-  symbol: gKartDK316Wheel1
+donkeykong_kart_frame320:
+  symbol: gKartDK320
   type: texture
-  offset: 0x8B9AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame316_wheel2:
-  symbol: gKartDK316Wheel2
-  type: texture
-  offset: 0x8B9AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame316_wheel3:
-  symbol: gKartDK316Wheel3
-  type: texture
-  offset: 0x8B9AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame317_wheel0:
-  symbol: gKartDK317Wheel0
-  type: texture
-  offset: 0x8C03C
+  offset: 0x80058
   ctype: u8
   mio0: true
   width: 64
@@ -13973,171 +13082,6 @@ donkeykong_kart_frame317_wheel0:
   format: CI8
   tlut_symbol: donkeykong_kart_palette
   tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame317_wheel1:
-  symbol: gKartDK317Wheel1
-  type: texture
-  offset: 0x8C03C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame317_wheel2:
-  symbol: gKartDK317Wheel2
-  type: texture
-  offset: 0x8C03C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame317_wheel3:
-  symbol: gKartDK317Wheel3
-  type: texture
-  offset: 0x8C03C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame318_wheel0:
-  symbol: gKartDK318Wheel0
-  type: texture
-  offset: 0x8C704
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame318_wheel1:
-  symbol: gKartDK318Wheel1
-  type: texture
-  offset: 0x8C704
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame318_wheel2:
-  symbol: gKartDK318Wheel2
-  type: texture
-  offset: 0x8C704
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame318_wheel3:
-  symbol: gKartDK318Wheel3
-  type: texture
-  offset: 0x8C704
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame319_wheel0:
-  symbol: gKartDK319Wheel0
-  type: texture
-  offset: 0x8CDCC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame319_wheel1:
-  symbol: gKartDK319Wheel1
-  type: texture
-  offset: 0x8CDCC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame319_wheel2:
-  symbol: gKartDK319Wheel2
-  type: texture
-  offset: 0x8CDCC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame319_wheel3:
-  symbol: gKartDK319Wheel3
-  type: texture
-  offset: 0x8CDCC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
-donkeykong_kart_frame320_wheel0:
-  symbol: gKartDK320Wheel0
-  type: texture
-  offset: 0x8D524
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_0
-donkeykong_kart_frame320_wheel1:
-  symbol: gKartDK320Wheel1
-  type: texture
-  offset: 0x8D524
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_1
-donkeykong_kart_frame320_wheel2:
-  symbol: gKartDK320Wheel2
-  type: texture
-  offset: 0x8D524
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_2
-donkeykong_kart_frame320_wheel3:
-  symbol: gKartDK320Wheel3
-  type: texture
-  offset: 0x8D524
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: donkeykong_kart_palette
-  tlut_wheel: donkeykong_kart_000_tlut_wheel_3
 donkeykong_kart_000_tlut_wheel_0:
   symbol: gKartDK000TlutWheel0
   type: texture

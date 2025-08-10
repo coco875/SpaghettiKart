@@ -12730,8 +12730,8 @@ bowser_kart_frame288_wheel3:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_288_tlut_wheel_3
-bowser_kart_frame289_wheel0:
-  symbol: gKartBowser289Wheel0
+bowser_kart_frame289:
+  symbol: gKartBowser289
   type: texture
   offset: 0x8D338
   ctype: u8
@@ -12741,8 +12741,8 @@ bowser_kart_frame289_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame289_wheel1:
-  symbol: gKartBowser289Wheel1
+bowser_kart_frame290:
+  symbol: gKartBowser290
   type: texture
   offset: 0x8D338
   ctype: u8
@@ -12751,9 +12751,9 @@ bowser_kart_frame289_wheel1:
   height: 64
   format: CI8
   tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame289_wheel2:
-  symbol: gKartBowser289Wheel2
+  tlut_wheel: bowser_kart_000_tlut_wheel_0
+bowser_kart_frame291:
+  symbol: gKartBowser291
   type: texture
   offset: 0x8D338
   ctype: u8
@@ -12762,9 +12762,9 @@ bowser_kart_frame289_wheel2:
   height: 64
   format: CI8
   tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame289_wheel3:
-  symbol: gKartBowser289Wheel3
+  tlut_wheel: bowser_kart_000_tlut_wheel_0
+bowser_kart_frame292:
+  symbol: gKartBowser292
   type: texture
   offset: 0x8D338
   ctype: u8
@@ -12773,11 +12773,11 @@ bowser_kart_frame289_wheel3:
   height: 64
   format: CI8
   tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame290_wheel0:
-  symbol: gKartBowser290Wheel0
+  tlut_wheel: bowser_kart_000_tlut_wheel_0
+bowser_kart_frame293:
+  symbol: gKartBowser293
   type: texture
-  offset: 0x8D99C
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -12785,43 +12785,10 @@ bowser_kart_frame290_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame290_wheel1:
-  symbol: gKartBowser290Wheel1
+bowser_kart_frame294:
+  symbol: gKartBowser294
   type: texture
-  offset: 0x8D99C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame290_wheel2:
-  symbol: gKartBowser290Wheel2
-  type: texture
-  offset: 0x8D99C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame290_wheel3:
-  symbol: gKartBowser290Wheel3
-  type: texture
-  offset: 0x8D99C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame291_wheel0:
-  symbol: gKartBowser291Wheel0
-  type: texture
-  offset: 0x8E028
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -12829,43 +12796,10 @@ bowser_kart_frame291_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame291_wheel1:
-  symbol: gKartBowser291Wheel1
+bowser_kart_frame295:
+  symbol: gKartBowser295
   type: texture
-  offset: 0x8E028
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame291_wheel2:
-  symbol: gKartBowser291Wheel2
-  type: texture
-  offset: 0x8E028
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame291_wheel3:
-  symbol: gKartBowser291Wheel3
-  type: texture
-  offset: 0x8E028
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame292_wheel0:
-  symbol: gKartBowser292Wheel0
-  type: texture
-  offset: 0x8E740
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -12873,43 +12807,10 @@ bowser_kart_frame292_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame292_wheel1:
-  symbol: gKartBowser292Wheel1
+bowser_kart_frame296:
+  symbol: gKartBowser296
   type: texture
-  offset: 0x8E740
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame292_wheel2:
-  symbol: gKartBowser292Wheel2
-  type: texture
-  offset: 0x8E740
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame292_wheel3:
-  symbol: gKartBowser292Wheel3
-  type: texture
-  offset: 0x8E740
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame293_wheel0:
-  symbol: gKartBowser293Wheel0
-  type: texture
-  offset: 0x8EF00
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -12917,43 +12818,10 @@ bowser_kart_frame293_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame293_wheel1:
-  symbol: gKartBowser293Wheel1
+bowser_kart_frame297:
+  symbol: gKartBowser297
   type: texture
-  offset: 0x8EF00
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame293_wheel2:
-  symbol: gKartBowser293Wheel2
-  type: texture
-  offset: 0x8EF00
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame293_wheel3:
-  symbol: gKartBowser293Wheel3
-  type: texture
-  offset: 0x8EF00
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame294_wheel0:
-  symbol: gKartBowser294Wheel0
-  type: texture
-  offset: 0x8F600
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -12961,43 +12829,10 @@ bowser_kart_frame294_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame294_wheel1:
-  symbol: gKartBowser294Wheel1
+bowser_kart_frame298:
+  symbol: gKartBowser298
   type: texture
-  offset: 0x8F600
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame294_wheel2:
-  symbol: gKartBowser294Wheel2
-  type: texture
-  offset: 0x8F600
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame294_wheel3:
-  symbol: gKartBowser294Wheel3
-  type: texture
-  offset: 0x8F600
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame295_wheel0:
-  symbol: gKartBowser295Wheel0
-  type: texture
-  offset: 0x8FDAC
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13005,43 +12840,10 @@ bowser_kart_frame295_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame295_wheel1:
-  symbol: gKartBowser295Wheel1
+bowser_kart_frame299:
+  symbol: gKartBowser299
   type: texture
-  offset: 0x8FDAC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame295_wheel2:
-  symbol: gKartBowser295Wheel2
-  type: texture
-  offset: 0x8FDAC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame295_wheel3:
-  symbol: gKartBowser295Wheel3
-  type: texture
-  offset: 0x8FDAC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame296_wheel0:
-  symbol: gKartBowser296Wheel0
-  type: texture
-  offset: 0x9058C
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13049,43 +12851,10 @@ bowser_kart_frame296_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame296_wheel1:
-  symbol: gKartBowser296Wheel1
+bowser_kart_frame300:
+  symbol: gKartBowser300
   type: texture
-  offset: 0x9058C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame296_wheel2:
-  symbol: gKartBowser296Wheel2
-  type: texture
-  offset: 0x9058C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame296_wheel3:
-  symbol: gKartBowser296Wheel3
-  type: texture
-  offset: 0x9058C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame297_wheel0:
-  symbol: gKartBowser297Wheel0
-  type: texture
-  offset: 0x90D50
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13093,43 +12862,10 @@ bowser_kart_frame297_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame297_wheel1:
-  symbol: gKartBowser297Wheel1
+bowser_kart_frame301:
+  symbol: gKartBowser301
   type: texture
-  offset: 0x90D50
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame297_wheel2:
-  symbol: gKartBowser297Wheel2
-  type: texture
-  offset: 0x90D50
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame297_wheel3:
-  symbol: gKartBowser297Wheel3
-  type: texture
-  offset: 0x90D50
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame298_wheel0:
-  symbol: gKartBowser298Wheel0
-  type: texture
-  offset: 0x91460
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13137,43 +12873,10 @@ bowser_kart_frame298_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame298_wheel1:
-  symbol: gKartBowser298Wheel1
+bowser_kart_frame302:
+  symbol: gKartBowser302
   type: texture
-  offset: 0x91460
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame298_wheel2:
-  symbol: gKartBowser298Wheel2
-  type: texture
-  offset: 0x91460
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame298_wheel3:
-  symbol: gKartBowser298Wheel3
-  type: texture
-  offset: 0x91460
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame299_wheel0:
-  symbol: gKartBowser299Wheel0
-  type: texture
-  offset: 0x91B94
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13181,43 +12884,10 @@ bowser_kart_frame299_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame299_wheel1:
-  symbol: gKartBowser299Wheel1
+bowser_kart_frame303:
+  symbol: gKartBowser303
   type: texture
-  offset: 0x91B94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame299_wheel2:
-  symbol: gKartBowser299Wheel2
-  type: texture
-  offset: 0x91B94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame299_wheel3:
-  symbol: gKartBowser299Wheel3
-  type: texture
-  offset: 0x91B94
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame300_wheel0:
-  symbol: gKartBowser300Wheel0
-  type: texture
-  offset: 0x922F8
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13225,43 +12895,10 @@ bowser_kart_frame300_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame300_wheel1:
-  symbol: gKartBowser300Wheel1
+bowser_kart_frame304:
+  symbol: gKartBowser304
   type: texture
-  offset: 0x922F8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame300_wheel2:
-  symbol: gKartBowser300Wheel2
-  type: texture
-  offset: 0x922F8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame300_wheel3:
-  symbol: gKartBowser300Wheel3
-  type: texture
-  offset: 0x922F8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame301_wheel0:
-  symbol: gKartBowser301Wheel0
-  type: texture
-  offset: 0x92A78
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13269,43 +12906,10 @@ bowser_kart_frame301_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame301_wheel1:
-  symbol: gKartBowser301Wheel1
+bowser_kart_frame305:
+  symbol: gKartBowser305
   type: texture
-  offset: 0x92A78
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame301_wheel2:
-  symbol: gKartBowser301Wheel2
-  type: texture
-  offset: 0x92A78
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame301_wheel3:
-  symbol: gKartBowser301Wheel3
-  type: texture
-  offset: 0x92A78
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame302_wheel0:
-  symbol: gKartBowser302Wheel0
-  type: texture
-  offset: 0x9322C
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13313,43 +12917,10 @@ bowser_kart_frame302_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame302_wheel1:
-  symbol: gKartBowser302Wheel1
+bowser_kart_frame306:
+  symbol: gKartBowser306
   type: texture
-  offset: 0x9322C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame302_wheel2:
-  symbol: gKartBowser302Wheel2
-  type: texture
-  offset: 0x9322C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame302_wheel3:
-  symbol: gKartBowser302Wheel3
-  type: texture
-  offset: 0x9322C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame303_wheel0:
-  symbol: gKartBowser303Wheel0
-  type: texture
-  offset: 0x93A64
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13357,43 +12928,10 @@ bowser_kart_frame303_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame303_wheel1:
-  symbol: gKartBowser303Wheel1
+bowser_kart_frame307:
+  symbol: gKartBowser307
   type: texture
-  offset: 0x93A64
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame303_wheel2:
-  symbol: gKartBowser303Wheel2
-  type: texture
-  offset: 0x93A64
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame303_wheel3:
-  symbol: gKartBowser303Wheel3
-  type: texture
-  offset: 0x93A64
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame304_wheel0:
-  symbol: gKartBowser304Wheel0
-  type: texture
-  offset: 0x9423C
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13401,43 +12939,10 @@ bowser_kart_frame304_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame304_wheel1:
-  symbol: gKartBowser304Wheel1
+bowser_kart_frame308:
+  symbol: gKartBowser308
   type: texture
-  offset: 0x9423C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame304_wheel2:
-  symbol: gKartBowser304Wheel2
-  type: texture
-  offset: 0x9423C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame304_wheel3:
-  symbol: gKartBowser304Wheel3
-  type: texture
-  offset: 0x9423C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame305_wheel0:
-  symbol: gKartBowser305Wheel0
-  type: texture
-  offset: 0x94988
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13445,43 +12950,10 @@ bowser_kart_frame305_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame305_wheel1:
-  symbol: gKartBowser305Wheel1
+bowser_kart_frame309:
+  symbol: gKartBowser309
   type: texture
-  offset: 0x94988
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame305_wheel2:
-  symbol: gKartBowser305Wheel2
-  type: texture
-  offset: 0x94988
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame305_wheel3:
-  symbol: gKartBowser305Wheel3
-  type: texture
-  offset: 0x94988
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame306_wheel0:
-  symbol: gKartBowser306Wheel0
-  type: texture
-  offset: 0x94F58
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13489,43 +12961,10 @@ bowser_kart_frame306_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame306_wheel1:
-  symbol: gKartBowser306Wheel1
+bowser_kart_frame310:
+  symbol: gKartBowser310
   type: texture
-  offset: 0x94F58
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame306_wheel2:
-  symbol: gKartBowser306Wheel2
-  type: texture
-  offset: 0x94F58
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame306_wheel3:
-  symbol: gKartBowser306Wheel3
-  type: texture
-  offset: 0x94F58
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame307_wheel0:
-  symbol: gKartBowser307Wheel0
-  type: texture
-  offset: 0x95660
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13533,43 +12972,10 @@ bowser_kart_frame307_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame307_wheel1:
-  symbol: gKartBowser307Wheel1
+bowser_kart_frame311:
+  symbol: gKartBowser311
   type: texture
-  offset: 0x95660
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame307_wheel2:
-  symbol: gKartBowser307Wheel2
-  type: texture
-  offset: 0x95660
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame307_wheel3:
-  symbol: gKartBowser307Wheel3
-  type: texture
-  offset: 0x95660
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame308_wheel0:
-  symbol: gKartBowser308Wheel0
-  type: texture
-  offset: 0x95DF0
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13577,43 +12983,10 @@ bowser_kart_frame308_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame308_wheel1:
-  symbol: gKartBowser308Wheel1
+bowser_kart_frame312:
+  symbol: gKartBowser312
   type: texture
-  offset: 0x95DF0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame308_wheel2:
-  symbol: gKartBowser308Wheel2
-  type: texture
-  offset: 0x95DF0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame308_wheel3:
-  symbol: gKartBowser308Wheel3
-  type: texture
-  offset: 0x95DF0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame309_wheel0:
-  symbol: gKartBowser309Wheel0
-  type: texture
-  offset: 0x965D0
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13621,43 +12994,10 @@ bowser_kart_frame309_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame309_wheel1:
-  symbol: gKartBowser309Wheel1
+bowser_kart_frame313:
+  symbol: gKartBowser313
   type: texture
-  offset: 0x965D0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame309_wheel2:
-  symbol: gKartBowser309Wheel2
-  type: texture
-  offset: 0x965D0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame309_wheel3:
-  symbol: gKartBowser309Wheel3
-  type: texture
-  offset: 0x965D0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame310_wheel0:
-  symbol: gKartBowser310Wheel0
-  type: texture
-  offset: 0x96D0C
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13665,43 +13005,10 @@ bowser_kart_frame310_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame310_wheel1:
-  symbol: gKartBowser310Wheel1
+bowser_kart_frame314:
+  symbol: gKartBowser314
   type: texture
-  offset: 0x96D0C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame310_wheel2:
-  symbol: gKartBowser310Wheel2
-  type: texture
-  offset: 0x96D0C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame310_wheel3:
-  symbol: gKartBowser310Wheel3
-  type: texture
-  offset: 0x96D0C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame311_wheel0:
-  symbol: gKartBowser311Wheel0
-  type: texture
-  offset: 0x974C4
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13709,43 +13016,10 @@ bowser_kart_frame311_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame311_wheel1:
-  symbol: gKartBowser311Wheel1
+bowser_kart_frame315:
+  symbol: gKartBowser315
   type: texture
-  offset: 0x974C4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame311_wheel2:
-  symbol: gKartBowser311Wheel2
-  type: texture
-  offset: 0x974C4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame311_wheel3:
-  symbol: gKartBowser311Wheel3
-  type: texture
-  offset: 0x974C4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame312_wheel0:
-  symbol: gKartBowser312Wheel0
-  type: texture
-  offset: 0x97CBC
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13753,43 +13027,10 @@ bowser_kart_frame312_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame312_wheel1:
-  symbol: gKartBowser312Wheel1
+bowser_kart_frame316:
+  symbol: gKartBowser316
   type: texture
-  offset: 0x97CBC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame312_wheel2:
-  symbol: gKartBowser312Wheel2
-  type: texture
-  offset: 0x97CBC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame312_wheel3:
-  symbol: gKartBowser312Wheel3
-  type: texture
-  offset: 0x97CBC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame313_wheel0:
-  symbol: gKartBowser313Wheel0
-  type: texture
-  offset: 0x98454
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13797,43 +13038,10 @@ bowser_kart_frame313_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame313_wheel1:
-  symbol: gKartBowser313Wheel1
+bowser_kart_frame317:
+  symbol: gKartBowser317
   type: texture
-  offset: 0x98454
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame313_wheel2:
-  symbol: gKartBowser313Wheel2
-  type: texture
-  offset: 0x98454
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame313_wheel3:
-  symbol: gKartBowser313Wheel3
-  type: texture
-  offset: 0x98454
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame314_wheel0:
-  symbol: gKartBowser314Wheel0
-  type: texture
-  offset: 0x98B6C
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13841,43 +13049,10 @@ bowser_kart_frame314_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame314_wheel1:
-  symbol: gKartBowser314Wheel1
+bowser_kart_frame318:
+  symbol: gKartBowser318
   type: texture
-  offset: 0x98B6C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame314_wheel2:
-  symbol: gKartBowser314Wheel2
-  type: texture
-  offset: 0x98B6C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame314_wheel3:
-  symbol: gKartBowser314Wheel3
-  type: texture
-  offset: 0x98B6C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame315_wheel0:
-  symbol: gKartBowser315Wheel0
-  type: texture
-  offset: 0x9929C
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13885,43 +13060,10 @@ bowser_kart_frame315_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame315_wheel1:
-  symbol: gKartBowser315Wheel1
+bowser_kart_frame319:
+  symbol: gKartBowser319
   type: texture
-  offset: 0x9929C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame315_wheel2:
-  symbol: gKartBowser315Wheel2
-  type: texture
-  offset: 0x9929C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame315_wheel3:
-  symbol: gKartBowser315Wheel3
-  type: texture
-  offset: 0x9929C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame316_wheel0:
-  symbol: gKartBowser316Wheel0
-  type: texture
-  offset: 0x999E4
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13929,43 +13071,10 @@ bowser_kart_frame316_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame316_wheel1:
-  symbol: gKartBowser316Wheel1
+bowser_kart_frame320:
+  symbol: gKartBowser320
   type: texture
-  offset: 0x999E4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame316_wheel2:
-  symbol: gKartBowser316Wheel2
-  type: texture
-  offset: 0x999E4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame316_wheel3:
-  symbol: gKartBowser316Wheel3
-  type: texture
-  offset: 0x999E4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame317_wheel0:
-  symbol: gKartBowser317Wheel0
-  type: texture
-  offset: 0x9A16C
+  offset: 0x8D338
   ctype: u8
   mio0: true
   width: 64
@@ -13973,171 +13082,6 @@ bowser_kart_frame317_wheel0:
   format: CI8
   tlut_symbol: bowser_kart_palette
   tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame317_wheel1:
-  symbol: gKartBowser317Wheel1
-  type: texture
-  offset: 0x9A16C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame317_wheel2:
-  symbol: gKartBowser317Wheel2
-  type: texture
-  offset: 0x9A16C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame317_wheel3:
-  symbol: gKartBowser317Wheel3
-  type: texture
-  offset: 0x9A16C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame318_wheel0:
-  symbol: gKartBowser318Wheel0
-  type: texture
-  offset: 0x9A8CC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame318_wheel1:
-  symbol: gKartBowser318Wheel1
-  type: texture
-  offset: 0x9A8CC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame318_wheel2:
-  symbol: gKartBowser318Wheel2
-  type: texture
-  offset: 0x9A8CC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame318_wheel3:
-  symbol: gKartBowser318Wheel3
-  type: texture
-  offset: 0x9A8CC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame319_wheel0:
-  symbol: gKartBowser319Wheel0
-  type: texture
-  offset: 0x9B0D0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame319_wheel1:
-  symbol: gKartBowser319Wheel1
-  type: texture
-  offset: 0x9B0D0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame319_wheel2:
-  symbol: gKartBowser319Wheel2
-  type: texture
-  offset: 0x9B0D0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame319_wheel3:
-  symbol: gKartBowser319Wheel3
-  type: texture
-  offset: 0x9B0D0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
-bowser_kart_frame320_wheel0:
-  symbol: gKartBowser320Wheel0
-  type: texture
-  offset: 0x9B8C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_0
-bowser_kart_frame320_wheel1:
-  symbol: gKartBowser320Wheel1
-  type: texture
-  offset: 0x9B8C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_1
-bowser_kart_frame320_wheel2:
-  symbol: gKartBowser320Wheel2
-  type: texture
-  offset: 0x9B8C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_2
-bowser_kart_frame320_wheel3:
-  symbol: gKartBowser320Wheel3
-  type: texture
-  offset: 0x9B8C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: bowser_kart_palette
-  tlut_wheel: bowser_kart_000_tlut_wheel_3
 bowser_kart_000_tlut_wheel_0:
   symbol: gKartBowser000TlutWheel0
   type: texture

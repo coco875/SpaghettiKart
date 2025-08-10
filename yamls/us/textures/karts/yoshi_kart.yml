@@ -12730,8 +12730,8 @@ yoshi_kart_frame288_wheel3:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_288_tlut_wheel_3
-yoshi_kart_frame289_wheel0:
-  symbol: gKartYoshi289Wheel0
+yoshi_kart_frame289:
+  symbol: gKartYoshi289
   type: texture
   offset: 0x67ED0
   ctype: u8
@@ -12741,8 +12741,8 @@ yoshi_kart_frame289_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame289_wheel1:
-  symbol: gKartYoshi289Wheel1
+yoshi_kart_frame290:
+  symbol: gKartYoshi290
   type: texture
   offset: 0x67ED0
   ctype: u8
@@ -12751,9 +12751,9 @@ yoshi_kart_frame289_wheel1:
   height: 64
   format: CI8
   tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame289_wheel2:
-  symbol: gKartYoshi289Wheel2
+  tlut_wheel: yoshi_kart_000_tlut_wheel_0
+yoshi_kart_frame291:
+  symbol: gKartYoshi291
   type: texture
   offset: 0x67ED0
   ctype: u8
@@ -12762,9 +12762,9 @@ yoshi_kart_frame289_wheel2:
   height: 64
   format: CI8
   tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame289_wheel3:
-  symbol: gKartYoshi289Wheel3
+  tlut_wheel: yoshi_kart_000_tlut_wheel_0
+yoshi_kart_frame292:
+  symbol: gKartYoshi292
   type: texture
   offset: 0x67ED0
   ctype: u8
@@ -12773,11 +12773,11 @@ yoshi_kart_frame289_wheel3:
   height: 64
   format: CI8
   tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame290_wheel0:
-  symbol: gKartYoshi290Wheel0
+  tlut_wheel: yoshi_kart_000_tlut_wheel_0
+yoshi_kart_frame293:
+  symbol: gKartYoshi293
   type: texture
-  offset: 0x683C8
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -12785,43 +12785,10 @@ yoshi_kart_frame290_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame290_wheel1:
-  symbol: gKartYoshi290Wheel1
+yoshi_kart_frame294:
+  symbol: gKartYoshi294
   type: texture
-  offset: 0x683C8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame290_wheel2:
-  symbol: gKartYoshi290Wheel2
-  type: texture
-  offset: 0x683C8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame290_wheel3:
-  symbol: gKartYoshi290Wheel3
-  type: texture
-  offset: 0x683C8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame291_wheel0:
-  symbol: gKartYoshi291Wheel0
-  type: texture
-  offset: 0x6890C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -12829,43 +12796,10 @@ yoshi_kart_frame291_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame291_wheel1:
-  symbol: gKartYoshi291Wheel1
+yoshi_kart_frame295:
+  symbol: gKartYoshi295
   type: texture
-  offset: 0x6890C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame291_wheel2:
-  symbol: gKartYoshi291Wheel2
-  type: texture
-  offset: 0x6890C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame291_wheel3:
-  symbol: gKartYoshi291Wheel3
-  type: texture
-  offset: 0x6890C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame292_wheel0:
-  symbol: gKartYoshi292Wheel0
-  type: texture
-  offset: 0x68ED4
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -12873,43 +12807,10 @@ yoshi_kart_frame292_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame292_wheel1:
-  symbol: gKartYoshi292Wheel1
+yoshi_kart_frame296:
+  symbol: gKartYoshi296
   type: texture
-  offset: 0x68ED4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame292_wheel2:
-  symbol: gKartYoshi292Wheel2
-  type: texture
-  offset: 0x68ED4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame292_wheel3:
-  symbol: gKartYoshi292Wheel3
-  type: texture
-  offset: 0x68ED4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame293_wheel0:
-  symbol: gKartYoshi293Wheel0
-  type: texture
-  offset: 0x69560
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -12917,43 +12818,10 @@ yoshi_kart_frame293_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame293_wheel1:
-  symbol: gKartYoshi293Wheel1
+yoshi_kart_frame297:
+  symbol: gKartYoshi297
   type: texture
-  offset: 0x69560
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame293_wheel2:
-  symbol: gKartYoshi293Wheel2
-  type: texture
-  offset: 0x69560
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame293_wheel3:
-  symbol: gKartYoshi293Wheel3
-  type: texture
-  offset: 0x69560
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame294_wheel0:
-  symbol: gKartYoshi294Wheel0
-  type: texture
-  offset: 0x69B54
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -12961,43 +12829,10 @@ yoshi_kart_frame294_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame294_wheel1:
-  symbol: gKartYoshi294Wheel1
+yoshi_kart_frame298:
+  symbol: gKartYoshi298
   type: texture
-  offset: 0x69B54
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame294_wheel2:
-  symbol: gKartYoshi294Wheel2
-  type: texture
-  offset: 0x69B54
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame294_wheel3:
-  symbol: gKartYoshi294Wheel3
-  type: texture
-  offset: 0x69B54
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame295_wheel0:
-  symbol: gKartYoshi295Wheel0
-  type: texture
-  offset: 0x6A158
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13005,43 +12840,10 @@ yoshi_kart_frame295_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame295_wheel1:
-  symbol: gKartYoshi295Wheel1
+yoshi_kart_frame299:
+  symbol: gKartYoshi299
   type: texture
-  offset: 0x6A158
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame295_wheel2:
-  symbol: gKartYoshi295Wheel2
-  type: texture
-  offset: 0x6A158
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame295_wheel3:
-  symbol: gKartYoshi295Wheel3
-  type: texture
-  offset: 0x6A158
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame296_wheel0:
-  symbol: gKartYoshi296Wheel0
-  type: texture
-  offset: 0x6A71C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13049,43 +12851,10 @@ yoshi_kart_frame296_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame296_wheel1:
-  symbol: gKartYoshi296Wheel1
+yoshi_kart_frame300:
+  symbol: gKartYoshi300
   type: texture
-  offset: 0x6A71C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame296_wheel2:
-  symbol: gKartYoshi296Wheel2
-  type: texture
-  offset: 0x6A71C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame296_wheel3:
-  symbol: gKartYoshi296Wheel3
-  type: texture
-  offset: 0x6A71C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame297_wheel0:
-  symbol: gKartYoshi297Wheel0
-  type: texture
-  offset: 0x6AC60
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13093,43 +12862,10 @@ yoshi_kart_frame297_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame297_wheel1:
-  symbol: gKartYoshi297Wheel1
+yoshi_kart_frame301:
+  symbol: gKartYoshi301
   type: texture
-  offset: 0x6AC60
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame297_wheel2:
-  symbol: gKartYoshi297Wheel2
-  type: texture
-  offset: 0x6AC60
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame297_wheel3:
-  symbol: gKartYoshi297Wheel3
-  type: texture
-  offset: 0x6AC60
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame298_wheel0:
-  symbol: gKartYoshi298Wheel0
-  type: texture
-  offset: 0x6B11C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13137,43 +12873,10 @@ yoshi_kart_frame298_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame298_wheel1:
-  symbol: gKartYoshi298Wheel1
+yoshi_kart_frame302:
+  symbol: gKartYoshi302
   type: texture
-  offset: 0x6B11C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame298_wheel2:
-  symbol: gKartYoshi298Wheel2
-  type: texture
-  offset: 0x6B11C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame298_wheel3:
-  symbol: gKartYoshi298Wheel3
-  type: texture
-  offset: 0x6B11C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame299_wheel0:
-  symbol: gKartYoshi299Wheel0
-  type: texture
-  offset: 0x6B678
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13181,43 +12884,10 @@ yoshi_kart_frame299_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame299_wheel1:
-  symbol: gKartYoshi299Wheel1
+yoshi_kart_frame303:
+  symbol: gKartYoshi303
   type: texture
-  offset: 0x6B678
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame299_wheel2:
-  symbol: gKartYoshi299Wheel2
-  type: texture
-  offset: 0x6B678
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame299_wheel3:
-  symbol: gKartYoshi299Wheel3
-  type: texture
-  offset: 0x6B678
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame300_wheel0:
-  symbol: gKartYoshi300Wheel0
-  type: texture
-  offset: 0x6BC2C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13225,43 +12895,10 @@ yoshi_kart_frame300_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame300_wheel1:
-  symbol: gKartYoshi300Wheel1
+yoshi_kart_frame304:
+  symbol: gKartYoshi304
   type: texture
-  offset: 0x6BC2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame300_wheel2:
-  symbol: gKartYoshi300Wheel2
-  type: texture
-  offset: 0x6BC2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame300_wheel3:
-  symbol: gKartYoshi300Wheel3
-  type: texture
-  offset: 0x6BC2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame301_wheel0:
-  symbol: gKartYoshi301Wheel0
-  type: texture
-  offset: 0x6C20C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13269,43 +12906,10 @@ yoshi_kart_frame301_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame301_wheel1:
-  symbol: gKartYoshi301Wheel1
+yoshi_kart_frame305:
+  symbol: gKartYoshi305
   type: texture
-  offset: 0x6C20C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame301_wheel2:
-  symbol: gKartYoshi301Wheel2
-  type: texture
-  offset: 0x6C20C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame301_wheel3:
-  symbol: gKartYoshi301Wheel3
-  type: texture
-  offset: 0x6C20C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame302_wheel0:
-  symbol: gKartYoshi302Wheel0
-  type: texture
-  offset: 0x6C7C0
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13313,43 +12917,10 @@ yoshi_kart_frame302_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame302_wheel1:
-  symbol: gKartYoshi302Wheel1
+yoshi_kart_frame306:
+  symbol: gKartYoshi306
   type: texture
-  offset: 0x6C7C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame302_wheel2:
-  symbol: gKartYoshi302Wheel2
-  type: texture
-  offset: 0x6C7C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame302_wheel3:
-  symbol: gKartYoshi302Wheel3
-  type: texture
-  offset: 0x6C7C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame303_wheel0:
-  symbol: gKartYoshi303Wheel0
-  type: texture
-  offset: 0x6CD68
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13357,43 +12928,10 @@ yoshi_kart_frame303_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame303_wheel1:
-  symbol: gKartYoshi303Wheel1
+yoshi_kart_frame307:
+  symbol: gKartYoshi307
   type: texture
-  offset: 0x6CD68
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame303_wheel2:
-  symbol: gKartYoshi303Wheel2
-  type: texture
-  offset: 0x6CD68
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame303_wheel3:
-  symbol: gKartYoshi303Wheel3
-  type: texture
-  offset: 0x6CD68
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame304_wheel0:
-  symbol: gKartYoshi304Wheel0
-  type: texture
-  offset: 0x6D310
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13401,43 +12939,10 @@ yoshi_kart_frame304_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame304_wheel1:
-  symbol: gKartYoshi304Wheel1
+yoshi_kart_frame308:
+  symbol: gKartYoshi308
   type: texture
-  offset: 0x6D310
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame304_wheel2:
-  symbol: gKartYoshi304Wheel2
-  type: texture
-  offset: 0x6D310
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame304_wheel3:
-  symbol: gKartYoshi304Wheel3
-  type: texture
-  offset: 0x6D310
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame305_wheel0:
-  symbol: gKartYoshi305Wheel0
-  type: texture
-  offset: 0x6D864
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13445,43 +12950,10 @@ yoshi_kart_frame305_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame305_wheel1:
-  symbol: gKartYoshi305Wheel1
+yoshi_kart_frame309:
+  symbol: gKartYoshi309
   type: texture
-  offset: 0x6D864
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame305_wheel2:
-  symbol: gKartYoshi305Wheel2
-  type: texture
-  offset: 0x6D864
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame305_wheel3:
-  symbol: gKartYoshi305Wheel3
-  type: texture
-  offset: 0x6D864
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame306_wheel0:
-  symbol: gKartYoshi306Wheel0
-  type: texture
-  offset: 0x6DCC4
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13489,43 +12961,10 @@ yoshi_kart_frame306_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame306_wheel1:
-  symbol: gKartYoshi306Wheel1
+yoshi_kart_frame310:
+  symbol: gKartYoshi310
   type: texture
-  offset: 0x6DCC4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame306_wheel2:
-  symbol: gKartYoshi306Wheel2
-  type: texture
-  offset: 0x6DCC4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame306_wheel3:
-  symbol: gKartYoshi306Wheel3
-  type: texture
-  offset: 0x6DCC4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame307_wheel0:
-  symbol: gKartYoshi307Wheel0
-  type: texture
-  offset: 0x6E21C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13533,43 +12972,10 @@ yoshi_kart_frame307_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame307_wheel1:
-  symbol: gKartYoshi307Wheel1
+yoshi_kart_frame311:
+  symbol: gKartYoshi311
   type: texture
-  offset: 0x6E21C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame307_wheel2:
-  symbol: gKartYoshi307Wheel2
-  type: texture
-  offset: 0x6E21C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame307_wheel3:
-  symbol: gKartYoshi307Wheel3
-  type: texture
-  offset: 0x6E21C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame308_wheel0:
-  symbol: gKartYoshi308Wheel0
-  type: texture
-  offset: 0x6E830
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13577,43 +12983,10 @@ yoshi_kart_frame308_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame308_wheel1:
-  symbol: gKartYoshi308Wheel1
+yoshi_kart_frame312:
+  symbol: gKartYoshi312
   type: texture
-  offset: 0x6E830
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame308_wheel2:
-  symbol: gKartYoshi308Wheel2
-  type: texture
-  offset: 0x6E830
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame308_wheel3:
-  symbol: gKartYoshi308Wheel3
-  type: texture
-  offset: 0x6E830
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame309_wheel0:
-  symbol: gKartYoshi309Wheel0
-  type: texture
-  offset: 0x6EE7C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13621,43 +12994,10 @@ yoshi_kart_frame309_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame309_wheel1:
-  symbol: gKartYoshi309Wheel1
+yoshi_kart_frame313:
+  symbol: gKartYoshi313
   type: texture
-  offset: 0x6EE7C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame309_wheel2:
-  symbol: gKartYoshi309Wheel2
-  type: texture
-  offset: 0x6EE7C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame309_wheel3:
-  symbol: gKartYoshi309Wheel3
-  type: texture
-  offset: 0x6EE7C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame310_wheel0:
-  symbol: gKartYoshi310Wheel0
-  type: texture
-  offset: 0x6F470
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13665,43 +13005,10 @@ yoshi_kart_frame310_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame310_wheel1:
-  symbol: gKartYoshi310Wheel1
+yoshi_kart_frame314:
+  symbol: gKartYoshi314
   type: texture
-  offset: 0x6F470
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame310_wheel2:
-  symbol: gKartYoshi310Wheel2
-  type: texture
-  offset: 0x6F470
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame310_wheel3:
-  symbol: gKartYoshi310Wheel3
-  type: texture
-  offset: 0x6F470
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame311_wheel0:
-  symbol: gKartYoshi311Wheel0
-  type: texture
-  offset: 0x6FA84
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13709,43 +13016,10 @@ yoshi_kart_frame311_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame311_wheel1:
-  symbol: gKartYoshi311Wheel1
+yoshi_kart_frame315:
+  symbol: gKartYoshi315
   type: texture
-  offset: 0x6FA84
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame311_wheel2:
-  symbol: gKartYoshi311Wheel2
-  type: texture
-  offset: 0x6FA84
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame311_wheel3:
-  symbol: gKartYoshi311Wheel3
-  type: texture
-  offset: 0x6FA84
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame312_wheel0:
-  symbol: gKartYoshi312Wheel0
-  type: texture
-  offset: 0x7003C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13753,43 +13027,10 @@ yoshi_kart_frame312_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame312_wheel1:
-  symbol: gKartYoshi312Wheel1
+yoshi_kart_frame316:
+  symbol: gKartYoshi316
   type: texture
-  offset: 0x7003C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame312_wheel2:
-  symbol: gKartYoshi312Wheel2
-  type: texture
-  offset: 0x7003C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame312_wheel3:
-  symbol: gKartYoshi312Wheel3
-  type: texture
-  offset: 0x7003C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame313_wheel0:
-  symbol: gKartYoshi313Wheel0
-  type: texture
-  offset: 0x70550
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13797,43 +13038,10 @@ yoshi_kart_frame313_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame313_wheel1:
-  symbol: gKartYoshi313Wheel1
+yoshi_kart_frame317:
+  symbol: gKartYoshi317
   type: texture
-  offset: 0x70550
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame313_wheel2:
-  symbol: gKartYoshi313Wheel2
-  type: texture
-  offset: 0x70550
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame313_wheel3:
-  symbol: gKartYoshi313Wheel3
-  type: texture
-  offset: 0x70550
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame314_wheel0:
-  symbol: gKartYoshi314Wheel0
-  type: texture
-  offset: 0x70A20
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13841,43 +13049,10 @@ yoshi_kart_frame314_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame314_wheel1:
-  symbol: gKartYoshi314Wheel1
+yoshi_kart_frame318:
+  symbol: gKartYoshi318
   type: texture
-  offset: 0x70A20
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame314_wheel2:
-  symbol: gKartYoshi314Wheel2
-  type: texture
-  offset: 0x70A20
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame314_wheel3:
-  symbol: gKartYoshi314Wheel3
-  type: texture
-  offset: 0x70A20
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame315_wheel0:
-  symbol: gKartYoshi315Wheel0
-  type: texture
-  offset: 0x70F80
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13885,43 +13060,10 @@ yoshi_kart_frame315_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame315_wheel1:
-  symbol: gKartYoshi315Wheel1
+yoshi_kart_frame319:
+  symbol: gKartYoshi319
   type: texture
-  offset: 0x70F80
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame315_wheel2:
-  symbol: gKartYoshi315Wheel2
-  type: texture
-  offset: 0x70F80
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame315_wheel3:
-  symbol: gKartYoshi315Wheel3
-  type: texture
-  offset: 0x70F80
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame316_wheel0:
-  symbol: gKartYoshi316Wheel0
-  type: texture
-  offset: 0x7150C
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13929,43 +13071,10 @@ yoshi_kart_frame316_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame316_wheel1:
-  symbol: gKartYoshi316Wheel1
+yoshi_kart_frame320:
+  symbol: gKartYoshi320
   type: texture
-  offset: 0x7150C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame316_wheel2:
-  symbol: gKartYoshi316Wheel2
-  type: texture
-  offset: 0x7150C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame316_wheel3:
-  symbol: gKartYoshi316Wheel3
-  type: texture
-  offset: 0x7150C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame317_wheel0:
-  symbol: gKartYoshi317Wheel0
-  type: texture
-  offset: 0x71AC4
+  offset: 0x67ED0
   ctype: u8
   mio0: true
   width: 64
@@ -13973,171 +13082,6 @@ yoshi_kart_frame317_wheel0:
   format: CI8
   tlut_symbol: yoshi_kart_palette
   tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame317_wheel1:
-  symbol: gKartYoshi317Wheel1
-  type: texture
-  offset: 0x71AC4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame317_wheel2:
-  symbol: gKartYoshi317Wheel2
-  type: texture
-  offset: 0x71AC4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame317_wheel3:
-  symbol: gKartYoshi317Wheel3
-  type: texture
-  offset: 0x71AC4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame318_wheel0:
-  symbol: gKartYoshi318Wheel0
-  type: texture
-  offset: 0x7208C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame318_wheel1:
-  symbol: gKartYoshi318Wheel1
-  type: texture
-  offset: 0x7208C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame318_wheel2:
-  symbol: gKartYoshi318Wheel2
-  type: texture
-  offset: 0x7208C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame318_wheel3:
-  symbol: gKartYoshi318Wheel3
-  type: texture
-  offset: 0x7208C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame319_wheel0:
-  symbol: gKartYoshi319Wheel0
-  type: texture
-  offset: 0x72634
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame319_wheel1:
-  symbol: gKartYoshi319Wheel1
-  type: texture
-  offset: 0x72634
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame319_wheel2:
-  symbol: gKartYoshi319Wheel2
-  type: texture
-  offset: 0x72634
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame319_wheel3:
-  symbol: gKartYoshi319Wheel3
-  type: texture
-  offset: 0x72634
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
-yoshi_kart_frame320_wheel0:
-  symbol: gKartYoshi320Wheel0
-  type: texture
-  offset: 0x72C08
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_0
-yoshi_kart_frame320_wheel1:
-  symbol: gKartYoshi320Wheel1
-  type: texture
-  offset: 0x72C08
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_1
-yoshi_kart_frame320_wheel2:
-  symbol: gKartYoshi320Wheel2
-  type: texture
-  offset: 0x72C08
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_2
-yoshi_kart_frame320_wheel3:
-  symbol: gKartYoshi320Wheel3
-  type: texture
-  offset: 0x72C08
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: yoshi_kart_palette
-  tlut_wheel: yoshi_kart_000_tlut_wheel_3
 yoshi_kart_000_tlut_wheel_0:
   symbol: gKartYoshi000TlutWheel0
   type: texture

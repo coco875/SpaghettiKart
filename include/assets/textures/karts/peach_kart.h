@@ -5,11 +5,11 @@
 
 static const ALIGN_ASSET(2) char gKartPeach000Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame000_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach000Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame000_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach000Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame000_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach000Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame000_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach000Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame000_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach000Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame000_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach001Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame001_wheel0";
 
@@ -19,35 +19,35 @@ static const ALIGN_ASSET(2) char gKartPeach001Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach001Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame001_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach002Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame002_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach002Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame002_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach002Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame002_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach002Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame002_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach002Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame002_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach002Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame002_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach002Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame002_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach003Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame003_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach003Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame003_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach003Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame003_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach003Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame003_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach003Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame003_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach004Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame004_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach004Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame004_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach004Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame004_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach003Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame003_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach004Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame004_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach005Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame005_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach004Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame004_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach004Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame004_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach004Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame004_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach005Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame005_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach005Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame005_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach005Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame005_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach005Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame005_wheel0";
 
@@ -61,33 +61,33 @@ static const ALIGN_ASSET(2) char gKartPeach006Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach007Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame007_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach007Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame007_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach007Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame007_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach007Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame007_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach007Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame007_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach007Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame007_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach008Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame008_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach008Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame008_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach008Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame008_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach008Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame008_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach008Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame008_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach008Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame008_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach009Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame009_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach009Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame009_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach009Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame009_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach009Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame009_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach009Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame009_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach009Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame009_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach010Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame010_wheel1";
-
 static const ALIGN_ASSET(2) char gKartPeach010Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame010_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach010Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame010_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach010Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame010_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach010Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame010_wheel2";
 
@@ -109,35 +109,35 @@ static const ALIGN_ASSET(2) char gKartPeach012Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach013Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame013_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach013Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame013_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach013Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame013_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach013Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame013_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach013Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame013_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach014Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame014_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach014Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame014_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach013Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame013_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach014Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame014_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach014Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame014_wheel1";
 
+static const ALIGN_ASSET(2) char gKartPeach014Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame014_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach014Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame014_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach015Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame015_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach015Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame015_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach015Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame015_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach015Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame015_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach016Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame016_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach015Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame015_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach016Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame016_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach015Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame015_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach016Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame016_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach016Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame016_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach016Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame016_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach016Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame016_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach016Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame016_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach017Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame017_wheel0";
 
@@ -155,21 +155,21 @@ static const ALIGN_ASSET(2) char gKartPeach018Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach018Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame018_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach019Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame019_wheel0";
+
 static const ALIGN_ASSET(2) char gKartPeach019Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame019_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach019Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame019_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach019Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame019_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach019Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame019_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach020Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame020_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach020Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame020_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach020Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame020_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach020Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame020_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach020Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame020_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach020Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame020_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach021Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame021_wheel0";
 
@@ -179,13 +179,13 @@ static const ALIGN_ASSET(2) char gKartPeach021Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach021Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame021_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach022Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame022_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach022Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame022_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach022Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame022_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach022Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame022_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach022Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame022_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach022Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame022_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach022Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame022_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach023Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame023_wheel0";
 
@@ -197,19 +197,19 @@ static const ALIGN_ASSET(2) char gKartPeach023Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach024Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame024_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach024Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame024_wheel2";
-
 static const ALIGN_ASSET(2) char gKartPeach024Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame024_wheel1";
 
+static const ALIGN_ASSET(2) char gKartPeach024Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame024_wheel2";
+
 static const ALIGN_ASSET(2) char gKartPeach024Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame024_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach025Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame025_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach025Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame025_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach025Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame025_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach025Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame025_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach025Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame025_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach026Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame026_wheel0";
 
@@ -221,27 +221,27 @@ static const ALIGN_ASSET(2) char gKartPeach026Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach027Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame027_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach027Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame027_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach027Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame027_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach027Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame027_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach027Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame027_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach027Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame027_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach028Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame028_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach028Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame028_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach028Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame028_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach028Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame028_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach028Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame028_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach028Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame028_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach029Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame029_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach029Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame029_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach029Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame029_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach029Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame029_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach029Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame029_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach030Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame030_wheel0";
 
@@ -253,11 +253,11 @@ static const ALIGN_ASSET(2) char gKartPeach030Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach031Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame031_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach031Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame031_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach031Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame031_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach031Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame031_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach031Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame031_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach031Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame031_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach032Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame032_wheel0";
 
@@ -267,11 +267,11 @@ static const ALIGN_ASSET(2) char gKartPeach032Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach032Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame032_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach033Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame033_wheel0";
+
 static const ALIGN_ASSET(2) char gKartPeach033Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame033_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach033Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame033_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach033Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame033_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach033Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame033_wheel1";
 
@@ -283,13 +283,13 @@ static const ALIGN_ASSET(2) char gKartPeach034Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach034Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame034_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach035Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame035_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach035Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame035_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach035Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame035_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach035Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame035_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach035Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame035_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach035Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame035_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach035Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame035_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach036Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame036_wheel0";
 
@@ -301,35 +301,35 @@ static const ALIGN_ASSET(2) char gKartPeach036Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach037Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame037_wheel0";
 
+static const ALIGN_ASSET(2) char gKartPeach037Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame037_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach037Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame037_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach037Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame037_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach037Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame037_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach038Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame038_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach038Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame038_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach038Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame038_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach038Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame038_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach038Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame038_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach039Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame039_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach038Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach039Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame039_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach039Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame039_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach039Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame039_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach039Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame039_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach040Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame040_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach040Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame040_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach039Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame039_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach040Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame040_wheel1";
 
+static const ALIGN_ASSET(2) char gKartPeach040Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame040_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach040Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame040_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach040Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame040_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach041Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame041_wheel0";
 
@@ -339,13 +339,13 @@ static const ALIGN_ASSET(2) char gKartPeach041Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach041Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame041_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach042Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame042_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach042Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame042_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach042Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame042_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach042Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame042_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach042Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame042_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach042Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame042_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach043Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame043_wheel0";
 
@@ -355,13 +355,13 @@ static const ALIGN_ASSET(2) char gKartPeach043Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach043Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame043_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach044Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame044_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach044Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame044_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach044Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame044_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach044Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame044_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach044Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame044_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach044Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame044_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach044Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame044_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach045Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame045_wheel0";
 
@@ -371,13 +371,13 @@ static const ALIGN_ASSET(2) char gKartPeach045Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach045Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame045_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach046Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame046_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach046Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame046_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach046Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame046_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach046Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame046_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach046Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame046_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach046Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame046_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach046Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame046_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach047Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame047_wheel0";
 
@@ -387,21 +387,21 @@ static const ALIGN_ASSET(2) char gKartPeach047Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach047Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame047_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach048Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame048_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach048Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame048_wheel2";
-
 static const ALIGN_ASSET(2) char gKartPeach048Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame048_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach048Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame048_wheel1";
 
+static const ALIGN_ASSET(2) char gKartPeach048Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame048_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach048Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame048_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach049Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame049_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach049Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame049_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach049Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame049_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach049Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame049_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach049Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame049_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach049Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame049_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach050Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame050_wheel0";
 
@@ -429,11 +429,11 @@ static const ALIGN_ASSET(2) char gKartPeach052Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach053Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame053_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach053Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame053_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach053Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame053_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach053Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame053_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach053Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame053_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach053Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame053_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach054Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame054_wheel0";
 
@@ -443,29 +443,29 @@ static const ALIGN_ASSET(2) char gKartPeach054Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach054Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame054_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach055Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame055_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach055Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame055_wheel2";
+
 static const ALIGN_ASSET(2) char gKartPeach055Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame055_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach055Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame055_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach055Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame055_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach055Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame055_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach056Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame056_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach056Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame056_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach056Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame056_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach056Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame056_wheel2";
-
 static const ALIGN_ASSET(2) char gKartPeach056Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame056_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach057Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame057_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach057Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame057_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach056Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame056_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach057Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame057_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach057Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame057_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach057Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame057_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach057Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame057_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach058Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame058_wheel0";
 
@@ -483,13 +483,13 @@ static const ALIGN_ASSET(2) char gKartPeach059Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach059Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame059_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach060Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame060_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach060Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame060_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach060Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame060_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach060Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame060_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach060Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame060_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach060Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame060_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach061Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame061_wheel0";
 
@@ -501,11 +501,11 @@ static const ALIGN_ASSET(2) char gKartPeach061Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach062Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame062_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach062Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame062_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach062Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame062_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach062Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame062_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach062Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame062_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach062Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame062_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach063Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame063_wheel0";
 
@@ -515,13 +515,13 @@ static const ALIGN_ASSET(2) char gKartPeach063Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach063Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame063_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach064Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame064_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach064Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame064_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach064Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame064_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach064Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame064_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach064Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame064_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach064Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame064_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach064Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame064_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach065Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame065_wheel0";
 
@@ -531,21 +531,21 @@ static const ALIGN_ASSET(2) char gKartPeach065Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach065Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame065_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach066Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame066_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach066Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame066_wheel2";
-
 static const ALIGN_ASSET(2) char gKartPeach066Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame066_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach066Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame066_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach067Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame067_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach066Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame066_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach067Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame067_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach066Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame066_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach067Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame067_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach067Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame067_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach067Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame067_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach067Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame067_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach067Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame067_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach068Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame068_wheel0";
 
@@ -555,13 +555,13 @@ static const ALIGN_ASSET(2) char gKartPeach068Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach068Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame068_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach069Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame069_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach069Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame069_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach069Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame069_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach069Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame069_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach069Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame069_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach069Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame069_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach070Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame070_wheel0";
 
@@ -571,13 +571,13 @@ static const ALIGN_ASSET(2) char gKartPeach070Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach070Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame070_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach071Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame071_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach071Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame071_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach071Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame071_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach071Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame071_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach071Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame071_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach071Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame071_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach072Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame072_wheel0";
 
@@ -587,9 +587,9 @@ static const ALIGN_ASSET(2) char gKartPeach072Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach072Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame072_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach073Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame073_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach073Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame073_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach073Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame073_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach073Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame073_wheel1";
 
@@ -611,29 +611,29 @@ static const ALIGN_ASSET(2) char gKartPeach075Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach075Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame075_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach076Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame076_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach076Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame076_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach076Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame076_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach076Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame076_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach076Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame076_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach076Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame076_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach077Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame077_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach076Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame076_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach077Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame077_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach077Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame077_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach077Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame077_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach077Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame077_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach078Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame078_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach078Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame078_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach077Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame077_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach078Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame078_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach078Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame078_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach078Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame078_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach078Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame078_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach079Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame079_wheel0";
 
@@ -645,35 +645,35 @@ static const ALIGN_ASSET(2) char gKartPeach079Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach080Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame080_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach080Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame080_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach080Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame080_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach080Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame080_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach080Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame080_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach080Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame080_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach081Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame081_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach081Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame081_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach081Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame081_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach081Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame081_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach081Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame081_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach081Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame081_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach082Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame082_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach082Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame082_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach082Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame082_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach082Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame082_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach082Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame082_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach082Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame082_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach083Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame083_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach083Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach083Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame083_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach083Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame083_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach083Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach084Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame084_wheel0";
 
@@ -685,35 +685,35 @@ static const ALIGN_ASSET(2) char gKartPeach084Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach085Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame085_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach085Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame085_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach085Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame085_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach085Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame085_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach085Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame085_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach085Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame085_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach086Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame086_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach086Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame086_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach086Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame086_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach086Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame086_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach086Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame086_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach086Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame086_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach087Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame087_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach087Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame087_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach087Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame087_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach087Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame087_wheel2";
 
+static const ALIGN_ASSET(2) char gKartPeach087Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame087_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach088Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame088_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach088Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame088_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach088Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame088_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach088Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame088_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach088Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame088_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach088Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame088_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach089Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame089_wheel0";
 
@@ -725,11 +725,11 @@ static const ALIGN_ASSET(2) char gKartPeach089Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach090Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame090_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach090Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame090_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach090Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame090_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach090Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame090_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach090Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame090_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach090Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame090_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach091Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame091_wheel0";
 
@@ -743,17 +743,17 @@ static const ALIGN_ASSET(2) char gKartPeach092Wheel0[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach092Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame092_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach092Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame092_wheel2";
-
 static const ALIGN_ASSET(2) char gKartPeach092Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame092_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach093Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame093_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach092Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame092_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach093Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame093_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach093Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame093_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach093Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame093_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach093Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame093_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach093Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame093_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach094Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame094_wheel0";
 
@@ -773,19 +773,19 @@ static const ALIGN_ASSET(2) char gKartPeach095Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach096Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame096_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach096Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame096_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach096Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame096_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach096Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame096_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach097Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame097_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach097Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame097_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach096Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame096_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach097Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame097_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach097Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame097_wheel1";
+
 static const ALIGN_ASSET(2) char gKartPeach097Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame097_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach097Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame097_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach098Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame098_wheel0";
 
@@ -813,11 +813,11 @@ static const ALIGN_ASSET(2) char gKartPeach100Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach101Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame101_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach101Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame101_wheel1";
-
 static const ALIGN_ASSET(2) char gKartPeach101Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame101_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach101Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame101_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach101Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame101_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach102Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame102_wheel0";
 
@@ -837,27 +837,27 @@ static const ALIGN_ASSET(2) char gKartPeach103Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach104Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame104_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach104Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame104_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach104Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame104_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach104Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame104_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach104Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame104_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach105Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame105_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach105Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame105_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach104Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame104_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach105Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame105_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach105Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame105_wheel1";
 
+static const ALIGN_ASSET(2) char gKartPeach105Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame105_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach105Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame105_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach106Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame106_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach106Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame106_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach106Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame106_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach106Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame106_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach106Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame106_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach106Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame106_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach107Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame107_wheel0";
 
@@ -869,11 +869,11 @@ static const ALIGN_ASSET(2) char gKartPeach107Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach108Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame108_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach108Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame108_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach108Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame108_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach108Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame108_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach108Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame108_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach108Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame108_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach109Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame109_wheel0";
 
@@ -887,17 +887,17 @@ static const ALIGN_ASSET(2) char gKartPeach110Wheel0[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach110Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame110_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach110Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame110_wheel2";
-
 static const ALIGN_ASSET(2) char gKartPeach110Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame110_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach111Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame111_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach110Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame110_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach111Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame111_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach111Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame111_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach111Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame111_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach111Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame111_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach112Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame112_wheel0";
 
@@ -907,29 +907,29 @@ static const ALIGN_ASSET(2) char gKartPeach112Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach112Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame112_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach113Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame113_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach113Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame113_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach113Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame113_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach113Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame113_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach114Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame114_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach113Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame113_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach114Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame114_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach113Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame113_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach114Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame114_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach114Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame114_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach115Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame115_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach114Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame114_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach115Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame115_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach114Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame114_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach115Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame115_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach115Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame115_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach115Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame115_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach115Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame115_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach116Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame116_wheel0";
 
@@ -949,27 +949,27 @@ static const ALIGN_ASSET(2) char gKartPeach117Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach118Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame118_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach118Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame118_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach118Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame118_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach118Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame118_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach118Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame118_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach118Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame118_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach119Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame119_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach119Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame119_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach119Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame119_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach119Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame119_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach119Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame119_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach119Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame119_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach120Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame120_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach120Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame120_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach120Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame120_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach120Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame120_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach120Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame120_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach120Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame120_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach121Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame121_wheel0";
 
@@ -981,11 +981,11 @@ static const ALIGN_ASSET(2) char gKartPeach121Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach122Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame122_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach122Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame122_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach122Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame122_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach122Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame122_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach122Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame122_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach122Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame122_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach123Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame123_wheel0";
 
@@ -995,13 +995,13 @@ static const ALIGN_ASSET(2) char gKartPeach123Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach123Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame123_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach124Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame124_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach124Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame124_wheel1";
-
 static const ALIGN_ASSET(2) char gKartPeach124Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame124_wheel0";
 
+static const ALIGN_ASSET(2) char gKartPeach124Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame124_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach124Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame124_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach124Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame124_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach125Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame125_wheel0";
 
@@ -1021,27 +1021,27 @@ static const ALIGN_ASSET(2) char gKartPeach126Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach127Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame127_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach127Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame127_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach127Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame127_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach127Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame127_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach127Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame127_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach127Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame127_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach128Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame128_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach128Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame128_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach128Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame128_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach128Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame128_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach128Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame128_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach128Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame128_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach129Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach129Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame129_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach129Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame129_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach129Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame129_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach129Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach130Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame130_wheel0";
 
@@ -1071,9 +1071,9 @@ static const ALIGN_ASSET(2) char gKartPeach133Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach133Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame133_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach133Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame133_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach133Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame133_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach133Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame133_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach134Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame134_wheel0";
 
@@ -1093,27 +1093,27 @@ static const ALIGN_ASSET(2) char gKartPeach135Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach136Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame136_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach136Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame136_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach136Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame136_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach136Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame136_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach136Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame136_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach136Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame136_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach137Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame137_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach137Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame137_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach137Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame137_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach137Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame137_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach137Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame137_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach137Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame137_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach138Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame138_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach138Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame138_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach138Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame138_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach138Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame138_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach138Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame138_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach138Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame138_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach139Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame139_wheel0";
 
@@ -1125,11 +1125,11 @@ static const ALIGN_ASSET(2) char gKartPeach139Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach140Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame140_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach140Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame140_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach140Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame140_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach140Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame140_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach140Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame140_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach140Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame140_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach141Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame141_wheel0";
 
@@ -1139,21 +1139,21 @@ static const ALIGN_ASSET(2) char gKartPeach141Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach141Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame141_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach142Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame142_wheel0";
+
 static const ALIGN_ASSET(2) char gKartPeach142Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame142_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach142Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame142_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach142Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame142_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach142Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame142_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach143Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame143_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach143Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame143_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach143Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame143_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach143Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame143_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach143Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame143_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach144Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame144_wheel0";
 
@@ -1163,29 +1163,29 @@ static const ALIGN_ASSET(2) char gKartPeach144Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach144Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame144_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach145Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame145_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach145Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame145_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach145Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame145_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach145Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame145_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach145Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame145_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach145Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame145_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach145Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame145_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach146Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame146_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach146Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame146_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach146Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame146_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach146Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame146_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach146Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame146_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach146Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame146_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach147Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame147_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach147Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame147_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach147Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame147_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach147Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame147_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach147Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame147_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach147Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame147_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach148Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame148_wheel0";
 
@@ -1195,13 +1195,13 @@ static const ALIGN_ASSET(2) char gKartPeach148Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach148Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame148_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach149Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame149_wheel0";
+
 static const ALIGN_ASSET(2) char gKartPeach149Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame149_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach149Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame149_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach149Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame149_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach149Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame149_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach150Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame150_wheel0";
 
@@ -1211,21 +1211,23 @@ static const ALIGN_ASSET(2) char gKartPeach150Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach150Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame150_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach151Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame151_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach151Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame151_wheel1";
-
 static const ALIGN_ASSET(2) char gKartPeach151Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame151_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach151Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame151_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach151Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame151_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach151Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame151_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach152Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame152_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach152Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame152_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach152Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame152_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach152Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame152_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach152Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame152_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach152Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame152_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach153Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame153_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach153Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame153_wheel1";
 
@@ -1233,39 +1235,39 @@ static const ALIGN_ASSET(2) char gKartPeach153Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach153Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame153_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach153Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame153_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach154Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame154_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach154Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame154_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach154Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame154_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach154Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame154_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach155Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame155_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach154Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame154_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach155Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame155_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach155Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame155_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach154Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame154_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach155Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame155_wheel0";
 
+static const ALIGN_ASSET(2) char gKartPeach155Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame155_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach155Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame155_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach155Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame155_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach156Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame156_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach156Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame156_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach156Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame156_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach156Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame156_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach156Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame156_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach157Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame157_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach157Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame157_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach157Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame157_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach157Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame157_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach157Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame157_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach157Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame157_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach157Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame157_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach158Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame158_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach158Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame158_wheel1";
 
@@ -1273,47 +1275,45 @@ static const ALIGN_ASSET(2) char gKartPeach158Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach158Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame158_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach158Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame158_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach159Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame159_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach159Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame159_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach159Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame159_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach159Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame159_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach159Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame159_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach159Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame159_wheel1";
+
 static const ALIGN_ASSET(2) char gKartPeach160Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame160_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach160Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame160_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach160Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame160_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach160Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame160_wheel1";
 
+static const ALIGN_ASSET(2) char gKartPeach160Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame160_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach160Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame160_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach161Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame161_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach161Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame161_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach161Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame161_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach161Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame161_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach161Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame161_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach161Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame161_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach162Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame162_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach162Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame162_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach162Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame162_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach162Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame162_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach162Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame162_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach162Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame162_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach163Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame163_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach163Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame163_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach163Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame163_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach163Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame163_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach163Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame163_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach163Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame163_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach164Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame164_wheel0";
 
@@ -1325,27 +1325,27 @@ static const ALIGN_ASSET(2) char gKartPeach164Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach165Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame165_wheel0";
 
+static const ALIGN_ASSET(2) char gKartPeach165Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame165_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach165Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame165_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach165Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame165_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach165Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame165_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach166Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame166_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach166Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame166_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach166Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame166_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach166Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame166_wheel2";
-
 static const ALIGN_ASSET(2) char gKartPeach166Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame166_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach167Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame167_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach167Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame167_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach166Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame166_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach167Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame167_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach167Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame167_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach167Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame167_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach167Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame167_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach168Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame168_wheel0";
 
@@ -1355,21 +1355,21 @@ static const ALIGN_ASSET(2) char gKartPeach168Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach168Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame168_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach169Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame169_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach169Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame169_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach169Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame169_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach169Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame169_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach169Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame169_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach169Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame169_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach170Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame170_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach169Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame169_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach170Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame170_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach170Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame170_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach170Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame170_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach170Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame170_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach170Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame170_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach171Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame171_wheel0";
 
@@ -1379,13 +1379,15 @@ static const ALIGN_ASSET(2) char gKartPeach171Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach171Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame171_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach172Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame172_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach172Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame172_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach172Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame172_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach172Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame172_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach172Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame172_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach172Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame172_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach173Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame173_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach173Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame173_wheel1";
 
@@ -1393,23 +1395,21 @@ static const ALIGN_ASSET(2) char gKartPeach173Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach173Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame173_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach173Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame173_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach174Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame174_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach174Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame174_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach174Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame174_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach174Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame174_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach174Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame174_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach174Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame174_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach175Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame175_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach175Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame175_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach175Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame175_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach175Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame175_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach175Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame175_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach175Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame175_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach176Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame176_wheel0";
 
@@ -1419,13 +1419,15 @@ static const ALIGN_ASSET(2) char gKartPeach176Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach176Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame176_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach177Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame177_wheel0";
+
 static const ALIGN_ASSET(2) char gKartPeach177Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame177_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach177Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame177_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach177Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame177_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach177Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame177_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach178Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame178_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach178Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame178_wheel1";
 
@@ -1433,23 +1435,21 @@ static const ALIGN_ASSET(2) char gKartPeach178Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach178Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame178_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach178Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame178_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach179Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame179_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach179Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame179_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach179Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame179_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach179Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame179_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach179Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame179_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach179Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame179_wheel1";
+
 static const ALIGN_ASSET(2) char gKartPeach180Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame180_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach180Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame180_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach180Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame180_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach180Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame180_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach180Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame180_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach180Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame180_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach181Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame181_wheel0";
 
@@ -1459,29 +1459,29 @@ static const ALIGN_ASSET(2) char gKartPeach181Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach181Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame181_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach182Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame182_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach182Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame182_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach182Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame182_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach182Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame182_wheel2";
 
+static const ALIGN_ASSET(2) char gKartPeach182Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame182_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach183Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame183_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach183Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame183_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach183Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame183_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach183Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame183_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach183Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame183_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach184Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame184_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach184Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame184_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach184Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame184_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach184Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame184_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach184Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame184_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach185Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame185_wheel0";
 
@@ -1491,13 +1491,13 @@ static const ALIGN_ASSET(2) char gKartPeach185Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach185Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame185_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach186Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame186_wheel1";
+
 static const ALIGN_ASSET(2) char gKartPeach186Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame186_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach186Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame186_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach186Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame186_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach186Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame186_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach187Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame187_wheel0";
 
@@ -1507,11 +1507,11 @@ static const ALIGN_ASSET(2) char gKartPeach187Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach187Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame187_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach188Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame188_wheel1";
+
 static const ALIGN_ASSET(2) char gKartPeach188Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame188_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach188Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame188_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach188Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame188_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach188Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame188_wheel0";
 
@@ -1531,29 +1531,29 @@ static const ALIGN_ASSET(2) char gKartPeach190Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach190Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame190_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach191Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame191_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach191Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame191_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach191Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame191_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach191Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame191_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach191Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame191_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach192Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame192_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach192Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame192_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach191Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame191_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach192Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame192_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach192Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame192_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach193Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame193_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach192Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame192_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach193Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame193_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach192Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame192_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach193Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame193_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach193Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame193_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach193Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame193_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach193Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame193_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach194Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame194_wheel0";
 
@@ -1565,11 +1565,11 @@ static const ALIGN_ASSET(2) char gKartPeach194Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach195Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame195_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach195Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame195_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach195Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame195_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach195Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame195_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach195Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame195_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach195Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame195_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach196Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame196_wheel0";
 
@@ -1579,13 +1579,13 @@ static const ALIGN_ASSET(2) char gKartPeach196Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach196Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame196_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach197Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame197_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach197Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame197_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach197Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame197_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach197Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame197_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach197Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame197_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach197Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame197_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach197Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame197_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach198Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame198_wheel0";
 
@@ -1619,13 +1619,13 @@ static const ALIGN_ASSET(2) char gKartPeach201Wheel0[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach201Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame201_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach202Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame202_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach202Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame202_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach202Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame202_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach202Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame202_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach202Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame202_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach202Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame202_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach203Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame203_wheel0";
 
@@ -1637,11 +1637,11 @@ static const ALIGN_ASSET(2) char gKartPeach203Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach204Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame204_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach204Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame204_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach204Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame204_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach204Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame204_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach204Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame204_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach204Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame204_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach205Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame205_wheel0";
 
@@ -1651,13 +1651,13 @@ static const ALIGN_ASSET(2) char gKartPeach205Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach205Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame205_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach206Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame206_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach206Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame206_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach206Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame206_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach206Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame206_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach206Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame206_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach206Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame206_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach207Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame207_wheel0";
 
@@ -1765,27 +1765,27 @@ static const ALIGN_ASSET(2) char gKartPeach219Wheel1[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach220Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame220_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach220Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame220_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach220Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame220_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach220Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame220_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach220Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame220_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach220Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame220_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach221Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame221_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach221Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame221_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach221Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame221_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach221Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame221_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach221Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame221_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach222Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame222_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach222Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame222_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach222Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame222_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach222Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame222_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach222Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame222_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach222Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame222_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach223Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame223_wheel0";
 
@@ -1795,29 +1795,29 @@ static const ALIGN_ASSET(2) char gKartPeach223Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach223Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame223_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach224Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame224_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach224Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame224_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach224Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame224_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach224Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame224_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach224Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame224_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach225Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame225_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach225Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame225_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach224Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame224_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach225Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame225_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach225Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame225_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach226Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame226_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach225Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame225_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach226Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame226_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach225Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame225_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach226Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame226_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach226Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame226_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach226Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame226_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach226Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame226_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach226Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame226_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach227Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame227_wheel0";
 
@@ -1837,19 +1837,19 @@ static const ALIGN_ASSET(2) char gKartPeach228Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach229Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame229_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach229Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame229_wheel2";
+
 static const ALIGN_ASSET(2) char gKartPeach229Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame229_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach229Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame229_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach229Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame229_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach230Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame230_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach230Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame230_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach230Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame230_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach230Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame230_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach230Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame230_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach231Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame231_wheel0";
 
@@ -1859,13 +1859,13 @@ static const ALIGN_ASSET(2) char gKartPeach231Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach231Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame231_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach232Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame232_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach232Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame232_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach232Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame232_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach232Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame232_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach232Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame232_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach232Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame232_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach233Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame233_wheel0";
 
@@ -1875,21 +1875,21 @@ static const ALIGN_ASSET(2) char gKartPeach233Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach233Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame233_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach234Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame234_wheel0";
+
 static const ALIGN_ASSET(2) char gKartPeach234Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame234_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach234Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame234_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach234Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame234_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach234Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame234_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach235Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame235_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach235Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame235_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach235Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame235_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach235Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame235_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach235Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame235_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach236Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame236_wheel0";
 
@@ -1901,35 +1901,35 @@ static const ALIGN_ASSET(2) char gKartPeach236Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach237Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame237_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach237Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame237_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach237Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame237_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach237Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame237_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach237Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame237_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach238Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame238_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach238Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame238_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach238Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame238_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach237Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame237_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach238Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame238_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach239Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame239_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach238Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame238_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach238Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame238_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach238Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame238_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach239Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame239_wheel1";
 
+static const ALIGN_ASSET(2) char gKartPeach239Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame239_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach239Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame239_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach239Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame239_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach239Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame239_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach240Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame240_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach240Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame240_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach240Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame240_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach240Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame240_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach240Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame240_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach241Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame241_wheel0";
 
@@ -1939,29 +1939,29 @@ static const ALIGN_ASSET(2) char gKartPeach241Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach241Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame241_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach242Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame242_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach242Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame242_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach242Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame242_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach242Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame242_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach242Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame242_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach242Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame242_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach242Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame242_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach243Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame243_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach243Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame243_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach243Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame243_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach243Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame243_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach243Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame243_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach243Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame243_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach244Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame244_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach244Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame244_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach244Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame244_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach244Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame244_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach244Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame244_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach244Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame244_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach245Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame245_wheel0";
 
@@ -1979,21 +1979,21 @@ static const ALIGN_ASSET(2) char gKartPeach246Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach246Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame246_wheel3";
 
+static const ALIGN_ASSET(2) char gKartPeach247Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame247_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach247Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame247_wheel2";
+
 static const ALIGN_ASSET(2) char gKartPeach247Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame247_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach247Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame247_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach247Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame247_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach248Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame248_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach247Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame247_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach248Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame248_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach248Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame248_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach248Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame248_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach248Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame248_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach248Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame248_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach249Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame249_wheel0";
 
@@ -2005,35 +2005,35 @@ static const ALIGN_ASSET(2) char gKartPeach249Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach250Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame250_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach250Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame250_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach250Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame250_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach250Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame250_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach250Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame250_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach250Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame250_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach251Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame251_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach251Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame251_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach251Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame251_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach251Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame251_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach251Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame251_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach251Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame251_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach252Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame252_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach252Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame252_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach252Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame252_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach252Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame252_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach252Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame252_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach252Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame252_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach253Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame253_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach253Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame253_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach253Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame253_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach253Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame253_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach253Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame253_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach253Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame253_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach254Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame254_wheel0";
 
@@ -2051,13 +2051,13 @@ static const ALIGN_ASSET(2) char gKartPeach255Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach255Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame255_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach256Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame256_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach256Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame256_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach256Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame256_wheel2";
-
 static const ALIGN_ASSET(2) char gKartPeach256Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame256_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach256Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame256_wheel0";
+
+static const ALIGN_ASSET(2) char gKartPeach256Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame256_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach257Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame257_wheel0";
 
@@ -2069,19 +2069,19 @@ static const ALIGN_ASSET(2) char gKartPeach257Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach258Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame258_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach258Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame258_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach258Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame258_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach258Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame258_wheel2";
 
+static const ALIGN_ASSET(2) char gKartPeach258Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame258_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach259Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame259_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach259Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame259_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach259Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame259_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach259Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame259_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach259Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame259_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach259Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame259_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach260Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame260_wheel0";
 
@@ -2109,11 +2109,11 @@ static const ALIGN_ASSET(2) char gKartPeach262Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach263Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame263_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach263Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame263_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach263Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame263_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach263Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame263_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach263Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame263_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach263Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame263_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach264Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame264_wheel0";
 
@@ -2123,13 +2123,13 @@ static const ALIGN_ASSET(2) char gKartPeach264Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach264Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame264_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach265Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame265_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach265Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame265_wheel1";
-
 static const ALIGN_ASSET(2) char gKartPeach265Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame265_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach265Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame265_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach265Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame265_wheel1";
+
+static const ALIGN_ASSET(2) char gKartPeach265Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame265_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach266Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame266_wheel0";
 
@@ -2139,21 +2139,21 @@ static const ALIGN_ASSET(2) char gKartPeach266Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach266Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame266_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach267Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame267_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach267Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame267_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach267Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame267_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach267Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame267_wheel0";
-
 static const ALIGN_ASSET(2) char gKartPeach267Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame267_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach268Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame268_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach267Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame267_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach268Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame268_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach268Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame268_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach268Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame268_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach268Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame268_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach269Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame269_wheel0";
 
@@ -2165,19 +2165,19 @@ static const ALIGN_ASSET(2) char gKartPeach269Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach270Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame270_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach270Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame270_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach270Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame270_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach270Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame270_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach270Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame270_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach270Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame270_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach271Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame271_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach271Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame271_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach271Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame271_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach271Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame271_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach271Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame271_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach271Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame271_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach272Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame272_wheel0";
 
@@ -2189,19 +2189,19 @@ static const ALIGN_ASSET(2) char gKartPeach272Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach273Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame273_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach273Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame273_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach273Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame273_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach273Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame273_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach273Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame273_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach273Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame273_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach274Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame274_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach274Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame274_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach274Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame274_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach274Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame274_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach274Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame274_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach274Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame274_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach275Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame275_wheel0";
 
@@ -2219,13 +2219,13 @@ static const ALIGN_ASSET(2) char gKartPeach276Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach276Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame276_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach277Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame277_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach277Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame277_wheel1";
-
 static const ALIGN_ASSET(2) char gKartPeach277Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame277_wheel0";
 
+static const ALIGN_ASSET(2) char gKartPeach277Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame277_wheel3";
+
 static const ALIGN_ASSET(2) char gKartPeach277Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame277_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach277Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame277_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach278Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame278_wheel0";
 
@@ -2237,19 +2237,19 @@ static const ALIGN_ASSET(2) char gKartPeach278Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach279Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame279_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach279Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame279_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach279Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame279_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach279Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame279_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach279Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame279_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach279Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame279_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach280Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame280_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach280Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame280_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach280Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame280_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach280Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame280_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach280Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame280_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach280Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame280_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach281Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame281_wheel0";
 
@@ -2261,27 +2261,27 @@ static const ALIGN_ASSET(2) char gKartPeach281Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach282Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame282_wheel0";
 
-static const ALIGN_ASSET(2) char gKartPeach282Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame282_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach282Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame282_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach282Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame282_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach282Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame282_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach282Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame282_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach283Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame283_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach283Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame283_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach283Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame283_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach283Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame283_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach283Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame283_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach283Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame283_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach284Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame284_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach284Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame284_wheel1";
 
 static const ALIGN_ASSET(2) char gKartPeach284Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame284_wheel2";
 
 static const ALIGN_ASSET(2) char gKartPeach284Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame284_wheel3";
+
+static const ALIGN_ASSET(2) char gKartPeach284Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame284_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach285Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame285_wheel0";
 
@@ -2291,13 +2291,13 @@ static const ALIGN_ASSET(2) char gKartPeach285Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach285Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame285_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach286Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame286_wheel3";
-
 static const ALIGN_ASSET(2) char gKartPeach286Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame286_wheel1";
 
-static const ALIGN_ASSET(2) char gKartPeach286Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame286_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach286Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame286_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach286Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame286_wheel2";
+
+static const ALIGN_ASSET(2) char gKartPeach286Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame286_wheel0";
 
 static const ALIGN_ASSET(2) char gKartPeach287Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame287_wheel0";
 
@@ -2307,269 +2307,77 @@ static const ALIGN_ASSET(2) char gKartPeach287Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartPeach287Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame287_wheel3";
 
-static const ALIGN_ASSET(2) char gKartPeach288Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame288_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach288Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame288_wheel3";
 
 static const ALIGN_ASSET(2) char gKartPeach288Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame288_wheel1";
 
+static const ALIGN_ASSET(2) char gKartPeach288Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame288_wheel0";
+
 static const ALIGN_ASSET(2) char gKartPeach288Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame288_wheel2";
 
-static const ALIGN_ASSET(2) char gKartPeach288Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame288_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach305[] = "__OTR__textures/karts/peach_kart/peach_kart_frame305";
 
-static const ALIGN_ASSET(2) char gKartPeach289Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame289_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach306[] = "__OTR__textures/karts/peach_kart/peach_kart_frame306";
 
-static const ALIGN_ASSET(2) char gKartPeach289Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame289_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach307[] = "__OTR__textures/karts/peach_kart/peach_kart_frame307";
 
-static const ALIGN_ASSET(2) char gKartPeach289Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame289_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach308[] = "__OTR__textures/karts/peach_kart/peach_kart_frame308";
 
-static const ALIGN_ASSET(2) char gKartPeach289Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame289_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach309[] = "__OTR__textures/karts/peach_kart/peach_kart_frame309";
 
-static const ALIGN_ASSET(2) char gKartPeach290Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame290_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach310[] = "__OTR__textures/karts/peach_kart/peach_kart_frame310";
 
-static const ALIGN_ASSET(2) char gKartPeach290Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame290_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach311[] = "__OTR__textures/karts/peach_kart/peach_kart_frame311";
 
-static const ALIGN_ASSET(2) char gKartPeach290Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame290_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach312[] = "__OTR__textures/karts/peach_kart/peach_kart_frame312";
 
-static const ALIGN_ASSET(2) char gKartPeach290Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame290_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach313[] = "__OTR__textures/karts/peach_kart/peach_kart_frame313";
 
-static const ALIGN_ASSET(2) char gKartPeach291Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame291_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach314[] = "__OTR__textures/karts/peach_kart/peach_kart_frame314";
 
-static const ALIGN_ASSET(2) char gKartPeach291Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame291_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach315[] = "__OTR__textures/karts/peach_kart/peach_kart_frame315";
 
-static const ALIGN_ASSET(2) char gKartPeach291Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame291_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach316[] = "__OTR__textures/karts/peach_kart/peach_kart_frame316";
 
-static const ALIGN_ASSET(2) char gKartPeach291Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame291_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach317[] = "__OTR__textures/karts/peach_kart/peach_kart_frame317";
 
-static const ALIGN_ASSET(2) char gKartPeach292Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame292_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach318[] = "__OTR__textures/karts/peach_kart/peach_kart_frame318";
 
-static const ALIGN_ASSET(2) char gKartPeach292Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame292_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach319[] = "__OTR__textures/karts/peach_kart/peach_kart_frame319";
 
-static const ALIGN_ASSET(2) char gKartPeach292Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame292_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach320[] = "__OTR__textures/karts/peach_kart/peach_kart_frame320";
 
-static const ALIGN_ASSET(2) char gKartPeach292Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame292_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach303[] = "__OTR__textures/karts/peach_kart/peach_kart_frame303";
 
-static const ALIGN_ASSET(2) char gKartPeach293Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame293_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach304[] = "__OTR__textures/karts/peach_kart/peach_kart_frame304";
 
-static const ALIGN_ASSET(2) char gKartPeach293Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame293_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach289[] = "__OTR__textures/karts/peach_kart/peach_kart_frame289";
 
-static const ALIGN_ASSET(2) char gKartPeach293Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame293_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach290[] = "__OTR__textures/karts/peach_kart/peach_kart_frame290";
 
-static const ALIGN_ASSET(2) char gKartPeach293Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame293_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach291[] = "__OTR__textures/karts/peach_kart/peach_kart_frame291";
 
-static const ALIGN_ASSET(2) char gKartPeach294Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame294_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach292[] = "__OTR__textures/karts/peach_kart/peach_kart_frame292";
 
-static const ALIGN_ASSET(2) char gKartPeach294Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame294_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach293[] = "__OTR__textures/karts/peach_kart/peach_kart_frame293";
 
-static const ALIGN_ASSET(2) char gKartPeach294Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame294_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach294[] = "__OTR__textures/karts/peach_kart/peach_kart_frame294";
 
-static const ALIGN_ASSET(2) char gKartPeach294Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame294_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach295[] = "__OTR__textures/karts/peach_kart/peach_kart_frame295";
 
-static const ALIGN_ASSET(2) char gKartPeach295Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame295_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach297[] = "__OTR__textures/karts/peach_kart/peach_kart_frame297";
 
-static const ALIGN_ASSET(2) char gKartPeach295Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame295_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach296[] = "__OTR__textures/karts/peach_kart/peach_kart_frame296";
 
-static const ALIGN_ASSET(2) char gKartPeach295Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame295_wheel0";
+static const ALIGN_ASSET(2) char gKartPeach302[] = "__OTR__textures/karts/peach_kart/peach_kart_frame302";
 
-static const ALIGN_ASSET(2) char gKartPeach295Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame295_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach301[] = "__OTR__textures/karts/peach_kart/peach_kart_frame301";
 
-static const ALIGN_ASSET(2) char gKartPeach296Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame296_wheel1";
+static const ALIGN_ASSET(2) char gKartPeach299[] = "__OTR__textures/karts/peach_kart/peach_kart_frame299";
 
-static const ALIGN_ASSET(2) char gKartPeach296Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame296_wheel2";
+static const ALIGN_ASSET(2) char gKartPeach300[] = "__OTR__textures/karts/peach_kart/peach_kart_frame300";
 
-static const ALIGN_ASSET(2) char gKartPeach296Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame296_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach296Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame296_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach297Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame297_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach297Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame297_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach297Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame297_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach297Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame297_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach298Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame298_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach298Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame298_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach298Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame298_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach298Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame298_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach299Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame299_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach299Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame299_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach299Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame299_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach299Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame299_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach300Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame300_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach300Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame300_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach300Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame300_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach300Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame300_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach301Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame301_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach301Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame301_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach301Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame301_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach301Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame301_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach302Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame302_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach302Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame302_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach302Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame302_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach302Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame302_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach303Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame303_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach303Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame303_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach303Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame303_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach303Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame303_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach304Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame304_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach304Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame304_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach304Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame304_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach304Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame304_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach305Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame305_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach305Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame305_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach305Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame305_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach305Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame305_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach306Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame306_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach306Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame306_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach306Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame306_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach306Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame306_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach307Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame307_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach307Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame307_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach307Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame307_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach307Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame307_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach308Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame308_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach308Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame308_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach308Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame308_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach308Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame308_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach309Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame309_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach309Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame309_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach309Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame309_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach309Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame309_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach310Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame310_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach310Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame310_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach310Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame310_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach310Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame310_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach311Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame311_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach311Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame311_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach311Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame311_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach311Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame311_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach312Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame312_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach312Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame312_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach312Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame312_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach312Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame312_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach313Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame313_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach313Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame313_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach313Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame313_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach313Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame313_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach314Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame314_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach314Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame314_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach314Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame314_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach314Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame314_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach315Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame315_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach315Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame315_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach315Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame315_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach315Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame315_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach316Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame316_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach316Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame316_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach316Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame316_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach316Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame316_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach317Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame317_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach317Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame317_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach317Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame317_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach317Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame317_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach318Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame318_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach318Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame318_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach318Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame318_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach318Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame318_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach319Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame319_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach319Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame319_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach319Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame319_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach319Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame319_wheel3";
-
-static const ALIGN_ASSET(2) char gKartPeach320Wheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_frame320_wheel0";
-
-static const ALIGN_ASSET(2) char gKartPeach320Wheel1[] = "__OTR__textures/karts/peach_kart/peach_kart_frame320_wheel1";
-
-static const ALIGN_ASSET(2) char gKartPeach320Wheel2[] = "__OTR__textures/karts/peach_kart/peach_kart_frame320_wheel2";
-
-static const ALIGN_ASSET(2) char gKartPeach320Wheel3[] = "__OTR__textures/karts/peach_kart/peach_kart_frame320_wheel3";
+static const ALIGN_ASSET(2) char gKartPeach298[] = "__OTR__textures/karts/peach_kart/peach_kart_frame298";
 
 static const ALIGN_ASSET(2) char gKartPeach000TlutWheel0[] = "__OTR__textures/karts/peach_kart/peach_kart_000_tlut_wheel_0";
 

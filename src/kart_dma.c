@@ -569,24 +569,16 @@ kart_texture_t** gKartTextureTable1[] = {
     gKartDKTable1,    gKartWarioTable1, gKartPeachTable1, gKartBowserTable1,
 };
 
-DECLARE_TUMBLE_KART_TEXTURES(gKartMario)
 DECLARE_KART_TUMBLE_TABLE(gKartMario)
-DECLARE_TUMBLE_KART_TEXTURES(gKartLuigi)
 DECLARE_KART_TUMBLE_TABLE(gKartLuigi)
-DECLARE_TUMBLE_KART_TEXTURES(gKartBowser)
 DECLARE_KART_TUMBLE_TABLE(gKartBowser)
-DECLARE_TUMBLE_KART_TEXTURES(gKartToad)
 DECLARE_KART_TUMBLE_TABLE(gKartToad)
-DECLARE_TUMBLE_KART_TEXTURES(gKartYoshi)
 DECLARE_KART_TUMBLE_TABLE(gKartYoshi)
-DECLARE_TUMBLE_KART_TEXTURES(gKartDK)
 DECLARE_KART_TUMBLE_TABLE(gKartDK)
-DECLARE_TUMBLE_KART_TEXTURES(gKartPeach)
 DECLARE_KART_TUMBLE_TABLE(gKartPeach)
-DECLARE_TUMBLE_KART_TEXTURES(gKartWario)
 DECLARE_KART_TUMBLE_TABLE(gKartWario)
 
-kart_texture_t* gKartTextureTumbles[] = {
+u8** gKartTextureTumbles[] = {
     gKartMarioTumble, gKartLuigiTumble, gKartYoshiTumble, gKartToadTumble,
     gKartDKTumble,    gKartWarioTumble, gKartPeachTumble, gKartBowserTumble,
 };
@@ -660,7 +652,7 @@ void load_kart_texture(Player* player, s8 playerId, s8 screenId, s8 screenId2, s
         osRecvMesg(&gDmaMesgQueue, &gMainReceivedMesg, OS_MESG_BLOCK);
 #else
         gEncodedKartTexture[index][screenId2][playerId].unk_00 =
-            gKartTextureTumbles[player->characterId][player->unk_0A8 >> 8][tyreSpeed >> 8];
+            gKartTextureTumbles[player->characterId][player->unk_0A8 >> 8];
 #endif
     } else {
         osInvalDCache(&gEncodedKartTexture[index][screenId2][playerId], D_800DDEB0[player->characterId]);
@@ -726,7 +718,7 @@ void load_kart_texture_non_blocking(Player* player, s8 arg1, s8 arg2, s8 arg3, s
                          gKartTextureTumbles[player->characterId][player->unk_0A8 >> 8])],
                      &gEncodedKartTexture[arg4][arg3][arg1], 0x900, &gDmaMesgQueue);
 #else
-        gEncodedKartTexture[arg4][arg3][arg1].unk_00 = gKartTextureTumbles[player->characterId][player->unk_0A8 >> 8][tyreSpeed >> 8];
+        gEncodedKartTexture[arg4][arg3][arg1].unk_00 = gKartTextureTumbles[player->characterId][player->unk_0A8 >> 8];
 #endif
     } else {
         osInvalDCache(&gEncodedKartTexture[arg4][arg3][arg1], D_800DDEB0[player->characterId]);

@@ -12730,8 +12730,8 @@ toad_kart_frame288_wheel3:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_288_tlut_wheel_3
-toad_kart_frame289_wheel0:
-  symbol: gKartToad289Wheel0
+toad_kart_frame289:
+  symbol: gKartToad289
   type: texture
   offset: 0x617A0
   ctype: u8
@@ -12741,8 +12741,8 @@ toad_kart_frame289_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame289_wheel1:
-  symbol: gKartToad289Wheel1
+toad_kart_frame290:
+  symbol: gKartToad290
   type: texture
   offset: 0x617A0
   ctype: u8
@@ -12751,9 +12751,9 @@ toad_kart_frame289_wheel1:
   height: 64
   format: CI8
   tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame289_wheel2:
-  symbol: gKartToad289Wheel2
+  tlut_wheel: toad_kart_000_tlut_wheel_0
+toad_kart_frame291:
+  symbol: gKartToad291
   type: texture
   offset: 0x617A0
   ctype: u8
@@ -12762,9 +12762,9 @@ toad_kart_frame289_wheel2:
   height: 64
   format: CI8
   tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame289_wheel3:
-  symbol: gKartToad289Wheel3
+  tlut_wheel: toad_kart_000_tlut_wheel_0
+toad_kart_frame292:
+  symbol: gKartToad292
   type: texture
   offset: 0x617A0
   ctype: u8
@@ -12773,11 +12773,11 @@ toad_kart_frame289_wheel3:
   height: 64
   format: CI8
   tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame290_wheel0:
-  symbol: gKartToad290Wheel0
+  tlut_wheel: toad_kart_000_tlut_wheel_0
+toad_kart_frame293:
+  symbol: gKartToad293
   type: texture
-  offset: 0x61C34
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -12785,43 +12785,10 @@ toad_kart_frame290_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame290_wheel1:
-  symbol: gKartToad290Wheel1
+toad_kart_frame294:
+  symbol: gKartToad294
   type: texture
-  offset: 0x61C34
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame290_wheel2:
-  symbol: gKartToad290Wheel2
-  type: texture
-  offset: 0x61C34
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame290_wheel3:
-  symbol: gKartToad290Wheel3
-  type: texture
-  offset: 0x61C34
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame291_wheel0:
-  symbol: gKartToad291Wheel0
-  type: texture
-  offset: 0x62180
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -12829,43 +12796,10 @@ toad_kart_frame291_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame291_wheel1:
-  symbol: gKartToad291Wheel1
+toad_kart_frame295:
+  symbol: gKartToad295
   type: texture
-  offset: 0x62180
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame291_wheel2:
-  symbol: gKartToad291Wheel2
-  type: texture
-  offset: 0x62180
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame291_wheel3:
-  symbol: gKartToad291Wheel3
-  type: texture
-  offset: 0x62180
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame292_wheel0:
-  symbol: gKartToad292Wheel0
-  type: texture
-  offset: 0x62748
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -12873,43 +12807,10 @@ toad_kart_frame292_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame292_wheel1:
-  symbol: gKartToad292Wheel1
+toad_kart_frame296:
+  symbol: gKartToad296
   type: texture
-  offset: 0x62748
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame292_wheel2:
-  symbol: gKartToad292Wheel2
-  type: texture
-  offset: 0x62748
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame292_wheel3:
-  symbol: gKartToad292Wheel3
-  type: texture
-  offset: 0x62748
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame293_wheel0:
-  symbol: gKartToad293Wheel0
-  type: texture
-  offset: 0x62DB8
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -12917,43 +12818,10 @@ toad_kart_frame293_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame293_wheel1:
-  symbol: gKartToad293Wheel1
+toad_kart_frame297:
+  symbol: gKartToad297
   type: texture
-  offset: 0x62DB8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame293_wheel2:
-  symbol: gKartToad293Wheel2
-  type: texture
-  offset: 0x62DB8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame293_wheel3:
-  symbol: gKartToad293Wheel3
-  type: texture
-  offset: 0x62DB8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame294_wheel0:
-  symbol: gKartToad294Wheel0
-  type: texture
-  offset: 0x633BC
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -12961,43 +12829,10 @@ toad_kart_frame294_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame294_wheel1:
-  symbol: gKartToad294Wheel1
+toad_kart_frame298:
+  symbol: gKartToad298
   type: texture
-  offset: 0x633BC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame294_wheel2:
-  symbol: gKartToad294Wheel2
-  type: texture
-  offset: 0x633BC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame294_wheel3:
-  symbol: gKartToad294Wheel3
-  type: texture
-  offset: 0x633BC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame295_wheel0:
-  symbol: gKartToad295Wheel0
-  type: texture
-  offset: 0x639C0
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13005,43 +12840,10 @@ toad_kart_frame295_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame295_wheel1:
-  symbol: gKartToad295Wheel1
+toad_kart_frame299:
+  symbol: gKartToad299
   type: texture
-  offset: 0x639C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame295_wheel2:
-  symbol: gKartToad295Wheel2
-  type: texture
-  offset: 0x639C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame295_wheel3:
-  symbol: gKartToad295Wheel3
-  type: texture
-  offset: 0x639C0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame296_wheel0:
-  symbol: gKartToad296Wheel0
-  type: texture
-  offset: 0x63F64
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13049,43 +12851,10 @@ toad_kart_frame296_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame296_wheel1:
-  symbol: gKartToad296Wheel1
+toad_kart_frame300:
+  symbol: gKartToad300
   type: texture
-  offset: 0x63F64
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame296_wheel2:
-  symbol: gKartToad296Wheel2
-  type: texture
-  offset: 0x63F64
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame296_wheel3:
-  symbol: gKartToad296Wheel3
-  type: texture
-  offset: 0x63F64
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame297_wheel0:
-  symbol: gKartToad297Wheel0
-  type: texture
-  offset: 0x6447C
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13093,43 +12862,10 @@ toad_kart_frame297_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame297_wheel1:
-  symbol: gKartToad297Wheel1
+toad_kart_frame301:
+  symbol: gKartToad301
   type: texture
-  offset: 0x6447C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame297_wheel2:
-  symbol: gKartToad297Wheel2
-  type: texture
-  offset: 0x6447C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame297_wheel3:
-  symbol: gKartToad297Wheel3
-  type: texture
-  offset: 0x6447C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame298_wheel0:
-  symbol: gKartToad298Wheel0
-  type: texture
-  offset: 0x64918
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13137,43 +12873,10 @@ toad_kart_frame298_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame298_wheel1:
-  symbol: gKartToad298Wheel1
+toad_kart_frame302:
+  symbol: gKartToad302
   type: texture
-  offset: 0x64918
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame298_wheel2:
-  symbol: gKartToad298Wheel2
-  type: texture
-  offset: 0x64918
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame298_wheel3:
-  symbol: gKartToad298Wheel3
-  type: texture
-  offset: 0x64918
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame299_wheel0:
-  symbol: gKartToad299Wheel0
-  type: texture
-  offset: 0x64E54
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13181,43 +12884,10 @@ toad_kart_frame299_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame299_wheel1:
-  symbol: gKartToad299Wheel1
+toad_kart_frame303:
+  symbol: gKartToad303
   type: texture
-  offset: 0x64E54
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame299_wheel2:
-  symbol: gKartToad299Wheel2
-  type: texture
-  offset: 0x64E54
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame299_wheel3:
-  symbol: gKartToad299Wheel3
-  type: texture
-  offset: 0x64E54
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame300_wheel0:
-  symbol: gKartToad300Wheel0
-  type: texture
-  offset: 0x653BC
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13225,43 +12895,10 @@ toad_kart_frame300_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame300_wheel1:
-  symbol: gKartToad300Wheel1
+toad_kart_frame304:
+  symbol: gKartToad304
   type: texture
-  offset: 0x653BC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame300_wheel2:
-  symbol: gKartToad300Wheel2
-  type: texture
-  offset: 0x653BC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame300_wheel3:
-  symbol: gKartToad300Wheel3
-  type: texture
-  offset: 0x653BC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame301_wheel0:
-  symbol: gKartToad301Wheel0
-  type: texture
-  offset: 0x65934
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13269,43 +12906,10 @@ toad_kart_frame301_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame301_wheel1:
-  symbol: gKartToad301Wheel1
+toad_kart_frame305:
+  symbol: gKartToad305
   type: texture
-  offset: 0x65934
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame301_wheel2:
-  symbol: gKartToad301Wheel2
-  type: texture
-  offset: 0x65934
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame301_wheel3:
-  symbol: gKartToad301Wheel3
-  type: texture
-  offset: 0x65934
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame302_wheel0:
-  symbol: gKartToad302Wheel0
-  type: texture
-  offset: 0x65E8C
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13313,43 +12917,10 @@ toad_kart_frame302_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame302_wheel1:
-  symbol: gKartToad302Wheel1
+toad_kart_frame306:
+  symbol: gKartToad306
   type: texture
-  offset: 0x65E8C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame302_wheel2:
-  symbol: gKartToad302Wheel2
-  type: texture
-  offset: 0x65E8C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame302_wheel3:
-  symbol: gKartToad302Wheel3
-  type: texture
-  offset: 0x65E8C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame303_wheel0:
-  symbol: gKartToad303Wheel0
-  type: texture
-  offset: 0x66418
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13357,43 +12928,10 @@ toad_kart_frame303_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame303_wheel1:
-  symbol: gKartToad303Wheel1
+toad_kart_frame307:
+  symbol: gKartToad307
   type: texture
-  offset: 0x66418
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame303_wheel2:
-  symbol: gKartToad303Wheel2
-  type: texture
-  offset: 0x66418
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame303_wheel3:
-  symbol: gKartToad303Wheel3
-  type: texture
-  offset: 0x66418
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame304_wheel0:
-  symbol: gKartToad304Wheel0
-  type: texture
-  offset: 0x669B4
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13401,43 +12939,10 @@ toad_kart_frame304_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame304_wheel1:
-  symbol: gKartToad304Wheel1
+toad_kart_frame308:
+  symbol: gKartToad308
   type: texture
-  offset: 0x669B4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame304_wheel2:
-  symbol: gKartToad304Wheel2
-  type: texture
-  offset: 0x669B4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame304_wheel3:
-  symbol: gKartToad304Wheel3
-  type: texture
-  offset: 0x669B4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame305_wheel0:
-  symbol: gKartToad305Wheel0
-  type: texture
-  offset: 0x66EF0
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13445,43 +12950,10 @@ toad_kart_frame305_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame305_wheel1:
-  symbol: gKartToad305Wheel1
+toad_kart_frame309:
+  symbol: gKartToad309
   type: texture
-  offset: 0x66EF0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame305_wheel2:
-  symbol: gKartToad305Wheel2
-  type: texture
-  offset: 0x66EF0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame305_wheel3:
-  symbol: gKartToad305Wheel3
-  type: texture
-  offset: 0x66EF0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame306_wheel0:
-  symbol: gKartToad306Wheel0
-  type: texture
-  offset: 0x6734C
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13489,43 +12961,10 @@ toad_kart_frame306_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame306_wheel1:
-  symbol: gKartToad306Wheel1
+toad_kart_frame310:
+  symbol: gKartToad310
   type: texture
-  offset: 0x6734C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame306_wheel2:
-  symbol: gKartToad306Wheel2
-  type: texture
-  offset: 0x6734C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame306_wheel3:
-  symbol: gKartToad306Wheel3
-  type: texture
-  offset: 0x6734C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame307_wheel0:
-  symbol: gKartToad307Wheel0
-  type: texture
-  offset: 0x678EC
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13533,43 +12972,10 @@ toad_kart_frame307_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame307_wheel1:
-  symbol: gKartToad307Wheel1
+toad_kart_frame311:
+  symbol: gKartToad311
   type: texture
-  offset: 0x678EC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame307_wheel2:
-  symbol: gKartToad307Wheel2
-  type: texture
-  offset: 0x678EC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame307_wheel3:
-  symbol: gKartToad307Wheel3
-  type: texture
-  offset: 0x678EC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame308_wheel0:
-  symbol: gKartToad308Wheel0
-  type: texture
-  offset: 0x67F2C
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13577,43 +12983,10 @@ toad_kart_frame308_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame308_wheel1:
-  symbol: gKartToad308Wheel1
+toad_kart_frame312:
+  symbol: gKartToad312
   type: texture
-  offset: 0x67F2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame308_wheel2:
-  symbol: gKartToad308Wheel2
-  type: texture
-  offset: 0x67F2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame308_wheel3:
-  symbol: gKartToad308Wheel3
-  type: texture
-  offset: 0x67F2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame309_wheel0:
-  symbol: gKartToad309Wheel0
-  type: texture
-  offset: 0x6859C
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13621,43 +12994,10 @@ toad_kart_frame309_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame309_wheel1:
-  symbol: gKartToad309Wheel1
+toad_kart_frame313:
+  symbol: gKartToad313
   type: texture
-  offset: 0x6859C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame309_wheel2:
-  symbol: gKartToad309Wheel2
-  type: texture
-  offset: 0x6859C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame309_wheel3:
-  symbol: gKartToad309Wheel3
-  type: texture
-  offset: 0x6859C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame310_wheel0:
-  symbol: gKartToad310Wheel0
-  type: texture
-  offset: 0x68B80
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13665,43 +13005,10 @@ toad_kart_frame310_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame310_wheel1:
-  symbol: gKartToad310Wheel1
+toad_kart_frame314:
+  symbol: gKartToad314
   type: texture
-  offset: 0x68B80
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame310_wheel2:
-  symbol: gKartToad310Wheel2
-  type: texture
-  offset: 0x68B80
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame310_wheel3:
-  symbol: gKartToad310Wheel3
-  type: texture
-  offset: 0x68B80
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame311_wheel0:
-  symbol: gKartToad311Wheel0
-  type: texture
-  offset: 0x69160
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13709,43 +13016,10 @@ toad_kart_frame311_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame311_wheel1:
-  symbol: gKartToad311Wheel1
+toad_kart_frame315:
+  symbol: gKartToad315
   type: texture
-  offset: 0x69160
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame311_wheel2:
-  symbol: gKartToad311Wheel2
-  type: texture
-  offset: 0x69160
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame311_wheel3:
-  symbol: gKartToad311Wheel3
-  type: texture
-  offset: 0x69160
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame312_wheel0:
-  symbol: gKartToad312Wheel0
-  type: texture
-  offset: 0x69728
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13753,43 +13027,10 @@ toad_kart_frame312_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame312_wheel1:
-  symbol: gKartToad312Wheel1
+toad_kart_frame316:
+  symbol: gKartToad316
   type: texture
-  offset: 0x69728
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame312_wheel2:
-  symbol: gKartToad312Wheel2
-  type: texture
-  offset: 0x69728
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame312_wheel3:
-  symbol: gKartToad312Wheel3
-  type: texture
-  offset: 0x69728
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame313_wheel0:
-  symbol: gKartToad313Wheel0
-  type: texture
-  offset: 0x69C10
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13797,43 +13038,10 @@ toad_kart_frame313_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame313_wheel1:
-  symbol: gKartToad313Wheel1
+toad_kart_frame317:
+  symbol: gKartToad317
   type: texture
-  offset: 0x69C10
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame313_wheel2:
-  symbol: gKartToad313Wheel2
-  type: texture
-  offset: 0x69C10
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame313_wheel3:
-  symbol: gKartToad313Wheel3
-  type: texture
-  offset: 0x69C10
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame314_wheel0:
-  symbol: gKartToad314Wheel0
-  type: texture
-  offset: 0x6A0AC
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13841,43 +13049,10 @@ toad_kart_frame314_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame314_wheel1:
-  symbol: gKartToad314Wheel1
+toad_kart_frame318:
+  symbol: gKartToad318
   type: texture
-  offset: 0x6A0AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame314_wheel2:
-  symbol: gKartToad314Wheel2
-  type: texture
-  offset: 0x6A0AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame314_wheel3:
-  symbol: gKartToad314Wheel3
-  type: texture
-  offset: 0x6A0AC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame315_wheel0:
-  symbol: gKartToad315Wheel0
-  type: texture
-  offset: 0x6A5E8
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13885,43 +13060,10 @@ toad_kart_frame315_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame315_wheel1:
-  symbol: gKartToad315Wheel1
+toad_kart_frame319:
+  symbol: gKartToad319
   type: texture
-  offset: 0x6A5E8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame315_wheel2:
-  symbol: gKartToad315Wheel2
-  type: texture
-  offset: 0x6A5E8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame315_wheel3:
-  symbol: gKartToad315Wheel3
-  type: texture
-  offset: 0x6A5E8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame316_wheel0:
-  symbol: gKartToad316Wheel0
-  type: texture
-  offset: 0x6AB2C
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13929,43 +13071,10 @@ toad_kart_frame316_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame316_wheel1:
-  symbol: gKartToad316Wheel1
+toad_kart_frame320:
+  symbol: gKartToad320
   type: texture
-  offset: 0x6AB2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame316_wheel2:
-  symbol: gKartToad316Wheel2
-  type: texture
-  offset: 0x6AB2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame316_wheel3:
-  symbol: gKartToad316Wheel3
-  type: texture
-  offset: 0x6AB2C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame317_wheel0:
-  symbol: gKartToad317Wheel0
-  type: texture
-  offset: 0x6B0B0
+  offset: 0x617A0
   ctype: u8
   mio0: true
   width: 64
@@ -13973,171 +13082,6 @@ toad_kart_frame317_wheel0:
   format: CI8
   tlut_symbol: toad_kart_palette
   tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame317_wheel1:
-  symbol: gKartToad317Wheel1
-  type: texture
-  offset: 0x6B0B0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame317_wheel2:
-  symbol: gKartToad317Wheel2
-  type: texture
-  offset: 0x6B0B0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame317_wheel3:
-  symbol: gKartToad317Wheel3
-  type: texture
-  offset: 0x6B0B0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame318_wheel0:
-  symbol: gKartToad318Wheel0
-  type: texture
-  offset: 0x6B658
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame318_wheel1:
-  symbol: gKartToad318Wheel1
-  type: texture
-  offset: 0x6B658
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame318_wheel2:
-  symbol: gKartToad318Wheel2
-  type: texture
-  offset: 0x6B658
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame318_wheel3:
-  symbol: gKartToad318Wheel3
-  type: texture
-  offset: 0x6B658
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame319_wheel0:
-  symbol: gKartToad319Wheel0
-  type: texture
-  offset: 0x6BBE8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame319_wheel1:
-  symbol: gKartToad319Wheel1
-  type: texture
-  offset: 0x6BBE8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame319_wheel2:
-  symbol: gKartToad319Wheel2
-  type: texture
-  offset: 0x6BBE8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame319_wheel3:
-  symbol: gKartToad319Wheel3
-  type: texture
-  offset: 0x6BBE8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
-toad_kart_frame320_wheel0:
-  symbol: gKartToad320Wheel0
-  type: texture
-  offset: 0x6C190
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_0
-toad_kart_frame320_wheel1:
-  symbol: gKartToad320Wheel1
-  type: texture
-  offset: 0x6C190
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_1
-toad_kart_frame320_wheel2:
-  symbol: gKartToad320Wheel2
-  type: texture
-  offset: 0x6C190
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_2
-toad_kart_frame320_wheel3:
-  symbol: gKartToad320Wheel3
-  type: texture
-  offset: 0x6C190
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: toad_kart_palette
-  tlut_wheel: toad_kart_000_tlut_wheel_3
 toad_kart_000_tlut_wheel_0:
   symbol: gKartToad000TlutWheel0
   type: texture

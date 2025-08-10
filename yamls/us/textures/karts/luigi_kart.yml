@@ -12730,8 +12730,8 @@ luigi_kart_frame288_wheel3:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_288_tlut_wheel_3
-luigi_kart_frame289_wheel0:
-  symbol: gKartLuigi289Wheel0
+luigi_kart_frame289:
+  symbol: gKartLuigi289
   type: texture
   offset: 0x6AFC8
   ctype: u8
@@ -12741,8 +12741,8 @@ luigi_kart_frame289_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame289_wheel1:
-  symbol: gKartLuigi289Wheel1
+luigi_kart_frame290:
+  symbol: gKartLuigi290
   type: texture
   offset: 0x6AFC8
   ctype: u8
@@ -12751,9 +12751,9 @@ luigi_kart_frame289_wheel1:
   height: 64
   format: CI8
   tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame289_wheel2:
-  symbol: gKartLuigi289Wheel2
+  tlut_wheel: luigi_kart_000_tlut_wheel_0
+luigi_kart_frame291:
+  symbol: gKartLuigi291
   type: texture
   offset: 0x6AFC8
   ctype: u8
@@ -12762,9 +12762,9 @@ luigi_kart_frame289_wheel2:
   height: 64
   format: CI8
   tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame289_wheel3:
-  symbol: gKartLuigi289Wheel3
+  tlut_wheel: luigi_kart_000_tlut_wheel_0
+luigi_kart_frame292:
+  symbol: gKartLuigi292
   type: texture
   offset: 0x6AFC8
   ctype: u8
@@ -12773,11 +12773,11 @@ luigi_kart_frame289_wheel3:
   height: 64
   format: CI8
   tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame290_wheel0:
-  symbol: gKartLuigi290Wheel0
+  tlut_wheel: luigi_kart_000_tlut_wheel_0
+luigi_kart_frame293:
+  symbol: gKartLuigi293
   type: texture
-  offset: 0x6B4C4
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -12785,43 +12785,10 @@ luigi_kart_frame290_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame290_wheel1:
-  symbol: gKartLuigi290Wheel1
+luigi_kart_frame294:
+  symbol: gKartLuigi294
   type: texture
-  offset: 0x6B4C4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame290_wheel2:
-  symbol: gKartLuigi290Wheel2
-  type: texture
-  offset: 0x6B4C4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame290_wheel3:
-  symbol: gKartLuigi290Wheel3
-  type: texture
-  offset: 0x6B4C4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame291_wheel0:
-  symbol: gKartLuigi291Wheel0
-  type: texture
-  offset: 0x6BA50
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -12829,43 +12796,10 @@ luigi_kart_frame291_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame291_wheel1:
-  symbol: gKartLuigi291Wheel1
+luigi_kart_frame295:
+  symbol: gKartLuigi295
   type: texture
-  offset: 0x6BA50
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame291_wheel2:
-  symbol: gKartLuigi291Wheel2
-  type: texture
-  offset: 0x6BA50
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame291_wheel3:
-  symbol: gKartLuigi291Wheel3
-  type: texture
-  offset: 0x6BA50
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame292_wheel0:
-  symbol: gKartLuigi292Wheel0
-  type: texture
-  offset: 0x6C030
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -12873,43 +12807,10 @@ luigi_kart_frame292_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame292_wheel1:
-  symbol: gKartLuigi292Wheel1
+luigi_kart_frame296:
+  symbol: gKartLuigi296
   type: texture
-  offset: 0x6C030
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame292_wheel2:
-  symbol: gKartLuigi292Wheel2
-  type: texture
-  offset: 0x6C030
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame292_wheel3:
-  symbol: gKartLuigi292Wheel3
-  type: texture
-  offset: 0x6C030
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame293_wheel0:
-  symbol: gKartLuigi293Wheel0
-  type: texture
-  offset: 0x6C6DC
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -12917,43 +12818,10 @@ luigi_kart_frame293_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame293_wheel1:
-  symbol: gKartLuigi293Wheel1
+luigi_kart_frame297:
+  symbol: gKartLuigi297
   type: texture
-  offset: 0x6C6DC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame293_wheel2:
-  symbol: gKartLuigi293Wheel2
-  type: texture
-  offset: 0x6C6DC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame293_wheel3:
-  symbol: gKartLuigi293Wheel3
-  type: texture
-  offset: 0x6C6DC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame294_wheel0:
-  symbol: gKartLuigi294Wheel0
-  type: texture
-  offset: 0x6CD38
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -12961,43 +12829,10 @@ luigi_kart_frame294_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame294_wheel1:
-  symbol: gKartLuigi294Wheel1
+luigi_kart_frame298:
+  symbol: gKartLuigi298
   type: texture
-  offset: 0x6CD38
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame294_wheel2:
-  symbol: gKartLuigi294Wheel2
-  type: texture
-  offset: 0x6CD38
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame294_wheel3:
-  symbol: gKartLuigi294Wheel3
-  type: texture
-  offset: 0x6CD38
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame295_wheel0:
-  symbol: gKartLuigi295Wheel0
-  type: texture
-  offset: 0x6D390
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13005,43 +12840,10 @@ luigi_kart_frame295_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame295_wheel1:
-  symbol: gKartLuigi295Wheel1
+luigi_kart_frame299:
+  symbol: gKartLuigi299
   type: texture
-  offset: 0x6D390
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame295_wheel2:
-  symbol: gKartLuigi295Wheel2
-  type: texture
-  offset: 0x6D390
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame295_wheel3:
-  symbol: gKartLuigi295Wheel3
-  type: texture
-  offset: 0x6D390
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame296_wheel0:
-  symbol: gKartLuigi296Wheel0
-  type: texture
-  offset: 0x6D9B4
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13049,43 +12851,10 @@ luigi_kart_frame296_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame296_wheel1:
-  symbol: gKartLuigi296Wheel1
+luigi_kart_frame300:
+  symbol: gKartLuigi300
   type: texture
-  offset: 0x6D9B4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame296_wheel2:
-  symbol: gKartLuigi296Wheel2
-  type: texture
-  offset: 0x6D9B4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame296_wheel3:
-  symbol: gKartLuigi296Wheel3
-  type: texture
-  offset: 0x6D9B4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame297_wheel0:
-  symbol: gKartLuigi297Wheel0
-  type: texture
-  offset: 0x6DF5C
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13093,43 +12862,10 @@ luigi_kart_frame297_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame297_wheel1:
-  symbol: gKartLuigi297Wheel1
+luigi_kart_frame301:
+  symbol: gKartLuigi301
   type: texture
-  offset: 0x6DF5C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame297_wheel2:
-  symbol: gKartLuigi297Wheel2
-  type: texture
-  offset: 0x6DF5C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame297_wheel3:
-  symbol: gKartLuigi297Wheel3
-  type: texture
-  offset: 0x6DF5C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame298_wheel0:
-  symbol: gKartLuigi298Wheel0
-  type: texture
-  offset: 0x6E48C
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13137,43 +12873,10 @@ luigi_kart_frame298_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame298_wheel1:
-  symbol: gKartLuigi298Wheel1
+luigi_kart_frame302:
+  symbol: gKartLuigi302
   type: texture
-  offset: 0x6E48C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame298_wheel2:
-  symbol: gKartLuigi298Wheel2
-  type: texture
-  offset: 0x6E48C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame298_wheel3:
-  symbol: gKartLuigi298Wheel3
-  type: texture
-  offset: 0x6E48C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame299_wheel0:
-  symbol: gKartLuigi299Wheel0
-  type: texture
-  offset: 0x6EA48
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13181,43 +12884,10 @@ luigi_kart_frame299_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame299_wheel1:
-  symbol: gKartLuigi299Wheel1
+luigi_kart_frame303:
+  symbol: gKartLuigi303
   type: texture
-  offset: 0x6EA48
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame299_wheel2:
-  symbol: gKartLuigi299Wheel2
-  type: texture
-  offset: 0x6EA48
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame299_wheel3:
-  symbol: gKartLuigi299Wheel3
-  type: texture
-  offset: 0x6EA48
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame300_wheel0:
-  symbol: gKartLuigi300Wheel0
-  type: texture
-  offset: 0x6F028
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13225,43 +12895,10 @@ luigi_kart_frame300_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame300_wheel1:
-  symbol: gKartLuigi300Wheel1
+luigi_kart_frame304:
+  symbol: gKartLuigi304
   type: texture
-  offset: 0x6F028
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame300_wheel2:
-  symbol: gKartLuigi300Wheel2
-  type: texture
-  offset: 0x6F028
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame300_wheel3:
-  symbol: gKartLuigi300Wheel3
-  type: texture
-  offset: 0x6F028
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame301_wheel0:
-  symbol: gKartLuigi301Wheel0
-  type: texture
-  offset: 0x6F5F0
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13269,43 +12906,10 @@ luigi_kart_frame301_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame301_wheel1:
-  symbol: gKartLuigi301Wheel1
+luigi_kart_frame305:
+  symbol: gKartLuigi305
   type: texture
-  offset: 0x6F5F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame301_wheel2:
-  symbol: gKartLuigi301Wheel2
-  type: texture
-  offset: 0x6F5F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame301_wheel3:
-  symbol: gKartLuigi301Wheel3
-  type: texture
-  offset: 0x6F5F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame302_wheel0:
-  symbol: gKartLuigi302Wheel0
-  type: texture
-  offset: 0x6FBB0
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13313,43 +12917,10 @@ luigi_kart_frame302_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame302_wheel1:
-  symbol: gKartLuigi302Wheel1
+luigi_kart_frame306:
+  symbol: gKartLuigi306
   type: texture
-  offset: 0x6FBB0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame302_wheel2:
-  symbol: gKartLuigi302Wheel2
-  type: texture
-  offset: 0x6FBB0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame302_wheel3:
-  symbol: gKartLuigi302Wheel3
-  type: texture
-  offset: 0x6FBB0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame303_wheel0:
-  symbol: gKartLuigi303Wheel0
-  type: texture
-  offset: 0x70188
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13357,43 +12928,10 @@ luigi_kart_frame303_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame303_wheel1:
-  symbol: gKartLuigi303Wheel1
+luigi_kart_frame307:
+  symbol: gKartLuigi307
   type: texture
-  offset: 0x70188
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame303_wheel2:
-  symbol: gKartLuigi303Wheel2
-  type: texture
-  offset: 0x70188
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame303_wheel3:
-  symbol: gKartLuigi303Wheel3
-  type: texture
-  offset: 0x70188
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame304_wheel0:
-  symbol: gKartLuigi304Wheel0
-  type: texture
-  offset: 0x70750
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13401,43 +12939,10 @@ luigi_kart_frame304_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame304_wheel1:
-  symbol: gKartLuigi304Wheel1
+luigi_kart_frame308:
+  symbol: gKartLuigi308
   type: texture
-  offset: 0x70750
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame304_wheel2:
-  symbol: gKartLuigi304Wheel2
-  type: texture
-  offset: 0x70750
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame304_wheel3:
-  symbol: gKartLuigi304Wheel3
-  type: texture
-  offset: 0x70750
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame305_wheel0:
-  symbol: gKartLuigi305Wheel0
-  type: texture
-  offset: 0x70CB4
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13445,43 +12950,10 @@ luigi_kart_frame305_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame305_wheel1:
-  symbol: gKartLuigi305Wheel1
+luigi_kart_frame309:
+  symbol: gKartLuigi309
   type: texture
-  offset: 0x70CB4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame305_wheel2:
-  symbol: gKartLuigi305Wheel2
-  type: texture
-  offset: 0x70CB4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame305_wheel3:
-  symbol: gKartLuigi305Wheel3
-  type: texture
-  offset: 0x70CB4
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame306_wheel0:
-  symbol: gKartLuigi306Wheel0
-  type: texture
-  offset: 0x71154
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13489,43 +12961,10 @@ luigi_kart_frame306_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame306_wheel1:
-  symbol: gKartLuigi306Wheel1
+luigi_kart_frame310:
+  symbol: gKartLuigi310
   type: texture
-  offset: 0x71154
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame306_wheel2:
-  symbol: gKartLuigi306Wheel2
-  type: texture
-  offset: 0x71154
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame306_wheel3:
-  symbol: gKartLuigi306Wheel3
-  type: texture
-  offset: 0x71154
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame307_wheel0:
-  symbol: gKartLuigi307Wheel0
-  type: texture
-  offset: 0x71740
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13533,43 +12972,10 @@ luigi_kart_frame307_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame307_wheel1:
-  symbol: gKartLuigi307Wheel1
+luigi_kart_frame311:
+  symbol: gKartLuigi311
   type: texture
-  offset: 0x71740
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame307_wheel2:
-  symbol: gKartLuigi307Wheel2
-  type: texture
-  offset: 0x71740
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame307_wheel3:
-  symbol: gKartLuigi307Wheel3
-  type: texture
-  offset: 0x71740
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame308_wheel0:
-  symbol: gKartLuigi308Wheel0
-  type: texture
-  offset: 0x71DCC
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13577,43 +12983,10 @@ luigi_kart_frame308_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame308_wheel1:
-  symbol: gKartLuigi308Wheel1
+luigi_kart_frame312:
+  symbol: gKartLuigi312
   type: texture
-  offset: 0x71DCC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame308_wheel2:
-  symbol: gKartLuigi308Wheel2
-  type: texture
-  offset: 0x71DCC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame308_wheel3:
-  symbol: gKartLuigi308Wheel3
-  type: texture
-  offset: 0x71DCC
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame309_wheel0:
-  symbol: gKartLuigi309Wheel0
-  type: texture
-  offset: 0x7247C
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13621,43 +12994,10 @@ luigi_kart_frame309_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame309_wheel1:
-  symbol: gKartLuigi309Wheel1
+luigi_kart_frame313:
+  symbol: gKartLuigi313
   type: texture
-  offset: 0x7247C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame309_wheel2:
-  symbol: gKartLuigi309Wheel2
-  type: texture
-  offset: 0x7247C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame309_wheel3:
-  symbol: gKartLuigi309Wheel3
-  type: texture
-  offset: 0x7247C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame310_wheel0:
-  symbol: gKartLuigi310Wheel0
-  type: texture
-  offset: 0x72AC8
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13665,43 +13005,10 @@ luigi_kart_frame310_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame310_wheel1:
-  symbol: gKartLuigi310Wheel1
+luigi_kart_frame314:
+  symbol: gKartLuigi314
   type: texture
-  offset: 0x72AC8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame310_wheel2:
-  symbol: gKartLuigi310Wheel2
-  type: texture
-  offset: 0x72AC8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame310_wheel3:
-  symbol: gKartLuigi310Wheel3
-  type: texture
-  offset: 0x72AC8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame311_wheel0:
-  symbol: gKartLuigi311Wheel0
-  type: texture
-  offset: 0x73118
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13709,43 +13016,10 @@ luigi_kart_frame311_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame311_wheel1:
-  symbol: gKartLuigi311Wheel1
+luigi_kart_frame315:
+  symbol: gKartLuigi315
   type: texture
-  offset: 0x73118
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame311_wheel2:
-  symbol: gKartLuigi311Wheel2
-  type: texture
-  offset: 0x73118
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame311_wheel3:
-  symbol: gKartLuigi311Wheel3
-  type: texture
-  offset: 0x73118
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame312_wheel0:
-  symbol: gKartLuigi312Wheel0
-  type: texture
-  offset: 0x73730
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13753,43 +13027,10 @@ luigi_kart_frame312_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame312_wheel1:
-  symbol: gKartLuigi312Wheel1
+luigi_kart_frame316:
+  symbol: gKartLuigi316
   type: texture
-  offset: 0x73730
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame312_wheel2:
-  symbol: gKartLuigi312Wheel2
-  type: texture
-  offset: 0x73730
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame312_wheel3:
-  symbol: gKartLuigi312Wheel3
-  type: texture
-  offset: 0x73730
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame313_wheel0:
-  symbol: gKartLuigi313Wheel0
-  type: texture
-  offset: 0x73C90
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13797,43 +13038,10 @@ luigi_kart_frame313_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame313_wheel1:
-  symbol: gKartLuigi313Wheel1
+luigi_kart_frame317:
+  symbol: gKartLuigi317
   type: texture
-  offset: 0x73C90
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame313_wheel2:
-  symbol: gKartLuigi313Wheel2
-  type: texture
-  offset: 0x73C90
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame313_wheel3:
-  symbol: gKartLuigi313Wheel3
-  type: texture
-  offset: 0x73C90
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame314_wheel0:
-  symbol: gKartLuigi314Wheel0
-  type: texture
-  offset: 0x741A8
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13841,43 +13049,10 @@ luigi_kart_frame314_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame314_wheel1:
-  symbol: gKartLuigi314Wheel1
+luigi_kart_frame318:
+  symbol: gKartLuigi318
   type: texture
-  offset: 0x741A8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame314_wheel2:
-  symbol: gKartLuigi314Wheel2
-  type: texture
-  offset: 0x741A8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame314_wheel3:
-  symbol: gKartLuigi314Wheel3
-  type: texture
-  offset: 0x741A8
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame315_wheel0:
-  symbol: gKartLuigi315Wheel0
-  type: texture
-  offset: 0x74764
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13885,43 +13060,10 @@ luigi_kart_frame315_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame315_wheel1:
-  symbol: gKartLuigi315Wheel1
+luigi_kart_frame319:
+  symbol: gKartLuigi319
   type: texture
-  offset: 0x74764
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame315_wheel2:
-  symbol: gKartLuigi315Wheel2
-  type: texture
-  offset: 0x74764
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame315_wheel3:
-  symbol: gKartLuigi315Wheel3
-  type: texture
-  offset: 0x74764
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame316_wheel0:
-  symbol: gKartLuigi316Wheel0
-  type: texture
-  offset: 0x74D3C
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13929,43 +13071,10 @@ luigi_kart_frame316_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame316_wheel1:
-  symbol: gKartLuigi316Wheel1
+luigi_kart_frame320:
+  symbol: gKartLuigi320
   type: texture
-  offset: 0x74D3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame316_wheel2:
-  symbol: gKartLuigi316Wheel2
-  type: texture
-  offset: 0x74D3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame316_wheel3:
-  symbol: gKartLuigi316Wheel3
-  type: texture
-  offset: 0x74D3C
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame317_wheel0:
-  symbol: gKartLuigi317Wheel0
-  type: texture
-  offset: 0x752F0
+  offset: 0x6AFC8
   ctype: u8
   mio0: true
   width: 64
@@ -13973,171 +13082,6 @@ luigi_kart_frame317_wheel0:
   format: CI8
   tlut_symbol: luigi_kart_palette
   tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame317_wheel1:
-  symbol: gKartLuigi317Wheel1
-  type: texture
-  offset: 0x752F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame317_wheel2:
-  symbol: gKartLuigi317Wheel2
-  type: texture
-  offset: 0x752F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame317_wheel3:
-  symbol: gKartLuigi317Wheel3
-  type: texture
-  offset: 0x752F0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame318_wheel0:
-  symbol: gKartLuigi318Wheel0
-  type: texture
-  offset: 0x758A0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame318_wheel1:
-  symbol: gKartLuigi318Wheel1
-  type: texture
-  offset: 0x758A0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame318_wheel2:
-  symbol: gKartLuigi318Wheel2
-  type: texture
-  offset: 0x758A0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame318_wheel3:
-  symbol: gKartLuigi318Wheel3
-  type: texture
-  offset: 0x758A0
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame319_wheel0:
-  symbol: gKartLuigi319Wheel0
-  type: texture
-  offset: 0x75E70
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame319_wheel1:
-  symbol: gKartLuigi319Wheel1
-  type: texture
-  offset: 0x75E70
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame319_wheel2:
-  symbol: gKartLuigi319Wheel2
-  type: texture
-  offset: 0x75E70
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame319_wheel3:
-  symbol: gKartLuigi319Wheel3
-  type: texture
-  offset: 0x75E70
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
-luigi_kart_frame320_wheel0:
-  symbol: gKartLuigi320Wheel0
-  type: texture
-  offset: 0x76448
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_0
-luigi_kart_frame320_wheel1:
-  symbol: gKartLuigi320Wheel1
-  type: texture
-  offset: 0x76448
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_1
-luigi_kart_frame320_wheel2:
-  symbol: gKartLuigi320Wheel2
-  type: texture
-  offset: 0x76448
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_2
-luigi_kart_frame320_wheel3:
-  symbol: gKartLuigi320Wheel3
-  type: texture
-  offset: 0x76448
-  ctype: u8
-  mio0: true
-  width: 64
-  height: 64
-  format: CI8
-  tlut_symbol: luigi_kart_palette
-  tlut_wheel: luigi_kart_000_tlut_wheel_3
 luigi_kart_000_tlut_wheel_0:
   symbol: gKartLuigi000TlutWheel0
   type: texture
