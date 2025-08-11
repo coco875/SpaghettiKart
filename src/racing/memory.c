@@ -212,7 +212,7 @@ void replace_segmented_textures_with_o2r_textures(Gfx* gfx, const course_texture
             }
         }
 
-        if (opcode == G_MARKER || opcode == G_MTX_OTR || opcode == G_VTX_OTR_FILEPATH || opcode == G_VTX_OTR_HASH) {
+        if (opcode == G_MARKER || opcode == G_MTX_OTR || opcode == G_VTX_OTR_FILEPATH || opcode == G_VTX_OTR_HASH || opcode == G_SETTIMG_OTR_HASH) {
             iterator++;
         }
         // Move to the next command in the display list
