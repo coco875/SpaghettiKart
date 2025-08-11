@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x8666a0]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/kalimari_desert/kalimari_desert_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

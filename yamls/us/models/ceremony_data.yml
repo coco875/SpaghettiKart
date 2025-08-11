@@ -1,6 +1,8 @@
 :config:
   segments:
     - [0x0B, 0x821D10]
+  external_files:
+    - "yamls/us/textures/ceremony_data.yml"
   header:
     code:
     - '#include <assets/ceremony_data.h>'

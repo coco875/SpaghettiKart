@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x82B620]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/choco_mountain/choco_mountain_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

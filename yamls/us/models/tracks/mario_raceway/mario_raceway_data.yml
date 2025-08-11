@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x8284D0]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/mario_raceway/mario_raceway_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

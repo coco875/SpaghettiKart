@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x872A00]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/rainbow_road/rainbow_road_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

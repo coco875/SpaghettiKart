@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x83F740]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/frappe_snowland/frappe_snowland_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

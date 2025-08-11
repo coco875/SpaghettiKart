@@ -1,6 +1,8 @@
 :config:
   segments:
     - [0x06, 0x825800]
+  external_files:
+    - "yamls/us/textures/startup_logo.yml"
   header:
     code:
       - '#include <assets/startup_logo.h>'

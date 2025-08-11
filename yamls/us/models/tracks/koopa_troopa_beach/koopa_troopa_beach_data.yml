@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x842E40]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/koopa_troopa_beach/koopa_troopa_beach_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

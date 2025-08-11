@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x852E20]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/moo_moo_farm/moo_moo_farm_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

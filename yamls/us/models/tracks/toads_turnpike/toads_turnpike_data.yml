@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x857E80]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/toads_turnpike/toads_turnpike_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

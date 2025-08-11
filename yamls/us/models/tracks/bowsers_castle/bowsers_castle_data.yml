@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x82DF40]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/bowsers_castle/bowsers_castle_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

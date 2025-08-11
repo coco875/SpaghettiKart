@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x831DC0]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/banshee_boardwalk/banshee_boardwalk_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

@@ -2,6 +2,8 @@
   segments:
     - [0x06, 0x86ECF0]
     - [0x07, 0x800000]
+  external_files:
+    - "yamls/us/textures/tracks/sherbet_land/sherbet_land_data.yml"
   header:
     code:
       - '#include <libultraship.h>'

@@ -1,6 +1,8 @@
 :config:
   segments:
     - [0x0D, 0x132B50]
+  external_files:
+    - "yamls/us/textures/common_data.yml"
   header:
     code:
       - "#include <macros.h>"
