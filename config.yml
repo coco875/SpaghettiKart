@@ -3,7 +3,7 @@
   path: yamls/us
   config:
     gbi: F3DEX_MK64
-    sort: OFFSET
+    # sort: OFFSET
     enums: 
       - include/defines.h
     output:
