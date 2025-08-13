@@ -182,27 +182,27 @@ void Course::Load() {
     func_802A86A8(reinterpret_cast<CourseVtx*>(LOAD_ASSET_RAW(this->vtx)), vtx, vtxSize / sizeof(Vtx));
 
     // Load and allocate memory for course textures
-    const course_texture* asset = this->Props.textures;
+    // const course_texture* asset = this->Props.textures;
     u8* freeMemory = NULL;
     u8* texture = NULL;
     size_t size = 0;
     texSegSize = 0;
-    while (asset->addr) {
-        size = ResourceGetTexSizeByName(asset->addr);
-        freeMemory = (u8*) allocate_memory(size);
+    // while (asset->addr) {
+    //     size = ResourceGetTexSizeByName(asset->addr);
+    //     freeMemory = (u8*) allocate_memory(size);
 
-        texture = (u8*) (asset->addr);
-        if (texture) {
-            if (asset == &this->Props.textures[0]) {
-                gSegmentTable[5] = reinterpret_cast<uintptr_t>(&freeMemory[0]);
-            }
-            strcpy(reinterpret_cast<char*>(freeMemory), asset->addr);
-            // memcpy(freeMemory, texture, size);
-            texSegSize += size;
-            // printf("Texture Addr: 0x%llX, size 0x%X\n", &freeMemory[0], size);
-        }
-        asset++;
-    }
+    //     texture = (u8*) (asset->addr);
+    //     if (texture) {
+    //         if (asset == &this->Props.textures[0]) {
+    //             gSegmentTable[5] = reinterpret_cast<uintptr_t>(&freeMemory[0]);
+    //         }
+    //         strcpy(reinterpret_cast<char*>(freeMemory), asset->addr);
+    //         // memcpy(freeMemory, texture, size);
+    //         texSegSize += size;
+    //         // printf("Texture Addr: 0x%llX, size 0x%X\n", &freeMemory[0], size);
+    //     }
+    //     asset++;
+    // }
 
     // Extract packed DLs
     u8* packed = reinterpret_cast<u8*>(LOAD_ASSET_RAW(this->gfx));
