@@ -4,6 +4,34 @@
     - [0x07, 0x800000]
   external_files:
     - "yamls/us/textures/tracks/dks_jungle_parkway/dks_jungle_parkway_data.yml"
+  manual_segments:
+    - [0x03009000, "textures/other_textures/gTextureDksJungleParkwayKiwanoFruit1"]
+    - [0x03009800, "textures/other_textures/gTextureDksJungleParkwayKiwanoFruit2"]
+    - [0x0300A000, "textures/other_textures/gTextureDksJungleParkwayKiwanoFruit3"]
+    - [0x05000000, "textures/other_textures/texture_648508"]
+    - [0x05001000, "textures/other_textures/texture_6684F8"]
+    - [0x05001800, "textures/other_textures/wood_bridge_slats"]
+    - [0x05002800, "textures/other_textures/texture_654460"]
+    - [0x05003800, "textures/other_textures/texture_654F74"]
+    - [0x05004800, "textures/other_textures/texture_655998"]
+    - [0x05005000, "textures/other_textures/texture_655F38"]
+    - [0x05006000, "textures/other_textures/texture_656AF4"]
+    - [0x05007000, "textures/other_textures/texture_6575C8"]
+    - [0x05008000, "textures/other_textures/texture_658370"]
+    - [0x05009000, "textures/other_textures/texture_65912C"]
+    - [0x0500A000, "textures/other_textures/texture_659EE8"]
+    - [0x0500B000, "textures/other_textures/texture_65ADE0"]
+    - [0x0500C000, "textures/other_textures/texture_65BB3C"]
+    - [0x0500D000, "textures/other_textures/texture_65C8DC"]
+    - [0x0500E000, "textures/other_textures/texture_65D5D4"]
+    - [0x0500F000, "textures/other_textures/texture_65E2EC"]
+    - [0x0500F800, "textures/other_textures/texture_65EAEC"]
+    - [0x05010000, "textures/other_textures/texture_65E59C"]
+    - [0x05011000, "textures/other_textures/texture_65EE38"]
+    - [0x05012000, "textures/other_textures/texture_65FB18"]
+    - [0x05012800, "textures/other_textures/sign_pink_arrow"]
+    - [0x05013000, "textures/other_textures/waves_0"]
+    - [0x05013800, "textures/other_textures/texture_683844"]
   header:
     code:
       - '#include <libultraship.h>'

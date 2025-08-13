@@ -4,6 +4,36 @@
     - [0x07, 0x800000]
   external_files:
     - "yamls/us/textures/tracks/bowsers_castle/bowsers_castle_data.yml"
+  manual_segments:
+    - [0x03009000, "textures/other_textures/shrub"]
+    - [0x05000000, "textures/other_textures/texture_64313C"]
+    - [0x05000800, "textures/other_textures/texture_6528DC"]
+    - [0x05001000, "textures/other_textures/texture_66ED38"]
+    - [0x05001800, "textures/other_textures/texture_676C6C"]
+    - [0x05002000, "textures/other_textures/texture_676EA8"]
+    - [0x05002800, "textures/other_textures/texture_679D34"]
+    - [0x05003000, "textures/other_textures/grass_6"]
+    - [0x05003800, "textures/other_textures/texture_6522E0"]
+    - [0x05004000, "textures/other_textures/texture_651F40"]
+    - [0x05004800, "textures/other_textures/roof_tile"]
+    - [0x05005000, "textures/other_textures/sign_bowser_0"]
+    - [0x05006000, "textures/other_textures/sign_bowser_1"]
+    - [0x05006800, "textures/other_textures/texture_66ABA4"]
+    - [0x05007000, "textures/other_textures/texture_66EBF0"]
+    - [0x05007800, "textures/other_textures/texture_6733CC"]
+    - [0x05008000, "textures/other_textures/texture_673118"]
+    - [0x05008800, "textures/other_textures/texture_673FF8"]
+    - [0x05009000, "textures/other_textures/texture_674B28"]
+    - [0x05009800, "textures/other_textures/sign_green_arrow"]
+    - [0x0500A000, "textures/other_textures/texture_68D834"]
+    - [0x0500B000, "textures/other_textures/texture_676D7C"]
+    - [0x0500C000, "textures/other_textures/texture_67ADF0"]
+    - [0x0500D000, "textures/other_textures/texture_67EFEC"]
+    - [0x0500E000, "textures/other_textures/texture_653DB0"]
+    - [0x0500F000, "textures/other_textures/texture_66CA98"]
+    - [0x05010000, "textures/other_textures/texture_673990"]
+    - [0x05011000, "textures/other_textures/texture_67A370"]
+    - [0x05011800, "textures/other_textures/texture_67A91C"]
   header:
     code:
       - '#include <libultraship.h>'

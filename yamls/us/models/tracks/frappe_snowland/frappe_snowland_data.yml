@@ -4,6 +4,17 @@
     - [0x07, 0x800000]
   external_files:
     - "yamls/us/textures/tracks/frappe_snowland/frappe_snowland_data.yml"
+  manual_segments:
+    - [0x03009000, "textures/other_textures/gTextureFrappeSnowlandTreeLeft"]
+    - [0x03009800, "textures/other_textures/gTextureFrappeSnowlandTreeRight"]
+    - [0x05000000, "textures/other_textures/texture_6684F8"]
+    - [0x05000800, "textures/other_textures/texture_66CA98"]
+    - [0x05001000, "textures/other_textures/texture_66EBF0"]
+    - [0x05001800, "textures/other_textures/texture_675434"]
+    - [0x05002000, "textures/other_textures/texture_677F04"]
+    - [0x05002800, "textures/other_textures/texture_678118"]
+    - [0x05003000, "textures/other_textures/texture_679258"]
+    - [0x05004000, "textures/other_textures/texture_67973C"]
   header:
     code:
       - '#include <libultraship.h>'

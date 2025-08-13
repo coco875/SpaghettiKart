@@ -2,6 +2,29 @@
   segments:
     - [0x06, 0x831DC0]
     - [0x07, 0x800000]
+  manual_segments:
+    - [0x05000000, "textures/other_textures/texture_6447C4"]
+    - [0x05000800, "textures/other_textures/texture_676FB0"]
+    - [0x05001000, "textures/other_textures/texture_643B3C"]
+    - [0x05001800, "textures/other_textures/texture_64BB60"]
+    - [0x05002000, "textures/other_textures/texture_64BCCC"]
+    - [0x05002800, "textures/other_textures/texture_64FBF4"]
+    - [0x05003000, "textures/other_textures/texture_651B20"]
+    - [0x05003800, "textures/other_textures/texture_66262C"]
+    - [0x05004000, "textures/other_textures/texture_668728"]
+    - [0x05004800, "textures/other_textures/texture_66A3DC"]
+    - [0x05005000, "textures/other_textures/texture_66CA98"]
+    - [0x05005800, "textures/other_textures/texture_66CD64"]
+    - [0x05006000, "textures/other_textures/texture_66D698"]
+    - [0x05006800, "textures/other_textures/texture_66E608"]
+    - [0x05007000, "textures/other_textures/texture_67B388"]
+    - [0x05007800, "textures/other_textures/sign_welcome_0"]
+    - [0x05008800, "textures/other_textures/sign_welcome_1"]
+    - [0x05009800, "textures/other_textures/sign_wooden_back_0"]
+    - [0x0500A800, "textures/other_textures/sign_wooden_back_1"]
+    - [0x0500B800, "textures/other_textures/sign_wood_red_arrow"]
+    - [0x0500C800, "textures/other_textures/texture_68D940"]
+    - [0x0500D000, "textures/other_textures/texture_685AC0"]
   external_files:
     - "yamls/us/textures/tracks/banshee_boardwalk/banshee_boardwalk_data.yml"
   header:

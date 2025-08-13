@@ -4,6 +4,12 @@
     - [0x07, 0x800000]
   external_files:
     - "yamls/us/textures/tracks/rainbow_road/rainbow_road_data.yml"
+  manual_segments:
+    - [0x05000000, "textures/other_textures/star_outline"]
+    - [0x05000800, "textures/other_textures/texture_67A1B8"]
+    - [0x05001000, "textures/other_textures/checkerboard_black_white"]
+    - [0x05001800, "textures/other_textures/texture_662A34"]
+    - [0x05002000, "textures/other_textures/rainbow"]
   header:
     code:
       - '#include <libultraship.h>'

@@ -3,6 +3,17 @@
     - [0x0D, 0x132B50]
   external_files:
     - "yamls/us/textures/common_data.yml"
+  manual_segments:
+    - [0x03004000, "textures/other_textures/gTextureFinishLineBanner1"]
+    - [0x03004800, "textures/other_textures/gTextureFinishLineBanner2"]
+    - [0x03005000, "textures/other_textures/gTextureFinishLineBanner3"]
+    - [0x03005800, "textures/other_textures/gTextureFinishLineBanner4"]
+    - [0x03006000, "textures/other_textures/gTextureFinishLineBanner5"]
+    - [0x03006800, "textures/other_textures/gTextureFinishLineBanner6"]
+    - [0x03007000, "textures/other_textures/gTextureFinishLineBanner7"]
+    - [0x03007800, "textures/other_textures/gTextureFinishLineBanner8"]
+    - [0x03008000, "textures/other_textures/texture_671A88"]
+    - [0x03008800, "textures/other_textures/texture_6774D8"]
   header:
     code:
       - "#include <macros.h>"

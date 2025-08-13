@@ -4,6 +4,17 @@
     - [0x07, 0x800000]
   external_files:
     - "yamls/us/textures/tracks/sherbet_land/sherbet_land_data.yml"
+  manual_segments:
+    - [0x05000000, "textures/other_textures/texture_643B3C"]
+    - [0x05000800, "textures/other_textures/texture_66D024"]
+    - [0x05001000, "textures/other_textures/texture_678118"]
+    - [0x05001800, "textures/other_textures/sign_wood_red_arrow"]
+    - [0x05002800, "textures/other_textures/texture_678CC8"]
+    - [0x05003000, "textures/other_textures/texture_67842C"]
+    - [0x05003800, "textures/other_textures/texture_67893C"]
+    - [0x05004000, "textures/other_textures/texture_651984"]
+    - [0x05004800, "textures/other_textures/texture_651428"]
+    - [0x05005000, "textures/other_textures/texture_662924"]
   header:
     code:
       - '#include <libultraship.h>'

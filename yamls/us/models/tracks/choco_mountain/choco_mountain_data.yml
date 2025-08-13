@@ -4,6 +4,27 @@
     - [0x07, 0x800000]
   external_files:
     - "yamls/us/textures/tracks/choco_mountain/choco_mountain_data.yml"
+  manual_segments:
+    - [0x05000000, "textures/other_textures/texture_64619C"]
+    - [0x05000800, "textures/other_textures/texture_64647C"]
+    - [0x05001000, "textures/other_textures/texture_647F4C"]
+    - [0x05001800, "textures/other_textures/texture_64FBF4"]
+    - [0x05002000, "textures/other_textures/texture_653DB0"]
+    - [0x05002800, "textures/other_textures/texture_652B54"]
+    - [0x05003000, "textures/other_textures/texture_65315C"]
+    - [0x05003800, "textures/other_textures/texture_6684F8"]
+    - [0x05004000, "textures/other_textures/sign_luigis_0"]
+    - [0x05005000, "textures/other_textures/sign_luigis_1"]
+    - [0x05006000, "textures/other_textures/sign_nintendo_red_0"]
+    - [0x05006800, "textures/other_textures/sign_nintendo_red_1"]
+    - [0x05007000, "textures/other_textures/6774D8"]
+    - [0x05007800, "textures/other_textures/sign_falling_rocks"]
+    - [0x05008000, "textures/other_textures/sign_backside"]
+    - [0x05008800, "textures/other_textures/679C04"]
+    - [0x05009000, "textures/other_textures/67B864"]
+    - [0x05009800, "textures/other_textures/67DC20"]
+    - [0x0500A000, "textures/other_textures/sign_yoshi"]
+    - [0x0500B000, "textures/other_textures/checkerboard_blue_gray"]
   header:
     code:
       - '#include <libultraship.h>'

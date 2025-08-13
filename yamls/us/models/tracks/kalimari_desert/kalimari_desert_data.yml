@@ -4,6 +4,37 @@
     - [0x07, 0x800000]
   external_files:
     - "yamls/us/textures/tracks/kalimari_desert/kalimari_desert_data.yml"
+  manual_segments:
+    - [0x03009000, "textures/other_textures/gTextureCactus1Left"]
+    - [0x03009800, "textures/other_textures/gTextureCactus1Right"]
+    - [0x0300A000, "textures/other_textures/gTextureCactus2Left"]
+    - [0x0300A800, "textures/other_textures/gTextureCactus2Right"]
+    - [0x0300B000, "textures/other_textures/gTextureCactus3"]
+    - [0x05000000, "textures/other_textures/texture_6684F8"]
+    - [0x05000800, "textures/other_textures/sign_luigis_0"]
+    - [0x05001800, "textures/other_textures/sign_luigis_1"]
+    - [0x05002800, "textures/other_textures/sign_mario_star_0"]
+    - [0x05003800, "textures/other_textures/sign_mario_star_1"]
+    - [0x05004800, "textures/other_textures/sign_nintendo_red_0"]
+    - [0x05005800, "textures/other_textures/sign_nintendo_red_1"]
+    - [0x05006800, "textures/other_textures/texture_67490C"]
+    - [0x05007000, "textures/other_textures/sign_yoshi"]
+    - [0x05008000, "textures/other_textures/checkerboard_blue_gray"]
+    - [0x05009000, "textures/other_textures/texture_646CA8"]
+    - [0x0500A000, "textures/other_textures/texture_6473E4"]
+    - [0x0500B000, "textures/other_textures/texture_647994"]
+    - [0x0500C000, "textures/other_textures/texture_668920"]
+    - [0x0500C800, "textures/other_textures/railroad_track"]
+    - [0x0500D800, "textures/other_textures/railroad_crossing_track"]
+    - [0x0500E800, "textures/other_textures/texture_67291C"]
+    - [0x0500F000, "textures/other_textures/fence_barbed_wire"]
+    - [0x05010000, "textures/other_textures/texture_67D304"]
+    - [0x05011000, "textures/other_textures/texture_67E010"]
+    - [0x05011800, "textures/other_textures/texture_67EEAC"]
+    - [0x05012000, "textures/other_textures/sign_shell_shot_0"]
+    - [0x05013000, "textures/other_textures/sign_shell_shot_1"]
+    - [0x05014000, "textures/other_textures/sign_koopa_air_0"]
+    - [0x05015000, "textures/other_textures/sign_koopa_air_1"]
   header:
     code:
       - '#include <libultraship.h>'

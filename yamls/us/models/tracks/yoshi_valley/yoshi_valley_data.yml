@@ -4,6 +4,22 @@
     - [0x07, 0x800000]
   external_files:
     - "yamls/us/textures/tracks/yoshi_valley/yoshi_valley_data.yml"
+  manual_segments:
+  - [0x03009000, "textures/other_textures/gTextureTrees2"]
+  - [0x05000000, "textures/other_textures/texture_66EBF0"]
+  - [0x05000800, "textures/other_textures/wood_bridge_slats"]
+  - [0x05001800, "textures/other_textures/texture_65E2EC"]
+  - [0x05002000, "textures/other_textures/texture_6846DC"]
+  - [0x05002800, "textures/other_textures/fence_rope"]
+  - [0x05003000, "textures/other_textures/texture_685108"]
+  - [0x05003800, "textures/other_textures/texture_64CC20"]
+  - [0x05004800, "textures/other_textures/grass_4"]
+  - [0x05005000, "textures/other_textures/texture_6775EC"]
+  - [0x05006000, "textures/other_textures/texture_68E2D0"]
+  - [0x05006800, "textures/other_textures/checkerboard_black_white"]
+  - [0x05007000, "textures/other_textures/texture_643B3C"]
+  - [0x05007800, "textures/other_textures/sign_wood_red_arrow"]
+  - [0x05008800, "textures/other_textures/texture_68DEC0"]
   header:
     code:
       - '#include <libultraship.h>'
