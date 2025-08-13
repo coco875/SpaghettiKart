@@ -148,9 +148,9 @@ MarioRaceway::MarioRaceway() {
     Props.Skybox.FloorBottomLeft = {0, 0, 0};
     Props.Skybox.FloorTopLeft = {0, 0, 0};
     Props.Sequence = MusicSeq::MUSIC_SEQ_MARIO_RACEWAY;
-    for (size_t i = 0; i < 68; i++) {
-        replace_segmented_textures_with_o2r_textures((Gfx*) mario_raceway_dls[i], Props.textures);
-    }
+    // for (size_t i = 0; i < 68; i++) {
+    //     replace_segmented_textures_with_o2r_textures((Gfx*) mario_raceway_dls[i], Props.textures);
+    // }
 }
 
 void MarioRaceway::Load() {

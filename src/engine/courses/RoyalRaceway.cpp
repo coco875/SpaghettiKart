@@ -163,9 +163,9 @@ RoyalRaceway::RoyalRaceway() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_ROYAL_RACEWAY;
 
     Props.WaterLevel = -60.0f;
-    for (size_t i = 0; i < 132; i++) {
-        replace_segmented_textures_with_o2r_textures((Gfx*) royal_raceway_dls[i], Props.textures);
-    }
+    // for (size_t i = 0; i < 132; i++) {
+    //     replace_segmented_textures_with_o2r_textures((Gfx*) royal_raceway_dls[i], Props.textures);
+    // }
 }
 
 void RoyalRaceway::Load() {

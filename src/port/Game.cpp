@@ -335,7 +335,7 @@ s32 CM_GetCrossingOnTriggered(uintptr_t* crossing) {
 
 void CM_LoadTextures() {
     if (gWorldInstance.CurrentCourse) {
-        gWorldInstance.CurrentCourse->LoadTextures();
+        // gWorldInstance.CurrentCourse->LoadTextures();
     }
 }
 

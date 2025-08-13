@@ -144,9 +144,9 @@ DKJungle::DKJungle() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_DK_JUNGLE;
 
     Props.WaterLevel = -475.0f;
-    for (size_t i = 0; i < 104; i++) {
-        replace_segmented_textures_with_o2r_textures((Gfx*) d_course_dks_jungle_parkway_unknown_dl_list[i], Props.textures);
-    }
+    // for (size_t i = 0; i < 104; i++) {
+    //     replace_segmented_textures_with_o2r_textures((Gfx*) d_course_dks_jungle_parkway_unknown_dl_list[i], Props.textures);
+    // }
 }
 
 void DKJungle::Load() {

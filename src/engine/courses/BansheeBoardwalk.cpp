@@ -142,9 +142,9 @@ BansheeBoardwalk::BansheeBoardwalk() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_BANSHEE_BOARDWALK;
 
     Props.WaterLevel = -80.0f;
-    for (size_t i = 0; i < 100; i++) {
-        replace_segmented_textures_with_o2r_textures((Gfx*) banshee_boardwalk_dls[i], Props.textures);
-    }
+    // for (size_t i = 0; i < 100; i++) {
+    //     replace_segmented_textures_with_o2r_textures((Gfx*) banshee_boardwalk_dls[i], Props.textures);
+    // }
 }
 
 void BansheeBoardwalk::Load() {
