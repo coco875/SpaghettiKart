@@ -205,14 +205,14 @@ void Course::Load() {
     // }
 
     // Extract packed DLs
-    u8* packed = reinterpret_cast<u8*>(LOAD_ASSET_RAW(this->gfx));
-    Gfx* gfx = (Gfx*) allocate_memory(sizeof(Gfx) * this->gfxSize); // Size of unpacked DLs
-    if (gfx == NULL) {
-        printf("Failed to allocate course displaylist memory\n");
-    }
+    // u8* packed = reinterpret_cast<u8*>(LOAD_ASSET_RAW(this->gfx));
+    // Gfx* gfx = (Gfx*) allocate_memory(sizeof(Gfx) * this->gfxSize); // Size of unpacked DLs
+    // if (gfx == NULL) {
+    //     printf("Failed to allocate course displaylist memory\n");
+    // }
 
-    gSegmentTable[7] = reinterpret_cast<uintptr_t>(&gfx[0]);
-    displaylist_unpack(reinterpret_cast<uintptr_t*>(gfx), reinterpret_cast<uintptr_t>(packed), 0);
+    // gSegmentTable[7] = reinterpret_cast<uintptr_t>(&gfx[0]);
+    // displaylist_unpack(reinterpret_cast<uintptr_t*>(gfx), reinterpret_cast<uintptr_t>(packed), 0);
 
     Course::Init();
 }

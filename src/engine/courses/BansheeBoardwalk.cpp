@@ -1,10 +1,13 @@
+#include <cstdint>
 #include <libultraship.h>
 #include <libultra/gbi.h>
+#include <unordered_map>
 #include <vector>
 #include <memory>
 
 #include "BansheeBoardwalk.h"
 #include "World.h"
+#include "align_asset_macro.h"
 #include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
 #include "engine/objects/CheepCheep.h"
@@ -147,6 +150,57 @@ BansheeBoardwalk::BansheeBoardwalk() {
     // }
 }
 
+std::unordered_map<uint32_t, const char*> banshee_boardwalk_convert = {
+    { 0x1DA0, d_course_banshee_boardwalk_packed_dl_1DA0 },
+    { 0x5498, d_course_banshee_boardwalk_packed_dl_5498 },
+    { 0x27D0, d_course_banshee_boardwalk_packed_dl_27D0 },
+    { 0x28D0, d_course_banshee_boardwalk_packed_dl_28D0 },
+    { 0x29A0, d_course_banshee_boardwalk_packed_dl_29A0 },
+    { 0x2A70, d_course_banshee_boardwalk_packed_dl_2A70 },
+    { 0x26E8, d_course_banshee_boardwalk_packed_dl_26E8 },
+    { 0x22C8, d_course_banshee_boardwalk_packed_dl_22C8 },
+    { 0x2398, d_course_banshee_boardwalk_packed_dl_2398 },
+    { 0x2440, d_course_banshee_boardwalk_packed_dl_2440 },
+    { 0x2520, d_course_banshee_boardwalk_packed_dl_2520 },
+    { 0x2608, d_course_banshee_boardwalk_packed_dl_2608 },
+    { 0x2B78, d_course_banshee_boardwalk_packed_dl_2B78 },
+    { 0x3240, d_course_banshee_boardwalk_packed_dl_3240 },
+    { 0x3310, d_course_banshee_boardwalk_packed_dl_3310 },
+    { 0x33C8, d_course_banshee_boardwalk_packed_dl_33C8 },
+    { 0x34A0, d_course_banshee_boardwalk_packed_dl_34A0 },
+    { 0x1830, d_course_banshee_boardwalk_packed_dl_1830 },
+    { 0x18E0, d_course_banshee_boardwalk_packed_dl_18E0 },
+    { 0x1968, d_course_banshee_boardwalk_packed_dl_1968 },
+    { 0x1A00, d_course_banshee_boardwalk_packed_dl_1A00 },
+    { 0x30F0, d_course_banshee_boardwalk_packed_dl_30F0 },
+    { 0x2C20, d_course_banshee_boardwalk_packed_dl_2C20 },
+    { 0x2D40, d_course_banshee_boardwalk_packed_dl_2D40 },
+    { 0x2E40, d_course_banshee_boardwalk_packed_dl_2E40 },
+    { 0x2F38, d_course_banshee_boardwalk_packed_dl_2F38 },
+    { 0x3020, d_course_banshee_boardwalk_packed_dl_3020 },
+    { 0x3930, d_course_banshee_boardwalk_packed_dl_3930 },
+    { 0x3AA0, d_course_banshee_boardwalk_packed_dl_3AA0 },
+    { 0x3BA0, d_course_banshee_boardwalk_packed_dl_3BA0 },
+    { 0x3C40, d_course_banshee_boardwalk_packed_dl_3C40 },
+    { 0x3830, d_course_banshee_boardwalk_packed_dl_3830 },
+    { 0x3638, d_course_banshee_boardwalk_packed_dl_3638 },
+    { 0x36C8, d_course_banshee_boardwalk_packed_dl_36C8 },
+    { 0x3740, d_course_banshee_boardwalk_packed_dl_3740 },
+    { 0x37C0, d_course_banshee_boardwalk_packed_dl_37C0 },
+    { 0x3D08, d_course_banshee_boardwalk_packed_dl_3D08 },
+    { 0x40D0, d_course_banshee_boardwalk_packed_dl_40D0 },
+    { 0x4070, d_course_banshee_boardwalk_packed_dl_4070 },
+    { 0x4008, d_course_banshee_boardwalk_packed_dl_4008 },
+    { 0x3F78, d_course_banshee_boardwalk_packed_dl_3F78 },
+    { 0x3D90, d_course_banshee_boardwalk_packed_dl_3D90 },
+    { 0x3E10, d_course_banshee_boardwalk_packed_dl_3E10 },
+    { 0x3E88, d_course_banshee_boardwalk_packed_dl_3E88 },
+    { 0x3F00, d_course_banshee_boardwalk_packed_dl_3F00 },
+    { 0x60, d_course_banshee_boardwalk_packed_dl_60 },
+    { 0x1CF8, d_course_banshee_boardwalk_packed_dl_1CF8 },
+    { 0x1748, d_course_banshee_boardwalk_packed_dl_1748 },
+};
+
 void BansheeBoardwalk::Load() {
     Course::Load();
 
@@ -154,9 +208,28 @@ void BansheeBoardwalk::Load() {
     D_801625EC = 0;
     D_801625F4 = 0;
     D_801625F0 = 0;
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections));
+    auto section = (TrackSections*)LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections);
+    std::vector<TrackSections> banshee_boardwalk_sections = {};
+    while (section->addr != 0) {
+        TrackSections trackSection = {};
+        if (banshee_boardwalk_convert.contains((uintptr_t)section->addr/2)) {
+            trackSection.addr = (Gfx*) LOAD_ASSET(banshee_boardwalk_convert[(uintptr_t)section->addr/2]);
+            if (trackSection.addr == banshee_boardwalk_convert[(uintptr_t)section->addr/2]) {
+                printf("BansheeBoardwalk: Failed to load displaylist for address 0x%lX\n", (uintptr_t)section->addr);
+            }
+        } else {
+            printf("BansheeBoardwalk: Missing displaylist for address 0x%lX\n", (uintptr_t)section->addr);
+        }
+        trackSection.surfaceType = section->surfaceType;
+        trackSection.sectionId = section->sectionId;
+        trackSection.flags = section->flags;
+        banshee_boardwalk_sections.push_back(trackSection);
+        section++;
+    }
+    banshee_boardwalk_sections.push_back({ 0, 0, 0, 0 }); // Add a terminating section
+    parse_course_displaylists(banshee_boardwalk_sections.data());
     func_80295C6C();
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*)0x07000878), 128, 0, 0, 0);
+    find_vtx_and_set_colours((Gfx*) LOAD_ASSET(d_course_banshee_boardwalk_packed_dl_878), 128, 0, 0, 0);
 }
 
 void BansheeBoardwalk::LoadTextures() {
@@ -267,7 +340,7 @@ void BansheeBoardwalk::Render(struct UnkStruct_800DC5EC* arg0) {
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gDPSetCombineMode(gDisplayListHead++, G_CC_DECALRGBA, G_CC_DECALRGBA);
     // d_course_banshee_boardwalk_packed_dl_7228
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07007228)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_7228);
 
     gSPFogPosition(gDisplayListHead++, D_802B87B0, D_802B87B4);
 
@@ -282,11 +355,11 @@ void BansheeBoardwalk::Render(struct UnkStruct_800DC5EC* arg0) {
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
     // d_course_banshee_boardwalk_packed_dl_5CD0
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07005CD0)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_5CD0);
     // d_course_banshee_boardwalk_packed_dl_4E60
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07004E60)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_4E60);
     // d_course_banshee_boardwalk_packed_dl_69B0
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x070069B0)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_69B0);
 
     render_course_segments(banshee_boardwalk_dls, arg0);
 
@@ -296,15 +369,15 @@ void BansheeBoardwalk::Render(struct UnkStruct_800DC5EC* arg0) {
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
     gSPSetGeometryMode(gDisplayListHead++, G_SHADE | G_SHADING_SMOOTH);
     // d_course_banshee_boardwalk_packed_dl_580
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000580)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_580);
     // d_course_banshee_boardwalk_packed_dl_60
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000060)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_60);
     // d_course_banshee_boardwalk_packed_dl_540
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000540)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_540);
 
     if (camera->pos[1] < -20.0f) {
         // d_course_banshee_boardwalk_packed_dl_6310
-        gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07006310)));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_6310);
     }
     spA8[0] = camera->pos[0];
     spA8[1] = -82.0f;
@@ -350,13 +423,13 @@ void BansheeBoardwalk::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pat
     gDPSetBlendMask(gDisplayListHead++, 0xFF);
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
     // d_course_banshee_boardwalk_packed_dl_878
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*) 0x07000878));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_banshee_boardwalk_packed_dl_878);
     gDPSetAlphaCompare(gDisplayListHead++, G_AC_NONE);
     gDPPipeSync(gDisplayListHead++);
 }
 
 void BansheeBoardwalk::CreditsSpawnActors() {
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*) 0x07000878), 0x32, 0, 0, 0);
+    find_vtx_and_set_colours((Gfx*) LOAD_ASSET(d_course_banshee_boardwalk_packed_dl_878), 0x32, 0, 0, 0);
 }
 
 void BansheeBoardwalk::Destroy() {

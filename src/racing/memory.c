@@ -30,6 +30,48 @@
 s32 sGfxSeekPosition;
 s32 sPackedSeekPosition;
 
+/* Opcodes packés (parité avec tools/displaylist_packer.c) */
+enum PackedOp {
+    PG_LIGHTS_0               = 0x00, /* 0..0x14 mappés sur unpack_lights */
+    /* Presets de combine renommés pour refléter les macros G_CC_* */
+    PG_SETCOMBINE_CC_MODULATERGBA      = 0x15,
+    PG_SETCOMBINE_CC_MODULATERGBDECALA = 0x16,
+    PG_SETCOMBINE_CC_SHADE             = 0x17,
+    PG_RMODE_OPA             = 0x18,
+    PG_RMODE_TEXEDGE         = 0x19,
+    PG_TILECFG_A             = 0x1A,
+    PG_TILECFG_B             = 0x1B,
+    PG_TILECFG_C             = 0x1C,
+    PG_TILECFG_D             = 0x1D,
+    PG_TILECFG_E             = 0x1E,
+    PG_TILECFG_F             = 0x1F,
+    PG_TIMG_LOADBLOCK_0      = 0x20,
+    PG_TIMG_LOADBLOCK_1      = 0x21,
+    PG_TIMG_LOADBLOCK_2      = 0x22,
+    PG_TIMG_LOADBLOCK_3      = 0x23,
+    PG_TIMG_LOADBLOCK_4      = 0x24,
+    PG_TIMG_LOADBLOCK_5      = 0x25,
+    PG_TEXTURE_ON            = 0x26,
+    PG_TEXTURE_OFF           = 0x27,
+    PG_VTX1                  = 0x28,
+    PG_TRI1                  = 0x29,
+    PG_ENDDL                 = 0x2A,
+    PG_DL                    = 0x2B,
+    PG_TILECFG_G             = 0x2C,
+    PG_CULLDL                = 0x2D,
+    PG_SETCOMBINE_ALT        = 0x2E,
+    PG_RMODE_XLU             = 0x2F,
+    PG_SPLINE3D              = 0x30,
+    PG_VTX_BASE              = 0x32, /* 0x33..0x52 → variant vtx2 */
+    PG_SETCOMBINE_CC_DECALRGBA  = 0x53,
+    PG_RMODE_OPA_DECAL       = 0x54,
+    PG_RMODE_XLU_DECAL       = 0x55,
+    PG_SETGEOMETRYMODE       = 0x56,
+    PG_CLEARGEOMETRYMODE     = 0x57,
+    PG_TRI2                  = 0x58,
+    PG_EOF                   = 0xFF,
+};
+
 static u8 sMemoryPool[0xFFFFFFF]; // Stock memory pool size: 0xAB630
 uintptr_t sPoolEnd = sMemoryPool + sizeof(sMemoryPool);
 
@@ -43,10 +85,11 @@ struct UnkStruct_802B8CD4 D_802B8CD4[] = { 0 };
 s32 D_802B8CE4 = 0; // pad
 s32 memoryPadding[2];
 
-#define PRINT_MEMPOOL                                                                                               \
-    printf("\nPool Start: 0x%llX, Pool End: 0x%llX, size: 0x%llX\ngNextFreeMemoryAddress: 0x%llX\n\n", sMemoryPool, \
-           sMemoryPool + sizeof(sMemoryPool), (sMemoryPool + sizeof(sMemoryPool)) - sMemoryPool,                    \
-           gNextFreeMemoryAddress)
+#define PRINT_MEMPOOL                                                                                                       \
+    printf("\nPool Start: %p, Pool End: %p, size: 0x%lX\ngNextFreeMemoryAddress: 0x%lX\n\n", (void*) sMemoryPool,   \
+           (void*) (sMemoryPool + sizeof(sMemoryPool)),                                                                      \
+           (unsigned long) (((sMemoryPool + sizeof(sMemoryPool)) - sMemoryPool)),                                           \
+           (unsigned long) gNextFreeMemoryAddress)
 
 /**
  * @brief Returns the address of the next available memory location and updates the memory pointer
@@ -100,7 +143,7 @@ void* get_segment_base_addr(s32 segment) {
  * @brief converts an RSP segment + offset address to a normal memory address
  */
 void* segmented_to_virtual(const void* addr) {
-    return addr;
+    return (void*) addr;
     size_t segment = (uintptr_t) addr >> 24;
     size_t offset = (uintptr_t) addr & 0x00FFFFFF;
 
@@ -169,13 +212,13 @@ static uintptr_t get_texture2(size_t offset, const course_texture* textures) {
     }
 
     printf("memory.c: get_texture()\n  TEXTURE NOT FOUND DURING DISPLAYLIST EXTRACT\n");
-    printf("  offset: 0x%X\n", offset);
+    printf("  offset: 0x%zX\n", offset);
     return NULL;
 }
 
 // Finds texture calls and replaces hard-coded addresses with direct pointers to the o2r texture.
 void replace_segmented_textures_with_o2r_textures(Gfx* gfx, const course_texture* textures) {
-    char* name = NULL;
+    UNUSED char* name = NULL;
     if (GameEngine_OTRSigCheck((char*) gfx)) {
         name = (char*) gfx;
         gfx = (Gfx*) LOAD_ASSET_RAW(gfx);
@@ -258,13 +301,12 @@ void* allocate_memory(size_t size) {
     uintptr_t freeSpace;
 
     size = ALIGN16(size);
-    gFreeMemorySize -= size;
-
-    if (gFreeMemorySize < 0) {
+    if (gFreeMemorySize < size) {
         printf("[memory.c] allocate_memory(): gFreeMemorySize below zero!\n");
-        printf("gFreeMemorySize: 0x%X", gFreeMemorySize);
+        printf("gFreeMemorySize before alloc: 0x%zX (requested: 0x%zX)\n", gFreeMemorySize, size);
         PRINT_MEMPOOL;
     }
+    gFreeMemorySize -= size;
 
     freeSpace = (uintptr_t) gNextFreeMemoryAddress;
     gNextFreeMemoryAddress += size;
@@ -552,7 +594,7 @@ UNUSED u8* func_802A841C(u8* arg0, s32 arg1, s32 arg2) {
 
 u8* dma_textures(const char* texture, size_t arg1, size_t arg2) {
     u8* temp_v0;
-    void* temp_a0;
+    UNUSED void* temp_a0;
 #ifdef TARGET_N64
     temp_v0 = (u8*) gNextFreeMemoryAddress;
 #else
@@ -667,10 +709,10 @@ void decompress_vtx(CourseVtx* arg0, u32 vertexCount) {
 UNUSED void func_802A8844(void) {
 }
 
-void unpack_lights(Gfx* arg0, UNUSED u8* arg1, s8 arg2) {
+void unpack_lights(Gfx* arg0, UNUSED u8* arg1, s8 opcode) {
     UNUSED s32 pad;
-    s32 a = (arg2 * 0x18) + 0x9000008;
-    s32 b = (arg2 * 0x18) + 0x9000000;
+    s32 a = (opcode * 0x18) + 0x9000008;
+    s32 b = (opcode * 0x18) + 0x9000000;
     Gfx macro[] = { gsSPNumLights(NUMLIGHTS_1) };
 
     arg0[sGfxSeekPosition].words.w0 = macro->words.w0;
@@ -690,14 +732,13 @@ void unpack_lights(Gfx* arg0, UNUSED u8* arg1, s8 arg2) {
 void unpack_displaylist(Gfx* arg0, u8* args, UNUSED s8 opcode) {
     uintptr_t temp_v0 = args[sPackedSeekPosition++];
     uintptr_t temp_t7 = ((args[sPackedSeekPosition++]) << 8 | temp_v0) * 8;
-    arg0[sGfxSeekPosition].words.w0 = 0x06000000;
+    arg0[sGfxSeekPosition].words.w0 = ((uintptr_t)(uint8_t)G_DL << 24);
     // Segment seven addr
     arg0[sGfxSeekPosition].words.w1 = segment_offset_to_virtual(
         0x07, temp_t7); // (0x07000000 + temp_t7); // (gSegmentTable[segment] + ( (offset / 8) * sizeof(Gfx) ) );
     sGfxSeekPosition++;
 }
 
-// end displaylist
 void unpack_end_displaylist(Gfx* arg0, UNUSED u8* arg1, UNUSED s8 arg2) {
     arg0[sGfxSeekPosition].words.w0 = (uintptr_t) (uint8_t) G_ENDDL << 24;
     arg0[sGfxSeekPosition].words.w1 = 0;
@@ -817,38 +858,38 @@ void unpack_tile_sync(Gfx* gfx, u8* args, s8 opcode) {
 
     tmem = 0;
     switch (opcode) {
-        case 26:
+        case PG_TILECFG_A:
             width = 32;
             height = 32;
             fmt = 0;
             break;
-        case 44:
+        case PG_TILECFG_G:
             width = 32;
             height = 32;
             fmt = 0;
             tmem = 256;
             break;
-        case 27:
+        case PG_TILECFG_B:
             width = 64;
             height = 32;
             fmt = 0;
             break;
-        case 28:
+        case PG_TILECFG_C:
             width = 32;
             height = 64;
             fmt = 0;
             break;
-        case 29:
+        case PG_TILECFG_D:
             width = 32;
             height = 32;
             fmt = 3;
             break;
-        case 30:
+        case PG_TILECFG_E:
             width = 64;
             height = 32;
             fmt = 3;
             break;
-        case 31:
+        case PG_TILECFG_F:
             width = 32;
             height = 64;
             fmt = 3;
@@ -893,7 +934,7 @@ void unpack_tile_sync(Gfx* gfx, u8* args, s8 opcode) {
 }
 
 uintptr_t get_texture(size_t offset) {
-    course_texture* textures = CM_GetProps()->textures;
+    const course_texture* textures = CM_GetProps()->textures;
     size_t totalOffset = 0;
 
     while (textures->addr) {
@@ -905,7 +946,7 @@ uintptr_t get_texture(size_t offset) {
     }
 
     printf("memory.c: get_texture()\nTEXTURE NOT FOUND DURING DISPLAYLIST EXTRACT\n");
-    printf("offset: 0x%X\n", offset);
+    printf("offset: 0x%zX\n", offset);
     return NULL;
 }
 
@@ -927,32 +968,32 @@ void unpack_tile_load_sync(Gfx* gfx, u8* args, s8 opcode) {
     size_t offset;
 
     switch (opcode) {
-        case 32:
+        case PG_TIMG_LOADBLOCK_0:
             width = 32;
             height = 32;
             fmt = 0;
             break;
-        case 33:
+        case PG_TIMG_LOADBLOCK_1:
             width = 64;
             height = 32;
             fmt = 0;
             break;
-        case 34:
+        case PG_TIMG_LOADBLOCK_2:
             width = 32;
             height = 64;
             fmt = 0;
             break;
-        case 35:
+        case PG_TIMG_LOADBLOCK_3:
             width = 32;
             height = 32;
             fmt = 3;
             break;
-        case 36:
+        case PG_TIMG_LOADBLOCK_4:
             width = 64;
             height = 32;
             fmt = 3;
             break;
-        case 37:
+        case PG_TIMG_LOADBLOCK_5:
             width = 32;
             height = 64;
             fmt = 3;
@@ -1035,7 +1076,7 @@ void unpack_vtx1(Gfx* gfx, u8* args, UNUSED s8 arg2) {
     sGfxSeekPosition++;
 }
 
-void unpack_vtx2(Gfx* gfx, u8* args, s8 arg2) {
+void unpack_vtx2(Gfx* gfx, u8* args, s8 opcode) {
     uintptr_t temp_t9;
     uintptr_t temp_v1;
     uintptr_t temp_v2;
@@ -1043,7 +1084,7 @@ void unpack_vtx2(Gfx* gfx, u8* args, s8 arg2) {
     temp_v1 = args[sPackedSeekPosition++];
     temp_v2 = ((args[sPackedSeekPosition++] << 8) | temp_v1) * 0x10;
 
-    temp_t9 = arg2 - 50;
+    temp_t9 = opcode - PG_VTX_BASE;
 
     gfx[sGfxSeekPosition].words.w0 = ((uintptr_t) (uint8_t) G_VTX << 24) | ((temp_t9 << 10) + (((temp_t9) * 0x10) - 1));
     gfx[sGfxSeekPosition].words.w1 = (uintptr_t) segment_vtx_to_virtual(temp_v2);
@@ -1201,270 +1242,270 @@ void displaylist_unpack(uintptr_t* data, uintptr_t finalDisplaylistOffset, u32 a
         opcode = packed_dl[sPackedSeekPosition++];
 
         // Break when the eof has been reached denoted by opcode 0xFF
-        if (opcode == 0xFF) {
+        if (opcode == PG_EOF) {
             break;
         }
 
         switch (opcode) {
-            case 0x0:
+            case PG_LIGHTS_0 + 0x0:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x1:
+            case PG_LIGHTS_0 + 0x1:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x2:
+            case PG_LIGHTS_0 + 0x2:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x3:
+            case PG_LIGHTS_0 + 0x3:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x4:
+            case PG_LIGHTS_0 + 0x4:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x5:
+            case PG_LIGHTS_0 + 0x5:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x6:
+            case PG_LIGHTS_0 + 0x6:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x7:
+            case PG_LIGHTS_0 + 0x7:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x8:
+            case PG_LIGHTS_0 + 0x8:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x9:
+            case PG_LIGHTS_0 + 0x9:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0xA:
+            case PG_LIGHTS_0 + 0xA:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0xB:
+            case PG_LIGHTS_0 + 0xB:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0xC:
+            case PG_LIGHTS_0 + 0xC:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0xD:
+            case PG_LIGHTS_0 + 0xD:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0xE:
+            case PG_LIGHTS_0 + 0xE:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0xF:
+            case PG_LIGHTS_0 + 0xF:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x10:
+            case PG_LIGHTS_0 + 0x10:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x11:
+            case PG_LIGHTS_0 + 0x11:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x12:
+            case PG_LIGHTS_0 + 0x12:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x13:
+            case PG_LIGHTS_0 + 0x13:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x14:
+            case PG_LIGHTS_0 + 0x14:
                 unpack_lights(gfx, packed_dl, opcode);
                 break;
-            case 0x15:
+            case PG_SETCOMBINE_CC_MODULATERGBA:
                 unpack_combine_mode1(gfx, packed_dl, arg2);
                 break;
-            case 0x16:
+            case PG_SETCOMBINE_CC_MODULATERGBDECALA:
                 unpack_combine_mode2(gfx, packed_dl, arg2);
                 break;
-            case 0x17:
+            case PG_SETCOMBINE_CC_SHADE:
                 unpack_combine_mode_shade(gfx, packed_dl, arg2);
                 break;
             case 0x2E:
                 unpack_combine_mode4(gfx, packed_dl, arg2);
                 break;
-            case 0x53:
+            case PG_SETCOMBINE_CC_DECALRGBA:
                 unpack_combine_mode5(gfx, packed_dl, arg2);
                 break;
-            case 0x18:
+            case PG_RMODE_OPA:
                 unpack_render_mode_opaque(gfx, packed_dl, arg2);
                 break;
-            case 0x19:
+            case PG_RMODE_TEXEDGE:
                 unpack_render_mode_tex_edge(gfx, packed_dl, arg2);
                 break;
-            case 0x2F:
+            case PG_RMODE_XLU:
                 unpack_render_mode_translucent(gfx, packed_dl, arg2);
                 break;
-            case 0x54:
+            case PG_RMODE_OPA_DECAL:
                 unpack_render_mode_opaque_decal(gfx, packed_dl, arg2);
                 break;
-            case 0x55:
+            case PG_RMODE_XLU_DECAL:
                 unpack_render_mode_translucent_decal(gfx, packed_dl, arg2);
                 break;
-            case 0x1A:
+            case PG_TILECFG_A:
                 unpack_tile_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x2C:
+            case PG_TILECFG_G:
                 unpack_tile_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x1B:
+            case PG_TILECFG_B:
                 unpack_tile_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x1C:
+            case PG_TILECFG_C:
                 unpack_tile_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x1D:
+            case PG_TILECFG_D:
                 unpack_tile_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x1E:
+            case PG_TILECFG_E:
                 unpack_tile_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x1F:
+            case PG_TILECFG_F:
                 unpack_tile_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x20:
+            case PG_TIMG_LOADBLOCK_0:
                 unpack_tile_load_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x21:
+            case PG_TIMG_LOADBLOCK_1:
                 unpack_tile_load_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x22:
+            case PG_TIMG_LOADBLOCK_2:
                 unpack_tile_load_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x23:
+            case PG_TIMG_LOADBLOCK_3:
                 unpack_tile_load_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x24:
+            case PG_TIMG_LOADBLOCK_4:
                 unpack_tile_load_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x25:
+            case PG_TIMG_LOADBLOCK_5:
                 unpack_tile_load_sync(gfx, packed_dl, opcode);
                 break;
-            case 0x26:
+            case PG_TEXTURE_ON:
                 unpack_texture_on(gfx, packed_dl, opcode);
                 break;
-            case 0x27:
+            case PG_TEXTURE_OFF:
                 unpack_texture_off(gfx, packed_dl, opcode);
                 break;
-            case 0x28:
+            case PG_VTX1:
                 unpack_vtx1(gfx, packed_dl, opcode);
                 break;
-            case 0x33:
+            case PG_VTX_BASE + 0x01:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x34:
+            case PG_VTX_BASE + 0x02:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x35:
+            case PG_VTX_BASE + 0x03:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x36:
+            case PG_VTX_BASE + 0x04:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x37:
+            case PG_VTX_BASE + 0x05:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x38:
+            case PG_VTX_BASE + 0x06:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x39:
+            case PG_VTX_BASE + 0x07:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x3A:
+            case PG_VTX_BASE + 0x08:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x3B:
+            case PG_VTX_BASE + 0x09:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x3C:
+            case PG_VTX_BASE + 0x0A:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x3D:
+            case PG_VTX_BASE + 0x0B:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x3E:
+            case PG_VTX_BASE + 0x0C:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x3F:
+            case PG_VTX_BASE + 0x0D:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x40:
+            case PG_VTX_BASE + 0x0E:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x41:
+            case PG_VTX_BASE + 0x0F:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x42:
+            case PG_VTX_BASE + 0x10:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x43:
+            case PG_VTX_BASE + 0x11:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x44:
+            case PG_VTX_BASE + 0x12:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x45:
+            case PG_VTX_BASE + 0x13:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x46:
+            case PG_VTX_BASE + 0x14:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x47:
+            case PG_VTX_BASE + 0x15:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x48:
+            case PG_VTX_BASE + 0x16:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x49:
+            case PG_VTX_BASE + 0x17:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x4A:
+            case PG_VTX_BASE + 0x18:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x4B:
+            case PG_VTX_BASE + 0x19:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x4C:
+            case PG_VTX_BASE + 0x1A:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x4D:
+            case PG_VTX_BASE + 0x1B:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x4E:
+            case PG_VTX_BASE + 0x1C:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x4F:
+            case PG_VTX_BASE + 0x1D:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x50:
+            case PG_VTX_BASE + 0x1E:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x51:
+            case PG_VTX_BASE + 0x1F:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x52:
+            case PG_VTX_BASE + 0x20:
                 unpack_vtx2(gfx, packed_dl, opcode);
                 break;
-            case 0x29:
+            case PG_TRI1:
                 unpack_triangle(gfx, packed_dl, opcode);
                 break;
-            case 0x58:
+            case PG_TRI2:
                 unpack_quadrangle(gfx, packed_dl, opcode);
                 break;
-            case 0x30:
+            case PG_SPLINE3D:
                 unpack_spline_3D(gfx, packed_dl, opcode);
                 break;
-            case 0x2D:
+            case PG_CULLDL:
                 unpack_cull_displaylist(gfx, packed_dl, opcode);
                 break;
-            case 0x2A:
+            case PG_ENDDL:
                 unpack_end_displaylist(gfx, packed_dl, opcode);
                 break;
-            case 0x56:
+            case PG_SETGEOMETRYMODE:
                 unpack_set_geometry_mode(gfx, packed_dl, opcode);
                 break;
-            case 0x57:
+            case PG_CLEARGEOMETRYMODE:
                 unpack_clear_geometry_mode(gfx, packed_dl, opcode);
                 break;
-            case 0x2B:
+            case PG_DL:
                 unpack_displaylist(gfx, packed_dl, opcode);
                 break;
             default:

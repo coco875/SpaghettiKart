@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <libultraship.h>
 #include <macros.h>
 #include <libultra/gbi.h>
@@ -11,6 +12,7 @@
 #include "code_800029B0.h"
 #include <defines.h>
 #include "port/Game.h"
+#include "resourcebridge.h"
 #include <stdio.h>
 
 #pragma intrinsic(sqrtf)
@@ -1997,12 +1999,23 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
                 // G_DL's hi contains an addr to another DL.
                 generate_collision_mesh((Gfx*) hi, surfaceType, sectionId);
                 break;
+            case G_DL_OTR_HASH:
+                gfx++;
+                uint64_t hash = gfx->words.w0 << 32 | gfx->words.w1;
+                generate_collision_mesh(ResourceGetDataByCrc(hash), surfaceType, sectionId);
+                break;
             case G_DL_OTR_FILEPATH:
                 generate_collision_mesh(ResourceGetDataByName((const char*)hi), surfaceType, sectionId);
                 break;
-            case G_VTX:
-                set_vtx_buffer((hi), (lo >> 10) & 0x3F, ((lo >> 16) & 0xFF) >> 1);
+            case G_VTX:{
+                Vtx* ptr = hi;
+                uintptr_t res = hi & 0x4000000;
+                if (res != 0) {
+                    ptr = segment_vtx_to_virtual(hi - 0x4000000);
+                }
+                set_vtx_buffer((uintptr_t) ptr, (lo >> 10) & 0x3F, ((lo >> 16) & 0xFF) >> 1);
                 break;
+            }
             case G_VTX_OTR_FILEPATH: {
                 const char* filePath = (const char*)hi;
                 // Fast64 outputs garbage data. Lets skip that...
@@ -2020,6 +2033,11 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
                 set_vtx_buffer(vtx, count, index);
                 break;
             }
+            case G_VTX_OTR_HASH:
+                gfx++;
+                hash = gfx->words.w0 << 32 | gfx->words.w1;
+                set_vtx_buffer((uintptr_t) ResourceGetDataByCrc(hash), (lo >> 21) & ((1<<8)-1), ((lo >> 1) & ((1<<7)-1)));
+                break;
             case G_TRI1:
                 D_8015F58C += 1;
                 set_vtx_from_triangle(hi, surfaceType, sectionId);
@@ -2046,6 +2064,11 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
                 break;
             case G_ENDDL:
                 return; // end of loop
+        }
+
+        if (opcode == G_MARKER || opcode == G_MTX_OTR || opcode == G_VTX_OTR_HASH || opcode == G_SETTIMG_OTR_HASH) {
+            gfx++;
+            i++;
         }
 
 
