@@ -1,6 +1,6 @@
 #include <filesystem>
 #include <fstream>
-#if __has_include(<format>)
+#if __has_include(<format>) && __cplusplus >= 202002L
 #include <format>
 #define fmt(...) std::format(__VA_ARGS__)
 #else
