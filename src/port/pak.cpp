@@ -1,6 +1,8 @@
 #include <filesystem>
 #include <fstream>
+#if __has_include(<format>)
 #include <format>
+#endif
 
 #include <libultraship.h>
 #include <libultraship/libultra.h>
