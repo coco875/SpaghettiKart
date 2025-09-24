@@ -1,11 +1,11 @@
 #include <filesystem>
 #include <fstream>
-#if __has_include(<format>) && __cplusplus >= 202002L
-#include <format>
-#define fmt(...) std::format(__VA_ARGS__)
-#else
+#if __has_include(<fmt/format.h>)
 #include <fmt/format.h>
 #define fmt(...) fmt::format(__VA_ARGS__)
+#else
+#include <format>
+#define fmt(...) std::format(__VA_ARGS__)
 #endif
 
 #include <libultraship.h>
