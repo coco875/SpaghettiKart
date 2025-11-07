@@ -2002,6 +2002,8 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
             case G_DL_OTR_HASH:
                 gfx++;
                 uint64_t hash = gfx->words.w0 << 32 | gfx->words.w1;
+                printf("name of dl hash: 0x%llX\n", hash);
+                printf("name of dl: %s\n", ResourceGetNameByCrc(hash));
                 generate_collision_mesh(ResourceGetDataByCrc(hash), surfaceType, sectionId);
                 break;
             case G_DL_OTR_FILEPATH:
@@ -2036,7 +2038,14 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
             case G_VTX_OTR_HASH:
                 gfx++;
                 hash = gfx->words.w0 << 32 | gfx->words.w1;
-                set_vtx_buffer((uintptr_t) ResourceGetDataByCrc(hash), (lo >> 21) & ((1<<8)-1), ((lo >> 1) & ((1<<7)-1)));
+                printf("name of vtx hash: 0x%lX\n", hash);
+                printf("name of vtx: %s\n", ResourceGetNameByCrc(hash));
+                int numVerts = (lo >> 12) & ((1<<8)-1);
+                int bufferIndex = ((lo >> 1) & ((1<<7)-1));
+                bufferIndex = numVerts - bufferIndex; 
+                printf("numVerts: %d\n", numVerts);
+                printf("bufferIndex: %d\n", bufferIndex);
+                set_vtx_buffer((uintptr_t) ResourceGetDataByCrc(hash), numVerts, bufferIndex);
                 break;
             case G_TRI1:
                 D_8015F58C += 1;
