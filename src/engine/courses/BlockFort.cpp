@@ -123,7 +123,7 @@ BlockFort::BlockFort() {
 void BlockFort::Load() {
     Course::Load();
 
-    generate_collision_mesh_with_default_section_id((Gfx*) segmented_gfx_to_virtual((void*) 0x070015C0), 1);
+    generate_collision_mesh_with_default_section_id((Gfx*) d_course_block_fort_packed_dl_15C0, 1);
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
