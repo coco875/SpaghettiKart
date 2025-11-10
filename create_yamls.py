@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 import sys
-import argparse
-from pathlib import Path
-import re
+import zipfile
+
+emit_debug_comments = False
 
 # Opcodes du flux PACKED_GFX (parité avec tools/displaylist_packer.c / src/racing/memory.c)
 PG_SETCOMBINE_CC_MODULATERGBA = 0x15
@@ -122,18 +122,18 @@ def opcode_to_string(opcode: int) -> str:
 
 # Tailles d'immédiats après opcode (en octets)
 IMMEDIATE_SIZES = {
-	PG_TRI1: 2,
-	PG_TRI2: 4,
-	PG_DL: 2,
-	PG_VTX1: 4,
-	PG_SPLINE3D: 3,
-	PG_TIMG_LOADBLOCK_0: 3,
+	PG_TRI1: 2,        # unpack_triangle lit 2 octets
+	PG_TRI2: 4,        # unpack_quadrangle lit 4 octets
+	PG_DL: 2,          # unpack_displaylist lit 2 octets (u16 big-endian)
+	PG_VTX1: 4,        # unpack_vtx1 lit 4 octets
+	PG_SPLINE3D: 3,    # unpack_spline_3D lit 3 octets
+	PG_TIMG_LOADBLOCK_0: 3,  # unpack_tile_load_sync lit 3 octets
 	PG_TIMG_LOADBLOCK_1: 3,
 	PG_TIMG_LOADBLOCK_2: 3,
 	PG_TIMG_LOADBLOCK_3: 3,
 	PG_TIMG_LOADBLOCK_4: 3,
 	PG_TIMG_LOADBLOCK_5: 3,
-	PG_TILECFG_A: 2,
+	PG_TILECFG_A: 2,   # unpack_tile_sync lit 2 octets
 	PG_TILECFG_B: 2,
 	PG_TILECFG_C: 2,
 	PG_TILECFG_D: 2,
@@ -151,33 +151,53 @@ def read_u16_be(b: bytes, i: int) -> int:
 
 def emit_count(op: int) -> int:
 	"""Nombre de commandes Gfx émises par opcode (voir src/racing/memory.c)."""
-	# Lights: 3 commandes
+	# Lights: 3 commandes (unpack_lights)
 	if 0x00 <= op <= 0x14:
 		return 3
-	# Combines & render modes & simple ops
-	if op in {PG_SETCOMBINE_CC_MODULATERGBA, PG_SETCOMBINE_CC_MODULATERGBDECALA, PG_SETCOMBINE_CC_SHADE, PG_SETCOMBINE_CC_DECALRGBA, PG_RMODE_OPA_DECAL, PG_RMODE_XLU_DECAL,
-		  PG_RMODE_OPA, PG_RMODE_XLU, PG_VTX1, PG_TRI1, PG_SPLINE3D, PG_CULLDL, PG_ENDDL, PG_SETGEOMETRYMODE, PG_CLEARGEOMETRYMODE, PG_DL, PG_TRI2}:
+	# Combines & render modes (1 commande chacun)
+	if op in {PG_SETCOMBINE_CC_MODULATERGBA, PG_SETCOMBINE_CC_MODULATERGBDECALA, PG_SETCOMBINE_CC_SHADE, 
+		  PG_SETCOMBINE_CC_DECALRGBA, PG_SETCOMBINE_ALT,
+		  PG_RMODE_OPA, PG_RMODE_TEXEDGE, PG_RMODE_XLU, PG_RMODE_OPA_DECAL, PG_RMODE_XLU_DECAL}:
 		return 1
-	# Tilecfg A..F, G
+	# Tilecfg A..G: 3 commandes (tileSync + settile + settilesize)
 	if op in {PG_TILECFG_A, PG_TILECFG_B, PG_TILECFG_C, PG_TILECFG_D, PG_TILECFG_E, PG_TILECFG_F, PG_TILECFG_G}:
 		return 3
-	# TIMG loadblock 0..5
-	if op in {PG_TIMG_LOADBLOCK_0, PG_TIMG_LOADBLOCK_1, PG_TIMG_LOADBLOCK_2, PG_TIMG_LOADBLOCK_3, PG_TIMG_LOADBLOCK_4, PG_TIMG_LOADBLOCK_5}:
+	# TIMG loadblock 0..5: 5 commandes (settimg + tilesync + settile + loadsync + loadblock)
+	if op in {PG_TIMG_LOADBLOCK_0, PG_TIMG_LOADBLOCK_1, PG_TIMG_LOADBLOCK_2, 
+		  PG_TIMG_LOADBLOCK_3, PG_TIMG_LOADBLOCK_4, PG_TIMG_LOADBLOCK_5}:
 		return 5
-
+	# Texture on/off: 1 commande
 	if op in {PG_TEXTURE_OFF, PG_TEXTURE_ON}:
 		return 1
-	# VTX2 banked range
+	# VTX1, VTX2, triangles, geometry modes, etc: 1 commande
+	if op in {PG_VTX1, PG_TRI1, PG_TRI2, PG_SPLINE3D, PG_CULLDL, PG_ENDDL, 
+		  PG_SETGEOMETRYMODE, PG_CLEARGEOMETRYMODE, PG_DL}:
+		return 1
+	# VTX2 banked range (PG_VTX_BASE+1 à PG_VTX_BASE+0x20): 1 commande
 	if PG_VTX_BASE + 0x01 <= op <= PG_VTX_BASE + 0x20:
 		return 1
 	return 0
 
 
 def immediate_size(op: int) -> int:
+	"""Retourne le nombre d'octets d'immédiats après l'opcode."""
+	# PG_VTX_BASE (0x32) n'a pas d'immédiats
 	if op == PG_VTX_BASE:
 		return 0
-	if (PG_VTX_BASE + 0x01) <= op and op <= (PG_VTX_BASE + 0x20):
+	# VTX2 banked (0x33..0x52): 2 octets (unpack_vtx2 lit 2 octets)
+	if (PG_VTX_BASE + 0x01) <= op <= (PG_VTX_BASE + 0x20):
 		return 2
+	# Opcodes sans immédiats
+	if op in {PG_SETCOMBINE_CC_MODULATERGBA, PG_SETCOMBINE_CC_MODULATERGBDECALA, PG_SETCOMBINE_CC_SHADE,
+		  PG_SETCOMBINE_CC_DECALRGBA, PG_SETCOMBINE_ALT,
+		  PG_RMODE_OPA, PG_RMODE_TEXEDGE, PG_RMODE_XLU, PG_RMODE_OPA_DECAL, PG_RMODE_XLU_DECAL,
+		  PG_TEXTURE_ON, PG_TEXTURE_OFF, PG_ENDDL, PG_CULLDL, 
+		  PG_SETGEOMETRYMODE, PG_CLEARGEOMETRYMODE}:
+		return 0
+	# Opcodes lights (0x00..0x14) n'ont pas d'immédiats
+	if 0x00 <= op <= 0x14:
+		return 0
+	# Pour les autres, utiliser le dictionnaire
 	return IMMEDIATE_SIZES.get(op, 0)
 
 def parse_displaylists(data: bytes):
@@ -195,9 +215,10 @@ def parse_displaylists(data: bytes):
 	pairs.append((0, 0))
 	while i < n and data[i] != PG_EOF:
 		op = data[i]
-		print(f"# 0x{i-start:04X}/0x{i:04X}: {opcode_to_string(op)}")
-		print(f"# 0x{i-start:04X}/0x{i:04X}: immediate size = {immediate_size(op)}")
-		print(f"# 0x{i-start:04X}/0x{i:04X}: emit count = {emit_count(op)}")
+		if emit_debug_comments:
+			print(f"# 0x{i-start:04X}/0x{i:04X}: {opcode_to_string(op)}")
+			print(f"# 0x{i-start:04X}/0x{i:04X}: immediate size = {immediate_size(op)}")
+			print(f"# 0x{i-start:04X}/0x{i:04X}: emit count = {emit_count(op)}")
 		i += 1
 		if op == PG_EOF:
 			break
@@ -211,67 +232,31 @@ def parse_displaylists(data: bytes):
 	return pairs
 
 
-def validate_has_enddl(data: bytes, start: int) -> bool:
-	"""Vérifie qu'à partir de start on trouve un PG_ENDDL avant PG_EOF."""
-	i = start
-	n = len(data)
-	while i < n:
-		op = data[i]
-		i += 1
-		if op == PG_EOF:
-			return False
-		if op == PG_ENDDL:
-			return True
-		i += immediate_size(op)
-	return False
-
-
-def parse_header_offsets(header_path: Path, symbol_prefix: str) -> list[int]:
-	"""Extrait la liste des offsets (hex) depuis un header C contenant
-	des lignes du type: extern Gfx <prefix><HEX>[];
-	La liste est renvoyée dans l'ordre d'apparition.
-	"""
-	text = header_path.read_text()
-	prefix = re.escape(symbol_prefix)
-	pat = re.compile(rf"extern\s+Gfx\s+{prefix}([0-9A-Fa-f]+)\s*\[\]\s*;")
-	offs: list[int] = []
-	for m in pat.finditer(text):
-		try:
-			offs.append(int(m.group(1), 16))
-		except ValueError:
-			continue
-	return offs
-
-
 def main():
-	ap = argparse.ArgumentParser(description="Génère un YAML listant des PACKED_GFX à partir d'un binaire packé.")
-	ap.add_argument("input", type=Path, help="Fichier binaire d'entrée (packed DLs)")
-	ap.add_argument("symbol_prefix", help="Préfixe des symboles (ex: d_course_..._packed_dl_)")
-	ap.add_argument("--yaml-name", dest="yaml_name", default=None, help="Nom racine YAML (défaut = prefix)")
-	ap.add_argument("--segment-id", type=lambda x: int(x, 0), default=0x07, help="ID segment (défaut 0x07)")
-	ap.add_argument("--segment-base", type=lambda x: int(x, 0), default=0x800000, help="Base segment ROM (défaut 0x800000)")
-	ap.add_argument("--header", type=Path, default=None, help="Header .h listant les symboles extern Gfx (pour nommer avec offsets décompressés)")
-	ap.add_argument("--trust-header", action="store_true", help="Ne pas filtrer par ENDDL (utilise les débuts compressés bruts)")
-	args = ap.parse_args()
+	tracks_name = "block_fort"
+	input_path = f"models/tracks/{tracks_name}/{tracks_name}_displaylists/d_course_{tracks_name}_packed_dls"
 
-	input_path: Path = args.input.resolve()
-	data = input_path.read_bytes()
-	print(f"# Size of the file: ", hex(len(data)))
+	symbol_prefix = f"d_course_{tracks_name}_packed_dl_"
+
+	segment_id = 0x07
+	segment_base = 0x800000
+
+	o2r = zipfile.ZipFile("mk64.o2r", "r")
+	with o2r.open(input_path) as f:
+		data = f.read()
+	if emit_debug_comments:
+		print(f"# Size of the file: ", hex(len(data)))
 	pairs = parse_displaylists(data)
-	# if not args.trust_header:
-	# 	pairs = [(c, d) for (c, d) in pairs if validate_has_enddl(data, c)]
 
-	top = args.yaml_name or args.symbol_prefix
-
-	p = "models/tracks/banshee_boardwalk/banshee_boardwalk_displaylists/"
+	p = f"models/tracks/{tracks_name}/{tracks_name}_displaylists/"
 
 	# En-tête YAML minimal compatible avec la toolchain
 	print(":config:")
 	print("  segments:")
-	print(f"    - [0x{args.segment_id:02X}, 0x{args.segment_base:X}]")
+	print(f"    - [0x{segment_id:02X}, 0x{segment_base:X}]")
 	print("  manual_segments:")
 	for _, decomp_off in pairs:
-		print(f"    - [0x{decomp_off+0x7000000:X}, \"{p}{args.symbol_prefix}{decomp_off:X}\"]")
+		print(f"    - [0x{decomp_off+0x7000000:X}, \"{p}{symbol_prefix}{decomp_off:X}\"]")
 	print("  header:")
 	print("    code:")
 	print("      - '#include <libultraship.h>'")
@@ -283,7 +268,7 @@ def main():
 
 	# Sortie dans l'ordre d'apparition
 	for comp_off, decomp_off in pairs:
-		name = f"{args.symbol_prefix}{decomp_off:X}"
+		name = f"{symbol_prefix}{decomp_off:X}"
 		print(f"{name}:")
 		print(f"  symbol: {name}")
 		print(f"  type: MK64:PACKED_GFX")

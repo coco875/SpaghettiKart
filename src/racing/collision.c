@@ -2075,7 +2075,7 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
                 return; // end of loop
         }
 
-        if (opcode == G_MARKER || opcode == G_MTX_OTR || opcode == G_VTX_OTR_HASH || opcode == G_SETTIMG_OTR_HASH) {
+        if (opcode == G_MARKER || opcode == G_MTX_OTR || opcode == G_SETTIMG_OTR_HASH) {
             gfx++;
             i++;
         }
