@@ -214,7 +214,7 @@ void BansheeBoardwalk::Load() {
         TrackSections trackSection = {};
         if (banshee_boardwalk_convert.contains((uintptr_t)section->addr/2)) {
             trackSection.addr = (Gfx*) LOAD_ASSET(banshee_boardwalk_convert[(uintptr_t)section->addr/2]);
-            if (trackSection.addr == banshee_boardwalk_convert[(uintptr_t)section->addr/2]) {
+            if (trackSection.addr == (Gfx*) banshee_boardwalk_convert[(uintptr_t)section->addr/2]) {
                 printf("BansheeBoardwalk: Failed to load displaylist for address 0x%lX\n", (uintptr_t)section->addr);
             }
         } else {
