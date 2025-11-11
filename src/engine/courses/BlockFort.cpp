@@ -5,6 +5,7 @@
 
 #include "BlockFort.h"
 #include "World.h"
+#include "align_asset_macro.h"
 #include "engine/objects/BombKart.h"
 #include "assets/models/tracks/block_fort/block_fort_data.h"
 #include "assets/other/tracks/block_fort/block_fort_data.h"
@@ -123,7 +124,7 @@ BlockFort::BlockFort() {
 void BlockFort::Load() {
     Course::Load();
 
-    generate_collision_mesh_with_default_section_id((Gfx*) d_course_block_fort_packed_dl_15C0, 1);
+    generate_collision_mesh_with_default_section_id((Gfx*) LOAD_ASSET_RAW(d_course_block_fort_packed_dl_15C0), 1);
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
@@ -150,7 +151,7 @@ void BlockFort::Render(struct UnkStruct_800DC5EC* arg0) {
     gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
     // d_course_block_fort_packed_dl_15C0
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*) 0x070015C0)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_block_fort_packed_dl_15C0);
 }
 
 void BlockFort::Waypoints(Player* player, int8_t playerId) {

@@ -87,6 +87,14 @@
     - [0x40040a0, "models/tracks/block_fort/block_fort_vertices/d_course_block_fort_vertex_0x040040A0"]
     - [0x40041b0, "models/tracks/block_fort/block_fort_vertices/d_course_block_fort_vertex_0x040041B0"]
     - [0x40043a0, "models/tracks/block_fort/block_fort_vertices/d_course_block_fort_vertex_0x040043A0"]
+  # Segment 5
+    - [0x05000000, "textures/other_textures/texture_64286C"]
+    - [0x05000800, "textures/other_textures/gray_checkerboard"]
+    - [0x05001000, "textures/other_textures/gray_cobblestone"]
+    - [0x05001800, "textures/other_textures/texture_64275C"]
+    - [0x05002000, "textures/other_textures/texture_642978"]
+    - [0x05002800, "textures/other_textures/texture_6747C4"]
+    - [0x05003000, "textures/other_textures/texture_6442D4"]
   header:
     code:
       - '#include <libultraship.h>'
