@@ -208,28 +208,9 @@ void BansheeBoardwalk::Load() {
     D_801625EC = 0;
     D_801625F4 = 0;
     D_801625F0 = 0;
-    auto section = (TrackSections*)LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections);
-    std::vector<TrackSections> banshee_boardwalk_sections = {};
-    while (section->addr != 0) {
-        TrackSections trackSection = {};
-        if (banshee_boardwalk_convert.contains((uintptr_t)section->addr/2)) {
-            trackSection.addr = (Gfx*) LOAD_ASSET(banshee_boardwalk_convert[(uintptr_t)section->addr/2]);
-            if (trackSection.addr == (Gfx*) banshee_boardwalk_convert[(uintptr_t)section->addr/2]) {
-                printf("BansheeBoardwalk: Failed to load displaylist for address 0x%lX\n", (uintptr_t)section->addr);
-            }
-        } else {
-            printf("BansheeBoardwalk: Missing displaylist for address 0x%lX\n", (uintptr_t)section->addr);
-        }
-        trackSection.surfaceType = section->surfaceType;
-        trackSection.sectionId = section->sectionId;
-        trackSection.flags = section->flags;
-        banshee_boardwalk_sections.push_back(trackSection);
-        section++;
-    }
-    banshee_boardwalk_sections.push_back({ 0, 0, 0, 0 }); // Add a terminating section
-    parse_course_displaylists(banshee_boardwalk_sections.data());
+    parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections));
     func_80295C6C();
-    find_vtx_and_set_colours((Gfx*) LOAD_ASSET(d_course_banshee_boardwalk_packed_dl_878), 128, 0, 0, 0);
+    find_vtx_and_set_colours((Gfx*) d_course_banshee_boardwalk_packed_dl_878, 128, 0, 0, 0);
 }
 
 void BansheeBoardwalk::LoadTextures() {
@@ -429,7 +410,7 @@ void BansheeBoardwalk::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pat
 }
 
 void BansheeBoardwalk::CreditsSpawnActors() {
-    find_vtx_and_set_colours((Gfx*) LOAD_ASSET(d_course_banshee_boardwalk_packed_dl_878), 0x32, 0, 0, 0);
+    find_vtx_and_set_colours((Gfx*) d_course_banshee_boardwalk_packed_dl_878, 0x32, 0, 0, 0);
 }
 
 void BansheeBoardwalk::Destroy() {

@@ -5,6 +5,7 @@
 
 #include "BowsersCastle.h"
 #include "World.h"
+#include "align_asset_macro.h"
 #include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
 #include "engine/objects/Thwomp.h"
@@ -49,22 +50,22 @@ const course_texture bowsers_castle_textures[] = {
     { gTextureRoofTile, 0x0129, 0x0800, 0x0 }, // 0x05004800
     { gTextureSignBowser0, 0x07D0, 0x1000, 0x0 }, // 0x05005000
     { gTextureSignBowser1, 0x064D, 0x1000, 0x0 }, // 0x05006000
-    { gTexture66ABA4, 0x0312, 0x0800, 0x0 }, // 0x05006800
-    { gTexture66EBF0, 0x0146, 0x0800, 0x0 }, // 0x05007000
-    { gTexture6733CC, 0x020E, 0x0800, 0x0 }, // 0x05007800
-    { gTexture673118, 0x02B1, 0x0800, 0x0 }, // 0x05008000
-    { gTexture673FF8, 0x035B, 0x0800, 0x0 }, // 0x05008800
-    { gTexture674B28, 0x0230, 0x0800, 0x0 }, // 0x05009000
-    { gTextureSignGreenArrow, 0x025B, 0x1000, 0x0 }, // 0x05009800
-    { gTexture68D834, 0x010A, 0x0800, 0x0 }, // 0x0500A000
-    { gTexture676D7C, 0x012C, 0x0800, 0x0 }, // 0x0500B000
+    { gTexture66ABA4, 0x0312, 0x0800, 0x0 }, // 0x05007000
+    { gTexture66EBF0, 0x0146, 0x0800, 0x0 }, // 0x05007800
+    { gTexture6733CC, 0x020E, 0x0800, 0x0 }, // 0x05008000
+    { gTexture673118, 0x02B1, 0x0800, 0x0 }, // 0x05008800
+    { gTexture673FF8, 0x035B, 0x0800, 0x0 }, // 0x05009000
+    { gTexture674B28, 0x0230, 0x0800, 0x0 }, // 0x05009800
+    { gTextureSignGreenArrow, 0x025B, 0x1000, 0x0 }, // 0x0500A000
+    { gTexture68D834, 0x010A, 0x0800, 0x0 }, // 0x0500B000
+    { gTexture676D7C, 0x012C, 0x0800, 0x0 }, // 0x0500B800
     { gTexture67ADF0, 0x0595, 0x0800, 0x0 }, // 0x0500C000
-    { gTexture67EFEC, 0x016F, 0x0800, 0x0 }, // 0x0500D000
-    { gTexture653DB0, 0x06AE, 0x0800, 0x0 }, // 0x0500E000
-    { gTexture66CA98, 0x02C9, 0x0800, 0x0 }, // 0x0500F000
-    { gTexture673990, 0x02D8, 0x0800, 0x0 }, // 0x05010000
-    { gTexture67A370, 0x05AA, 0x0800, 0x0 }, // 0x05011000
-    { gTexture67A91C, 0x04D1, 0x0800, 0x0 }, // 0x05011800
+    { gTexture67EFEC, 0x016F, 0x0800, 0x0 }, // 0x0500C800
+    { gTexture653DB0, 0x06AE, 0x0800, 0x0 }, // 0x0500D000
+    { gTexture66CA98, 0x02C9, 0x0800, 0x0 }, // 0x0500D800
+    { gTexture673990, 0x02D8, 0x0800, 0x0 }, // 0x0500E000
+    { gTexture67A370, 0x05AA, 0x0800, 0x0 }, // 0x0500E800
+    { gTexture67A91C, 0x04D1, 0x0800, 0x0 }, // 0x0500F000
     { 0x00000000, 0x0000, 0x0000, 0x0 },
 };
 
@@ -156,7 +157,7 @@ void BowsersCastle::Load() {
 
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_bowsers_castle_addr));
     func_80295C6C();
-    find_vtx_and_set_colours(segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07001350)), 0x32, 0, 0, 0);
+    find_vtx_and_set_colours((Gfx*) d_course_bowsers_castle_vertex_0x04021350, 0x32, 0, 0, 0);
 }
 
 void BowsersCastle::LoadTextures() {
@@ -299,7 +300,7 @@ void BowsersCastle::Render(struct UnkStruct_800DC5EC* arg0) {
         gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
         gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         // d_course_bowsers_castle_packed_dl_6A80
-        gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07006A80)));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_bowsers_castle_packed_dl_6A80);
     }
 
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
@@ -314,7 +315,7 @@ void BowsersCastle::Render(struct UnkStruct_800DC5EC* arg0) {
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     // d_course_bowsers_castle_packed_dl_248
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000248)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_bowsers_castle_packed_dl_248);
 }
 
 void BowsersCastle::RenderCredits() {
@@ -362,7 +363,7 @@ void BowsersCastle::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCo
 }
 
 void BowsersCastle::CreditsSpawnActors() {
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*) 0x07001350), 0x32, 0, 0, 0);
+    find_vtx_and_set_colours((Gfx*) d_course_bowsers_castle_packed_dl_1350, 0x32, 0, 0, 0);
 }
 
 void BowsersCastle::Destroy() {

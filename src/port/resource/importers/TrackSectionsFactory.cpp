@@ -26,7 +26,7 @@ ResourceFactoryBinaryTrackSectionsV0::ReadResource(std::shared_ptr<Ship::File> f
     for (uint32_t i = 0; i < count; i++) {
         TrackSectionsI data;
         //                      Convert n64 addr to native addr
-        data.addr = (uintptr_t) segmented_uintptr_t_to_virtual(reader->ReadUInt32());
+        data.addr = reader->ReadUInt64();
         data.surfaceType = reader->ReadUByte();
         data.sectionId = reader->ReadUByte();
         data.flags = reader->ReadUInt16();

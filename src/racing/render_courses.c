@@ -5,6 +5,7 @@
 #include <common_structs.h>
 #include <defines.h>
 #include <course.h>
+#include <stdio.h>
 #include "../camera.h"
 #include "framebuffer_effects.h"
 #include "port/interpolation/FrameInterpolation.h"
@@ -17,6 +18,7 @@
 #include "memory.h"
 #include "code_80281780.h"
 #include "collision.h"
+#include "resourcebridge.h"
 #include "skybox_and_splitscreen.h"
 #include "courses/all_course_data.h"
 #include "courses/all_course_packed.h"
@@ -71,7 +73,9 @@ void parse_course_displaylists(TrackSections* asset) {
         } else {
             D_8015F5A4 = 0;
         }
-        generate_collision_mesh(section->addr, section->surfaceType, section->sectionId);
+        char* name = ResourceGetNameByCrc(section->crc);
+        printf("Generating collision mesh for section %d: %s\n", section->sectionId, name != NULL ? name : "Unknown");
+        generate_collision_mesh(ResourceGetDataByCrc(section->crc), section->surfaceType, section->sectionId);
         section++;
     }
 }

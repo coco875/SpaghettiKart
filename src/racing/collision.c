@@ -2002,8 +2002,8 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
             case G_DL_OTR_HASH:
                 gfx++;
                 uint64_t hash = gfx->words.w0 << 32 | gfx->words.w1;
-                printf("name of dl hash: 0x%llX\n", hash);
-                printf("name of dl: %s\n", ResourceGetNameByCrc(hash));
+                // printf("name of dl hash: 0x%llX\n", hash);
+                // printf("name of dl: %s\n", ResourceGetNameByCrc(hash));
                 generate_collision_mesh(ResourceGetDataByCrc(hash), surfaceType, sectionId);
                 break;
             case G_DL_OTR_FILEPATH:
@@ -2038,13 +2038,13 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
             case G_VTX_OTR_HASH:
                 gfx++;
                 hash = gfx->words.w0 << 32 | gfx->words.w1;
-                printf("name of vtx hash: 0x%lX\n", hash);
-                printf("name of vtx: %s\n", ResourceGetNameByCrc(hash));
+                // printf("name of vtx hash: 0x%lX\n", hash);
+                // printf("name of vtx: %s\n", ResourceGetNameByCrc(hash));
                 int numVerts = (lo >> 12) & ((1<<8)-1);
                 int bufferIndex = ((lo >> 1) & ((1<<7)-1));
                 bufferIndex = numVerts - bufferIndex; 
-                printf("numVerts: %d\n", numVerts);
-                printf("bufferIndex: %d\n", bufferIndex);
+                // printf("numVerts: %d\n", numVerts);
+                // printf("bufferIndex: %d\n", bufferIndex);
                 set_vtx_buffer((uintptr_t) ResourceGetDataByCrc(hash), numVerts, bufferIndex);
                 break;
             case G_TRI1:
@@ -2165,6 +2165,9 @@ void set_vertex_colours(uintptr_t addr, u32 vertexCount, UNUSED s32 vert3, s8 al
  * Recursive search for vertices and set their colour values.
  */
 void find_vtx_and_set_colours(Gfx* displayList, s8 alpha, u8 red, u8 green, u8 blue) {
+    if (GameEngine_OTRSigCheck(displayList)) {
+        displayList = (Gfx*) ResourceGetDataByName(displayList);
+    }
     Gfx* gfx = (Gfx*) displayList;
     uintptr_t lo;
     uintptr_t hi;
