@@ -5,6 +5,7 @@
 
 #include "DoubleDeck.h"
 #include "World.h"
+#include "align_asset_macro.h"
 #include "engine/objects/BombKart.h"
 #include "assets/models/tracks/double_deck/double_deck_data.h"
 #include "assets/other/tracks/double_deck/double_deck_data.h"
@@ -34,8 +35,8 @@ extern "C" {
 }
 
 const course_texture double_deck_textures[] = {
-    { gTextureGrayCobblestone, 0x010C, 0x0800, 0x0 },
-    { gTexture642978, 0x010D, 0x0800, 0x0 },
+    { gTextureGrayCobblestone, 0x010C, 0x0800, 0x0 }, // 0x5000000
+    { gTexture642978, 0x010D, 0x0800, 0x0 }, // 0x5000800
     { 0x00000000, 0x0000, 0x0000, 0x0 },
 };
 
@@ -118,7 +119,7 @@ DoubleDeck::DoubleDeck() {
 void DoubleDeck::Load() {
     Course::Load();
 
-    generate_collision_mesh_with_default_section_id((Gfx*) segmented_gfx_to_virtual((void*)0x07000738), 1);
+    generate_collision_mesh_with_default_section_id((Gfx*) LOAD_ASSET_RAW(d_course_double_deck_packed_dl_738), 1);
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
@@ -157,7 +158,7 @@ void DoubleDeck::Render(struct UnkStruct_800DC5EC* arg0) {
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
     // d_course_double_deck_packed_dl_738
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*)0x07000738)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_double_deck_packed_dl_738);
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
 }
 
