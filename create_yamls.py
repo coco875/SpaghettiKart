@@ -233,7 +233,7 @@ def parse_displaylists(data: bytes):
 
 
 def main():
-	tracks_name = "bowsers_castle"
+	tracks_name = "choco_mountain"
 	input_path = f"models/tracks/{tracks_name}/{tracks_name}_displaylists/d_course_{tracks_name}_packed_dls"
 
 	symbol_prefix = f"d_course_{tracks_name}_packed_dl_"

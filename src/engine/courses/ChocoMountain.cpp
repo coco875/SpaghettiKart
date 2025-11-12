@@ -5,6 +5,7 @@
 
 #include "ChocoMountain.h"
 #include "World.h"
+#include "align_asset_macro.h"
 #include "engine/objects/BombKart.h"
 #include "assets/models/tracks/choco_mountain/choco_mountain_data.h"
 #include "assets/other/tracks/choco_mountain/choco_mountain_data.h"
@@ -39,24 +40,24 @@ extern "C" {
 const course_texture choco_mountain_textures[] = {
     { gTexture64619C, 0x0124, 0x0800, 0x0 }, // 0x05000000
     { gTexture64647C, 0x0829, 0x1000, 0x0 }, // 0x05000800
-    { gTexture647F4C, 0x05BC, 0x1000, 0x0 }, // 0x05001000
-    { gTexture64FBF4, 0x0274, 0x0800, 0x0 }, // 0x05001800
-    { gTexture653DB0, 0x06AE, 0x0800, 0x0 }, // 0x05002000
-    { gTexture652B54, 0x0606, 0x0800, 0x0 }, // 0x05002800
-    { gTexture65315C, 0x04A9, 0x0800, 0x0 }, // 0x05003000
-    { gTexture6684F8, 0x010D, 0x0800, 0x0 }, // 0x05003800
-    { gTextureSignLuigis0, 0x0287, 0x1000, 0x0 }, // 0x05004000
-    { gTextureSignLuigis1, 0x02AF, 0x1000, 0x0 }, // 0x05005000
-    { gTextureSignNintendoRed0, 0x02A6, 0x1000, 0x0 }, // 0x05006000
-    { gTextureSignNintendoRed1, 0x02F7, 0x1000, 0x0 }, // 0x05006800
-    { gTexture6774D8, 0x0113, 0x0800, 0x0 }, // 0x05007000
-    { gTextureSignFallingRocks, 0x012C, 0x0800, 0x0 }, // 0x05007800
-    { gTextureSignBackside, 0x011E, 0x0800, 0x0 }, // 0x05008000
-    { gTexture679C04, 0x012F, 0x0800, 0x0 }, // 0x05008800
-    { gTexture67B864, 0x014C, 0x0800, 0x0 }, // 0x05009000
-    { gTexture67DC20, 0x03EF, 0x0800, 0x0 }, // 0x05009800
-    { gTextureSignYoshi, 0x04DF, 0x1000, 0x0 }, // 0x0500A000
-    { gTextureCheckerboardBlueGray, 0x04A1, 0x1000, 0x0 }, // 0x0500B000
+    { gTexture647F4C, 0x05BC, 0x1000, 0x0 }, // 0x05001800
+    { gTexture64FBF4, 0x0274, 0x0800, 0x0 }, // 0x05002800
+    { gTexture653DB0, 0x06AE, 0x0800, 0x0 }, // 0x05003000
+    { gTexture652B54, 0x0606, 0x0800, 0x0 }, // 0x05003800
+    { gTexture65315C, 0x04A9, 0x0800, 0x0 }, // 0x05004000
+    { gTexture6684F8, 0x010D, 0x0800, 0x0 }, // 0x05004800
+    { gTextureSignLuigis0, 0x0287, 0x1000, 0x0 }, // 0x05005000
+    { gTextureSignLuigis1, 0x02AF, 0x1000, 0x0 }, // 0x05006000
+    { gTextureSignNintendoRed0, 0x02A6, 0x1000, 0x0 }, // 0x05007000
+    { gTextureSignNintendoRed1, 0x02F7, 0x1000, 0x0 }, // 0x05008000
+    { gTexture6774D8, 0x0113, 0x0800, 0x0 }, // 0x05009000
+    { gTextureSignFallingRocks, 0x012C, 0x0800, 0x0 }, // 0x05009800
+    { gTextureSignBackside, 0x011E, 0x0800, 0x0 }, // 0x0500A000
+    { gTexture679C04, 0x012F, 0x0800, 0x0 }, // 0x0500A800
+    { gTexture67B864, 0x014C, 0x0800, 0x0 }, // 0x0500B000
+    { gTexture67DC20, 0x03EF, 0x0800, 0x0 }, // 0x0500B800
+    { gTextureSignYoshi, 0x04DF, 0x1000, 0x0 }, // 0x0500C000
+    { gTextureCheckerboardBlueGray, 0x04A1, 0x1000, 0x0 }, // 0x0500D000
     { 0x00000000, 0x0000, 0x0000, 0x0 },
 };
 
@@ -155,17 +156,17 @@ void ChocoMountain::Load() {
     // Spawn guardrail only for CC_50 and time trials.
     if ((gCCSelection != CC_50) && (gModeSelection != TIME_TRIALS)) {
         // d_course_choco_mountain_packed_dl_0
-        nullify_displaylist((uintptr_t) segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000000)));
+        nullify_displaylist((uintptr_t) LOAD_ASSET_RAW(d_course_choco_mountain_packed_dl_0));
         // d_course_choco_mountain_packed_dl_98
-        nullify_displaylist((uintptr_t) segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000098)));
+        nullify_displaylist((uintptr_t) LOAD_ASSET_RAW(d_course_choco_mountain_packed_dl_98));
         // d_course_choco_mountain_packed_dl_178
-        nullify_displaylist((uintptr_t) segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000178)));
+        nullify_displaylist((uintptr_t) LOAD_ASSET_RAW(d_course_choco_mountain_packed_dl_178));
         // d_course_choco_mountain_packed_dl_280
-        nullify_displaylist((uintptr_t) segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000280)));
+        nullify_displaylist((uintptr_t) LOAD_ASSET_RAW(d_course_choco_mountain_packed_dl_280));
         // d_course_choco_mountain_packed_dl_340
-        nullify_displaylist((uintptr_t) segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000340)));
+        nullify_displaylist((uintptr_t) LOAD_ASSET_RAW(d_course_choco_mountain_packed_dl_340));
         // d_course_choco_mountain_packed_dl_3C8
-        nullify_displaylist((uintptr_t) segmented_gfx_to_virtual(reinterpret_cast<void*>(0x070003C8)));
+        nullify_displaylist((uintptr_t) LOAD_ASSET_RAW(d_course_choco_mountain_packed_dl_3C8));
     }
 
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_choco_mountain_addr));
@@ -248,7 +249,7 @@ void ChocoMountain::Render(struct UnkStruct_800DC5EC* arg0) {
         gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
         gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         // d_course_choco_mountain_packed_dl_4608
-        gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07004608)));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_4608);
     }
     gDPSetCycleType(gDisplayListHead++, G_CYC_2CYCLE);
     gDPSetFogColor(gDisplayListHead++, D_801625EC, D_801625F4, D_801625F0, 0xFF);
@@ -261,13 +262,13 @@ void ChocoMountain::Render(struct UnkStruct_800DC5EC* arg0) {
     gDPSetRenderMode(gDisplayListHead++, G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     // d_course_choco_mountain_packed_dl_5A70
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07005A70)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_5A70);
     // d_course_choco_mountain_packed_dl_828
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000828)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_828);
     // d_course_choco_mountain_packed_dl_8E0
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x070008E0)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_8E0);
     // d_course_choco_mountain_packed_dl_5868
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07005868)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_5868);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
 
     render_course_segments(choco_mountain_dls, arg0);
@@ -276,12 +277,12 @@ void ChocoMountain::Render(struct UnkStruct_800DC5EC* arg0) {
     gDPSetRenderMode(gDisplayListHead++, G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2);
     gDPSetCombineMode(gDisplayListHead++, G_CC_DECALRGBA, G_CC_PASS2);
     // d_course_choco_mountain_packed_dl_448
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000448)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_448);
     // d_course_choco_mountain_packed_dl_5D8
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x070005D8)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_5D8);
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
     // d_course_choco_mountain_packed_dl_718
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000718)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_718);
     gSPClearGeometryMode(gDisplayListHead++, G_FOG);
     gDPSetCycleType(gDisplayListHead++, G_CYC_1CYCLE);
     gDPPipeSync(gDisplayListHead++);
