@@ -155,7 +155,7 @@ void DKJungle::Load() {
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_dks_jungle_parkway_addr));
     func_80295C6C();
     // d_course_dks_jungle_parkway_packed_dl_3FA8
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*)0x07003FA8), 120, 255, 255, 255);
+    find_vtx_and_set_colours((Gfx*) d_course_dks_jungle_parkway_packed_dl_3FA8, 120, 255, 255, 255);
 }
 
 f32 DKJungle::GetWaterLevel(FVector pos, Collision* collision) {
@@ -302,7 +302,7 @@ void DKJungle::Render(struct UnkStruct_800DC5EC* arg0) {
         gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
         gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         // d_course_dks_jungle_parkway_packed_dl_92D8
-        gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*)0x070092D8)));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_92D8);
     }
 
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
@@ -339,21 +339,21 @@ void DKJungle::ScrollingTextures() {
         D_802B87BC = 0;
     }
     // d_course_dks_jungle_parkway_packed_dl_3DD0
-    find_and_set_tile_size((uintptr_t) segmented_gfx_to_virtual((void*)0x07003DD0), 0, D_802B87BC);
+    find_and_set_tile_size((uintptr_t) (Gfx*) d_course_dks_jungle_parkway_packed_dl_3DD0, 0, D_802B87BC);
     // d_course_dks_jungle_parkway_packed_dl_3E40
-    find_and_set_tile_size((uintptr_t) segmented_gfx_to_virtual((void*)0x07003E40), 0, D_802B87BC);
+    find_and_set_tile_size((uintptr_t) (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40, 0, D_802B87BC);
     // d_course_dks_jungle_parkway_packed_dl_3EB0
-    find_and_set_tile_size((uintptr_t) segmented_gfx_to_virtual((void*)0x07003EB0), 0, D_802B87BC);
+    find_and_set_tile_size((uintptr_t) (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0, 0, D_802B87BC);
     // d_course_dks_jungle_parkway_packed_dl_3F30
-    find_and_set_tile_size((uintptr_t) segmented_gfx_to_virtual((void*)0x07003F30), 0, D_802B87BC);
+    find_and_set_tile_size((uintptr_t) (Gfx*) d_course_dks_jungle_parkway_packed_dl_3F30, 0, D_802B87BC);
     // d_course_dks_jungle_parkway_packed_dl_36A8
-    find_and_set_tile_size((uintptr_t) segmented_gfx_to_virtual((void*)0x070036A8), 0, D_802B87BC);
+    find_and_set_tile_size((uintptr_t) (Gfx*) d_course_dks_jungle_parkway_packed_dl_36A8, 0, D_802B87BC);
     D_802B87C4 -= 20;
     if (D_802B87C4 < 0) {
         D_802B87C4 = 0xFF;
     }
     // d_course_dks_jungle_parkway_packed_dl_9880
-    find_and_set_tile_size((uintptr_t) segmented_gfx_to_virtual((void*)0x07009880), 0, D_802B87C4);
+    find_and_set_tile_size((uintptr_t) (Gfx*) d_course_dks_jungle_parkway_packed_dl_9880, 0, D_802B87C4);
     evaluate_collision_players_palm_trees();
 }
 
@@ -375,46 +375,46 @@ void DKJungle::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter
     if (pathCounter < 17) {
         gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
         // d_course_dks_jungle_parkway_packed_dl_3E40
-        gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003E40));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40);
         // d_course_dks_jungle_parkway_packed_dl_3EB0
-        gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
         if ((pathCounter >= 6) && (pathCounter < 13)) {
             gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
             // d_course_dks_jungle_parkway_packed_dl_3DD0
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003DD0));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3DD0);
         }
     } else if ((pathCounter == 21) || (pathCounter == 22)) {
         if (playerDirection == 3) {
             gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
             // d_course_dks_jungle_parkway_packed_dl_36A8
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x070036A8));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_36A8);
         }
         if ((playerDirection == 1) || (playerDirection == 0)) {
             gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
             // d_course_dks_jungle_parkway_packed_dl_36A8
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x070036A8));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_36A8);
         } else {
             gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
             // d_course_dks_jungle_parkway_packed_dl_3F30
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003F30));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3F30);
             // d_course_dks_jungle_parkway_packed_dl_36A8
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x070036A8));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_36A8);
         }
     } else if (pathCounter == 24) {
         if ((playerDirection == 0) || (playerDirection == 3)) {
             gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
             // d_course_dks_jungle_parkway_packed_dl_36A8
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x070036A8));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_36A8);
         }
     } else if (pathCounter == 23) {
         if (playerDirection == 3) {
             gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
             // d_course_dks_jungle_parkway_packed_dl_36A8
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x070036A8));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_36A8);
         } else if (playerDirection == 0) {
             gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
             // d_course_dks_jungle_parkway_packed_dl_36A8
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x070036A8));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_36A8);
         }
     }
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
@@ -422,38 +422,38 @@ void DKJungle::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter
         case 5:
             if (playerDirection != 3) {
                 // d_course_dks_jungle_parkway_packed_dl_3DD0
-                gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003DD0));
+                gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3DD0);
             }
             break;
         case 17:
             switch (playerDirection) {
                 case 0:
                     // d_course_dks_jungle_parkway_packed_dl_3E40
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003E40));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40);
                     // d_course_dks_jungle_parkway_packed_dl_3EB0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
                     break;
                 case 1:
                     // d_course_dks_jungle_parkway_packed_dl_3DD0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003DD0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3DD0);
                     // d_course_dks_jungle_parkway_packed_dl_3E40
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003E40));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40);
                     // d_course_dks_jungle_parkway_packed_dl_3EB0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
                     break;
                 case 2:
                     // d_course_dks_jungle_parkway_packed_dl_
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003E40));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40);
                     // d_course_dks_jungle_parkway_packed_dl_3EB0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
                     // d_course_dks_jungle_parkway_packed_dl_3F30
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003F30));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3F30);
                     break;
                 case 3:
                     // d_course_dks_jungle_parkway_packed_dl_3EB0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
                     // d_course_dks_jungle_parkway_packed_dl_3F30
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003F30));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3F30);
                     break;
             }
             break;
@@ -461,49 +461,49 @@ void DKJungle::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter
             switch (playerDirection) {
                 case 0:
                     // d_course_dks_jungle_parkway_packed_dl_3E40
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003E40));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40);
                     // d_course_dks_jungle_parkway_packed_dl_3EB0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
                     break;
                 case 1:
                     // d_course_dks_jungle_parkway_packed_dl_3DD0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003DD0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3DD0);
                     // d_course_dks_jungle_parkway_packed_dl_3E40
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003E40));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40);
                     // d_course_dks_jungle_parkway_packed_dl_3EB0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
                     break;
                 case 2:
                     // d_course_dks_jungle_parkway_packed_dl_3E40
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003E40));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40);
                     // d_course_dks_jungle_parkway_packed_dl_3EB0
-                    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
                     break;
             }
             break;
         case 21:
             if ((playerDirection == 0) || (playerDirection == 1)) {
                 // d_course_dks_jungle_parkway_packed_dl_3E40
-                gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003E40));
+                gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3E40);
                 // d_course_dks_jungle_parkway_packed_dl_3EB0
-                gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
                 // d_course_dks_jungle_parkway_packed_dl_3F30
-                gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003F30));
+                gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3F30);
             } else {
                 // d_course_dks_jungle_parkway_packed_dl_3EB0
-                gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003EB0));
+                gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3EB0);
             }
             break;
         case 22:
             if (playerDirection == 0) {
                 // d_course_dks_jungle_parkway_packed_dl_3F30
-                gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003F30));
+                gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3F30);
             }
             break;
         case 23:
             if (playerDirection != 1) {
                 // d_course_dks_jungle_parkway_packed_dl_3F30
-                gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07003F30));
+                gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_dks_jungle_parkway_packed_dl_3F30);
             }
             break;
     }
@@ -514,7 +514,7 @@ void DKJungle::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter
 
 void DKJungle::CreditsSpawnActors() {
     // d_course_dks_jungle_parkway_packed_dl_3FA8
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*)0x07003FA8), 0x78, 0xFF, 0xFF, 0xFF);
+    find_vtx_and_set_colours((Gfx*) d_course_dks_jungle_parkway_packed_dl_3FA8, 0x78, 0xFF, 0xFF, 0xFF);
 }
 
 void DKJungle::Destroy() { }

@@ -2126,6 +2126,9 @@ bool is_cull_box(const char* filePath) {
  */
 void find_and_set_tile_size(uintptr_t addr, s32 uls, s32 ult) {
     Gfx* gfx = (Gfx*) addr;
+    if (GameEngine_OTRSigCheck(gfx)) {
+        gfx = (Gfx*) ResourceGetDataByName(gfx);
+    }
     u32 opcode;
 
     uls = (uls << 12) & 0xFFF000;
