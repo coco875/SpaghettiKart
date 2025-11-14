@@ -30,7 +30,7 @@ var searchData=
   ['bounding_5fbox_27',['BOUNDING_BOX',['../classEditor_1_1GameObject.html#ac70f7d17c6c49208d513814ad5e30a3cafb2ea1ec7b3bc42e65a0c3969dfe74f2',1,'Editor::GameObject']]],
   ['bounding_5fsphere_28',['BOUNDING_SPHERE',['../classEditor_1_1GameObject.html#ac70f7d17c6c49208d513814ad5e30a3ca3dff0e3fa411cc9a30f7377d0b56f85e',1,'Editor::GameObject']]],
   ['bridge_29',['BRIDGE',['../mk64_8h.html#a5344f2bdca4f9506c40f044e08ea8c98a68d3880946f8e8f3fb64b7f635aaba1e',1,'mk64.h']]],
-  ['bronze_30',['BRONZE',['../classOTrophy.html#a6430fad04fc455c30f430b7dad14702da4d91f6e29f1a59a294eb0a787f708824',1,'OTrophy']]],
-  ['bronze_5f150_31',['BRONZE_150',['../classOTrophy.html#a6430fad04fc455c30f430b7dad14702dadd7e83223730d6f88797adde88ff9ffd',1,'OTrophy']]],
+  ['bronze_30',['BRONZE',['../classOTrophy.html#a43bb5d1394bcac120ff52ec88f765891a4d91f6e29f1a59a294eb0a787f708824',1,'OTrophy']]],
+  ['bronze_5f150_31',['BRONZE_150',['../classOTrophy.html#a43bb5d1394bcac120ff52ec88f765891add7e83223730d6f88797adde88ff9ffd',1,'OTrophy']]],
   ['brown_32',['Brown',['../namespaceUIWidgets.html#ab518b3979a369a95a6e490c6d8f87d26a498232d0967df69172d6ef5e21c6e100',1,'UIWidgets']]]
 ];

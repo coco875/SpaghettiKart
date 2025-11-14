@@ -1,10 +1,13 @@
 var classAFinishline =
 [
-    [ "AFinishline", "classAFinishline.html#a3937e60094177456aa48f4b3d9cc6992", null ],
+    [ "AFinishline", "classAFinishline.html#a217d1abec019d9ff56b0e387fcd83f03", null ],
     [ "~AFinishline", "classAFinishline.html#a0cf1b05f192c0a1660f3c8997c59627f", null ],
+    [ "BeginPlay", "classAFinishline.html#aef603ddedca5f9e92cf8cd2cfb898996", null ],
     [ "Collision", "classAFinishline.html#ac7aaccf2a632b23531c6a89e0e395c0d", null ],
     [ "Draw", "classAFinishline.html#a5c78e1d21d510483940eaab35807bf52", null ],
     [ "IsMod", "classAFinishline.html#a415c3a7173e3e1ffc1da8c2ad92bab40", null ],
+    [ "Spawn", "classAFinishline.html#a558adad18df5a2fb4fe346da97a75617", null ],
+    [ "Spawn", "classAFinishline.html#a21c9d174a404bd4ddaf6af2bd364a37f", null ],
     [ "Tick", "classAFinishline.html#a793725aefa6f9bb8c66b7ad7c7f41e4f", null ],
     [ "_count", "classAFinishline.html#a440099a175c874f1abac9af6a885003f", null ],
     [ "_player", "classAFinishline.html#a6d6cf419ae9c951036925d387c6b4ec0", null ],

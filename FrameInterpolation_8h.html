@@ -136,6 +136,12 @@ Macros</h2></td></tr>
 <tr class="separator:a80d2f0dba8e548c9494637a1db1549cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1082df252b2fcfa1cd89c1bec22204c3" id="r_a1082df252b2fcfa1cd89c1bec22204c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1082df252b2fcfa1cd89c1bec22204c3">TAG_OBJECT</a>(x)</td></tr>
 <tr class="separator:a1082df252b2fcfa1cd89c1bec22204c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aeaaf9408cf9c743076cf8a94b22b67" id="r_a6aeaaf9408cf9c743076cf8a94b22b67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aeaaf9408cf9c743076cf8a94b22b67">TAG_CLOUDS</a>(x)</td></tr>
+<tr class="separator:a6aeaaf9408cf9c743076cf8a94b22b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99f17a9b514b8d8c6fbef52f9e29a7d" id="r_ae99f17a9b514b8d8c6fbef52f9e29a7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae99f17a9b514b8d8c6fbef52f9e29a7d">TAG_THWOMP</a>(x)</td></tr>
+<tr class="separator:ae99f17a9b514b8d8c6fbef52f9e29a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49020a15d2dc66098e8ac3900157c377" id="r_a49020a15d2dc66098e8ac3900157c377"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49020a15d2dc66098e8ac3900157c377">TAG_TRACK</a>(x)</td></tr>
+<tr class="separator:a49020a15d2dc66098e8ac3900157c377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -165,10 +171,6 @@ Functions</h2></td></tr>
 <tr class="separator:aeb9128118a5441a4bf264c302e761fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fbd67ef553452903cf553b9c224fa76" id="r_a5fbd67ef553452903cf553b9c224fa76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fbd67ef553452903cf553b9c224fa76">FrameInterpolation_Record_SetTextMatrix</a> (<a class="el" href="common__structs_8h.html#ab7160f77e736961cfa2aff581aeee005">Mat4</a> *matrix, f32 x, f32 y, f32 arg3, f32 arg4)</td></tr>
 <tr class="separator:a5fbd67ef553452903cf553b9c224fa76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af844ed47e76cd172753ab7ea4a38ece6" id="r_af844ed47e76cd172753ab7ea4a38ece6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af844ed47e76cd172753ab7ea4a38ece6">FrameInterpolation_RecordMatrixPush</a> (<a class="el" href="common__structs_8h.html#ab7160f77e736961cfa2aff581aeee005">Mat4</a> *matrix)</td></tr>
-<tr class="separator:af844ed47e76cd172753ab7ea4a38ece6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3bab3dd7b60021a031a1d57fd38957d" id="r_ad3bab3dd7b60021a031a1d57fd38957d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3bab3dd7b60021a031a1d57fd38957d">FrameInterpolation_RecordMatrixPop</a> (<a class="el" href="common__structs_8h.html#ab7160f77e736961cfa2aff581aeee005">Mat4</a> *matrix)</td></tr>
-<tr class="separator:ad3bab3dd7b60021a031a1d57fd38957d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad27d70ad587e1f561b84876ef7f47642" id="r_ad27d70ad587e1f561b84876ef7f47642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad27d70ad587e1f561b84876ef7f47642">FrameInterpolation_RecordMatrixMult</a> (<a class="el" href="common__structs_8h.html#ab7160f77e736961cfa2aff581aeee005">Mat4</a> *matrix, MtxF *mf, u8 mode)</td></tr>
 <tr class="separator:ad27d70ad587e1f561b84876ef7f47642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a995ba2652f40cdff19afb9bf7857e573" id="r_a995ba2652f40cdff19afb9bf7857e573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a995ba2652f40cdff19afb9bf7857e573">FrameInterpolation_RecordMatrixTranslate</a> (<a class="el" href="common__structs_8h.html#ab7160f77e736961cfa2aff581aeee005">Mat4</a> *matrix, <a class="el" href="common__structs_8h.html#a5290523279339ea495248ab3a36cb46e">Vec3f</a> b)</td></tr>
@@ -195,6 +197,24 @@ Functions</h2></td></tr>
 <tr class="separator:aafa8768b46143c8110779aa8afdfe41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a6aeaaf9408cf9c743076cf8a94b22b67" name="a6aeaaf9408cf9c743076cf8a94b22b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aeaaf9408cf9c743076cf8a94b22b67">&#9670;&#160;</a></span>TAG_CLOUDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TAG_CLOUDS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((u32)0x50000000 | (u32) (uintptr_t) (x))</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a7954bb5cee32cad6df2d74a6fa90a423" name="a7954bb5cee32cad6df2d74a6fa90a423"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7954bb5cee32cad6df2d74a6fa90a423">&#9670;&#160;</a></span>TAG_ITEM_ADDR</h2>
 
@@ -227,7 +247,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((u32)0x30000000 | (u32) (uintptr_t) (x))</div>
+<b>Value:</b><div class="fragment"><div class="line">((u32)0x30000000 | ((u32)(x) &amp; 0x0FFFFFFF))</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -264,6 +284,42 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((u32) 0x20000000 | (u32) (x))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae99f17a9b514b8d8c6fbef52f9e29a7d" name="ae99f17a9b514b8d8c6fbef52f9e29a7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99f17a9b514b8d8c6fbef52f9e29a7d">&#9670;&#160;</a></span>TAG_THWOMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TAG_THWOMP</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((u32)0x60000000 | ((u32)(x) &amp; 0x0FFFFFFF))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a49020a15d2dc66098e8ac3900157c377" name="a49020a15d2dc66098e8ac3900157c377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49020a15d2dc66098e8ac3900157c377">&#9670;&#160;</a></span>TAG_TRACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TAG_TRACK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((u32)0x70000000 | ((u32)(x) &amp; 0x0FFFFFFF))</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -563,33 +619,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad3bab3dd7b60021a031a1d57fd38957d" name="ad3bab3dd7b60021a031a1d57fd38957d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3bab3dd7b60021a031a1d57fd38957d">&#9670;&#160;</a></span>FrameInterpolation_RecordMatrixPop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void FrameInterpolation_RecordMatrixPop </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="common__structs_8h.html#ab7160f77e736961cfa2aff581aeee005">Mat4</a> *</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="FrameInterpolation_8h_ad3bab3dd7b60021a031a1d57fd38957d_cgraph.svg" width="350" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="FrameInterpolation_8h_ad3bab3dd7b60021a031a1d57fd38957d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
 <a id="aeb9128118a5441a4bf264c302e761fe1" name="aeb9128118a5441a4bf264c302e761fe1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb9128118a5441a4bf264c302e761fe1">&#9670;&#160;</a></span>FrameInterpolation_RecordMatrixPosRotScaleXY()</h2>
 
@@ -668,33 +697,6 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="FrameInterpolation_8h_a3a4250dd10535ebfad101196ec528f79_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="af844ed47e76cd172753ab7ea4a38ece6" name="af844ed47e76cd172753ab7ea4a38ece6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af844ed47e76cd172753ab7ea4a38ece6">&#9670;&#160;</a></span>FrameInterpolation_RecordMatrixPush()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void FrameInterpolation_RecordMatrixPush </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="common__structs_8h.html#ab7160f77e736961cfa2aff581aeee005">Mat4</a> *</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="FrameInterpolation_8h_af844ed47e76cd172753ab7ea4a38ece6_cgraph.svg" width="350" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="FrameInterpolation_8h_af844ed47e76cd172753ab7ea4a38ece6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

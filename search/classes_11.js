@@ -28,6 +28,7 @@ var searchData=
   ['rgb8_25',['RGB8',['../structRGB8.html',1,'']]],
   ['rgba16_26',['RGBA16',['../structRGBA16.html',1,'']]],
   ['rgba5551_27',['RGBA5551',['../structRGBA5551.html',1,'']]],
-  ['royalraceway_28',['RoyalRaceway',['../classRoyalRaceway.html',1,'']]],
-  ['rulesets_29',['Rulesets',['../classRulesets.html',1,'']]]
+  ['rgba8_28',['RGBA8',['../structRGBA8.html',1,'']]],
+  ['royalraceway_29',['RoyalRaceway',['../classRoyalRaceway.html',1,'']]],
+  ['rulesets_30',['Rulesets',['../classRulesets.html',1,'']]]
 ];

@@ -152,6 +152,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7f2e9212dffa5894377677511e9aea7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca6165112fc92e65ad6477e785a7098c" id="r_aca6165112fc92e65ad6477e785a7098c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca6165112fc92e65ad6477e785a7098c">setup_race</a> (void)</td></tr>
 <tr class="separator:aca6165112fc92e65ad6477e785a7098c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb524837daa3cac25aa3bca580d4db94" id="r_abb524837daa3cac25aa3bca580d4db94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb524837daa3cac25aa3bca580d4db94">setup_editor</a> (void)</td></tr>
+<tr class="separator:abb524837daa3cac25aa3bca580d4db94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa64b1458166c92a3575d8edd5948a628" id="r_aa64b1458166c92a3575d8edd5948a628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa64b1458166c92a3575d8edd5948a628">func_80002DAC</a> (void)</td></tr>
 <tr class="separator:aa64b1458166c92a3575d8edd5948a628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d59a21a5843b6b518a1b93920dc561e" id="r_a0d59a21a5843b6b518a1b93920dc561e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d59a21a5843b6b518a1b93920dc561e">clear_nmi_buffer</a> (void)</td></tr>
@@ -215,7 +217,7 @@ Variables</h2></td></tr>
 <tr class="separator:a4546fe60321bf2e11a102fd020d724c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e68adae3a31f0d078322717a6ff9d6b" id="r_a1e68adae3a31f0d078322717a6ff9d6b"><td class="memItemLeft" align="right" valign="top">u16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e68adae3a31f0d078322717a6ff9d6b">gIsGamePaused</a> = false</td></tr>
 <tr class="separator:a1e68adae3a31f0d078322717a6ff9d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b75fd8c1ee76aa591435a2bd275985" id="r_a46b75fd8c1ee76aa591435a2bd275985"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b75fd8c1ee76aa591435a2bd275985">gIsEditorPaused</a> = false</td></tr>
+<tr class="memitem:a46b75fd8c1ee76aa591435a2bd275985" id="r_a46b75fd8c1ee76aa591435a2bd275985"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b75fd8c1ee76aa591435a2bd275985">gIsEditorPaused</a> = true</td></tr>
 <tr class="separator:a46b75fd8c1ee76aa591435a2bd275985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b736c2cce57eb258b8e704e9424a9b4" id="r_a1b736c2cce57eb258b8e704e9424a9b4"><td class="memItemLeft" align="right" valign="top">u8 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b736c2cce57eb258b8e704e9424a9b4">pAppNmiBuffer</a> = (u8*) &amp;<a class="el" href="stubs_8c.html#a5ac717c23f16f0106b4eed83054598d0">osAppNmiBuffer</a></td></tr>
 <tr class="separator:a1b736c2cce57eb258b8e704e9424a9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -410,7 +412,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="code__800029B0_8c_ac1299bd5ed61e2135db0c04683089c63_cgraph.svg" width="587" height="234"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="code__800029B0_8c_ac1299bd5ed61e2135db0c04683089c63_cgraph.svg" width="100%" height="538"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -470,6 +472,28 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="code__800029B0_8c_aa64b1458166c92a3575d8edd5948a628_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="abb524837daa3cac25aa3bca580d4db94" name="abb524837daa3cac25aa3bca580d4db94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb524837daa3cac25aa3bca580d4db94">&#9670;&#160;</a></span>setup_editor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup_editor </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="code__800029B0_8c_abb524837daa3cac25aa3bca580d4db94_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1625,7 +1649,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool gIsEditorPaused = false</td>
+          <td class="memname">bool gIsEditorPaused = true</td>
         </tr>
       </table>
 </div><div class="memdoc">

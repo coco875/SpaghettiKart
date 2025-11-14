@@ -119,6 +119,7 @@ $(function(){initNavTree('freecam_8cpp.html',''); initResizable(true); });
 <code>#include &quot;<a class="el" href="Game_8h_source.html">port/Game.h</a>&quot;</code><br />
 <code>#include &lt;controller/controldevice/controller/mapping/keyboard/KeyboardScancodes.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="FrameInterpolation_8h_source.html">port/interpolation/FrameInterpolation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Matrix_8h_source.html">engine/Matrix.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="macros_8h_source.html">macros.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="defines_8h_source.html">defines.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
@@ -196,10 +197,6 @@ Variables</h2></td></tr>
 <tr class="separator:a4493d3dcff930322a0404445c9274b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f00ad8415ae88905f5d78860d0e24d" id="r_a93f00ad8415ae88905f5d78860d0e24d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93f00ad8415ae88905f5d78860d0e24d">prevKeyState</a> [<a class="el" href="#a3077ecca3770bdee50e6a17dfb55d002">MAX_KEYS</a>] = { false }</td></tr>
 <tr class="separator:a93f00ad8415ae88905f5d78860d0e24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0f60c6b19f2352f571d45d8aa14769" id="r_a3f0f60c6b19f2352f571d45d8aa14769"><td class="memItemLeft" align="right" valign="top">Mtx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f0f60c6b19f2352f571d45d8aa14769">fPersp</a></td></tr>
-<tr class="separator:a3f0f60c6b19f2352f571d45d8aa14769"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a921ce5b7fd68a4ef822172253b66e2cb" id="r_a921ce5b7fd68a4ef822172253b66e2cb"><td class="memItemLeft" align="right" valign="top">Mtx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a921ce5b7fd68a4ef822172253b66e2cb">fLookAt</a></td></tr>
-<tr class="separator:a921ce5b7fd68a4ef822172253b66e2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a3077ecca3770bdee50e6a17dfb55d002" name="a3077ecca3770bdee50e6a17dfb55d002"></a>
@@ -379,6 +376,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="freecam_8cpp_a7521efa93b2660b03b60d1e5c02a74b8_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="freecam_8cpp_a7521efa93b2660b03b60d1e5c02a74b8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 
 </div>
 </div>
@@ -499,20 +501,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a921ce5b7fd68a4ef822172253b66e2cb" name="a921ce5b7fd68a4ef822172253b66e2cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a921ce5b7fd68a4ef822172253b66e2cb">&#9670;&#160;</a></span>fLookAt</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Mtx fLookAt</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0ec0acd61fd334d122ae188570082ae6" name="a0ec0acd61fd334d122ae188570082ae6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ec0acd61fd334d122ae188570082ae6">&#9670;&#160;</a></span>fMode</h2>
 
@@ -535,20 +523,6 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">u32 fModeInit = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3f0f60c6b19f2352f571d45d8aa14769" name="a3f0f60c6b19f2352f571d45d8aa14769"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f0f60c6b19f2352f571d45d8aa14769">&#9670;&#160;</a></span>fPersp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Mtx fPersp</td>
         </tr>
       </table>
 </div><div class="memdoc">

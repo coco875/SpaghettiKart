@@ -21,7 +21,7 @@ var structProperties =
     [ "OffTrackTargetSpeed", "structProperties.html#a5d03cff5d613b7f1bf327cc7c28158f9", null ],
     [ "PathSizes", "structProperties.html#a24374f73c91c6c4f9096690f1baf5d8b", null ],
     [ "PathTable", "structProperties.html#a7a3eb51cc47be9c2bcbd1b2f18622f1e", null ],
-    [ "PathTable2", "structProperties.html#a57f5f55c332a9e4a14ab6853352a693c", null ],
+    [ "PathTable2", "structProperties.html#a2a82bd54b19123b9c4a4477c029baf80", null ],
     [ "Sequence", "structProperties.html#acd753e07362c52af62ea8b632c50570e", null ],
     [ "Skybox", "structProperties.html#ac3c175569725579891325503e37e0bce", null ],
     [ "textures", "structProperties.html#a065b83567002440e6f6a7dd133e9939c", null ],

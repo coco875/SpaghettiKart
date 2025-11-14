@@ -2,6 +2,8 @@ var dir_d4fecef9a83f235e24caddea49caed82 =
 [
     [ "ContentBrowser.cpp", "ContentBrowser_8cpp.html", "ContentBrowser_8cpp" ],
     [ "ContentBrowser.h", "ContentBrowser_8h.html", "ContentBrowser_8h" ],
+    [ "DefaultProperties.cpp", "DefaultProperties_8cpp.html", "DefaultProperties_8cpp" ],
+    [ "DefaultProperties.h", "DefaultProperties_8h.html", "DefaultProperties_8h" ],
     [ "FreecamWindow.cpp", "FreecamWindow_8cpp.html", "FreecamWindow_8cpp" ],
     [ "FreecamWindow.h", "FreecamWindow_8h.html", null ],
     [ "ImguiUI.cpp", "ImguiUI_8cpp.html", "ImguiUI_8cpp" ],

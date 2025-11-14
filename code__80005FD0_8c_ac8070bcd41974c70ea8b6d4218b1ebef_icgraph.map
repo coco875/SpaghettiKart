@@ -1,11 +1,24 @@
 <map id="spawn_vehicle_on_road" name="spawn_vehicle_on_road">
-<area shape="rect" id="Node000001" title=" " alt="" coords="252,80,429,105"/>
-<area shape="rect" id="Node000002" href="$classABus.html#a664d535dc60bf3d1672792a14cff2089" title=" " alt="" coords="57,5,153,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="295,77,203,45,152,31,153,26,205,39,297,72"/>
-<area shape="rect" id="Node000003" href="$classACar.html#a731ef235852350fe580c8583e05b4377" title=" " alt="" coords="59,55,151,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,84,151,75,151,70,239,79"/>
-<area shape="rect" id="Node000004" href="$classATankerTruck.html#a1de2135bfd639bd6f077b29dab92b1b0" title=" " alt="" coords="5,104,204,129"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="238,106,204,109,204,104,238,100"/>
-<area shape="rect" id="Node000005" href="$classATruck.html#ad0c35adc2cbc53ad8ba417172e61093a" title=" " alt="" coords="47,153,162,179"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="294,113,205,143,159,156,158,151,203,138,292,108"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="692,80,869,105"/>
+<area shape="rect" id="Node000002" href="$classABus.html#aabc43c4a5a7c5acc7daa5e89f9d42cdb" title=" " alt="" coords="497,5,593,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="735,77,643,45,592,31,593,26,645,39,737,72"/>
+<area shape="rect" id="Node000005" href="$classACar.html#a7c537f8a1af7c93b57a6fbf2f52a894d" title=" " alt="" coords="499,55,591,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="678,84,591,75,591,70,679,79"/>
+<area shape="rect" id="Node000007" href="$classATankerTruck.html#a09577845d0c017bc5845b1cac44b5078" title=" " alt="" coords="445,104,644,129"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="678,106,644,109,644,104,678,100"/>
+<area shape="rect" id="Node000009" href="$classATruck.html#a8b5a611d66bd00a6ddf86eec0920a583" title=" " alt="" coords="487,153,602,179"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="734,113,645,143,599,156,598,151,643,138,732,108"/>
+<area shape="rect" id="Node000003" href="$classABus.html#a456ce9ea8c555e72a30abe4b40bd2d7b" title=" " alt="" coords="265,5,372,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,21,372,21,372,15,483,15"/>
+<area shape="rect" id="Node000004" href="$classToadsTurnpike.html#a25009a2dd4f7e438741965b0a9fc9a7e" title=" " alt="" coords="5,80,192,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="263,37,241,45,135,82,133,77,239,39,261,32"/>
+<area shape="rect" id="Node000006" href="$classACar.html#a657415a24ab2c0d907f25fd227156848" title=" " alt="" coords="267,55,371,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="485,70,371,70,371,65,485,65"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="253,77,193,85,192,79,253,72"/>
+<area shape="rect" id="Node000008" href="$classATankerTruck.html#a2aacacbab3ba357a304a26523e4e3679" title=" " alt="" coords="240,104,397,129"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="431,119,398,119,398,114,431,114"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="226,109,192,105,192,100,226,104"/>
+<area shape="rect" id="Node000010" href="$classATruck.html#afe7c33a6d77655f1404a658a747fa3f6" title=" " alt="" coords="261,153,376,179"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="473,169,376,169,376,163,473,163"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="264,152,239,143,136,108,138,103,241,138,266,146"/>
 </map>

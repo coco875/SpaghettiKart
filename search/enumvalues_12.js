@@ -29,10 +29,12 @@ var searchData=
   ['time_5ftrial_5fdata_5ftoads_5fturnpike_26',['TIME_TRIAL_DATA_TOADS_TURNPIKE',['../mk64_8h.html#af99386c6c69e4c7491c1ca0f1a4b44ccae454a00025a39c2c39ba3bdf900af7db',1,'mk64.h']]],
   ['time_5ftrial_5fdata_5fwario_5fstadium_27',['TIME_TRIAL_DATA_WARIO_STADIUM',['../mk64_8h.html#af99386c6c69e4c7491c1ca0f1a4b44cca63df8afcd17a336c9fe250b155d18d81',1,'mk64.h']]],
   ['time_5ftrial_5fdata_5fyoshi_5fvalley_28',['TIME_TRIAL_DATA_YOSHI_VALLEY',['../mk64_8h.html#af99386c6c69e4c7491c1ca0f1a4b44cca3f289a8df0d54b7726216d7ebc4b6d8e',1,'mk64.h']]],
-  ['tow_29',['TOW',['../classOLakitu.html#ab2298e9648e9926d5cc3fce76bb53e4da5fc92c953f716324e8fb002ad6a68f4d',1,'OLakitu']]],
-  ['tow_5fice_5fcube_30',['TOW_ICE_CUBE',['../classOLakitu.html#ab2298e9648e9926d5cc3fce76bb53e4da4d5c96d46f9c82c90600b3f424f6e617',1,'OLakitu']]],
-  ['tracksection_31',['TrackSection',['../namespaceMK64.html#a38de6847b2446bd40c519608c4691352a19a5bfedd6a4c50c0337be5fc782d7ed',1,'MK64']]],
-  ['train_5ftrack_32',['TRAIN_TRACK',['../mk64_8h.html#a5344f2bdca4f9506c40f044e08ea8c98ab1f262658c993afeba3aead30f94108f',1,'mk64.h']]],
-  ['triple_5fgreen_5fshell_33',['TRIPLE_GREEN_SHELL',['../actor__types_8h.html#ac01c8e97d91d8f2968ca1f8d4eb0495baa42e974f033d01764e1c170a632c43bc',1,'actor_types.h']]],
-  ['triple_5fred_5fshell_34',['TRIPLE_RED_SHELL',['../actor__types_8h.html#ac01c8e97d91d8f2968ca1f8d4eb0495ba5473d1b5b6530e1e4bf2c70d32b7bf68',1,'actor_types.h']]]
+  ['too_5fclose_29',['TOO_CLOSE',['../classAText.html#a5c3df12efd24dc28801f208f84136894a27917e9091e7e4e3d7e49009b96af02d',1,'AText']]],
+  ['too_5ffar_30',['TOO_FAR',['../classAText.html#a5c3df12efd24dc28801f208f84136894a40421d66348e0b6b9ae3a68dae68c7a5',1,'AText']]],
+  ['tow_31',['TOW',['../classOLakitu.html#ab2298e9648e9926d5cc3fce76bb53e4da5fc92c953f716324e8fb002ad6a68f4d',1,'OLakitu']]],
+  ['tow_5fice_5fcube_32',['TOW_ICE_CUBE',['../classOLakitu.html#ab2298e9648e9926d5cc3fce76bb53e4da4d5c96d46f9c82c90600b3f424f6e617',1,'OLakitu']]],
+  ['tracksection_33',['TrackSection',['../namespaceMK64.html#a38de6847b2446bd40c519608c4691352a19a5bfedd6a4c50c0337be5fc782d7ed',1,'MK64']]],
+  ['train_5ftrack_34',['TRAIN_TRACK',['../mk64_8h.html#a5344f2bdca4f9506c40f044e08ea8c98ab1f262658c993afeba3aead30f94108f',1,'mk64.h']]],
+  ['triple_5fgreen_5fshell_35',['TRIPLE_GREEN_SHELL',['../actor__types_8h.html#ac01c8e97d91d8f2968ca1f8d4eb0495baa42e974f033d01764e1c170a632c43bc',1,'actor_types.h']]],
+  ['triple_5fred_5fshell_36',['TRIPLE_RED_SHELL',['../actor__types_8h.html#ac01c8e97d91d8f2968ca1f8d4eb0495ba5473d1b5b6530e1e4bf2c70d32b7bf68',1,'actor_types.h']]]
 ];

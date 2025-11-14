@@ -114,17 +114,25 @@ $(function(){initNavTree('SceneManager_8cpp.html',''); initResizable(true); });
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="SceneManager_8h_source.html">SceneManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Game_8h_source.html">port/Game.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="CoreMath_8h_source.html">CoreMath.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CoreMath_8h_source.html">engine/CoreMath.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="World_8h_source.html">World.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GameObject_8h_source.html">GameObject.h</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;nlohmann/json.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="Engine_8h_source.html">port/Engine.h</a>&quot;</code><br />
 <code>#include &lt;libultraship/src/resource/type/Json.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="Minimap_8h_source.html">port/resource/type/Minimap.h</a>&quot;</code><br />
 <code>#include &lt;libultraship/src/resource/File.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="ResourceType_8h_source.html">port/resource/type/ResourceType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Train_8h_source.html">engine/vehicles/Train.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Object_8h_source.html">engine/objects/Object.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Thwomp_8h_source.html">engine/objects/Thwomp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Snowman_8h_source.html">engine/objects/Snowman.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="common__structs_8h_source.html">common_structs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="actors_8h_source.html">actors.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="actor__types_8h_source.html">actor_types.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SceneManager.cpp:</div>
 <div class="dyncontent">
@@ -140,14 +148,16 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a7f2229e4a768c53fcfb4b8dd1b1272d9" id="r_a7f2229e4a768c53fcfb4b8dd1b1272d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEditor.html#a7f2229e4a768c53fcfb4b8dd1b1272d9">Editor::SaveLevel</a> ()</td></tr>
 <tr class="separator:a7f2229e4a768c53fcfb4b8dd1b1272d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a916fdd9cf148244bc96185b3bebcd5d1" id="r_a916fdd9cf148244bc96185b3bebcd5d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEditor.html#a916fdd9cf148244bc96185b3bebcd5d1">Editor::LoadLevel</a> (std::shared_ptr&lt; Ship::Archive &gt; archive, <a class="el" href="classCourse.html">Course</a> *course, std::string sceneFile)</td></tr>
-<tr class="separator:a916fdd9cf148244bc96185b3bebcd5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac95c825fc97e637d93f36fe4e9121515" id="r_ac95c825fc97e637d93f36fe4e9121515"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEditor.html#ac95c825fc97e637d93f36fe4e9121515">Editor::LoadLevel</a> (<a class="el" href="classCourse.html">Course</a> *course, std::string sceneFile)</td></tr>
+<tr class="separator:ac95c825fc97e637d93f36fe4e9121515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5682c68f8c058161eac4f98905aa0c86" id="r_a5682c68f8c058161eac4f98905aa0c86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEditor.html#a5682c68f8c058161eac4f98905aa0c86">Editor::Load_AddStaticMeshActor</a> (const nlohmann::json &amp;actorJson)</td></tr>
 <tr class="separator:a5682c68f8c058161eac4f98905aa0c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85a38f16e0f715d247a34fc1a51d599d" id="r_a85a38f16e0f715d247a34fc1a51d599d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEditor.html#a85a38f16e0f715d247a34fc1a51d599d">Editor::SetSceneFile</a> (std::shared_ptr&lt; Ship::Archive &gt; archive, std::string sceneFile)</td></tr>
 <tr class="separator:a85a38f16e0f715d247a34fc1a51d599d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dbe8877c6ca208acd93d3a6840ccf2a" id="r_a6dbe8877c6ca208acd93d3a6840ccf2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEditor.html#a6dbe8877c6ca208acd93d3a6840ccf2a">Editor::LoadMinimap</a> (std::shared_ptr&lt; Ship::Archive &gt; archive, <a class="el" href="classCourse.html">Course</a> *course, std::string filePath)</td></tr>
-<tr class="separator:a6dbe8877c6ca208acd93d3a6840ccf2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e9712b85e0226321f81e1cc620777a" id="r_a98e9712b85e0226321f81e1cc620777a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEditor.html#a98e9712b85e0226321f81e1cc620777a">Editor::LoadMinimap</a> (<a class="el" href="classCourse.html">Course</a> *course, std::string filePath)</td></tr>
+<tr class="separator:a98e9712b85e0226321f81e1cc620777a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa164982e09ca2812f69c6408ee8149e7" id="r_aa164982e09ca2812f69c6408ee8149e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEditor.html#aa164982e09ca2812f69c6408ee8149e7">Editor::SaveActors</a> (nlohmann::json &amp;actorList)</td></tr>
+<tr class="separator:aa164982e09ca2812f69c6408ee8149e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>

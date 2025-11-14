@@ -1,21 +1,28 @@
 <map id="src/engine/actors/Ship.h" name="src/engine/actors/Ship.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="685,5,862,31"/>
-<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="35,86,197,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="671,30,458,50,210,81,169,89,168,83,209,76,458,45,671,25"/>
-<area shape="rect" id="Node000004" href="$Ship_8cpp.html" title=" " alt="" coords="221,86,413,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="694,36,384,89,383,83,693,30"/>
-<area shape="rect" id="Node000005" href="$Harbour_8cpp.html" title=" " alt="" coords="438,79,581,119"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="723,37,574,81,572,76,721,32"/>
-<area shape="rect" id="Node000006" href="$TestCourse_8cpp.html" title=" " alt="" coords="605,79,747,119"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="750,41,701,81,698,76,747,37"/>
-<area shape="rect" id="Node000007" href="$Editor_8cpp.html" title=" " alt="" coords="771,86,970,111"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="800,37,858,84,855,88,797,41"/>
-<area shape="rect" id="Node000008" href="$Gizmo_8cpp.html" title=" " alt="" coords="994,86,1198,111"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="834,31,1050,83,1048,89,833,36"/>
-<area shape="rect" id="Node000009" href="$Light_8cpp.html" title=" " alt="" coords="1223,86,1417,111"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="876,30,1211,76,1256,83,1255,89,1210,81,875,35"/>
-<area shape="rect" id="Node000010" href="$ObjectPicker_8cpp.html" title=" " alt="" coords="1442,79,1619,119"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="876,23,1128,43,1430,76,1442,78,1441,83,1429,81,1128,48,875,28"/>
-<area shape="rect" id="Node000003" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="5,167,227,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,125,119,166,113,166,113,125"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="843,5,1020,31"/>
+<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="193,86,355,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="829,30,616,50,368,81,327,89,326,83,367,76,616,45,829,25"/>
+<area shape="rect" id="Node000007" href="$Ship_8cpp.html" title=" " alt="" coords="379,86,571,111"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="852,36,542,89,541,83,851,30"/>
+<area shape="rect" id="Node000008" href="$Harbour_8cpp.html" title=" " alt="" coords="596,79,739,119"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="881,37,732,81,730,76,879,32"/>
+<area shape="rect" id="Node000009" href="$TestCourse_8cpp.html" title=" " alt="" coords="763,79,905,119"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="908,41,859,81,856,76,905,37"/>
+<area shape="rect" id="Node000010" href="$Editor_8cpp.html" title=" " alt="" coords="929,86,1128,111"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="958,37,1016,84,1013,88,955,41"/>
+<area shape="rect" id="Node000011" href="$Gizmo_8cpp.html" title=" " alt="" coords="1152,86,1356,111"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="992,31,1208,83,1206,89,991,36"/>
+<area shape="rect" id="Node000012" href="$Light_8cpp.html" title=" " alt="" coords="1381,86,1575,111"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1034,30,1369,76,1414,83,1413,89,1368,81,1033,35"/>
+<area shape="rect" id="Node000013" href="$ObjectPicker_8cpp.html" title=" " alt="" coords="1600,79,1777,119"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1034,23,1286,43,1588,76,1600,78,1599,83,1587,81,1286,48,1033,28"/>
+<area shape="rect" id="Node000003" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="5,167,236,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,120,145,169,142,164,238,115"/>
+<area shape="rect" id="Node000004" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="163,240,385,265"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="277,125,277,240,271,240,271,125"/>
+<area shape="rect" id="Node000005" href="$ContentBrowser_8h.html" title=" " alt="" coords="312,167,519,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="308,116,396,164,393,169,306,120"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="382,200,298,242,296,237,379,196"/>
+<area shape="rect" id="Node000006" href="$ImguiUI_8cpp.html" title=" " alt="" coords="409,240,579,265"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="440,199,483,238,479,242,436,203"/>
 </map>

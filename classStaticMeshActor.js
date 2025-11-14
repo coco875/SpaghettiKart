@@ -10,6 +10,7 @@ var classStaticMeshActor =
     [ "Model", "classStaticMeshActor.html#a87071cd190c13973d4fcfb40462f5f74", null ],
     [ "Name", "classStaticMeshActor.html#adcb4c01704ca7bc006f3b1618bd6ac2d", null ],
     [ "Pos", "classStaticMeshActor.html#a10ca4ba669f6638e811a87b44996a27c", null ],
+    [ "ResourceName", "classStaticMeshActor.html#a3aade378bb25acb6a4bb36dfd28d62fc", null ],
     [ "Rot", "classStaticMeshActor.html#a9ee8057e2ff294cc294f2a7bf5ba161b", null ],
     [ "Scale", "classStaticMeshActor.html#ab8018ffb7b13912ac7f6516c2c98a976", null ]
 ];

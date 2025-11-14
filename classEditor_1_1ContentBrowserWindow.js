@@ -12,6 +12,7 @@ var classEditor_1_1ContentBrowserWindow =
     [ "FolderButton", "classEditor_1_1ContentBrowserWindow.html#abda5957cb7c62c94689245a92f59af83", null ],
     [ "InitElement", "classEditor_1_1ContentBrowserWindow.html#a6bac6cdff681a9c6de47f07735633930", null ],
     [ "RemoveCustomTracksFromTrackList", "classEditor_1_1ContentBrowserWindow.html#a388ed0e8d16729472c40d9c14c828dd7", null ],
+    [ "TrainWindow", "classEditor_1_1ContentBrowserWindow.html#a892a21e5db2c05ba813cfdc4f1dae812", null ],
     [ "UpdateElement", "classEditor_1_1ContentBrowserWindow.html#ae0ee9c554a56ca0b85393a15f3930428", null ],
     [ "ActorContent", "classEditor_1_1ContentBrowserWindow.html#af309ecc03e62e3295f40d43b9561c646", null ],
     [ "Content", "classEditor_1_1ContentBrowserWindow.html#ad3d847698069d69437f9acc846750675", null ],
