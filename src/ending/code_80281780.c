@@ -141,25 +141,25 @@ void setup_podium_ceremony(void) {
     gCollisionMesh = (CollisionTriangle*) gNextFreeMemoryAddress;
     //! @bug these segmented addresses need to be symbols for mobility
     // d_course_royal_raceway_packed_dl_67E8
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x070067E8), -1);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x070067E8), -1);
     // d_course_royal_raceway_packed_dl_AEF8
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x0700AEF8), -1);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x0700AEF8), -1);
     // d_course_royal_raceway_packed_dl_A970
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x0700A970), 8);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x0700A970), 8);
     // d_course_royal_raceway_packed_dl_AC30
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x0700AC30), 8);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x0700AC30), 8);
     // d_course_royal_raceway_packed_dl_CE0
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x07000CE0), 0x10);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x07000CE0), 0x10);
     // d_course_royal_raceway_packed_dl_E88
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x07000E88), 0x10);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x07000E88), 0x10);
     // d_course_royal_raceway_packed_dl_A618
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x0700A618), -1);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x0700A618), -1);
     // d_course_royal_raceway_packed_dl_A618
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x0700A618), -1);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x0700A618), -1);
     // d_course_royal_raceway_packed_dl_23F8
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x070023F8), 1);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x070023F8), 1);
     // d_course_royal_raceway_packed_dl_2478
-    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual(0x07002478), 1);
+    generate_collision_mesh_with_default_section_id(segmented_gfx_to_virtual((void*)0x07002478), 1);
     func_80295C6C();
     debug_switch_character_ceremony_cutscene();
     func_802818BC();

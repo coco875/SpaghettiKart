@@ -260,7 +260,7 @@ void Course::TestPath() {
         }
 
         f32 height = spawn_actor_on_surface(x, 2000.0f, z);
-        Vec3f itemPos = { x, height, z };
+        Vec3f itemPos = { (f32) x, height, (f32) z };
         add_actor_to_empty_slot(itemPos, rot, vel, ACTOR_ITEM_BOX);
     }
 }
