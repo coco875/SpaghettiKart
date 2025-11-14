@@ -760,7 +760,7 @@ void OThwomp::Draw(s32 cameraId) {
 
 void OThwomp::DrawModel(s32 objectIndex) {
     if ((gObjectList[objectIndex].state >= 2) && (func_80072354(objectIndex, 0x00000040) != 0)) {
-        FrameInterpolation_RecordOpenChild("Thwomp_Main", (uintptr_t) TAG_THWOMP(this));
+        FrameInterpolation_RecordOpenChild("Thwomp_Main", TAG_THWOMP((uintptr_t)this));
         func_8004A7AC(objectIndex, 1.75f);
         rsp_set_matrix_transformation(gObjectList[objectIndex].pos, gObjectList[objectIndex].orientation,
                                       gObjectList[objectIndex].sizeScaling);
