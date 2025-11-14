@@ -1,10 +1,13 @@
 #ifndef ENGINE_COURSE_H
 #define ENGINE_COURSE_H
 
-#include <libultraship.h>
+#include <libultraship/libultraship.h>
 #include "CoreMath.h"
 
 #ifdef __cplusplus
+#include "engine/SpawnParams.h"
+#include <optional>
+#include <nlohmann/json.hpp>
 #include "engine/objects/Lakitu.h"
 #include "port/resource/type/TrackSections.h"
 extern "C" {
@@ -81,8 +84,8 @@ typedef struct Properties {
     Vec4f NormalTargetSpeed;
     Vec4f D_0D0096B8;
     Vec4f OffTrackTargetSpeed;
-    TrackPathPoint* PathTable[4];
-    TrackPathPoint* PathTable2[4];
+    TrackPathPoint* PathTable[4]; // Only used for podium ceremony
+    TrackPathPoint* PathTable2[5]; // The fifth entry is for vehicles
     uint8_t* CloudTexture;
     CloudData *Clouds;
     CloudData *CloudList;
@@ -286,6 +289,7 @@ typedef struct Properties {
 
 #ifdef __cplusplus
 
+
 class World; // <-- Forward declare
 
 class Course {
@@ -304,8 +308,14 @@ public:
     const course_texture* textures = nullptr;
     bool bSpawnFinishline = true;
     std::optional<FVector> FinishlineSpawnPoint;
+
+    // O2R Loading
+    std::shared_ptr<Ship::Archive> RootArchive;
+    std::string SceneFilePtr;
     std::string TrackSectionsPtr;
+
     bool bIsMod = false;
+    std::vector<SpawnParams> SpawnList;
 
     virtual ~Course() = default;
 
@@ -322,6 +332,7 @@ public:
      * Actor spawning should go here.
      */
     virtual void BeginPlay();
+    void SpawnActors();
     virtual void TestPath();
     virtual void InitClouds();
     virtual void UpdateClouds(s32, Camera*);

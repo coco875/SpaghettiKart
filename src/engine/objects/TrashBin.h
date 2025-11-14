@@ -20,11 +20,24 @@ extern "C" {
 class OTrashBin : public OObject {
 public:
 
-    enum Behaviour {
+    enum Behaviour : int16_t {
         STATIC, // The lid stays shut
         MUNCHING // The lid opens/closes in a scary munching manner
     };
-    explicit OTrashBin(const FVector& pos, const IRotator& rotation, f32 scale, OTrashBin::Behaviour bhv);
+
+    // This is simply a helper function to keep Spawning code clean
+    static inline OTrashBin* Spawn(const FVector& pos, const IRotator& rot, f32 scale, OTrashBin::Behaviour bhv) {
+        SpawnParams params = {
+            .Name = "mk:trash_bin",
+            .Behaviour = bhv,
+            .Location = pos,
+            .Rotation = rot,
+            .Scale = FVector(0, scale, 0),
+        };
+        return static_cast<OTrashBin*>(gWorldInstance.AddObject(new OTrashBin(params)));
+    }
+
+    explicit OTrashBin(const SpawnParams& params);
 
     virtual void Tick() override;
     virtual void Draw(s32 cameraId) override;

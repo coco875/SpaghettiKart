@@ -13,6 +13,8 @@ extern "C" {
 extern Vtx gBowserStatueVtx[717];
 extern Gfx gBowserStatueGfx[162];
 
+// The data for this actor is generated and cut out from the actual track geography
+// That generator is currently commented out. So this actor is not usable atm.
 class ABowserStatue : public AActor {
 public:
     enum Behaviour {

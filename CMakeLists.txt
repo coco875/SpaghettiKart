@@ -70,6 +70,7 @@ set(CMAKE_OSX_ARCHITECTURES=arm64;x86_64)
 
 # Set the C++ standard and enable the MSVC parallel build option
 set(CMAKE_CXX_STANDARD 20 CACHE STRING "The C++ standard to use")
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11 CACHE STRING "The C standard to use")
 set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Spaghettify)
 set(PROJECT_TEAM "MegaMech")
@@ -308,6 +309,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "iOS")
 else()
     add_executable(${PROJECT_NAME} ${ALL_FILES})
 endif()
+
 
 ################################################################################
 # MSVC runtime library

@@ -3,6 +3,9 @@
 #include <libultraship.h>
 #include "Actor.h"
 #include <vector>
+#include "engine/SpawnParams.h"
+#include "engine/CoreMath.h"
+#include "engine/World.h"
 
 extern "C" {
 #include "main.h"
@@ -13,7 +16,12 @@ extern "C" {
 
 class ACar : public AActor {
   public:
-    explicit ACar(f32 speedA, f32 speedB, TrackPathPoint* path, uint32_t waypoint);
+    enum SpawnMode : uint16_t {
+        POINT, // Spawn car at a specific path point
+        AUTO,  // Automatically distribute cars based on a specific path point
+    };
+
+    explicit ACar(const SpawnParams& params);
 
     ~ACar() {
         _count--;
@@ -21,6 +29,19 @@ class ACar : public AActor {
 
     static size_t GetCount() {
         return _count;
+    }
+
+    // This is simply a helper function to keep Spawning code clean
+    static inline ACar* Spawn(f32 speedA, f32 speedB, uint32_t pathIndex, uint32_t pathPoint, ACar::SpawnMode spawnMode) {
+        SpawnParams params = {
+            .Name = "mk:car",
+            .Type = static_cast<uint16_t>(spawnMode),
+            .PathIndex = pathIndex,
+            .PathPoint = pathPoint,
+            .Speed = speedA,
+            .SpeedB = speedB
+        };
+        return static_cast<ACar*>(gWorldInstance.AddActor(new ACar(params)));
     }
 
     const char* Type;
@@ -40,11 +61,19 @@ class ACar : public AActor {
     f32 SomeArg4 = 8.5f;
     u32 SoundBits = SOUND_ARG_LOAD(0x51, 0x01, 0x80, 0x05);
 
+    ACar::SpawnMode SpawnType = ACar::SpawnMode::AUTO;
+    float SpeedB = 0.0f;
+    uint32_t PathIndex = 0;
+    uint32_t PathPoint = 0;
+
+    virtual void SetSpawnParams(SpawnParams& params) override;
     virtual void Tick() override;
     virtual void Draw(Camera*) override;
     virtual void VehicleCollision(s32 playerId, Player* player) override;
     virtual bool IsMod() override;
+    virtual void DrawEditorProperties() override;
 
   private:
     static size_t _count;
+    static std::map<uint32_t, std::vector<uint32_t>> CarCounts;
 };

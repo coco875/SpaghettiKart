@@ -160,26 +160,26 @@ void YoshiValley::BeginPlay() {
 
     if (gGamestate != CREDITS_SEQUENCE) {
         //! @bug Skip spawning in credits due to animation crash for now
-        gWorldInstance.AddObject(new OFlagpole(FVector(-902, 70, -1406), 0x3800));
-        gWorldInstance.AddObject(new OFlagpole(FVector(-948, 70, -1533), 0x3800));
-        gWorldInstance.AddObject(new OFlagpole(FVector(-2170, 0, 723), 0x400));
-        gWorldInstance.AddObject(new OFlagpole(FVector(-2193, 0, 761), 0x400));
+        OFlagpole::Spawn(FVector(-902, 70, -1406), 0x3800);
+        OFlagpole::Spawn(FVector(-948, 70, -1533), 0x3800);
+        OFlagpole::Spawn(FVector(-2170, 0, 723), 0x400);
+        OFlagpole::Spawn(FVector(-2193, 0, 761), 0x400);
 
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1683, -80, -88), FVector2D(-1650, -114), 9));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1636, -93, -147), FVector2D(-1661, -151), 9));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1628, -86, -108), FVector2D(-1666, -58), 9));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1676, -69, -30), FVector2D(-1651, -26), 9));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1227, -27, -989), FVector2D(-1194, -999), 26));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1261, -41, -880), FVector2D(-1213, -864), 26));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1342, -60, -830), FVector2D(-1249, -927), 26));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1429, -78, -849), FVector2D(-1347, -866), 26));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1492, -94, -774), FVector2D(-1427, -891), 26));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1453, -87, -784), FVector2D(-1509, -809), 26));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1488, 89, -852), FVector2D(-1464, -822), 26));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-1301, 47, -904), FVector2D(-1537, -854), 26));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-2587, 56, -259), FVector2D(-2624, -241), 28));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-2493, 94, -454), FVector2D(-2505, -397), 28));
-        gWorldInstance.AddObject(new OHedgehog(FVector(-2477, 3, -57), FVector2D(-2539, -66), 28));
+        OHedgehog::Spawn(FVector(-1683, -80, -88), FVector2D(-1650, -114), 9);
+        OHedgehog::Spawn(FVector(-1636, -93, -147), FVector2D(-1661, -151), 9);
+        OHedgehog::Spawn(FVector(-1628, -86, -108), FVector2D(-1666, -58), 9);
+        OHedgehog::Spawn(FVector(-1676, -69, -30), FVector2D(-1651, -26), 9);
+        OHedgehog::Spawn(FVector(-1227, -27, -989), FVector2D(-1194, -999), 26);
+        OHedgehog::Spawn(FVector(-1261, -41, -880), FVector2D(-1213, -864), 26);
+        OHedgehog::Spawn(FVector(-1342, -60, -830), FVector2D(-1249, -927), 26);
+        OHedgehog::Spawn(FVector(-1429, -78, -849), FVector2D(-1347, -866), 26);
+        OHedgehog::Spawn(FVector(-1492, -94, -774), FVector2D(-1427, -891), 26);
+        OHedgehog::Spawn(FVector(-1453, -87, -784), FVector2D(-1509, -809), 26);
+        OHedgehog::Spawn(FVector(-1488, 89, -852), FVector2D(-1464, -822), 26);
+        OHedgehog::Spawn(FVector(-1301, 47, -904), FVector2D(-1537, -854), 26);
+        OHedgehog::Spawn(FVector(-2587, 56, -259), FVector2D(-2624, -241), 28);
+        OHedgehog::Spawn(FVector(-2493, 94, -454), FVector2D(-2505, -397), 28);
+        OHedgehog::Spawn(FVector(-2477, 3, -57), FVector2D(-2539, -66), 28);
     }
 
     if (gModeSelection == VERSUS) {
@@ -187,20 +187,13 @@ void YoshiValley::BeginPlay() {
         // the original data has values here.
 
         // Note that the Y height is calculated automatically to place the kart on the surface
-        FVector pos = { -1533, 0, -682 };
-        gWorldInstance.AddObject(new OBombKart(pos, NULL, 0, 0, 0.8333333f));
-        FVector pos2 = { -1565, 0, -619 };
-        gWorldInstance.AddObject(new OBombKart(pos2, NULL, 10, 0, 0.8333333f));
-        FVector pos3 = { -1529, 0, -579 };
-        gWorldInstance.AddObject(new OBombKart(pos3, NULL, 20, 0, 0.8333333f));
-        FVector pos4 = { -1588, 0, -534 };
-        gWorldInstance.AddObject(new OBombKart(pos4, NULL, 30, 0, 0.8333333f));
-        FVector pos5 = { -1598, 0, -207 };
-        gWorldInstance.AddObject(new OBombKart(pos5, NULL, 40, 0, 0.8333333f));
-        FVector pos6 = { -1646, 0, -147 };
-        gWorldInstance.AddObject(new OBombKart(pos6, NULL, 50, 0, 0.8333333f));
-        FVector pos7 = { -2532, 0, -445 };
-        gWorldInstance.AddObject(new OBombKart(pos7, NULL, 60, 0, 0.8333333f));
+        OBombKart::Spawn(FVector(-1533, 0, -682), 0, 0.8333333f);
+        OBombKart::Spawn(FVector(-1565, 0, -619), 0, 0.8333333f);
+        OBombKart::Spawn(FVector(-1529, 0, -579), 0, 0.8333333f);
+        OBombKart::Spawn(FVector(-1588, 0, -534), 0, 0.8333333f);
+        OBombKart::Spawn(FVector(-1598, 0, -207), 0, 0.8333333f);
+        OBombKart::Spawn(FVector(-1646, 0, -147), 0, 0.8333333f);
+        OBombKart::Spawn(FVector(-2532, 0, -445), 0, 0.8333333f);
     }
 }
 

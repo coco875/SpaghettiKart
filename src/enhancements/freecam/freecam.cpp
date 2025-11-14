@@ -5,6 +5,7 @@
 #include <controller/controldevice/controller/mapping/keyboard/KeyboardScancodes.h>
 #include <window/Window.h>
 #include "port/interpolation/FrameInterpolation.h"
+#include "engine/Matrix.h"
 
 extern "C" {
 #include <macros.h>
@@ -159,7 +160,7 @@ void freecam_mouse_manager(Camera* camera, Vec3f forwardVector) {
     } else { // Mouse controls
         // Calculate yaw (left/right) and pitch (up/down) changes
         if (wnd->GetMouseState(Ship::LUS_MOUSE_BTN_RIGHT)) {
-            yawChange = mouse.x * MOUSE_SENSITIVITY_X;
+            yawChange = -mouse.x * MOUSE_SENSITIVITY_X;
             pitchChange = mouse.y * MOUSE_SENSITIVITY_Y;
         }
         // Update rotational velocity based on mouse movement
@@ -398,8 +399,6 @@ void freecam_update_controller(void) {
     // Note that D Pad as stick code has been removed. So if it's needed, it needs to be put back in.
 }
 
-Mtx fPersp;
-Mtx fLookAt;
 void freecam_render_setup(Camera* camera) {
     u16 perspNorm;
     Mat4 matrix;
@@ -412,17 +411,17 @@ void freecam_render_setup(Camera* camera) {
 
     // Perspective (camera movement)
     FrameInterpolation_RecordOpenChild("freecam_persp", FrameInterpolation_GetCameraEpoch());
-    guPerspective(&fPersp, &perspNorm, gCameraZoom[0], gScreenAspect,
+    guPerspective(GetPerspMatrix(4), &perspNorm, gCameraZoom[0], gScreenAspect,
                   CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
     gSPPerspNormalize(gDisplayListHead++, perspNorm);
-    gSPMatrix(gDisplayListHead++, (&fPersp), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+    gSPMatrix(gDisplayListHead++, GetPerspMatrix(4), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
     FrameInterpolation_RecordCloseChild();
 
     // LookAt (camera rotation)
     FrameInterpolation_RecordOpenChild("freecam_lookAt", FrameInterpolation_GetCameraEpoch());
-    guLookAt(&fLookAt, camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
+    guLookAt(GetLookAtMatrix(4), camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
              camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
-    gSPMatrix(gDisplayListHead++, (&fLookAt), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+    gSPMatrix(gDisplayListHead++, GetLookAtMatrix(4), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
     FrameInterpolation_RecordCloseChild();
 
     gDPPipeSync(gDisplayListHead++);

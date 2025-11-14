@@ -133,15 +133,13 @@ void BlockFort::BeginPlay() {
     spawn_all_item_boxes((ActorSpawnData*) LOAD_ASSET_RAW(d_course_block_fort_item_box_spawns));
 
     if (gModeSelection == VERSUS) {
-        FVector pos = { 0, 0, 0 };
-
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][20], 20, 0, 1.0f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][40], 40, 0, 1.0f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][60], 60, 0, 1.0f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][80], 80, 0, 1.0f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][100], 100, 0, 1.0f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][120], 120, 0, 1.0f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][140], 140, 0, 1.0f));
+        OBombKart::Spawn(0, 20, 0, 1.0f);
+        OBombKart::Spawn(0, 40, 0, 1.0f);
+        OBombKart::Spawn(0, 60, 0, 1.0f);
+        OBombKart::Spawn(0, 80, 0, 1.0f);
+        OBombKart::Spawn(0, 100, 0, 1.0f);
+        OBombKart::Spawn(0, 120, 0, 1.0f);
+        OBombKart::Spawn(0, 140, 0, 1.0f);
     }
 }
 

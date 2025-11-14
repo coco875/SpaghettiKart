@@ -19,16 +19,27 @@ extern "C" {
 
 class OHotAirBalloon : public OObject {
 public:
-    explicit OHotAirBalloon(const FVector& pos);
+    explicit OHotAirBalloon(const SpawnParams& params);
+
+    // This is simply a helper function to keep Spawning code clean
+    static inline OHotAirBalloon* Spawn(FVector pos) {
+        SpawnParams params = {
+            .Name = "mk:hot_air_balloon",
+            .Location = pos,
+        };
+        return static_cast<OHotAirBalloon*>(gWorldInstance.AddObject(new OHotAirBalloon(params)));
+    }
 
     virtual void Tick() override;
     virtual void Draw(s32 cameraId) override;
+    virtual void SetSpawnParams(SpawnParams& params) override;
+
     void func_80055CCC(s32 objectIndex, s32 cameraId);
     void init_hot_air_balloon(s32 objectIndex);
     void func_80085534(s32 objectIndex);
     void func_80085768(s32 objectIndex);
 
 private:
-    FVector _pos;
+    FVector Pos;
     bool *_visible;
 };

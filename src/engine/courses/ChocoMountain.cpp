@@ -10,6 +10,7 @@
 #include "assets/models/tracks/choco_mountain/choco_mountain_data.h"
 #include "assets/other/tracks/choco_mountain/choco_mountain_data.h"
 #include "engine/actors/Finishline.h"
+#include "engine/actors/FallingRock.h"
 
 extern "C" {
     #include "main.h"
@@ -179,18 +180,18 @@ void ChocoMountain::LoadTextures() {
 
 void ChocoMountain::BeginPlay() {
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_choco_mountain_item_box_spawns));
-    spawn_falling_rocks((struct ActorSpawnData*)LOAD_ASSET_RAW((const char*)d_course_choco_mountain_falling_rock_spawns));
+    AFallingRock::Spawn(FVector(2019, 156, 164), 60);
+    AFallingRock::Spawn(FVector(2018, 155, 379), 120);
+    AFallingRock::Spawn(FVector(1996, 146, 505), 180);
 
     if (gModeSelection == VERSUS) {
-        FVector pos = { 0, 0, 0 };
-
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][140], 140, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][165], 165, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][330], 330, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][550], 550, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][595], 595, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        OBombKart::Spawn(0, 140, 3, 0.8333333f);
+        OBombKart::Spawn(0, 165, 1, 0.8333333f);
+        OBombKart::Spawn(0, 330, 3, 0.8333333f);
+        OBombKart::Spawn(0, 550, 1, 0.8333333f);
+        OBombKart::Spawn(0, 595, 3, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
     }
 }
 

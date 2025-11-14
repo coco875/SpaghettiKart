@@ -8,6 +8,8 @@
 #ifdef __cplusplus
 #include "engine/editor/Editor.h"
 class Course;
+struct Properties;
+class World;
 extern "C" {
 #endif
 #include "camera.h"
@@ -18,6 +20,7 @@ extern s32 gTrophyIndex;
 #ifdef __cplusplus
 extern Editor::Editor gEditor;
 extern HarbourMastersIntro gMenuIntro;
+extern bool bCleanWorld;
 #endif
 
 Properties* CM_GetProps();
@@ -69,7 +72,7 @@ bool CM_DoesFinishlineExist();
 
 void CM_InitClouds();
 
-void CM_DrawActors(Camera* camera, struct Actor* actor);
+void CM_DrawActors(Camera* camera);
 void CM_DrawStaticMeshActors();
 
 void CM_TickObjects();
@@ -81,6 +84,7 @@ void CM_DrawEditor();
 void CM_Editor_SetLevelDimensions(s16 minX, s16 maxX, s16 minZ, s16 maxZ, s16 minY, s16 maxY);
 void CM_TickDraw();
 void Editor_ClearMatrix();
+void Editor_CleanWorld();
 
 void CM_TickParticles(void);
 void CM_DrawParticles(s32 cameraId);
@@ -148,7 +152,8 @@ void SetCourseById(s32 course);
 struct Actor* CM_GetActor(size_t index);
 void CM_DeleteActor(size_t index);
 struct Actor* CM_AddBaseActor();
-void CM_AddEditorObject(struct Actor* actor, const char* name);
+void CM_ActorBeginPlay(struct Actor* actor);
+void CM_ActorGenerateCollision(struct Actor* actor);
 void Editor_AddLight(s8* direction);
 size_t CM_GetActorSize();
 size_t CM_FindActorIndex(struct Actor* actor);

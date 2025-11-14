@@ -30,10 +30,23 @@ extern "C" {
  */
 class OCrab : public OObject {
 public:
-    explicit OCrab(const FVector2D& start, const FVector2D& end);
+    // This is simply a helper function to keep Spawning code clean
+    static inline OCrab* Spawn(const FVector2D& start, const FVector2D& end) {
+        SpawnParams params = {
+            .Name = "mk:crab",
+            .PatrolStart = start,
+            .PatrolEnd = end,
+        };
+        return static_cast<OCrab*>(gWorldInstance.AddObject(new OCrab(params)));
+    }
+
+    explicit OCrab(const SpawnParams& params);
 
     virtual void Tick() override;
     virtual void Draw(s32 cameraId) override;
+    virtual void SetSpawnParams(SpawnParams& params) override;
+    virtual void DrawEditorProperties() override;
+
     void DrawModel(s32 cameraId);
 
     void init_ktb_crab(s32 objectIndex);

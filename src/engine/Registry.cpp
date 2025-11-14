@@ -1,59 +1,32 @@
-// #include <vector>
-// #include <functional>
-// #include <iostream>
-// #include <map>
+#include <functional>
+#include <unordered_map>
+#include <string>
 
-// #include "Registry.h"
-// #include "Course.h"
-// #include "port/Game.h"
+#include "Registry.h"
+#include "engine/CoreMath.h"
 
-// template <class T> Registry<T>::Registry() {
-// }
+extern "C" {
+#include "actors.h"
+#include "actor_types.h"
+}
 
-// template <class T> void Registry<T>::Add(std::string id, std::function<T*()> fn) {
-//     // need to handle duplicate registration
-//     ContentVault[id] = fn;
-// }
+std::unordered_map<std::string, ActorRegistryEntry> gActorRegistry;
 
-// template <class T>
-// void Registry<T>::AddArgs(std::string id) {
-//     ArgsVault[id] = [](Args&&... args) -> T* {
-//         return new T(std::forward<Args>(args)...);
-//     };
-// }
+void RegisterActor(const std::string& name,
+                   std::function<void(const SpawnParams&)> spawnFunc)
+{
+    gActorRegistry[name] = { spawnFunc };
+}
 
-// template <class T>
-// T* Registry<T>::Get(std::string id) {
-//     auto it = ContentVault.find(id);
-//     if (it != ContentVault.end()) {
-//         return it->second();
-//     }
-//     return nullptr;
-// }
+void Registry_SpawnActor(SpawnParams& params) {
+    auto it = gActorRegistry.find(params.Name);
+    if (it != gActorRegistry.end() && it->second.spawnFunc) {
+        printf("[Registry] Spawned %s\n", params.Name.c_str());
+        it->second.spawnFunc(params);
+    }
+}
 
-// // Available Registries
-// Registry<Course> Courses;
-// Registry<Cup> Cups;
-// Registry<AActor> Actors;
-
-// void AddCourse(std::string id, Course* course) {
-//     Courses.Add(id, [course]() { return course; });
-//     course->Id = id;
-// }
-
-// void AddCup(std::string id, Cup* cup) {
-//     Cups.Add(id, [cup]() { return cup; });
-//     //cup->Id = id;
-// }
-
-// void AddActor(std::string id, AActor* actor) {
-//     Actors.Add(id, [actor]() { return actor; });
-// }
-
-// void AddStockContent() {
-//     AddActor("mk:banana", new AMarioSign({0, 0, 0}));
-// }
-
-// template class Registry<Course>;
-// template class Registry<Cup>;
-// template class Registry<AActor>;
+// @arg name Must be a resource name such as mk:car
+bool Registry_Find(const std::string& name) {
+    return gActorRegistry.find(name) != gActorRegistry.end();
+}

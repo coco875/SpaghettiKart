@@ -6,6 +6,7 @@
 #include "MarioRaceway.h"
 #include "World.h"
 #include "engine/actors/Finishline.h"
+#include "engine/actors/MarioSign.h"
 #include "engine/objects/Object.h"
 #include "engine/objects/BombKart.h"
 #include "engine/objects/GrandPrixBalloons.h"
@@ -178,15 +179,6 @@ void MarioRaceway::Load() {
 
 void MarioRaceway::LoadTextures() {
     dma_textures(gTextureTrees1, 0x0000035BU, 0x00000800U); // 0x03009000
-    D_802BA058 = dma_textures(gTexturePiranhaPlant1, 0x000003E8U, 0x00000800U); // 0x03009800
-    dma_textures(gTexturePiranhaPlant2, 0x000003E8U, 0x00000800U); // 0x0300A000
-    dma_textures(gTexturePiranhaPlant3, 0x000003E8U, 0x00000800U); // 0x0300A800
-    dma_textures(gTexturePiranhaPlant4, 0x000003E8U, 0x00000800U); // 0x0300B000
-    dma_textures(gTexturePiranhaPlant5, 0x000003E8U, 0x00000800U); // 0x0300B800
-    dma_textures(gTexturePiranhaPlant6, 0x000003E8U, 0x00000800U); // 0x0300C000
-    dma_textures(gTexturePiranhaPlant7, 0x000003E8U, 0x00000800U); // 0x0300C800
-    dma_textures(gTexturePiranhaPlant8, 0x000003E8U, 0x00000800U); // 0x0300D000
-    dma_textures(gTexturePiranhaPlant9, 0x000003E8U, 0x00000800U); // 0x0300D800
 }
 
 void MarioRaceway::BeginPlay() {
@@ -198,26 +190,22 @@ void MarioRaceway::BeginPlay() {
     spawn_foliage((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_mario_raceway_tree_spawns));
     spawn_piranha_plants((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_mario_raceway_piranha_plant_spawns));
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_mario_raceway_item_box_spawns));
-    vec3f_set(position, 150.0f, 40.0f, -1300.0f);
-    position[0] *= gCourseDirection;
-    add_actor_to_empty_slot(position, rotation, velocity, ACTOR_MARIO_SIGN);
-    vec3f_set(position, 2520.0f, 0.0f, 1240.0f);
-    position[0] *= gCourseDirection;
-    add_actor_to_empty_slot(position, rotation, velocity, ACTOR_MARIO_SIGN);
+
+    AMarioSign::Spawn(FVector(150.0f, 40.0f, -1300.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
+    AMarioSign::Spawn(FVector(2520.0f, 0.0f, 1240.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
 
     if (gModeSelection == VERSUS) {
-        FVector pos = { 0, 0, 0 };
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][40], 40, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][100], 100, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][265], 265, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][285], 285, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][420], 420, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        OBombKart::Spawn(0, 40, 3, 0.8333333f);
+        OBombKart::Spawn(0, 100, 3, 0.8333333f);
+        OBombKart::Spawn(0, 265, 3, 0.8333333f);
+        OBombKart::Spawn(0, 285, 1, 0.8333333f);
+        OBombKart::Spawn(0, 420, 1, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
     }
 
     if (gGamestate != CREDITS_SEQUENCE) {
-        gWorldInstance.AddObject(new OGrandPrixBalloons(FVector(0, 5, -240)));
+        OGrandPrixBalloons::Spawn(FVector(0, 5, -240));
     }
 }
 

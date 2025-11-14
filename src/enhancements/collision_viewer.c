@@ -6,6 +6,7 @@
 #include "main.h"
 #include <port/interpolation/FrameInterpolation.h>
 #include <port/interpolation/matrix.h>
+#include "engine/Matrix.h"
 
 #include "collision_viewer.h"
 #include "math_util.h"
@@ -27,8 +28,8 @@ void render_collision(void) {
                     G_AC_NONE | G_ZS_PIXEL | G_RM_AA_ZB_OPA_SURF | G_RM_AA_ZB_OPA_SURF2);
     gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
 
-    // Set matrix
-    gSPMatrix(gDisplayListHead++, &gIdentityMatrix, G_MTX_MODELVIEW | G_MTX_LOAD | G_MTX_NOPUSH);
+    mtxf_identity(matrix);
+    AddObjectMatrix(matrix, G_MTX_MODELVIEW | G_MTX_LOAD | G_MTX_NOPUSH);
 
     for (size_t i = 0; i < gCollisionMeshCount; i++) {
         // Load vertices for this tri
@@ -57,7 +58,6 @@ void render_collision(void) {
                 gCollisionMesh[i].vtx3->v.cn[0] = 50;
                 gCollisionMesh[i].vtx3->v.cn[1] = 50;
                 gCollisionMesh[i].vtx3->v.cn[2] = 50;
-
                 break;
             case DIRT: // gTexture64619C
                 gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);

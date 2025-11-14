@@ -543,12 +543,18 @@ void render_object(u32 arg0) {
 }
 
 void render_object_p1(void) {
+    size_t playerIdx = PLAYER_ONE;
+
     gDPSetTexturePersp(gDisplayListHead++, G_TP_PERSP);
 
-    gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_ONE),
-              G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-    gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_ONE),
-              G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+    if (CVarGetInteger("gFreecam", 0) == true) {
+        playerIdx = CAMERA_FREECAM;
+    }
+
+    gSPMatrix(gDisplayListHead++, GetPerspMatrix(playerIdx),
+            G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+    gSPMatrix(gDisplayListHead++, GetLookAtMatrix(playerIdx),
+            G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
 
     // if (gGamestate == ENDING) {
     //     //func_80055F48(PLAYER_ONE);
@@ -639,10 +645,16 @@ void render_player_snow_effect(u32 arg0) {
 }
 
 void render_player_snow_effect_one(void) {
+    size_t playerIdx = PLAYER_ONE;
     gDPSetTexturePersp(gDisplayListHead++, G_TP_PERSP);
-    gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_ONE),
+
+    if (CVarGetInteger("gFreecam", 0) == true) {
+        playerIdx = CAMERA_FREECAM;
+    }
+
+    gSPMatrix(gDisplayListHead++, GetPerspMatrix(playerIdx),
               G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-    gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_ONE),
+    gSPMatrix(gDisplayListHead++, GetLookAtMatrix(playerIdx),
               G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
     if (gGamestate != ENDING) {
         render_snowing_effect(PLAYER_ONE);

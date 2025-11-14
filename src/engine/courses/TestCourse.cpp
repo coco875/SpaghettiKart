@@ -29,6 +29,7 @@
 #include "engine/objects/Crab.h"
 #include "engine/objects/Boos.h"
 #include "engine/objects/GrandPrixBalloons.h"
+#include "engine/objects/Thwomp.h"
 
 extern "C" {
     #include "main.h"
@@ -147,74 +148,7 @@ void TestCourse::Load() {
 
 void TestCourse::LoadTextures() {
     dma_textures(gTextureTrees1, 0x0000035BU, 0x00000800U); // 0x03009000
-    D_802BA058 = dma_textures(gTexturePiranhaPlant1, 0x000003E8U, 0x00000800U); // 0x03009800
-    dma_textures(gTexturePiranhaPlant2, 0x000003E8U, 0x00000800U); // 0x0300A000
-    dma_textures(gTexturePiranhaPlant3, 0x000003E8U, 0x00000800U); // 0x0300A800
-    dma_textures(gTexturePiranhaPlant4, 0x000003E8U, 0x00000800U); // 0x0300B000
-    dma_textures(gTexturePiranhaPlant5, 0x000003E8U, 0x00000800U); // 0x0300B800
-    dma_textures(gTexturePiranhaPlant6, 0x000003E8U, 0x00000800U); // 0x0300C000
-    dma_textures(gTexturePiranhaPlant7, 0x000003E8U, 0x00000800U); // 0x0300C800
-    dma_textures(gTexturePiranhaPlant8, 0x000003E8U, 0x00000800U); // 0x0300D000
-    dma_textures(gTexturePiranhaPlant9, 0x000003E8U, 0x00000800U); // 0x0300D800
 }
-
-Path2D test_course_path2D[] = {
-    {    0, 0},
-    {    0, -100},
-    {    0, -200},
-    {    0, -300},
-    {    0, -400},
-    {    0, -500},
-    {    0, -600},
-    {    0, -700},
-    {    0, -800},
-    {    0, -900},
-    {    0, -1000},
-    {    0, -1096},    // Main point 1
-    {  100, -1090},
-    {  200, -1085},
-    {  300, -1080},
-    {  400, -1075},
-    {  500, -1072},    // Curve begins to smooth here
-    {  600, -1068},
-    {  700, -1065},
-    {  800, -1063},
-    {  900, -1061},
-    {  984, -1060},    // Main point 2
-    {  990, -900},
-    {  995, -800},
-    {  997, -700},
-    {  998, -600},
-    {  999, -500},
-    {  999, -400},
-    {  999, -300},
-    {  999, -200},
-    {  999, -100},
-    {  999, 0},
-    {  999, 100},
-    {  999, 200},
-    {  999, 300},
-    {  999, 400},
-    {  999, 500},
-    {  999, 600},
-    {  999, 700},
-    {  999, 800},
-    {  999, 900},
-    {  999, 940},      // Main point 3
-    {  900, 945},
-    {  800, 945},
-    {  700, 947},
-    {  600, 948},
-    {  500, 949},
-    {  400, 949},
-    {  300, 949},
-    {  200, 950},
-    {  100, 950},
-    {    0, 950},      // Main point 4
-
-    // End of path
-    { -32768, -32768 } // Terminator
-};
 
 void TestCourse::BeginPlay() {
     struct ActorSpawnData itemboxes[] = {
@@ -270,7 +204,7 @@ void TestCourse::BeginPlay() {
     // gWorldInstance.AddActor(new OSeagull(2, pos));
     // gWorldInstance.AddActor(new OSeagull(3, pos));
     // gWorldInstance.AddObject(new OCheepCheep(FVector(0, 40, 0), OCheepCheep::CheepType::RACE, IPathSpan(0, 10)));
-    gWorldInstance.AddObject(new OTrophy(FVector(0,0,0), OTrophy::TrophyType::GOLD, OTrophy::Behaviour::GO_FISH));
+    OTrophy::Spawn(FVector(0,0,0), OTrophy::TrophyType::GOLD, OTrophy::Behaviour::GO_FISH);
     //gWorldInstance.AddObject(new OSnowman(FVector(0, 0, 0)));
     //gWorldInstance.AddObject(new OTrashBin(FVector(0.0f, 0.0f, 0.0f), IRotator(0, 90, 0), 1.0f, OTrashBin::Behaviour::MUNCHING));
 
@@ -282,22 +216,17 @@ void TestCourse::BeginPlay() {
 //    gWorldInstance.AddActor(new ABowserStatue(FVector(-200, 0, 0), ABowserStatue::Behaviour::CRUSH));
 
 //    gWorldInstance.AddObject(new OBoos(10, IPathSpan(0, 5), IPathSpan(18, 23), IPathSpan(25, 50)));
-
-    gVehicle2DPathPoint = test_course_path2D;
-    gVehicle2DPathLength = 53;
-    D_80162EB0 = spawn_actor_on_surface(test_course_path2D[0].x, 2000.0f, test_course_path2D[0].z);
+    //OThwomp::Spawn(0, 0, 0, 1.0f, 0, 1, 7);
 
     //gWorldInstance.AddTrain(ATrain::TenderStatus::HAS_TENDER, 5, 2.5f, 0);
     //gWorldInstance.AddTrain(ATrain::TenderStatus::HAS_TENDER, 5, 2.5f, 8);
 
-    FVector pos2 = { 0, 0, 0 };
-
-    gWorldInstance.AddObject(new OBombKart(pos2, &gTrackPaths[0][25], 25, 4, 0.8333333f));
-    gWorldInstance.AddObject(new OBombKart(pos2, &gTrackPaths[0][45], 45, 4, 0.8333333f));
+    OBombKart::Spawn(0, 25, 4, 0.8333333f);
+    OBombKart::Spawn(0, 45, 4, 0.8333333f);
 
    // gWorldInstance.AddActor(new AShip(FVector(0, 0, 0), AShip::Skin::SHIP3));
 
-//    gWorldInstance.AddObject(new OGrandPrixBalloons(FVector(0, 0, 0)));
+//    OGrandPrixBalloons::Spawn(FVector(0, 0, 0));
 }
 
 void TestCourse::WhatDoesThisDo(Player* player, int8_t playerId) {

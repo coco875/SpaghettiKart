@@ -2,7 +2,8 @@
 
 #include "Cloud.h"
 #include "engine/Actor.h"
-#include "World.h"
+#include "engine/World.h"
+#include "port/Game.h"
 
 extern "C" {
 #include "macros.h"
@@ -10,22 +11,46 @@ extern "C" {
 #include "math_util.h"
 #include "actor_types.h"
 #include "actors.h"
+#include "other_textures.h"
 extern f32 gKartHopInitialVelocityTable[];
 extern f32 gKartGravityTable[];
 }
 
-ACloud::ACloud(FVector pos) {
-	Name = "Cloud";
-	Pos[0] = pos.x;
-	Pos[1] = pos.y;
-	Pos[2] = pos.z;
-	Rot[0] = 0;
-	Rot[1] = 0;
-	Rot[2] = 0;
+ACloud::ACloud(const SpawnParams& params) : AActor(params) {
+    Name = "Cloud";
+    ResourceName = "hm:cloud";
+    FVector pos = params.Location.value_or(FVector(0, 0, 0));
+    Pos[0] = pos.x;
+    Pos[1] = pos.y;
+    Pos[2] = pos.z;
+
+    Rot[0] = 0;
+    Rot[1] = 0;
+    Rot[2] = 0;
+
+    TimerLength = params.Type.value_or(500); // How long the effect lasts
+    Hop = params.Speed.value_or(3.0f); // How long the effect lasts
+    Gravity = params.SpeedB.value_or(200.0f); // How long the effect lasts
 
     // Flags = -0x8000 | 0x4000;
 
     BoundingBoxSize = 2.0f;
+}
+
+void ACloud::SetSpawnParams(SpawnParams& params) {
+    AActor::SetSpawnParams(params);
+    params.Name = ResourceName;
+    params.Type = TimerLength;
+    params.Speed = Hop;
+    params.SpeedB = Gravity;
+}
+
+extern Gfx cloud_mesh[];
+void ACloud::BeginPlay() {
+    // Prevent collision mesh from being generated extra times.
+    if (Triangles.size() == 0) {
+        Editor::GenerateCollisionMesh(this, (Gfx*)cloud_mesh, 1.0f);
+    }
 }
 
 void ACloud::Tick() {
@@ -35,7 +60,7 @@ void ACloud::Tick() {
         Timer++; // Increment timer
     }
 
-    if (Timer > 500) { // Time has expired, reset the actor and player
+    if (Timer > TimerLength) { // Time has expired, reset the actor and player
         PickedUp = false;
         if (_player) {
             gKartHopInitialVelocityTable[_player->characterId] = OldHop; // reset back to normal
@@ -45,8 +70,6 @@ void ACloud::Tick() {
         Timer = 0;
     }
 }
-
-extern Gfx cloud_mesh[];
 
 void ACloud::Draw(Camera* camera) {
     Mat4 mtx;
@@ -71,7 +94,9 @@ void ACloud::Collision(Player* player, AActor* actor) {
 
             OldHop = gKartHopInitialVelocityTable[player->characterId];
             OldGravity = gKartGravityTable[player->characterId];
+            // Hop height
             gKartHopInitialVelocityTable[player->characterId] = Hop;
+            // How strong gravity is
             gKartGravityTable[player->characterId] = Gravity;
         }
     }
@@ -133,9 +158,53 @@ Gfx mat_cloud_cutout[] = {
 Gfx cloud_mesh[] = {
     // gsSPClearGeometryMode(G_LIGHTING),
     // gsSPVertex(cloud_mesh_vtx_cull + 0, 8, 0),
-    gsSPSetGeometryMode(G_LIGHTING),
+    //gsSPSetGeometryMode(G_LIGHTING),
     // gsSPCullDisplayList(0, 7),
     gsSPDisplayList(mat_cloud_cutout),
     gsSPDisplayList(cloud_mesh_tri_0),
     gsSPEndDisplayList(),
 };
+
+void ACloud::DrawEditorProperties() {
+    ImGui::Text("Location");
+    ImGui::SameLine();
+    FVector location = FVector(Pos[0], Pos[1], Pos[2]);
+    if (ImGui::DragFloat3("##Location", (float*)&location)) {
+        Translate(location);
+        gEditor.eObjectPicker.eGizmo.Pos = location;
+    }
+
+    ImGui::SameLine();
+    if (ImGui::Button(ICON_FA_UNDO "##ResetPos")) {
+        FVector location = FVector(0, 0, 0);
+        Translate(location);
+        gEditor.eObjectPicker.eGizmo.Pos = location;
+    }
+
+    ImGui::Text("Effect Timer");
+    ImGui::SameLine();
+    int32_t type = static_cast<int32_t>(TimerLength);
+    if (ImGui::InputInt("##Type", &type)) {
+        TimerLength = static_cast<uint32_t>(type);
+    }
+
+    ImGui::Text("Hop");
+    ImGui::SameLine();
+
+    if (ImGui::DragFloat("##Speed", &Hop, 0.01f)) {
+    }
+    ImGui::SameLine();
+    if (ImGui::Button(ICON_FA_UNDO "##ResetSpeed")) {
+        Hop = 0.0f;
+    }
+
+    ImGui::Text("Gravity");
+    ImGui::Text("Higher value = stronger gravity");
+
+    if (ImGui::DragFloat("##SpeedB", &Gravity, 1.0f)) {
+    }
+    ImGui::SameLine();
+    if (ImGui::Button(ICON_FA_UNDO "##ResetSpeedB")) {
+        Gravity = 0.0f;
+    }
+}

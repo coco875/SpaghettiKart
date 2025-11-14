@@ -324,15 +324,13 @@ void MooMooFarm::BeginPlay() {
     }
 
     if (gModeSelection == VERSUS) {
-        FVector pos = { 0, 0, 0 };
-
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][140], 140, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][225], 225, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][316], 316, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][434], 434, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        OBombKart::Spawn(0, 50, 3, 0.8333333f);
+        OBombKart::Spawn(0, 140, 3, 0.8333333f);
+        OBombKart::Spawn(0, 225, 3, 0.8333333f);
+        OBombKart::Spawn(0, 316, 3, 0.8333333f);
+        OBombKart::Spawn(0, 434, 3, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
     }
 }
 

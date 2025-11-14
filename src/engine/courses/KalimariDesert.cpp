@@ -4,7 +4,7 @@
 #include <memory>
 
 #include "KalimariDesert.h"
-#include "World.h"
+#include "engine/World.h"
 #include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
 #include "assets/models/tracks/kalimari_desert/kalimari_desert_data.h"
@@ -212,7 +212,9 @@ void KalimariDesert::BeginPlay() {
 
         // Spawn two trains
         for (size_t i = 0; i < _numTrains; ++i) {
-            uint32_t waypoint = CalculateWaypointDistribution(i, _numTrains, gVehicle2DPathLength, centerWaypoint);
+            // outputs 160 for train 1 and 392 for train 2.
+            // If using more trains, it wraps the value to always output a valid waypoint.
+            uint32_t waypoint = CalculateWaypointDistribution(i, _numTrains, gVehiclePathSize, centerWaypoint);
 
             if (CVarGetInteger("gMultiplayerNoFeatureCuts", 0) == false) {
                 // Multiplayer modes have no tender and no carriages
@@ -228,19 +230,17 @@ void KalimariDesert::BeginPlay() {
                 }
             }
 
-            gWorldInstance.AddActor(new ATrain(_tender, _numCarriages, 2.5f, waypoint));
+            ATrain::Spawn(_tender, _numCarriages, 2.5f, 0, waypoint, ATrain::SpawnMode::POINT);
         }
 
         if (gModeSelection == VERSUS) {
-            FVector pos = { 0, 0, 0 };
-
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][138], 138, 1, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][280], 280, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][404], 404, 1, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][510], 510, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+            OBombKart::Spawn(0, 50, 3, 0.8333333f);
+            OBombKart::Spawn(0, 138, 1, 0.8333333f);
+            OBombKart::Spawn(0, 280, 3, 0.8333333f);
+            OBombKart::Spawn(0, 404, 1, 0.8333333f);
+            OBombKart::Spawn(0, 510, 3, 0.8333333f);
+            OBombKart::Spawn(0, 0, 0, 0.8333333f);
+            OBombKart::Spawn(0, 0, 0, 0.8333333f);
         }
     }
 }

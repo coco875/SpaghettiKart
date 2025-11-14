@@ -13,7 +13,5 @@ namespace Editor {
         virtual void Draw() override;
         virtual void Load() override;
 
-        FVector pos;
-        IRotator rot;
     };
 }

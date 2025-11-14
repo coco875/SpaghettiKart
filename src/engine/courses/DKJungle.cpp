@@ -206,18 +206,16 @@ void DKJungle::BeginPlay() {
 
         // The original game only ran vehicle logic every second frame.
         // Thus the speed gets divided by two to set speed to match properly
-        gWorldInstance.AddActor(new ABoat((0.6666666f)/4, 0));
+        ABoat::Spawn((0.6666666f)/4, 0, 0, ABoat::SpawnMode::POINT);
 
         if (gModeSelection == VERSUS) {
-            FVector pos = { 0, 0, 0 };
-
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][100], 100, 1, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][150], 150, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][190], 190, 1, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][250], 250, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+            OBombKart::Spawn(0, 50, 3, 0.8333333f);
+            OBombKart::Spawn(0, 100, 1, 0.8333333f);
+            OBombKart::Spawn(0, 150, 3, 0.8333333f);
+            OBombKart::Spawn(0, 190, 1, 0.8333333f);
+            OBombKart::Spawn(0, 250, 3, 0.8333333f);
+            OBombKart::Spawn(0, 0, 0, 0.8333333f);
+            OBombKart::Spawn(0, 0, 0, 0.8333333f);
         }
     }
 }

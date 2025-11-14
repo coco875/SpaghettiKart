@@ -171,7 +171,7 @@ void ToadsTurnpike::BeginPlay() {
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_toads_turnpike_item_box_spawns));
 
     if (gGamestate != CREDITS_SEQUENCE) {
-        uint32_t waypoint;
+        uint32_t pathPoint;
         f32 a = ((gCCSelection * 90.0) / 216.0f) + 4.583333333333333;
         f32 b = ((gCCSelection * 90.0) / 216.0f) + 2.9166666666666665;
         a /= 2; // Normally vehicle logic is only ran every 2 frames. This slows the vehicles down to match.
@@ -191,34 +191,33 @@ void ToadsTurnpike::BeginPlay() {
         }
 
         for (size_t i = 0; i < _numTrucks; i++) {
-            waypoint = CalculateWaypointDistribution(i, _numTrucks, gPathCountByPathIndex[0], 0);
-            gWorldInstance.AddActor(new ATruck(a, b,  &gTrackPaths[0][0], waypoint));
+            pathPoint = CalculateWaypointDistribution(i, _numTrucks, gPathCountByPathIndex[0], 0);
+            ATruck::Spawn(a, b, 0, pathPoint, ATruck::SpawnMode::POINT);
         }
 
         for (size_t i = 0; i < _numBuses; i++) {
-            waypoint = CalculateWaypointDistribution(i, _numBuses, gPathCountByPathIndex[0], 75);
-            gWorldInstance.AddActor(new ABus(a, b, &gTrackPaths[0][0], waypoint));
+            pathPoint = CalculateWaypointDistribution(i, _numBuses, gPathCountByPathIndex[0], 75);
+            ABus::Spawn(a, b, 0, pathPoint, ABus::SpawnMode::POINT);
         }
 
         for (size_t i = 0; i < _numTankerTrucks; i++) {
-            waypoint = CalculateWaypointDistribution(i, _numTankerTrucks, gPathCountByPathIndex[0], 50);
-            gWorldInstance.AddActor(new ATankerTruck(a, b, &gTrackPaths[0][0], waypoint));
+            pathPoint = CalculateWaypointDistribution(i, _numTankerTrucks, gPathCountByPathIndex[0], 50);
+            ATankerTruck::Spawn(a, b, 0, pathPoint, ATankerTruck::SpawnMode::POINT);
         }
 
         for (size_t i = 0; i < _numCars; i++) {
-            waypoint = CalculateWaypointDistribution(i, _numCars, gPathCountByPathIndex[0], 25);
-            gWorldInstance.AddActor(new ACar(a, b, &gTrackPaths[0][0], waypoint));
+            pathPoint = CalculateWaypointDistribution(i, _numCars, gPathCountByPathIndex[0], 25);
+            ACar::Spawn(a, b, 0, pathPoint, ACar::SpawnMode::POINT);
         }
 
         if (gModeSelection == VERSUS) {
-            FVector pos = { 0, 0, 0 };
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][100], 100, 1, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][150], 150, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][200], 200, 1, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][250], 250, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+            OBombKart::Spawn(0, 50, 3, 0.8333333f);
+            OBombKart::Spawn(0, 100, 1, 0.8333333f);
+            OBombKart::Spawn(0, 150, 3, 0.8333333f);
+            OBombKart::Spawn(0, 200, 1, 0.8333333f);
+            OBombKart::Spawn(0, 250, 3, 0.8333333f);
+            OBombKart::Spawn(0, 0, 0, 0.8333333f);
+            OBombKart::Spawn(0, 0, 0, 0.8333333f);
         }
     }
 }

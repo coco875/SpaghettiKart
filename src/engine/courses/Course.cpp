@@ -6,6 +6,8 @@
 #include "port/Game.h"
 #include "port/resource/type/TrackPathPointData.h"
 #include "port/resource/type/TrackSections.h"
+#include "engine/editor/SceneManager.h"
+#include "Registry.h"
 
 extern "C" {
 #include "main.h"
@@ -24,6 +26,7 @@ extern "C" {
 #include "collision.h"
 #include "actors.h"
 #include "math_util.h"
+#include "code_80005FD0.h"
 extern StaffGhost* d_mario_raceway_staff_ghost;
 }
 
@@ -99,6 +102,7 @@ Course::Course() {
     Props.PathTable2[1] = NULL;
     Props.PathTable2[2] = NULL;
     Props.PathTable2[3] = NULL;
+    Props.PathTable2[4] = NULL;
 
     Props.Clouds = NULL;
     Props.CloudList = NULL;
@@ -115,6 +119,7 @@ void Course::Load(Vtx* vtx, Gfx* gfx) {
 
 void Course::LoadO2R(std::string trackPath) {
     if (!trackPath.empty()) {
+        SceneFilePtr = (trackPath + "/scene.json");
         TrackSectionsPtr = (trackPath + "/data_track_sections");
 
         std::string path_file = (trackPath + "/data_paths").c_str();
@@ -125,22 +130,19 @@ void Course::LoadO2R(std::string trackPath) {
             auto& paths = res->PathList;
 
             size_t i = 0;
+            u16* ptr = &Props.PathSizes.unk0;
             for (auto& path : paths) {
-                if (i == 0) {
-                    Props.PathSizes.unk0 = path.size();
-                    Props.PathTable[0] = (TrackPathPoint*) path.data();
-                    Props.PathTable[1] = NULL;
-                    Props.PathTable[2] = NULL;
-                    Props.PathTable[3] = NULL;
-                    Props.PathTable2[0] = (TrackPathPoint*) path.data();
-                    Props.PathTable2[1] = NULL;
-                    Props.PathTable2[2] = NULL;
-                    Props.PathTable2[3] = NULL;
+                if (i >= ARRAY_COUNT(Props.PathTable2)) {
+                    printf("[Course.cpp] The game can only import 5 paths. Found more than 5. Skipping the rest\n");
+                    break; // Only 5 paths allowed. 4 track, 1 vehicle
                 }
+                ptr[i] = path.size();
+                Props.PathTable2[i] = (TrackPathPoint*) path.data();
 
                 i += 1;
             }
         }
+        gVehiclePathSize = Props.PathSizes.unk0; // This is likely incorrect.
 
     } else {
         printf("Course.cpp: LoadO2R: trackPath str is empty\n");
@@ -149,6 +151,10 @@ void Course::LoadO2R(std::string trackPath) {
 
 // Load stock and o2r tracks
 void Course::Load() {
+    // Re-load scenefile in-case changes were made in the editor
+      if (!SceneFilePtr.empty()) {
+        Editor::LoadLevel(this, SceneFilePtr);
+    }
 
     // Load from O2R
     if (!TrackSectionsPtr.empty()) {
@@ -219,6 +225,7 @@ void Course::Load() {
 
 // C++ version of parse_course_displaylists()
 void Course::ParseCourseSections(TrackSectionsO2R* sections, size_t size) {
+    printf("\n[Track] Generating Collision Meshes...\n");
     for (size_t i = 0; i < (size / sizeof(TrackSectionsO2R)); i++) {
         if (sections[i].flags & 0x8000) {
             D_8015F59C = 1; // single-sided wall
@@ -235,10 +242,11 @@ void Course::ParseCourseSections(TrackSectionsO2R* sections, size_t size) {
         } else {
             D_8015F5A4 = 0;
         }
-        printf("LOADING DL %s\n", sections[i].addr.c_str());
+        printf("  %s\n", sections[i].addr.c_str());
         generate_collision_mesh((Gfx*) LOAD_ASSET_RAW(sections[i].addr.c_str()), sections[i].surfaceType,
                                 sections[i].sectionId);
     }
+    printf("[Track] Collision Mesh Generation Complete!\n\n");
 }
 
 void Course::TestPath() {
@@ -251,9 +259,9 @@ void Course::TestPath() {
     Vec3f vel = { 0, 0, 0 };
 
     for (size_t i = 0; i < gPathCountByPathIndex[0]; i++) {
-        x = gTrackPaths[0][i].posX;
-        y = gTrackPaths[0][i].posY;
-        z = gTrackPaths[0][i].posZ;
+        x = gTrackPaths[0][i].x;
+        y = gTrackPaths[0][i].y;
+        z = gTrackPaths[0][i].z;
 
         if (((x & 0xFFFF) == 0x8000) && ((y & 0xFFFF) == 0x8000) && ((z & 0xFFFF) == 0x8000)) {
             break;
@@ -289,7 +297,21 @@ void Course::LoadTextures() {
 }
 
 void Course::BeginPlay() {
+    printf("[Track] BeginPlay\n");
     TestPath();
+    this->SpawnActors();
+}
+
+// Spawns actors from SpawnParams set by the scene file in SceneManager.cpp
+void Course::SpawnActors() {
+    for (const auto& actor : SpawnList) {
+        auto it = gActorRegistry.find(actor.Name);
+        if (it != gActorRegistry.end() && it->second.spawnFunc) {
+            it->second.spawnFunc(actor);
+        } else {
+            printf("Actor not found %s\n", actor.Name.c_str());
+        }
+    }
 }
 
 void Course::InitClouds() {

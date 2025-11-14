@@ -21,28 +21,39 @@ extern f32 gKartGravityTable[];
 
 size_t AFinishline::_count = 0;
 
-AFinishline::AFinishline(std::optional<FVector> pos) {
+AFinishline::AFinishline(const SpawnParams& params) : AActor(params) {
     Name = "Finishline";
+    ResourceName = "mk:finishline";
 
-    if (pos.has_value()) {
+    if (params.Location.has_value()) {
+        FVector pos = params.Location.value_or(FVector(0, 0, 0));
         // Set spawn point to the provided position
-        Pos[0] = D_8015F8D0[0] = pos.value().x;
-        Pos[1] = D_8015F8D0[1] = pos.value().y - 15;
-        Pos[2] = D_8015F8D0[2] = pos.value().z;
+        Pos[0] = D_8015F8D0[0] = pos.x;
+        Pos[1] = D_8015F8D0[1] = pos.y - 15;
+        Pos[2] = D_8015F8D0[2] = pos.z;
     } else {
         // Set spawn point to the tracks first path point.
-        Pos[0] = D_8015F8D0[0] = gCurrentTrackPath->posX;
-        Pos[1] = D_8015F8D0[1] = (f32) (gCurrentTrackPath->posY - 15);
-        Pos[2] = D_8015F8D0[2] = gCurrentTrackPath->posZ;
+        Pos[0] = D_8015F8D0[0] = gCurrentTrackPath->x;
+        Pos[1] = D_8015F8D0[1] = (f32) (gCurrentTrackPath->y - 15);
+        Pos[2] = D_8015F8D0[2] = gCurrentTrackPath->z;
     }
 
-    Rot[0] = 0;
-    Rot[1] = 0;
-    Rot[2] = 0;
+    IRotator rot = params.Rotation.value_or(IRotator(0, 0, 0));
+
+    Rot[0] = rot.pitch;
+    Rot[1] = rot.yaw;
+    Rot[2] = rot.roll;
 
     Flags = -0x8000 | 0x4000;
 
     BoundingBoxSize = 0.0f;
+}
+
+void AFinishline::BeginPlay() {
+    // Prevent collision mesh from being generated extra times.
+    if (Triangles.size() == 0) {
+        Editor::GenerateCollisionMesh(this, (Gfx*)LOAD_ASSET_RAW(D_0D001B90), 1.0f);
+    }
 }
 
 void AFinishline::Tick() {

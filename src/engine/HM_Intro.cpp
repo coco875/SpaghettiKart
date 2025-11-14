@@ -65,8 +65,6 @@ void HarbourMastersIntro::HM_InitIntro() {
 	0x7F, 0x30, 0x80,
 	0x60, 20, 10, 0x49, 0x49, 0x49
     );
-
-    //gEditor.AddObject("lus", &lusPos, &lusRot, &lusScale, nullptr, 1, Editor::GameObject::CollisionType::BOUNDING_BOX, 10, &DespawnValue, -1);
 }
 
 void HarbourMastersIntro::HM_TickIntro() {

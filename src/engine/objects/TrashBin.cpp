@@ -21,12 +21,13 @@ extern "C" {
 
 #define DEGREES_FLOAT_TO_SHORT(Degrees) ((s16)((Degrees) * (0x8000 / 180.0f)))
 
-OTrashBin::OTrashBin(const FVector& pos, const IRotator& rotation, f32 scale, OTrashBin::Behaviour bhv) {
-    Name = "Trashbin";
-    _pos = pos;
-    _rot = rotation;
-    _scale = scale;
-    _bhv = bhv;
+OTrashBin::OTrashBin(const SpawnParams& params) : OObject(params) {
+    Name = "Trash Bin";
+    ResourceName = "mk:trash_bin";
+    _pos = params.Location.value_or(FVector(0, 0, 0));
+    _rot = params.Rotation.value_or(IRotator(0, 0, 0));
+    _scale = params.Scale.value_or(FVector(0, 0, 0)).y; // Only y
+    _bhv = static_cast<Behaviour>(params.Behaviour.value_or(0));
 
     find_unused_obj_index(&_objectIndex);
 

@@ -14,6 +14,7 @@ Gfx gBowserStatueGfx[162];
 
 ABowserStatue::ABowserStatue(FVector pos, ABowserStatue::Behaviour behaviour) {
     Name = "Bowser Statue";
+    ResourceName = "mk:bowser_statue";
     Pos = pos;
     ABowserStatue::Behaviour _behaviour = behaviour;
 }

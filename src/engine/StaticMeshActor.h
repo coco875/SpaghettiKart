@@ -9,6 +9,7 @@
 class StaticMeshActor {
 public:
     std::string Name;
+    std::string ResourceName;
     FVector Pos;
     IRotator Rot;
     FVector Scale;

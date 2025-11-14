@@ -140,10 +140,10 @@ PodiumCeremony::PodiumCeremony() {
     Props.PathTable[2] = (TrackPathPoint*)LOAD_ASSET_RAW(podium_ceremony_path_3);
     Props.PathTable[3] = (TrackPathPoint*)LOAD_ASSET_RAW(podium_ceremony_path_4);
 
-    Props.PathTable2[0] = NULL;
-    Props.PathTable2[1] = NULL;
-    Props.PathTable2[2] = NULL;
-    Props.PathTable2[3] = NULL;
+    Props.PathTable2[0] = (TrackPathPoint*)LOAD_ASSET_RAW(podium_ceremony_path);
+    Props.PathTable2[1] = (TrackPathPoint*)LOAD_ASSET_RAW(podium_ceremony_path_2);
+    Props.PathTable2[2] = (TrackPathPoint*)LOAD_ASSET_RAW(podium_ceremony_path_3);
+    Props.PathTable2[3] = (TrackPathPoint*)LOAD_ASSET_RAW(podium_ceremony_path_4);
 
     Props.CloudTexture = (u8*) gTextureExhaust4;
     Props.Clouds = NULL; // no clouds
@@ -177,9 +177,9 @@ void PodiumCeremony::BeginPlay() {
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_royal_raceway_item_box_spawns));
     spawn_piranha_plants((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_royal_raceway_piranha_plant_spawn));
 
-    gWorldInstance.AddObject(new OCheepCheep(FVector((f32)-3202, (f32)19, (f32)-478), OCheepCheep::CheepType::PODIUM_CEREMONY, IPathSpan(0, 0)));
-    gWorldInstance.AddObject(new OPodium(FVector((f32)-3202, (f32)19, (f32)-478)));
-    
+    OCheepCheep::Spawn(FVector((f32)-3202, (f32)19, (f32)-478), OCheepCheep::Behaviour::PODIUM_CEREMONY, IPathSpan(0, 0));
+    OPodium::Spawn(FVector((f32)-3202, (f32)19, (f32)-478));
+
     FVector pos = {0, 90.0f, 0};
 
     OTrophy::TrophyType type = OTrophy::TrophyType::BRONZE;
@@ -199,19 +199,18 @@ void PodiumCeremony::BeginPlay() {
             break;
     }
 
-    OTrophy* trophy = reinterpret_cast<OTrophy*>(gWorldInstance.AddObject(new OTrophy(pos, type, OTrophy::Behaviour::PODIUM_CEREMONY)));
+    OTrophy::Spawn(pos, type, OTrophy::Behaviour::PODIUM_CEREMONY);
 
-    FVector kart = { 0, 0, 0 };
-    gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[3][3], 3, OBombKart::States::PODIUM_CEREMONY, 1.25f));
-    gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[3][40], 40, 0, 1.0f));
-    gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[3][60], 60, 0, 1.0f));
-    gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[3][80], 80, 0, 1.0f));
-    gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[3][100], 100, 0, 1.0f));
-    gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[3][120], 120, 0, 1.0f));
-    gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[3][140], 140, 0, 1.0f));
+    OBombKart::Spawn(3, 3, OBombKart::States::PODIUM_CEREMONY, 1.25f);
+    OBombKart::Spawn(3, 40, 0, 1.0f);
+    OBombKart::Spawn(3, 60, 0, 1.0f);
+    OBombKart::Spawn(3, 80, 0, 1.0f);
+    OBombKart::Spawn(3, 100, 0, 1.0f);
+    OBombKart::Spawn(3, 120, 0, 1.0f);
+    OBombKart::Spawn(3, 140, 0, 1.0f);
 
     if (gGamestate != CREDITS_SEQUENCE) {
-        gWorldInstance.AddObject(new OGrandPrixBalloons(FVector(-64, 5, -330)));
+        OGrandPrixBalloons::Spawn(FVector(-64, 5, -330));
     }
 }
 

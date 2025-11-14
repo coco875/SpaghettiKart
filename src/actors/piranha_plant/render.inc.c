@@ -4,6 +4,18 @@
 #include <assets/models/tracks/mario_raceway/mario_raceway_data.h>
 #include <assets/models/tracks/royal_raceway/royal_raceway_data.h>
 
+const char* sPiranhaPlantTextures[] = {
+    gTexturePiranhaPlant1,
+    gTexturePiranhaPlant2,
+    gTexturePiranhaPlant3,
+    gTexturePiranhaPlant4,
+    gTexturePiranhaPlant5,
+    gTexturePiranhaPlant6,
+    gTexturePiranhaPlant7,
+    gTexturePiranhaPlant8,
+    gTexturePiranhaPlant9
+};
+
 /**
  * @brief Renders the piranha plant actor.
  * Actor used in Mario Raceway and Royal Raceway.
@@ -115,7 +127,7 @@ void render_actor_piranha_plant(Camera* arg0, Mat4 arg1, struct PiranhaPlant* ar
     if (animationFrame > 8) {
         animationFrame = 8;
     }
-    addr = D_802BA058 + (animationFrame << 0xB);
+    addr = LOAD_ASSET(sPiranhaPlantTextures[animationFrame]);
     gDPLoadTextureBlock(gDisplayListHead++, VIRTUAL_TO_PHYSICAL(addr), G_IM_FMT_CI, G_IM_SIZ_8b, 32, 64, 0,
                         G_TX_MIRROR | G_TX_WRAP, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD,
                         G_TX_NOLOD);

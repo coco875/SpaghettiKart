@@ -19,7 +19,7 @@ extern "C" {
 //! @todo unk_0D5 needs to be a struct variable probably. What does it do? Behaviour?
 class OSeagull : public OObject {
 public:
-    explicit OSeagull(FVector pos);
+    explicit OSeagull(const SpawnParams& params);
 
     ~OSeagull() {
         _count--;
@@ -27,6 +27,15 @@ public:
 
     static size_t GetCount() {
         return _count;
+    }
+
+    // This is simply a helper function to keep Spawning code clean
+    static inline OSeagull* Spawn(const FVector& pos) {
+        SpawnParams params = {
+            .Name = "mk:seagull",
+            .Location = pos,
+        };
+        return static_cast<OSeagull*>(gWorldInstance.AddObject(new OSeagull(params)));
     }
 
     virtual void Tick() override;
@@ -38,7 +47,6 @@ public:
     void func_8008241C(s32 objectIndex, s32 arg1);
     void func_80082714(s32 objectIndex, s32 arg1);
 private:
-    FVector _pos;
     static size_t _count;
     s32 _idx;
     bool _toggle;

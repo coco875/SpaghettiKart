@@ -150,37 +150,35 @@ void FrappeSnowland::BeginPlay() {
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_frappe_snowland_item_box_spawns));
 
     if (gGamestate != CREDITS_SEQUENCE) {
-        gWorldInstance.AddObject(new OSnowman(FVector(697, 0, -1684)));
-        gWorldInstance.AddObject(new OSnowman(FVector(82, 0, -2245)));
-        gWorldInstance.AddObject(new OSnowman(FVector(27, 5, -2067)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-656, 0, -1735)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1497, 0, -83)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1643, 0, -25)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1547, 0, -20)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1445, 0, -10)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1502, 0, 61)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1429, 0, 79)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1586, 0, 71)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1471, 0, 157)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1539, 0, 175)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1484, 0, 303)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1442, 0, 358)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-1510, 0, 426)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-665, 0, 830)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-701, 3, 853)));
-        gWorldInstance.AddObject(new OSnowman(FVector(-602, 0, 929)));
+        OSnowman::Spawn(FVector(697, 0, -1684));
+        OSnowman::Spawn(FVector(82, 0, -2245));
+        OSnowman::Spawn(FVector(27, 5, -2067));
+        OSnowman::Spawn(FVector(-656, 0, -1735));
+        OSnowman::Spawn(FVector(-1497, 0, -83));
+        OSnowman::Spawn(FVector(-1643, 0, -25));
+        OSnowman::Spawn(FVector(-1547, 0, -20));
+        OSnowman::Spawn(FVector(-1445, 0, -10));
+        OSnowman::Spawn(FVector(-1502, 0, 61));
+        OSnowman::Spawn(FVector(-1429, 0, 79));
+        OSnowman::Spawn(FVector(-1586, 0, 71));
+        OSnowman::Spawn(FVector(-1471, 0, 157));
+        OSnowman::Spawn(FVector(-1539, 0, 175));
+        OSnowman::Spawn(FVector(-1484, 0, 303));
+        OSnowman::Spawn(FVector(-1442, 0, 358));
+        OSnowman::Spawn(FVector(-1510, 0, 426));
+        OSnowman::Spawn(FVector(-665, 0, 830));
+        OSnowman::Spawn(FVector(-701, 3, 853));
+        OSnowman::Spawn(FVector(-602, 0, 929));
     }
 
     if (gModeSelection == VERSUS) {
-        FVector pos = { 0, 0, 0 };
-
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][100], 100, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][150], 150, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][290], 290, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][350], 350, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        OBombKart::Spawn(0, 50, 3, 0.8333333f);
+        OBombKart::Spawn(0, 100, 1, 0.8333333f);
+        OBombKart::Spawn(0, 150, 3, 0.8333333f);
+        OBombKart::Spawn(0, 290, 1, 0.8333333f);
+        OBombKart::Spawn(0, 350, 3, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
     }
 }
 

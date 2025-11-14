@@ -30,6 +30,7 @@ struct UnkStruct_800DC5EC {
 
 void func_800029B0(void);
 void setup_race(void);
+void setup_editor(void);
 void func_80002DAC(void);
 void clear_nmi_buffer(void);
 void credits_spawn_actors(void);

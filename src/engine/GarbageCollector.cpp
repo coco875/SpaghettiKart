@@ -2,21 +2,30 @@
 #include "World.h"
 
 void RunGarbageCollector() {
-    //CleanActors();
+    CleanActors();
     CleanObjects();
     CleanStaticMeshActors();
 }
 
 void CleanActors() {
-    // for (auto actor = gWorldInstance.Actors.begin(); actor != gWorldInstance.Actors.end();) {
-    //     OObject* act = *actor; // Get a mutable copy
-    //     if (act->PendingDestroy) {
-    //         delete act;
-    //         actor = gWorldInstance.Objects.erase(actor); // Remove from container
-    //         continue;
-    //     }
-    //     actor++;
-    // }
+    for (auto actor = gWorldInstance.Actors.begin(); actor != gWorldInstance.Actors.end();) {
+        AActor* act = *actor; // Get a mutable copy
+        if (act->bPendingDestroy) {
+            if (act->IsMod()) { // C++ actor
+                delete act;
+                actor = gWorldInstance.Actors.erase(actor); // Remove from container
+            } else { // Old C actor
+                act->Flags = 0;
+                act->Type = 0;
+                act->Name = "";
+                act->ResourceName = "";
+                actor++; // Manually advance the iterator since no deletion happens here
+            }
+            gNumActors -= 1;
+            continue;
+        }
+        actor++;
+    }
 }
 
 void CleanStaticMeshActors() {

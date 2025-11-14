@@ -177,28 +177,18 @@ void WarioStadium::LoadTextures() {
 void WarioStadium::BeginPlay() {
     spawn_all_item_boxes((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_wario_stadium_item_box_spawns));
 
-    FVector pos = { -131.0f, 83.0f, 286.0f };
-    pos.x *= gCourseDirection;
-    gWorldInstance.AddActor(new AWarioSign(pos));
-
-    FVector pos2 = { -2353.0f, 72.0f, -1608.0f };
-    pos2.x *= gCourseDirection;
-    gWorldInstance.AddActor(new AWarioSign(pos2));
-
-    FVector pos3 = { -2622.0f, 79.0f, 739.0f };
-    pos3.x *= gCourseDirection;
-    gWorldInstance.AddActor(new AWarioSign(pos3));
+    AWarioSign::Spawn(FVector(-131.0f, 83.0f, 286.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
+    AWarioSign::Spawn(FVector(-2353.0f, 72.0f, -1608.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
+    AWarioSign::Spawn(FVector(-2622.0f, 79.0f, 739.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
 
     if (gModeSelection == VERSUS) {
-        FVector pos = { 0, 0, 0 };
-
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][50], 50, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][100], 100, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][150], 150, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][200], 200, 1, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][250], 250, 3, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-        gWorldInstance.AddObject(new OBombKart(pos, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+        OBombKart::Spawn(0, 50, 3, 0.8333333f);
+        OBombKart::Spawn(0, 100, 1, 0.8333333f);
+        OBombKart::Spawn(0, 150, 3, 0.8333333f);
+        OBombKart::Spawn(0, 200, 1, 0.8333333f);
+        OBombKart::Spawn(0, 250, 3, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        OBombKart::Spawn(0, 0, 0, 0.8333333f);
     }
 }
 

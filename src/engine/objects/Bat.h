@@ -28,7 +28,18 @@ extern "C" {
  */
 class OBat : public OObject {
 public:
-    explicit OBat(const FVector& pos, const IRotator& rot);
+
+    // This is simply a helper function to keep Spawning code clean
+    static inline OBat* Spawn(const FVector& pos, const IRotator& rot) {
+        SpawnParams params = {
+            .Name = "mk:bat",
+            .Location = pos,
+            .Rotation = rot,
+        };
+        return static_cast<OBat*>(gWorldInstance.AddObject(new OBat(params)));
+    }
+
+    explicit OBat(const SpawnParams& params);
 
     ~OBat() {
         _count--;

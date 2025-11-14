@@ -227,9 +227,13 @@ void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
     // But that issue should be cleared up in render_screens() already.
     switch (playerId) {
         case PLAYER_ONE:
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_ONE),
+            size_t playerIdx = PLAYER_ONE; 
+            if (CVarGetInteger("gFreecam", 0) == true) {
+                playerIdx = CAMERA_FREECAM;
+            }
+            gSPMatrix(gDisplayListHead++, GetPerspMatrix(playerIdx),
                       G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_ONE),
+            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(playerIdx),
                       G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
             break;
         case PLAYER_TWO:

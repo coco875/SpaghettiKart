@@ -762,10 +762,10 @@ void setup_camera(Camera* camera, s32 playerId, s32 cameraId, struct UnkStruct_8
     u16 perspNorm;
 
     // This allows freecam to create a new separate camera
-    // if (CVarGetInteger("gFreecam", 0) == true) {
-    //     freecam_render_setup(gFreecamCamera);
-    //     return;
-    // }
+    if (CVarGetInteger("gFreecam", 0) == true) {
+        freecam_render_setup(gFreecamCamera);
+        return;
+    }
 
     // Tag the camera for the interpolation engine
     FrameInterpolation_RecordOpenChild("camera",
@@ -853,12 +853,12 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     Camera* camera;
 
     // Required for freecam to have its own camera
-    //if (CVarGetInteger("gFreecam", 0) == true) {
-    //    camera = &gFreecamCamera;
-    //    cameraId = 4;
-    //} else {
+    if (CVarGetInteger("gFreecam", 0) == true) {
+       camera = &cameras[CAMERA_FREECAM];
+       cameraId = CAMERA_FREECAM;
+    } else {
         camera = &cameras[cameraId];
-    //}
+    }
     
     if (screenMode == SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL) {
         gSPSetGeometryMode(gDisplayListHead++, G_SHADE | G_CULL_BACK | G_LIGHTING | G_SHADING_SMOOTH);
@@ -884,6 +884,7 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
 
     // Draw dynamic game objects
     render_course_actors(screen);
+    CM_DrawActors(D_800DC5EC->camera);
     CM_DrawStaticMeshActors();
     render_object(mode);
 
@@ -935,7 +936,8 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     }
 }
 
-void func_802A74BC(void) {
+// Makes the screen small at the start of a race
+void set_screen(void) {
     struct UnkStruct_800DC5EC* wrapper = &D_8015F480[0];
     Player* player = &gPlayers[0];
     Camera* camera = &cameras[0];
@@ -947,11 +949,22 @@ void func_802A74BC(void) {
 
     for (i = 0; i < 4; i++) {
         wrapper->controllers = controller;
-        wrapper->camera = camera;
+        if ((CVarGetInteger("gFreecam", 0) == true) && (i == PLAYER_ONE)) {
+            wrapper->camera = gFreecamCamera;
+        } else {
+            wrapper->camera = camera;
+        }
         wrapper->player = player;
         wrapper->unkC = unk;
-        wrapper->screenWidth = 4;
-        wrapper->screenHeight = 4;
+
+        // Tick is not enabled in the editor, so the screen needs to begin at the proper size.
+        if ((CVarGetInteger("gEditorEnabled", 0) == true) && (gIsEditorPaused) && (i == PLAYER_ONE)) {
+            wrapper->screenWidth = SCREEN_WIDTH;
+            wrapper->screenHeight = SCREEN_HEIGHT;
+        } else { // Normal race start, screen is small
+            wrapper->screenWidth = 4;
+            wrapper->screenHeight = 4;
+        }
         wrapper->pathCounter = 1;
 
         switch (gActiveScreenMode) {
@@ -1000,6 +1013,17 @@ void func_802A74BC(void) {
         wrapper++;
         unk += 0x10;
     }
+}
+
+void set_editor_screen(void) {
+    struct UnkStruct_800DC5EC* wrapper = &D_8015F480[0];
+    wrapper->controllers = gControllerOne;
+    wrapper->camera = gFreecamCamera;
+    wrapper->player = gPlayerOne;
+    wrapper->unkC = &D_8015F790[0];
+    wrapper->screenWidth = SCREEN_WIDTH;
+    wrapper->screenHeight = SCREEN_HEIGHT;
+    wrapper->pathCounter = 1;
 }
 
 void copy_framebuffer(s32 arg0, s32 arg1, s32 width, s32 height, u16* source, u16* target) {

@@ -41,8 +41,8 @@ void render_actor_tree_mario_raceway(Camera*, Mat4, struct Actor*);
 void render_actor_tree_yoshi_valley(Camera*, Mat4, struct Actor*);
 void render_actor_tree_royal_raceway(Camera*, Mat4, struct Actor*);
 void render_actor_tree_moo_moo_farm(Camera*, Mat4, struct Actor*);
-void func_80299864(Camera*, Mat4, struct Actor*);
-void render_actor_tree_bowser_castle(Camera*, Mat4, struct Actor*);
+void render_actor_tree_luigi_raceway(Camera*, Mat4, struct Actor*);
+void render_actor_tree_peach_castle(Camera*, Mat4, struct Actor*);
 void render_actor_bush_bowser_castle(Camera*, Mat4, struct Actor*);
 void render_actor_tree_frappe_snowland(Camera*, Mat4, struct Actor*);
 void render_actor_tree_cactus1_kalimari_desert(Camera*, Mat4, struct Actor*);
@@ -74,6 +74,8 @@ void spawn_falling_rocks(struct ActorSpawnData*);
 void update_actor_falling_rocks(struct FallingRock*);
 void spawn_foliage(struct ActorSpawnData*);
 void spawn_all_item_boxes(struct ActorSpawnData*);
+void spawn_item_box(Vec3f pos);
+void spawn_fake_item_box(Vec3f pos);
 void init_kiwano_fruit(void);
 void destroy_all_actors(void);
 void spawn_course_actors(void);
@@ -111,15 +113,13 @@ void render_actor_palm_tree(Camera*, Mat4, struct PalmTree*);
 void render_item_boxes(struct UnkStruct_800DC5EC*);
 void render_course_actors(struct UnkStruct_800DC5EC*);
 void update_course_actors(void);
-const char* get_actor_name(s32);
+const char* get_actor_display_name(s32 id);
+const char* get_actor_resource_location_name(s32 id);
 
 // audio/external.c
 extern void func_800C98B8(Vec3f, Vec3f, u32);
 extern void func_800C99E0(Vec3f, s32);
 
-extern u8* D_802BA050;
-extern u8* D_802BA054;
-extern u8* D_802BA058;
 extern struct Actor* gActorHotAirBalloonItemBox;
 extern s8 gTLUTRedShell[]; // tlut 256
 extern u16 D_802BA260;     // Box Truck sub-type?

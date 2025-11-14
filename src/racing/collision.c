@@ -2022,7 +2022,6 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
                 const char* filePath = (const char*)hi;
                 // Fast64 outputs garbage data. Lets skip that...
                 if (is_cull_box(filePath)) {
-                    printf("Skipped cull box\n");
                     gfx++;
                     continue;
                 }

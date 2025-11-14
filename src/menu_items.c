@@ -1522,9 +1522,13 @@ void func_80091FA4(void) {
     func_8009A344();
     clear_menus();
     func_80092258();
-    add_menu_item(MENU_ITEM_TYPE_096, 0x00000064, 0x00000024, MENU_ITEM_PRIORITY_1);
-    add_menu_item(MENU_ITEM_TYPE_097, 0x00000064, 0x000000DD, MENU_ITEM_PRIORITY_1);
-    add_menu_item(MENU_ITEM_TYPE_098, 0, 0, MENU_ITEM_PRIORITY_0);
+
+    // Do not display grand prix name/cup name in editor at race staging
+    if (CVarGetInteger("gEditorEnabled", 0) == false) {
+        add_menu_item(MENU_ITEM_TYPE_096, 0x00000064, 0x00000024, MENU_ITEM_PRIORITY_1);
+        add_menu_item(MENU_ITEM_TYPE_097, 0x00000064, 0x000000DD, MENU_ITEM_PRIORITY_1);
+        add_menu_item(MENU_ITEM_TYPE_098, 0, 0, MENU_ITEM_PRIORITY_0);
+    }
     add_menu_item(MENU_ITEM_PAUSE, 0, 0, MENU_ITEM_PRIORITY_0);
     if (gModeSelection == TIME_TRIALS) {
         add_menu_item(MENU_ITEM_TYPE_0BE, 0, 0, MENU_ITEM_PRIORITY_0);
@@ -4989,10 +4993,10 @@ void func_8009C918(void) {
         D_8018E810[someIndex].y = D_8015F480[someIndex].screenHeight;
     }
 
-    D_8018E7E8[4].x = 0x00A0;
-    D_8018E7E8[4].y = 0x0078;
-    D_8018E810[4].x = 0x0140;
-    D_8018E810[4].y = 0x00F0;
+    D_8018E7E8[4].x = SCREEN_WIDTH / 2;
+    D_8018E7E8[4].y = SCREEN_HEIGHT / 2;
+    D_8018E810[4].x = SCREEN_WIDTH;
+    D_8018E810[4].y = SCREEN_HEIGHT;
 }
 
 void func_8009CA2C(void) {

@@ -158,74 +158,44 @@ f32 SherbetLand::GetWaterLevel(FVector pos, Collision* collision) {
 void SherbetLand::BeginPlay() {
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_sherbet_land_item_box_spawns));
 
-    // Multiplayer does not spawn the big penguin
+    // Multiplayer does not spawn the big penguin... It does now!
 //  if (gPlayerCountSelection1 == 1) {
-        FVector pos = {-383.0f, 2.0f, -690.0f};
-        gWorldInstance.AddObject(new OPenguin(pos, 0, OPenguin::PenguinType::EMPEROR, OPenguin::Behaviour::STRUT));
+        OPenguin::Spawn(FVector(-383.0f, 2.0f, -690.0f), 0, 0, 0.0f, OPenguin::PenguinType::EMPEROR, OPenguin::Behaviour::STRUT);
 //  }
 
-    FVector pos2 = { -2960.0f, -80.0f, 1521.0f };
-    auto penguin = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos2, 0x150, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE)));
-    auto penguin2 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos2, 0x150, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE)));
-    penguin->Diameter = penguin2->Diameter = 100.0f;
+    OPenguin::Spawn(FVector(-2960.0f, -80.0f, 1521.0f), 0x150, 0, 100.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE);
+    OPenguin::Spawn(FVector(-2960.0f, -80.0f, 1521.0f), 0x150, 0, 100.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE);
 
-    FVector pos3 = { -2490.0f, -80.0f, 1612.0f };
-    auto penguin3 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos3, 0x100, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE)));
-    auto penguin4 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos3, 0x100, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE)));
-    penguin3->Diameter = penguin4->Diameter = 80.0f;
+    OPenguin::Spawn(FVector(-2490.0f, -80.0f, 1612.0f), 0x100, 0, 80.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE);
+    OPenguin::Spawn(FVector(-2490.0f, -80.0f, 1612.0f), 0x100, 0, 80.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE);
 
-    FVector pos4 = { -2098.0f, -80.0f, 1624.0f };
-    auto penguin5 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos4, 0xFF00, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE)));
-    auto penguin6 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos4, 0xFF00, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE)));
-    penguin5->Diameter = penguin6->Diameter = 80.0f;
+    OPenguin::Spawn(FVector(-2098.0f, -80.0f, 1624.0f), 0xFF00, 0, 80.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE);
+    OPenguin::Spawn(FVector(-2098.0f, -80.0f, 1624.0f), 0xFF00, 0, 80.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE);
 
-
-    FVector pos5 = { -2080.0f, -80.0f, 1171.0f };
-    auto penguin7 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos5, 0x150, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE)));
-    auto penguin8 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos5, 0x150, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE)));
-    penguin7->Diameter = penguin8->Diameter = 80.0f;
-
+    OPenguin::Spawn(FVector(-2080.0f, -80.0f, 1171.0f), 0x150, 0, 80.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE);
+    OPenguin::Spawn(FVector(-2080.0f, -80.0f, 1171.0f), 0x150, 0, 80.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE);
 
     if (gGamestate == CREDITS_SEQUENCE) {
-        FVector pos6 = { 380.0, 0.0f, -535.0f };
-        auto penguin9 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos6, 0x9000, OPenguin::PenguinType::CREDITS, OPenguin::Behaviour::SLIDE3)));
-        penguin9->MirrorModeAngleOffset = -0x4000;
+        OPenguin::Spawn(FVector(380.0f, 0.0f, -535.0f), 0x9000, -0x4000, 0.0f, OPenguin::PenguinType::CREDITS, OPenguin::Behaviour::SLIDE3);
     } else {
-        FVector pos6 = { 146.0f, 0.0f, -380.0f };
-        auto penguin9 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos6, 0x9000, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE3)));
-        penguin9->MirrorModeAngleOffset = -0x4000;
+        OPenguin::Spawn(FVector(146.0f, 0.0f, -380.0f), 0x9000, -0x4000, 0.0f, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE3);
     }
 
-    FVector pos7 = { 380.0f, 0.0f, -766.0f };
-    auto penguin10 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos7, 0x5000, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE4)));
-    penguin10->MirrorModeAngleOffset = 0x8000;
-
-    FVector pos8 = { -2300.0f, 0.0f, -210.0f };
-    auto penguin11 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos8, 0xC000, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE6)));
-    penguin11->MirrorModeAngleOffset = 0x8000;
-
-    FVector pos9 = { -2500.0f, 0.0f, -250.0f };
-    auto penguin12 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos9, 0x4000, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE6)));
-    penguin12->MirrorModeAngleOffset = 0x8000;
-
-    FVector pos10 = { -535.0f, 0.0f, 875.0f };
-    auto penguin13 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos10, 0x8000, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE6)));
-    penguin13->MirrorModeAngleOffset = -0x4000;
-
-    FVector pos11 = { -250.0f, 0.0f, 953.0f };
-    auto penguin14 = reinterpret_cast<OPenguin*>(gWorldInstance.AddObject(new OPenguin(pos11, 0x9000, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE6)));
-    penguin14->MirrorModeAngleOffset = -0x4000;
+    OPenguin::Spawn(FVector(380.0f, 0.0f, -766.0f), 0x5000, 0x8000, 0.0f, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE4);
+    OPenguin::Spawn(FVector(-2300.0f, 0.0f, -210.0f), 0xC000, 0x8000, 0.0f, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE6);
+    OPenguin::Spawn(FVector(-2500.0f, 0.0f, -250.0f), 0x4000, 0x8000, 0.0f, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE6);
+    OPenguin::Spawn(FVector(-535.0f, 0.0f, 875.0f), 0x8000, -0x4000, 0.0f, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE6);
+    OPenguin::Spawn(FVector(-250.0f, 0.0f, 953.0f), 0x9000, -0x4000, 0.0f, OPenguin::PenguinType::CHICK, OPenguin::Behaviour::SLIDE6);
 
     if (gGamestate != CREDITS_SEQUENCE) {
         if (gModeSelection == VERSUS) {
-            FVector kart = { 0, 0, 0 };
-            gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[0][50], 50, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[0][100], 100, 1, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[0][150], 150, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[0][200], 200, 1, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[0][250], 250, 3, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[0][0], 0, 0, 0.8333333f));
-            gWorldInstance.AddObject(new OBombKart(kart, &gTrackPaths[0][0], 0, 0, 0.8333333f));
+            OBombKart::Spawn(0, 50, 3, 0.8333333f);
+            OBombKart::Spawn(0, 100, 1, 0.8333333f);
+            OBombKart::Spawn(0, 150, 3, 0.8333333f);
+            OBombKart::Spawn(0, 200, 1, 0.8333333f);
+            OBombKart::Spawn(0, 250, 3, 0.8333333f);
+            OBombKart::Spawn(0, 0, 0, 0.8333333f);
+            OBombKart::Spawn(0, 0, 0, 0.8333333f);
         }
     }
 }

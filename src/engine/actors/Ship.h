@@ -2,8 +2,9 @@
 
 #include <libultraship.h>
 #include <libultra/gbi.h>
-#include "engine/Actor.h"
 #include "CoreMath.h"
+#include "engine/Actor.h"
+#include "engine/World.h"
 
 extern "C" {
 #include "common_structs.h"
@@ -19,16 +20,28 @@ public:
         SHIP3,
     };
 
-    explicit AShip(FVector pos, AShip::Skin);
+    explicit AShip(const SpawnParams& params);
     virtual ~AShip() = default;
 
-    virtual void Tick() override;
-    virtual bool IsMod() override;
+    // This is simply a helper function to keep Spawning code clean
+    static inline AShip* Spawn(FVector pos, IRotator rot, FVector scale, int16_t skin) {
+        SpawnParams params = {
+            .Name = "hm:ship",
+            .Type = skin, // which ship model to use
+            .Location = pos,
+            .Rotation = rot,
+            .Scale = scale,
+        };
+        return static_cast<AShip*>(gWorldInstance.AddActor(new AShip(params)));
+    }
 
-    FVector Spawn;
-    //FVector Pos;
-    ///IRotator Rot = {0, 0, 0};
-    //FVector Scale = {0.4, 0.4, 0.4};
+    AShip::Skin SpawnSkin = Skin::GHOSTSHIP;
+
+    virtual void SetSpawnParams(SpawnParams& params) override;
+    virtual void Tick() override;
+    virtual void BeginPlay() override;
+    virtual bool IsMod() override;
+    virtual void DrawEditorProperties() override;
 private:
     Gfx* _skin;
 };

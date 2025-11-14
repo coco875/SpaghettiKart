@@ -11,6 +11,7 @@ extern "C" {
 
 ATree::ATree(Vec3f pos, Gfx* displaylist, f32 drawDistance, f32 minDrawDistance, const char* tlut = nullptr) {
     Name = "Tree";
+    ResourceName = "mk:tree";
     Pos[0] = pos[0];
     Pos[1] = pos[1];
     Pos[2] = pos[2];

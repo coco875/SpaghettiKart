@@ -5,16 +5,8 @@
 #include "engine/courses/Course.h"
 #include "objects/Object.h"
 #include "Cup.h"
-#include "vehicles/Train.h"
-#include "vehicles/Car.h"
-#include "objects/BombKart.h"
 #include "PlayerBombKart.h"
-#include "vehicles/Train.h"
 #include "TrainCrossing.h"
-#include "objects/Thwomp.h"
-#include "objects/Penguin.h"
-#include "objects/Seagull.h"
-#include "objects/Lakitu.h"
 #include <memory>
 #include <unordered_map>
 #include "Actor.h"
@@ -33,7 +25,6 @@ class Cup; // <-- Forward declaration
 class OObject;
 class Course;
 class StaticMeshActor;
-class AVehicle;
 class OBombKart;
 class TrainCrossing;
 class OLakitu;
@@ -43,8 +34,8 @@ class World {
 typedef struct Matrix {
     Mtx Screen2D; // Orthogonal projection for UI, skybox, and such
     Mtx Ortho;
-    std::array<Mtx,4> Persp;
-    std::array<Mtx,4> LookAt;
+    std::array<Mtx,5> Persp;
+    std::array<Mtx,5> LookAt;
     std::array<Mtx, 8 * 4> Karts; // Eight players * four screens
     std::array<Mtx, 8 * 4> Shadows; // Eight players * four screens
     std::deque<Mtx> Hud;
@@ -63,7 +54,7 @@ public:
 
     AActor* AddActor(AActor* actor);
     struct Actor* AddBaseActor();
-    void AddEditorObject(Actor* actor, const char* name);
+    void ActorBeginPlay(Actor* actor);
     AActor* GetActor(size_t index);
 
     void TickActors();
@@ -72,7 +63,6 @@ public:
 
     void DrawStaticMeshActors();
     StaticMeshActor* AddStaticMeshActor(std::string name, FVector pos, IRotator rot, FVector scale, std::string model, int32_t* collision);
-    void DeleteStaticMeshActors();
 
     OObject* AddObject(OObject* object);
 

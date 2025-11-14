@@ -49,6 +49,8 @@
 #include "engine/editor/EditorMath.h"
 #include "engine/editor/SceneManager.h"
 #include "engine/Rulesets.h"
+#include "engine/Registry.h"
+#include "RegisteredActors.h"
 
 #ifdef _WIN32
 #include <locale.h>
@@ -73,6 +75,9 @@ extern "C" void Timer_Update();
 
 // Create the world instance
 World gWorldInstance;
+
+// Deferred cleaning when clearing all actors in the editor
+bool bCleanWorld = false;
 
 std::shared_ptr<PodiumCeremony> gPodiumCeremony;
 
@@ -164,6 +169,7 @@ void CustomEngineInit() {
     // gModelLoader.Add(bowserStatueList);
 
     // gModelLoader.Load();
+    RegisterGameActors();
 }
 
 void CustomEngineDestroy() {
@@ -202,10 +208,6 @@ void SetMarioRaceway(void) {
     gWorldInstance.CurrentCup = gMushroomCup;
     gWorldInstance.CurrentCup->CursorPosition = 3;
     gWorldInstance.CupIndex = 0;
-}
-
-World* GetWorld(void) {
-    return &gWorldInstance;
 }
 
 u32 WorldNextCup(void) {
@@ -367,10 +369,12 @@ void CM_TickActors() {
     }
 }
 
-void CM_DrawActors(Camera* camera, struct Actor* actor) {
-    AActor* a = gWorldInstance.ConvertActorToAActor(actor);
-    if (a->IsMod()) {
-        a->Draw(camera);
+void CM_DrawActors(Camera* camera) {
+    //AActor* a = gWorldInstance.ConvertActorToAActor(actor);
+    for (const auto& actor : gWorldInstance.Actors) {
+        if (actor->IsMod()) {
+            actor->Draw(camera);
+        }
     }
 }
 
@@ -382,11 +386,18 @@ void CM_BeginPlay() {
     auto course = gWorldInstance.CurrentCourse;
 
     if (course) {
+        Editor::LoadLevel(course.get(), course->SceneFilePtr);
+
         gRulesets.PreInit();
         // Do not spawn finishline in credits or battle mode. And if bSpawnFinishline.
         if ((gGamestate != CREDITS_SEQUENCE) && (gModeSelection != BATTLE)) {
             if (course->bSpawnFinishline) {
-                gWorldInstance.AddActor(new AFinishline(course->FinishlineSpawnPoint));
+                if (course->FinishlineSpawnPoint.has_value()) {
+                    AFinishline::Spawn(course->FinishlineSpawnPoint.value(), IRotator(0, 0, 0));
+                } else {
+                    AFinishline::Spawn();
+                }
+            
             }
         }
         gEditor.AddLight("Sun", nullptr, D_800DC610[1].l->l.dir);
@@ -650,11 +661,13 @@ void CM_DeleteActor(size_t index) {
  * Clean up actors and other game objects.
  */
 void CM_CleanWorld(void) {
+    printf("[Game.cpp] Clean World\n");
     World* world = &gWorldInstance;
     for (auto& actor : world->Actors) {
         delete actor;
     }
 
+    gWorldInstance.Reset(); // Reset OObjects
     for (auto& object : world->Objects) {
         delete object;
     }
@@ -678,15 +691,24 @@ void CM_CleanWorld(void) {
     gWorldInstance.Objects.clear();
     gWorldInstance.Emitters.clear();
     gWorldInstance.Lakitus.clear();
-    gWorldInstance.Reset();
 }
 
 struct Actor* CM_AddBaseActor() {
     return (struct Actor*) gWorldInstance.AddBaseActor();
 }
 
-void CM_AddEditorObject(struct Actor* actor, const char* name) {
-    gWorldInstance.AddEditorObject(actor, name);
+void CM_ActorBeginPlay(struct Actor* actor) {
+    gWorldInstance.ActorBeginPlay(actor);
+}
+
+void CM_ActorGenerateCollision(struct Actor* actor) {
+    AActor* act = gWorldInstance.ConvertActorToAActor(actor);
+
+    if ((nullptr != act->Model) && (act->Model[0] != '\0')) {
+        if (act->Triangles.size() == 0) {
+            Editor::GenerateCollisionMesh(act, (Gfx*)LOAD_ASSET_RAW(act->Model), 1.0f);
+        }
+    }
 }
 
 void Editor_AddLight(s8* direction) {
@@ -697,6 +719,13 @@ void Editor_AddLight(s8* direction) {
 
 void Editor_ClearMatrix() {
     gEditor.ClearMatrixPool();
+}
+
+void Editor_CleanWorld() {
+    if (bCleanWorld) {
+        CM_CleanWorld();
+        bCleanWorld = false;
+    }
 }
 
 size_t CM_GetActorSize() {

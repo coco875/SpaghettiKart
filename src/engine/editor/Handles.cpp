@@ -5,8 +5,6 @@
 
 namespace Editor {
     Handles::Handles() {
-        Pos = &pos;
-        Rot = &rot;
     }
 
     void Handles::Load() {

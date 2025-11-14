@@ -878,9 +878,9 @@ void func_8003C0F0(void) {
         func_8000EEDC();
     } else if (!IsPodiumCeremony()) {
         init_course_path_point();
-        sp5E = (f32) gTrackPaths[0][0].posX;
-        sp5C = (f32) gTrackPaths[0][0].posZ;
-        sp5A = (f32) gTrackPaths[0][0].posY;
+        sp5E = (f32) gTrackPaths[0][0].x;
+        sp5C = (f32) gTrackPaths[0][0].z;
+        sp5A = (f32) gTrackPaths[0][0].y;
         if (IsToadsTurnpike()) {
             sp5E = 0;
         }
@@ -1279,7 +1279,7 @@ void func_8003D080(void) {
     }
 
     // Init freecam
-    //freecam_init(player->pos[0], player->pos[1], player->pos[2], player->rotation[1], 1, 4);
+    freecam_init(player->pos[0], player->pos[1], player->pos[2], player->rotation[1], 1, 4);
 
     switch (gActiveScreenMode) {
         case SCREEN_MODE_1P:

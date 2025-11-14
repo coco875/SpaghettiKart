@@ -61,7 +61,7 @@ struct UnkStruct_800DC5EC* D_800DC5F0 = &D_8015F480[1];
 struct UnkStruct_800DC5EC* D_800DC5F4 = &D_8015F480[2];
 struct UnkStruct_800DC5EC* D_800DC5F8 = &D_8015F480[3];
 u16 gIsGamePaused = false; // true if the game is paused and false if the game is not paused
-bool gIsEditorPaused = false;
+bool gIsEditorPaused = true;
 u8* pAppNmiBuffer = (u8*) &osAppNmiBuffer;
 
 s32 gIsMirrorMode = 0;
@@ -188,6 +188,7 @@ void setup_race(void) {
     int i;
 
     LUSLOG_DEBUG("Setup Race!", 0);
+    LUSLOG_DEBUG("Game Speed: %d", gTickLogic);
 
     gPlayerCountSelection1 = gPlayerCount;
     if (gGamestate != RACING) {
@@ -230,7 +231,7 @@ void setup_race(void) {
     D_80152308 = 0;
     D_802BA038 = -1;
     D_802BA048 = 0;
-    func_802A74BC();
+    set_screen();
     func_802A4D18();
     func_80091FA4();
     init_actors_and_load_textures();
@@ -264,6 +265,52 @@ void setup_race(void) {
         controller->buttonDepressed = 0;
         controller->button = 0;
     }
+}
+
+void setup_editor(void) {
+    LUSLOG_DEBUG("Setup Editor!", 0);
+    LUSLOG_DEBUG("Game Speed: %d", gTickLogic);
+
+    gPlayerCountSelection1 = 1;
+    if (gGamestate != RACING) {
+        gIsMirrorMode = 0;
+    }
+
+    gActiveScreenMode = gScreenModeSelection;
+    if (gCurrentCourseId != gCurrentlyLoadedCourseId) {
+        D_80150120 = 0;
+        gCurrentlyLoadedCourseId = gCurrentCourseId;
+        gNextFreeMemoryAddress = gFreeMemoryResetAnchor;
+        load_course(gCurrentCourseId);
+        course_init();
+        gFreeMemoryCourseAnchor = gNextFreeMemoryAddress;
+    } else {
+        gNextFreeMemoryAddress = gFreeMemoryCourseAnchor;
+    }
+
+    if (gIsMirrorMode) {
+        gCourseDirection = -1.0f;
+    } else {
+        gCourseDirection = 1.0f;
+    }
+
+    // Cow related
+    D_8015F702 = 0;
+    D_8015F700 = 200;
+
+    func_80005310();
+    func_8003D080();
+    init_hud();
+    gRaceState = RACE_INIT;
+    gNumSpawnedShells = 0;
+    D_800DC5B8 = 0;
+    D_80152308 = 0;
+    D_802BA038 = -1;
+    D_802BA048 = 0;
+    set_editor_screen();
+    func_802A4D18();
+    func_80091FA4();
+    init_actors_and_load_textures();
 }
 
 void func_80002DAC(void) {

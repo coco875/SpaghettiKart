@@ -2,6 +2,7 @@
 
 #include <libultraship/libultraship.h>
 #include "engine/courses/Course.h"
+#include "AllActors.h"
 
 namespace Editor {
 class ContentBrowserWindow : public Ship::GuiWindow {
@@ -40,5 +41,7 @@ protected:
     void FindTracks();
     void FindContent();
     void FolderButton(const char* label, bool& contentFlag, const ImVec2& size = ImVec2(80, 32));
+    ATrain* TrainWindow();
+
 };
 }

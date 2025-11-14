@@ -119,6 +119,56 @@ void ApplyMatrixTransformations(Mat4 mtx, FVector pos, IRotator rot, FVector sca
     mtx[3][3] = 1.0f;
 }
 
+/* 
+ * Spherical billboarding
+ * Rotates the object to face the camera
+ * Rotates on all three axis
+ */
+void ApplySphericalBillBoard(Mat4 mat, FVector pos, FVector scale, s32 cameraIndex) {
+    Mtx* lookAt = GetLookAtMatrix(cameraIndex);
+    Mat4 lookAtF;
+    guMtxL2F((float(*)[4])&lookAtF, lookAt);
+
+    // Camera Right
+    mat[0][0] = lookAtF[0][0];
+    mat[1][0] = lookAtF[0][1];
+    mat[2][0] = lookAtF[0][2];
+    mat[3][0] = 0;
+
+    // Camera Up
+    mat[0][1] = lookAtF[1][0];
+    mat[1][1] = lookAtF[1][1];
+    mat[2][1] = lookAtF[1][2];
+    mat[3][1] = 0;
+
+    // Camera Forward
+    mat[0][2] = lookAtF[2][0];
+    mat[1][2] = lookAtF[2][1];
+    mat[2][2] = lookAtF[2][2];
+    mat[3][2] = 0;
+
+    mat[0][3] = 0;
+    mat[1][3] = 0;
+    mat[2][3] = 0;
+    mat[3][3] = 1;
+
+    // Set position
+    mat[3][0] = pos.x;
+    mat[3][1] = pos.y;
+    mat[3][2] = pos.z;
+
+    // Apply scaling
+    mat[0][0] *= scale.x;
+    mat[1][0] *= scale.x;
+    mat[2][0] *= scale.x;
+    mat[0][1] *= scale.y;
+    mat[1][1] *= scale.y;
+    mat[2][1] *= scale.y;
+    mat[0][2] *= scale.z;
+    mat[1][2] *= scale.z;
+    mat[2][2] *= scale.z;
+}
+
 void AddLocalRotation(Mat4 mat, IRotator rot) {
     f32 sin_pitch = sins(rot.pitch);
     f32 cos_pitch = coss(rot.pitch);
@@ -140,7 +190,6 @@ void AddLocalRotation(Mat4 mat, IRotator rot) {
     mat[2][1] = -sin_pitch;
     mat[2][2] = (cos_pitch * cos_yaw);
 }
-
 
 // API
 extern "C" {
