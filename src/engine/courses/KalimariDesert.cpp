@@ -279,25 +279,25 @@ void KalimariDesert::Render(struct UnkStruct_800DC5EC* arg0) {
         gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
         gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         // d_course_kalimari_desert_packed_dl_71C8
-        gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*)0x070071C8)));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_kalimari_desert_packed_dl_71C8);
     }
 
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEI, G_CC_MODULATEI);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
     render_course_segments(kalimari_desert_dls, arg0);
     // d_course_kalimari_desert_packed_dl_1ED8
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*)0x07001ED8)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_kalimari_desert_packed_dl_1ED8);
     // d_course_kalimari_desert_packed_dl_1B18
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*)0x07001B18)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_kalimari_desert_packed_dl_1B18);
     // d_course_kalimari_desert_packed_dl_8330
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*)0x07008330)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_kalimari_desert_packed_dl_8330);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     // d_course_kalimari_desert_packed_dl_998
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*)0x07000998)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_kalimari_desert_packed_dl_998);
     // d_course_kalimari_desert_packed_dl_270
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual((void*)0x07000270)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_kalimari_desert_packed_dl_270);
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
 }
 
