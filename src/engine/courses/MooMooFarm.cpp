@@ -375,9 +375,9 @@ void MooMooFarm::Render(struct UnkStruct_800DC5EC* arg0) {
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEI, G_CC_MODULATEI);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
     // d_course_moo_moo_farm_packed_dl_4DF8
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07004DF8));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_moo_moo_farm_packed_dl_4DF8);
     // d_course_moo_moo_farm_packed_dl_5640
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07005640));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_moo_moo_farm_packed_dl_5640);
     gSPFogPosition(gDisplayListHead++, D_802B87B0, D_802B87B4);
 
     render_course_segments(moo_moo_farm_dls, arg0);
@@ -405,13 +405,13 @@ void MooMooFarm::Render(struct UnkStruct_800DC5EC* arg0) {
     if ((temp_s0 >= 16) && (temp_s0 < 24)) {
         if ((temp_s1 == 2) || (temp_s1 == 3)) {
             // d_course_moo_moo_farm_packed_dl_5410
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07005410));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_moo_moo_farm_packed_dl_5410);
         }
 
     } else if (temp_s0 < 9) {
         if (temp_s1 == 2) {
             // d_course_moo_moo_farm_packed_dl_5410
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07005410));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_moo_moo_farm_packed_dl_5410);
         }
     }
     if (temp_s0 < 4) {
@@ -434,7 +434,7 @@ void MooMooFarm::Render(struct UnkStruct_800DC5EC* arg0) {
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     // d_course_moo_moo_farm_packed_dl_10C0
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x070010C0));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_moo_moo_farm_packed_dl_10C0);
 }
 
 void MooMooFarm::RenderCredits() {
