@@ -352,8 +352,6 @@ jobs:
           name: spaghetti-linux-x64
           path: |
             spaghetti.appimage
-            config.yml
-            yamls
             gamecontrollerdb.txt
 
   build-linux-docker:

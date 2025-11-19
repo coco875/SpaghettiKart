@@ -90,7 +90,6 @@ Cup* gBattleCup;
 ModelLoader gModelLoader;
 
 HarbourMastersIntro gMenuIntro;
-Rulesets gRulesets;
 
 Editor::Editor gEditor;
 
@@ -194,14 +193,6 @@ void HM_DrawIntro() {
     gMenuIntro.HM_DrawIntro();
 }
 
-void CM_SpawnFromLevelProps() {
-    // Spawning actors needs to be delayed to the correct time.
-    // And loadlevel needs to happen asap
-
-    //Editor::LoadLevel(nullptr);
-   // Editor::SpawnFromLevelProps();
-}
-
 // Set default course; mario raceway
 void SetMarioRaceway(void) {
     SetCourseById(0);
@@ -239,10 +230,7 @@ const char* GetCupName(void) {
 }
 
 void LoadCourse() {
-    if (gWorldInstance.CurrentCourse) {
-        gRulesets.PreLoad();
-        gWorldInstance.CurrentCourse->Load();
-    }
+    gWorldInstance.GetRaceManager().Load();
 }
 
 size_t GetCourseIndex() {
@@ -383,28 +371,15 @@ void CM_DrawStaticMeshActors() {
 }
 
 void CM_BeginPlay() {
-    auto course = gWorldInstance.CurrentCourse;
-
-    if (course) {
-        Editor::LoadLevel(course.get(), course->SceneFilePtr);
-
-        gRulesets.PreInit();
-        // Do not spawn finishline in credits or battle mode. And if bSpawnFinishline.
-        if ((gGamestate != CREDITS_SEQUENCE) && (gModeSelection != BATTLE)) {
-            if (course->bSpawnFinishline) {
-                if (course->FinishlineSpawnPoint.has_value()) {
-                    AFinishline::Spawn(course->FinishlineSpawnPoint.value(), IRotator(0, 0, 0));
-                } else {
-                    AFinishline::Spawn();
-                }
-            
-            }
-        }
-        gEditor.AddLight("Sun", nullptr, D_800DC610[1].l->l.dir);
-
-        course->BeginPlay();
-        gRulesets.PostInit();
+    if (gWorldInstance.CurrentCourse) {
+        // This line should likely be moved.
+        // It's here so PreInit is after the scene file has been loaded
+        // It used to be at the start of BeginPlay
+        Editor::LoadLevel(gWorldInstance.CurrentCourse.get(), gWorldInstance.CurrentCourse->SceneFilePtr);
     }
+    gWorldInstance.GetRaceManager().PreInit();
+    gWorldInstance.GetRaceManager().BeginPlay();
+    gWorldInstance.GetRaceManager().PostInit();
 }
 
 void CM_TickObjects() {
@@ -449,16 +424,6 @@ void CM_DrawParticles(s32 cameraId) {
     if (gWorldInstance.CurrentCourse) {
         gWorldInstance.DrawParticles(cameraId);
     }
-}
-
-// Helps prevents users from forgetting to add a finishline to their course
-bool CM_DoesFinishlineExist() {
-    for (AActor* actor : gWorldInstance.Actors) {
-        if (dynamic_cast<AFinishline*>(actor)) {
-            return true;
-        }
-    }
-    return false;
 }
 
 void CM_InitClouds() {
@@ -661,36 +626,7 @@ void CM_DeleteActor(size_t index) {
  * Clean up actors and other game objects.
  */
 void CM_CleanWorld(void) {
-    printf("[Game.cpp] Clean World\n");
-    World* world = &gWorldInstance;
-    for (auto& actor : world->Actors) {
-        delete actor;
-    }
-
-    gWorldInstance.Reset(); // Reset OObjects
-    for (auto& object : world->Objects) {
-        delete object;
-    }
-
-    for (auto& emitter : world->Emitters) {
-        delete emitter;
-    }
-
-    for (auto& actor : world->StaticMeshActors) {
-        delete actor;
-    }
-
-    for (size_t i = 0; i < ARRAY_COUNT(gWorldInstance.playerBombKart); i++) {
-        gWorldInstance.playerBombKart[i].state = PlayerBombKart::PlayerBombKartState::DISABLED;
-        gWorldInstance.playerBombKart[i]._primAlpha = 0;
-    }
-
-    gEditor.ClearObjects();
-    gWorldInstance.Actors.clear();
-    gWorldInstance.StaticMeshActors.clear();
-    gWorldInstance.Objects.clear();
-    gWorldInstance.Emitters.clear();
-    gWorldInstance.Lakitus.clear();
+    gWorldInstance.ClearWorld();
 }
 
 struct Actor* CM_AddBaseActor() {

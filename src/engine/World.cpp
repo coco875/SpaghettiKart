@@ -21,13 +21,16 @@ extern "C" {
 #include "assets/models/tracks/mario_raceway/mario_raceway_data.h"
 }
 
-World::World() {}
-World::~World() {
-    CM_CleanWorld();
-}
-
 std::shared_ptr<Course> CurrentCourse;
 Cup* CurrentCup;
+
+World::World() {
+    RaceManagerInstance = std::make_unique<RaceManager>(*this);
+}
+
+World::~World() {
+    ClearWorld();
+}
 
 std::shared_ptr<Course> World::AddCourse(std::shared_ptr<Course> course) {
     gWorldInstance.Courses.push_back(course);
@@ -252,13 +255,39 @@ Object* World::GetObjectByIndex(size_t index) {
     return nullptr; // Or handle the error as needed
 }
 
+// Deletes all objects from the world
 void World::ClearWorld(void) {
-    CM_CleanWorld();
+    printf("[Game.cpp] Clean World\n");
+    World* world = &gWorldInstance;
+    for (auto& actor : world->Actors) {
+        delete actor;
+    }
 
-    // for (size_t i = 0; i < ARRAY_COUNT(gCollisionMesh); i++) {
+    gWorldInstance.Reset(); // Reset OObjects
+    for (auto& object : world->Objects) {
+        delete object;
+    }
 
-    // }
+    for (auto& emitter : world->Emitters) {
+        delete emitter;
+    }
 
-    // gCollisionMesh
-    // Paths
+    for (auto& actor : world->StaticMeshActors) {
+        delete actor;
+    }
+
+    for (size_t i = 0; i < ARRAY_COUNT(gWorldInstance.playerBombKart); i++) {
+        gWorldInstance.playerBombKart[i].state = PlayerBombKart::PlayerBombKartState::DISABLED;
+        gWorldInstance.playerBombKart[i]._primAlpha = 0;
+    }
+
+    gEditor.ClearObjects();
+    gWorldInstance.Actors.clear();
+    gWorldInstance.StaticMeshActors.clear();
+    gWorldInstance.Objects.clear();
+    gWorldInstance.Emitters.clear();
+    gWorldInstance.Lakitus.clear();
+
+    gWorldInstance.GetRaceManager().Clean();
+
 }
