@@ -151,10 +151,10 @@ void KoopaTroopaBeach::Load() {
 
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_koopa_troopa_beach_addr));
     func_80295C6C();
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*)0x0700ADE0), 150, 255, 255, 255);
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*)0x0700A540), 150, 255, 255, 255);
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*)0x07009E70), 150, 255, 255, 255);
-    find_vtx_and_set_colours(segmented_gfx_to_virtual((void*)0x07000358), 150, 255, 255, 255);
+    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_ADE0, 150, 255, 255, 255);
+    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_A540, 150, 255, 255, 255);
+    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_9E70, 150, 255, 255, 255);
+    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_358, 150, 255, 255, 255);
 }
 
 void KoopaTroopaBeach::LoadTextures() {
@@ -248,18 +248,18 @@ void KoopaTroopaBeach::Render(struct UnkStruct_800DC5EC* arg0) {
         gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
         gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         // d_course_koopa_troopa_beach_packed_dl_9CC0
-        gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07009CC0)));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_koopa_troopa_beach_packed_dl_9CC0);
     }
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
     // d_course_koopa_troopa_beach_packed_dl_9688
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07009688)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_koopa_troopa_beach_packed_dl_9688);
     render_course_segments((const char**)d_course_koopa_troopa_beach_dl_list1, arg0);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     // d_course_koopa_troopa_beach_packed_dl_2C0
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual(reinterpret_cast<void*>(0x070002C0)));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_koopa_troopa_beach_packed_dl_2C0);
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
     gDPPipeSync(gDisplayListHead++);
 }
@@ -293,9 +293,9 @@ void KoopaTroopaBeach::ScrollingTextures() {
     }
     // waterfall animation
     // d_course_koopa_troopa_beach_packed_dl_9D58
-    find_and_set_tile_size((uintptr_t)segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07009D58)), 0, D_802B87BC);
+    find_and_set_tile_size((uintptr_t) d_course_koopa_troopa_beach_packed_dl_9D58, 0, D_802B87BC);
     // d_course_koopa_troopa_beach_packed_dl_9CD0
-    find_and_set_tile_size((uintptr_t)segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07009CD0)), 0, D_802B87C4);
+    find_and_set_tile_size((uintptr_t) d_course_koopa_troopa_beach_packed_dl_9CD0, 0, D_802B87C4);
     D_802B87CC = random_int(300) / 40;
     if (D_802B87C8 < 0) {
         D_802B87C8 = random_int(300) / 40;
@@ -304,7 +304,7 @@ void KoopaTroopaBeach::ScrollingTextures() {
     }
     // Waterfall bubbling effect? (unused)
     // d_course_koopa_troopa_beach_packed_dl_2E8
-    find_and_set_tile_size((uintptr_t)segmented_gfx_to_virtual(reinterpret_cast<void*>(0x070002E8)), D_802B87C8, D_802B87CC);
+    find_and_set_tile_size((uintptr_t) d_course_koopa_troopa_beach_packed_dl_2E8, D_802B87C8, D_802B87CC);
 
 }
 
@@ -328,7 +328,7 @@ void KoopaTroopaBeach::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pat
         case 37:
             gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
             // d_course_koopa_troopa_beach_packed_dl_9E70
-            gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07009E70));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_koopa_troopa_beach_packed_dl_9E70);
             gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
             break;
     }
