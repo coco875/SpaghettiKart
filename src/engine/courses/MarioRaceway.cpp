@@ -157,18 +157,18 @@ MarioRaceway::MarioRaceway() {
 void MarioRaceway::Load() {
     Course::Load();
 
-    generate_collision_mesh_with_defaults(segmented_gfx_to_virtual((void*)0x07001140));
+    generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_1140);
     
     // Generate pipe collision mesh
     if (gScreenModeSelection == SCREEN_MODE_1P) {
         // d_course_mario_raceway_packed_dl_8E8
-        generate_collision_mesh_with_defaults(segmented_gfx_to_virtual((void*)0x070008E8));
+        generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_8E8);
     } else {
         if (CVarGetInteger("gDisableLod", 1) == true) {
-            generate_collision_mesh_with_defaults(segmented_gfx_to_virtual((void*)0x070008E8));
+            generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_8E8);
         } else {
             // d_course_mario_raceway_packed_dl_2D68
-            generate_collision_mesh_with_defaults(segmented_gfx_to_virtual((void*)0x07002D68));
+            generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_2D68);
         }
     }
 
@@ -275,7 +275,7 @@ void MarioRaceway::Render(struct UnkStruct_800DC5EC* arg0) {
         gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
         gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
         // d_course_mario_raceway_packed_dl_3050
-        gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07003050))));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_3050);
     }
 
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
@@ -356,18 +356,18 @@ void MarioRaceway::Render(struct UnkStruct_800DC5EC* arg0) {
     }
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07003508))));
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07003240))));
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x070014A0))));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_3508);
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_3240);
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_14A0);
     render_course_segments(mario_raceway_dls, arg0);
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_TEX_EDGE, G_RM_AA_ZB_TEX_EDGE2);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000450))));
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000240))));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_450);
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_240);
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x070000E0))));
-    gSPDisplayList(gDisplayListHead++, (segmented_gfx_to_virtual(reinterpret_cast<void*>(0x07000160))));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_E0);
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_160);
 }
 
 void MarioRaceway::RenderCredits() {

@@ -11,6 +11,7 @@
 #include "math_util.h"
 #include "code_800029B0.h"
 #include <defines.h>
+#include "port/Engine.h"
 #include "port/Game.h"
 #include "resourcebridge.h"
 #include <stdio.h>
@@ -1963,6 +1964,9 @@ u32 numTimes = 0;
  */
 bool is_cull_box(const char* filePath);
 void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
+    if (GameEngine_OTRSigCheck((char*)addr)) {
+        addr = LOAD_ASSET(addr);
+    }
     int8_t opcode;
     uintptr_t lo;
     uintptr_t hi;

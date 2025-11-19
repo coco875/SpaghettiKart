@@ -190,20 +190,20 @@ void render_course_segments(const char* addr[], struct UnkStruct_800DC5EC* arg1)
 
 void func_80291198(void) {
     // d_course_mario_raceway_packed_dl_1140
-    gSPDisplayList(gDisplayListHead++, ((uintptr_t) segmented_gfx_to_virtual(0x07001140))); //
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_1140); //
 }
 
 void render_mario_raceway_pipe(void) {
     if (gScreenModeSelection == SCREEN_MODE_1P) {
         // d_course_mario_raceway_packed_dl_8E8
-        gSPDisplayList(gDisplayListHead++, ((uintptr_t) segmented_gfx_to_virtual(0x070008E8)));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_8E8);
     } else {
         if (CVarGetInteger("gDisableLod", 1) == true) {
-            gSPDisplayList(gDisplayListHead++, ((uintptr_t) segmented_gfx_to_virtual(0x070008E8)));
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_8E8);
             return;
         }
         // d_course_mario_raceway_packed_dl_2D68
-        gSPDisplayList(gDisplayListHead++, ((uintptr_t) segmented_gfx_to_virtual(0x07002D68)));
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_2D68);
     }
 }
 
