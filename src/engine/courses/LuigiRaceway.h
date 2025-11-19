@@ -16,7 +16,7 @@ extern const course_texture luigi_raceway_textures[];
 }
 
 class LuigiRaceway : public Course {
-    void Jumbotron();
+    void CopyJumbotron(s32 ulx, s32 uly, s16 portionToDraw, u16* source);
 
   public:
     virtual ~LuigiRaceway() = default; // Virtual destructor for proper cleanup in derived classes
