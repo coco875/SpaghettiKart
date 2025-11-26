@@ -277,11 +277,11 @@ void ToadsTurnpike::Render(struct UnkStruct_800DC5EC* arg0) {
     gDPSetRenderMode(gDisplayListHead++, G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2);
     gDPSetCombineMode(gDisplayListHead++, G_CC_DECALRGBA, G_CC_PASS2);
     // d_course_toads_turnpike_packed_dl_0
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07000000));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_toads_turnpike_packed_dl_0);
     // d_course_toads_turnpike_packed_dl_68
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x07000068));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_toads_turnpike_packed_dl_68);
     // d_course_toads_turnpike_packed_dl_D8
-    gSPDisplayList(gDisplayListHead++, segmented_gfx_to_virtual((void*)0x070000D8));
+    gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_toads_turnpike_packed_dl_D8);
     gSPClearGeometryMode(gDisplayListHead++, G_FOG);
     gDPSetCycleType(gDisplayListHead++, G_CYC_1CYCLE);
 }
