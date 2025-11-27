@@ -16,7 +16,7 @@ extern const course_texture wario_stadium_textures[];
 }
 
 class WarioStadium : public Course {
-    void Jumbotron();
+    void CopyJumbotron(s32 ulx, s32 uly, s16 portionToDraw, u16* source);
 
   public:
     virtual ~WarioStadium() = default; // Virtual destructor for proper cleanup in derived classes
