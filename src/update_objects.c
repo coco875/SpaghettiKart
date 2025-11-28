@@ -1723,11 +1723,9 @@ void func_800762DC(Vec3f arg0, f32 arg1) {
 void func_8007634C(s32 objectIndex) {
     Object* object;
 
-    u8* asset = LOAD_ASSET(common_texture_particle_smoke);
-
     object = &gObjectList[objectIndex];
-    object->activeTexture = asset[0];
-    object->textureList = asset[0];
+    object->activeTexture = common_texture_particle_smoke;
+    object->textureList = common_texture_particle_smoke;
     object->primAlpha = 0x00FF;
     set_obj_orientation(objectIndex, 0U, 0U, 0U);
     set_obj_origin_offset(objectIndex, 0.0f, 0.0f, 0.0f);
@@ -1891,11 +1889,10 @@ void func_80076884(s32 arg0) {
 
 void func_80076958(s32 objectIndex) {
     Object* object;
-    u8* tex = (u8*) LOAD_ASSET(common_texture_particle_smoke);
 
     object = &gObjectList[objectIndex];
-    object->activeTexture = tex[0];
-    object->textureList = tex[0];
+    object->activeTexture = common_texture_particle_smoke;
+    object->textureList = common_texture_particle_smoke;
     object->primAlpha = 0x00FF;
     set_obj_orientation(objectIndex, 0U, 0U, 0U);
     set_obj_origin_offset(objectIndex, 0.0f, 0.0f, 0.0f);
@@ -2231,13 +2228,12 @@ void func_80077D5C(s32 arg0) {
 }
 
 void func_80077E20(s32 objectIndex) {
-    u8* tex = (u8*) LOAD_ASSET(D_0D0293D8);
     Vtx* vtx = (Vtx*) LOAD_ASSET(common_vtx_rectangle);
     Object* object;
 
     object = &gObjectList[objectIndex];
-    object->activeTexture = tex;
-    object->textureList = tex;
+    object->activeTexture = D_0D0293D8;
+    object->textureList = D_0D0293D8;
     //! @bug frappe snowland There's something up with the handling of common_vtx_rectangle and the loading of 0x10
     //! right here
     // root function: func_80078C70
