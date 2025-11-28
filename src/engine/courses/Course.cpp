@@ -111,9 +111,6 @@ Course::Course() {
 
 // Load custom track from code
 void Course::Load(Vtx* vtx, Gfx* gfx) {
-    gSegmentTable[4] = reinterpret_cast<uintptr_t>(&vtx[0]);
-    gSegmentTable[7] = reinterpret_cast<uintptr_t>(&gfx[0]);
-
     Course::Init();
 }
 
@@ -177,48 +174,6 @@ void Course::Load() {
         }
         return;
     }
-
-    // Stock
-    size_t vtxSize = (ResourceGetSizeByName(this->vtx) / sizeof(CourseVtx)) * sizeof(Vtx);
-    size_t texSegSize;
-
-    // Convert course vtx to vtx
-    // Vtx* vtx = reinterpret_cast<Vtx*>(allocate_memory(vtxSize));
-    // gSegmentTable[4] = reinterpret_cast<uintptr_t>(&vtx[0]);
-    // func_802A86A8(reinterpret_cast<CourseVtx*>(LOAD_ASSET_RAW(this->vtx)), vtx, vtxSize / sizeof(Vtx));
-
-    // Load and allocate memory for course textures
-    // const course_texture* asset = this->Props.textures;
-    u8* freeMemory = NULL;
-    u8* texture = NULL;
-    size_t size = 0;
-    texSegSize = 0;
-    // while (asset->addr) {
-    //     size = ResourceGetTexSizeByName(asset->addr);
-    //     freeMemory = (u8*) allocate_memory(size);
-
-    //     texture = (u8*) (asset->addr);
-    //     if (texture) {
-    //         if (asset == &this->Props.textures[0]) {
-    //             gSegmentTable[5] = reinterpret_cast<uintptr_t>(&freeMemory[0]);
-    //         }
-    //         strcpy(reinterpret_cast<char*>(freeMemory), asset->addr);
-    //         // memcpy(freeMemory, texture, size);
-    //         texSegSize += size;
-    //         // printf("Texture Addr: 0x%llX, size 0x%X\n", &freeMemory[0], size);
-    //     }
-    //     asset++;
-    // }
-
-    // Extract packed DLs
-    // u8* packed = reinterpret_cast<u8*>(LOAD_ASSET_RAW(this->gfx));
-    // Gfx* gfx = (Gfx*) allocate_memory(sizeof(Gfx) * this->gfxSize); // Size of unpacked DLs
-    // if (gfx == NULL) {
-    //     printf("Failed to allocate course displaylist memory\n");
-    // }
-
-    // gSegmentTable[7] = reinterpret_cast<uintptr_t>(&gfx[0]);
-    // displaylist_unpack(reinterpret_cast<uintptr_t*>(gfx), reinterpret_cast<uintptr_t>(packed), 0);
 
     Course::Init();
 }

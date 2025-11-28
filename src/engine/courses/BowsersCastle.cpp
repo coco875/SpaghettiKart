@@ -148,9 +148,6 @@ BowsersCastle::BowsersCastle() {
 
     Props.WaterLevel = -50.0f;
     WaterVolumes.push_back({20.0f, 1549.0f, 1859.0f, -1402.0f, -1102.0f});
-    // for (size_t i = 0; i < 108; i++) {
-    //     replace_segmented_textures_with_o2r_textures((Gfx*) bowsers_castle_dls[i], Props.textures);
-    // }
 }
 
 void BowsersCastle::Load() {
@@ -158,11 +155,10 @@ void BowsersCastle::Load() {
 
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_bowsers_castle_addr));
     func_80295C6C();
-    find_vtx_and_set_colours((Gfx*) d_course_bowsers_castle_vertex_0x04021350, 0x32, 0, 0, 0);
+    find_vtx_and_set_colours((Gfx*) d_course_bowsers_castle_packed_dl_1350, 0x32, 0, 0, 0);
 }
 
 void BowsersCastle::LoadTextures() {
-    dma_textures(gTextureShrub, 0x000003FFU, 0x00000800U); // 0x03009000
 }
 
 void BowsersCastle::BeginPlay() {

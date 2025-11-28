@@ -163,9 +163,6 @@ RoyalRaceway::RoyalRaceway() {
     Props.Sequence = MusicSeq::MUSIC_SEQ_ROYAL_RACEWAY;
 
     Props.WaterLevel = -60.0f;
-    // for (size_t i = 0; i < 132; i++) {
-    //     replace_segmented_textures_with_o2r_textures((Gfx*) royal_raceway_dls[i], Props.textures);
-    // }
 }
 
 void RoyalRaceway::Load() {
@@ -176,8 +173,6 @@ void RoyalRaceway::Load() {
 }
 
 void RoyalRaceway::LoadTextures() {
-    dma_textures(gTextureTrees3, 0x000003E8U, 0x00000800U); // 0x03009000
-    dma_textures(gTextureTrees7, 0x000003E8U, 0x00000800U); // 0x03009800
 }
 
 void RoyalRaceway::BeginPlay() {

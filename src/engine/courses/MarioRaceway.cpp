@@ -149,9 +149,6 @@ MarioRaceway::MarioRaceway() {
     Props.Skybox.FloorBottomLeft = {0, 0, 0};
     Props.Skybox.FloorTopLeft = {0, 0, 0};
     Props.Sequence = MusicSeq::MUSIC_SEQ_MARIO_RACEWAY;
-    // for (size_t i = 0; i < 68; i++) {
-    //     replace_segmented_textures_with_o2r_textures((Gfx*) mario_raceway_dls[i], Props.textures);
-    // }
 }
 
 void MarioRaceway::Load() {
@@ -178,7 +175,6 @@ void MarioRaceway::Load() {
 }
 
 void MarioRaceway::LoadTextures() {
-    dma_textures(gTextureTrees1, 0x0000035BU, 0x00000800U); // 0x03009000
 }
 
 void MarioRaceway::BeginPlay() {
@@ -375,7 +371,6 @@ void MarioRaceway::RenderCredits() {
 }
 
 void MarioRaceway::CreditsSpawnActors() {
-    dma_textures(gTextureTrees1, 0x35B, 0x800);
     spawn_foliage((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_mario_raceway_tree_spawns));
 }
 

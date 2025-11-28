@@ -166,9 +166,6 @@ LuigiRaceway::LuigiRaceway() {
     Props.Skybox.FloorBottomLeft = { 0, 0, 0 };
     Props.Skybox.FloorTopLeft = { 216, 232, 248 };
     Props.Sequence = MusicSeq::MUSIC_SEQ_LUIGI_RACEWAY;
-    // for (size_t i = 0; i < 120; i++) {
-    //     replace_segmented_textures_with_o2r_textures((Gfx*) luigi_raceway_dls[i], Props.textures);
-    // }
 }
 
 void LuigiRaceway::Load() {
@@ -180,8 +177,6 @@ void LuigiRaceway::Load() {
 }
 
 void LuigiRaceway::LoadTextures() {
-    dma_textures(gTextureTrees5Left, 0x000003E8U, 0x00000800U); // 0x03009000
-    dma_textures(gTextureTrees5Right, 0x000003E8U, 0x00000800U); // 0x03009800
 }
 
 void LuigiRaceway::BeginPlay() {
@@ -263,7 +258,7 @@ void LuigiRaceway::SetStaffGhost() {
 
 void LuigiRaceway::CopyJumbotron(s32 ulx, s32 uly, s16 portionToDraw, u16* source) {
     // Add CVar if we want to expose a user toggle for only updating 1/6 of the jumbotron per frame
-    u8 updateWholeJumbo = true;
+    bool updateWholeJumbo = true;
 
     if (portionToDraw == -1 || updateWholeJumbo) {
         copy_framebuffer(ulx, uly, 64, 32, source, (u16*) LOAD_ASSET_RAW(gTexture68272C));

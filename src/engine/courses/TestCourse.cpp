@@ -61,7 +61,6 @@ extern "C" {
 
 TestCourse::TestCourse() {
     this->gfxSize = 100;
-    this->textures = NULL;
     Props.Minimap.Texture = minimap_mario_raceway;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
@@ -147,7 +146,6 @@ void TestCourse::Load() {
 }
 
 void TestCourse::LoadTextures() {
-    dma_textures(gTextureTrees1, 0x0000035BU, 0x00000800U); // 0x03009000
 }
 
 void TestCourse::BeginPlay() {

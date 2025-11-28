@@ -4,11 +4,6 @@
 #include "libultraship/libultra/gbi.h"
 #include "tinyxml2.h"
 
-extern "C" {
-//#include "memory.h" // Removed to prevent C linkage errors likely related with #include common_structs.h
-void* segmented_uintptr_t_to_virtual(uintptr_t);
-}
-
 namespace MK64 {
 std::shared_ptr<Ship::IResource>
 ResourceFactoryBinaryTrackSectionsV0::ReadResource(std::shared_ptr<Ship::File> file,

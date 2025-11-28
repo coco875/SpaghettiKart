@@ -1981,8 +1981,6 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
     D_8015F6FA = 0;
     D_8015F6FC = 0;
 
-    // u8 *orig = segmented_gfx_to_virtual(0x07000000);
-
     // printf("\n\nORIG:\n");
     // for (size_t i = 0; i < 100; i++) {
     //     printf(" 0x%X ", orig[i]);
@@ -2014,11 +2012,7 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
                 generate_collision_mesh(ResourceGetDataByName((const char*)hi), surfaceType, sectionId);
                 break;
             case G_VTX:{
-                Vtx* ptr = hi;
-                uintptr_t res = hi & 0x4000000;
-                if (res != 0) {
-                    ptr = segment_vtx_to_virtual(hi - 0x4000000);
-                }
+                uintptr_t ptr = hi;
                 set_vtx_buffer((uintptr_t) ptr, (lo >> 10) & 0x3F, ((lo >> 16) & 0xFF) >> 1);
                 break;
             }

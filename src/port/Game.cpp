@@ -26,14 +26,9 @@
 #include "engine/courses/DoubleDeck.h"
 #include "engine/courses/DKJungle.h"
 #include "engine/courses/BigDonut.h"
-#include "engine/courses/Harbour.h"
 #include "engine/courses/TestCourse.h"
-#include "engine/actors/Finishline.h"
 
 #include "engine/courses/PodiumCeremony.h"
-
-#include "engine/ModelLoader.h"
-#include "engine/actors/BowserStatue.h"
 
 #include "engine/GarbageCollector.h"
 
@@ -46,10 +41,7 @@
 #include "engine/HM_Intro.h"
 
 #include "engine/editor/Editor.h"
-#include "engine/editor/EditorMath.h"
 #include "engine/editor/SceneManager.h"
-#include "engine/Rulesets.h"
-#include "engine/Registry.h"
 #include "RegisteredActors.h"
 
 #ifdef _WIN32
@@ -60,10 +52,8 @@ extern "C" {
 #include "main.h"
 #include "audio/load.h"
 #include "audio/external.h"
-#include "networking/networking.h"
 #include "render_courses.h"
 #include "menus.h"
-#include "update_objects.h"
 // #include "engine/wasm.h"
 }
 
@@ -86,8 +76,6 @@ Cup* gFlowerCup;
 Cup* gStarCup;
 Cup* gSpecialCup;
 Cup* gBattleCup;
-
-ModelLoader gModelLoader;
 
 HarbourMastersIntro gMenuIntro;
 
