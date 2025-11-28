@@ -36,25 +36,7 @@ extern "C" {
     extern const char *sherbet_land_dls_2[];
 }
 
-const course_texture sherbet_land_textures[] = {
-    { gTexture643B3C, 0x0798, 0x0800, 0x0 }, // 0x05000000
-    { gTexture66D024, 0x04EA, 0x0800, 0x0 }, // 0x05000800
-    { gTexture678118, 0x0314, 0x0800, 0x0 }, // 0x05001000
-    { gTextureSignWoodRedArrow, 0x04E1, 0x1000, 0x0 }, // 0x05001800
-    { gTexture678CC8, 0x058E, 0x0800, 0x0 }, // 0x05002800
-    { gTexture67842C, 0x050E, 0x0800, 0x0 }, // 0x05003000
-    { gTexture67893C, 0x038B, 0x0800, 0x0 }, // 0x05003800
-    { gTexture651984, 0x019C, 0x0800, 0x0 }, // 0x05004000
-    { gTexture651428, 0x055B, 0x0800, 0x0 }, // 0x05004800
-    { gTexture662924, 0x0110, 0x0800, 0x0 }, // 0x05005000
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 SherbetLand::SherbetLand() {
-    this->vtx = d_course_sherbet_land_vertex;
-    this->gfx = d_course_sherbet_land_packed_dls;
-    this->gfxSize = 1803;
-    Props.textures = sherbet_land_textures;
     Props.Minimap.Texture = minimap_sherbet_land;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

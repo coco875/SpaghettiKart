@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_bowsers_castle_vertex_0x04000000[] = "__OTR__models/tracks/bowsers_castle/bowsers_castle_vertices/d_course_bowsers_castle_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_bowsers_castle_vertex[] = "__OTR__models/tracks/bowsers_castle/bowsers_castle_vertices/d_course_bowsers_castle_vertex";
-
 static const ALIGN_ASSET(2) char d_course_bowsers_castle_vertex_0x04000040[] = "__OTR__models/tracks/bowsers_castle/bowsers_castle_vertices/d_course_bowsers_castle_vertex_0x04000040";
 
 static const ALIGN_ASSET(2) char d_course_bowsers_castle_vertex_0x04000080[] = "__OTR__models/tracks/bowsers_castle/bowsers_castle_vertices/d_course_bowsers_castle_vertex_0x04000080";

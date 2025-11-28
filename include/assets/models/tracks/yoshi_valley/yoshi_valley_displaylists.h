@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_packed_dl_0[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_displaylists/d_course_yoshi_valley_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_yoshi_valley_packed_dls[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_displaylists/d_course_yoshi_valley_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_packed_dl_A8[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_displaylists/d_course_yoshi_valley_packed_dl_A8";
 
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_packed_dl_128[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_displaylists/d_course_yoshi_valley_packed_dl_128";

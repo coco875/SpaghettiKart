@@ -8,12 +8,6 @@
       - '#include <libultraship.h>'
       - '#include <libultra/gbi.h>'
       - '#include <align_asset_macro.h>'
-d_course_banshee_boardwalk_vertex:
-  symbol: d_course_banshee_boardwalk_vertex
-  type: mk64:course_vtx
-  count: 4945
-  offset: 0x0
-
 d_course_banshee_boardwalk_vertex_0x04000000:
   symbol: d_course_banshee_boardwalk_vertex_0x04000000
   type: mk64:course_vtx

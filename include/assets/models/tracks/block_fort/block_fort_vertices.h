@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_block_fort_vertex_0x04000000[] = "__OTR__models/tracks/block_fort/block_fort_vertices/d_course_block_fort_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_block_fort_vertex[] = "__OTR__models/tracks/block_fort/block_fort_vertices/d_course_block_fort_vertex";
-
 static const ALIGN_ASSET(2) char d_course_block_fort_vertex_0x04000030[] = "__OTR__models/tracks/block_fort/block_fort_vertices/d_course_block_fort_vertex_0x04000030";
 
 static const ALIGN_ASSET(2) char d_course_block_fort_vertex_0x04000170[] = "__OTR__models/tracks/block_fort/block_fort_vertices/d_course_block_fort_vertex_0x04000170";

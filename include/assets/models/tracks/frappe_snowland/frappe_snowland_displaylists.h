@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_frappe_snowland_packed_dl_0[] = "__OTR__models/tracks/frappe_snowland/frappe_snowland_displaylists/d_course_frappe_snowland_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_frappe_snowland_packed_dls[] = "__OTR__models/tracks/frappe_snowland/frappe_snowland_displaylists/d_course_frappe_snowland_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_frappe_snowland_packed_dl_88[] = "__OTR__models/tracks/frappe_snowland/frappe_snowland_displaylists/d_course_frappe_snowland_packed_dl_88";
 
 static const ALIGN_ASSET(2) char d_course_frappe_snowland_packed_dl_98[] = "__OTR__models/tracks/frappe_snowland/frappe_snowland_displaylists/d_course_frappe_snowland_packed_dl_98";

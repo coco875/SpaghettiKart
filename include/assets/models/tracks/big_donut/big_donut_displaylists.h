@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_big_donut_packed_dl_0[] = "__OTR__models/tracks/big_donut/big_donut_displaylists/d_course_big_donut_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_big_donut_packed_dls[] = "__OTR__models/tracks/big_donut/big_donut_displaylists/d_course_big_donut_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_big_donut_packed_dl_210[] = "__OTR__models/tracks/big_donut/big_donut_displaylists/d_course_big_donut_packed_dl_210";
 
 static const ALIGN_ASSET(2) char d_course_big_donut_packed_dl_220[] = "__OTR__models/tracks/big_donut/big_donut_displaylists/d_course_big_donut_packed_dl_220";

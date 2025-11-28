@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_big_donut_vertex_0x04000000[] = "__OTR__models/tracks/big_donut/big_donut_vertices/d_course_big_donut_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_big_donut_vertex[] = "__OTR__models/tracks/big_donut/big_donut_vertices/d_course_big_donut_vertex";
-
 static const ALIGN_ASSET(2) char d_course_big_donut_vertex_0x04000200[] = "__OTR__models/tracks/big_donut/big_donut_vertices/d_course_big_donut_vertex_0x04000200";
 
 static const ALIGN_ASSET(2) char d_course_big_donut_vertex_0x04000400[] = "__OTR__models/tracks/big_donut/big_donut_vertices/d_course_big_donut_vertex_0x04000400";

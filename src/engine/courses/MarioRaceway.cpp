@@ -38,46 +38,7 @@ extern "C" {
     extern const char *mario_raceway_dls[];
 }
 
-const course_texture mario_raceway_textures[] = {
-    { gTextureCheckerboardYellowPink, 0x0149, 0x0800, 0x0 }, // 0x05000000
-    { gTexture64619C, 0x0124, 0x0800, 0x0 }, // 0x05000800
-    { gTextureGrass1, 0x0125, 0x0800, 0x0 }, // 0x05001000
-    { gTexture64BB60, 0x0169, 0x0800, 0x0 }, // 0x05001800
-    { gTextureGrass7, 0x05DE, 0x0800, 0x0 }, // 0x05002000
-    { gTextureGrass5, 0x023F, 0x0800, 0x0 }, // 0x05002800
-    { gTextureFlagRed, 0x019E, 0x0800, 0x0 }, // 0x05003000
-    { gTexture663F90, 0x0122, 0x0800, 0x0 }, // 0x05003800
-    { gTexture6642A4, 0x0162, 0x0800, 0x0 }, // 0x05004000
-    { gTexture6640B4, 0x01EF, 0x0800, 0x0 }, // 0x05004800
-    { gTextureGrass10, 0x01F8, 0x0800, 0x0 }, // 0x05005000
-    { gTexture6684F8, 0x010D, 0x0800, 0x0 }, // 0x05005800
-    { gTextureSignLuigis0, 0x0287, 0x1000, 0x0 }, // 0x05006000
-    { gTextureSignLuigis1, 0x02AF, 0x1000, 0x0 }, // 0x05007000
-    { gTextureSignMarioStar0, 0x02D2, 0x1000, 0x0 }, // 0x05008000
-    { gTextureSignMarioStar1, 0x02B1, 0x1000, 0x0 }, // 0x05009000
-    { gTexture66C8F4, 0x01A1, 0x0800, 0x0 }, // 0x0500A000
-    { gTextureSignNintendoRed0, 0x02A6, 0x1000, 0x0 }, // 0x0500A800
-    { gTextureSignNintendoRed1, 0x02F7, 0x1000, 0x0 }, // 0x0500B800
-    { gTexture670AC8, 0x0FBF, 0x1000, 0x0 }, // 0x0500C800
-    { gTexture674354, 0x046F, 0x0800, 0x0 }, // 0x0500D800
-    { gTextureRoad0, 0x0300, 0x1000, 0x0 }, // 0x0500E000
-    { gTextureRoadFinish0, 0x0338, 0x1000, 0x0 }, // 0x0500F000
-    { gTexture67B9B0, 0x0225, 0x0800, 0x0 }, // 0x05010000
-    { gTextureSignYoshi, 0x04DF, 0x1000, 0x0 }, // 0x05010800
-    { gTextureCheckerboardBlueGray, 0x04A1, 0x1000, 0x0 }, // 0x05011800
-    { gTextureSignShellShot0, 0x038C, 0x1000, 0x0 }, // 0x05012800
-    { gTextureSignShellShot1, 0x0247, 0x1000, 0x0 }, // 0x05013800
-    { gTextureSignKoopaAir0, 0x0360, 0x1000, 0x0 }, // 0x05014800
-    { gTextureSignKoopaAir1, 0x0304, 0x1000, 0x0 }, // 0x05015800
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 MarioRaceway::MarioRaceway() {
-    this->vtx = d_course_mario_raceway_vertex;
-    this->gfx = d_course_mario_raceway_packed_dls;
-    this->gfxSize = 3367;
-
-    Props.textures = mario_raceway_textures;
     Props.Minimap.Texture = minimap_mario_raceway;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

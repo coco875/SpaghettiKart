@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_mario_raceway_packed_dl_0[] = "__OTR__models/tracks/mario_raceway/mario_raceway_displaylists/d_course_mario_raceway_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_mario_raceway_packed_dls[] = "__OTR__models/tracks/mario_raceway/mario_raceway_displaylists/d_course_mario_raceway_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_mario_raceway_packed_dl_70[] = "__OTR__models/tracks/mario_raceway/mario_raceway_displaylists/d_course_mario_raceway_packed_dl_70";
 
 static const ALIGN_ASSET(2) char d_course_mario_raceway_packed_dl_E0[] = "__OTR__models/tracks/mario_raceway/mario_raceway_displaylists/d_course_mario_raceway_packed_dl_E0";

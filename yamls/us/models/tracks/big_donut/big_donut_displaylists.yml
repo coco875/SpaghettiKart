@@ -81,12 +81,6 @@
     - [0x40045d0, "models/tracks/big_donut/big_donut_vertices/d_course_big_donut_vertex_0x040045D0"]
     - [0x40046d0, "models/tracks/big_donut/big_donut_vertices/d_course_big_donut_vertex_0x040046D0"]
     - [0x40047d0, "models/tracks/big_donut/big_donut_vertices/d_course_big_donut_vertex_0x040047D0"]
-
-d_course_big_donut_packed_dls:
-  symbol: d_course_big_donut_packed_dls
-  type: blob
-  offset: 0x0
-  size: 0x7EC
 d_course_big_donut_packed_dl_0:
   symbol: d_course_big_donut_packed_dl_0
   type: MK64:PACKED_GFX

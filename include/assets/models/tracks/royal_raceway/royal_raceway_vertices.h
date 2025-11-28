@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_royal_raceway_vertex_0x04000000[] = "__OTR__models/tracks/royal_raceway/royal_raceway_vertices/d_course_royal_raceway_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_royal_raceway_vertex[] = "__OTR__models/tracks/royal_raceway/royal_raceway_vertices/d_course_royal_raceway_vertex";
-
 static const ALIGN_ASSET(2) char d_course_royal_raceway_vertex_0x04000200[] = "__OTR__models/tracks/royal_raceway/royal_raceway_vertices/d_course_royal_raceway_vertex_0x04000200";
 
 static const ALIGN_ASSET(2) char d_course_royal_raceway_vertex_0x04000380[] = "__OTR__models/tracks/royal_raceway/royal_raceway_vertices/d_course_royal_raceway_vertex_0x04000380";

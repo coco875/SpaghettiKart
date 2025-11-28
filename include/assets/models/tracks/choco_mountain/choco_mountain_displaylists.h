@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_choco_mountain_packed_dl_0[] = "__OTR__models/tracks/choco_mountain/choco_mountain_displaylists/d_course_choco_mountain_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_choco_mountain_packed_dls[] = "__OTR__models/tracks/choco_mountain/choco_mountain_displaylists/d_course_choco_mountain_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_choco_mountain_packed_dl_98[] = "__OTR__models/tracks/choco_mountain/choco_mountain_displaylists/d_course_choco_mountain_packed_dl_98";
 
 static const ALIGN_ASSET(2) char d_course_choco_mountain_packed_dl_178[] = "__OTR__models/tracks/choco_mountain/choco_mountain_displaylists/d_course_choco_mountain_packed_dl_178";

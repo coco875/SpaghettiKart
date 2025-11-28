@@ -39,31 +39,7 @@ extern "C" {
     extern s8 gPlayerCount;
 }
 
-const course_texture koopa_troopa_beach_textures[] = {
-    { gTexture643B3C, 0x0798, 0x0800, 0x0 }, // 0x05000000
-    { gTexture66A3DC, 0x07C5, 0x0800, 0x0 }, // 0x05000800
-    { gTextureSignWoodRedArrow, 0x04E1, 0x1000, 0x0 }, // 0x05001000
-    { gTexture66DD38, 0x0330, 0x1000, 0x0 }, // 0x05002000
-    { gTexture643430, 0x0604, 0x0800, 0x0 }, // 0x05003000
-    { gTexture660D8C, 0x0126, 0x0800, 0x0 }, // 0x05003800
-    { gTexture6609D0, 0x03BB, 0x1000, 0x0 }, // 0x05004000
-    { gTextureGrass12, 0x0874, 0x0800, 0x0 }, // 0x05005000
-    { gTexture66CA98, 0x02C9, 0x0800, 0x0 }, // 0x05005800
-    { gTexture66EBF0, 0x0146, 0x0800, 0x0 }, // 0x05006000
-    { gTexture67BEE8, 0x02D0, 0x0800, 0x0 }, // 0x05006800
-    { gTextureSandFinish, 0x022E, 0x0800, 0x0 }, // 0x05007000
-    { gTextureWheelSteamEngine, 0x020F, 0x0800, 0x0 }, // 0x05007800
-    { gTexture669570, 0x0E6B, 0x1000, 0x0 }, // 0x05008000
-    { gTextureWaves1, 0x05C4, 0x0800, 0x0 }, // 0x05009000
-    { gTextureWaves2, 0x0488, 0x0800, 0x0 }, // 0x05009800
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 KoopaTroopaBeach::KoopaTroopaBeach() {
-    this->vtx = d_course_koopa_troopa_beach_vertex;
-    this->gfx = d_course_koopa_troopa_beach_packed_dls;
-    this->gfxSize = 5720;
-    Props.textures = koopa_troopa_beach_textures;
     Props.Minimap.Texture = minimap_koopa_troopa_beach;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

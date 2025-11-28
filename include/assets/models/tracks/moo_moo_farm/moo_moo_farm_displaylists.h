@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_moo_moo_farm_packed_dl_0[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_displaylists/d_course_moo_moo_farm_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_moo_moo_farm_packed_dls[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_displaylists/d_course_moo_moo_farm_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_moo_moo_farm_packed_dl_28[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_displaylists/d_course_moo_moo_farm_packed_dl_28";
 
 static const ALIGN_ASSET(2) char d_course_moo_moo_farm_packed_dl_58[] = "__OTR__models/tracks/moo_moo_farm/moo_moo_farm_displaylists/d_course_moo_moo_farm_packed_dl_58";

@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_rainbow_road_vertex_0x04000000[] = "__OTR__models/tracks/rainbow_road/rainbow_road_vertices/d_course_rainbow_road_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_rainbow_road_vertex[] = "__OTR__models/tracks/rainbow_road/rainbow_road_vertices/d_course_rainbow_road_vertex";
-
 static const ALIGN_ASSET(2) char d_course_rainbow_road_vertex_0x04000200[] = "__OTR__models/tracks/rainbow_road/rainbow_road_vertices/d_course_rainbow_road_vertex_0x04000200";
 
 static const ALIGN_ASSET(2) char d_course_rainbow_road_vertex_0x04000400[] = "__OTR__models/tracks/rainbow_road/rainbow_road_vertices/d_course_rainbow_road_vertex_0x04000400";

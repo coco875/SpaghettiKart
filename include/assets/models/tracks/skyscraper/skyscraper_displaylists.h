@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_skyscraper_packed_dl_0[] = "__OTR__models/tracks/skyscraper/skyscraper_displaylists/d_course_skyscraper_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_skyscraper_packed_dls[] = "__OTR__models/tracks/skyscraper/skyscraper_displaylists/d_course_skyscraper_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_skyscraper_packed_dl_238[] = "__OTR__models/tracks/skyscraper/skyscraper_displaylists/d_course_skyscraper_packed_dl_238";
 
 static const ALIGN_ASSET(2) char d_course_skyscraper_packed_dl_248[] = "__OTR__models/tracks/skyscraper/skyscraper_displaylists/d_course_skyscraper_packed_dl_248";

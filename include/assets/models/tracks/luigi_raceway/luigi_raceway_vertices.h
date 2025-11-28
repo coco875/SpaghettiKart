@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_vertex_0x04000000[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_vertices/d_course_luigi_raceway_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_vertex[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_vertices/d_course_luigi_raceway_vertex";
-
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_vertex_0x04000080[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_vertices/d_course_luigi_raceway_vertex_0x04000080";
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_vertex_0x04000100[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_vertices/d_course_luigi_raceway_vertex_0x04000100";

@@ -40,23 +40,7 @@ extern "C" {
     extern s8 gPlayerCount;
 }
 
-const course_texture frappe_snowland_textures[] = {
-    { gTexture6684F8, 0x010D, 0x0800, 0x0 }, // 0x05000000
-    { gTexture66CA98, 0x02C9, 0x0800, 0x0 }, // 0x05000800
-    { gTexture66EBF0, 0x0146, 0x0800, 0x0 }, // 0x05001000
-    { gTexture675434, 0x0245, 0x0800, 0x0 }, // 0x05001800
-    { gTexture677F04, 0x0213, 0x0800, 0x0 }, // 0x05002000
-    { gTexture678118, 0x0314, 0x0800, 0x0 }, // 0x05002800
-    { gTexture679258, 0x04E3, 0x1000, 0x0 }, // 0x05003000
-    { gTexture67973C, 0x04C6, 0x1000, 0x0 }, // 0x05004000
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 FrappeSnowland::FrappeSnowland() {
-    this->vtx = d_course_frappe_snowland_vertex;
-    this->gfx = d_course_frappe_snowland_packed_dls;
-    this->gfxSize = 4140;
-    Props.textures = frappe_snowland_textures;
     Props.Minimap.Texture = minimap_frappe_snowland;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

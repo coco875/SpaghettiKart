@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_packed_dl_0[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_displaylists/d_course_dks_jungle_parkway_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_packed_dls[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_displaylists/d_course_dks_jungle_parkway_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_packed_dl_200[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_displaylists/d_course_dks_jungle_parkway_packed_dl_200";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_packed_dl_398[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_displaylists/d_course_dks_jungle_parkway_packed_dl_398";

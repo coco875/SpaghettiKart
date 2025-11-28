@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_packed_dl_0[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_displaylists/d_course_koopa_troopa_beach_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_packed_dls[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_displaylists/d_course_koopa_troopa_beach_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_packed_dl_B0[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_displaylists/d_course_koopa_troopa_beach_packed_dl_B0";
 
 static const ALIGN_ASSET(2) char d_course_koopa_troopa_beach_packed_dl_160[] = "__OTR__models/tracks/koopa_troopa_beach/koopa_troopa_beach_displaylists/d_course_koopa_troopa_beach_packed_dl_160";

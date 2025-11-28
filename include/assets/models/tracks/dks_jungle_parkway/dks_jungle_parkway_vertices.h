@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_vertex_0x04000000[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_vertices/d_course_dks_jungle_parkway_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_vertex[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_vertices/d_course_dks_jungle_parkway_vertex";
-
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_vertex_0x04000100[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_vertices/d_course_dks_jungle_parkway_vertex_0x04000100";
 
 static const ALIGN_ASSET(2) char d_course_dks_jungle_parkway_vertex_0x04000180[] = "__OTR__models/tracks/dks_jungle_parkway/dks_jungle_parkway_vertices/d_course_dks_jungle_parkway_vertex_0x04000180";

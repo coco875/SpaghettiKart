@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_rainbow_road_packed_dl_0[] = "__OTR__models/tracks/rainbow_road/rainbow_road_displaylists/d_course_rainbow_road_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_rainbow_road_packed_dls[] = "__OTR__models/tracks/rainbow_road/rainbow_road_displaylists/d_course_rainbow_road_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_rainbow_road_packed_dl_308[] = "__OTR__models/tracks/rainbow_road/rainbow_road_displaylists/d_course_rainbow_road_packed_dl_308";
 
 static const ALIGN_ASSET(2) char d_course_rainbow_road_packed_dl_498[] = "__OTR__models/tracks/rainbow_road/rainbow_road_displaylists/d_course_rainbow_road_packed_dl_498";

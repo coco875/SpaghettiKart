@@ -517,7 +517,6 @@ TrackPathPoint harbour_path[] = {
 };
 
 Harbour::Harbour() {
-    this->gfxSize = 100;
     Props.Minimap.Texture = minimap_mario_raceway;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

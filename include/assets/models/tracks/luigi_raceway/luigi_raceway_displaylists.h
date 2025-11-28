@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_packed_dl_0[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_displaylists/d_course_luigi_raceway_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_luigi_raceway_packed_dls[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_displaylists/d_course_luigi_raceway_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_packed_dl_68[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_displaylists/d_course_luigi_raceway_packed_dl_68";
 
 static const ALIGN_ASSET(2) char d_course_luigi_raceway_packed_dl_78[] = "__OTR__models/tracks/luigi_raceway/luigi_raceway_displaylists/d_course_luigi_raceway_packed_dl_78";

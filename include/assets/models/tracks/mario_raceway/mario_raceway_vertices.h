@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_mario_raceway_vertex_0x04000000[] = "__OTR__models/tracks/mario_raceway/mario_raceway_vertices/d_course_mario_raceway_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_mario_raceway_vertex[] = "__OTR__models/tracks/mario_raceway/mario_raceway_vertices/d_course_mario_raceway_vertex";
-
 static const ALIGN_ASSET(2) char d_course_mario_raceway_vertex_0x040000C0[] = "__OTR__models/tracks/mario_raceway/mario_raceway_vertices/d_course_mario_raceway_vertex_0x040000C0";
 
 static const ALIGN_ASSET(2) char d_course_mario_raceway_vertex_0x04000180[] = "__OTR__models/tracks/mario_raceway/mario_raceway_vertices/d_course_mario_raceway_vertex_0x04000180";

@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_double_deck_vertex_0x04000000[] = "__OTR__models/tracks/double_deck/double_deck_vertices/d_course_double_deck_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_double_deck_vertex[] = "__OTR__models/tracks/double_deck/double_deck_vertices/d_course_double_deck_vertex";
-
 static const ALIGN_ASSET(2) char d_course_double_deck_vertex_0x04000200[] = "__OTR__models/tracks/double_deck/double_deck_vertices/d_course_double_deck_vertex_0x04000200";
 
 static const ALIGN_ASSET(2) char d_course_double_deck_vertex_0x04000400[] = "__OTR__models/tracks/double_deck/double_deck_vertices/d_course_double_deck_vertex_0x04000400";

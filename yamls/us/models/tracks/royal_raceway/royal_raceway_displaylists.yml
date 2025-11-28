@@ -826,11 +826,6 @@
       - '#include <libultraship.h>'
       - '#include <libultra/gbi.h>'
       - '#include <align_asset_macro.h>'
-d_course_royal_raceway_packed_dls:
-  symbol: d_course_royal_raceway_packed_dls
-  type: blob
-  offset: 0x0
-  size: 0x3643
 d_course_royal_raceway_packed_dl_0:
   symbol: d_course_royal_raceway_packed_dl_0
   type: MK64:PACKED_GFX

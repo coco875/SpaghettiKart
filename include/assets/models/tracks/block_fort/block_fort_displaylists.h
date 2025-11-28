@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_block_fort_packed_dl_0[] = "__OTR__models/tracks/block_fort/block_fort_displaylists/d_course_block_fort_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_block_fort_packed_dls[] = "__OTR__models/tracks/block_fort/block_fort_displaylists/d_course_block_fort_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_block_fort_packed_dl_B8[] = "__OTR__models/tracks/block_fort/block_fort_displaylists/d_course_block_fort_packed_dl_B8";
 
 static const ALIGN_ASSET(2) char d_course_block_fort_packed_dl_148[] = "__OTR__models/tracks/block_fort/block_fort_displaylists/d_course_block_fort_packed_dl_148";

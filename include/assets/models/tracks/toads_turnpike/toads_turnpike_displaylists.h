@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_packed_dl_0[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_displaylists/d_course_toads_turnpike_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_packed_dls[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_displaylists/d_course_toads_turnpike_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_packed_dl_68[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_displaylists/d_course_toads_turnpike_packed_dl_68";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_packed_dl_D8[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_displaylists/d_course_toads_turnpike_packed_dl_D8";

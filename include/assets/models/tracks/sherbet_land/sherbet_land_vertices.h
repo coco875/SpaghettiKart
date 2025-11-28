@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_vertex_0x04000000[] = "__OTR__models/tracks/sherbet_land/sherbet_land_vertices/d_course_sherbet_land_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_sherbet_land_vertex[] = "__OTR__models/tracks/sherbet_land/sherbet_land_vertices/d_course_sherbet_land_vertex";
-
 static const ALIGN_ASSET(2) char d_course_sherbet_land_vertex_0x04000040[] = "__OTR__models/tracks/sherbet_land/sherbet_land_vertices/d_course_sherbet_land_vertex_0x04000040";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_vertex_0x04000080[] = "__OTR__models/tracks/sherbet_land/sherbet_land_vertices/d_course_sherbet_land_vertex_0x04000080";

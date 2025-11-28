@@ -38,35 +38,7 @@ extern "C" {
     extern const char *choco_mountain_dls[];
 }
 
-const course_texture choco_mountain_textures[] = {
-    { gTexture64619C, 0x0124, 0x0800, 0x0 }, // 0x05000000
-    { gTexture64647C, 0x0829, 0x1000, 0x0 }, // 0x05000800
-    { gTexture647F4C, 0x05BC, 0x1000, 0x0 }, // 0x05001800
-    { gTexture64FBF4, 0x0274, 0x0800, 0x0 }, // 0x05002800
-    { gTexture653DB0, 0x06AE, 0x0800, 0x0 }, // 0x05003000
-    { gTexture652B54, 0x0606, 0x0800, 0x0 }, // 0x05003800
-    { gTexture65315C, 0x04A9, 0x0800, 0x0 }, // 0x05004000
-    { gTexture6684F8, 0x010D, 0x0800, 0x0 }, // 0x05004800
-    { gTextureSignLuigis0, 0x0287, 0x1000, 0x0 }, // 0x05005000
-    { gTextureSignLuigis1, 0x02AF, 0x1000, 0x0 }, // 0x05006000
-    { gTextureSignNintendoRed0, 0x02A6, 0x1000, 0x0 }, // 0x05007000
-    { gTextureSignNintendoRed1, 0x02F7, 0x1000, 0x0 }, // 0x05008000
-    { gTexture6774D8, 0x0113, 0x0800, 0x0 }, // 0x05009000
-    { gTextureSignFallingRocks, 0x012C, 0x0800, 0x0 }, // 0x05009800
-    { gTextureSignBackside, 0x011E, 0x0800, 0x0 }, // 0x0500A000
-    { gTexture679C04, 0x012F, 0x0800, 0x0 }, // 0x0500A800
-    { gTexture67B864, 0x014C, 0x0800, 0x0 }, // 0x0500B000
-    { gTexture67DC20, 0x03EF, 0x0800, 0x0 }, // 0x0500B800
-    { gTextureSignYoshi, 0x04DF, 0x1000, 0x0 }, // 0x0500C000
-    { gTextureCheckerboardBlueGray, 0x04A1, 0x1000, 0x0 }, // 0x0500D000
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 ChocoMountain::ChocoMountain() {
-    this->vtx = d_course_choco_mountain_vertex;
-    this->gfx = d_course_choco_mountain_packed_dls;
-    this->gfxSize = 2910;
-    Props.textures = choco_mountain_textures;
     Props.Minimap.Texture = minimap_choco_mountain;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

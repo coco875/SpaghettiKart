@@ -37,30 +37,7 @@ extern "C" {
     extern const char *d_course_yoshi_valley_dl_list[];
 }
 
-const course_texture yoshi_valley_textures[] = {
-    { gTexture66EBF0, 0x0146, 0x0800, 0x0 }, // 0x05000000
-    { gTextureWoodBridgeSlats, 0x0DAB, 0x1000, 0x0 }, // 0x05000800
-    { gTexture65E2EC, 0x02B0, 0x0800, 0x0 }, // 0x05001800
-    { gTexture6846DC, 0x04EA, 0x0800, 0x0 }, // 0x05002000
-    { gTextureFenceRope, 0x0540, 0x0800, 0x0 }, // 0x05002800
-    { gTexture685108, 0x04D4, 0x0800, 0x0 }, // 0x05003000
-    { gTexture64CC20, 0x0EC3, 0x1000, 0x0 }, // 0x05003800
-    { gTextureGrass4, 0x05C3, 0x0800, 0x0 }, // 0x05004800
-    { gTexture6775EC, 0x0233, 0x1000, 0x0 }, // 0x05005000
-    { gTexture68E2D0, 0x087F, 0x0800, 0x0 }, // 0x05006000
-    { gTextureCheckerboardBlackWhite, 0x0107, 0x0800, 0x0 }, // 0x05006800
-    { gTexture643B3C, 0x0798, 0x0800, 0x0 }, // 0x05007000
-    { gTextureSignWoodRedArrow, 0x04E1, 0x1000, 0x0 }, // 0x05007800
-    { gTexture68DEC0, 0x0410, 0x0800, 0x0 }, // 0x05008800
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 YoshiValley::YoshiValley() {
-    this->vtx = d_course_yoshi_valley_vertex;
-    this->gfx = d_course_yoshi_valley_packed_dls;
-    this->gfxSize = 4140;
-    Props.textures = yoshi_valley_textures;
-
     Props.Minimap.Texture = minimap_yoshi_valley;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

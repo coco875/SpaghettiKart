@@ -34,17 +34,7 @@ extern "C" {
     extern s16 currentScreenSection;
 }
 
-const course_texture double_deck_textures[] = {
-    { gTextureGrayCobblestone, 0x010C, 0x0800, 0x0 }, // 0x5000000
-    { gTexture642978, 0x010D, 0x0800, 0x0 }, // 0x5000800
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 DoubleDeck::DoubleDeck() {
-    this->vtx = d_course_double_deck_vertex;
-    this->gfx = d_course_double_deck_packed_dls;
-    this->gfxSize = 699;
-    Props.textures = double_deck_textures;
     Props.Minimap.Texture = minimap_double_deck;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

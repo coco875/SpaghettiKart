@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_vertex_0x04000000[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_vertices/d_course_kalimari_desert_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_kalimari_desert_vertex[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_vertices/d_course_kalimari_desert_vertex";
-
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_vertex_0x04000080[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_vertices/d_course_kalimari_desert_vertex_0x04000080";
 
 static const ALIGN_ASSET(2) char d_course_kalimari_desert_vertex_0x04000100[] = "__OTR__models/tracks/kalimari_desert/kalimari_desert_vertices/d_course_kalimari_desert_vertex_0x04000100";

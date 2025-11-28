@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_vertex_0x04000000[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_vertices/d_course_yoshi_valley_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_yoshi_valley_vertex[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_vertices/d_course_yoshi_valley_vertex";
-
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_vertex_0x04000200[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_vertices/d_course_yoshi_valley_vertex_0x04000200";
 
 static const ALIGN_ASSET(2) char d_course_yoshi_valley_vertex_0x04000240[] = "__OTR__models/tracks/yoshi_valley/yoshi_valley_vertices/d_course_yoshi_valley_vertex_0x04000240";

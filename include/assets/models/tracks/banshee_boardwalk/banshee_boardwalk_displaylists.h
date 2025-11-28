@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_packed_dl_0[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_displaylists/d_course_banshee_boardwalk_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_packed_dls[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_displaylists/d_course_banshee_boardwalk_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_packed_dl_60[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_displaylists/d_course_banshee_boardwalk_packed_dl_60";
 
 static const ALIGN_ASSET(2) char d_course_banshee_boardwalk_packed_dl_70[] = "__OTR__models/tracks/banshee_boardwalk/banshee_boardwalk_displaylists/d_course_banshee_boardwalk_packed_dl_70";

@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_wario_stadium_packed_dl_0[] = "__OTR__models/tracks/wario_stadium/wario_stadium_displaylists/d_course_wario_stadium_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_wario_stadium_packed_dls[] = "__OTR__models/tracks/wario_stadium/wario_stadium_displaylists/d_course_wario_stadium_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_wario_stadium_packed_dl_60[] = "__OTR__models/tracks/wario_stadium/wario_stadium_displaylists/d_course_wario_stadium_packed_dl_60";
 
 static const ALIGN_ASSET(2) char d_course_wario_stadium_packed_dl_C0[] = "__OTR__models/tracks/wario_stadium/wario_stadium_displaylists/d_course_wario_stadium_packed_dl_C0";

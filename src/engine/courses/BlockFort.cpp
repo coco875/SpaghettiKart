@@ -35,22 +35,7 @@ extern const char* block_fort_dls[];
 extern s16 currentScreenSection;
 }
 
-const course_texture block_fort_textures[] = {
-    { gTexture64286C, 0x010A, 0x0800, 0x0 }, // 0x05000000
-    { gTextureGrayCheckerboard, 0x010C, 0x0800, 0x0 }, // 0x05000800
-    { gTextureGrayCobblestone, 0x010C, 0x0800, 0x0 }, // 0x05001000
-    { gTexture64275C, 0x0110, 0x0800, 0x0 }, // 0x05001800
-    { gTexture642978, 0x010D, 0x0800, 0x0 }, // 0x05002000
-    { gTexture6747C4, 0x0145, 0x0800, 0x0 }, // 0x05002800
-    { gTexture6442D4, 0x0138, 0x0800, 0x0 }, // 0x05003000
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 BlockFort::BlockFort() {
-    this->vtx = d_course_block_fort_vertex;
-    this->gfx = d_course_block_fort_packed_dls;
-    this->gfxSize = 699;
-    Props.textures = block_fort_textures;
     Props.Minimap.Texture = minimap_block_fort;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

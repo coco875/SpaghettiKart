@@ -90,7 +90,6 @@ typedef struct Properties {
     CloudData *Clouds;
     CloudData *CloudList;
     SkyboxColours Skybox;
-    const course_texture* textures;
     enum MusicSeq Sequence;
     float WaterLevel; // Used for effects, and Lakitu pick up height. Not necessarily the visual water model height.
 
@@ -302,9 +301,6 @@ public:
     // Ex. DK Jungle where there's a waterfall and you can drive above and below it.
     std::vector<WaterVolume> WaterVolumes;
 
-    const char* vtx = nullptr;
-    const char* gfx = nullptr;
-    size_t gfxSize = 0;
     bool bSpawnFinishline = true;
     std::optional<FVector> FinishlineSpawnPoint;
 

@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_bowsers_castle_packed_dl_0[] = "__OTR__models/tracks/bowsers_castle/bowsers_castle_displaylists/d_course_bowsers_castle_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_bowsers_castle_packed_dls[] = "__OTR__models/tracks/bowsers_castle/bowsers_castle_displaylists/d_course_bowsers_castle_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_bowsers_castle_packed_dl_60[] = "__OTR__models/tracks/bowsers_castle/bowsers_castle_displaylists/d_course_bowsers_castle_packed_dl_60";
 
 static const ALIGN_ASSET(2) char d_course_bowsers_castle_packed_dl_C0[] = "__OTR__models/tracks/bowsers_castle/bowsers_castle_displaylists/d_course_bowsers_castle_packed_dl_C0";

@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_packed_dl_0[] = "__OTR__models/tracks/sherbet_land/sherbet_land_displaylists/d_course_sherbet_land_packed_dl_0";
 
-static const ALIGN_ASSET(2) char d_course_sherbet_land_packed_dls[] = "__OTR__models/tracks/sherbet_land/sherbet_land_displaylists/d_course_sherbet_land_packed_dls";
-
 static const ALIGN_ASSET(2) char d_course_sherbet_land_packed_dl_C0[] = "__OTR__models/tracks/sherbet_land/sherbet_land_displaylists/d_course_sherbet_land_packed_dl_C0";
 
 static const ALIGN_ASSET(2) char d_course_sherbet_land_packed_dl_180[] = "__OTR__models/tracks/sherbet_land/sherbet_land_displaylists/d_course_sherbet_land_packed_dl_180";

@@ -33,19 +33,7 @@ extern const char* big_donut_dls[];
 extern s16 currentScreenSection;
 }
 
-const course_texture big_donut_textures[] = {
-    { gTexture66ABA4, 0x0312, 0x0800, 0x0 }, // 0x05000000
-    { gTexture6747C4, 0x0145, 0x0800, 0x0 }, // 0x05000800
-    { gTexture67490C, 0x021C, 0x0800, 0x0 }, // 0x05001000
-    { gTexture64BA50, 0x0110, 0x0800, 0x0 }, // 0x05001800
-    { 0x00000000, 0x0000, 0x0000, 0x0 },
-};
-
 BigDonut::BigDonut() {
-    this->vtx = d_course_big_donut_vertex;
-    this->gfx = d_course_big_donut_packed_dls;
-    this->gfxSize = 528;
-    Props.textures = big_donut_textures;
     Props.Minimap.Texture = minimap_big_donut;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);

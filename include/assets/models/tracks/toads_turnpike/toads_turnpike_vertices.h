@@ -6,8 +6,6 @@
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_vertex_0x04000000[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_vertices/d_course_toads_turnpike_vertex_0x04000000";
 
-static const ALIGN_ASSET(2) char d_course_toads_turnpike_vertex[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_vertices/d_course_toads_turnpike_vertex";
-
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_vertex_0x04000080[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_vertices/d_course_toads_turnpike_vertex_0x04000080";
 
 static const ALIGN_ASSET(2) char d_course_toads_turnpike_vertex_0x04000140[] = "__OTR__models/tracks/toads_turnpike/toads_turnpike_vertices/d_course_toads_turnpike_vertex_0x04000140";
