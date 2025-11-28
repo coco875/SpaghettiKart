@@ -73,8 +73,8 @@ void parse_course_displaylists(TrackSections* asset) {
         } else {
             D_8015F5A4 = 0;
         }
-        char* name = ResourceGetNameByCrc(section->crc);
-        printf("Generating collision mesh for section %d: %s\n", section->sectionId, name != NULL ? name : "Unknown");
+        // char* name = ResourceGetNameByCrc(section->crc);
+        // printf("Generating collision mesh for section %d: %s\n", section->sectionId, name != NULL ? name : "Unknown");
         generate_collision_mesh(ResourceGetDataByCrc(section->crc), section->surfaceType, section->sectionId);
         section++;
     }

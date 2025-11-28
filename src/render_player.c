@@ -590,7 +590,7 @@ Vtx* gPlayerVtx[] = { gPlayerOneVtx,  gPlayerTwoVtx, gPlayerThreeVtx, gPlayerFou
 
 f32 gCharacterSize[] = { MARIO_SIZE, LUIGI_SIZE, YOSHI_SIZE, TOAD_SIZE, DK_SIZE, WARIO_SIZE, PEACH_SIZE, BOWSER_SIZE };
 
-u32 gKartMarioWheels0[] = { 84*8, 84*7, 84*6, 84*5, 84*4, 84*3, 84*2, 84, 0 };
+u32 gKartMarioWheels0[] = { 672, 588, 504, 420, 336, 252, 168, 84, 0 };
 u32 gKartMarioWheels1[] = { 1076, 1076, 996, 916, 916, 916, 836, 756, 756 };
 
 u32 gKartLuigiWheels0[] = { 672, 588, 504, 420, 336, 252, 168, 84, 0 };
@@ -1592,6 +1592,12 @@ void render_player_shadow_credits(Player* player, s8 playerId, s8 screenId) {
     gSPTexture(gDisplayListHead++, 1, 1, 0, G_TX_RENDERTILE, G_OFF);
 }
 
+typedef u8** kart_texture_t;
+
+extern kart_texture_t** gKartTextureTable0[];
+extern kart_texture_t** gKartTextureTable1[];
+extern u8** gKartTextureTumbles[];
+
 void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     UNUSED s32 pad;
     Mat4 mtx;
@@ -1643,12 +1649,34 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     gPlayerPalette =
         (struct_D_802F1F80*) &gPlayerPalettesList[D_801651D0[screenId][playerId]][screenId][playerId * 0x100];
 #endif
-    if ((screenId == 0) || (screenId == 1)) {
-        load_kart_texture(player, playerId, screenId, screenId, 0);
-        sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
+    s32 temp = player->effects;
+    s16 tyreSpeed = player->tyreSpeed;
+    if (((temp & 0x80) == 0x80) || ((temp & 0x40) == 0x40) || ((temp & 0x80000) == 0x80000) ||
+        ((temp & 0x800000) == 0x800000) || ((temp & 0x20000) == 0x20000) || ((player->unk_044 & 0x800) != 0)) {
+        if (player->animFrameSelector[screenId] != 0) {
+            sKartTexture =
+                gKartTextureTable1[player->characterId][player->animGroupSelector[screenId]]
+                                  [player->animFrameSelector[screenId]][tyreSpeed >> 8];
+        } else {
+            sKartTexture =
+                gKartTextureTable0[player->characterId][player->animGroupSelector[screenId]]
+                                  [player->animFrameSelector[screenId]][0];
+        }
+    } else if (((temp & 0x400) == 0x400) || ((temp & 0x01000000) == 0x01000000) ||
+               ((temp & 0x02000000) == 0x02000000) || ((temp & 0x10000) == 0x10000)) {
+// player->unk_0A8 >> 8 converts an 8.8 fixed-point animation frame to a whole number.
+        sKartTexture =
+            gKartTextureTumbles[player->characterId][player->unk_0A8 >> 8];
     } else {
-        sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId - 1][playerId - 4].unk_00;
+        sKartTexture =
+            gKartTextureTable0[player->characterId][player->animGroupSelector[screenId]]
+                              [player->animFrameSelector[screenId]][tyreSpeed >> 8];
     }
+    // if ((screenId == 0) || (screenId == 1)) {
+    //     sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
+    // } else {
+    //     sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId - 1][playerId - 4].unk_00;
+    // }
     mtxf_translate_rotate(mtx, sp154, sp14C);
     mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     convert_to_fixed_point_matrix(GetKartMatrix(playerId + (screenId * 8)), mtx);
