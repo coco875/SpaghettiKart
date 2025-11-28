@@ -41,6 +41,9 @@ public:
     }
 
     explicit OCrab(const SpawnParams& params);
+    ~OCrab() {
+        _count--;
+    }
 
     virtual void Tick() override;
     virtual void Draw(s32 cameraId) override;
