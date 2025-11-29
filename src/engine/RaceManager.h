@@ -1,6 +1,17 @@
 #pragma once
 
 #ifdef __cplusplus
+extern "C" {
+#endif
+#include <libultraship/libultra/gbi.h>
+
+void add_triangle_to_collision_mesh(Vtx* vtx1, Vtx* vtx2, Vtx* vtx3, Vtx** outVtx1, Vtx** outVtx2, Vtx** outVtx3);
+
+#ifdef __cplusplus
+}
+#endif
+
+#ifdef __cplusplus
 class World;
 
 /**

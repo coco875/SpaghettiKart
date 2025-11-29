@@ -15,6 +15,7 @@
 #include "port/Game.h"
 #include "resourcebridge.h"
 #include <stdio.h>
+#include "RaceManager.h"
 
 #pragma intrinsic(sqrtf)
 
@@ -1537,6 +1538,8 @@ void add_collision_triangle(Vtx* vtx1, Vtx* vtx2, Vtx* vtx3, s8 surfaceType, u16
     s16 minX;
     s16 maxY;
     s16 minZ;
+
+    add_triangle_to_collision_mesh(vtx1, vtx2, vtx3, &vtx1, &vtx2, &vtx3);
 
     triangle->vtx1 = vtx1;
     triangle->vtx2 = vtx2;
