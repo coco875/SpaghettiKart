@@ -1,5 +1,6 @@
 #pragma once
 
+#ifdef __cplusplus
 class World;
 
 /**
@@ -29,3 +30,5 @@ public:
 protected:
     World& WorldContext;
 };
+
+#endif

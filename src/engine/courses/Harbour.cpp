@@ -590,8 +590,8 @@ Harbour::Harbour() {
 }
 
 TrackSections harbour_surfaces[] = {
-    { road_map_001_mesh, 1,  255, 0x0000 },
-    { ground_map_mesh, 8,  255, 0x0000 },
+    { (uintptr_t) road_map_001_mesh, 1,  255, 0x0000 },
+    { (uintptr_t) ground_map_mesh, 8,  255, 0x0000 },
     { 0x00000000, 0, 0, 0x00000 },
 };
 

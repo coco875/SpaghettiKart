@@ -882,11 +882,15 @@ void render_screens(s32 mode, s32 cameraId, s32 playerId) {
     render_set_position(trackMatrix, 0);
 
     // Draw track geography
-    gSPSetGeometryMode(gDisplayListHead++, G_CULL_FRONT);
-    gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
+    if (gIsMirrorMode != 0) {
+        gSPSetGeometryMode(gDisplayListHead++, G_CULL_FRONT);
+        gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
+    }
     render_course(screen);
-    gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
-    gSPClearGeometryMode(gDisplayListHead++, G_CULL_FRONT);
+    if (gIsMirrorMode != 0) {
+        gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
+        gSPClearGeometryMode(gDisplayListHead++, G_CULL_FRONT);
+    }
     FrameInterpolation_RecordCloseChild();
 
     // Draw dynamic game objects
