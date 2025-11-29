@@ -1,4 +1,4 @@
- #include <libultraship.h>
+#include <libultraship.h>
 #include <libultra/gbi.h>
 #include <macros.h>
 #include <mk64.h>
@@ -57,7 +57,7 @@ s32 func_80290C20(Camera* camera) {
 void parse_course_displaylists(TrackSections* asset) {
     TrackSections* section = (TrackSections*) asset;
 
-    while (section->addr != 0) {
+    while (section->crc != 0) {
         if (section->flags & 0x8000) {
             D_8015F59C = 1;
         } else {
@@ -74,8 +74,15 @@ void parse_course_displaylists(TrackSections* asset) {
             D_8015F5A4 = 0;
         }
         // char* name = ResourceGetNameByCrc(section->crc);
-        // printf("Generating collision mesh for section %d: %s\n", section->sectionId, name != NULL ? name : "Unknown");
-        generate_collision_mesh(ResourceGetDataByCrc(section->crc), section->surfaceType, section->sectionId);
+        // printf("Generating collision mesh for section %d: %s\n", section->sectionId, name != NULL ? name :
+        // "Unknown");
+        void* addr = ResourceGetDataByCrc(section->crc);
+        if (addr == NULL) {
+            printf("Warning: Could not find resource for section %d with crc 0x%llX\n", section->sectionId,
+                   section->crc);
+            addr = (void*) section->crc;
+        }
+        generate_collision_mesh(addr, section->surfaceType, section->sectionId);
         section++;
     }
 }
@@ -223,36 +230,28 @@ void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
 
     // This pushes the camera matrices to the top of the stack.
     // It does not appear to really do anything.
-    // Perhaps they thought it was necessary to set the camera back to projection mode since rainbow road uses model mode.
-    // But that issue should be cleared up in render_screens() already.
+    // Perhaps they thought it was necessary to set the camera back to projection mode since rainbow road uses model
+    // mode. But that issue should be cleared up in render_screens() already.
     switch (playerId) {
         case PLAYER_ONE:
-            size_t playerIdx = PLAYER_ONE; 
+            size_t playerIdx = PLAYER_ONE;
             if (CVarGetInteger("gFreecam", 0) == true) {
                 playerIdx = CAMERA_FREECAM;
             }
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(playerIdx),
-                      G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(playerIdx),
-                      G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+            gSPMatrix(gDisplayListHead++, GetPerspMatrix(playerIdx), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(playerIdx), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
             break;
         case PLAYER_TWO:
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_TWO),
-                      G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_TWO),
-                      G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_TWO), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_TWO), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
             break;
         case PLAYER_THREE:
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_THREE),
-                      G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_THREE),
-                      G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_THREE), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_THREE), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
             break;
         case PLAYER_FOUR:
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_FOUR),
-                      G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_FOUR),
-                      G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
+            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_FOUR), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_FOUR), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
             break;
     }
 

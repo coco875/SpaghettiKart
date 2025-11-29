@@ -8,6 +8,7 @@
 #include "port/resource/type/TrackSections.h"
 #include "engine/editor/SceneManager.h"
 #include "Registry.h"
+#include "resourcebridge.h"
 
 extern "C" {
 #include "main.h"
@@ -158,7 +159,7 @@ void Course::Load() {
         bIsMod = true;
         // auto res = std::dynamic_pointer_cast<MK64::TrackSectionsO2RClass>(ResourceLoad(TrackSectionsPtr.c_str()));
 
-        TrackSectionsO2R* sections = (TrackSectionsO2R*) LOAD_ASSET_RAW(TrackSectionsPtr.c_str());
+        TrackSections* sections = (TrackSections*) LOAD_ASSET_RAW(TrackSectionsPtr.c_str());
         size_t size = ResourceGetSizeByName(TrackSectionsPtr.c_str());
 
         if (sections != nullptr) {
@@ -179,9 +180,9 @@ void Course::Load() {
 }
 
 // C++ version of parse_course_displaylists()
-void Course::ParseCourseSections(TrackSectionsO2R* sections, size_t size) {
+void Course::ParseCourseSections(TrackSections* sections, size_t size) {
     printf("\n[Track] Generating Collision Meshes...\n");
-    for (size_t i = 0; i < (size / sizeof(TrackSectionsO2R)); i++) {
+    for (size_t i = 0; i < (size / sizeof(TrackSections)); i++) {
         if (sections[i].flags & 0x8000) {
             D_8015F59C = 1; // single-sided wall
         } else {
@@ -197,8 +198,9 @@ void Course::ParseCourseSections(TrackSectionsO2R* sections, size_t size) {
         } else {
             D_8015F5A4 = 0;
         }
-        printf("  %s\n", sections[i].addr.c_str());
-        generate_collision_mesh((Gfx*) LOAD_ASSET_RAW(sections[i].addr.c_str()), sections[i].surfaceType,
+        const char* name = ResourceGetNameByCrc(sections[i].crc);
+        printf("  %s\n", name);
+        generate_collision_mesh((Gfx*) ResourceGetDataByCrc(sections[i].crc), sections[i].surfaceType,
                                 sections[i].sectionId);
     }
     printf("[Track] Collision Mesh Generation Complete!\n\n");
@@ -343,10 +345,10 @@ void Course::Render(struct UnkStruct_800DC5EC* arg0) {
             // d_course_big_donut_packed_dl_DE8
         }
 
-        TrackSectionsO2R* sections = (TrackSectionsO2R*) LOAD_ASSET_RAW(TrackSectionsPtr.c_str());
+        TrackSections* sections = (TrackSections*) LOAD_ASSET_RAW(TrackSectionsPtr.c_str());
         size_t size = ResourceGetSizeByName(TrackSectionsPtr.c_str());
-        for (size_t i = 0; i < (size / sizeof(TrackSectionsO2R)); i++) {
-            gSPDisplayList(gDisplayListHead++, (Gfx*) LOAD_ASSET_RAW(sections[i].addr.c_str()));
+        for (size_t i = 0; i < (size / sizeof(TrackSections)); i++) {
+            gSPDisplayList(gDisplayListHead++, (Gfx*) ResourceGetDataByCrc(sections[i].crc));
         }
     }
 }

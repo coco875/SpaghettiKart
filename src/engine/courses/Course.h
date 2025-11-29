@@ -320,7 +320,7 @@ public:
     virtual void Load(); // Decompress and load stock courses or from o2r but TrackSectionsPtr must be set.
     virtual void Load(Vtx* vtx, Gfx *gfx); // Load custom track from code. Load must be overridden and then call to this base class method impl.
     virtual void LoadTextures();
-    virtual void ParseCourseSections(TrackSectionsO2R* sections, size_t size);
+    virtual void ParseCourseSections(TrackSections* sections, size_t size);
 
     /**
      * @brief BeginPlay This function is called once at the start of gameplay.

@@ -2168,7 +2168,7 @@ void find_vtx_and_set_colours(Gfx* displayList, s8 alpha, u8 red, u8 green, u8 b
     if (GameEngine_OTRSigCheck(displayList)) {
         displayList = (Gfx*) ResourceGetDataByName(displayList);
     }
-    Gfx* gfx = (Gfx*) displayList;
+    Gfx* gfx = displayList;
     uintptr_t lo;
     uintptr_t hi;
     s32 opcode;
@@ -2181,9 +2181,36 @@ void find_vtx_and_set_colours(Gfx* displayList, s8 alpha, u8 red, u8 green, u8 b
             break;
         } else if (opcode == (G_DL << 24)) {
             find_vtx_and_set_colours((Gfx*) hi, alpha, red, green, blue);
+        } else if (opcode == (G_DL_OTR_HASH << 24)) {
+            gfx++;
+            uint64_t hash = gfx->words.w0 << 32 | gfx->words.w1;
+            find_vtx_and_set_colours(ResourceGetDataByCrc(hash), alpha, red, green, blue);
+        } else if (opcode == (G_DL_OTR_FILEPATH << 24)) {
+            find_vtx_and_set_colours(ResourceGetDataByName((const char*)hi), alpha, red, green, blue);
         } else if (opcode == (G_VTX << 24)) {
             // G_VTX contains an addr hi
             set_vertex_colours(hi, (lo >> 10) & 0x3F, ((lo >> 16) & 0xFF) >> 1, alpha, red, green, blue);
+        } else if (opcode == (G_VTX_OTR_FILEPATH << 24)) {
+            const char* filePath = (const char*)hi;
+            // Fast64 outputs garbage data. Lets skip that...
+            if (is_cull_box(filePath)) {
+                gfx++;
+                continue;
+            }
+            gfx++;
+            size_t count = gfx->words.w0;
+            size_t index = (gfx->words.w1 >> 16);
+            size_t vtxDataOff = gfx->words.w1 & 0xFFFF;
+            Vtx* vtx = ( (Vtx*)ResourceGetDataByName(filePath) ) + vtxDataOff;
+
+            set_vertex_colours((uintptr_t)vtx, count, index, alpha, red, green, blue);
+        } else if (opcode == (G_VTX_OTR_HASH << 24)) {
+            gfx++;
+            uint64_t hash = gfx->words.w0 << 32 | gfx->words.w1;
+            int numVerts = (lo >> 12) & ((1<<8)-1);
+            int bufferIndex = ((lo >> 1) & ((1<<7)-1));
+            bufferIndex = numVerts - bufferIndex; 
+            set_vertex_colours((uintptr_t) ResourceGetDataByCrc(hash), numVerts, bufferIndex, alpha, red, green, blue);
         }
         gfx++;
     }

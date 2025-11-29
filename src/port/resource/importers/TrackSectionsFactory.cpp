@@ -2,6 +2,7 @@
 #include "../type/TrackSections.h"
 #include "spdlog/spdlog.h"
 #include "libultraship/libultra/gbi.h"
+#include "StrHash64.h"
 #include "tinyxml2.h"
 
 namespace MK64 {
@@ -19,9 +20,9 @@ ResourceFactoryBinaryTrackSectionsV0::ReadResource(std::shared_ptr<Ship::File> f
     section->TrackSectionsList.reserve(count);
 
     for (uint32_t i = 0; i < count; i++) {
-        TrackSectionsI data;
+        TrackSections data;
         //                      Convert n64 addr to native addr
-        data.addr = reader->ReadUInt64();
+        data.crc = reader->ReadUInt64();
         data.surfaceType = reader->ReadUByte();
         data.sectionId = reader->ReadUByte();
         data.flags = reader->ReadUInt16();
@@ -48,9 +49,9 @@ ResourceFactoryXMLTrackSectionsV0::ReadResource(std::shared_ptr<Ship::File> file
         std::string childName = std::string(child->Name());
 
         if (childName == "Section") {
-            TrackSectionsO2R data;
+            TrackSections data;
             //                      Convert n64 addr to native addr
-            data.addr = std::string(child->Attribute("gfx_path"));
+            data.crc = CRC64(child->Attribute("gfx_path"));
             data.surfaceType = child->IntAttribute("surface");
             data.sectionId = child->IntAttribute("section");
             data.flags = child->IntAttribute("flags");
