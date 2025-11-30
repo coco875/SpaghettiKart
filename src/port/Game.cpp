@@ -141,21 +141,6 @@ void CustomEngineInit() {
     //SelectMarioRaceway(); // This results in a nullptr
     SetMarioRaceway();
 
-    // ModelLoader::LoadModelList bowserStatueList = {
-    //     .course = gBowsersCastle,
-    //     .gfxBuffer = &gBowserStatueGfx[0],
-    //     .gfxBufferSize = 162,
-    //     .gfxStart = (0x2BB8 / 8), // 0x2BB8 / sizeof(OldGfx)
-    //     .vtxBuffer = &gBowserStatueVtx[0],
-    //     .vtxBufferSize = 717,
-    //     .vtxStart = 1942,
-    // };
-
-    // Model loader systems allows cutting pieces out of courses and making them actors.
-    // Commented out due to alleged stability issues.
-    // gModelLoader.Add(bowserStatueList);
-
-    // gModelLoader.Load();
     RegisterGameActors();
 }
 
