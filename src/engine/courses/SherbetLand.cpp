@@ -213,6 +213,11 @@ void SherbetLand::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCoun
     gDPSetTexturePersp(gDisplayListHead++, G_TP_PERSP);
 
     mtxf_identity(matrix);
+    if (gIsMirrorMode != 0) {
+        matrix[0][0] = -1.0f;
+        // matrix[1][1] = -1.0f;
+        // matrix[2][2] = -1.0f;
+    }
     render_set_position(matrix, 0);
     render_course_segments(sherbet_land_dls_2, screen);
 

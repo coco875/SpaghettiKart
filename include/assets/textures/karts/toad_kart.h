@@ -299,21 +299,21 @@ static const ALIGN_ASSET(2) char gKartToad036Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad036Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame036_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad037Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame037_wheel0";
+static const ALIGN_ASSET(2) char gKartToad037Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame037_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad037Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame037_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad037Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame037_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad037Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame037_wheel2";
+static const ALIGN_ASSET(2) char gKartToad037Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame037_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad038Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad038Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame038_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad038Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame038_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad038Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame038_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad038Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad039Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame039_wheel0";
 
@@ -323,13 +323,13 @@ static const ALIGN_ASSET(2) char gKartToad039Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad039Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame039_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad040Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame040_wheel1";
+static const ALIGN_ASSET(2) char gKartToad040Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame040_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad040Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame040_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad040Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame040_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad040Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame040_wheel0";
+static const ALIGN_ASSET(2) char gKartToad040Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame040_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad041Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame041_wheel0";
 
@@ -339,11 +339,11 @@ static const ALIGN_ASSET(2) char gKartToad041Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad041Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame041_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad042Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame042_wheel1";
+static const ALIGN_ASSET(2) char gKartToad042Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame042_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad042Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame042_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad042Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame042_wheel2";
+static const ALIGN_ASSET(2) char gKartToad042Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame042_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad042Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame042_wheel0";
 
@@ -365,27 +365,27 @@ static const ALIGN_ASSET(2) char gKartToad044Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad045Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame045_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad045Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame045_wheel1";
+static const ALIGN_ASSET(2) char gKartToad045Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame045_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad045Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame045_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad045Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame045_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad046Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame046_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad046Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame046_wheel2";
+static const ALIGN_ASSET(2) char gKartToad045Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame045_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad046Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame046_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad046Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame046_wheel1";
 
+static const ALIGN_ASSET(2) char gKartToad046Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame046_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad046Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame046_wheel3";
+
 static const ALIGN_ASSET(2) char gKartToad047Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame047_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad047Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad047Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame047_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad047Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame047_wheel2";
-
-static const ALIGN_ASSET(2) char gKartToad047Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad048Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame048_wheel0";
 
@@ -397,35 +397,35 @@ static const ALIGN_ASSET(2) char gKartToad048Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad049Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame049_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad049Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame049_wheel3";
+static const ALIGN_ASSET(2) char gKartToad049Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame049_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad049Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame049_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad049Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame049_wheel1";
+static const ALIGN_ASSET(2) char gKartToad049Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame049_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad050Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame050_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad050Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame050_wheel1";
+static const ALIGN_ASSET(2) char gKartToad050Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame050_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad050Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame050_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad050Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame050_wheel3";
+static const ALIGN_ASSET(2) char gKartToad050Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame050_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad051Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame051_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad051Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame051_wheel3";
+static const ALIGN_ASSET(2) char gKartToad051Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame051_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad051Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame051_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad051Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame051_wheel1";
+static const ALIGN_ASSET(2) char gKartToad051Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame051_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad052Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame052_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad052Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame052_wheel1";
+static const ALIGN_ASSET(2) char gKartToad052Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame052_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad052Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame052_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad052Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame052_wheel3";
+static const ALIGN_ASSET(2) char gKartToad052Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame052_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad053Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame053_wheel0";
 
@@ -443,29 +443,29 @@ static const ALIGN_ASSET(2) char gKartToad054Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad054Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame054_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad055Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame055_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad055Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame055_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad055Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame055_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad055Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame055_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad056Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame056_wheel1";
+static const ALIGN_ASSET(2) char gKartToad055Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame055_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad055Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame055_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad056Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame056_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad056Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame056_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad056Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame056_wheel2";
+static const ALIGN_ASSET(2) char gKartToad056Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame056_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad057Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame057_wheel0";
+static const ALIGN_ASSET(2) char gKartToad056Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame056_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad057Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame057_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad057Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame057_wheel2";
+static const ALIGN_ASSET(2) char gKartToad057Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame057_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad057Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame057_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad057Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame057_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad058Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame058_wheel0";
 
@@ -483,21 +483,21 @@ static const ALIGN_ASSET(2) char gKartToad059Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad059Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame059_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad060Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame060_wheel3";
+static const ALIGN_ASSET(2) char gKartToad060Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame060_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad060Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame060_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad060Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame060_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad060Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame060_wheel0";
+static const ALIGN_ASSET(2) char gKartToad060Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame060_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad061Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame061_wheel0";
+static const ALIGN_ASSET(2) char gKartToad061Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame061_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad061Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame061_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad061Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame061_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad061Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame061_wheel3";
+static const ALIGN_ASSET(2) char gKartToad061Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame061_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad062Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame062_wheel0";
 
@@ -515,21 +515,21 @@ static const ALIGN_ASSET(2) char gKartToad063Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad063Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame063_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad064Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame064_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad064Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame064_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad064Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame064_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad064Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame064_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad065Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame065_wheel0";
+static const ALIGN_ASSET(2) char gKartToad064Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame064_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad065Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame065_wheel1";
+static const ALIGN_ASSET(2) char gKartToad064Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame064_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad065Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame065_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad065Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame065_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad065Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame065_wheel3";
+static const ALIGN_ASSET(2) char gKartToad065Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame065_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad065Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame065_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad066Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame066_wheel0";
 
@@ -541,35 +541,35 @@ static const ALIGN_ASSET(2) char gKartToad066Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad067Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame067_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad067Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame067_wheel3";
+static const ALIGN_ASSET(2) char gKartToad067Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame067_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad067Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame067_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad067Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame067_wheel1";
+static const ALIGN_ASSET(2) char gKartToad067Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame067_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad068Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame068_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad068Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame068_wheel1";
+static const ALIGN_ASSET(2) char gKartToad068Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame068_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad068Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame068_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad068Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame068_wheel3";
+static const ALIGN_ASSET(2) char gKartToad068Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame068_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad069Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame069_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad069Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame069_wheel3";
+static const ALIGN_ASSET(2) char gKartToad069Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame069_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad069Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame069_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad069Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame069_wheel1";
+static const ALIGN_ASSET(2) char gKartToad069Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame069_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad070Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame070_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad070Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame070_wheel1";
+static const ALIGN_ASSET(2) char gKartToad070Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame070_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad070Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame070_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad070Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame070_wheel3";
+static const ALIGN_ASSET(2) char gKartToad070Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame070_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad071Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame071_wheel0";
 
@@ -587,21 +587,21 @@ static const ALIGN_ASSET(2) char gKartToad072Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad072Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame072_wheel3";
 
+static const ALIGN_ASSET(2) char gKartToad073Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame073_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad073Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame073_wheel1";
+
 static const ALIGN_ASSET(2) char gKartToad073Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame073_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad073Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame073_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad073Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame073_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad073Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame073_wheel0";
-
 static const ALIGN_ASSET(2) char gKartToad074Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame074_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad074Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad074Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame074_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad074Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame074_wheel2";
-
-static const ALIGN_ASSET(2) char gKartToad074Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad075Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame075_wheel0";
 
@@ -613,35 +613,35 @@ static const ALIGN_ASSET(2) char gKartToad075Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad076Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame076_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad076Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame076_wheel3";
+static const ALIGN_ASSET(2) char gKartToad076Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame076_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad076Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame076_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad076Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame076_wheel1";
+static const ALIGN_ASSET(2) char gKartToad076Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame076_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad077Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame077_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad077Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame077_wheel1";
+static const ALIGN_ASSET(2) char gKartToad077Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame077_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad077Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame077_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad077Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame077_wheel3";
+static const ALIGN_ASSET(2) char gKartToad077Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame077_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad078Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame078_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad078Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame078_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad078Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame078_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad078Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame078_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad078Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame078_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad078Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame078_wheel0";
-
-static const ALIGN_ASSET(2) char gKartToad079Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame079_wheel0";
-
-static const ALIGN_ASSET(2) char gKartToad079Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame079_wheel1";
-
 static const ALIGN_ASSET(2) char gKartToad079Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame079_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad079Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame079_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad079Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame079_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad079Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame079_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad080Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame080_wheel0";
 
@@ -653,35 +653,35 @@ static const ALIGN_ASSET(2) char gKartToad080Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad081Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame081_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad081Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame081_wheel3";
+static const ALIGN_ASSET(2) char gKartToad081Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame081_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad081Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame081_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad081Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame081_wheel1";
+static const ALIGN_ASSET(2) char gKartToad081Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame081_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad082Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame082_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad082Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame082_wheel1";
+static const ALIGN_ASSET(2) char gKartToad082Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame082_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad082Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame082_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad082Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame082_wheel3";
+static const ALIGN_ASSET(2) char gKartToad082Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame082_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad083Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame083_wheel0";
-
-static const ALIGN_ASSET(2) char gKartToad083Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad083Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame083_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad083Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame083_wheel2";
 
+static const ALIGN_ASSET(2) char gKartToad083Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame083_wheel3";
+
 static const ALIGN_ASSET(2) char gKartToad084Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame084_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad084Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad084Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame084_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad084Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame084_wheel2";
-
-static const ALIGN_ASSET(2) char gKartToad084Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad085Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame085_wheel0";
 
@@ -693,35 +693,35 @@ static const ALIGN_ASSET(2) char gKartToad085Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad086Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame086_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad086Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame086_wheel3";
+static const ALIGN_ASSET(2) char gKartToad086Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame086_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad086Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame086_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad086Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame086_wheel1";
+static const ALIGN_ASSET(2) char gKartToad086Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame086_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad087Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame087_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad087Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame087_wheel1";
+static const ALIGN_ASSET(2) char gKartToad087Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame087_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad087Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame087_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad087Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame087_wheel3";
+static const ALIGN_ASSET(2) char gKartToad087Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame087_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad088Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame088_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad088Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame088_wheel3";
+static const ALIGN_ASSET(2) char gKartToad088Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame088_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad088Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame088_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad088Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame088_wheel1";
+static const ALIGN_ASSET(2) char gKartToad088Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame088_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad089Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame089_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad089Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame089_wheel1";
+static const ALIGN_ASSET(2) char gKartToad089Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame089_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad089Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame089_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad089Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame089_wheel3";
+static const ALIGN_ASSET(2) char gKartToad089Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame089_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad090Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame090_wheel0";
 
@@ -741,27 +741,27 @@ static const ALIGN_ASSET(2) char gKartToad091Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad092Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame092_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad092Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame092_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad092Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame092_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad092Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame092_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad093Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame093_wheel1";
+static const ALIGN_ASSET(2) char gKartToad092Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame092_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad093Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame093_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad093Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame093_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad093Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame093_wheel2";
+static const ALIGN_ASSET(2) char gKartToad093Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame093_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad094Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame094_wheel0";
+static const ALIGN_ASSET(2) char gKartToad093Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame093_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad094Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame094_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad094Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame094_wheel2";
+static const ALIGN_ASSET(2) char gKartToad094Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame094_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad094Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame094_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad094Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame094_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad095Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame095_wheel0";
 
@@ -779,21 +779,21 @@ static const ALIGN_ASSET(2) char gKartToad096Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad096Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame096_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad097Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame097_wheel3";
+static const ALIGN_ASSET(2) char gKartToad097Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame097_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad097Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame097_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad097Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame097_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad097Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame097_wheel0";
+static const ALIGN_ASSET(2) char gKartToad097Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame097_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad098Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame098_wheel0";
+static const ALIGN_ASSET(2) char gKartToad098Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame098_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad098Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame098_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad098Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame098_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad098Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame098_wheel3";
+static const ALIGN_ASSET(2) char gKartToad098Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame098_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad099Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame099_wheel0";
 
@@ -811,21 +811,21 @@ static const ALIGN_ASSET(2) char gKartToad100Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad100Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame100_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad101Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame101_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad101Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame101_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad101Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame101_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad101Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame101_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad102Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame102_wheel0";
+static const ALIGN_ASSET(2) char gKartToad101Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame101_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad102Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame102_wheel1";
+static const ALIGN_ASSET(2) char gKartToad101Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame101_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad102Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame102_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad102Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame102_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad102Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame102_wheel3";
+static const ALIGN_ASSET(2) char gKartToad102Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame102_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad102Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame102_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad103Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame103_wheel0";
 
@@ -837,35 +837,35 @@ static const ALIGN_ASSET(2) char gKartToad103Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad104Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame104_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad104Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame104_wheel3";
+static const ALIGN_ASSET(2) char gKartToad104Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame104_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad104Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame104_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad104Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame104_wheel1";
+static const ALIGN_ASSET(2) char gKartToad104Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame104_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad105Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame105_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad105Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame105_wheel1";
+static const ALIGN_ASSET(2) char gKartToad105Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame105_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad105Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame105_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad105Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame105_wheel3";
+static const ALIGN_ASSET(2) char gKartToad105Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame105_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad106Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame106_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad106Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame106_wheel3";
+static const ALIGN_ASSET(2) char gKartToad106Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame106_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad106Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame106_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad106Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame106_wheel1";
+static const ALIGN_ASSET(2) char gKartToad106Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame106_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad107Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame107_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad107Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame107_wheel1";
+static const ALIGN_ASSET(2) char gKartToad107Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame107_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad107Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame107_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad107Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame107_wheel3";
+static const ALIGN_ASSET(2) char gKartToad107Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame107_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad108Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame108_wheel0";
 
@@ -885,21 +885,19 @@ static const ALIGN_ASSET(2) char gKartToad109Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad110Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame110_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad110Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame110_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad110Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame110_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad110Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame110_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad111Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame111_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad111Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame111_wheel2";
-
-static const ALIGN_ASSET(2) char gKartToad111Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame111_wheel3";
+static const ALIGN_ASSET(2) char gKartToad110Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame110_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad111Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame111_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad112Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame112_wheel0";
+static const ALIGN_ASSET(2) char gKartToad111Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame111_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad111Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame111_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad111Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame111_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad112Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame112_wheel1";
 
@@ -907,37 +905,39 @@ static const ALIGN_ASSET(2) char gKartToad112Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad112Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame112_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad113Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame113_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad113Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame113_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad113Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame113_wheel2";
+static const ALIGN_ASSET(2) char gKartToad112Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame112_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad113Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame113_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad114Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame114_wheel0";
+static const ALIGN_ASSET(2) char gKartToad113Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame113_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad113Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame113_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad113Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame113_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad114Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame114_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad114Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame114_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad114Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame114_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad115Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame115_wheel1";
+static const ALIGN_ASSET(2) char gKartToad114Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame114_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad115Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame115_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad115Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame115_wheel2";
+static const ALIGN_ASSET(2) char gKartToad114Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame114_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad115Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame115_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad116Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame116_wheel0";
+static const ALIGN_ASSET(2) char gKartToad115Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame115_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad115Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame115_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad115Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame115_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad116Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame116_wheel1";
 
+static const ALIGN_ASSET(2) char gKartToad116Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame116_wheel3";
+
 static const ALIGN_ASSET(2) char gKartToad116Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame116_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad116Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame116_wheel3";
+static const ALIGN_ASSET(2) char gKartToad116Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame116_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad117Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame117_wheel0";
 
@@ -955,21 +955,21 @@ static const ALIGN_ASSET(2) char gKartToad118Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad118Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame118_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad119Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame119_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad119Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame119_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad119Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame119_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad119Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame119_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad120Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame120_wheel0";
+static const ALIGN_ASSET(2) char gKartToad119Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame119_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad120Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame120_wheel1";
+static const ALIGN_ASSET(2) char gKartToad119Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame119_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad120Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame120_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad120Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame120_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad120Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame120_wheel3";
+static const ALIGN_ASSET(2) char gKartToad120Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame120_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad120Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame120_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad121Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame121_wheel0";
 
@@ -981,35 +981,35 @@ static const ALIGN_ASSET(2) char gKartToad121Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad122Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame122_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad122Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame122_wheel3";
+static const ALIGN_ASSET(2) char gKartToad122Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame122_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad122Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame122_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad122Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame122_wheel1";
+static const ALIGN_ASSET(2) char gKartToad122Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame122_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad123Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame123_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad123Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame123_wheel1";
+static const ALIGN_ASSET(2) char gKartToad123Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame123_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad123Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame123_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad123Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame123_wheel3";
+static const ALIGN_ASSET(2) char gKartToad123Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame123_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad124Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame124_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad124Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame124_wheel3";
+static const ALIGN_ASSET(2) char gKartToad124Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame124_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad124Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame124_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad124Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame124_wheel1";
+static const ALIGN_ASSET(2) char gKartToad124Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame124_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad125Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame125_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad125Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame125_wheel1";
+static const ALIGN_ASSET(2) char gKartToad125Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame125_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad125Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame125_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad125Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame125_wheel3";
+static const ALIGN_ASSET(2) char gKartToad125Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame125_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad126Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame126_wheel0";
 
@@ -1027,29 +1027,29 @@ static const ALIGN_ASSET(2) char gKartToad127Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad127Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame127_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad128Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame128_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad128Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame128_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad128Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame128_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad128Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame128_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad129Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame129_wheel1";
+static const ALIGN_ASSET(2) char gKartToad128Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame128_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad129Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame129_wheel0";
+static const ALIGN_ASSET(2) char gKartToad128Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame128_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad129Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame129_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad129Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame129_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad130Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame130_wheel0";
+static const ALIGN_ASSET(2) char gKartToad129Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame129_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad129Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad130Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame130_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad130Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame130_wheel2";
+static const ALIGN_ASSET(2) char gKartToad130Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame130_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad130Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame130_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad130Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame130_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad131Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame131_wheel0";
 
@@ -1067,21 +1067,21 @@ static const ALIGN_ASSET(2) char gKartToad132Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad132Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame132_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad133Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame133_wheel3";
+static const ALIGN_ASSET(2) char gKartToad133Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame133_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad133Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame133_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad133Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame133_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad133Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame133_wheel0";
+static const ALIGN_ASSET(2) char gKartToad133Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame133_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad134Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame134_wheel0";
+static const ALIGN_ASSET(2) char gKartToad134Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame134_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad134Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame134_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad134Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame134_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad134Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame134_wheel3";
+static const ALIGN_ASSET(2) char gKartToad134Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame134_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad135Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame135_wheel0";
 
@@ -1099,21 +1099,21 @@ static const ALIGN_ASSET(2) char gKartToad136Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad136Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame136_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad137Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame137_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad137Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame137_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad137Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame137_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad137Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame137_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad138Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame138_wheel0";
+static const ALIGN_ASSET(2) char gKartToad137Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame137_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad138Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame138_wheel1";
+static const ALIGN_ASSET(2) char gKartToad137Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame137_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad138Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame138_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad138Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame138_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad138Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame138_wheel3";
+static const ALIGN_ASSET(2) char gKartToad138Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame138_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad138Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame138_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad139Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame139_wheel0";
 
@@ -1125,35 +1125,35 @@ static const ALIGN_ASSET(2) char gKartToad139Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad140Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame140_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad140Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame140_wheel3";
+static const ALIGN_ASSET(2) char gKartToad140Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame140_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad140Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame140_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad140Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame140_wheel1";
+static const ALIGN_ASSET(2) char gKartToad140Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame140_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad141Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame141_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad141Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame141_wheel1";
+static const ALIGN_ASSET(2) char gKartToad141Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame141_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad141Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame141_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad141Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame141_wheel3";
+static const ALIGN_ASSET(2) char gKartToad141Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame141_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad142Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame142_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad142Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame142_wheel3";
+static const ALIGN_ASSET(2) char gKartToad142Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame142_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad142Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame142_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad142Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame142_wheel1";
+static const ALIGN_ASSET(2) char gKartToad142Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame142_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad143Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame143_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad143Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame143_wheel1";
+static const ALIGN_ASSET(2) char gKartToad143Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame143_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad143Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame143_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad143Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame143_wheel3";
+static const ALIGN_ASSET(2) char gKartToad143Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame143_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad144Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame144_wheel0";
 
@@ -1171,37 +1171,37 @@ static const ALIGN_ASSET(2) char gKartToad145Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad145Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame145_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad146Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame146_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad146Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame146_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad146Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame146_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad146Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame146_wheel1";
 
+static const ALIGN_ASSET(2) char gKartToad146Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame146_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad146Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame146_wheel3";
+
 static const ALIGN_ASSET(2) char gKartToad147Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame147_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad147Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame147_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad147Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame147_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad147Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame147_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad147Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame147_wheel3";
+static const ALIGN_ASSET(2) char gKartToad148Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame148_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad148Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame148_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad148Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame148_wheel1";
+static const ALIGN_ASSET(2) char gKartToad148Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad148Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame148_wheel2";
-
-static const ALIGN_ASSET(2) char gKartToad148Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad149Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame149_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad149Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame149_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad149Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame149_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad149Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame149_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad149Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame149_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad150Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame150_wheel0";
 
@@ -1211,21 +1211,21 @@ static const ALIGN_ASSET(2) char gKartToad150Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad150Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame150_wheel3";
 
+static const ALIGN_ASSET(2) char gKartToad151Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame151_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad151Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame151_wheel1";
+
 static const ALIGN_ASSET(2) char gKartToad151Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame151_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad151Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame151_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad151Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame151_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad151Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame151_wheel0";
-
 static const ALIGN_ASSET(2) char gKartToad152Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame152_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad152Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame152_wheel1";
+static const ALIGN_ASSET(2) char gKartToad152Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame152_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad152Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame152_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad152Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame152_wheel3";
+static const ALIGN_ASSET(2) char gKartToad152Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame152_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad153Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame153_wheel0";
 
@@ -1253,11 +1253,11 @@ static const ALIGN_ASSET(2) char gKartToad155Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad156Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame156_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad156Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame156_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad156Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame156_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad156Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame156_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad156Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame156_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad157Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame157_wheel0";
 
@@ -1269,19 +1269,19 @@ static const ALIGN_ASSET(2) char gKartToad157Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad158Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame158_wheel0";
 
+static const ALIGN_ASSET(2) char gKartToad158Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame158_wheel3";
+
 static const ALIGN_ASSET(2) char gKartToad158Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame158_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad158Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame158_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad158Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame158_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad159Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame159_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad159Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame159_wheel3";
+static const ALIGN_ASSET(2) char gKartToad159Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame159_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad159Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame159_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad159Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame159_wheel1";
+static const ALIGN_ASSET(2) char gKartToad159Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame159_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad160Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame160_wheel0";
 
@@ -1293,19 +1293,19 @@ static const ALIGN_ASSET(2) char gKartToad160Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad161Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame161_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad161Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame161_wheel3";
+static const ALIGN_ASSET(2) char gKartToad161Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame161_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad161Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame161_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad161Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame161_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad162Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame162_wheel0";
-
-static const ALIGN_ASSET(2) char gKartToad162Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame162_wheel1";
+static const ALIGN_ASSET(2) char gKartToad161Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame161_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad162Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame162_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad162Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame162_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad162Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame162_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad162Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame162_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad163Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame163_wheel0";
 
@@ -1325,27 +1325,27 @@ static const ALIGN_ASSET(2) char gKartToad164Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad165Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame165_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad165Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame165_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad165Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame165_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad165Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame165_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad166Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame166_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad166Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame166_wheel0";
+static const ALIGN_ASSET(2) char gKartToad165Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame165_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad166Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame166_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad166Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame166_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad167Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame167_wheel0";
+static const ALIGN_ASSET(2) char gKartToad166Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame166_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad166Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame166_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad167Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame167_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad167Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame167_wheel2";
+static const ALIGN_ASSET(2) char gKartToad167Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame167_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad167Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame167_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad167Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame167_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad168Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame168_wheel0";
 
@@ -1363,21 +1363,21 @@ static const ALIGN_ASSET(2) char gKartToad169Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad169Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame169_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad170Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame170_wheel3";
+static const ALIGN_ASSET(2) char gKartToad170Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame170_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad170Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame170_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad170Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame170_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad170Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame170_wheel0";
+static const ALIGN_ASSET(2) char gKartToad170Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame170_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad171Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame171_wheel0";
+static const ALIGN_ASSET(2) char gKartToad171Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame171_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad171Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame171_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad171Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame171_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad171Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame171_wheel3";
+static const ALIGN_ASSET(2) char gKartToad171Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame171_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad172Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame172_wheel0";
 
@@ -1395,21 +1395,21 @@ static const ALIGN_ASSET(2) char gKartToad173Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad173Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame173_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad174Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame174_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad174Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame174_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad174Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame174_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad174Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame174_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad175Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame175_wheel0";
+static const ALIGN_ASSET(2) char gKartToad174Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame174_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad175Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame175_wheel1";
+static const ALIGN_ASSET(2) char gKartToad174Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame174_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad175Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame175_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad175Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame175_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad175Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame175_wheel3";
+static const ALIGN_ASSET(2) char gKartToad175Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame175_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad175Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame175_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad176Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame176_wheel0";
 
@@ -1421,35 +1421,35 @@ static const ALIGN_ASSET(2) char gKartToad176Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad177Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame177_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad177Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame177_wheel3";
+static const ALIGN_ASSET(2) char gKartToad177Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame177_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad177Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame177_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad177Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame177_wheel1";
+static const ALIGN_ASSET(2) char gKartToad177Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame177_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad178Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame178_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad178Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame178_wheel1";
+static const ALIGN_ASSET(2) char gKartToad178Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame178_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad178Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame178_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad178Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame178_wheel3";
+static const ALIGN_ASSET(2) char gKartToad178Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame178_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad179Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame179_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad179Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame179_wheel3";
+static const ALIGN_ASSET(2) char gKartToad179Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame179_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad179Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame179_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad179Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame179_wheel1";
+static const ALIGN_ASSET(2) char gKartToad179Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame179_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad180Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame180_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad180Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame180_wheel1";
+static const ALIGN_ASSET(2) char gKartToad180Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame180_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad180Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame180_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad180Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame180_wheel3";
+static const ALIGN_ASSET(2) char gKartToad180Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame180_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad181Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame181_wheel0";
 
@@ -1469,21 +1469,19 @@ static const ALIGN_ASSET(2) char gKartToad182Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad183Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame183_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad183Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame183_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad183Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame183_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad183Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame183_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad184Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame184_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad184Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame184_wheel2";
+static const ALIGN_ASSET(2) char gKartToad183Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame183_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad184Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame184_wheel3";
 
+static const ALIGN_ASSET(2) char gKartToad184Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame184_wheel1";
+
 static const ALIGN_ASSET(2) char gKartToad184Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame184_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad185Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame185_wheel0";
+static const ALIGN_ASSET(2) char gKartToad184Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame184_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad185Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame185_wheel1";
 
@@ -1491,37 +1489,39 @@ static const ALIGN_ASSET(2) char gKartToad185Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad185Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame185_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad186Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame186_wheel1";
-
-static const ALIGN_ASSET(2) char gKartToad186Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame186_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad186Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame186_wheel2";
+static const ALIGN_ASSET(2) char gKartToad185Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame185_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad186Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame186_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad187Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame187_wheel0";
+static const ALIGN_ASSET(2) char gKartToad186Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame186_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad186Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame186_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad186Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame186_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad187Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame187_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad187Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame187_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad187Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame187_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad188Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame188_wheel1";
+static const ALIGN_ASSET(2) char gKartToad187Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame187_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad188Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame188_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad188Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame188_wheel2";
+static const ALIGN_ASSET(2) char gKartToad187Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame187_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad188Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame188_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad189Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame189_wheel0";
+static const ALIGN_ASSET(2) char gKartToad188Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame188_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad188Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame188_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad188Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame188_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad189Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame189_wheel1";
 
+static const ALIGN_ASSET(2) char gKartToad189Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame189_wheel3";
+
 static const ALIGN_ASSET(2) char gKartToad189Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame189_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad189Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame189_wheel3";
+static const ALIGN_ASSET(2) char gKartToad189Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame189_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad190Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame190_wheel0";
 
@@ -1539,21 +1539,21 @@ static const ALIGN_ASSET(2) char gKartToad191Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad191Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame191_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad192Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame192_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad192Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame192_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad192Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame192_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad192Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame192_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad193Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame193_wheel0";
+static const ALIGN_ASSET(2) char gKartToad192Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame192_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad193Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame193_wheel1";
+static const ALIGN_ASSET(2) char gKartToad192Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame192_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad193Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame193_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad193Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame193_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad193Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame193_wheel3";
+static const ALIGN_ASSET(2) char gKartToad193Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame193_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad193Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame193_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad194Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame194_wheel0";
 
@@ -1565,35 +1565,35 @@ static const ALIGN_ASSET(2) char gKartToad194Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad195Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame195_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad195Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame195_wheel3";
+static const ALIGN_ASSET(2) char gKartToad195Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame195_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad195Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame195_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad195Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame195_wheel1";
+static const ALIGN_ASSET(2) char gKartToad195Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame195_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad196Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame196_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad196Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame196_wheel1";
+static const ALIGN_ASSET(2) char gKartToad196Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame196_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad196Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame196_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad196Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame196_wheel3";
+static const ALIGN_ASSET(2) char gKartToad196Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame196_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad197Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame197_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad197Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame197_wheel3";
+static const ALIGN_ASSET(2) char gKartToad197Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame197_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad197Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame197_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad197Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame197_wheel1";
+static const ALIGN_ASSET(2) char gKartToad197Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame197_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad198Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame198_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad198Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame198_wheel1";
+static const ALIGN_ASSET(2) char gKartToad198Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame198_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad198Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame198_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad198Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame198_wheel3";
+static const ALIGN_ASSET(2) char gKartToad198Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame198_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad199Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame199_wheel0";
 
@@ -1611,29 +1611,29 @@ static const ALIGN_ASSET(2) char gKartToad200Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad200Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame200_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad201Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame201_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad201Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame201_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad201Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame201_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad201Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame201_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad202Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame202_wheel1";
+static const ALIGN_ASSET(2) char gKartToad201Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame201_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad202Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame202_wheel0";
+static const ALIGN_ASSET(2) char gKartToad201Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame201_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad202Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame202_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad202Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame202_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad203Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame203_wheel0";
+static const ALIGN_ASSET(2) char gKartToad202Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame202_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad202Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame202_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad203Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame203_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad203Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame203_wheel2";
+static const ALIGN_ASSET(2) char gKartToad203Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame203_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad203Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame203_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad203Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame203_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad204Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame204_wheel0";
 
@@ -1651,21 +1651,21 @@ static const ALIGN_ASSET(2) char gKartToad205Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad205Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame205_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad206Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame206_wheel3";
+static const ALIGN_ASSET(2) char gKartToad206Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame206_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad206Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame206_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad206Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame206_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad206Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame206_wheel0";
+static const ALIGN_ASSET(2) char gKartToad206Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame206_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad207Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame207_wheel0";
+static const ALIGN_ASSET(2) char gKartToad207Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame207_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad207Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame207_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad207Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame207_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad207Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame207_wheel3";
+static const ALIGN_ASSET(2) char gKartToad207Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame207_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad208Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame208_wheel0";
 
@@ -1683,21 +1683,21 @@ static const ALIGN_ASSET(2) char gKartToad209Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad209Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame209_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad210Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame210_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad210Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame210_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad210Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame210_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad210Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame210_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad211Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame211_wheel0";
+static const ALIGN_ASSET(2) char gKartToad210Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame210_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad211Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame211_wheel1";
+static const ALIGN_ASSET(2) char gKartToad210Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame210_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad211Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame211_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad211Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame211_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad211Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame211_wheel3";
+static const ALIGN_ASSET(2) char gKartToad211Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame211_wheel0";
+
+static const ALIGN_ASSET(2) char gKartToad211Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame211_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad212Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame212_wheel0";
 
@@ -1709,35 +1709,35 @@ static const ALIGN_ASSET(2) char gKartToad212Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad213Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame213_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad213Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame213_wheel3";
+static const ALIGN_ASSET(2) char gKartToad213Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame213_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad213Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame213_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad213Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame213_wheel1";
+static const ALIGN_ASSET(2) char gKartToad213Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame213_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad214Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame214_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad214Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame214_wheel1";
+static const ALIGN_ASSET(2) char gKartToad214Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame214_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad214Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame214_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad214Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame214_wheel3";
+static const ALIGN_ASSET(2) char gKartToad214Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame214_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad215Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame215_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad215Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame215_wheel3";
+static const ALIGN_ASSET(2) char gKartToad215Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame215_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad215Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame215_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad215Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame215_wheel1";
+static const ALIGN_ASSET(2) char gKartToad215Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame215_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad216Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame216_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad216Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame216_wheel1";
+static const ALIGN_ASSET(2) char gKartToad216Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame216_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad216Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame216_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad216Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame216_wheel3";
+static const ALIGN_ASSET(2) char gKartToad216Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame216_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad217Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame217_wheel0";
 
@@ -1755,29 +1755,29 @@ static const ALIGN_ASSET(2) char gKartToad218Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad218Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame218_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad219Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame219_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad219Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame219_wheel2";
-
 static const ALIGN_ASSET(2) char gKartToad219Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame219_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad219Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame219_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad219Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame219_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad219Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame219_wheel3";
+
+static const ALIGN_ASSET(2) char gKartToad220Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame220_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad220Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame220_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad220Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame220_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad220Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame220_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad220Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame220_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad221Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame221_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad221Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame221_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad221Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame221_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad221Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame221_wheel2";
+
+static const ALIGN_ASSET(2) char gKartToad221Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame221_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad222Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame222_wheel0";
 
@@ -1789,11 +1789,11 @@ static const ALIGN_ASSET(2) char gKartToad222Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad223Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame223_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad223Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame223_wheel1";
+static const ALIGN_ASSET(2) char gKartToad223Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame223_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad223Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame223_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad223Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame223_wheel3";
+static const ALIGN_ASSET(2) char gKartToad223Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame223_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad224Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame224_wheel0";
 
@@ -1803,13 +1803,13 @@ static const ALIGN_ASSET(2) char gKartToad224Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad224Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame224_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad225Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame225_wheel2";
+static const ALIGN_ASSET(2) char gKartToad225Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame225_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad225Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame225_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad225Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame225_wheel1";
+static const ALIGN_ASSET(2) char gKartToad225Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame225_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad225Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame225_wheel0";
+static const ALIGN_ASSET(2) char gKartToad225Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame225_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad226Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame226_wheel0";
 
@@ -1835,13 +1835,13 @@ static const ALIGN_ASSET(2) char gKartToad228Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad228Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame228_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad229Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame229_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad229Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame229_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad229Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame229_wheel0";
+static const ALIGN_ASSET(2) char gKartToad229Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame229_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad229Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame229_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad229Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame229_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad230Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame230_wheel0";
 
@@ -1907,21 +1907,21 @@ static const ALIGN_ASSET(2) char gKartToad237Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad237Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame237_wheel3";
 
+static const ALIGN_ASSET(2) char gKartToad238Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame238_wheel2";
+
 static const ALIGN_ASSET(2) char gKartToad238Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame238_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad238Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame238_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad238Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame238_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad238Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame238_wheel2";
+static const ALIGN_ASSET(2) char gKartToad239Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame239_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad239Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame239_wheel1";
 
-static const ALIGN_ASSET(2) char gKartToad239Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame239_wheel0";
+static const ALIGN_ASSET(2) char gKartToad239Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad239Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame239_wheel3";
-
-static const ALIGN_ASSET(2) char gKartToad239Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad240Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame240_wheel0";
 
@@ -1933,11 +1933,11 @@ static const ALIGN_ASSET(2) char gKartToad240Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad241Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame241_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad241Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame241_wheel1";
+static const ALIGN_ASSET(2) char gKartToad241Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame241_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad241Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame241_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad241Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame241_wheel3";
+static const ALIGN_ASSET(2) char gKartToad241Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame241_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad242Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame242_wheel0";
 
@@ -1947,13 +1947,13 @@ static const ALIGN_ASSET(2) char gKartToad242Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad242Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame242_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad243Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame243_wheel3";
+static const ALIGN_ASSET(2) char gKartToad243Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame243_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad243Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame243_wheel1";
+static const ALIGN_ASSET(2) char gKartToad243Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame243_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad243Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame243_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad243Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame243_wheel0";
+static const ALIGN_ASSET(2) char gKartToad243Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame243_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad244Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame244_wheel0";
 
@@ -1979,13 +1979,13 @@ static const ALIGN_ASSET(2) char gKartToad246Wheel2[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad246Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame246_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad247Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame247_wheel3";
-
 static const ALIGN_ASSET(2) char gKartToad247Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame247_wheel2";
 
-static const ALIGN_ASSET(2) char gKartToad247Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame247_wheel0";
+static const ALIGN_ASSET(2) char gKartToad247Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame247_wheel3";
 
 static const ALIGN_ASSET(2) char gKartToad247Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame247_wheel1";
+
+static const ALIGN_ASSET(2) char gKartToad247Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame247_wheel0";
 
 static const ALIGN_ASSET(2) char gKartToad248Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame248_wheel0";
 
@@ -2053,11 +2053,11 @@ static const ALIGN_ASSET(2) char gKartToad255Wheel3[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad256Wheel3[] = "__OTR__textures/karts/toad_kart/toad_kart_frame256_wheel3";
 
-static const ALIGN_ASSET(2) char gKartToad256Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame256_wheel1";
+static const ALIGN_ASSET(2) char gKartToad256Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame256_wheel2";
 
 static const ALIGN_ASSET(2) char gKartToad256Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame256_wheel0";
 
-static const ALIGN_ASSET(2) char gKartToad256Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame256_wheel2";
+static const ALIGN_ASSET(2) char gKartToad256Wheel1[] = "__OTR__textures/karts/toad_kart/toad_kart_frame256_wheel1";
 
 static const ALIGN_ASSET(2) char gKartToad257Wheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_frame257_wheel0";
 
@@ -2315,6 +2315,38 @@ static const ALIGN_ASSET(2) char gKartToad288Wheel0[] = "__OTR__textures/karts/t
 
 static const ALIGN_ASSET(2) char gKartToad288Wheel2[] = "__OTR__textures/karts/toad_kart/toad_kart_frame288_wheel2";
 
+static const ALIGN_ASSET(2) char gKartToad289[] = "__OTR__textures/karts/toad_kart/toad_kart_frame289";
+
+static const ALIGN_ASSET(2) char gKartToad290[] = "__OTR__textures/karts/toad_kart/toad_kart_frame290";
+
+static const ALIGN_ASSET(2) char gKartToad291[] = "__OTR__textures/karts/toad_kart/toad_kart_frame291";
+
+static const ALIGN_ASSET(2) char gKartToad292[] = "__OTR__textures/karts/toad_kart/toad_kart_frame292";
+
+static const ALIGN_ASSET(2) char gKartToad293[] = "__OTR__textures/karts/toad_kart/toad_kart_frame293";
+
+static const ALIGN_ASSET(2) char gKartToad294[] = "__OTR__textures/karts/toad_kart/toad_kart_frame294";
+
+static const ALIGN_ASSET(2) char gKartToad295[] = "__OTR__textures/karts/toad_kart/toad_kart_frame295";
+
+static const ALIGN_ASSET(2) char gKartToad296[] = "__OTR__textures/karts/toad_kart/toad_kart_frame296";
+
+static const ALIGN_ASSET(2) char gKartToad297[] = "__OTR__textures/karts/toad_kart/toad_kart_frame297";
+
+static const ALIGN_ASSET(2) char gKartToad298[] = "__OTR__textures/karts/toad_kart/toad_kart_frame298";
+
+static const ALIGN_ASSET(2) char gKartToad299[] = "__OTR__textures/karts/toad_kart/toad_kart_frame299";
+
+static const ALIGN_ASSET(2) char gKartToad300[] = "__OTR__textures/karts/toad_kart/toad_kart_frame300";
+
+static const ALIGN_ASSET(2) char gKartToad301[] = "__OTR__textures/karts/toad_kart/toad_kart_frame301";
+
+static const ALIGN_ASSET(2) char gKartToad302[] = "__OTR__textures/karts/toad_kart/toad_kart_frame302";
+
+static const ALIGN_ASSET(2) char gKartToad303[] = "__OTR__textures/karts/toad_kart/toad_kart_frame303";
+
+static const ALIGN_ASSET(2) char gKartToad304[] = "__OTR__textures/karts/toad_kart/toad_kart_frame304";
+
 static const ALIGN_ASSET(2) char gKartToad305[] = "__OTR__textures/karts/toad_kart/toad_kart_frame305";
 
 static const ALIGN_ASSET(2) char gKartToad306[] = "__OTR__textures/karts/toad_kart/toad_kart_frame306";
@@ -2346,38 +2378,6 @@ static const ALIGN_ASSET(2) char gKartToad318[] = "__OTR__textures/karts/toad_ka
 static const ALIGN_ASSET(2) char gKartToad319[] = "__OTR__textures/karts/toad_kart/toad_kart_frame319";
 
 static const ALIGN_ASSET(2) char gKartToad320[] = "__OTR__textures/karts/toad_kart/toad_kart_frame320";
-
-static const ALIGN_ASSET(2) char gKartToad303[] = "__OTR__textures/karts/toad_kart/toad_kart_frame303";
-
-static const ALIGN_ASSET(2) char gKartToad304[] = "__OTR__textures/karts/toad_kart/toad_kart_frame304";
-
-static const ALIGN_ASSET(2) char gKartToad289[] = "__OTR__textures/karts/toad_kart/toad_kart_frame289";
-
-static const ALIGN_ASSET(2) char gKartToad290[] = "__OTR__textures/karts/toad_kart/toad_kart_frame290";
-
-static const ALIGN_ASSET(2) char gKartToad291[] = "__OTR__textures/karts/toad_kart/toad_kart_frame291";
-
-static const ALIGN_ASSET(2) char gKartToad292[] = "__OTR__textures/karts/toad_kart/toad_kart_frame292";
-
-static const ALIGN_ASSET(2) char gKartToad293[] = "__OTR__textures/karts/toad_kart/toad_kart_frame293";
-
-static const ALIGN_ASSET(2) char gKartToad294[] = "__OTR__textures/karts/toad_kart/toad_kart_frame294";
-
-static const ALIGN_ASSET(2) char gKartToad295[] = "__OTR__textures/karts/toad_kart/toad_kart_frame295";
-
-static const ALIGN_ASSET(2) char gKartToad297[] = "__OTR__textures/karts/toad_kart/toad_kart_frame297";
-
-static const ALIGN_ASSET(2) char gKartToad296[] = "__OTR__textures/karts/toad_kart/toad_kart_frame296";
-
-static const ALIGN_ASSET(2) char gKartToad302[] = "__OTR__textures/karts/toad_kart/toad_kart_frame302";
-
-static const ALIGN_ASSET(2) char gKartToad301[] = "__OTR__textures/karts/toad_kart/toad_kart_frame301";
-
-static const ALIGN_ASSET(2) char gKartToad299[] = "__OTR__textures/karts/toad_kart/toad_kart_frame299";
-
-static const ALIGN_ASSET(2) char gKartToad300[] = "__OTR__textures/karts/toad_kart/toad_kart_frame300";
-
-static const ALIGN_ASSET(2) char gKartToad298[] = "__OTR__textures/karts/toad_kart/toad_kart_frame298";
 
 static const ALIGN_ASSET(2) char gKartToad000TlutWheel0[] = "__OTR__textures/karts/toad_kart/toad_kart_000_tlut_wheel_0";
 

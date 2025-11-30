@@ -299,21 +299,21 @@ static const ALIGN_ASSET(2) char gKartBowser036Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser036Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame036_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser037Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame037_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser037Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame037_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser037Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame037_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser037Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame037_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser037Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame037_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser037Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame037_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser038Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser038Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame038_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser038Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame038_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser038Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame038_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser038Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser039Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame039_wheel0";
 
@@ -323,13 +323,13 @@ static const ALIGN_ASSET(2) char gKartBowser039Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser039Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame039_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser040Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame040_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser040Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame040_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser040Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame040_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser040Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame040_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser040Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame040_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser040Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame040_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser041Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame041_wheel0";
 
@@ -339,11 +339,11 @@ static const ALIGN_ASSET(2) char gKartBowser041Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser041Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame041_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser042Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame042_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser042Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame042_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser042Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame042_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser042Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame042_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser042Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame042_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser042Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame042_wheel0";
 
@@ -365,27 +365,27 @@ static const ALIGN_ASSET(2) char gKartBowser044Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser045Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame045_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser045Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame045_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser045Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame045_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser045Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame045_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser045Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame045_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser046Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame046_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser046Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame046_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser045Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame045_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser046Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame046_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser046Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame046_wheel1";
 
+static const ALIGN_ASSET(2) char gKartBowser046Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame046_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser046Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame046_wheel3";
+
 static const ALIGN_ASSET(2) char gKartBowser047Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame047_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser047Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser047Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame047_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser047Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame047_wheel2";
-
-static const ALIGN_ASSET(2) char gKartBowser047Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser048Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame048_wheel0";
 
@@ -397,35 +397,35 @@ static const ALIGN_ASSET(2) char gKartBowser048Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser049Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame049_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser049Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame049_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser049Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame049_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser049Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame049_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser049Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame049_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser049Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame049_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser050Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame050_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser050Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame050_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser050Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame050_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser050Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame050_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser050Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame050_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser050Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame050_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser051Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame051_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser051Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame051_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser051Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame051_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser051Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame051_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser051Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame051_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser051Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame051_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser052Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame052_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser052Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame052_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser052Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame052_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser052Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame052_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser052Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame052_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser052Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame052_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser053Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame053_wheel0";
 
@@ -443,29 +443,29 @@ static const ALIGN_ASSET(2) char gKartBowser054Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser054Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame054_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser055Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame055_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser055Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame055_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser055Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame055_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser055Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame055_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser056Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame056_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser055Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame055_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser055Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame055_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser056Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame056_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser056Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame056_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser056Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame056_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser056Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame056_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser057Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame057_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser056Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame056_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser057Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame057_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser057Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame057_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser057Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame057_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser057Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame057_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser057Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame057_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser058Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame058_wheel0";
 
@@ -483,21 +483,21 @@ static const ALIGN_ASSET(2) char gKartBowser059Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser059Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame059_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser060Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame060_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser060Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame060_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser060Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame060_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser060Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame060_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser060Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame060_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser060Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame060_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser061Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame061_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser061Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame061_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser061Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame061_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser061Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame061_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser061Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame061_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser061Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame061_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser062Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame062_wheel0";
 
@@ -515,21 +515,21 @@ static const ALIGN_ASSET(2) char gKartBowser063Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser063Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame063_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser064Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame064_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser064Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame064_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser064Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame064_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser064Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame064_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser065Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame065_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser064Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame064_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser065Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame065_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser064Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame064_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser065Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame065_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser065Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame065_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser065Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame065_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser065Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame065_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser065Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame065_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser066Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame066_wheel0";
 
@@ -541,35 +541,35 @@ static const ALIGN_ASSET(2) char gKartBowser066Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser067Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame067_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser067Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame067_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser067Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame067_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser067Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame067_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser067Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame067_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser067Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame067_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser068Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame068_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser068Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame068_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser068Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame068_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser068Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame068_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser068Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame068_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser068Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame068_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser069Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame069_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser069Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame069_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser069Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame069_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser069Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame069_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser069Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame069_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser069Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame069_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser070Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame070_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser070Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame070_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser070Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame070_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser070Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame070_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser070Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame070_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser070Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame070_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser071Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame071_wheel0";
 
@@ -587,21 +587,21 @@ static const ALIGN_ASSET(2) char gKartBowser072Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser072Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame072_wheel3";
 
+static const ALIGN_ASSET(2) char gKartBowser073Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame073_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser073Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame073_wheel1";
+
 static const ALIGN_ASSET(2) char gKartBowser073Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame073_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser073Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame073_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser073Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame073_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser073Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame073_wheel0";
-
 static const ALIGN_ASSET(2) char gKartBowser074Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame074_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser074Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser074Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame074_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser074Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame074_wheel2";
-
-static const ALIGN_ASSET(2) char gKartBowser074Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser075Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame075_wheel0";
 
@@ -613,35 +613,35 @@ static const ALIGN_ASSET(2) char gKartBowser075Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser076Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame076_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser076Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame076_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser076Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame076_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser076Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame076_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser076Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame076_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser076Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame076_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser077Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame077_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser077Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame077_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser077Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame077_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser077Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame077_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser077Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame077_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser077Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame077_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser078Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame078_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser078Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame078_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser078Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame078_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser078Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame078_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser078Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame078_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser078Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame078_wheel0";
-
-static const ALIGN_ASSET(2) char gKartBowser079Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame079_wheel0";
-
-static const ALIGN_ASSET(2) char gKartBowser079Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame079_wheel1";
-
 static const ALIGN_ASSET(2) char gKartBowser079Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame079_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser079Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame079_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser079Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame079_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser079Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame079_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser080Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame080_wheel0";
 
@@ -653,35 +653,35 @@ static const ALIGN_ASSET(2) char gKartBowser080Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser081Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame081_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser081Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame081_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser081Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame081_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser081Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame081_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser081Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame081_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser081Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame081_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser082Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame082_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser082Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame082_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser082Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame082_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser082Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame082_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser082Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame082_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser082Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame082_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser083Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame083_wheel0";
-
-static const ALIGN_ASSET(2) char gKartBowser083Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser083Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame083_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser083Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame083_wheel2";
 
+static const ALIGN_ASSET(2) char gKartBowser083Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame083_wheel3";
+
 static const ALIGN_ASSET(2) char gKartBowser084Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame084_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser084Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser084Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame084_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser084Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame084_wheel2";
-
-static const ALIGN_ASSET(2) char gKartBowser084Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser085Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame085_wheel0";
 
@@ -693,35 +693,35 @@ static const ALIGN_ASSET(2) char gKartBowser085Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser086Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame086_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser086Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame086_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser086Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame086_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser086Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame086_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser086Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame086_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser086Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame086_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser087Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame087_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser087Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame087_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser087Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame087_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser087Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame087_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser087Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame087_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser087Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame087_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser088Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame088_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser088Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame088_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser088Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame088_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser088Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame088_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser088Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame088_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser088Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame088_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser089Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame089_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser089Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame089_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser089Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame089_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser089Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame089_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser089Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame089_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser089Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame089_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser090Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame090_wheel0";
 
@@ -741,27 +741,27 @@ static const ALIGN_ASSET(2) char gKartBowser091Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser092Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame092_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser092Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame092_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser092Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame092_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser092Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame092_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser093Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame093_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser092Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame092_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser093Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame093_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser093Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame093_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser093Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame093_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser093Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame093_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser094Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame094_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser093Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame093_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser094Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame094_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser094Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame094_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser094Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame094_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser094Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame094_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser094Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame094_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser095Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame095_wheel0";
 
@@ -779,21 +779,21 @@ static const ALIGN_ASSET(2) char gKartBowser096Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser096Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame096_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser097Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame097_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser097Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame097_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser097Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame097_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser097Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame097_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser097Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame097_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser097Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame097_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser098Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame098_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser098Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame098_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser098Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame098_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser098Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame098_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser098Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame098_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser098Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame098_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser099Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame099_wheel0";
 
@@ -811,21 +811,21 @@ static const ALIGN_ASSET(2) char gKartBowser100Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser100Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame100_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser101Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame101_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser101Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame101_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser101Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame101_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser101Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame101_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser102Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame102_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser101Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame101_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser102Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame102_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser101Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame101_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser102Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame102_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser102Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame102_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser102Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame102_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser102Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame102_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser102Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame102_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser103Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame103_wheel0";
 
@@ -837,35 +837,35 @@ static const ALIGN_ASSET(2) char gKartBowser103Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser104Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame104_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser104Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame104_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser104Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame104_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser104Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame104_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser104Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame104_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser104Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame104_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser105Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame105_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser105Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame105_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser105Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame105_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser105Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame105_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser105Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame105_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser105Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame105_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser106Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame106_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser106Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame106_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser106Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame106_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser106Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame106_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser106Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame106_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser106Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame106_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser107Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame107_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser107Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame107_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser107Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame107_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser107Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame107_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser107Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame107_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser107Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame107_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser108Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame108_wheel0";
 
@@ -885,21 +885,19 @@ static const ALIGN_ASSET(2) char gKartBowser109Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser110Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame110_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser110Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame110_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser110Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame110_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser110Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame110_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser111Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame111_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser111Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame111_wheel2";
-
-static const ALIGN_ASSET(2) char gKartBowser111Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame111_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser110Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame110_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser111Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame111_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser112Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame112_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser111Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame111_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser111Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame111_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser111Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame111_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser112Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame112_wheel1";
 
@@ -907,37 +905,39 @@ static const ALIGN_ASSET(2) char gKartBowser112Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser112Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame112_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser113Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame113_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser113Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame113_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser113Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame113_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser112Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame112_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser113Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame113_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser114Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame114_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser113Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame113_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser113Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame113_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser113Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame113_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser114Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame114_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser114Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame114_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser114Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame114_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser115Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame115_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser114Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame114_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser115Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame115_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser115Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame115_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser114Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame114_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser115Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame115_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser116Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame116_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser115Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame115_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser115Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame115_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser115Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame115_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser116Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame116_wheel1";
 
+static const ALIGN_ASSET(2) char gKartBowser116Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame116_wheel3";
+
 static const ALIGN_ASSET(2) char gKartBowser116Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame116_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser116Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame116_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser116Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame116_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser117Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame117_wheel0";
 
@@ -955,21 +955,21 @@ static const ALIGN_ASSET(2) char gKartBowser118Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser118Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame118_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser119Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame119_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser119Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame119_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser119Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame119_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser119Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame119_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser120Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame120_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser119Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame119_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser120Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame120_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser119Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame119_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser120Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame120_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser120Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame120_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser120Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame120_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser120Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame120_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser120Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame120_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser121Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame121_wheel0";
 
@@ -981,35 +981,35 @@ static const ALIGN_ASSET(2) char gKartBowser121Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser122Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame122_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser122Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame122_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser122Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame122_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser122Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame122_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser122Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame122_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser122Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame122_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser123Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame123_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser123Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame123_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser123Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame123_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser123Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame123_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser123Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame123_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser123Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame123_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser124Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame124_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser124Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame124_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser124Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame124_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser124Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame124_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser124Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame124_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser124Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame124_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser125Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame125_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser125Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame125_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser125Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame125_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser125Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame125_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser125Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame125_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser125Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame125_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser126Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame126_wheel0";
 
@@ -1027,29 +1027,29 @@ static const ALIGN_ASSET(2) char gKartBowser127Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser127Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame127_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser128Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame128_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser128Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame128_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser128Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame128_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser128Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame128_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser129Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame129_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser128Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame128_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser129Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame129_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser128Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame128_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser129Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame129_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser129Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame129_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser130Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame130_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser129Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame129_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser129Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser130Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame130_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser130Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame130_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser130Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame130_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser130Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame130_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser130Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame130_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser131Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame131_wheel0";
 
@@ -1067,21 +1067,21 @@ static const ALIGN_ASSET(2) char gKartBowser132Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser132Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame132_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser133Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame133_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser133Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame133_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser133Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame133_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser133Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame133_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser133Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame133_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser133Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame133_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser134Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame134_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser134Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame134_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser134Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame134_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser134Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame134_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser134Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame134_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser134Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame134_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser135Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame135_wheel0";
 
@@ -1099,21 +1099,21 @@ static const ALIGN_ASSET(2) char gKartBowser136Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser136Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame136_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser137Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame137_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser137Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame137_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser137Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame137_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser137Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame137_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser138Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame138_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser137Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame137_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser138Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame138_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser137Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame137_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser138Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame138_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser138Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame138_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser138Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame138_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser138Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame138_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser138Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame138_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser139Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame139_wheel0";
 
@@ -1125,35 +1125,35 @@ static const ALIGN_ASSET(2) char gKartBowser139Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser140Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame140_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser140Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame140_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser140Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame140_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser140Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame140_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser140Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame140_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser140Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame140_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser141Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame141_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser141Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame141_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser141Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame141_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser141Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame141_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser141Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame141_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser141Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame141_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser142Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame142_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser142Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame142_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser142Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame142_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser142Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame142_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser142Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame142_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser142Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame142_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser143Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame143_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser143Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame143_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser143Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame143_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser143Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame143_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser143Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame143_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser143Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame143_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser144Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame144_wheel0";
 
@@ -1171,37 +1171,37 @@ static const ALIGN_ASSET(2) char gKartBowser145Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser145Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame145_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser146Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame146_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser146Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame146_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser146Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame146_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser146Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame146_wheel1";
 
+static const ALIGN_ASSET(2) char gKartBowser146Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame146_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser146Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame146_wheel3";
+
 static const ALIGN_ASSET(2) char gKartBowser147Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame147_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser147Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame147_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser147Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame147_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser147Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame147_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser147Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame147_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser148Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame148_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser148Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame148_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser148Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame148_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser148Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser148Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame148_wheel2";
-
-static const ALIGN_ASSET(2) char gKartBowser148Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser149Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame149_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser149Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame149_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser149Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame149_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser149Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame149_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser149Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame149_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser150Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame150_wheel0";
 
@@ -1211,21 +1211,21 @@ static const ALIGN_ASSET(2) char gKartBowser150Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser150Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame150_wheel3";
 
+static const ALIGN_ASSET(2) char gKartBowser151Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame151_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser151Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame151_wheel1";
+
 static const ALIGN_ASSET(2) char gKartBowser151Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame151_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser151Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame151_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser151Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame151_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser151Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame151_wheel0";
-
 static const ALIGN_ASSET(2) char gKartBowser152Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame152_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser152Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame152_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser152Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame152_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser152Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame152_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser152Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame152_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser152Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame152_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser153Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame153_wheel0";
 
@@ -1253,11 +1253,11 @@ static const ALIGN_ASSET(2) char gKartBowser155Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser156Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame156_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser156Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame156_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser156Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame156_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser156Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame156_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser156Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame156_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser157Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame157_wheel0";
 
@@ -1269,19 +1269,19 @@ static const ALIGN_ASSET(2) char gKartBowser157Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser158Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame158_wheel0";
 
+static const ALIGN_ASSET(2) char gKartBowser158Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame158_wheel3";
+
 static const ALIGN_ASSET(2) char gKartBowser158Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame158_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser158Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame158_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser158Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame158_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser159Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame159_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser159Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame159_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser159Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame159_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser159Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame159_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser159Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame159_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser159Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame159_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser160Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame160_wheel0";
 
@@ -1293,19 +1293,19 @@ static const ALIGN_ASSET(2) char gKartBowser160Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser161Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame161_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser161Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame161_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser161Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame161_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser161Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame161_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser161Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame161_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser162Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame162_wheel0";
-
-static const ALIGN_ASSET(2) char gKartBowser162Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame162_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser161Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame161_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser162Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame162_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser162Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame162_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser162Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame162_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser162Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame162_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser163Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame163_wheel0";
 
@@ -1325,27 +1325,27 @@ static const ALIGN_ASSET(2) char gKartBowser164Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser165Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame165_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser165Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame165_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser165Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame165_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser165Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame165_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser166Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame166_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser166Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame166_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser165Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame165_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser166Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame166_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser166Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame166_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser167Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame167_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser166Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame166_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser166Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame166_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser167Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame167_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser167Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame167_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser167Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame167_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser167Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame167_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser167Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame167_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser168Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame168_wheel0";
 
@@ -1363,21 +1363,21 @@ static const ALIGN_ASSET(2) char gKartBowser169Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser169Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame169_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser170Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame170_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser170Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame170_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser170Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame170_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser170Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame170_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser170Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame170_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser170Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame170_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser171Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame171_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser171Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame171_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser171Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame171_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser171Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame171_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser171Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame171_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser171Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame171_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser172Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame172_wheel0";
 
@@ -1395,21 +1395,21 @@ static const ALIGN_ASSET(2) char gKartBowser173Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser173Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame173_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser174Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame174_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser174Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame174_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser174Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame174_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser174Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame174_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser175Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame175_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser174Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame174_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser175Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame175_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser174Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame174_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser175Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame175_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser175Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame175_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser175Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame175_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser175Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame175_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser175Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame175_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser176Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame176_wheel0";
 
@@ -1421,35 +1421,35 @@ static const ALIGN_ASSET(2) char gKartBowser176Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser177Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame177_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser177Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame177_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser177Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame177_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser177Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame177_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser177Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame177_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser177Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame177_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser178Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame178_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser178Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame178_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser178Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame178_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser178Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame178_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser178Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame178_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser178Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame178_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser179Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame179_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser179Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame179_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser179Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame179_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser179Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame179_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser179Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame179_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser179Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame179_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser180Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame180_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser180Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame180_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser180Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame180_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser180Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame180_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser180Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame180_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser180Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame180_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser181Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame181_wheel0";
 
@@ -1469,21 +1469,19 @@ static const ALIGN_ASSET(2) char gKartBowser182Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser183Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame183_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser183Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame183_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser183Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame183_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser183Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame183_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser184Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame184_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser184Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame184_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser183Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame183_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser184Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame184_wheel3";
 
+static const ALIGN_ASSET(2) char gKartBowser184Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame184_wheel1";
+
 static const ALIGN_ASSET(2) char gKartBowser184Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame184_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser185Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame185_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser184Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame184_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser185Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame185_wheel1";
 
@@ -1491,37 +1489,39 @@ static const ALIGN_ASSET(2) char gKartBowser185Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser185Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame185_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser186Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame186_wheel1";
-
-static const ALIGN_ASSET(2) char gKartBowser186Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame186_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser186Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame186_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser185Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame185_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser186Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame186_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser187Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame187_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser186Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame186_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser186Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame186_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser186Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame186_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser187Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame187_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser187Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame187_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser187Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame187_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser188Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame188_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser187Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame187_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser188Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame188_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser188Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame188_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser187Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame187_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser188Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame188_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser189Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame189_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser188Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame188_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser188Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame188_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser188Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame188_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser189Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame189_wheel1";
 
+static const ALIGN_ASSET(2) char gKartBowser189Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame189_wheel3";
+
 static const ALIGN_ASSET(2) char gKartBowser189Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame189_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser189Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame189_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser189Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame189_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser190Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame190_wheel0";
 
@@ -1539,21 +1539,21 @@ static const ALIGN_ASSET(2) char gKartBowser191Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser191Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame191_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser192Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame192_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser192Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame192_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser192Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame192_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser192Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame192_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser193Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame193_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser192Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame192_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser193Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame193_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser192Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame192_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser193Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame193_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser193Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame193_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser193Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame193_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser193Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame193_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser193Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame193_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser194Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame194_wheel0";
 
@@ -1565,35 +1565,35 @@ static const ALIGN_ASSET(2) char gKartBowser194Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser195Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame195_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser195Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame195_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser195Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame195_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser195Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame195_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser195Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame195_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser195Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame195_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser196Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame196_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser196Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame196_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser196Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame196_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser196Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame196_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser196Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame196_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser196Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame196_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser197Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame197_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser197Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame197_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser197Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame197_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser197Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame197_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser197Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame197_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser197Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame197_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser198Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame198_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser198Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame198_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser198Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame198_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser198Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame198_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser198Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame198_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser198Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame198_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser199Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame199_wheel0";
 
@@ -1611,29 +1611,29 @@ static const ALIGN_ASSET(2) char gKartBowser200Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser200Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame200_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser201Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame201_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser201Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame201_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser201Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame201_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser201Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame201_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser202Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame202_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser201Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame201_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser202Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame202_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser201Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame201_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser202Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame202_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser202Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame202_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser203Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame203_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser202Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame202_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser202Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame202_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser203Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame203_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser203Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame203_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser203Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame203_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser203Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame203_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser203Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame203_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser204Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame204_wheel0";
 
@@ -1651,21 +1651,21 @@ static const ALIGN_ASSET(2) char gKartBowser205Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser205Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame205_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser206Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame206_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser206Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame206_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser206Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame206_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser206Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame206_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser206Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame206_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser206Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame206_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser207Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame207_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser207Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame207_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser207Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame207_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser207Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame207_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser207Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame207_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser207Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame207_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser208Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame208_wheel0";
 
@@ -1683,21 +1683,21 @@ static const ALIGN_ASSET(2) char gKartBowser209Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser209Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame209_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser210Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame210_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser210Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame210_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser210Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame210_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser210Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame210_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser211Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame211_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser210Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame210_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser211Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame211_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser210Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame210_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser211Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame211_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser211Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame211_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser211Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame211_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser211Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame211_wheel0";
+
+static const ALIGN_ASSET(2) char gKartBowser211Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame211_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser212Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame212_wheel0";
 
@@ -1709,35 +1709,35 @@ static const ALIGN_ASSET(2) char gKartBowser212Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser213Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame213_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser213Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame213_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser213Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame213_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser213Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame213_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser213Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame213_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser213Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame213_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser214Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame214_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser214Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame214_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser214Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame214_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser214Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame214_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser214Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame214_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser214Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame214_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser215Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame215_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser215Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame215_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser215Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame215_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser215Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame215_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser215Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame215_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser215Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame215_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser216Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame216_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser216Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame216_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser216Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame216_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser216Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame216_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser216Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame216_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser216Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame216_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser217Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame217_wheel0";
 
@@ -1755,29 +1755,29 @@ static const ALIGN_ASSET(2) char gKartBowser218Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser218Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame218_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser219Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame219_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser219Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame219_wheel2";
-
 static const ALIGN_ASSET(2) char gKartBowser219Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame219_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser219Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame219_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser219Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame219_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser219Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame219_wheel3";
+
+static const ALIGN_ASSET(2) char gKartBowser220Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame220_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser220Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame220_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser220Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame220_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser220Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame220_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser220Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame220_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser221Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame221_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser221Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame221_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser221Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame221_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser221Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame221_wheel2";
+
+static const ALIGN_ASSET(2) char gKartBowser221Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame221_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser222Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame222_wheel0";
 
@@ -1789,11 +1789,11 @@ static const ALIGN_ASSET(2) char gKartBowser222Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser223Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame223_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser223Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame223_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser223Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame223_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser223Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame223_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser223Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame223_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser223Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame223_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser224Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame224_wheel0";
 
@@ -1803,13 +1803,13 @@ static const ALIGN_ASSET(2) char gKartBowser224Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser224Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame224_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser225Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame225_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser225Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame225_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser225Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame225_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser225Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame225_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser225Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame225_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser225Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame225_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser225Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame225_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser226Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame226_wheel0";
 
@@ -1835,13 +1835,13 @@ static const ALIGN_ASSET(2) char gKartBowser228Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser228Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame228_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser229Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame229_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser229Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame229_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser229Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame229_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser229Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame229_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser229Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame229_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser229Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame229_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser230Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame230_wheel0";
 
@@ -1907,21 +1907,21 @@ static const ALIGN_ASSET(2) char gKartBowser237Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser237Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame237_wheel3";
 
+static const ALIGN_ASSET(2) char gKartBowser238Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame238_wheel2";
+
 static const ALIGN_ASSET(2) char gKartBowser238Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame238_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser238Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame238_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser238Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame238_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser238Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame238_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser239Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame239_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser239Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame239_wheel1";
 
-static const ALIGN_ASSET(2) char gKartBowser239Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame239_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser239Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser239Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame239_wheel3";
-
-static const ALIGN_ASSET(2) char gKartBowser239Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser240Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame240_wheel0";
 
@@ -1933,11 +1933,11 @@ static const ALIGN_ASSET(2) char gKartBowser240Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser241Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame241_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser241Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame241_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser241Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame241_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser241Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame241_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser241Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame241_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser241Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame241_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser242Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame242_wheel0";
 
@@ -1947,13 +1947,13 @@ static const ALIGN_ASSET(2) char gKartBowser242Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser242Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame242_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser243Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame243_wheel3";
+static const ALIGN_ASSET(2) char gKartBowser243Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame243_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser243Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame243_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser243Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame243_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser243Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame243_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser243Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame243_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser243Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame243_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser244Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame244_wheel0";
 
@@ -1979,13 +1979,13 @@ static const ALIGN_ASSET(2) char gKartBowser246Wheel2[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser246Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame246_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser247Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame247_wheel3";
-
 static const ALIGN_ASSET(2) char gKartBowser247Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame247_wheel2";
 
-static const ALIGN_ASSET(2) char gKartBowser247Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame247_wheel0";
+static const ALIGN_ASSET(2) char gKartBowser247Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame247_wheel3";
 
 static const ALIGN_ASSET(2) char gKartBowser247Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame247_wheel1";
+
+static const ALIGN_ASSET(2) char gKartBowser247Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame247_wheel0";
 
 static const ALIGN_ASSET(2) char gKartBowser248Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame248_wheel0";
 
@@ -2053,11 +2053,11 @@ static const ALIGN_ASSET(2) char gKartBowser255Wheel3[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser256Wheel3[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame256_wheel3";
 
-static const ALIGN_ASSET(2) char gKartBowser256Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame256_wheel1";
+static const ALIGN_ASSET(2) char gKartBowser256Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame256_wheel2";
 
 static const ALIGN_ASSET(2) char gKartBowser256Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame256_wheel0";
 
-static const ALIGN_ASSET(2) char gKartBowser256Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame256_wheel2";
+static const ALIGN_ASSET(2) char gKartBowser256Wheel1[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame256_wheel1";
 
 static const ALIGN_ASSET(2) char gKartBowser257Wheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame257_wheel0";
 
@@ -2315,6 +2315,38 @@ static const ALIGN_ASSET(2) char gKartBowser288Wheel0[] = "__OTR__textures/karts
 
 static const ALIGN_ASSET(2) char gKartBowser288Wheel2[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame288_wheel2";
 
+static const ALIGN_ASSET(2) char gKartBowser289[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame289";
+
+static const ALIGN_ASSET(2) char gKartBowser290[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame290";
+
+static const ALIGN_ASSET(2) char gKartBowser291[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame291";
+
+static const ALIGN_ASSET(2) char gKartBowser292[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame292";
+
+static const ALIGN_ASSET(2) char gKartBowser293[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame293";
+
+static const ALIGN_ASSET(2) char gKartBowser294[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame294";
+
+static const ALIGN_ASSET(2) char gKartBowser295[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame295";
+
+static const ALIGN_ASSET(2) char gKartBowser296[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame296";
+
+static const ALIGN_ASSET(2) char gKartBowser297[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame297";
+
+static const ALIGN_ASSET(2) char gKartBowser298[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame298";
+
+static const ALIGN_ASSET(2) char gKartBowser299[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame299";
+
+static const ALIGN_ASSET(2) char gKartBowser300[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame300";
+
+static const ALIGN_ASSET(2) char gKartBowser301[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame301";
+
+static const ALIGN_ASSET(2) char gKartBowser302[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame302";
+
+static const ALIGN_ASSET(2) char gKartBowser303[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame303";
+
+static const ALIGN_ASSET(2) char gKartBowser304[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame304";
+
 static const ALIGN_ASSET(2) char gKartBowser305[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame305";
 
 static const ALIGN_ASSET(2) char gKartBowser306[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame306";
@@ -2346,38 +2378,6 @@ static const ALIGN_ASSET(2) char gKartBowser318[] = "__OTR__textures/karts/bowse
 static const ALIGN_ASSET(2) char gKartBowser319[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame319";
 
 static const ALIGN_ASSET(2) char gKartBowser320[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame320";
-
-static const ALIGN_ASSET(2) char gKartBowser303[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame303";
-
-static const ALIGN_ASSET(2) char gKartBowser304[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame304";
-
-static const ALIGN_ASSET(2) char gKartBowser289[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame289";
-
-static const ALIGN_ASSET(2) char gKartBowser290[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame290";
-
-static const ALIGN_ASSET(2) char gKartBowser291[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame291";
-
-static const ALIGN_ASSET(2) char gKartBowser292[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame292";
-
-static const ALIGN_ASSET(2) char gKartBowser293[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame293";
-
-static const ALIGN_ASSET(2) char gKartBowser294[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame294";
-
-static const ALIGN_ASSET(2) char gKartBowser295[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame295";
-
-static const ALIGN_ASSET(2) char gKartBowser297[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame297";
-
-static const ALIGN_ASSET(2) char gKartBowser296[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame296";
-
-static const ALIGN_ASSET(2) char gKartBowser302[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame302";
-
-static const ALIGN_ASSET(2) char gKartBowser301[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame301";
-
-static const ALIGN_ASSET(2) char gKartBowser299[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame299";
-
-static const ALIGN_ASSET(2) char gKartBowser300[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame300";
-
-static const ALIGN_ASSET(2) char gKartBowser298[] = "__OTR__textures/karts/bowser_kart/bowser_kart_frame298";
 
 static const ALIGN_ASSET(2) char gKartBowser000TlutWheel0[] = "__OTR__textures/karts/bowser_kart/bowser_kart_000_tlut_wheel_0";
 

@@ -299,21 +299,21 @@ static const ALIGN_ASSET(2) char gKartDK036Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK036Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame036_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK037Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame037_wheel0";
+static const ALIGN_ASSET(2) char gKartDK037Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame037_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK037Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame037_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK037Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame037_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK037Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame037_wheel2";
+static const ALIGN_ASSET(2) char gKartDK037Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame037_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK038Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK038Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame038_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK038Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame038_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK038Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame038_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK038Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK039Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame039_wheel0";
 
@@ -323,13 +323,13 @@ static const ALIGN_ASSET(2) char gKartDK039Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK039Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame039_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK040Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame040_wheel1";
+static const ALIGN_ASSET(2) char gKartDK040Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame040_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK040Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame040_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK040Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame040_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK040Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame040_wheel0";
+static const ALIGN_ASSET(2) char gKartDK040Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame040_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK041Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame041_wheel0";
 
@@ -339,11 +339,11 @@ static const ALIGN_ASSET(2) char gKartDK041Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK041Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame041_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK042Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame042_wheel1";
+static const ALIGN_ASSET(2) char gKartDK042Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame042_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK042Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame042_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK042Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame042_wheel2";
+static const ALIGN_ASSET(2) char gKartDK042Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame042_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK042Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame042_wheel0";
 
@@ -365,27 +365,27 @@ static const ALIGN_ASSET(2) char gKartDK044Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK045Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame045_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK045Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame045_wheel1";
+static const ALIGN_ASSET(2) char gKartDK045Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame045_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK045Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame045_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK045Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame045_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK046Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame046_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK046Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame046_wheel2";
+static const ALIGN_ASSET(2) char gKartDK045Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame045_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK046Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame046_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK046Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame046_wheel1";
 
+static const ALIGN_ASSET(2) char gKartDK046Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame046_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK046Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame046_wheel3";
+
 static const ALIGN_ASSET(2) char gKartDK047Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame047_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK047Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK047Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame047_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK047Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame047_wheel2";
-
-static const ALIGN_ASSET(2) char gKartDK047Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK048Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame048_wheel0";
 
@@ -397,35 +397,35 @@ static const ALIGN_ASSET(2) char gKartDK048Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK049Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame049_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK049Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame049_wheel3";
+static const ALIGN_ASSET(2) char gKartDK049Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame049_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK049Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame049_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK049Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame049_wheel1";
+static const ALIGN_ASSET(2) char gKartDK049Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame049_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK050Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame050_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK050Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame050_wheel1";
+static const ALIGN_ASSET(2) char gKartDK050Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame050_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK050Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame050_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK050Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame050_wheel3";
+static const ALIGN_ASSET(2) char gKartDK050Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame050_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK051Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame051_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK051Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame051_wheel3";
+static const ALIGN_ASSET(2) char gKartDK051Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame051_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK051Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame051_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK051Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame051_wheel1";
+static const ALIGN_ASSET(2) char gKartDK051Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame051_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK052Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame052_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK052Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame052_wheel1";
+static const ALIGN_ASSET(2) char gKartDK052Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame052_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK052Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame052_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK052Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame052_wheel3";
+static const ALIGN_ASSET(2) char gKartDK052Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame052_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK053Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame053_wheel0";
 
@@ -443,29 +443,29 @@ static const ALIGN_ASSET(2) char gKartDK054Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK054Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame054_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK055Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame055_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK055Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame055_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK055Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame055_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK055Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame055_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK056Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame056_wheel1";
+static const ALIGN_ASSET(2) char gKartDK055Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame055_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK055Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame055_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK056Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame056_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK056Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame056_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK056Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame056_wheel2";
+static const ALIGN_ASSET(2) char gKartDK056Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame056_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK057Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame057_wheel0";
+static const ALIGN_ASSET(2) char gKartDK056Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame056_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK057Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame057_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK057Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame057_wheel2";
+static const ALIGN_ASSET(2) char gKartDK057Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame057_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK057Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame057_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK057Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame057_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK058Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame058_wheel0";
 
@@ -483,21 +483,21 @@ static const ALIGN_ASSET(2) char gKartDK059Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK059Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame059_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK060Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame060_wheel3";
+static const ALIGN_ASSET(2) char gKartDK060Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame060_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK060Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame060_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK060Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame060_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK060Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame060_wheel0";
+static const ALIGN_ASSET(2) char gKartDK060Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame060_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK061Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame061_wheel0";
+static const ALIGN_ASSET(2) char gKartDK061Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame061_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK061Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame061_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK061Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame061_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK061Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame061_wheel3";
+static const ALIGN_ASSET(2) char gKartDK061Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame061_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK062Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame062_wheel0";
 
@@ -515,21 +515,21 @@ static const ALIGN_ASSET(2) char gKartDK063Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK063Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame063_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK064Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame064_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK064Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame064_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK064Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame064_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK064Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame064_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK065Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame065_wheel0";
+static const ALIGN_ASSET(2) char gKartDK064Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame064_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK065Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame065_wheel1";
+static const ALIGN_ASSET(2) char gKartDK064Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame064_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK065Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame065_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK065Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame065_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK065Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame065_wheel3";
+static const ALIGN_ASSET(2) char gKartDK065Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame065_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK065Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame065_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK066Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame066_wheel0";
 
@@ -541,35 +541,35 @@ static const ALIGN_ASSET(2) char gKartDK066Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK067Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame067_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK067Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame067_wheel3";
+static const ALIGN_ASSET(2) char gKartDK067Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame067_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK067Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame067_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK067Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame067_wheel1";
+static const ALIGN_ASSET(2) char gKartDK067Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame067_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK068Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame068_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK068Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame068_wheel1";
+static const ALIGN_ASSET(2) char gKartDK068Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame068_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK068Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame068_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK068Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame068_wheel3";
+static const ALIGN_ASSET(2) char gKartDK068Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame068_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK069Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame069_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK069Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame069_wheel3";
+static const ALIGN_ASSET(2) char gKartDK069Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame069_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK069Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame069_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK069Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame069_wheel1";
+static const ALIGN_ASSET(2) char gKartDK069Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame069_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK070Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame070_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK070Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame070_wheel1";
+static const ALIGN_ASSET(2) char gKartDK070Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame070_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK070Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame070_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK070Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame070_wheel3";
+static const ALIGN_ASSET(2) char gKartDK070Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame070_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK071Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame071_wheel0";
 
@@ -587,21 +587,21 @@ static const ALIGN_ASSET(2) char gKartDK072Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK072Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame072_wheel3";
 
+static const ALIGN_ASSET(2) char gKartDK073Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame073_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK073Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame073_wheel1";
+
 static const ALIGN_ASSET(2) char gKartDK073Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame073_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK073Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame073_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK073Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame073_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK073Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame073_wheel0";
-
 static const ALIGN_ASSET(2) char gKartDK074Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame074_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK074Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK074Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame074_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK074Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame074_wheel2";
-
-static const ALIGN_ASSET(2) char gKartDK074Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK075Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame075_wheel0";
 
@@ -613,35 +613,35 @@ static const ALIGN_ASSET(2) char gKartDK075Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK076Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame076_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK076Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame076_wheel3";
+static const ALIGN_ASSET(2) char gKartDK076Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame076_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK076Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame076_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK076Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame076_wheel1";
+static const ALIGN_ASSET(2) char gKartDK076Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame076_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK077Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame077_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK077Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame077_wheel1";
+static const ALIGN_ASSET(2) char gKartDK077Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame077_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK077Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame077_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK077Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame077_wheel3";
+static const ALIGN_ASSET(2) char gKartDK077Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame077_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK078Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame078_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK078Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame078_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK078Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame078_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK078Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame078_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK078Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame078_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK078Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame078_wheel0";
-
-static const ALIGN_ASSET(2) char gKartDK079Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame079_wheel0";
-
-static const ALIGN_ASSET(2) char gKartDK079Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame079_wheel1";
-
 static const ALIGN_ASSET(2) char gKartDK079Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame079_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK079Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame079_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK079Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame079_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK079Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame079_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK080Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame080_wheel0";
 
@@ -653,35 +653,35 @@ static const ALIGN_ASSET(2) char gKartDK080Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK081Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame081_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK081Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame081_wheel3";
+static const ALIGN_ASSET(2) char gKartDK081Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame081_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK081Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame081_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK081Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame081_wheel1";
+static const ALIGN_ASSET(2) char gKartDK081Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame081_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK082Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame082_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK082Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame082_wheel1";
+static const ALIGN_ASSET(2) char gKartDK082Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame082_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK082Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame082_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK082Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame082_wheel3";
+static const ALIGN_ASSET(2) char gKartDK082Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame082_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK083Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame083_wheel0";
-
-static const ALIGN_ASSET(2) char gKartDK083Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK083Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame083_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK083Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame083_wheel2";
 
+static const ALIGN_ASSET(2) char gKartDK083Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame083_wheel3";
+
 static const ALIGN_ASSET(2) char gKartDK084Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame084_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK084Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK084Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame084_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK084Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame084_wheel2";
-
-static const ALIGN_ASSET(2) char gKartDK084Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK085Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame085_wheel0";
 
@@ -693,35 +693,35 @@ static const ALIGN_ASSET(2) char gKartDK085Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK086Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame086_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK086Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame086_wheel3";
+static const ALIGN_ASSET(2) char gKartDK086Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame086_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK086Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame086_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK086Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame086_wheel1";
+static const ALIGN_ASSET(2) char gKartDK086Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame086_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK087Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame087_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK087Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame087_wheel1";
+static const ALIGN_ASSET(2) char gKartDK087Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame087_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK087Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame087_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK087Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame087_wheel3";
+static const ALIGN_ASSET(2) char gKartDK087Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame087_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK088Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame088_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK088Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame088_wheel3";
+static const ALIGN_ASSET(2) char gKartDK088Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame088_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK088Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame088_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK088Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame088_wheel1";
+static const ALIGN_ASSET(2) char gKartDK088Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame088_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK089Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame089_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK089Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame089_wheel1";
+static const ALIGN_ASSET(2) char gKartDK089Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame089_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK089Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame089_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK089Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame089_wheel3";
+static const ALIGN_ASSET(2) char gKartDK089Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame089_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK090Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame090_wheel0";
 
@@ -741,27 +741,27 @@ static const ALIGN_ASSET(2) char gKartDK091Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK092Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame092_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK092Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame092_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK092Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame092_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK092Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame092_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK093Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame093_wheel1";
+static const ALIGN_ASSET(2) char gKartDK092Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame092_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK093Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame093_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK093Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame093_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK093Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame093_wheel2";
+static const ALIGN_ASSET(2) char gKartDK093Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame093_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK094Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame094_wheel0";
+static const ALIGN_ASSET(2) char gKartDK093Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame093_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK094Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame094_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK094Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame094_wheel2";
+static const ALIGN_ASSET(2) char gKartDK094Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame094_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK094Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame094_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK094Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame094_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK095Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame095_wheel0";
 
@@ -779,21 +779,21 @@ static const ALIGN_ASSET(2) char gKartDK096Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK096Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame096_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK097Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame097_wheel3";
+static const ALIGN_ASSET(2) char gKartDK097Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame097_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK097Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame097_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK097Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame097_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK097Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame097_wheel0";
+static const ALIGN_ASSET(2) char gKartDK097Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame097_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK098Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame098_wheel0";
+static const ALIGN_ASSET(2) char gKartDK098Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame098_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK098Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame098_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK098Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame098_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK098Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame098_wheel3";
+static const ALIGN_ASSET(2) char gKartDK098Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame098_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK099Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame099_wheel0";
 
@@ -811,21 +811,21 @@ static const ALIGN_ASSET(2) char gKartDK100Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK100Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame100_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK101Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame101_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK101Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame101_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK101Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame101_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK101Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame101_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK102Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame102_wheel0";
+static const ALIGN_ASSET(2) char gKartDK101Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame101_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK102Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame102_wheel1";
+static const ALIGN_ASSET(2) char gKartDK101Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame101_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK102Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame102_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK102Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame102_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK102Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame102_wheel3";
+static const ALIGN_ASSET(2) char gKartDK102Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame102_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK102Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame102_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK103Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame103_wheel0";
 
@@ -837,35 +837,35 @@ static const ALIGN_ASSET(2) char gKartDK103Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK104Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame104_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK104Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame104_wheel3";
+static const ALIGN_ASSET(2) char gKartDK104Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame104_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK104Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame104_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK104Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame104_wheel1";
+static const ALIGN_ASSET(2) char gKartDK104Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame104_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK105Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame105_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK105Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame105_wheel1";
+static const ALIGN_ASSET(2) char gKartDK105Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame105_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK105Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame105_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK105Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame105_wheel3";
+static const ALIGN_ASSET(2) char gKartDK105Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame105_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK106Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame106_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK106Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame106_wheel3";
+static const ALIGN_ASSET(2) char gKartDK106Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame106_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK106Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame106_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK106Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame106_wheel1";
+static const ALIGN_ASSET(2) char gKartDK106Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame106_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK107Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame107_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK107Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame107_wheel1";
+static const ALIGN_ASSET(2) char gKartDK107Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame107_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK107Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame107_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK107Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame107_wheel3";
+static const ALIGN_ASSET(2) char gKartDK107Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame107_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK108Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame108_wheel0";
 
@@ -885,21 +885,19 @@ static const ALIGN_ASSET(2) char gKartDK109Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK110Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame110_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK110Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame110_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK110Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame110_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK110Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame110_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK111Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame111_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK111Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame111_wheel2";
-
-static const ALIGN_ASSET(2) char gKartDK111Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame111_wheel3";
+static const ALIGN_ASSET(2) char gKartDK110Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame110_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK111Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame111_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK112Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame112_wheel0";
+static const ALIGN_ASSET(2) char gKartDK111Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame111_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK111Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame111_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK111Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame111_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK112Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame112_wheel1";
 
@@ -907,37 +905,39 @@ static const ALIGN_ASSET(2) char gKartDK112Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK112Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame112_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK113Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame113_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK113Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame113_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK113Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame113_wheel2";
+static const ALIGN_ASSET(2) char gKartDK112Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame112_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK113Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame113_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK114Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame114_wheel0";
+static const ALIGN_ASSET(2) char gKartDK113Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame113_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK113Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame113_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK113Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame113_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK114Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame114_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK114Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame114_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK114Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame114_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK115Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame115_wheel1";
+static const ALIGN_ASSET(2) char gKartDK114Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame114_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK115Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame115_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK115Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame115_wheel2";
+static const ALIGN_ASSET(2) char gKartDK114Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame114_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK115Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame115_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK116Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame116_wheel0";
+static const ALIGN_ASSET(2) char gKartDK115Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame115_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK115Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame115_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK115Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame115_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK116Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame116_wheel1";
 
+static const ALIGN_ASSET(2) char gKartDK116Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame116_wheel3";
+
 static const ALIGN_ASSET(2) char gKartDK116Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame116_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK116Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame116_wheel3";
+static const ALIGN_ASSET(2) char gKartDK116Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame116_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK117Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame117_wheel0";
 
@@ -955,21 +955,21 @@ static const ALIGN_ASSET(2) char gKartDK118Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK118Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame118_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK119Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame119_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK119Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame119_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK119Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame119_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK119Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame119_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK120Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame120_wheel0";
+static const ALIGN_ASSET(2) char gKartDK119Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame119_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK120Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame120_wheel1";
+static const ALIGN_ASSET(2) char gKartDK119Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame119_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK120Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame120_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK120Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame120_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK120Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame120_wheel3";
+static const ALIGN_ASSET(2) char gKartDK120Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame120_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK120Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame120_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK121Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame121_wheel0";
 
@@ -981,35 +981,35 @@ static const ALIGN_ASSET(2) char gKartDK121Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK122Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame122_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK122Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame122_wheel3";
+static const ALIGN_ASSET(2) char gKartDK122Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame122_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK122Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame122_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK122Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame122_wheel1";
+static const ALIGN_ASSET(2) char gKartDK122Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame122_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK123Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame123_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK123Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame123_wheel1";
+static const ALIGN_ASSET(2) char gKartDK123Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame123_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK123Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame123_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK123Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame123_wheel3";
+static const ALIGN_ASSET(2) char gKartDK123Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame123_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK124Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame124_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK124Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame124_wheel3";
+static const ALIGN_ASSET(2) char gKartDK124Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame124_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK124Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame124_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK124Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame124_wheel1";
+static const ALIGN_ASSET(2) char gKartDK124Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame124_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK125Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame125_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK125Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame125_wheel1";
+static const ALIGN_ASSET(2) char gKartDK125Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame125_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK125Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame125_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK125Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame125_wheel3";
+static const ALIGN_ASSET(2) char gKartDK125Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame125_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK126Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame126_wheel0";
 
@@ -1027,29 +1027,29 @@ static const ALIGN_ASSET(2) char gKartDK127Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK127Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame127_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK128Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame128_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK128Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame128_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK128Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame128_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK128Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame128_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK129Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame129_wheel1";
+static const ALIGN_ASSET(2) char gKartDK128Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame128_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK129Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame129_wheel0";
+static const ALIGN_ASSET(2) char gKartDK128Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame128_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK129Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame129_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK129Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame129_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK130Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame130_wheel0";
+static const ALIGN_ASSET(2) char gKartDK129Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame129_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK129Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK130Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame130_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK130Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame130_wheel2";
+static const ALIGN_ASSET(2) char gKartDK130Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame130_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK130Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame130_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK130Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame130_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK131Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame131_wheel0";
 
@@ -1067,21 +1067,21 @@ static const ALIGN_ASSET(2) char gKartDK132Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK132Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame132_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK133Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame133_wheel3";
+static const ALIGN_ASSET(2) char gKartDK133Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame133_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK133Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame133_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK133Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame133_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK133Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame133_wheel0";
+static const ALIGN_ASSET(2) char gKartDK133Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame133_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK134Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame134_wheel0";
+static const ALIGN_ASSET(2) char gKartDK134Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame134_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK134Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame134_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK134Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame134_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK134Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame134_wheel3";
+static const ALIGN_ASSET(2) char gKartDK134Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame134_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK135Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame135_wheel0";
 
@@ -1099,21 +1099,21 @@ static const ALIGN_ASSET(2) char gKartDK136Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK136Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame136_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK137Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame137_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK137Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame137_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK137Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame137_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK137Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame137_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK138Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame138_wheel0";
+static const ALIGN_ASSET(2) char gKartDK137Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame137_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK138Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame138_wheel1";
+static const ALIGN_ASSET(2) char gKartDK137Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame137_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK138Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame138_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK138Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame138_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK138Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame138_wheel3";
+static const ALIGN_ASSET(2) char gKartDK138Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame138_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK138Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame138_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK139Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame139_wheel0";
 
@@ -1125,35 +1125,35 @@ static const ALIGN_ASSET(2) char gKartDK139Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK140Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame140_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK140Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame140_wheel3";
+static const ALIGN_ASSET(2) char gKartDK140Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame140_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK140Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame140_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK140Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame140_wheel1";
+static const ALIGN_ASSET(2) char gKartDK140Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame140_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK141Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame141_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK141Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame141_wheel1";
+static const ALIGN_ASSET(2) char gKartDK141Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame141_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK141Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame141_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK141Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame141_wheel3";
+static const ALIGN_ASSET(2) char gKartDK141Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame141_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK142Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame142_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK142Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame142_wheel3";
+static const ALIGN_ASSET(2) char gKartDK142Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame142_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK142Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame142_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK142Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame142_wheel1";
+static const ALIGN_ASSET(2) char gKartDK142Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame142_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK143Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame143_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK143Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame143_wheel1";
+static const ALIGN_ASSET(2) char gKartDK143Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame143_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK143Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame143_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK143Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame143_wheel3";
+static const ALIGN_ASSET(2) char gKartDK143Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame143_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK144Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame144_wheel0";
 
@@ -1171,37 +1171,37 @@ static const ALIGN_ASSET(2) char gKartDK145Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK145Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame145_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK146Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame146_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK146Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame146_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK146Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame146_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK146Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame146_wheel1";
 
+static const ALIGN_ASSET(2) char gKartDK146Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame146_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK146Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame146_wheel3";
+
 static const ALIGN_ASSET(2) char gKartDK147Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame147_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK147Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame147_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK147Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame147_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK147Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame147_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK147Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame147_wheel3";
+static const ALIGN_ASSET(2) char gKartDK148Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame148_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK148Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame148_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK148Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame148_wheel1";
+static const ALIGN_ASSET(2) char gKartDK148Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK148Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame148_wheel2";
-
-static const ALIGN_ASSET(2) char gKartDK148Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK149Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame149_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK149Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame149_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK149Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame149_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK149Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame149_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK149Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame149_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK150Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame150_wheel0";
 
@@ -1211,21 +1211,21 @@ static const ALIGN_ASSET(2) char gKartDK150Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK150Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame150_wheel3";
 
+static const ALIGN_ASSET(2) char gKartDK151Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame151_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK151Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame151_wheel1";
+
 static const ALIGN_ASSET(2) char gKartDK151Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame151_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK151Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame151_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK151Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame151_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK151Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame151_wheel0";
-
 static const ALIGN_ASSET(2) char gKartDK152Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame152_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK152Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame152_wheel1";
+static const ALIGN_ASSET(2) char gKartDK152Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame152_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK152Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame152_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK152Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame152_wheel3";
+static const ALIGN_ASSET(2) char gKartDK152Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame152_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK153Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame153_wheel0";
 
@@ -1253,11 +1253,11 @@ static const ALIGN_ASSET(2) char gKartDK155Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK156Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame156_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK156Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame156_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK156Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame156_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK156Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame156_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK156Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame156_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK157Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame157_wheel0";
 
@@ -1269,19 +1269,19 @@ static const ALIGN_ASSET(2) char gKartDK157Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK158Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame158_wheel0";
 
+static const ALIGN_ASSET(2) char gKartDK158Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame158_wheel3";
+
 static const ALIGN_ASSET(2) char gKartDK158Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame158_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK158Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame158_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK158Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame158_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK159Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame159_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK159Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame159_wheel3";
+static const ALIGN_ASSET(2) char gKartDK159Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame159_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK159Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame159_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK159Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame159_wheel1";
+static const ALIGN_ASSET(2) char gKartDK159Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame159_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK160Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame160_wheel0";
 
@@ -1293,19 +1293,19 @@ static const ALIGN_ASSET(2) char gKartDK160Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK161Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame161_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK161Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame161_wheel3";
+static const ALIGN_ASSET(2) char gKartDK161Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame161_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK161Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame161_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK161Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame161_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK162Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame162_wheel0";
-
-static const ALIGN_ASSET(2) char gKartDK162Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame162_wheel1";
+static const ALIGN_ASSET(2) char gKartDK161Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame161_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK162Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame162_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK162Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame162_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK162Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame162_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK162Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame162_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK163Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame163_wheel0";
 
@@ -1325,27 +1325,27 @@ static const ALIGN_ASSET(2) char gKartDK164Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK165Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame165_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK165Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame165_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK165Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame165_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK165Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame165_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK166Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame166_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK166Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame166_wheel0";
+static const ALIGN_ASSET(2) char gKartDK165Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame165_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK166Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame166_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK166Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame166_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK167Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame167_wheel0";
+static const ALIGN_ASSET(2) char gKartDK166Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame166_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK166Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame166_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK167Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame167_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK167Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame167_wheel2";
+static const ALIGN_ASSET(2) char gKartDK167Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame167_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK167Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame167_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK167Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame167_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK168Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame168_wheel0";
 
@@ -1363,21 +1363,21 @@ static const ALIGN_ASSET(2) char gKartDK169Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK169Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame169_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK170Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame170_wheel3";
+static const ALIGN_ASSET(2) char gKartDK170Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame170_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK170Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame170_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK170Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame170_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK170Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame170_wheel0";
+static const ALIGN_ASSET(2) char gKartDK170Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame170_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK171Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame171_wheel0";
+static const ALIGN_ASSET(2) char gKartDK171Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame171_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK171Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame171_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK171Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame171_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK171Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame171_wheel3";
+static const ALIGN_ASSET(2) char gKartDK171Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame171_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK172Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame172_wheel0";
 
@@ -1395,21 +1395,21 @@ static const ALIGN_ASSET(2) char gKartDK173Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK173Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame173_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK174Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame174_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK174Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame174_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK174Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame174_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK174Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame174_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK175Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame175_wheel0";
+static const ALIGN_ASSET(2) char gKartDK174Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame174_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK175Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame175_wheel1";
+static const ALIGN_ASSET(2) char gKartDK174Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame174_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK175Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame175_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK175Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame175_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK175Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame175_wheel3";
+static const ALIGN_ASSET(2) char gKartDK175Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame175_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK175Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame175_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK176Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame176_wheel0";
 
@@ -1421,35 +1421,35 @@ static const ALIGN_ASSET(2) char gKartDK176Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK177Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame177_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK177Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame177_wheel3";
+static const ALIGN_ASSET(2) char gKartDK177Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame177_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK177Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame177_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK177Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame177_wheel1";
+static const ALIGN_ASSET(2) char gKartDK177Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame177_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK178Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame178_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK178Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame178_wheel1";
+static const ALIGN_ASSET(2) char gKartDK178Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame178_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK178Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame178_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK178Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame178_wheel3";
+static const ALIGN_ASSET(2) char gKartDK178Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame178_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK179Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame179_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK179Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame179_wheel3";
+static const ALIGN_ASSET(2) char gKartDK179Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame179_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK179Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame179_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK179Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame179_wheel1";
+static const ALIGN_ASSET(2) char gKartDK179Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame179_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK180Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame180_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK180Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame180_wheel1";
+static const ALIGN_ASSET(2) char gKartDK180Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame180_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK180Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame180_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK180Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame180_wheel3";
+static const ALIGN_ASSET(2) char gKartDK180Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame180_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK181Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame181_wheel0";
 
@@ -1469,21 +1469,19 @@ static const ALIGN_ASSET(2) char gKartDK182Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK183Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame183_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK183Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame183_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK183Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame183_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK183Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame183_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK184Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame184_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK184Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame184_wheel2";
+static const ALIGN_ASSET(2) char gKartDK183Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame183_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK184Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame184_wheel3";
 
+static const ALIGN_ASSET(2) char gKartDK184Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame184_wheel1";
+
 static const ALIGN_ASSET(2) char gKartDK184Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame184_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK185Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame185_wheel0";
+static const ALIGN_ASSET(2) char gKartDK184Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame184_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK185Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame185_wheel1";
 
@@ -1491,37 +1489,39 @@ static const ALIGN_ASSET(2) char gKartDK185Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK185Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame185_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK186Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame186_wheel1";
-
-static const ALIGN_ASSET(2) char gKartDK186Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame186_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK186Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame186_wheel2";
+static const ALIGN_ASSET(2) char gKartDK185Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame185_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK186Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame186_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK187Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame187_wheel0";
+static const ALIGN_ASSET(2) char gKartDK186Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame186_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK186Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame186_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK186Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame186_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK187Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame187_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK187Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame187_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK187Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame187_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK188Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame188_wheel1";
+static const ALIGN_ASSET(2) char gKartDK187Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame187_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK188Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame188_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK188Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame188_wheel2";
+static const ALIGN_ASSET(2) char gKartDK187Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame187_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK188Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame188_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK189Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame189_wheel0";
+static const ALIGN_ASSET(2) char gKartDK188Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame188_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK188Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame188_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK188Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame188_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK189Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame189_wheel1";
 
+static const ALIGN_ASSET(2) char gKartDK189Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame189_wheel3";
+
 static const ALIGN_ASSET(2) char gKartDK189Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame189_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK189Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame189_wheel3";
+static const ALIGN_ASSET(2) char gKartDK189Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame189_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK190Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame190_wheel0";
 
@@ -1539,21 +1539,21 @@ static const ALIGN_ASSET(2) char gKartDK191Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK191Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame191_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK192Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame192_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK192Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame192_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK192Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame192_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK192Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame192_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK193Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame193_wheel0";
+static const ALIGN_ASSET(2) char gKartDK192Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame192_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK193Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame193_wheel1";
+static const ALIGN_ASSET(2) char gKartDK192Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame192_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK193Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame193_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK193Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame193_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK193Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame193_wheel3";
+static const ALIGN_ASSET(2) char gKartDK193Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame193_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK193Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame193_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK194Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame194_wheel0";
 
@@ -1565,35 +1565,35 @@ static const ALIGN_ASSET(2) char gKartDK194Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK195Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame195_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK195Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame195_wheel3";
+static const ALIGN_ASSET(2) char gKartDK195Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame195_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK195Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame195_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK195Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame195_wheel1";
+static const ALIGN_ASSET(2) char gKartDK195Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame195_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK196Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame196_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK196Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame196_wheel1";
+static const ALIGN_ASSET(2) char gKartDK196Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame196_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK196Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame196_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK196Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame196_wheel3";
+static const ALIGN_ASSET(2) char gKartDK196Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame196_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK197Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame197_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK197Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame197_wheel3";
+static const ALIGN_ASSET(2) char gKartDK197Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame197_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK197Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame197_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK197Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame197_wheel1";
+static const ALIGN_ASSET(2) char gKartDK197Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame197_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK198Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame198_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK198Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame198_wheel1";
+static const ALIGN_ASSET(2) char gKartDK198Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame198_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK198Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame198_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK198Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame198_wheel3";
+static const ALIGN_ASSET(2) char gKartDK198Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame198_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK199Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame199_wheel0";
 
@@ -1611,29 +1611,29 @@ static const ALIGN_ASSET(2) char gKartDK200Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK200Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame200_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK201Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame201_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK201Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame201_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK201Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame201_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK201Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame201_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK202Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame202_wheel1";
+static const ALIGN_ASSET(2) char gKartDK201Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame201_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK202Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame202_wheel0";
+static const ALIGN_ASSET(2) char gKartDK201Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame201_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK202Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame202_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK202Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame202_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK203Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame203_wheel0";
+static const ALIGN_ASSET(2) char gKartDK202Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame202_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK202Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame202_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK203Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame203_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK203Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame203_wheel2";
+static const ALIGN_ASSET(2) char gKartDK203Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame203_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK203Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame203_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK203Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame203_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK204Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame204_wheel0";
 
@@ -1651,21 +1651,21 @@ static const ALIGN_ASSET(2) char gKartDK205Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK205Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame205_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK206Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame206_wheel3";
+static const ALIGN_ASSET(2) char gKartDK206Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame206_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK206Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame206_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK206Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame206_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK206Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame206_wheel0";
+static const ALIGN_ASSET(2) char gKartDK206Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame206_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK207Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame207_wheel0";
+static const ALIGN_ASSET(2) char gKartDK207Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame207_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK207Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame207_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK207Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame207_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK207Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame207_wheel3";
+static const ALIGN_ASSET(2) char gKartDK207Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame207_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK208Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame208_wheel0";
 
@@ -1683,21 +1683,21 @@ static const ALIGN_ASSET(2) char gKartDK209Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK209Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame209_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK210Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame210_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK210Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame210_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK210Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame210_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK210Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame210_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK211Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame211_wheel0";
+static const ALIGN_ASSET(2) char gKartDK210Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame210_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK211Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame211_wheel1";
+static const ALIGN_ASSET(2) char gKartDK210Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame210_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK211Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame211_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK211Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame211_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK211Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame211_wheel3";
+static const ALIGN_ASSET(2) char gKartDK211Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame211_wheel0";
+
+static const ALIGN_ASSET(2) char gKartDK211Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame211_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK212Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame212_wheel0";
 
@@ -1709,35 +1709,35 @@ static const ALIGN_ASSET(2) char gKartDK212Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK213Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame213_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK213Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame213_wheel3";
+static const ALIGN_ASSET(2) char gKartDK213Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame213_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK213Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame213_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK213Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame213_wheel1";
+static const ALIGN_ASSET(2) char gKartDK213Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame213_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK214Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame214_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK214Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame214_wheel1";
+static const ALIGN_ASSET(2) char gKartDK214Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame214_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK214Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame214_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK214Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame214_wheel3";
+static const ALIGN_ASSET(2) char gKartDK214Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame214_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK215Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame215_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK215Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame215_wheel3";
+static const ALIGN_ASSET(2) char gKartDK215Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame215_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK215Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame215_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK215Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame215_wheel1";
+static const ALIGN_ASSET(2) char gKartDK215Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame215_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK216Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame216_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK216Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame216_wheel1";
+static const ALIGN_ASSET(2) char gKartDK216Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame216_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK216Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame216_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK216Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame216_wheel3";
+static const ALIGN_ASSET(2) char gKartDK216Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame216_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK217Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame217_wheel0";
 
@@ -1755,29 +1755,29 @@ static const ALIGN_ASSET(2) char gKartDK218Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK218Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame218_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK219Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame219_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK219Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame219_wheel2";
-
 static const ALIGN_ASSET(2) char gKartDK219Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame219_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK219Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame219_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK219Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame219_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK219Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame219_wheel3";
+
+static const ALIGN_ASSET(2) char gKartDK220Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame220_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK220Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame220_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK220Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame220_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK220Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame220_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK220Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame220_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK221Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame221_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK221Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame221_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK221Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame221_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK221Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame221_wheel2";
+
+static const ALIGN_ASSET(2) char gKartDK221Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame221_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK222Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame222_wheel0";
 
@@ -1789,11 +1789,11 @@ static const ALIGN_ASSET(2) char gKartDK222Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK223Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame223_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK223Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame223_wheel1";
+static const ALIGN_ASSET(2) char gKartDK223Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame223_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK223Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame223_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK223Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame223_wheel3";
+static const ALIGN_ASSET(2) char gKartDK223Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame223_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK224Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame224_wheel0";
 
@@ -1803,13 +1803,13 @@ static const ALIGN_ASSET(2) char gKartDK224Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK224Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame224_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK225Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame225_wheel2";
+static const ALIGN_ASSET(2) char gKartDK225Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame225_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK225Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame225_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK225Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame225_wheel1";
+static const ALIGN_ASSET(2) char gKartDK225Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame225_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK225Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame225_wheel0";
+static const ALIGN_ASSET(2) char gKartDK225Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame225_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK226Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame226_wheel0";
 
@@ -1835,13 +1835,13 @@ static const ALIGN_ASSET(2) char gKartDK228Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK228Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame228_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK229Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame229_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK229Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame229_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK229Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame229_wheel0";
+static const ALIGN_ASSET(2) char gKartDK229Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame229_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK229Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame229_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK229Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame229_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK230Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame230_wheel0";
 
@@ -1907,21 +1907,21 @@ static const ALIGN_ASSET(2) char gKartDK237Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK237Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame237_wheel3";
 
+static const ALIGN_ASSET(2) char gKartDK238Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame238_wheel2";
+
 static const ALIGN_ASSET(2) char gKartDK238Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame238_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK238Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame238_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK238Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame238_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK238Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame238_wheel2";
+static const ALIGN_ASSET(2) char gKartDK239Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame239_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK239Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame239_wheel1";
 
-static const ALIGN_ASSET(2) char gKartDK239Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame239_wheel0";
+static const ALIGN_ASSET(2) char gKartDK239Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK239Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame239_wheel3";
-
-static const ALIGN_ASSET(2) char gKartDK239Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK240Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame240_wheel0";
 
@@ -1933,11 +1933,11 @@ static const ALIGN_ASSET(2) char gKartDK240Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK241Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame241_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK241Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame241_wheel1";
+static const ALIGN_ASSET(2) char gKartDK241Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame241_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK241Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame241_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK241Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame241_wheel3";
+static const ALIGN_ASSET(2) char gKartDK241Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame241_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK242Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame242_wheel0";
 
@@ -1947,13 +1947,13 @@ static const ALIGN_ASSET(2) char gKartDK242Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK242Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame242_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK243Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame243_wheel3";
+static const ALIGN_ASSET(2) char gKartDK243Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame243_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK243Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame243_wheel1";
+static const ALIGN_ASSET(2) char gKartDK243Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame243_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK243Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame243_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK243Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame243_wheel0";
+static const ALIGN_ASSET(2) char gKartDK243Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame243_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK244Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame244_wheel0";
 
@@ -1979,13 +1979,13 @@ static const ALIGN_ASSET(2) char gKartDK246Wheel2[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK246Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame246_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK247Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame247_wheel3";
-
 static const ALIGN_ASSET(2) char gKartDK247Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame247_wheel2";
 
-static const ALIGN_ASSET(2) char gKartDK247Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame247_wheel0";
+static const ALIGN_ASSET(2) char gKartDK247Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame247_wheel3";
 
 static const ALIGN_ASSET(2) char gKartDK247Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame247_wheel1";
+
+static const ALIGN_ASSET(2) char gKartDK247Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame247_wheel0";
 
 static const ALIGN_ASSET(2) char gKartDK248Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame248_wheel0";
 
@@ -2053,11 +2053,11 @@ static const ALIGN_ASSET(2) char gKartDK255Wheel3[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK256Wheel3[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame256_wheel3";
 
-static const ALIGN_ASSET(2) char gKartDK256Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame256_wheel1";
+static const ALIGN_ASSET(2) char gKartDK256Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame256_wheel2";
 
 static const ALIGN_ASSET(2) char gKartDK256Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame256_wheel0";
 
-static const ALIGN_ASSET(2) char gKartDK256Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame256_wheel2";
+static const ALIGN_ASSET(2) char gKartDK256Wheel1[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame256_wheel1";
 
 static const ALIGN_ASSET(2) char gKartDK257Wheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame257_wheel0";
 
@@ -2315,6 +2315,38 @@ static const ALIGN_ASSET(2) char gKartDK288Wheel0[] = "__OTR__textures/karts/don
 
 static const ALIGN_ASSET(2) char gKartDK288Wheel2[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame288_wheel2";
 
+static const ALIGN_ASSET(2) char gKartDK289[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame289";
+
+static const ALIGN_ASSET(2) char gKartDK290[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame290";
+
+static const ALIGN_ASSET(2) char gKartDK291[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame291";
+
+static const ALIGN_ASSET(2) char gKartDK292[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame292";
+
+static const ALIGN_ASSET(2) char gKartDK293[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame293";
+
+static const ALIGN_ASSET(2) char gKartDK294[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame294";
+
+static const ALIGN_ASSET(2) char gKartDK295[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame295";
+
+static const ALIGN_ASSET(2) char gKartDK296[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame296";
+
+static const ALIGN_ASSET(2) char gKartDK297[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame297";
+
+static const ALIGN_ASSET(2) char gKartDK298[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame298";
+
+static const ALIGN_ASSET(2) char gKartDK299[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame299";
+
+static const ALIGN_ASSET(2) char gKartDK300[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame300";
+
+static const ALIGN_ASSET(2) char gKartDK301[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame301";
+
+static const ALIGN_ASSET(2) char gKartDK302[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame302";
+
+static const ALIGN_ASSET(2) char gKartDK303[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame303";
+
+static const ALIGN_ASSET(2) char gKartDK304[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame304";
+
 static const ALIGN_ASSET(2) char gKartDK305[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame305";
 
 static const ALIGN_ASSET(2) char gKartDK306[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame306";
@@ -2346,38 +2378,6 @@ static const ALIGN_ASSET(2) char gKartDK318[] = "__OTR__textures/karts/donkeykon
 static const ALIGN_ASSET(2) char gKartDK319[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame319";
 
 static const ALIGN_ASSET(2) char gKartDK320[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame320";
-
-static const ALIGN_ASSET(2) char gKartDK303[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame303";
-
-static const ALIGN_ASSET(2) char gKartDK304[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame304";
-
-static const ALIGN_ASSET(2) char gKartDK289[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame289";
-
-static const ALIGN_ASSET(2) char gKartDK290[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame290";
-
-static const ALIGN_ASSET(2) char gKartDK291[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame291";
-
-static const ALIGN_ASSET(2) char gKartDK292[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame292";
-
-static const ALIGN_ASSET(2) char gKartDK293[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame293";
-
-static const ALIGN_ASSET(2) char gKartDK294[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame294";
-
-static const ALIGN_ASSET(2) char gKartDK295[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame295";
-
-static const ALIGN_ASSET(2) char gKartDK297[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame297";
-
-static const ALIGN_ASSET(2) char gKartDK296[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame296";
-
-static const ALIGN_ASSET(2) char gKartDK302[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame302";
-
-static const ALIGN_ASSET(2) char gKartDK301[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame301";
-
-static const ALIGN_ASSET(2) char gKartDK299[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame299";
-
-static const ALIGN_ASSET(2) char gKartDK300[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame300";
-
-static const ALIGN_ASSET(2) char gKartDK298[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_frame298";
 
 static const ALIGN_ASSET(2) char gKartDK000TlutWheel0[] = "__OTR__textures/karts/donkeykong_kart/donkeykong_kart_000_tlut_wheel_0";
 

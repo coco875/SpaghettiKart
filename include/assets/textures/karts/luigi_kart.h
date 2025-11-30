@@ -299,21 +299,21 @@ static const ALIGN_ASSET(2) char gKartLuigi036Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi036Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame036_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi037Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame037_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi037Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame037_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi037Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame037_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi037Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame037_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi037Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame037_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi037Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame037_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi038Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi038Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame038_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi038Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame038_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi038Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame038_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi038Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi039Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame039_wheel0";
 
@@ -323,13 +323,13 @@ static const ALIGN_ASSET(2) char gKartLuigi039Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi039Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame039_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi040Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame040_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi040Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame040_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi040Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame040_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi040Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame040_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi040Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame040_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi040Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame040_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi041Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame041_wheel0";
 
@@ -339,11 +339,11 @@ static const ALIGN_ASSET(2) char gKartLuigi041Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi041Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame041_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi042Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame042_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi042Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame042_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi042Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame042_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi042Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame042_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi042Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame042_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi042Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame042_wheel0";
 
@@ -365,27 +365,27 @@ static const ALIGN_ASSET(2) char gKartLuigi044Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi045Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame045_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi045Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame045_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi045Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame045_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi045Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame045_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi045Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame045_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi046Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame046_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi046Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame046_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi045Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame045_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi046Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame046_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi046Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame046_wheel1";
 
+static const ALIGN_ASSET(2) char gKartLuigi046Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame046_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi046Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame046_wheel3";
+
 static const ALIGN_ASSET(2) char gKartLuigi047Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame047_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi047Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi047Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame047_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi047Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame047_wheel2";
-
-static const ALIGN_ASSET(2) char gKartLuigi047Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi048Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame048_wheel0";
 
@@ -397,35 +397,35 @@ static const ALIGN_ASSET(2) char gKartLuigi048Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi049Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame049_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi049Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame049_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi049Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame049_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi049Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame049_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi049Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame049_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi049Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame049_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi050Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame050_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi050Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame050_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi050Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame050_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi050Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame050_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi050Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame050_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi050Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame050_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi051Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame051_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi051Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame051_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi051Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame051_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi051Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame051_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi051Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame051_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi051Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame051_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi052Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame052_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi052Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame052_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi052Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame052_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi052Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame052_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi052Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame052_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi052Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame052_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi053Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame053_wheel0";
 
@@ -443,29 +443,29 @@ static const ALIGN_ASSET(2) char gKartLuigi054Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi054Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame054_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi055Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame055_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi055Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame055_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi055Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame055_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi055Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame055_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi056Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame056_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi055Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame055_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi055Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame055_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi056Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame056_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi056Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame056_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi056Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame056_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi056Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame056_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi057Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame057_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi056Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame056_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi057Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame057_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi057Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame057_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi057Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame057_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi057Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame057_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi057Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame057_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi058Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame058_wheel0";
 
@@ -483,21 +483,21 @@ static const ALIGN_ASSET(2) char gKartLuigi059Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi059Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame059_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi060Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame060_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi060Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame060_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi060Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame060_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi060Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame060_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi060Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame060_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi060Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame060_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi061Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame061_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi061Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame061_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi061Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame061_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi061Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame061_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi061Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame061_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi061Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame061_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi062Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame062_wheel0";
 
@@ -515,21 +515,21 @@ static const ALIGN_ASSET(2) char gKartLuigi063Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi063Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame063_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi064Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame064_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi064Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame064_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi064Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame064_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi064Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame064_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi065Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame065_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi064Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame064_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi065Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame065_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi064Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame064_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi065Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame065_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi065Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame065_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi065Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame065_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi065Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame065_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi065Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame065_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi066Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame066_wheel0";
 
@@ -541,35 +541,35 @@ static const ALIGN_ASSET(2) char gKartLuigi066Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi067Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame067_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi067Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame067_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi067Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame067_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi067Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame067_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi067Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame067_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi067Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame067_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi068Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame068_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi068Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame068_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi068Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame068_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi068Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame068_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi068Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame068_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi068Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame068_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi069Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame069_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi069Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame069_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi069Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame069_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi069Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame069_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi069Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame069_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi069Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame069_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi070Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame070_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi070Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame070_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi070Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame070_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi070Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame070_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi070Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame070_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi070Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame070_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi071Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame071_wheel0";
 
@@ -587,21 +587,21 @@ static const ALIGN_ASSET(2) char gKartLuigi072Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi072Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame072_wheel3";
 
+static const ALIGN_ASSET(2) char gKartLuigi073Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame073_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi073Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame073_wheel1";
+
 static const ALIGN_ASSET(2) char gKartLuigi073Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame073_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi073Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame073_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi073Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame073_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi073Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame073_wheel0";
-
 static const ALIGN_ASSET(2) char gKartLuigi074Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame074_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi074Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi074Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame074_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi074Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame074_wheel2";
-
-static const ALIGN_ASSET(2) char gKartLuigi074Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi075Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame075_wheel0";
 
@@ -613,35 +613,35 @@ static const ALIGN_ASSET(2) char gKartLuigi075Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi076Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame076_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi076Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame076_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi076Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame076_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi076Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame076_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi076Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame076_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi076Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame076_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi077Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame077_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi077Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame077_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi077Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame077_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi077Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame077_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi077Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame077_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi077Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame077_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi078Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame078_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi078Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame078_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi078Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame078_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi078Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame078_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi078Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame078_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi078Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame078_wheel0";
-
-static const ALIGN_ASSET(2) char gKartLuigi079Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame079_wheel0";
-
-static const ALIGN_ASSET(2) char gKartLuigi079Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame079_wheel1";
-
 static const ALIGN_ASSET(2) char gKartLuigi079Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame079_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi079Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame079_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi079Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame079_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi079Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame079_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi080Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame080_wheel0";
 
@@ -653,35 +653,35 @@ static const ALIGN_ASSET(2) char gKartLuigi080Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi081Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame081_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi081Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame081_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi081Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame081_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi081Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame081_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi081Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame081_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi081Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame081_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi082Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame082_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi082Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame082_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi082Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame082_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi082Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame082_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi082Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame082_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi082Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame082_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi083Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame083_wheel0";
-
-static const ALIGN_ASSET(2) char gKartLuigi083Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi083Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame083_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi083Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame083_wheel2";
 
+static const ALIGN_ASSET(2) char gKartLuigi083Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame083_wheel3";
+
 static const ALIGN_ASSET(2) char gKartLuigi084Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame084_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi084Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi084Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame084_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi084Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame084_wheel2";
-
-static const ALIGN_ASSET(2) char gKartLuigi084Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi085Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame085_wheel0";
 
@@ -693,35 +693,35 @@ static const ALIGN_ASSET(2) char gKartLuigi085Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi086Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame086_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi086Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame086_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi086Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame086_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi086Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame086_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi086Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame086_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi086Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame086_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi087Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame087_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi087Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame087_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi087Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame087_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi087Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame087_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi087Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame087_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi087Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame087_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi088Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame088_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi088Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame088_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi088Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame088_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi088Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame088_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi088Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame088_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi088Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame088_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi089Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame089_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi089Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame089_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi089Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame089_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi089Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame089_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi089Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame089_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi089Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame089_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi090Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame090_wheel0";
 
@@ -741,27 +741,27 @@ static const ALIGN_ASSET(2) char gKartLuigi091Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi092Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame092_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi092Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame092_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi092Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame092_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi092Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame092_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi093Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame093_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi092Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame092_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi093Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame093_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi093Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame093_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi093Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame093_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi093Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame093_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi094Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame094_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi093Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame093_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi094Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame094_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi094Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame094_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi094Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame094_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi094Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame094_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi094Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame094_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi095Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame095_wheel0";
 
@@ -779,21 +779,21 @@ static const ALIGN_ASSET(2) char gKartLuigi096Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi096Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame096_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi097Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame097_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi097Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame097_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi097Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame097_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi097Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame097_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi097Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame097_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi097Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame097_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi098Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame098_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi098Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame098_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi098Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame098_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi098Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame098_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi098Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame098_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi098Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame098_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi099Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame099_wheel0";
 
@@ -811,21 +811,21 @@ static const ALIGN_ASSET(2) char gKartLuigi100Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi100Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame100_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi101Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame101_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi101Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame101_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi101Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame101_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi101Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame101_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi102Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame102_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi101Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame101_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi102Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame102_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi101Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame101_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi102Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame102_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi102Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame102_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi102Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame102_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi102Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame102_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi102Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame102_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi103Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame103_wheel0";
 
@@ -837,35 +837,35 @@ static const ALIGN_ASSET(2) char gKartLuigi103Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi104Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame104_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi104Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame104_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi104Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame104_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi104Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame104_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi104Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame104_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi104Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame104_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi105Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame105_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi105Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame105_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi105Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame105_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi105Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame105_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi105Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame105_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi105Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame105_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi106Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame106_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi106Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame106_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi106Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame106_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi106Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame106_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi106Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame106_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi106Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame106_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi107Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame107_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi107Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame107_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi107Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame107_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi107Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame107_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi107Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame107_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi107Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame107_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi108Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame108_wheel0";
 
@@ -885,21 +885,19 @@ static const ALIGN_ASSET(2) char gKartLuigi109Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi110Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame110_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi110Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame110_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi110Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame110_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi110Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame110_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi111Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame111_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi111Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame111_wheel2";
-
-static const ALIGN_ASSET(2) char gKartLuigi111Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame111_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi110Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame110_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi111Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame111_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi112Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame112_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi111Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame111_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi111Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame111_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi111Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame111_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi112Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame112_wheel1";
 
@@ -907,37 +905,39 @@ static const ALIGN_ASSET(2) char gKartLuigi112Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi112Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame112_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi113Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame113_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi113Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame113_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi113Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame113_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi112Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame112_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi113Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame113_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi114Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame114_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi113Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame113_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi113Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame113_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi113Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame113_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi114Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame114_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi114Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame114_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi114Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame114_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi115Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame115_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi114Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame114_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi115Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame115_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi115Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame115_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi114Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame114_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi115Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame115_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi116Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame116_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi115Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame115_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi115Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame115_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi115Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame115_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi116Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame116_wheel1";
 
+static const ALIGN_ASSET(2) char gKartLuigi116Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame116_wheel3";
+
 static const ALIGN_ASSET(2) char gKartLuigi116Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame116_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi116Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame116_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi116Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame116_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi117Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame117_wheel0";
 
@@ -955,21 +955,21 @@ static const ALIGN_ASSET(2) char gKartLuigi118Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi118Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame118_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi119Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame119_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi119Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame119_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi119Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame119_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi119Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame119_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi120Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame120_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi119Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame119_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi120Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame120_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi119Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame119_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi120Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame120_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi120Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame120_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi120Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame120_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi120Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame120_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi120Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame120_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi121Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame121_wheel0";
 
@@ -981,35 +981,35 @@ static const ALIGN_ASSET(2) char gKartLuigi121Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi122Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame122_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi122Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame122_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi122Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame122_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi122Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame122_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi122Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame122_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi122Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame122_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi123Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame123_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi123Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame123_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi123Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame123_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi123Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame123_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi123Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame123_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi123Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame123_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi124Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame124_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi124Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame124_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi124Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame124_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi124Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame124_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi124Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame124_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi124Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame124_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi125Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame125_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi125Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame125_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi125Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame125_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi125Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame125_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi125Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame125_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi125Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame125_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi126Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame126_wheel0";
 
@@ -1027,29 +1027,29 @@ static const ALIGN_ASSET(2) char gKartLuigi127Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi127Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame127_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi128Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame128_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi128Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame128_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi128Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame128_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi128Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame128_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi129Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame129_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi128Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame128_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi129Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame129_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi128Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame128_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi129Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame129_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi129Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame129_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi130Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame130_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi129Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame129_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi129Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi130Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame130_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi130Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame130_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi130Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame130_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi130Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame130_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi130Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame130_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi131Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame131_wheel0";
 
@@ -1067,21 +1067,21 @@ static const ALIGN_ASSET(2) char gKartLuigi132Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi132Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame132_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi133Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame133_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi133Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame133_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi133Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame133_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi133Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame133_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi133Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame133_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi133Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame133_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi134Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame134_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi134Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame134_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi134Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame134_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi134Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame134_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi134Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame134_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi134Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame134_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi135Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame135_wheel0";
 
@@ -1099,21 +1099,21 @@ static const ALIGN_ASSET(2) char gKartLuigi136Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi136Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame136_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi137Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame137_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi137Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame137_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi137Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame137_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi137Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame137_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi138Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame138_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi137Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame137_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi138Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame138_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi137Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame137_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi138Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame138_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi138Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame138_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi138Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame138_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi138Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame138_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi138Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame138_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi139Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame139_wheel0";
 
@@ -1125,35 +1125,35 @@ static const ALIGN_ASSET(2) char gKartLuigi139Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi140Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame140_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi140Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame140_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi140Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame140_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi140Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame140_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi140Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame140_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi140Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame140_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi141Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame141_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi141Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame141_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi141Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame141_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi141Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame141_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi141Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame141_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi141Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame141_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi142Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame142_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi142Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame142_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi142Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame142_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi142Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame142_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi142Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame142_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi142Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame142_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi143Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame143_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi143Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame143_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi143Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame143_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi143Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame143_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi143Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame143_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi143Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame143_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi144Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame144_wheel0";
 
@@ -1171,37 +1171,37 @@ static const ALIGN_ASSET(2) char gKartLuigi145Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi145Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame145_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi146Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame146_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi146Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame146_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi146Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame146_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi146Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame146_wheel1";
 
+static const ALIGN_ASSET(2) char gKartLuigi146Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame146_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi146Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame146_wheel3";
+
 static const ALIGN_ASSET(2) char gKartLuigi147Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame147_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi147Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame147_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi147Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame147_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi147Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame147_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi147Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame147_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi148Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame148_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi148Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame148_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi148Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame148_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi148Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi148Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame148_wheel2";
-
-static const ALIGN_ASSET(2) char gKartLuigi148Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi149Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame149_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi149Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame149_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi149Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame149_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi149Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame149_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi149Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame149_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi150Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame150_wheel0";
 
@@ -1211,21 +1211,21 @@ static const ALIGN_ASSET(2) char gKartLuigi150Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi150Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame150_wheel3";
 
+static const ALIGN_ASSET(2) char gKartLuigi151Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame151_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi151Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame151_wheel1";
+
 static const ALIGN_ASSET(2) char gKartLuigi151Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame151_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi151Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame151_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi151Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame151_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi151Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame151_wheel0";
-
 static const ALIGN_ASSET(2) char gKartLuigi152Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame152_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi152Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame152_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi152Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame152_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi152Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame152_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi152Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame152_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi152Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame152_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi153Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame153_wheel0";
 
@@ -1253,11 +1253,11 @@ static const ALIGN_ASSET(2) char gKartLuigi155Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi156Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame156_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi156Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame156_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi156Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame156_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi156Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame156_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi156Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame156_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi157Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame157_wheel0";
 
@@ -1269,19 +1269,19 @@ static const ALIGN_ASSET(2) char gKartLuigi157Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi158Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame158_wheel0";
 
+static const ALIGN_ASSET(2) char gKartLuigi158Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame158_wheel3";
+
 static const ALIGN_ASSET(2) char gKartLuigi158Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame158_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi158Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame158_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi158Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame158_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi159Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame159_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi159Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame159_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi159Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame159_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi159Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame159_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi159Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame159_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi159Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame159_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi160Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame160_wheel0";
 
@@ -1293,19 +1293,19 @@ static const ALIGN_ASSET(2) char gKartLuigi160Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi161Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame161_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi161Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame161_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi161Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame161_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi161Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame161_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi161Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame161_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi162Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame162_wheel0";
-
-static const ALIGN_ASSET(2) char gKartLuigi162Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame162_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi161Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame161_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi162Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame162_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi162Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame162_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi162Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame162_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi162Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame162_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi163Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame163_wheel0";
 
@@ -1325,27 +1325,27 @@ static const ALIGN_ASSET(2) char gKartLuigi164Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi165Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame165_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi165Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame165_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi165Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame165_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi165Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame165_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi166Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame166_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi166Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame166_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi165Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame165_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi166Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame166_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi166Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame166_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi167Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame167_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi166Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame166_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi166Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame166_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi167Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame167_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi167Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame167_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi167Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame167_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi167Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame167_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi167Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame167_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi168Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame168_wheel0";
 
@@ -1363,21 +1363,21 @@ static const ALIGN_ASSET(2) char gKartLuigi169Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi169Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame169_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi170Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame170_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi170Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame170_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi170Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame170_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi170Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame170_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi170Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame170_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi170Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame170_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi171Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame171_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi171Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame171_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi171Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame171_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi171Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame171_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi171Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame171_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi171Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame171_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi172Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame172_wheel0";
 
@@ -1395,21 +1395,21 @@ static const ALIGN_ASSET(2) char gKartLuigi173Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi173Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame173_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi174Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame174_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi174Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame174_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi174Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame174_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi174Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame174_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi175Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame175_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi174Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame174_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi175Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame175_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi174Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame174_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi175Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame175_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi175Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame175_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi175Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame175_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi175Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame175_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi175Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame175_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi176Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame176_wheel0";
 
@@ -1421,35 +1421,35 @@ static const ALIGN_ASSET(2) char gKartLuigi176Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi177Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame177_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi177Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame177_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi177Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame177_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi177Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame177_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi177Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame177_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi177Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame177_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi178Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame178_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi178Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame178_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi178Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame178_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi178Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame178_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi178Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame178_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi178Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame178_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi179Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame179_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi179Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame179_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi179Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame179_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi179Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame179_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi179Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame179_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi179Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame179_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi180Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame180_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi180Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame180_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi180Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame180_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi180Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame180_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi180Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame180_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi180Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame180_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi181Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame181_wheel0";
 
@@ -1469,21 +1469,19 @@ static const ALIGN_ASSET(2) char gKartLuigi182Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi183Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame183_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi183Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame183_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi183Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame183_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi183Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame183_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi184Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame184_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi184Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame184_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi183Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame183_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi184Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame184_wheel3";
 
+static const ALIGN_ASSET(2) char gKartLuigi184Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame184_wheel1";
+
 static const ALIGN_ASSET(2) char gKartLuigi184Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame184_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi185Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame185_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi184Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame184_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi185Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame185_wheel1";
 
@@ -1491,37 +1489,39 @@ static const ALIGN_ASSET(2) char gKartLuigi185Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi185Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame185_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi186Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame186_wheel1";
-
-static const ALIGN_ASSET(2) char gKartLuigi186Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame186_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi186Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame186_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi185Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame185_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi186Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame186_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi187Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame187_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi186Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame186_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi186Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame186_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi186Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame186_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi187Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame187_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi187Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame187_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi187Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame187_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi188Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame188_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi187Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame187_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi188Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame188_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi188Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame188_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi187Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame187_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi188Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame188_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi189Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame189_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi188Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame188_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi188Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame188_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi188Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame188_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi189Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame189_wheel1";
 
+static const ALIGN_ASSET(2) char gKartLuigi189Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame189_wheel3";
+
 static const ALIGN_ASSET(2) char gKartLuigi189Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame189_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi189Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame189_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi189Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame189_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi190Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame190_wheel0";
 
@@ -1539,21 +1539,21 @@ static const ALIGN_ASSET(2) char gKartLuigi191Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi191Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame191_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi192Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame192_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi192Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame192_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi192Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame192_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi192Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame192_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi193Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame193_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi192Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame192_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi193Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame193_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi192Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame192_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi193Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame193_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi193Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame193_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi193Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame193_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi193Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame193_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi193Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame193_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi194Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame194_wheel0";
 
@@ -1565,35 +1565,35 @@ static const ALIGN_ASSET(2) char gKartLuigi194Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi195Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame195_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi195Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame195_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi195Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame195_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi195Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame195_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi195Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame195_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi195Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame195_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi196Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame196_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi196Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame196_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi196Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame196_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi196Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame196_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi196Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame196_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi196Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame196_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi197Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame197_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi197Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame197_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi197Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame197_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi197Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame197_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi197Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame197_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi197Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame197_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi198Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame198_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi198Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame198_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi198Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame198_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi198Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame198_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi198Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame198_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi198Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame198_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi199Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame199_wheel0";
 
@@ -1611,29 +1611,29 @@ static const ALIGN_ASSET(2) char gKartLuigi200Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi200Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame200_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi201Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame201_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi201Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame201_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi201Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame201_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi201Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame201_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi202Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame202_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi201Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame201_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi202Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame202_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi201Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame201_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi202Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame202_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi202Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame202_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi203Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame203_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi202Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame202_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi202Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame202_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi203Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame203_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi203Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame203_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi203Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame203_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi203Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame203_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi203Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame203_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi204Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame204_wheel0";
 
@@ -1651,21 +1651,21 @@ static const ALIGN_ASSET(2) char gKartLuigi205Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi205Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame205_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi206Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame206_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi206Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame206_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi206Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame206_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi206Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame206_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi206Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame206_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi206Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame206_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi207Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame207_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi207Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame207_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi207Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame207_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi207Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame207_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi207Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame207_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi207Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame207_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi208Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame208_wheel0";
 
@@ -1683,21 +1683,21 @@ static const ALIGN_ASSET(2) char gKartLuigi209Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi209Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame209_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi210Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame210_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi210Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame210_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi210Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame210_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi210Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame210_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi211Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame211_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi210Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame210_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi211Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame211_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi210Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame210_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi211Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame211_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi211Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame211_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi211Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame211_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi211Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame211_wheel0";
+
+static const ALIGN_ASSET(2) char gKartLuigi211Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame211_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi212Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame212_wheel0";
 
@@ -1709,35 +1709,35 @@ static const ALIGN_ASSET(2) char gKartLuigi212Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi213Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame213_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi213Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame213_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi213Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame213_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi213Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame213_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi213Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame213_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi213Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame213_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi214Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame214_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi214Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame214_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi214Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame214_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi214Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame214_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi214Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame214_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi214Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame214_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi215Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame215_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi215Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame215_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi215Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame215_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi215Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame215_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi215Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame215_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi215Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame215_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi216Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame216_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi216Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame216_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi216Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame216_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi216Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame216_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi216Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame216_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi216Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame216_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi217Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame217_wheel0";
 
@@ -1755,29 +1755,29 @@ static const ALIGN_ASSET(2) char gKartLuigi218Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi218Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame218_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi219Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame219_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi219Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame219_wheel2";
-
 static const ALIGN_ASSET(2) char gKartLuigi219Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame219_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi219Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame219_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi219Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame219_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi219Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame219_wheel3";
+
+static const ALIGN_ASSET(2) char gKartLuigi220Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame220_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi220Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame220_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi220Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame220_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi220Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame220_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi220Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame220_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi221Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame221_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi221Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame221_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi221Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame221_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi221Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame221_wheel2";
+
+static const ALIGN_ASSET(2) char gKartLuigi221Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame221_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi222Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame222_wheel0";
 
@@ -1789,11 +1789,11 @@ static const ALIGN_ASSET(2) char gKartLuigi222Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi223Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame223_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi223Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame223_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi223Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame223_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi223Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame223_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi223Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame223_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi223Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame223_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi224Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame224_wheel0";
 
@@ -1803,13 +1803,13 @@ static const ALIGN_ASSET(2) char gKartLuigi224Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi224Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame224_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi225Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame225_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi225Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame225_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi225Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame225_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi225Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame225_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi225Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame225_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi225Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame225_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi225Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame225_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi226Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame226_wheel0";
 
@@ -1835,13 +1835,13 @@ static const ALIGN_ASSET(2) char gKartLuigi228Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi228Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame228_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi229Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame229_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi229Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame229_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi229Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame229_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi229Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame229_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi229Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame229_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi229Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame229_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi230Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame230_wheel0";
 
@@ -1907,21 +1907,21 @@ static const ALIGN_ASSET(2) char gKartLuigi237Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi237Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame237_wheel3";
 
+static const ALIGN_ASSET(2) char gKartLuigi238Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame238_wheel2";
+
 static const ALIGN_ASSET(2) char gKartLuigi238Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame238_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi238Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame238_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi238Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame238_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi238Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame238_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi239Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame239_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi239Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame239_wheel1";
 
-static const ALIGN_ASSET(2) char gKartLuigi239Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame239_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi239Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi239Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame239_wheel3";
-
-static const ALIGN_ASSET(2) char gKartLuigi239Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi240Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame240_wheel0";
 
@@ -1933,11 +1933,11 @@ static const ALIGN_ASSET(2) char gKartLuigi240Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi241Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame241_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi241Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame241_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi241Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame241_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi241Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame241_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi241Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame241_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi241Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame241_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi242Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame242_wheel0";
 
@@ -1947,13 +1947,13 @@ static const ALIGN_ASSET(2) char gKartLuigi242Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi242Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame242_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi243Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame243_wheel3";
+static const ALIGN_ASSET(2) char gKartLuigi243Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame243_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi243Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame243_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi243Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame243_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi243Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame243_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi243Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame243_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi243Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame243_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi244Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame244_wheel0";
 
@@ -1979,13 +1979,13 @@ static const ALIGN_ASSET(2) char gKartLuigi246Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi246Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame246_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi247Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame247_wheel3";
-
 static const ALIGN_ASSET(2) char gKartLuigi247Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame247_wheel2";
 
-static const ALIGN_ASSET(2) char gKartLuigi247Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame247_wheel0";
+static const ALIGN_ASSET(2) char gKartLuigi247Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame247_wheel3";
 
 static const ALIGN_ASSET(2) char gKartLuigi247Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame247_wheel1";
+
+static const ALIGN_ASSET(2) char gKartLuigi247Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame247_wheel0";
 
 static const ALIGN_ASSET(2) char gKartLuigi248Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame248_wheel0";
 
@@ -2053,11 +2053,11 @@ static const ALIGN_ASSET(2) char gKartLuigi255Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi256Wheel3[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame256_wheel3";
 
-static const ALIGN_ASSET(2) char gKartLuigi256Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame256_wheel1";
+static const ALIGN_ASSET(2) char gKartLuigi256Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame256_wheel2";
 
 static const ALIGN_ASSET(2) char gKartLuigi256Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame256_wheel0";
 
-static const ALIGN_ASSET(2) char gKartLuigi256Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame256_wheel2";
+static const ALIGN_ASSET(2) char gKartLuigi256Wheel1[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame256_wheel1";
 
 static const ALIGN_ASSET(2) char gKartLuigi257Wheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame257_wheel0";
 
@@ -2315,6 +2315,38 @@ static const ALIGN_ASSET(2) char gKartLuigi288Wheel0[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartLuigi288Wheel2[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame288_wheel2";
 
+static const ALIGN_ASSET(2) char gKartLuigi289[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame289";
+
+static const ALIGN_ASSET(2) char gKartLuigi290[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame290";
+
+static const ALIGN_ASSET(2) char gKartLuigi291[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame291";
+
+static const ALIGN_ASSET(2) char gKartLuigi292[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame292";
+
+static const ALIGN_ASSET(2) char gKartLuigi293[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame293";
+
+static const ALIGN_ASSET(2) char gKartLuigi294[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame294";
+
+static const ALIGN_ASSET(2) char gKartLuigi295[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame295";
+
+static const ALIGN_ASSET(2) char gKartLuigi296[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame296";
+
+static const ALIGN_ASSET(2) char gKartLuigi297[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame297";
+
+static const ALIGN_ASSET(2) char gKartLuigi298[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame298";
+
+static const ALIGN_ASSET(2) char gKartLuigi299[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame299";
+
+static const ALIGN_ASSET(2) char gKartLuigi300[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame300";
+
+static const ALIGN_ASSET(2) char gKartLuigi301[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame301";
+
+static const ALIGN_ASSET(2) char gKartLuigi302[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame302";
+
+static const ALIGN_ASSET(2) char gKartLuigi303[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame303";
+
+static const ALIGN_ASSET(2) char gKartLuigi304[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame304";
+
 static const ALIGN_ASSET(2) char gKartLuigi305[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame305";
 
 static const ALIGN_ASSET(2) char gKartLuigi306[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame306";
@@ -2346,38 +2378,6 @@ static const ALIGN_ASSET(2) char gKartLuigi318[] = "__OTR__textures/karts/luigi_
 static const ALIGN_ASSET(2) char gKartLuigi319[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame319";
 
 static const ALIGN_ASSET(2) char gKartLuigi320[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame320";
-
-static const ALIGN_ASSET(2) char gKartLuigi303[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame303";
-
-static const ALIGN_ASSET(2) char gKartLuigi304[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame304";
-
-static const ALIGN_ASSET(2) char gKartLuigi289[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame289";
-
-static const ALIGN_ASSET(2) char gKartLuigi290[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame290";
-
-static const ALIGN_ASSET(2) char gKartLuigi291[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame291";
-
-static const ALIGN_ASSET(2) char gKartLuigi292[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame292";
-
-static const ALIGN_ASSET(2) char gKartLuigi293[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame293";
-
-static const ALIGN_ASSET(2) char gKartLuigi294[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame294";
-
-static const ALIGN_ASSET(2) char gKartLuigi295[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame295";
-
-static const ALIGN_ASSET(2) char gKartLuigi297[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame297";
-
-static const ALIGN_ASSET(2) char gKartLuigi296[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame296";
-
-static const ALIGN_ASSET(2) char gKartLuigi302[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame302";
-
-static const ALIGN_ASSET(2) char gKartLuigi301[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame301";
-
-static const ALIGN_ASSET(2) char gKartLuigi299[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame299";
-
-static const ALIGN_ASSET(2) char gKartLuigi300[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame300";
-
-static const ALIGN_ASSET(2) char gKartLuigi298[] = "__OTR__textures/karts/luigi_kart/luigi_kart_frame298";
 
 static const ALIGN_ASSET(2) char gKartLuigi000TlutWheel0[] = "__OTR__textures/karts/luigi_kart/luigi_kart_000_tlut_wheel_0";
 

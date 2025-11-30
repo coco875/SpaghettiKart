@@ -299,21 +299,21 @@ static const ALIGN_ASSET(2) char gKartYoshi036Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi036Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame036_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi037Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame037_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi037Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame037_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi037Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame037_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi037Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame037_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi037Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame037_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi037Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame037_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi038Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi038Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame038_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi038Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame038_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi038Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame038_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi038Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame038_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi039Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame039_wheel0";
 
@@ -323,13 +323,13 @@ static const ALIGN_ASSET(2) char gKartYoshi039Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi039Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame039_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi040Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame040_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi040Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame040_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi040Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame040_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi040Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame040_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi040Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame040_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi040Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame040_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi041Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame041_wheel0";
 
@@ -339,11 +339,11 @@ static const ALIGN_ASSET(2) char gKartYoshi041Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi041Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame041_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi042Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame042_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi042Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame042_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi042Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame042_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi042Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame042_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi042Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame042_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi042Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame042_wheel0";
 
@@ -365,27 +365,27 @@ static const ALIGN_ASSET(2) char gKartYoshi044Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi045Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame045_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi045Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame045_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi045Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame045_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi045Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame045_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi045Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame045_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi046Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame046_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi046Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame046_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi045Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame045_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi046Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame046_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi046Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame046_wheel1";
 
+static const ALIGN_ASSET(2) char gKartYoshi046Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame046_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi046Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame046_wheel3";
+
 static const ALIGN_ASSET(2) char gKartYoshi047Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame047_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi047Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi047Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame047_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi047Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame047_wheel2";
-
-static const ALIGN_ASSET(2) char gKartYoshi047Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame047_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi048Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame048_wheel0";
 
@@ -397,35 +397,35 @@ static const ALIGN_ASSET(2) char gKartYoshi048Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi049Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame049_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi049Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame049_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi049Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame049_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi049Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame049_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi049Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame049_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi049Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame049_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi050Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame050_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi050Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame050_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi050Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame050_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi050Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame050_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi050Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame050_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi050Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame050_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi051Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame051_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi051Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame051_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi051Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame051_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi051Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame051_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi051Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame051_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi051Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame051_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi052Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame052_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi052Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame052_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi052Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame052_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi052Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame052_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi052Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame052_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi052Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame052_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi053Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame053_wheel0";
 
@@ -443,29 +443,29 @@ static const ALIGN_ASSET(2) char gKartYoshi054Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi054Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame054_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi055Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame055_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi055Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame055_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi055Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame055_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi055Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame055_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi056Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame056_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi055Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame055_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi055Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame055_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi056Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame056_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi056Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame056_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi056Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame056_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi056Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame056_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi057Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame057_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi056Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame056_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi057Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame057_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi057Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame057_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi057Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame057_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi057Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame057_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi057Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame057_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi058Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame058_wheel0";
 
@@ -483,21 +483,21 @@ static const ALIGN_ASSET(2) char gKartYoshi059Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi059Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame059_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi060Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame060_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi060Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame060_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi060Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame060_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi060Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame060_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi060Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame060_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi060Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame060_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi061Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame061_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi061Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame061_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi061Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame061_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi061Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame061_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi061Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame061_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi061Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame061_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi062Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame062_wheel0";
 
@@ -515,21 +515,21 @@ static const ALIGN_ASSET(2) char gKartYoshi063Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi063Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame063_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi064Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame064_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi064Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame064_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi064Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame064_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi064Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame064_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi065Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame065_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi064Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame064_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi065Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame065_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi064Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame064_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi065Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame065_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi065Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame065_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi065Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame065_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi065Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame065_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi065Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame065_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi066Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame066_wheel0";
 
@@ -541,35 +541,35 @@ static const ALIGN_ASSET(2) char gKartYoshi066Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi067Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame067_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi067Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame067_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi067Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame067_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi067Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame067_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi067Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame067_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi067Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame067_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi068Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame068_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi068Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame068_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi068Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame068_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi068Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame068_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi068Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame068_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi068Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame068_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi069Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame069_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi069Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame069_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi069Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame069_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi069Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame069_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi069Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame069_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi069Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame069_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi070Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame070_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi070Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame070_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi070Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame070_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi070Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame070_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi070Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame070_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi070Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame070_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi071Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame071_wheel0";
 
@@ -587,21 +587,21 @@ static const ALIGN_ASSET(2) char gKartYoshi072Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi072Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame072_wheel3";
 
+static const ALIGN_ASSET(2) char gKartYoshi073Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame073_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi073Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame073_wheel1";
+
 static const ALIGN_ASSET(2) char gKartYoshi073Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame073_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi073Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame073_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi073Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame073_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi073Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame073_wheel0";
-
 static const ALIGN_ASSET(2) char gKartYoshi074Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame074_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi074Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi074Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame074_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi074Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame074_wheel2";
-
-static const ALIGN_ASSET(2) char gKartYoshi074Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame074_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi075Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame075_wheel0";
 
@@ -613,35 +613,35 @@ static const ALIGN_ASSET(2) char gKartYoshi075Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi076Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame076_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi076Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame076_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi076Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame076_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi076Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame076_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi076Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame076_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi076Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame076_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi077Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame077_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi077Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame077_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi077Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame077_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi077Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame077_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi077Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame077_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi077Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame077_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi078Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame078_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi078Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame078_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi078Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame078_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi078Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame078_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi078Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame078_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi078Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame078_wheel0";
-
-static const ALIGN_ASSET(2) char gKartYoshi079Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame079_wheel0";
-
-static const ALIGN_ASSET(2) char gKartYoshi079Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame079_wheel1";
-
 static const ALIGN_ASSET(2) char gKartYoshi079Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame079_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi079Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame079_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi079Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame079_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi079Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame079_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi080Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame080_wheel0";
 
@@ -653,35 +653,35 @@ static const ALIGN_ASSET(2) char gKartYoshi080Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi081Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame081_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi081Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame081_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi081Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame081_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi081Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame081_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi081Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame081_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi081Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame081_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi082Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame082_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi082Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame082_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi082Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame082_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi082Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame082_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi082Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame082_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi082Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame082_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi083Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame083_wheel0";
-
-static const ALIGN_ASSET(2) char gKartYoshi083Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame083_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi083Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame083_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi083Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame083_wheel2";
 
+static const ALIGN_ASSET(2) char gKartYoshi083Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame083_wheel3";
+
 static const ALIGN_ASSET(2) char gKartYoshi084Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame084_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi084Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi084Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame084_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi084Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame084_wheel2";
-
-static const ALIGN_ASSET(2) char gKartYoshi084Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame084_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi085Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame085_wheel0";
 
@@ -693,35 +693,35 @@ static const ALIGN_ASSET(2) char gKartYoshi085Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi086Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame086_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi086Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame086_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi086Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame086_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi086Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame086_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi086Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame086_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi086Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame086_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi087Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame087_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi087Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame087_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi087Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame087_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi087Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame087_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi087Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame087_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi087Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame087_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi088Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame088_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi088Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame088_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi088Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame088_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi088Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame088_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi088Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame088_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi088Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame088_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi089Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame089_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi089Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame089_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi089Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame089_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi089Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame089_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi089Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame089_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi089Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame089_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi090Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame090_wheel0";
 
@@ -741,27 +741,27 @@ static const ALIGN_ASSET(2) char gKartYoshi091Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi092Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame092_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi092Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame092_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi092Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame092_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi092Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame092_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi093Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame093_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi092Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame092_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi093Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame093_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi093Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame093_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi093Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame093_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi093Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame093_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi094Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame094_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi093Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame093_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi094Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame094_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi094Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame094_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi094Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame094_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi094Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame094_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi094Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame094_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi095Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame095_wheel0";
 
@@ -779,21 +779,21 @@ static const ALIGN_ASSET(2) char gKartYoshi096Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi096Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame096_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi097Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame097_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi097Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame097_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi097Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame097_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi097Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame097_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi097Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame097_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi097Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame097_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi098Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame098_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi098Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame098_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi098Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame098_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi098Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame098_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi098Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame098_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi098Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame098_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi099Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame099_wheel0";
 
@@ -811,21 +811,21 @@ static const ALIGN_ASSET(2) char gKartYoshi100Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi100Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame100_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi101Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame101_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi101Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame101_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi101Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame101_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi101Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame101_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi102Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame102_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi101Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame101_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi102Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame102_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi101Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame101_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi102Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame102_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi102Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame102_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi102Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame102_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi102Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame102_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi102Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame102_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi103Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame103_wheel0";
 
@@ -837,35 +837,35 @@ static const ALIGN_ASSET(2) char gKartYoshi103Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi104Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame104_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi104Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame104_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi104Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame104_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi104Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame104_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi104Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame104_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi104Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame104_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi105Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame105_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi105Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame105_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi105Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame105_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi105Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame105_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi105Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame105_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi105Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame105_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi106Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame106_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi106Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame106_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi106Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame106_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi106Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame106_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi106Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame106_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi106Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame106_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi107Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame107_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi107Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame107_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi107Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame107_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi107Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame107_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi107Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame107_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi107Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame107_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi108Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame108_wheel0";
 
@@ -885,21 +885,19 @@ static const ALIGN_ASSET(2) char gKartYoshi109Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi110Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame110_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi110Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame110_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi110Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame110_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi110Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame110_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi111Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame111_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi111Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame111_wheel2";
-
-static const ALIGN_ASSET(2) char gKartYoshi111Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame111_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi110Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame110_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi111Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame111_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi112Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame112_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi111Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame111_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi111Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame111_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi111Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame111_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi112Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame112_wheel1";
 
@@ -907,37 +905,39 @@ static const ALIGN_ASSET(2) char gKartYoshi112Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi112Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame112_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi113Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame113_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi113Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame113_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi113Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame113_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi112Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame112_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi113Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame113_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi114Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame114_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi113Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame113_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi113Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame113_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi113Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame113_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi114Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame114_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi114Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame114_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi114Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame114_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi115Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame115_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi114Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame114_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi115Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame115_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi115Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame115_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi114Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame114_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi115Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame115_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi116Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame116_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi115Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame115_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi115Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame115_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi115Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame115_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi116Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame116_wheel1";
 
+static const ALIGN_ASSET(2) char gKartYoshi116Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame116_wheel3";
+
 static const ALIGN_ASSET(2) char gKartYoshi116Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame116_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi116Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame116_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi116Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame116_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi117Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame117_wheel0";
 
@@ -955,21 +955,21 @@ static const ALIGN_ASSET(2) char gKartYoshi118Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi118Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame118_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi119Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame119_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi119Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame119_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi119Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame119_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi119Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame119_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi120Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame120_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi119Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame119_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi120Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame120_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi119Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame119_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi120Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame120_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi120Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame120_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi120Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame120_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi120Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame120_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi120Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame120_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi121Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame121_wheel0";
 
@@ -981,35 +981,35 @@ static const ALIGN_ASSET(2) char gKartYoshi121Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi122Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame122_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi122Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame122_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi122Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame122_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi122Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame122_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi122Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame122_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi122Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame122_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi123Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame123_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi123Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame123_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi123Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame123_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi123Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame123_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi123Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame123_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi123Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame123_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi124Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame124_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi124Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame124_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi124Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame124_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi124Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame124_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi124Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame124_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi124Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame124_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi125Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame125_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi125Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame125_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi125Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame125_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi125Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame125_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi125Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame125_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi125Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame125_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi126Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame126_wheel0";
 
@@ -1027,29 +1027,29 @@ static const ALIGN_ASSET(2) char gKartYoshi127Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi127Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame127_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi128Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame128_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi128Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame128_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi128Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame128_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi128Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame128_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi129Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame129_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi128Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame128_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi129Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame129_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi128Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame128_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi129Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame129_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi129Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame129_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi130Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame130_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi129Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame129_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi129Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame129_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi130Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame130_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi130Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame130_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi130Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame130_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi130Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame130_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi130Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame130_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi131Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame131_wheel0";
 
@@ -1067,21 +1067,21 @@ static const ALIGN_ASSET(2) char gKartYoshi132Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi132Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame132_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi133Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame133_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi133Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame133_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi133Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame133_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi133Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame133_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi133Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame133_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi133Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame133_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi134Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame134_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi134Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame134_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi134Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame134_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi134Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame134_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi134Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame134_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi134Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame134_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi135Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame135_wheel0";
 
@@ -1099,21 +1099,21 @@ static const ALIGN_ASSET(2) char gKartYoshi136Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi136Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame136_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi137Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame137_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi137Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame137_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi137Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame137_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi137Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame137_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi138Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame138_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi137Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame137_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi138Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame138_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi137Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame137_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi138Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame138_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi138Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame138_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi138Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame138_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi138Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame138_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi138Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame138_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi139Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame139_wheel0";
 
@@ -1125,35 +1125,35 @@ static const ALIGN_ASSET(2) char gKartYoshi139Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi140Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame140_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi140Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame140_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi140Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame140_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi140Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame140_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi140Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame140_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi140Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame140_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi141Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame141_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi141Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame141_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi141Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame141_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi141Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame141_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi141Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame141_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi141Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame141_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi142Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame142_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi142Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame142_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi142Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame142_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi142Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame142_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi142Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame142_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi142Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame142_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi143Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame143_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi143Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame143_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi143Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame143_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi143Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame143_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi143Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame143_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi143Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame143_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi144Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame144_wheel0";
 
@@ -1171,37 +1171,37 @@ static const ALIGN_ASSET(2) char gKartYoshi145Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi145Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame145_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi146Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame146_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi146Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame146_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi146Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame146_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi146Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame146_wheel1";
 
+static const ALIGN_ASSET(2) char gKartYoshi146Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame146_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi146Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame146_wheel3";
+
 static const ALIGN_ASSET(2) char gKartYoshi147Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame147_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi147Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame147_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi147Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame147_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi147Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame147_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi147Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame147_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi148Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame148_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi148Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame148_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi148Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame148_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi148Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi148Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame148_wheel2";
-
-static const ALIGN_ASSET(2) char gKartYoshi148Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame148_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi149Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame149_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi149Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame149_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi149Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame149_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi149Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame149_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi149Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame149_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi150Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame150_wheel0";
 
@@ -1211,21 +1211,21 @@ static const ALIGN_ASSET(2) char gKartYoshi150Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi150Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame150_wheel3";
 
+static const ALIGN_ASSET(2) char gKartYoshi151Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame151_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi151Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame151_wheel1";
+
 static const ALIGN_ASSET(2) char gKartYoshi151Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame151_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi151Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame151_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi151Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame151_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi151Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame151_wheel0";
-
 static const ALIGN_ASSET(2) char gKartYoshi152Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame152_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi152Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame152_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi152Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame152_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi152Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame152_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi152Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame152_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi152Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame152_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi153Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame153_wheel0";
 
@@ -1253,11 +1253,11 @@ static const ALIGN_ASSET(2) char gKartYoshi155Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi156Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame156_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi156Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame156_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi156Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame156_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi156Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame156_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi156Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame156_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi157Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame157_wheel0";
 
@@ -1269,19 +1269,19 @@ static const ALIGN_ASSET(2) char gKartYoshi157Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi158Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame158_wheel0";
 
+static const ALIGN_ASSET(2) char gKartYoshi158Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame158_wheel3";
+
 static const ALIGN_ASSET(2) char gKartYoshi158Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame158_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi158Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame158_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi158Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame158_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi159Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame159_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi159Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame159_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi159Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame159_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi159Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame159_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi159Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame159_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi159Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame159_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi160Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame160_wheel0";
 
@@ -1293,19 +1293,19 @@ static const ALIGN_ASSET(2) char gKartYoshi160Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi161Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame161_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi161Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame161_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi161Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame161_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi161Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame161_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi161Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame161_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi162Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame162_wheel0";
-
-static const ALIGN_ASSET(2) char gKartYoshi162Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame162_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi161Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame161_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi162Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame162_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi162Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame162_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi162Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame162_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi162Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame162_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi163Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame163_wheel0";
 
@@ -1325,27 +1325,27 @@ static const ALIGN_ASSET(2) char gKartYoshi164Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi165Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame165_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi165Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame165_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi165Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame165_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi165Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame165_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi166Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame166_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi166Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame166_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi165Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame165_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi166Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame166_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi166Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame166_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi167Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame167_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi166Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame166_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi166Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame166_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi167Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame167_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi167Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame167_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi167Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame167_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi167Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame167_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi167Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame167_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi168Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame168_wheel0";
 
@@ -1363,21 +1363,21 @@ static const ALIGN_ASSET(2) char gKartYoshi169Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi169Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame169_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi170Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame170_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi170Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame170_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi170Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame170_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi170Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame170_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi170Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame170_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi170Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame170_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi171Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame171_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi171Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame171_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi171Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame171_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi171Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame171_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi171Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame171_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi171Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame171_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi172Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame172_wheel0";
 
@@ -1395,21 +1395,21 @@ static const ALIGN_ASSET(2) char gKartYoshi173Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi173Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame173_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi174Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame174_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi174Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame174_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi174Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame174_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi174Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame174_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi175Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame175_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi174Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame174_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi175Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame175_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi174Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame174_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi175Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame175_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi175Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame175_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi175Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame175_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi175Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame175_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi175Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame175_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi176Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame176_wheel0";
 
@@ -1421,35 +1421,35 @@ static const ALIGN_ASSET(2) char gKartYoshi176Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi177Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame177_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi177Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame177_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi177Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame177_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi177Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame177_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi177Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame177_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi177Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame177_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi178Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame178_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi178Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame178_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi178Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame178_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi178Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame178_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi178Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame178_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi178Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame178_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi179Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame179_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi179Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame179_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi179Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame179_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi179Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame179_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi179Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame179_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi179Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame179_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi180Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame180_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi180Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame180_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi180Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame180_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi180Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame180_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi180Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame180_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi180Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame180_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi181Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame181_wheel0";
 
@@ -1469,21 +1469,19 @@ static const ALIGN_ASSET(2) char gKartYoshi182Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi183Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame183_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi183Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame183_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi183Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame183_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi183Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame183_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi184Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame184_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi184Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame184_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi183Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame183_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi184Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame184_wheel3";
 
+static const ALIGN_ASSET(2) char gKartYoshi184Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame184_wheel1";
+
 static const ALIGN_ASSET(2) char gKartYoshi184Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame184_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi185Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame185_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi184Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame184_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi185Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame185_wheel1";
 
@@ -1491,37 +1489,39 @@ static const ALIGN_ASSET(2) char gKartYoshi185Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi185Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame185_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi186Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame186_wheel1";
-
-static const ALIGN_ASSET(2) char gKartYoshi186Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame186_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi186Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame186_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi185Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame185_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi186Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame186_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi187Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame187_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi186Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame186_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi186Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame186_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi186Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame186_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi187Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame187_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi187Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame187_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi187Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame187_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi188Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame188_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi187Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame187_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi188Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame188_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi188Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame188_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi187Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame187_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi188Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame188_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi189Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame189_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi188Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame188_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi188Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame188_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi188Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame188_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi189Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame189_wheel1";
 
+static const ALIGN_ASSET(2) char gKartYoshi189Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame189_wheel3";
+
 static const ALIGN_ASSET(2) char gKartYoshi189Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame189_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi189Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame189_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi189Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame189_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi190Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame190_wheel0";
 
@@ -1539,21 +1539,21 @@ static const ALIGN_ASSET(2) char gKartYoshi191Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi191Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame191_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi192Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame192_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi192Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame192_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi192Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame192_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi192Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame192_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi193Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame193_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi192Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame192_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi193Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame193_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi192Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame192_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi193Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame193_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi193Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame193_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi193Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame193_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi193Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame193_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi193Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame193_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi194Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame194_wheel0";
 
@@ -1565,35 +1565,35 @@ static const ALIGN_ASSET(2) char gKartYoshi194Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi195Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame195_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi195Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame195_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi195Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame195_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi195Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame195_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi195Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame195_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi195Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame195_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi196Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame196_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi196Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame196_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi196Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame196_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi196Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame196_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi196Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame196_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi196Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame196_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi197Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame197_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi197Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame197_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi197Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame197_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi197Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame197_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi197Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame197_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi197Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame197_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi198Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame198_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi198Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame198_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi198Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame198_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi198Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame198_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi198Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame198_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi198Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame198_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi199Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame199_wheel0";
 
@@ -1611,29 +1611,29 @@ static const ALIGN_ASSET(2) char gKartYoshi200Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi200Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame200_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi201Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame201_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi201Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame201_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi201Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame201_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi201Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame201_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi202Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame202_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi201Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame201_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi202Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame202_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi201Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame201_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi202Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame202_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi202Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame202_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi203Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame203_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi202Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame202_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi202Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame202_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi203Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame203_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi203Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame203_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi203Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame203_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi203Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame203_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi203Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame203_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi204Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame204_wheel0";
 
@@ -1651,21 +1651,21 @@ static const ALIGN_ASSET(2) char gKartYoshi205Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi205Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame205_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi206Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame206_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi206Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame206_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi206Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame206_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi206Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame206_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi206Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame206_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi206Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame206_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi207Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame207_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi207Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame207_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi207Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame207_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi207Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame207_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi207Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame207_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi207Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame207_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi208Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame208_wheel0";
 
@@ -1683,21 +1683,21 @@ static const ALIGN_ASSET(2) char gKartYoshi209Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi209Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame209_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi210Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame210_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi210Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame210_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi210Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame210_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi210Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame210_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi211Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame211_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi210Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame210_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi211Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame211_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi210Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame210_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi211Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame211_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi211Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame211_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi211Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame211_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi211Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame211_wheel0";
+
+static const ALIGN_ASSET(2) char gKartYoshi211Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame211_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi212Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame212_wheel0";
 
@@ -1709,35 +1709,35 @@ static const ALIGN_ASSET(2) char gKartYoshi212Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi213Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame213_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi213Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame213_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi213Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame213_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi213Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame213_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi213Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame213_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi213Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame213_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi214Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame214_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi214Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame214_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi214Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame214_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi214Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame214_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi214Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame214_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi214Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame214_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi215Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame215_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi215Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame215_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi215Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame215_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi215Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame215_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi215Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame215_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi215Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame215_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi216Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame216_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi216Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame216_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi216Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame216_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi216Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame216_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi216Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame216_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi216Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame216_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi217Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame217_wheel0";
 
@@ -1755,29 +1755,29 @@ static const ALIGN_ASSET(2) char gKartYoshi218Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi218Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame218_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi219Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame219_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi219Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame219_wheel2";
-
 static const ALIGN_ASSET(2) char gKartYoshi219Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame219_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi219Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame219_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi219Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame219_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi219Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame219_wheel3";
+
+static const ALIGN_ASSET(2) char gKartYoshi220Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame220_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi220Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame220_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi220Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame220_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi220Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame220_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi220Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame220_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi221Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame221_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi221Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame221_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi221Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame221_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi221Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame221_wheel2";
+
+static const ALIGN_ASSET(2) char gKartYoshi221Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame221_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi222Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame222_wheel0";
 
@@ -1789,11 +1789,11 @@ static const ALIGN_ASSET(2) char gKartYoshi222Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi223Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame223_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi223Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame223_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi223Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame223_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi223Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame223_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi223Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame223_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi223Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame223_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi224Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame224_wheel0";
 
@@ -1803,13 +1803,13 @@ static const ALIGN_ASSET(2) char gKartYoshi224Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi224Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame224_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi225Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame225_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi225Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame225_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi225Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame225_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi225Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame225_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi225Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame225_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi225Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame225_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi225Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame225_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi226Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame226_wheel0";
 
@@ -1835,13 +1835,13 @@ static const ALIGN_ASSET(2) char gKartYoshi228Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi228Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame228_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi229Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame229_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi229Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame229_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi229Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame229_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi229Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame229_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi229Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame229_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi229Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame229_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi230Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame230_wheel0";
 
@@ -1907,21 +1907,21 @@ static const ALIGN_ASSET(2) char gKartYoshi237Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi237Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame237_wheel3";
 
+static const ALIGN_ASSET(2) char gKartYoshi238Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame238_wheel2";
+
 static const ALIGN_ASSET(2) char gKartYoshi238Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame238_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi238Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame238_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi238Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame238_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi238Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame238_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi239Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame239_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi239Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame239_wheel1";
 
-static const ALIGN_ASSET(2) char gKartYoshi239Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame239_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi239Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi239Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame239_wheel3";
-
-static const ALIGN_ASSET(2) char gKartYoshi239Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame239_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi240Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame240_wheel0";
 
@@ -1933,11 +1933,11 @@ static const ALIGN_ASSET(2) char gKartYoshi240Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi241Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame241_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi241Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame241_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi241Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame241_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi241Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame241_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi241Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame241_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi241Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame241_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi242Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame242_wheel0";
 
@@ -1947,13 +1947,13 @@ static const ALIGN_ASSET(2) char gKartYoshi242Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi242Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame242_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi243Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame243_wheel3";
+static const ALIGN_ASSET(2) char gKartYoshi243Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame243_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi243Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame243_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi243Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame243_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi243Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame243_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi243Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame243_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi243Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame243_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi244Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame244_wheel0";
 
@@ -1979,13 +1979,13 @@ static const ALIGN_ASSET(2) char gKartYoshi246Wheel2[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi246Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame246_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi247Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame247_wheel3";
-
 static const ALIGN_ASSET(2) char gKartYoshi247Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame247_wheel2";
 
-static const ALIGN_ASSET(2) char gKartYoshi247Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame247_wheel0";
+static const ALIGN_ASSET(2) char gKartYoshi247Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame247_wheel3";
 
 static const ALIGN_ASSET(2) char gKartYoshi247Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame247_wheel1";
+
+static const ALIGN_ASSET(2) char gKartYoshi247Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame247_wheel0";
 
 static const ALIGN_ASSET(2) char gKartYoshi248Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame248_wheel0";
 
@@ -2053,11 +2053,11 @@ static const ALIGN_ASSET(2) char gKartYoshi255Wheel3[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi256Wheel3[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame256_wheel3";
 
-static const ALIGN_ASSET(2) char gKartYoshi256Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame256_wheel1";
+static const ALIGN_ASSET(2) char gKartYoshi256Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame256_wheel2";
 
 static const ALIGN_ASSET(2) char gKartYoshi256Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame256_wheel0";
 
-static const ALIGN_ASSET(2) char gKartYoshi256Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame256_wheel2";
+static const ALIGN_ASSET(2) char gKartYoshi256Wheel1[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame256_wheel1";
 
 static const ALIGN_ASSET(2) char gKartYoshi257Wheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame257_wheel0";
 
@@ -2315,6 +2315,38 @@ static const ALIGN_ASSET(2) char gKartYoshi288Wheel0[] = "__OTR__textures/karts/
 
 static const ALIGN_ASSET(2) char gKartYoshi288Wheel2[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame288_wheel2";
 
+static const ALIGN_ASSET(2) char gKartYoshi289[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame289";
+
+static const ALIGN_ASSET(2) char gKartYoshi290[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame290";
+
+static const ALIGN_ASSET(2) char gKartYoshi291[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame291";
+
+static const ALIGN_ASSET(2) char gKartYoshi292[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame292";
+
+static const ALIGN_ASSET(2) char gKartYoshi293[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame293";
+
+static const ALIGN_ASSET(2) char gKartYoshi294[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame294";
+
+static const ALIGN_ASSET(2) char gKartYoshi295[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame295";
+
+static const ALIGN_ASSET(2) char gKartYoshi296[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame296";
+
+static const ALIGN_ASSET(2) char gKartYoshi297[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame297";
+
+static const ALIGN_ASSET(2) char gKartYoshi298[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame298";
+
+static const ALIGN_ASSET(2) char gKartYoshi299[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame299";
+
+static const ALIGN_ASSET(2) char gKartYoshi300[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame300";
+
+static const ALIGN_ASSET(2) char gKartYoshi301[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame301";
+
+static const ALIGN_ASSET(2) char gKartYoshi302[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame302";
+
+static const ALIGN_ASSET(2) char gKartYoshi303[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame303";
+
+static const ALIGN_ASSET(2) char gKartYoshi304[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame304";
+
 static const ALIGN_ASSET(2) char gKartYoshi305[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame305";
 
 static const ALIGN_ASSET(2) char gKartYoshi306[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame306";
@@ -2346,38 +2378,6 @@ static const ALIGN_ASSET(2) char gKartYoshi318[] = "__OTR__textures/karts/yoshi_
 static const ALIGN_ASSET(2) char gKartYoshi319[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame319";
 
 static const ALIGN_ASSET(2) char gKartYoshi320[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame320";
-
-static const ALIGN_ASSET(2) char gKartYoshi303[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame303";
-
-static const ALIGN_ASSET(2) char gKartYoshi304[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame304";
-
-static const ALIGN_ASSET(2) char gKartYoshi289[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame289";
-
-static const ALIGN_ASSET(2) char gKartYoshi290[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame290";
-
-static const ALIGN_ASSET(2) char gKartYoshi291[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame291";
-
-static const ALIGN_ASSET(2) char gKartYoshi292[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame292";
-
-static const ALIGN_ASSET(2) char gKartYoshi293[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame293";
-
-static const ALIGN_ASSET(2) char gKartYoshi294[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame294";
-
-static const ALIGN_ASSET(2) char gKartYoshi295[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame295";
-
-static const ALIGN_ASSET(2) char gKartYoshi297[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame297";
-
-static const ALIGN_ASSET(2) char gKartYoshi296[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame296";
-
-static const ALIGN_ASSET(2) char gKartYoshi302[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame302";
-
-static const ALIGN_ASSET(2) char gKartYoshi301[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame301";
-
-static const ALIGN_ASSET(2) char gKartYoshi299[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame299";
-
-static const ALIGN_ASSET(2) char gKartYoshi300[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame300";
-
-static const ALIGN_ASSET(2) char gKartYoshi298[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_frame298";
 
 static const ALIGN_ASSET(2) char gKartYoshi000TlutWheel0[] = "__OTR__textures/karts/yoshi_kart/yoshi_kart_000_tlut_wheel_0";
 
