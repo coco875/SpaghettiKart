@@ -12,7 +12,6 @@ extern "C" {
     #include "data/some_data.h"
     #include "objects.h"
     #include "path_spawn_metadata.h"
-    extern const course_texture mario_raceway_textures[];
 }
 
 class MarioRaceway : public Course {

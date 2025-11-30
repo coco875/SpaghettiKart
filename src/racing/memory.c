@@ -292,33 +292,6 @@ uintptr_t MIO0_0F(u8* arg0, uintptr_t arg1, uintptr_t arg2) {
     return oldHeapEndPtr;
 }
 
-struct UnkStr_802AA7C8 {
-    u8* unk0;
-    uintptr_t unk4;
-    uintptr_t unk8;
-    uintptr_t unkC;
-};
-
-void* decompress_segments(u8* start, u8* end) {
-    return NULL;
-    UNUSED u32 pad;
-    u32 sp28;
-    u32 size = ALIGN16(end - start);
-    u8* heapEnd;
-    u32* freeSpace;
-
-    heapEnd = (u8*) gHeapEndPtr - size;
-    // sp20 = temp_a0;
-    dma_copy(heapEnd, start, size);
-    sp28 = *(u32*) (heapEnd + 4);
-    sp28 = ALIGN16(sp28);
-    freeSpace = (u32*) gNextFreeMemoryAddress;
-    mio0decode(heapEnd, (u8*) freeSpace);
-    gNextFreeMemoryAddress += sp28;
-    return (void*) freeSpace;
-}
-
-extern const course_texture mario_raceway_textures[30];
 
 /* To help verify if ptrs are pointing within segments see gfx_pc.cpp gfx_step() */
 uintptr_t vtxSegEnd;

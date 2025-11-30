@@ -44,7 +44,6 @@ struct AllocOnlyPool {
 u8* load_lakitu_tlut_x64(const char** textureList, size_t length);
 void* get_next_available_memory_addr(uintptr_t);
 void initialize_memory_pool(void);
-void* decompress_segments(u8*, u8*);
 void* allocate_memory(size_t);
 void* load_data(uintptr_t, uintptr_t);
 void func_802A7D54(s32, s32);
@@ -59,9 +58,6 @@ uintptr_t main_pool_available(void);
 uintptr_t main_pool_push_state(void);
 uintptr_t main_pool_pop_state(void);
 void* func_802A80B0(u8*, u8*, u8*);
-struct AllocOnlyPool* alloc_only_pool_init(uintptr_t, uintptr_t);
-uintptr_t func_802A82AC(s32);
-uintptr_t func_802A8348(s32, s32, s32);
 uintptr_t MIO0_0F(u8*, uintptr_t, uintptr_t);
 void load_course(s32);
 
