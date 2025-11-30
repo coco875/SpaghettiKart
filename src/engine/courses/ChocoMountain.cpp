@@ -144,7 +144,7 @@ void ChocoMountain::Load() {
     func_80295C6C();
 }
 
-void ChocoMountain::LoadTextures() {
+void ChocoMountain::UnLoad() {
 }
 
 void ChocoMountain::BeginPlay() {

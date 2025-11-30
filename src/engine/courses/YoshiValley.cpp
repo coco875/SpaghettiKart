@@ -117,7 +117,7 @@ void YoshiValley::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void YoshiValley::LoadTextures() {
+void YoshiValley::UnLoad() {
 }
 
 void YoshiValley::BeginPlay() {

@@ -65,6 +65,7 @@ typedef struct MinimapProps {
 } MinimapProps;
 
 void ResizeMinimap(MinimapProps* minimap);
+void ReverseGfx(Gfx* gfx);
 
 typedef struct Properties {
     char Name[128];
@@ -319,7 +320,7 @@ public:
     virtual void LoadO2R(std::string trackPath); // Load custom track from o2r
     virtual void Load(); // Decompress and load stock courses or from o2r but TrackSectionsPtr must be set.
     virtual void Load(Vtx* vtx, Gfx *gfx); // Load custom track from code. Load must be overridden and then call to this base class method impl.
-    virtual void LoadTextures();
+    virtual void UnLoad();
     virtual void ParseCourseSections(TrackSections* sections, size_t size);
 
     /**

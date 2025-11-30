@@ -296,12 +296,6 @@ s32 CM_GetCrossingOnTriggered(uintptr_t* crossing) {
     }
 }
 
-void CM_LoadTextures() {
-    if (gWorldInstance.CurrentCourse) {
-        // gWorldInstance.CurrentCourse->LoadTextures();
-    }
-}
-
 void CM_RenderCourse(struct UnkStruct_800DC5EC* arg0) {
     if (gWorldInstance.CurrentCourse->IsMod() == false) {
         if ((CVarGetInteger("gFreecam", 0) == true)) {

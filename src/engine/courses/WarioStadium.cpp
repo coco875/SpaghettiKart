@@ -140,7 +140,7 @@ void WarioStadium::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_wario_stadium_packed_dl_E48, 100, 255, 255, 255);
 }
 
-void WarioStadium::LoadTextures() {
+void WarioStadium::UnLoad() {
 }
 
 void WarioStadium::BeginPlay() {

@@ -114,7 +114,7 @@ void DoubleDeck::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void DoubleDeck::LoadTextures() {
+void DoubleDeck::UnLoad() {
 }
 
 void DoubleDeck::BeginPlay() {

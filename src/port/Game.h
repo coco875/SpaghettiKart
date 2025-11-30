@@ -54,8 +54,6 @@ void CM_SetCup(void*);
 
 void CM_SetCupIndex(size_t index);
 
-void CM_LoadTextures();
-
 void CM_RenderCourse(struct UnkStruct_800DC5EC* arg0);
 
 void CM_RenderCredits();

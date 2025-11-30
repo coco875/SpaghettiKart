@@ -127,7 +127,7 @@ void KoopaTroopaBeach::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_358, 150, 255, 255, 255);
 }
 
-void KoopaTroopaBeach::LoadTextures() {
+void KoopaTroopaBeach::UnLoad() {
 }
 
 void KoopaTroopaBeach::BeginPlay() {

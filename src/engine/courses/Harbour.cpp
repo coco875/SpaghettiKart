@@ -616,7 +616,7 @@ void Harbour::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void Harbour::LoadTextures() {
+void Harbour::UnLoad() {
 }
 
 void Harbour::BeginPlay() {

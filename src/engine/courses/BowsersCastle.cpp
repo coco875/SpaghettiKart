@@ -122,7 +122,7 @@ void BowsersCastle::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_bowsers_castle_packed_dl_1350, 0x32, 0, 0, 0);
 }
 
-void BowsersCastle::LoadTextures() {
+void BowsersCastle::UnLoad() {
 }
 
 void BowsersCastle::BeginPlay() {

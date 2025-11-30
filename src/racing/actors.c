@@ -1302,8 +1302,6 @@ void spawn_course_actors(void) {
  *
  */
 void init_actors_and_load_textures(void) {
-    CM_LoadTextures();
-
     init_red_shell_texture();
     destroy_all_actors();
     CM_CleanWorld();

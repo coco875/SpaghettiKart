@@ -25,6 +25,7 @@ public:
 //    virtual void Load(const char* courseVtx, 
 //                  course_texture* textures, const char* displaylists, size_t dlSize);
     virtual void Load() override;
+    virtual void UnLoad() override;
     virtual void BeginPlay() override;
     virtual void Render(struct UnkStruct_800DC5EC*) override;
     virtual void Waypoints(Player*, int8_t) override;

@@ -117,7 +117,7 @@ void KalimariDesert::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void KalimariDesert::LoadTextures() {
+void KalimariDesert::UnLoad() {
 }
 
 void KalimariDesert::BeginPlay() {

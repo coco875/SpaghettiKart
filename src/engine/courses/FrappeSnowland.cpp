@@ -121,7 +121,7 @@ void FrappeSnowland::Load() {
     func_80295C6C();
 }
 
-void FrappeSnowland::LoadTextures() {
+void FrappeSnowland::UnLoad() {
 }
 
 void FrappeSnowland::BeginPlay() {

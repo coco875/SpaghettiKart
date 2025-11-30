@@ -144,7 +144,7 @@ void TestCourse::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void TestCourse::LoadTextures() {
+void TestCourse::UnLoad() {
 }
 
 void TestCourse::BeginPlay() {

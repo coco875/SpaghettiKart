@@ -41,6 +41,8 @@ void ResizeMinimap(MinimapProps* minimap) {
     }
 }
 
+
+
 Course::Course() {
     Props.SetText(Props.Name, "Blank Track", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "blnktrck", sizeof(Props.DebugName));
@@ -113,6 +115,9 @@ Course::Course() {
 // Load custom track from code
 void Course::Load(Vtx* vtx, Gfx* gfx) {
     Course::Init();
+}
+
+void Course::UnLoad() {
 }
 
 void Course::LoadO2R(std::string trackPath) {
@@ -248,9 +253,6 @@ void Course::Init() {
     gCollisionMesh = (CollisionTriangle*) gNextFreeMemoryAddress;
     D_800DC5BC = 0;
     D_800DC5C8 = 0;
-}
-
-void Course::LoadTextures() {
 }
 
 void Course::BeginPlay() {

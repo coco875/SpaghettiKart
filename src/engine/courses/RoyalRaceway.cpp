@@ -117,7 +117,7 @@ void RoyalRaceway::Load() {
     func_80295C6C();
 }
 
-void RoyalRaceway::LoadTextures() {
+void RoyalRaceway::UnLoad() {
 }
 
 void RoyalRaceway::BeginPlay() {

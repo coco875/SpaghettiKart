@@ -135,7 +135,7 @@ void MarioRaceway::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void MarioRaceway::LoadTextures() {
+void MarioRaceway::UnLoad() {
 }
 
 void MarioRaceway::BeginPlay() {

@@ -22,7 +22,7 @@ public:
     explicit FrappeSnowland();
 
     virtual void Load() override;
-    virtual void LoadTextures() override;
+    virtual void UnLoad() override;
     virtual void BeginPlay() override;
     virtual void InitClouds() override;
     virtual void UpdateClouds(s32 sp1C, Camera* camera) override;

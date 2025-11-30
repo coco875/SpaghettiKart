@@ -124,7 +124,7 @@ void LuigiRaceway::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void LuigiRaceway::LoadTextures() {
+void LuigiRaceway::UnLoad() {
 }
 
 void LuigiRaceway::BeginPlay() {

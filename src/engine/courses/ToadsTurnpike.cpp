@@ -134,7 +134,7 @@ void ToadsTurnpike::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void ToadsTurnpike::LoadTextures() {
+void ToadsTurnpike::UnLoad() {
 }
 
 void ToadsTurnpike::BeginPlay() {

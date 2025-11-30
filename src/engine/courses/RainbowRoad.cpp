@@ -126,7 +126,7 @@ void RainbowRoad::Load() {
     }
 }
 
-void RainbowRoad::LoadTextures() {
+void RainbowRoad::UnLoad() {
 }
 
 void RainbowRoad::BeginPlay() {

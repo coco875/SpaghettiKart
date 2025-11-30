@@ -116,7 +116,7 @@ void Skyscraper::Load() {
     func_80295C6C();
 }
 
-void Skyscraper::LoadTextures() {
+void Skyscraper::UnLoad() {
 }
 
 void Skyscraper::BeginPlay() {

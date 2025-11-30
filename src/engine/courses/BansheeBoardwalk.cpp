@@ -129,7 +129,7 @@ void BansheeBoardwalk::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_banshee_boardwalk_packed_dl_878, 128, 0, 0, 0);
 }
 
-void BansheeBoardwalk::LoadTextures() {
+void BansheeBoardwalk::UnLoad() {
 }
 
 void BansheeBoardwalk::BeginPlay() {

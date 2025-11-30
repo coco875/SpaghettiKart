@@ -118,7 +118,7 @@ void PodiumCeremony::Load() {
     func_80295C6C();
 }
 
-void PodiumCeremony::LoadTextures() {
+void PodiumCeremony::UnLoad() {
 }
 
 void PodiumCeremony::BeginPlay() {

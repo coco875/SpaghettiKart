@@ -119,7 +119,7 @@ void MooMooFarm::Load() {
     Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
-void MooMooFarm::LoadTextures() {
+void MooMooFarm::UnLoad() {
 }
 
 void MooMooFarm::BeginPlay() {
