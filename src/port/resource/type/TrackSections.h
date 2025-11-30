@@ -1,6 +1,6 @@
 #pragma once
 
-#include "course.h"
+#include "include/course.h"
 #include "resource/Resource.h"
 #include <vector>
 #include <libultra/gbi.h>

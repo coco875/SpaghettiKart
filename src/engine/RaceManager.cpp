@@ -16,7 +16,7 @@ RaceManager::RaceManager(World& world) : WorldContext(world) {
 std::unordered_map<uintptr_t, std::shared_ptr<Vtx>> mirroredVtxCache;
 
 extern "C" void add_triangle_to_collision_mesh(Vtx* vtx1, Vtx* vtx2, Vtx* vtx3, Vtx** outVtx1, Vtx** outVtx2, Vtx** outVtx3) {
-    if (gIsMirrorMode) {
+    if (gIsMirrorMode != 0) {
         auto getOrCreateMirrored = [](Vtx* original) -> Vtx* {
             uintptr_t key = reinterpret_cast<uintptr_t>(original);
             
