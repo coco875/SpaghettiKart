@@ -24,48 +24,6 @@
 s32 sGfxSeekPosition;
 s32 sPackedSeekPosition;
 
-/* Opcodes packés (parité avec tools/displaylist_packer.c) */
-enum PackedOp {
-    PG_LIGHTS_0               = 0x00, /* 0..0x14 mappés sur unpack_lights */
-    /* Presets de combine renommés pour refléter les macros G_CC_* */
-    PG_SETCOMBINE_CC_MODULATERGBA      = 0x15,
-    PG_SETCOMBINE_CC_MODULATERGBDECALA = 0x16,
-    PG_SETCOMBINE_CC_SHADE             = 0x17,
-    PG_RMODE_OPA             = 0x18,
-    PG_RMODE_TEXEDGE         = 0x19,
-    PG_TILECFG_A             = 0x1A,
-    PG_TILECFG_B             = 0x1B,
-    PG_TILECFG_C             = 0x1C,
-    PG_TILECFG_D             = 0x1D,
-    PG_TILECFG_E             = 0x1E,
-    PG_TILECFG_F             = 0x1F,
-    PG_TIMG_LOADBLOCK_0      = 0x20,
-    PG_TIMG_LOADBLOCK_1      = 0x21,
-    PG_TIMG_LOADBLOCK_2      = 0x22,
-    PG_TIMG_LOADBLOCK_3      = 0x23,
-    PG_TIMG_LOADBLOCK_4      = 0x24,
-    PG_TIMG_LOADBLOCK_5      = 0x25,
-    PG_TEXTURE_ON            = 0x26,
-    PG_TEXTURE_OFF           = 0x27,
-    PG_VTX1                  = 0x28,
-    PG_TRI1                  = 0x29,
-    PG_ENDDL                 = 0x2A,
-    PG_DL                    = 0x2B,
-    PG_TILECFG_G             = 0x2C,
-    PG_CULLDL                = 0x2D,
-    PG_SETCOMBINE_ALT        = 0x2E,
-    PG_RMODE_XLU             = 0x2F,
-    PG_SPLINE3D              = 0x30,
-    PG_VTX_BASE              = 0x32, /* 0x33..0x52 → variant vtx2 */
-    PG_SETCOMBINE_CC_DECALRGBA  = 0x53,
-    PG_RMODE_OPA_DECAL       = 0x54,
-    PG_RMODE_XLU_DECAL       = 0x55,
-    PG_SETGEOMETRYMODE       = 0x56,
-    PG_CLEARGEOMETRYMODE     = 0x57,
-    PG_TRI2                  = 0x58,
-    PG_EOF                   = 0xFF,
-};
-
 static u8 sMemoryPool[0xFFFFFFF]; // Stock memory pool size: 0xAB630
 uintptr_t sPoolEnd = sMemoryPool + sizeof(sMemoryPool);
 
@@ -102,7 +60,6 @@ void* get_next_available_memory_addr(uintptr_t size) {
     }
 
     return (void*) freeSpace;
-    return freeSpace;
 }
 
 static uintptr_t get_texture2(size_t offset, const course_texture* textures) {
@@ -313,77 +270,6 @@ UNUSED void* func_802A80B0(u8* dest, u8* srcStart, u8* srcEnd) {
         osRecvMesg(&gDmaMesgQueue, &gMainReceivedMesg, OS_MESG_BLOCK);
     }
     return addr;
-}
-
-UNUSED struct AllocOnlyPool* alloc_only_pool_init(uintptr_t size, uintptr_t side) {
-    void* addr;
-    struct AllocOnlyPool* subPool = NULL;
-
-    size = ALIGN4(size);
-    addr = main_pool_alloc(size + sizeof(struct AllocOnlyPool), side);
-    if (addr != NULL) {
-        subPool = (struct AllocOnlyPool*) addr;
-        subPool->totalSpace = size;
-        subPool->usedSpace = (s32) addr + sizeof(struct AllocOnlyPool);
-        subPool->startPtr = 0;
-        subPool->freePtr = (u8*) addr + sizeof(struct AllocOnlyPool);
-    }
-    return subPool;
-}
-
-UNUSED uintptr_t func_802A82AC(s32 arg0) {
-    uintptr_t temp_v0;
-    uintptr_t phi_v1;
-
-    temp_v0 = D_801502A0 - arg0;
-    phi_v1 = 0;
-    if (temp_v0 >= (uintptr_t) gDisplayListHead) {
-        D_801502A0 = temp_v0;
-        phi_v1 = temp_v0;
-    }
-    return phi_v1;
-}
-
-// unused mio0 decode func.
-UNUSED uintptr_t func_802A8348(s32 arg0, s32 arg1, s32 arg2) {
-    uintptr_t offset;
-    UNUSED void* pad;
-    uintptr_t oldAddr;
-    void* newAddr;
-
-    offset = ALIGN16(arg1 * arg2);
-    oldAddr = gNextFreeMemoryAddress;
-    newAddr = (void*) (oldAddr + offset);
-    pad = &newAddr;
-#ifdef TARGET_N64
-    osInvalDCache(newAddr, offset);
-    osPiStartDma(&gDmaIoMesg, 0, 0, (uintptr_t) &_other_texturesSegmentRomStart[SEGMENT_OFFSET(arg0)], newAddr, offset,
-                 &gDmaMesgQueue);
-    osRecvMesg(&gDmaMesgQueue, &gMainReceivedMesg, 1);
-#endif
-
-    func_80040030((u8*) newAddr, (u8*) oldAddr);
-    gNextFreeMemoryAddress += offset;
-    return oldAddr;
-}
-
-UNUSED u8* func_802A841C(u8* arg0, s32 arg1, s32 arg2) {
-    u8* temp_v0;
-    void* temp_a0;
-    temp_v0 = (u8*) gNextFreeMemoryAddress;
-    temp_a0 = temp_v0 + arg2;
-    arg1 = ALIGN16(arg1);
-    arg2 = ALIGN16(arg2);
-
-    osInvalDCache(temp_a0, arg1);
-#ifdef TARGET_N64
-    osPiStartDma(&gDmaIoMesg, 0, 0, (uintptr_t) &_other_texturesSegmentRomStart[SEGMENT_OFFSET(arg0)], temp_a0, arg1,
-                 &gDmaMesgQueue);
-#endif
-    osRecvMesg(&gDmaMesgQueue, &gMainReceivedMesg, 1);
-    func_80040030((u8*) temp_a0, temp_v0);
-    gNextFreeMemoryAddress += arg2;
-    return temp_v0;
 }
 
 uintptr_t MIO0_0F(u8* arg0, uintptr_t arg1, uintptr_t arg2) {

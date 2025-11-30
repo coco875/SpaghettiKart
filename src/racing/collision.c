@@ -2073,11 +2073,12 @@ void generate_collision_mesh(Gfx* addr, s8 surfaceType, u16 sectionId) {
                 break;
             case G_ENDDL:
                 return; // end of loop
-        }
-
-        if (opcode == G_MARKER || opcode == G_MTX_OTR || opcode == G_SETTIMG_OTR_HASH) {
-            gfx++;
-            i++;
+            case G_MARKER:
+            case G_MTX_OTR:
+            case G_SETTIMG_OTR_HASH:
+                gfx++;
+                i++;
+                break;
         }
 
 
