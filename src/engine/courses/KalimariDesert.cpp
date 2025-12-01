@@ -34,7 +34,7 @@ extern "C" {
     #include "collision.h"
     #include "memory.h"
     #include "course.h"
-    extern const char *kalimari_desert_dls[84];
+    extern const char *kalimari_desert_dls[80];
 }
 
 KalimariDesert::KalimariDesert() {
