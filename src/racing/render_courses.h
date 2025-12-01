@@ -10,7 +10,6 @@ s32 func_80290C20(Camera*);
 void parse_course_displaylists(TrackSections* asset);
 void render_course_segments(const char*[], struct UnkStruct_800DC5EC*);
 void func_80291198(void);
-void render_mario_raceway_pipe(void);
 void render_credits(void);
 void course_init(void);
 void render_course(struct UnkStruct_800DC5EC*);

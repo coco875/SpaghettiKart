@@ -34,7 +34,7 @@ extern "C" {
     #include "collision.h"
     #include "memory.h"
     #include "course.h"
-    extern const char *kalimari_desert_dls[];
+    extern const char *kalimari_desert_dls[84];
 }
 
 KalimariDesert::KalimariDesert() {
@@ -115,9 +115,23 @@ void KalimariDesert::Load() {
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_kalimari_desert_addr));
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(kalimari_desert_dls); i++) {
+            InvertTriangleWindingByName(kalimari_desert_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_kalimari_desert_packed_dl_71C8);
+
+        InvertTriangleWindingByName(d_course_kalimari_desert_packed_dl_1ED8);
+        InvertTriangleWindingByName(d_course_kalimari_desert_packed_dl_1B18);
+        InvertTriangleWindingByName(d_course_kalimari_desert_packed_dl_8330);
+        InvertTriangleWindingByName(d_course_kalimari_desert_packed_dl_998);
+        InvertTriangleWindingByName(d_course_kalimari_desert_packed_dl_270);
+    }
 }
 
 void KalimariDesert::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void KalimariDesert::BeginPlay() {

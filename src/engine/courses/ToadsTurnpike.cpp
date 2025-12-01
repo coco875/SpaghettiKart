@@ -38,7 +38,7 @@ extern "C" {
     #include "memory.h"
     #include "code_80086E70.h"
     #include "course.h"
-    extern const char *d_course_toads_turnpike_dl_list[];
+    extern const char *d_course_toads_turnpike_dl_list[81];
     extern s16 currentScreenSection;
     extern s8 gPlayerCount;
 }
@@ -132,9 +132,19 @@ void ToadsTurnpike::Load() {
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_toads_turnpike_addr));
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(d_course_toads_turnpike_dl_list); i++) {
+            InvertTriangleWindingByName(d_course_toads_turnpike_dl_list[i]);
+        }
+        InvertTriangleWindingByName(d_course_toads_turnpike_packed_dl_0);
+        InvertTriangleWindingByName(d_course_toads_turnpike_packed_dl_68);
+        InvertTriangleWindingByName(d_course_toads_turnpike_packed_dl_D8);
+    }
 }
 
 void ToadsTurnpike::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void ToadsTurnpike::BeginPlay() {

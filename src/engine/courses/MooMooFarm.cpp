@@ -34,7 +34,7 @@ extern "C" {
     #include "memory.h"
     #include "code_80086E70.h"
     #include "course.h"
-    extern const char *moo_moo_farm_dls[];
+    extern const char *moo_moo_farm_dls[92];
     extern s16 currentScreenSection;
     extern s8 gPlayerCount;
 }
@@ -117,9 +117,22 @@ void MooMooFarm::Load() {
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_moo_moo_farm_addr));
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(moo_moo_farm_dls); i++) {
+            InvertTriangleWindingByName(moo_moo_farm_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_moo_moo_farm_packed_dl_4DF8);
+        InvertTriangleWindingByName(d_course_moo_moo_farm_packed_dl_5640);
+        InvertTriangleWindingByName(d_course_moo_moo_farm_dl_13FF8);
+        InvertTriangleWindingByName(d_course_moo_moo_farm_packed_dl_5410);
+        InvertTriangleWindingByName(d_course_moo_moo_farm_dl_14060);
+        InvertTriangleWindingByName(d_course_moo_moo_farm_packed_dl_10C0);
+    }
 }
 
 void MooMooFarm::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void MooMooFarm::BeginPlay() {

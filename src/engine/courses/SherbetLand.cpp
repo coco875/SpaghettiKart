@@ -10,6 +10,7 @@
 #include "assets/models/tracks/sherbet_land/sherbet_land_data.h"
 #include "assets/other/tracks/sherbet_land/sherbet_land_data.h"
 #include "engine/objects/Penguin.h"
+#include "resourcebridge.h"
 
 extern "C" {
     #include "main.h"
@@ -32,8 +33,8 @@ extern "C" {
     #include "collision.h"
     #include "memory.h"
     #include "course.h"
-    extern const char *sherbet_land_dls[];
-    extern const char *sherbet_land_dls_2[];
+    extern const char *sherbet_land_dls[72];
+    extern const char *sherbet_land_dls_2[72];
 }
 
 SherbetLand::SherbetLand() {
@@ -122,9 +123,19 @@ void SherbetLand::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_sherbet_land_packed_dl_1EB8, 180, 255, 255, 255);
     // d_course_sherbet_land_packed_dl_2308
     find_vtx_and_set_colours((Gfx*) d_course_sherbet_land_packed_dl_2308, 150, 255, 255, 255);
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(sherbet_land_dls); i++) {
+            InvertTriangleWindingByName(sherbet_land_dls[i]);
+        }
+        for (size_t i = 0; i < ARRAY_COUNT(sherbet_land_dls_2); i++) {
+            InvertTriangleWindingByName(sherbet_land_dls_2[i]);
+        }
+    }
 }
 
 void SherbetLand::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 f32 SherbetLand::GetWaterLevel(FVector pos, Collision* collision) {

@@ -33,7 +33,7 @@ extern "C" {
     #include "memory.h"
     #include "courses/staff_ghost_data.h"
     #include "course.h"
-    extern const char *royal_raceway_dls[];
+    extern const char *royal_raceway_dls[132];
 }
 
 RoyalRaceway::RoyalRaceway() {
@@ -115,9 +115,20 @@ void RoyalRaceway::Load() {
 
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_royal_raceway_addr));
     func_80295C6C();
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(royal_raceway_dls); i++) {
+            InvertTriangleWindingByName(royal_raceway_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_royal_raceway_packed_dl_B030);
+        InvertTriangleWindingByName(d_course_royal_raceway_packed_dl_A648);
+        InvertTriangleWindingByName(d_course_royal_raceway_packed_dl_11A8);
+        InvertTriangleWindingByName(d_course_royal_raceway_packed_dl_8A0);
+    }
 }
 
 void RoyalRaceway::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void RoyalRaceway::BeginPlay() {

@@ -36,7 +36,7 @@ extern "C" {
     #include "update_objects.h"
     #include "course_offsets.h"
     #include "course.h"
-    extern const char *d_course_frappe_snowland_dl_list[];
+    extern const char *d_course_frappe_snowland_dl_list[68];
     extern s8 gPlayerCount;
 }
 
@@ -119,9 +119,18 @@ void FrappeSnowland::Load() {
 
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_frappe_snowland_addr));
     func_80295C6C();
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(d_course_frappe_snowland_dl_list); i++) {
+            InvertTriangleWindingByName(d_course_frappe_snowland_dl_list[i]);
+        }
+
+        InvertTriangleWindingByName(d_course_frappe_snowland_packed_dl_65E0);
+    }
 }
 
 void FrappeSnowland::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void FrappeSnowland::BeginPlay() {

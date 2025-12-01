@@ -39,7 +39,7 @@ extern "C" {
 #include "collision.h"
 #include "memory.h"
 #include "course.h"
-extern const char *banshee_boardwalk_dls[];
+extern const char *banshee_boardwalk_dls[100];
 }
 
 BansheeBoardwalk::BansheeBoardwalk() {
@@ -127,9 +127,32 @@ void BansheeBoardwalk::Load() {
     parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections));
     func_80295C6C();
     find_vtx_and_set_colours((Gfx*) d_course_banshee_boardwalk_packed_dl_878, 128, 0, 0, 0);
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(banshee_boardwalk_dls); i++) {
+            InvertTriangleWindingByName(banshee_boardwalk_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_7228);
+
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_5CD0);
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_4E60);
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_69B0);
+
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_580);
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_60);
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_540);
+
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_6310);
+
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_dl_B278);
+
+        // Water DLs
+        InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_878);
+    }
 }
 
 void BansheeBoardwalk::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void BansheeBoardwalk::BeginPlay() {

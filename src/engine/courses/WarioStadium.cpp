@@ -34,7 +34,7 @@ extern "C" {
 #include "memory.h"
 #include "skybox_and_splitscreen.h"
 #include "course.h"
-extern const char* wario_stadium_dls[];
+extern const char* wario_stadium_dls[108];
 extern s16 currentScreenSection;
 }
 
@@ -138,9 +138,20 @@ void WarioStadium::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_wario_stadium_packed_dl_DD0, 100, 255, 255, 255);
     // d_course_wario_stadium_packed_dl_E48
     find_vtx_and_set_colours((Gfx*) d_course_wario_stadium_packed_dl_E48, 100, 255, 255, 255);
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(wario_stadium_dls); i++) {
+            InvertTriangleWindingByName(wario_stadium_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A0C8);
+        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A228);
+        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A88);
+        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_EC0);
+    }
 }
 
 void WarioStadium::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void WarioStadium::BeginPlay() {

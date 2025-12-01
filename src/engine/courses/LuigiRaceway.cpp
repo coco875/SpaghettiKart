@@ -39,7 +39,7 @@ extern "C" {
 #include "framebuffer_effects.h"
 #include "skybox_and_splitscreen.h"
 #include "course.h"
-extern const char* luigi_raceway_dls[];
+extern const char* luigi_raceway_dls[120];
 extern s16 currentScreenSection;
 }
 
@@ -122,9 +122,19 @@ void LuigiRaceway::Load() {
     parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_luigi_raceway_addr));
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(luigi_raceway_dls); i++) {
+            InvertTriangleWindingByName(luigi_raceway_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_luigi_raceway_packed_dl_9EC0);
+        InvertTriangleWindingByName(d_course_luigi_raceway_packed_dl_E0);
+        InvertTriangleWindingByName(d_course_luigi_raceway_packed_dl_68);
+    }
 }
 
 void LuigiRaceway::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void LuigiRaceway::BeginPlay() {

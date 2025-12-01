@@ -29,7 +29,6 @@ extern "C" {
     #include "actors.h"
     #include "collision.h"
     #include "memory.h"
-    extern const char *skyscraper_dls[];
     extern s16 currentScreenSection;
 }
 
@@ -114,6 +113,13 @@ void Skyscraper::Load() {
     // d_course_skyscraper_packed_dl_258
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_skyscraper_packed_dl_258, 1);
     func_80295C6C();
+    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_FE8);
+    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_C60);
+    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_B70);
+    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_6B8);
+    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_570);
+    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_10C8);
+    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_258);
 }
 
 void Skyscraper::UnLoad() {

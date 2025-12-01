@@ -30,7 +30,6 @@ extern "C" {
     #include "actors.h"
     #include "collision.h"
     #include "memory.h"
-    extern const char *double_deck_dls[];
     extern s16 currentScreenSection;
 }
 
@@ -112,6 +111,9 @@ void DoubleDeck::Load() {
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_double_deck_packed_dl_738, 1);
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
+    if (gIsMirrorMode != 0) {
+        InvertTriangleWindingByName(d_course_double_deck_packed_dl_738);
+    }
 }
 
 void DoubleDeck::UnLoad() {

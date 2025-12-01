@@ -35,7 +35,7 @@ extern "C" {
     #include "memory.h"
     #include "courses/staff_ghost_data.h"
     #include "course.h"
-    extern const char *mario_raceway_dls[];
+    extern const char *mario_raceway_dls[68];
 }
 
 MarioRaceway::MarioRaceway() {
@@ -133,9 +133,29 @@ void MarioRaceway::Load() {
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_mario_raceway_addr));
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(mario_raceway_dls); i++) {
+            InvertTriangleWindingByName(mario_raceway_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_1140);
+
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_3508);
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_3240);
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_14A0);
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_450);
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_240);
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_E0);
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_160);
+
+        // pipe collision mesh
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_8E8);
+        InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_2D68);
+    }
 }
 
 void MarioRaceway::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void MarioRaceway::BeginPlay() {
@@ -220,6 +240,20 @@ void MarioRaceway::SetStaffGhost() {
     }
     D_80162DC4 = d_mario_raceway_staff_ghost;
     D_80162DE4 = 0;
+}
+
+void render_mario_raceway_pipe(void) {
+    if (gScreenModeSelection == SCREEN_MODE_1P) {
+        // d_course_mario_raceway_packed_dl_8E8
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_8E8);
+    } else {
+        if (CVarGetInteger("gDisableLod", 1) == true) {
+            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_8E8);
+            return;
+        }
+        // d_course_mario_raceway_packed_dl_2D68
+        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_2D68);
+    }
 }
 
 void MarioRaceway::Render(struct UnkStruct_800DC5EC* arg0) {

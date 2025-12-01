@@ -31,7 +31,6 @@ extern "C" {
 #include "collision.h"
 #include "memory.h"
 #include "course_offsets.h"
-extern const char* block_fort_dls[];
 extern s16 currentScreenSection;
 }
 
@@ -112,6 +111,9 @@ void BlockFort::Load() {
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_block_fort_packed_dl_15C0, 1);
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
+    if (gIsMirrorMode != 0) {
+        InvertTriangleWindingByName(d_course_block_fort_packed_dl_15C0);
+    }
 }
 
 void BlockFort::UnLoad() {

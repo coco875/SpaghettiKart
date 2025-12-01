@@ -35,7 +35,8 @@ extern "C" {
     #include "code_8003DC40.h"
     #include "memory.h"
     #include "course.h"
-    extern const char *koopa_troopa_beach_dls[];
+    extern const char *d_course_koopa_troopa_beach_dl_list1[148];
+    extern const char *koopa_troopa_beach_dls2[148];
     extern s8 gPlayerCount;
 }
 
@@ -125,9 +126,23 @@ void KoopaTroopaBeach::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_A540, 150, 255, 255, 255);
     find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_9E70, 150, 255, 255, 255);
     find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_358, 150, 255, 255, 255);
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(d_course_koopa_troopa_beach_dl_list1); i++) {
+            InvertTriangleWindingByName(d_course_koopa_troopa_beach_dl_list1[i]);
+        }
+        for (size_t i = 0; i < ARRAY_COUNT(koopa_troopa_beach_dls2); i++) {
+            InvertTriangleWindingByName(koopa_troopa_beach_dls2[i]);
+        }
+        InvertTriangleWindingByName(d_course_koopa_troopa_beach_packed_dl_9CC0);
+        InvertTriangleWindingByName(d_course_koopa_troopa_beach_packed_dl_9688);
+        InvertTriangleWindingByName(d_course_koopa_troopa_beach_packed_dl_2C0);
+        InvertTriangleWindingByName(d_course_koopa_troopa_beach_packed_dl_9E70);
+    }
 }
 
 void KoopaTroopaBeach::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void KoopaTroopaBeach::BeginPlay() {

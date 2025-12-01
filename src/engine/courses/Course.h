@@ -67,6 +67,11 @@ typedef struct MinimapProps {
 void ResizeMinimap(MinimapProps* minimap);
 void ReverseGfx(Gfx* gfx);
 
+void InvertTriangleWinding(Gfx* gfx);
+void InvertTriangleWindingByName(const char* name);
+void RestoreTriangleWinding();
+bool IsTriangleWindingInverted();
+
 typedef struct Properties {
     char Name[128];
     char DebugName[128];

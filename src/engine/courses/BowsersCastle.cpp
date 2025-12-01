@@ -35,7 +35,7 @@ extern "C" {
     #include "code_8003DC40.h"
     #include "memory.h"
     #include "course.h"
-    extern const char *bowsers_castle_dls[];
+    extern const char *bowsers_castle_dls[108];
 }
 
 BowsersCastle::BowsersCastle() {
@@ -120,9 +120,21 @@ void BowsersCastle::Load() {
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_bowsers_castle_addr));
     func_80295C6C();
     find_vtx_and_set_colours((Gfx*) d_course_bowsers_castle_packed_dl_1350, 0x32, 0, 0, 0);
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(bowsers_castle_dls); i++) {
+            InvertTriangleWindingByName(bowsers_castle_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_bowsers_castle_packed_dl_6A80);
+
+        InvertTriangleWindingByName(d_course_bowsers_castle_packed_dl_248);
+
+        InvertTriangleWindingByName(d_course_bowsers_castle_dl_9228);
+    }
 }
 
 void BowsersCastle::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void BowsersCastle::BeginPlay() {

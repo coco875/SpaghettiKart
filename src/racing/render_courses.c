@@ -200,20 +200,6 @@ void func_80291198(void) {
     gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_1140); //
 }
 
-void render_mario_raceway_pipe(void) {
-    if (gScreenModeSelection == SCREEN_MODE_1P) {
-        // d_course_mario_raceway_packed_dl_8E8
-        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_8E8);
-    } else {
-        if (CVarGetInteger("gDisableLod", 1) == true) {
-            gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_8E8);
-            return;
-        }
-        // d_course_mario_raceway_packed_dl_2D68
-        gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_2D68);
-    }
-}
-
 void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
     UNUSED s32 pad;
     Player* player = arg0->player;

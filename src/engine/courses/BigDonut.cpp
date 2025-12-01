@@ -29,7 +29,6 @@ extern "C" {
 #include "actors.h"
 #include "collision.h"
 #include "memory.h"
-extern const char* big_donut_dls[];
 extern s16 currentScreenSection;
 }
 
@@ -117,6 +116,13 @@ void BigDonut::Load() {
     // d_course_big_donut_packed_dl_230
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_big_donut_packed_dl_230, 6);
     func_80295C6C();
+    if (gIsMirrorMode != 0) {
+        InvertTriangleWindingByName(d_course_big_donut_packed_dl_DE8);
+        InvertTriangleWindingByName(d_course_big_donut_packed_dl_450);
+        InvertTriangleWindingByName(d_course_big_donut_packed_dl_AC0);
+        InvertTriangleWindingByName(d_course_big_donut_packed_dl_D20);
+        InvertTriangleWindingByName(d_course_big_donut_packed_dl_230);
+    }
 }
 
 void BigDonut::UnLoad() {

@@ -37,7 +37,7 @@ extern "C" {
     #include "memory.h"
     #include "sounds.h"
     #include "course.h"
-    extern const char *d_course_dks_jungle_parkway_unknown_dl_list[];
+    extern const char *d_course_dks_jungle_parkway_unknown_dl_list[105];
     extern s16 currentScreenSection;
 }
 
@@ -121,9 +121,23 @@ void DKJungle::Load() {
     func_80295C6C();
     // d_course_dks_jungle_parkway_packed_dl_3FA8
     find_vtx_and_set_colours((Gfx*) d_course_dks_jungle_parkway_packed_dl_3FA8, 120, 255, 255, 255);
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(d_course_dks_jungle_parkway_unknown_dl_list); i++) {
+            InvertTriangleWindingByName(d_course_dks_jungle_parkway_unknown_dl_list[i]);
+        }
+        InvertTriangleWindingByName(d_course_dks_jungle_parkway_packed_dl_92D8);
+
+        InvertTriangleWindingByName(d_course_dks_jungle_parkway_packed_dl_3E40);
+        InvertTriangleWindingByName(d_course_dks_jungle_parkway_packed_dl_3EB0);
+        InvertTriangleWindingByName(d_course_dks_jungle_parkway_packed_dl_3DD0);
+        InvertTriangleWindingByName(d_course_dks_jungle_parkway_packed_dl_36A8);
+        InvertTriangleWindingByName(d_course_dks_jungle_parkway_packed_dl_3F30);
+    }
 }
 
 void DKJungle::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 f32 DKJungle::GetWaterLevel(FVector pos, Collision* collision) {

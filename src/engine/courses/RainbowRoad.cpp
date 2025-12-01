@@ -32,7 +32,7 @@ extern "C" {
     #include "collision.h"
     #include "memory.h"
     #include "course.h"
-    extern const char *rainbow_road_dls[];
+    extern const char *rainbow_road_dls[48];
 }
 
 RainbowRoad::RainbowRoad() {
@@ -124,9 +124,16 @@ void RainbowRoad::Load() {
         // d_course_rainbow_road_packed_dl_1FB8
         find_vtx_and_set_colours((Gfx*) d_course_rainbow_road_packed_dl_1FB8, 150, 255, 255, 255);
     }
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(rainbow_road_dls); i++) {
+            InvertTriangleWindingByName(rainbow_road_dls[i]);
+        }
+    }
 }
 
 void RainbowRoad::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void RainbowRoad::BeginPlay() {

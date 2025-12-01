@@ -35,7 +35,7 @@ extern "C" {
     #include "memory.h"
     #include "course_offsets.h"
     #include "course.h"
-    extern const char *choco_mountain_dls[];
+    extern const char *choco_mountain_dls[96];
 }
 
 ChocoMountain::ChocoMountain() {
@@ -142,9 +142,25 @@ void ChocoMountain::Load() {
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_choco_mountain_addr));
     func_802B5CAC(0x238E, 0x31C7, D_8015F590);
     func_80295C6C();
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(choco_mountain_dls); i++) {
+            InvertTriangleWindingByName(choco_mountain_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_4608);
+
+        InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_5A70);
+        InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_828);
+        InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_8E0);
+        InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_5868);
+        InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_448);
+        InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_5D8);
+        InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_718);
+    }
 }
 
 void ChocoMountain::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void ChocoMountain::BeginPlay() {

@@ -34,7 +34,7 @@ extern "C" {
     #include "collision.h"
     #include "memory.h"
     #include "course.h"
-    extern const char *d_course_yoshi_valley_dl_list[];
+    extern const char *d_course_yoshi_valley_dl_list[124];
 }
 
 YoshiValley::YoshiValley() {
@@ -115,9 +115,16 @@ void YoshiValley::Load() {
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_yoshi_valley_addr));
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
+
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(d_course_yoshi_valley_dl_list); i++) {
+            InvertTriangleWindingByName(d_course_yoshi_valley_dl_list[i]);
+        }
+    }
 }
 
 void YoshiValley::UnLoad() {
+    RestoreTriangleWinding();
 }
 
 void YoshiValley::BeginPlay() {
