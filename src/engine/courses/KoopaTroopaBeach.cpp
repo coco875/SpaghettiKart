@@ -292,7 +292,6 @@ void KoopaTroopaBeach::ScrollingTextures() {
 }
 
 void KoopaTroopaBeach::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) {
-    Mat4 matrix;
     Vec3f vector;
 
     gDPPipeSync(gDisplayListHead++);
@@ -318,13 +317,6 @@ void KoopaTroopaBeach::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pat
     vector[0] = 0.0f;
     vector[1] = Props.WaterLevel;
     vector[2] = 0.0f;
-    mtxf_translate(matrix, vector);
-    if (gIsMirrorMode != 0) {
-        matrix[0][0] = -1.0f;
-        // matrix[1][1] = -1.0f;
-        // matrix[2][2] = -1.0f;
-    }
-    render_set_position(matrix, 0);
 
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_XLU_INTER, G_RM_NOOP2);
     gDPSetBlendMask(gDisplayListHead++, 0xFF);

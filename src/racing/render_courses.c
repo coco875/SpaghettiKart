@@ -244,6 +244,11 @@ void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
     FrameInterpolation_RecordOpenChild("track_water", playerId);
 
     mtxf_identity(matrix);
+    if (gIsMirrorMode != 0) {
+        matrix[0][0] = -1.0f;
+        // matrix[1][1] = -1.0f;
+        // matrix[2][2] = -1.0f;
+    }
     render_set_position(matrix, 0);
 
     CM_DrawWater(arg0, pathCounter, cameraRot, playerDirection);

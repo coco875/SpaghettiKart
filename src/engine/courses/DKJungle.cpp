@@ -330,21 +330,12 @@ void DKJungle::ScrollingTextures() {
 }
 
 void DKJungle::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) {
-    Mat4 matrix;
     gDPPipeSync(gDisplayListHead++);
     gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
     gDPSetBlendMask(gDisplayListHead++, 0xFF);
     gDPSetTextureFilter(gDisplayListHead++, G_TF_BILERP);
     gDPSetTexturePersp(gDisplayListHead++, G_TP_PERSP);
-
-    mtxf_identity(matrix);
-    if (gIsMirrorMode != 0) {
-        matrix[0][0] = -1.0f;
-        // matrix[1][1] = -1.0f;
-        // matrix[2][2] = -1.0f;
-    }
-    render_set_position(matrix, 0);
 
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
     gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_XLU_INTER, G_RM_NOOP2);

@@ -307,7 +307,6 @@ void WarioStadium::SomeCollisionThing(Player* player, Vec3f arg1, Vec3f arg2, Ve
 
 void WarioStadium::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter, uint16_t cameraRot,
                              uint16_t playerDirection) {
-    Mat4 matrix;
 
     gDPPipeSync(gDisplayListHead++);
     gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
@@ -317,14 +316,6 @@ void WarioStadium::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCou
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA, G_CC_MODULATEIA);
     gDPSetTextureFilter(gDisplayListHead++, G_TF_BILERP);
     gDPSetTexturePersp(gDisplayListHead++, G_TP_PERSP);
-
-    mtxf_identity(matrix);
-    if (gIsMirrorMode != 0) {
-        matrix[0][0] = -1.0f;
-        // matrix[1][1] = -1.0f;
-        // matrix[2][2] = -1.0f;
-    }
-    render_set_position(matrix, 0);
 
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
     gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);

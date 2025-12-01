@@ -209,16 +209,8 @@ void RainbowRoad::Waypoints(Player* player, int8_t playerId) {
 }
 
 void RainbowRoad::DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) {
-    Mat4 matrix;
 
     gDPPipeSync(gDisplayListHead++);
-    mtxf_identity(matrix);
-    if (gIsMirrorMode != 0) {
-        matrix[0][0] = -1.0f;
-        // matrix[1][1] = -1.0f;
-        // matrix[2][2] = -1.0f;
-    }
-    render_set_position(matrix, 0);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
     render_course_segments(rainbow_road_dls, screen);
     gSPSetGeometryMode(gDisplayListHead++, G_CULL_BACK);
