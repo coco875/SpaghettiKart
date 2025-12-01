@@ -1650,9 +1650,12 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
         (struct_D_802F1F80*) &gPlayerPalettesList[D_801651D0[screenId][playerId]][screenId][playerId * 0x100];
 #endif
     if ((screenId == 0) || (screenId == 1)) {
-        // gross hack to match original behavior
-        load_kart_texture(player, playerId, screenId, screenId, 0);
         sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
+        // gross hack to match original behavior
+        if (sKartTexture == NULL) {
+            load_kart_texture(player, playerId, screenId, screenId, 1);
+            sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
+        }
     } else {
         sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId - 1][playerId - 4].unk_00;
     }
