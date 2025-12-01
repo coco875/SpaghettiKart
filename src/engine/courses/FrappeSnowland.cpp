@@ -117,9 +117,6 @@ FrappeSnowland::FrappeSnowland() {
 void FrappeSnowland::Load() {
     Course::Load();
 
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_frappe_snowland_addr));
-    func_80295C6C();
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(d_course_frappe_snowland_dl_list); i++) {
             InvertTriangleWindingByName(d_course_frappe_snowland_dl_list[i]);
@@ -127,6 +124,8 @@ void FrappeSnowland::Load() {
 
         InvertTriangleWindingByName(d_course_frappe_snowland_packed_dl_65E0);
     }
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_frappe_snowland_addr));
+    func_80295C6C();
 }
 
 void FrappeSnowland::UnLoad() {

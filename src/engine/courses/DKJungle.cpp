@@ -116,12 +116,6 @@ DKJungle::DKJungle() {
 
 void DKJungle::Load() {
     Course::Load();
-
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_dks_jungle_parkway_addr));
-    func_80295C6C();
-    // d_course_dks_jungle_parkway_packed_dl_3FA8
-    find_vtx_and_set_colours((Gfx*) d_course_dks_jungle_parkway_packed_dl_3FA8, 120, 255, 255, 255);
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(d_course_dks_jungle_parkway_unknown_dl_list); i++) {
             InvertTriangleWindingByName(d_course_dks_jungle_parkway_unknown_dl_list[i]);
@@ -134,6 +128,10 @@ void DKJungle::Load() {
         InvertTriangleWindingByName(d_course_dks_jungle_parkway_packed_dl_36A8);
         InvertTriangleWindingByName(d_course_dks_jungle_parkway_packed_dl_3F30);
     }
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_dks_jungle_parkway_addr));
+    func_80295C6C();
+    // d_course_dks_jungle_parkway_packed_dl_3FA8
+    find_vtx_and_set_colours((Gfx*) d_course_dks_jungle_parkway_packed_dl_3FA8, 120, 255, 255, 255);
 }
 
 void DKJungle::UnLoad() {

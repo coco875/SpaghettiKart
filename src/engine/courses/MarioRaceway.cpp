@@ -115,25 +115,7 @@ MarioRaceway::MarioRaceway() {
 void MarioRaceway::Load() {
     Course::Load();
 
-    generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_1140);
-    
-    // Generate pipe collision mesh
-    if (gScreenModeSelection == SCREEN_MODE_1P) {
-        // d_course_mario_raceway_packed_dl_8E8
-        generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_8E8);
-    } else {
-        if (CVarGetInteger("gDisableLod", 1) == true) {
-            generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_8E8);
-        } else {
-            // d_course_mario_raceway_packed_dl_2D68
-            generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_2D68);
-        }
-    }
-
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_mario_raceway_addr));
-    func_80295C6C();
-    Props.WaterLevel = gCourseMinY - 10.0f;
-
+    // Invert winding in mirror mode before generating collision meshes
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(mario_raceway_dls); i++) {
             InvertTriangleWindingByName(mario_raceway_dls[i]);
@@ -152,6 +134,25 @@ void MarioRaceway::Load() {
         InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_8E8);
         InvertTriangleWindingByName(d_course_mario_raceway_packed_dl_2D68);
     }
+
+    generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_1140);
+    
+    // Generate pipe collision mesh
+    if (gScreenModeSelection == SCREEN_MODE_1P) {
+        // d_course_mario_raceway_packed_dl_8E8
+        generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_8E8);
+    } else {
+        if (CVarGetInteger("gDisableLod", 1) == true) {
+            generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_8E8);
+        } else {
+            // d_course_mario_raceway_packed_dl_2D68
+            generate_collision_mesh_with_defaults((Gfx*) d_course_mario_raceway_packed_dl_2D68);
+        }
+    }
+
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_mario_raceway_addr));
+    func_80295C6C();
+    Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
 void MarioRaceway::UnLoad() {

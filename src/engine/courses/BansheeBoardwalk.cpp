@@ -120,14 +120,6 @@ BansheeBoardwalk::BansheeBoardwalk() {
 void BansheeBoardwalk::Load() {
     Course::Load();
 
-    D_800DC5BC = 1;
-    D_801625EC = 0;
-    D_801625F4 = 0;
-    D_801625F0 = 0;
-    parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections));
-    func_80295C6C();
-    find_vtx_and_set_colours((Gfx*) d_course_banshee_boardwalk_packed_dl_878, 128, 0, 0, 0);
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(banshee_boardwalk_dls); i++) {
             InvertTriangleWindingByName(banshee_boardwalk_dls[i]);
@@ -146,9 +138,17 @@ void BansheeBoardwalk::Load() {
 
         InvertTriangleWindingByName(d_course_banshee_boardwalk_dl_B278);
 
-        // Water DLs
+        // transparent DLs
         InvertTriangleWindingByName(d_course_banshee_boardwalk_packed_dl_878);
     }
+
+    D_800DC5BC = 1;
+    D_801625EC = 0;
+    D_801625F4 = 0;
+    D_801625F0 = 0;
+    parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_banshee_boardwalk_track_sections));
+    func_80295C6C();
+    find_vtx_and_set_colours((Gfx*) d_course_banshee_boardwalk_packed_dl_878, 128, 0, 0, 0);
 }
 
 void BansheeBoardwalk::UnLoad() {

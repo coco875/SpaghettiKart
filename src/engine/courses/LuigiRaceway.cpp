@@ -118,11 +118,6 @@ LuigiRaceway::LuigiRaceway() {
 
 void LuigiRaceway::Load() {
     Course::Load();
-
-    parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_luigi_raceway_addr));
-    func_80295C6C();
-    Props.WaterLevel = gCourseMinY - 10.0f;
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(luigi_raceway_dls); i++) {
             InvertTriangleWindingByName(luigi_raceway_dls[i]);
@@ -131,6 +126,9 @@ void LuigiRaceway::Load() {
         InvertTriangleWindingByName(d_course_luigi_raceway_packed_dl_E0);
         InvertTriangleWindingByName(d_course_luigi_raceway_packed_dl_68);
     }
+    parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_luigi_raceway_addr));
+    func_80295C6C();
+    Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
 void LuigiRaceway::UnLoad() {

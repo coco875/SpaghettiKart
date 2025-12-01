@@ -598,6 +598,17 @@ TrackSections harbour_surfaces[] = {
 void Harbour::Load() {
     Course::Load(road_map_001_mesh_vtx_0, NULL);
 
+    if (gIsMirrorMode != 0) {
+        InvertTriangleWinding(ground_map_mesh);
+        InvertTriangleWinding(road_map_001_mesh);
+        InvertTriangleWinding(bush_map_004_mesh);
+        InvertTriangleWinding(castle_map_002_mesh);
+        InvertTriangleWinding(statue_map_005_mesh);
+        InvertTriangleWinding(trees_map_003_mesh);
+        InvertTriangleWinding(water_water1_mesh);
+        InvertTriangleWinding(moon_moon_mesh);
+    }
+
     // The light gets overridden in hm_intro, reset to normal
     ground_f3d_material_013_lights = gdSPDefLights1(
         0x7F, 0x7F, 0x7F,

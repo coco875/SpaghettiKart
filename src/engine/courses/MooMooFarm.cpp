@@ -113,11 +113,6 @@ MooMooFarm::MooMooFarm() {
 
 void MooMooFarm::Load() {
     Course::Load();
-
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_moo_moo_farm_addr));
-    func_80295C6C();
-    Props.WaterLevel = gCourseMinY - 10.0f;
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(moo_moo_farm_dls); i++) {
             InvertTriangleWindingByName(moo_moo_farm_dls[i]);
@@ -129,6 +124,9 @@ void MooMooFarm::Load() {
         InvertTriangleWindingByName(d_course_moo_moo_farm_dl_14060);
         InvertTriangleWindingByName(d_course_moo_moo_farm_packed_dl_10C0);
     }
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_moo_moo_farm_addr));
+    func_80295C6C();
+    Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
 void MooMooFarm::UnLoad() {

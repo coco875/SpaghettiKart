@@ -116,14 +116,6 @@ SherbetLand::SherbetLand() {
 
 void SherbetLand::Load() {
     Course::Load();
-
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_sherbet_land_addr));
-    func_80295C6C();
-    // d_course_sherbet_land_packed_dl_1EB8
-    find_vtx_and_set_colours((Gfx*) d_course_sherbet_land_packed_dl_1EB8, 180, 255, 255, 255);
-    // d_course_sherbet_land_packed_dl_2308
-    find_vtx_and_set_colours((Gfx*) d_course_sherbet_land_packed_dl_2308, 150, 255, 255, 255);
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(sherbet_land_dls); i++) {
             InvertTriangleWindingByName(sherbet_land_dls[i]);
@@ -132,6 +124,12 @@ void SherbetLand::Load() {
             InvertTriangleWindingByName(sherbet_land_dls_2[i]);
         }
     }
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_sherbet_land_addr));
+    func_80295C6C();
+    // d_course_sherbet_land_packed_dl_1EB8
+    find_vtx_and_set_colours((Gfx*) d_course_sherbet_land_packed_dl_1EB8, 180, 255, 255, 255);
+    // d_course_sherbet_land_packed_dl_2308
+    find_vtx_and_set_colours((Gfx*) d_course_sherbet_land_packed_dl_2308, 150, 255, 255, 255);
 }
 
 void SherbetLand::UnLoad() {

@@ -107,19 +107,20 @@ Skyscraper::Skyscraper() {
 
 void Skyscraper::Load() {
     Course::Load();
-
+    if (gIsMirrorMode != 0) {
+        InvertTriangleWindingByName(d_course_skyscraper_packed_dl_FE8);
+        InvertTriangleWindingByName(d_course_skyscraper_packed_dl_C60);
+        InvertTriangleWindingByName(d_course_skyscraper_packed_dl_B70);
+        InvertTriangleWindingByName(d_course_skyscraper_packed_dl_6B8);
+        InvertTriangleWindingByName(d_course_skyscraper_packed_dl_570);
+        InvertTriangleWindingByName(d_course_skyscraper_packed_dl_10C8);
+        InvertTriangleWindingByName(d_course_skyscraper_packed_dl_258);
+    }
     // d_course_skyscraper_packed_dl_1110
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_skyscraper_packed_dl_1110, 1);
     // d_course_skyscraper_packed_dl_258
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_skyscraper_packed_dl_258, 1);
     func_80295C6C();
-    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_FE8);
-    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_C60);
-    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_B70);
-    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_6B8);
-    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_570);
-    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_10C8);
-    InvertTriangleWindingByName(d_course_skyscraper_packed_dl_258);
 }
 
 void Skyscraper::UnLoad() {

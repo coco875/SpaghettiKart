@@ -116,11 +116,6 @@ BowsersCastle::BowsersCastle() {
 
 void BowsersCastle::Load() {
     Course::Load();
-
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_bowsers_castle_addr));
-    func_80295C6C();
-    find_vtx_and_set_colours((Gfx*) d_course_bowsers_castle_packed_dl_1350, 0x32, 0, 0, 0);
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(bowsers_castle_dls); i++) {
             InvertTriangleWindingByName(bowsers_castle_dls[i]);
@@ -131,6 +126,10 @@ void BowsersCastle::Load() {
 
         InvertTriangleWindingByName(d_course_bowsers_castle_dl_9228);
     }
+
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_bowsers_castle_addr));
+    func_80295C6C();
+    find_vtx_and_set_colours((Gfx*) d_course_bowsers_castle_packed_dl_1350, 0x32, 0, 0, 0);
 }
 
 void BowsersCastle::UnLoad() {

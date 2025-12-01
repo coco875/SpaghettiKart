@@ -124,15 +124,6 @@ ToadsTurnpike::ToadsTurnpike() {
 void ToadsTurnpike::Load() {
     Course::Load();
 
-    D_801625EC = 43;
-    D_801625F4 = 13;
-    D_801625F0 = 4;
-    D_802B87B0 = 993;
-    D_802B87B4 = 1000;
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_toads_turnpike_addr));
-    func_80295C6C();
-    Props.WaterLevel = gCourseMinY - 10.0f;
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(d_course_toads_turnpike_dl_list); i++) {
             InvertTriangleWindingByName(d_course_toads_turnpike_dl_list[i]);
@@ -141,6 +132,15 @@ void ToadsTurnpike::Load() {
         InvertTriangleWindingByName(d_course_toads_turnpike_packed_dl_68);
         InvertTriangleWindingByName(d_course_toads_turnpike_packed_dl_D8);
     }
+
+    D_801625EC = 43;
+    D_801625F4 = 13;
+    D_801625F0 = 4;
+    D_802B87B0 = 993;
+    D_802B87B4 = 1000;
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_toads_turnpike_addr));
+    func_80295C6C();
+    Props.WaterLevel = gCourseMinY - 10.0f;
 }
 
 void ToadsTurnpike::UnLoad() {

@@ -110,7 +110,11 @@ RainbowRoad::RainbowRoad() {
 
 void RainbowRoad::Load() {
     Course::Load();
-
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(rainbow_road_dls); i++) {
+            InvertTriangleWindingByName(rainbow_road_dls[i]);
+        }
+    }
     D_800DC5C8 = 1;
     parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_rainbow_road_addr));
     func_80295C6C();
@@ -123,12 +127,6 @@ void RainbowRoad::Load() {
     if (gGamestate != CREDITS_SEQUENCE) {
         // d_course_rainbow_road_packed_dl_1FB8
         find_vtx_and_set_colours((Gfx*) d_course_rainbow_road_packed_dl_1FB8, 150, 255, 255, 255);
-    }
-
-    if (gIsMirrorMode != 0) {
-        for (size_t i = 0; i < ARRAY_COUNT(rainbow_road_dls); i++) {
-            InvertTriangleWindingByName(rainbow_road_dls[i]);
-        }
     }
 }
 

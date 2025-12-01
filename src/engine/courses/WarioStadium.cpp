@@ -119,6 +119,16 @@ WarioStadium::WarioStadium() {
 void WarioStadium::Load() {
     Course::Load();
 
+    if (gIsMirrorMode != 0) {
+        for (size_t i = 0; i < ARRAY_COUNT(wario_stadium_dls); i++) {
+            InvertTriangleWindingByName(wario_stadium_dls[i]);
+        }
+        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A0C8);
+        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A228);
+        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A88);
+        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_EC0);
+    }
+
     parse_course_displaylists((TrackSections*) LOAD_ASSET_RAW(d_course_wario_stadium_addr));
     func_80295C6C();
     Props.WaterLevel = gCourseMinY - 10.0f;
@@ -138,16 +148,6 @@ void WarioStadium::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_wario_stadium_packed_dl_DD0, 100, 255, 255, 255);
     // d_course_wario_stadium_packed_dl_E48
     find_vtx_and_set_colours((Gfx*) d_course_wario_stadium_packed_dl_E48, 100, 255, 255, 255);
-
-    if (gIsMirrorMode != 0) {
-        for (size_t i = 0; i < ARRAY_COUNT(wario_stadium_dls); i++) {
-            InvertTriangleWindingByName(wario_stadium_dls[i]);
-        }
-        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A0C8);
-        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A228);
-        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_A88);
-        InvertTriangleWindingByName(d_course_wario_stadium_packed_dl_EC0);
-    }
 }
 
 void WarioStadium::UnLoad() {

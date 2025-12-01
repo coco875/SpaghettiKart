@@ -137,6 +137,10 @@ TestCourse::TestCourse() {
 void TestCourse::Load() {
     Course::Load(mario_Plane_001_mesh_vtx_1, NULL);
 
+    if (gIsMirrorMode != 0) {
+        InvertTriangleWinding(mario_Plane_001_mesh);
+    }
+
     generate_collision_mesh_with_defaults(mario_Plane_001_mesh);
 
     parse_course_displaylists((TrackSections*)test_course_addr);

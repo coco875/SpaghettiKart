@@ -112,10 +112,6 @@ RoyalRaceway::RoyalRaceway() {
 
 void RoyalRaceway::Load() {
     Course::Load();
-
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_royal_raceway_addr));
-    func_80295C6C();
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(royal_raceway_dls); i++) {
             InvertTriangleWindingByName(royal_raceway_dls[i]);
@@ -125,6 +121,8 @@ void RoyalRaceway::Load() {
         InvertTriangleWindingByName(d_course_royal_raceway_packed_dl_11A8);
         InvertTriangleWindingByName(d_course_royal_raceway_packed_dl_8A0);
     }
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_royal_raceway_addr));
+    func_80295C6C();
 }
 
 void RoyalRaceway::UnLoad() {

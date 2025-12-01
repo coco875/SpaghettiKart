@@ -38,9 +38,10 @@ extern "C" void add_triangle_to_collision_mesh(Vtx* vtx1, Vtx* vtx2, Vtx* vtx3, 
         Vtx* m2 = getOrCreateMirrored(vtx2);
         Vtx* m3 = getOrCreateMirrored(vtx3);
 
+        // don't invert winding here, already done in the gfx
         *outVtx1 = m1;
-        *outVtx2 = m3; // invert here to maintain winding order
-        *outVtx3 = m2;
+        *outVtx2 = m2;
+        *outVtx3 = m3;
 
     } else {
         // Pas de miroir, on passe les originaux

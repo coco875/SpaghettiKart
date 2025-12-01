@@ -119,14 +119,6 @@ KoopaTroopaBeach::KoopaTroopaBeach() {
 
 void KoopaTroopaBeach::Load() {
     Course::Load();
-
-    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_koopa_troopa_beach_addr));
-    func_80295C6C();
-    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_ADE0, 150, 255, 255, 255);
-    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_A540, 150, 255, 255, 255);
-    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_9E70, 150, 255, 255, 255);
-    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_358, 150, 255, 255, 255);
-
     if (gIsMirrorMode != 0) {
         for (size_t i = 0; i < ARRAY_COUNT(d_course_koopa_troopa_beach_dl_list1); i++) {
             InvertTriangleWindingByName(d_course_koopa_troopa_beach_dl_list1[i]);
@@ -139,6 +131,12 @@ void KoopaTroopaBeach::Load() {
         InvertTriangleWindingByName(d_course_koopa_troopa_beach_packed_dl_2C0);
         InvertTriangleWindingByName(d_course_koopa_troopa_beach_packed_dl_9E70);
     }
+    parse_course_displaylists((TrackSections*)LOAD_ASSET_RAW(d_course_koopa_troopa_beach_addr));
+    func_80295C6C();
+    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_ADE0, 150, 255, 255, 255);
+    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_A540, 150, 255, 255, 255);
+    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_9E70, 150, 255, 255, 255);
+    find_vtx_and_set_colours((Gfx*) d_course_koopa_troopa_beach_packed_dl_358, 150, 255, 255, 255);
 }
 
 void KoopaTroopaBeach::UnLoad() {
