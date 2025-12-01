@@ -259,6 +259,9 @@ file(GLOB_RECURSE ALL_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     "src/port/*.h"
     "src/port/*.c"
     "src/port/*.cpp"
+    "src/mods/*.h"
+    "src/mods/*.c"
+    "src/mods/*.cpp"
     "assets/code/*.c"
     "courses/*.c"
     "courses/*.h"
@@ -358,6 +361,16 @@ FetchContent_MakeAvailable(dr_libs)
 
 #=================== STB ===================
 include_directories(${STB_DIR})
+
+#=================== tomlplusplus ===================
+include(FetchContent)
+FetchContent_Declare(
+    tomlplusplus
+    GIT_REPOSITORY https://github.com/marzer/tomlplusplus.git
+    GIT_TAG        v3.4.0
+)
+FetchContent_MakeAvailable(tomlplusplus)
+target_link_libraries(${PROJECT_NAME} PRIVATE tomlplusplus::tomlplusplus)
 
 #==============================================================================#
 # Libultraship Integration                                                     #
@@ -682,7 +695,7 @@ add_custom_target(
     DEPENDS TorchExternal
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMAND ${TORCH_EXECUTABLE} header -o baserom.us.z64
-    COMMAND ${TORCH_EXECUTABLE} o2r baserom.us.z64
+    COMMAND ${TORCH_EXECUTABLE} o2r baserom.us.z64 --additional-files meta/mods.toml
     COMMAND ${TORCH_EXECUTABLE} pack assets spaghetti.o2r o2r
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/mk64.o2r" "${CMAKE_BINARY_DIR}/mk64.o2r"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/spaghetti.o2r" "${CMAKE_BINARY_DIR}/spaghetti.o2r"

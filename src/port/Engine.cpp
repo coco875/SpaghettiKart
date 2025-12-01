@@ -2,6 +2,7 @@
 
 #include "StringHelper.h"
 #include "GameExtractor.h"
+#include "mods/ModsManager.h"
 #include "ui/ImguiUI.h"
 #include "libultraship/src/Context.h"
 #include "libultraship/src/controller/controldevice/controller/mapping/ControllerDefaultMappings.h"
@@ -360,6 +361,7 @@ int GameEngine::ShowYesNoBox(const char* title, const char* box) {
 
 void GameEngine::Create() {
     const auto instance = Instance = new GameEngine();
+    list_mods();
     instance->gHMAS = new HMAS();
     instance->AudioInit();
     GameUI::SetupGuiElements();
