@@ -351,6 +351,7 @@ public:
     virtual void Waypoints(Player* player, int8_t playerId);
     virtual f32 GetWaterLevel(FVector pos, Collision* collision);
     virtual void ScrollingTextures();
+    // Draw transparent models (water, signs, arrows, etc.) 
     virtual void DrawWater(struct UnkStruct_800DC5EC* screen, uint16_t pathCounter, uint16_t cameraRot,
                            uint16_t playerDirection);
     virtual void Destroy();
