@@ -203,7 +203,7 @@ void RestoreTriangleWinding() {
         Gfx* cmd = gfx;
         
         for (int i = 0; i < 0x1FFF; i++) {
-            uint8_t opcode = cmd->words.w0 >> 24;
+            int8_t opcode = cmd->words.w0 >> 24;
             
             switch (opcode) {
                 case G_TRI1:
@@ -562,7 +562,7 @@ f32 Course::GetWaterLevel(FVector pos, Collision* collision) {
     float highestWater = -FLT_MAX;
     bool found = false;
 
-    for (const auto& volume : gWorldInstance.CurrentCourse->WaterVolumes) {
+    for (const auto& volume : gWorldInstance.GetCurrentCourse()->WaterVolumes) {
         if (pos.x >= volume.MinX && pos.x <= volume.MaxX && pos.z >= volume.MinZ && pos.z <= volume.MaxZ) {
             // Choose the highest water volume the player is over
             if (!found || volume.Height > highestWater) {
@@ -573,7 +573,7 @@ f32 Course::GetWaterLevel(FVector pos, Collision* collision) {
     }
 
     // If player is not over-top of a water volume then return the courses default water level
-    return found ? highestWater : gWorldInstance.CurrentCourse->Props.WaterLevel;
+    return found ? highestWater : gWorldInstance.GetCurrentCourse()->Props.WaterLevel;
 }
 
 void Course::ScrollingTextures() {

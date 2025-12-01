@@ -65,6 +65,12 @@ bool gIsEditorPaused = true;
 u8* pAppNmiBuffer = (u8*) &osAppNmiBuffer;
 
 s32 gIsMirrorMode = 0;
+void set_mirror_mode(s32 mirror) {
+    if (gIsMirrorMode != mirror) {
+        UnLoadCourse();
+    }
+    gIsMirrorMode = mirror;
+}
 Vec3f gVtxStretch = {1.0f, 1.0f, 1.0f};
 Lights1 D_800DC610[] = {
     gdSPDefLights1(175, 175, 175, 255, 255, 255, 0, 0, 120),
@@ -192,7 +198,7 @@ void setup_race(void) {
 
     gPlayerCountSelection1 = gPlayerCount;
     if (gGamestate != RACING) {
-        gIsMirrorMode = 0;
+        set_mirror_mode(0);
     }
     if (gIsMirrorMode) {
         gCourseDirection = -1.0f;
@@ -273,7 +279,7 @@ void setup_editor(void) {
 
     gPlayerCountSelection1 = 1;
     if (gGamestate != RACING) {
-        gIsMirrorMode = 0;
+        set_mirror_mode(0);
     }
 
     gActiveScreenMode = gScreenModeSelection;
@@ -374,7 +380,7 @@ void credits_spawn_actors(void) {
     D_800DC5BC = 0;
     D_800DC5C8 = 0;
     gNumActors = 0;
-    gIsMirrorMode = 0;
+    set_mirror_mode(0);
     gCourseDirection = 1.0f;
 
     gPlayerCountSelection1 = 1;

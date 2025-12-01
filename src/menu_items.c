@@ -5444,9 +5444,9 @@ void func_8009CE64(s32 arg0) {
                     break;
                 default:
                     if (gCCSelection == 3) {
-                        gIsMirrorMode = 1;
+                        set_mirror_mode(1);
                     } else {
-                        gIsMirrorMode = 0;
+                        set_mirror_mode(0);
                     }
                     break;
             }

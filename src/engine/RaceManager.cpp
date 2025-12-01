@@ -15,6 +15,7 @@ RaceManager::RaceManager(World& world) : WorldContext(world) {
 
 std::unordered_map<uintptr_t, std::shared_ptr<Vtx>> mirroredVtxCache;
 
+// Populates a collision mesh for mirror mode
 extern "C" void add_triangle_to_collision_mesh(Vtx* vtx1, Vtx* vtx2, Vtx* vtx3, Vtx** outVtx1, Vtx** outVtx2, Vtx** outVtx3) {
     if (gIsMirrorMode != 0) {
         auto getOrCreateMirrored = [](Vtx* original) -> Vtx* {
@@ -50,9 +51,15 @@ extern "C" void add_triangle_to_collision_mesh(Vtx* vtx1, Vtx* vtx2, Vtx* vtx3, 
 }
 
 void RaceManager::Load() {
-    if (WorldContext.CurrentCourse) {
+    if (WorldContext.GetCurrentCourse()) {
         mirroredVtxCache.clear();
-        WorldContext.CurrentCourse->Load();
+        WorldContext.GetCurrentCourse()->Load();
+    }
+}
+
+void RaceManager::UnLoad() {
+    if (WorldContext.GetCurrentCourse()) {
+        WorldContext.GetCurrentCourse()->UnLoad();
     }
 }
 
@@ -66,7 +73,7 @@ void RaceManager::PreInit() {
 }
 
 void RaceManager::BeginPlay() {
-    auto course = WorldContext.CurrentCourse;
+    auto course = WorldContext.GetCurrentCourse();
 
     if (course) {
         // Do not spawn finishline in credits or battle mode. And if bSpawnFinishline.

@@ -100,7 +100,7 @@ void setup_podium_ceremony(void) {
     gCurrentCourseId = COURSE_ROYAL_RACEWAY;
     SelectPodiumCeremony();
     D_800DC5B4 = (u16) 1;
-    gIsMirrorMode = 0;
+    set_mirror_mode(0);
     gGotoMenu = 0xFFFF;
     D_80287554 = 0;
     func_802A4D18();

@@ -33,7 +33,7 @@ namespace Editor {
     std::string SceneFile = "";
 
     void SaveLevel() {
-        auto props = gWorldInstance.CurrentCourse->Props;
+        auto props = gWorldInstance.GetCurrentCourse()->Props;
 
         if ((CurrentArchive) && (!SceneFile.empty())) {
             nlohmann::json data;
