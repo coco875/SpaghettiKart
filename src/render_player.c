@@ -1649,34 +1649,11 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     gPlayerPalette =
         (struct_D_802F1F80*) &gPlayerPalettesList[D_801651D0[screenId][playerId]][screenId][playerId * 0x100];
 #endif
-    s32 temp = player->effects;
-    s16 tyreSpeed = player->tyreSpeed;
-    if (((temp & 0x80) == 0x80) || ((temp & 0x40) == 0x40) || ((temp & 0x80000) == 0x80000) ||
-        ((temp & 0x800000) == 0x800000) || ((temp & 0x20000) == 0x20000) || ((player->unk_044 & 0x800) != 0)) {
-        if (player->animFrameSelector[screenId] != 0) {
-            sKartTexture =
-                gKartTextureTable1[player->characterId][player->animGroupSelector[screenId]]
-                                  [player->animFrameSelector[screenId]][tyreSpeed >> 8];
-        } else {
-            sKartTexture =
-                gKartTextureTable0[player->characterId][player->animGroupSelector[screenId]]
-                                  [player->animFrameSelector[screenId]][0];
-        }
-    } else if (((temp & 0x400) == 0x400) || ((temp & 0x01000000) == 0x01000000) ||
-               ((temp & 0x02000000) == 0x02000000) || ((temp & 0x10000) == 0x10000)) {
-// player->unk_0A8 >> 8 converts an 8.8 fixed-point animation frame to a whole number.
-        sKartTexture =
-            gKartTextureTumbles[player->characterId][player->unk_0A8 >> 8];
+    if ((screenId == 0) || (screenId == 1)) {
+        sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
     } else {
-        sKartTexture =
-            gKartTextureTable0[player->characterId][player->animGroupSelector[screenId]]
-                              [player->animFrameSelector[screenId]][tyreSpeed >> 8];
+        sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId - 1][playerId - 4].unk_00;
     }
-    // if ((screenId == 0) || (screenId == 1)) {
-    //     sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
-    // } else {
-    //     sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId - 1][playerId - 4].unk_00;
-    // }
     mtxf_translate_rotate(mtx, sp154, sp14C);
     mtxf_scale(mtx, gCharacterSize[player->characterId] * player->size);
     convert_to_fixed_point_matrix(GetKartMatrix(playerId + (screenId * 8)), mtx);
