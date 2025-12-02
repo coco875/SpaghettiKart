@@ -16,7 +16,7 @@ ModMetadata ModMetadata::LoadFromTOML(const std::string& tomlContent) {
             metadata.version = *versionValue;
         }
 
-        if (auto depsTable = table["dependencies"].as_table()) {
+        if (auto *depsTable = table["dependencies"].as_table()) {
             for (const auto& [key, value] : *depsTable) {
                 if (auto depVersion = value.value<std::string>()) {
                     metadata.dependencies[std::string(key)] = *depVersion;
