@@ -7,7 +7,7 @@ void list_mods() {
     auto resourceManager = context->GetResourceManager();
     auto archiveManager = resourceManager->GetArchiveManager();
     auto archives = archiveManager->GetArchives();
-    for (const auto& arch : archives) {
+    for (const auto& arch : *archives) {
         SPDLOG_INFO("Archive: {}", arch->GetPath());
         auto mods_file = arch->LoadFile("mods.toml");
         if (mods_file != nullptr) {
