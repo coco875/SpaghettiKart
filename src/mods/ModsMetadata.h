@@ -10,7 +10,7 @@
 struct ModMetadata {
     std::string name;
     semver::version<int, int, int> version;
-    std::map<std::string, semver::version<int, int, int>> dependencies;
+    std::map<std::string, std::pair<semver::range_set<int, int, int>, std::string>> dependencies;
 
     ModMetadata() {}
     static ModMetadata LoadFromTOML(const std::string& tomlContent) {
@@ -30,9 +30,9 @@ struct ModMetadata {
             if (auto *depsTable = table["dependencies"].as_table()) {
                 for (const auto& [key, value] : *depsTable) {
                     if (auto depVersion = value.value<std::string>()) {
-                        semver::version<int, int, int> parsedVersion;
+                        semver::range_set<int, int, int> parsedVersion;
                         semver::parse(*depVersion, parsedVersion);
-                        metadata.dependencies[std::string(key)] = parsedVersion;
+                        metadata.dependencies[std::string(key)] = std::make_pair(parsedVersion, *depVersion);
                     }
                 }
             }

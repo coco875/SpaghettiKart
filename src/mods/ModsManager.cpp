@@ -1,8 +1,8 @@
 #include "archive/Archive.h"
-#include "port/Engine.h"
 #include "ModsMetadata.h"
-#include "libultraship/src/resource/archive/O2rArchive.h"
 #include "libultraship/src/resource/archive/FolderArchive.h"
+#include "libultraship/src/resource/archive/O2rArchive.h"
+#include "port/Engine.h"
 #include "semver.hpp"
 #include "utils/StringHelper.h"
 #include <memory>
@@ -41,9 +41,7 @@ std::vector<std::string> ListMods() {
     if (std::filesystem::exists(patches_path) && std::filesystem::is_directory(patches_path)) {
         for (const auto& p : std::filesystem::directory_iterator(patches_path)) {
             auto ext = p.path().extension().string();
-            if (StringHelper::IEquals(ext, ".zip") || StringHelper::IEquals(ext, ".o2r")) {
-                archiveFiles.push_back(p.path().generic_string());
-            } else if (std::filesystem::is_directory(p.path())) {
+            if (StringHelper::IEquals(ext, ".zip") || StringHelper::IEquals(ext, ".o2r") || std::filesystem::is_directory(p.path())) {
                 archiveFiles.push_back(p.path().generic_string());
             }
         }
@@ -80,14 +78,15 @@ std::optional<std::vector<std::string>> ModToUpdateDependencies(const ModMetadat
         for (const auto& [otherMeta, _] : Mods) {
             if (otherMeta.name == depName) {
                 found = true;
-                if (otherMeta.version < depVersion) {
-                    list.push_back(depName + " (required: " + depVersion.to_string() + ", found: " + otherMeta.version.to_string() + ")");
+                auto range = depVersion.first;
+                if (!range.contains(otherMeta.version)) {
+                    list.push_back(depName + " (required: " + depVersion.second + ", found: " + otherMeta.version.to_string() + ")");
                 }
                 break;
             }
         }
         if (!found) {
-            list.push_back(depName + " (required: " + depVersion.to_string() + ", found: none)");
+            list.push_back(depName + " (required: " + depVersion.second + ", found: none)");
         }
     }
     if (!list.empty()) {
@@ -125,13 +124,13 @@ void AddCoreDependencies() {
     meta.name = "spaghettikart-core";
     semver::parse("1.0.0", meta.version);
 
-    semver::version<int, int, int> mk64Ver;
+    semver::range_set<int, int, int> mk64Ver;
     semver::parse("1.0.0-alpha1", mk64Ver);
-    semver::version<int, int, int> assetsVer;
+    semver::range_set<int, int, int> assetsVer;
     semver::parse("1.0.0-alpha1", assetsVer);
     meta.dependencies = {
-        {"mk64", mk64Ver},
-        {"spaghettikart-assets", assetsVer},
+        {"mk64", {mk64Ver, "1.0.0-alpha1"}},
+        {"spaghettikart-assets", {assetsVer, "1.0.0-alpha1"}},
     };
     AddModMetadata(meta, nullptr);
 }

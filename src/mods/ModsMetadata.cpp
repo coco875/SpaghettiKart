@@ -6,7 +6,7 @@ std::string ModMetadata::ToString() const {
     result += "Version: " + version.to_string() + "\n";
     result += "Dependencies:\n";
     for (const auto& [depName, depVersion] : dependencies) {
-        result.append("  - ").append(depName).append(": ").append(depVersion.to_string()).append("\n");
+        result.append("  - ").append(depName).append(": ").append(depVersion.second).append("\n");
     }
     return result;
 }
