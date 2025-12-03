@@ -1,31 +1,12 @@
 #include "ModsMetadata.h"
 #include <spdlog/spdlog.h>
-#include <toml++/toml.hpp>
 
-ModMetadata ModMetadata::LoadFromTOML(const std::string& tomlContent) {
-    ModMetadata metadata;
-    try {
-        auto table = toml::parse(tomlContent);
-        auto mods_property = table["mod"];
-
-        if (auto nameValue = mods_property["name"].value<std::string>()) {
-            metadata.name = *nameValue;
-        }
-
-        if (auto versionValue = mods_property["version"].value<std::string>()) {
-            metadata.version = *versionValue;
-        }
-
-        if (auto *depsTable = table["dependencies"].as_table()) {
-            for (const auto& [key, value] : *depsTable) {
-                if (auto depVersion = value.value<std::string>()) {
-                    metadata.dependencies[std::string(key)] = *depVersion;
-                }
-            }
-        }
-    } catch (const toml::parse_error& err) {
-        SPDLOG_ERROR("Failed to parse mods.toml: {}", err.what());
+std::string ModMetadata::ToString() const {
+    std::string result = "Mod Name: " + name + "\n";
+    result += "Version: " + version.to_string() + "\n";
+    result += "Dependencies:\n";
+    for (const auto& [depName, depVersion] : dependencies) {
+        result.append("  - ").append(depName).append(": ").append(depVersion.to_string()).append("\n");
     }
-
-    return metadata;
+    return result;
 }

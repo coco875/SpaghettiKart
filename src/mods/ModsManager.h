@@ -1,3 +1,4 @@
 #pragma once
 
-void list_mods();
+void InitModsSystem();
+void UnInitModsSystem();
