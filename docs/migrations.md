@@ -8,16 +8,21 @@ The YAML structure and resource paths have been reorganized to be more logical a
 
 ## Migration Script
 
-A Python migration script (`migration.py`) is provided at the root of the repository to help automate the migration process. You can customize the `folder` variable to point to your mod folder.
+A Python migration script (`migration.py` [link](https://gist.github.com/coco875/5865b6a8e480990e4f75752206e9c728)) is provided at the root of the repository to help automate the migration process. You can customize the `folder` variable to point to your mod folder.
 
 ### Usage
 
-1. Edit `migration.py` and set the `folder` variable to your mod folder name
-2. Run the script:
+1. Edit `migration.py` ([link](https://gist.github.com/coco875/5865b6a8e480990e4f75752206e9c728)) and set the `folder` variable to your mod folder name
+2. Optionally set `mod_name` and `mod_version` variables for the generated `mods.toml`
+3. Run the script:
 ```bash
 python migration.py
 ```
-3. The migrated mod will be created in a new folder with `_Migrated` suffix
+4. The migrated mod will be created in a new folder with `_Migrated` suffix
+
+### Generated Files
+
+The migration script will automatically generate a `mods.toml` file at the root of your migrated mod. This file is required for SpaghettiKart to properly recognize and load your mod. See [mods.toml documentation](mods-toml.md) for more details about this file.
 
 ## Path Changes
 
@@ -165,7 +170,8 @@ If you prefer to migrate manually:
 1. Create the new folder structure in your mod
 2. Move texture files according to the path mapping tables above
 3. For kart textures, duplicate each frame texture to the 4 wheel variants
-4. Test your mod with the new version of SpaghettiKart
+4. Create a `mods.toml` file at the root of your mod (see [mods.toml documentation](mods-toml.md))
+5. Test your mod with the new version of SpaghettiKart
 
 ## Troubleshooting
 
@@ -175,5 +181,6 @@ If you prefer to migrate manually:
 
 ## See Also
 
+- [mods.toml File Structure](mods-toml.md) - Required metadata file for mods
 - [Texture Pack Guide](textures-pack.md) - How to create texture packs
 - [Modding Guide](modding.md) - General modding information
