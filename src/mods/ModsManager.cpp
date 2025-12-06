@@ -122,15 +122,15 @@ void AddModMetadata(const ModMetadata& metadata, const std::shared_ptr<Ship::Arc
 void AddCoreDependencies() {
     ModMetadata meta;
     meta.name = "spaghettikart-core";
-    semver::parse("1.0.0", meta.version);
+    semver::parse(SPAGHETTI_VERSION, meta.version);
 
     semver::range_set<int, int, int> mk64Ver;
     semver::parse("1.0.0-alpha1", mk64Ver);
     semver::range_set<int, int, int> assetsVer;
     semver::parse("1.0.0-alpha1", assetsVer);
     meta.dependencies = {
-        {"mk64", {mk64Ver, "1.0.0-alpha1"}},
-        {"spaghettikart-assets", {assetsVer, "1.0.0-alpha1"}},
+        {"mk64-assets", {mk64Ver, "1.0.0-alpha1"}},
+        {"extended-assets", {assetsVer, "1.0.0-alpha1"}},
     };
     AddModMetadata(meta, nullptr);
 }

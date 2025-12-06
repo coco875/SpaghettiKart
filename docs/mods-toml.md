@@ -71,16 +71,17 @@ see [Semantic Versioning](https://semver.org/) for more details.
 
 ## Core Dependencies
 
-SpaghettiKart defines two core packages that are always available:
+SpaghettiKart defines three core packages that are always available:
 
-- `mk64` - The base game resources (version `1.0.0-alpha1`)
-- `spaghettikart-assets` - SpaghettiKart additional assets (version `1.0.0-alpha1`)
+- `mk64-assets` - The base game resources (version `1.0.0-alpha1`) (`mk64.o2r`)
+- `extended-assets` - SpaghettiKart additional assets (version `1.0.0-alpha1`) (`spaghetti.o2r`)
+- `spaghettikart-core` - SpaghettiKart core engine (For verifying that mods support your game version)
 
 If your mod depends on touching base game assets or SpaghettiKart assets, you should declare a dependency on these packages. For example:
 
 ```toml
 [dependencies]
-spaghettikart-assets = "=1.0.0-alpha1"
+mk64-assets = "=1.0.0-alpha1"
 ```
 
 ## Validation
