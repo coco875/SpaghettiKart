@@ -149,8 +149,6 @@ void setup_podium_ceremony(void) {
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_royal_raceway_packed_dl_E88, 0x10);
     // d_course_royal_raceway_packed_dl_A618
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_royal_raceway_packed_dl_A618, -1);
-    // d_course_royal_raceway_packed_dl_A618
-    generate_collision_mesh_with_default_section_id((Gfx*) d_course_royal_raceway_packed_dl_A618, -1);
     // d_course_royal_raceway_packed_dl_23F8
     generate_collision_mesh_with_default_section_id((Gfx*) d_course_royal_raceway_packed_dl_23F8, 1);
     // d_course_royal_raceway_packed_dl_2478

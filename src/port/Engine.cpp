@@ -340,7 +340,7 @@ void GameEngine::Destroy() {
 #ifdef __SWITCH__
     Ship::Switch::Exit();
 #endif
-    UnInitModsSystem();
+    UnloadMods();
     GameUI::Destroy();
     delete GameEngine::Instance;
     GameEngine::Instance = nullptr;

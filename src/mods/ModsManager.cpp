@@ -36,10 +36,10 @@ std::vector<std::string> ListMods() {
         archiveFiles.push_back(assets_path);
     }
 
-    const std::string patches_path = Ship::Context::GetPathRelativeToAppDirectory("mods");
+    const std::string mods_path = Ship::Context::GetPathRelativeToAppDirectory("mods");
 
-    if (std::filesystem::exists(patches_path) && std::filesystem::is_directory(patches_path)) {
-        for (const auto& p : std::filesystem::directory_iterator(patches_path)) {
+    if (std::filesystem::exists(mods_path) && std::filesystem::is_directory(mods_path)) {
+        for (const auto& p : std::filesystem::directory_iterator(mods_path)) {
             auto ext = p.path().extension().string();
             if (StringHelper::IEquals(ext, ".zip") || StringHelper::IEquals(ext, ".o2r") || std::filesystem::is_directory(p.path())) {
                 archiveFiles.push_back(p.path().generic_string());
@@ -71,7 +71,7 @@ std::optional<std::vector<std::string>> CheckCyclicDependencies() {
     return std::nullopt;
 }
 
-std::optional<std::vector<std::string>> ModToUpdateDependencies(const ModMetadata& mod) {
+std::optional<std::vector<std::string>> CheckOutdatedDependencies(const ModMetadata& mod) {
     auto list = std::vector<std::string>{};
     for (const auto& [depName, depVersion] : mod.dependencies) {
         bool found = false;
@@ -201,7 +201,7 @@ void DetectOutdatedDependencies() {
     std::string allDepIssues;
 
     for (const auto& [meta, _] : Mods) {
-        if (auto toUpdate = ModToUpdateDependencies(meta); toUpdate.has_value()) {
+        if (auto toUpdate = CheckOutdatedDependencies(meta); toUpdate.has_value()) {
             exitDueToErrors = true;
             allDepIssues += "The mod \"" + meta.name + "\" has the following missing or outdated dependencies:\n";
             for (const auto& dep : toUpdate.value()) {
@@ -217,8 +217,8 @@ void DetectOutdatedDependencies() {
     }
 }
 
-void PrintListOfMods() {
-    SPDLOG_INFO("List of loaded mods:");
+void PrintModInfo() {
+    SPDLOG_INFO("[ModManager] Detected Mods:");
     for (const auto& [meta, _] : Mods) {
         SPDLOG_INFO(" - {} v{}", meta.name, meta.version.to_string());
     }
@@ -229,7 +229,7 @@ void InitModsSystem() {
 
     ConstructTheListOfMods();
 
-    PrintListOfMods();
+    PrintModInfo();
 
     DetectCyclicDependencies();
 
@@ -251,6 +251,6 @@ void InitModsSystem() {
     archiveManager->SetArchives(std::make_shared<std::vector<std::shared_ptr<Ship::Archive>>>(loadedArchives));
 }
 
-void UnInitModsSystem() {
+void UnloadMods() {
     Mods.clear();
 }
