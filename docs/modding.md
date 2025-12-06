@@ -40,7 +40,7 @@ Mods are loaded in dependency order. If mod A depends on mod B, then B will be l
     * Some texture might not be possible to change yet, but most of them can be changed.
     * [link](textures-pack.md)
 * Custom Tracks (CT)
-    * Custom tracks are reserved for advanced users. We plan to simply the process in the future.
+    * Custom tracks are reserved for advanced users. We plan to simplify the process in the future.
     * [link](custom-track.md)
 * Custom Characters
     * Custom characters can only replace existing characters for now. We plan to allow to add new characters in the future.
