@@ -1,19 +1,19 @@
-# Resource Pack / Mod Migration Guide
+# Migration: Beta to v1.0
 
-This guide explains how to migrate your existing resource packs and mods to the new folder structure introduced in SpaghettiKart.
+This guide explains how to migrate your existing resource packs and mods from the **Beta version** to the **future first stable release (v1.0)** of SpaghettiKart.
 
 ## Overview
 
-The YAML structure and resource paths have been reorganized to be more logical and maintainable. If you have existing mods or texture packs created for the old structure, you will need to update them to work with the new version.
+With the v1.0 release approaching, the YAML structure and resource paths have been reorganized to be more logical and maintainable. If you have existing mods or texture packs created for the Beta version, you will need to update them to work with v1.0 and later versions.
 
 ## Migration Script
 
-A Python migration script (`migration.py` [link](https://gist.github.com/coco875/5865b6a8e480990e4f75752206e9c728)) is provided at the root of the repository to help automate the migration process. You can customize the `folder` variable to point to your mod folder.
+A Python migration script ([`migration.py`](https://gist.github.com/coco875/5865b6a8e480990e4f75752206e9c728)) is provided at the root of the repository to help automate the migration process. You can customize the `folder` variable to point to your mod folder.
 
 ### Usage
 
-1. Edit `migration.py` ([link](https://gist.github.com/coco875/5865b6a8e480990e4f75752206e9c728)) and set the `folder` variable to your mod folder name
-2. Optionally set `mod_name` and `mod_version` variables for the generated `mods.toml`
+1. Download the [migration.py](https://gist.github.com/coco875/5865b6a8e480990e4f75752206e9c728) script
+2. Edit `migration.py` and set the `folder` variable to your mod folder name
 3. Run the script:
 ```bash
 python migration.py
@@ -79,7 +79,7 @@ The main change is that textures are now organized into a `textures/` subfolder 
 
 ## Kart Frame Textures
 
-Kart textures have been split into separate wheel textures. Each kart frame now has 4 associated wheel textures.
+Kart textures have been split into separate wheel textures. Each kart frame now has 4 associated wheel textures. That makes them possible to spin.
 
 ### Old Structure
 ```
