@@ -1,5 +1,7 @@
 # Modding
-Modding are really early stages so a lot of features are not implemented yet. We don't use Retro and we want to make it as simple as possible to mod the game (so no weird format or obscure tools).
+* Very focused on ease of modding without weird formats or obscure tools.
+* Early stages of modding and as such some features are not fully implemented yet
+* SpaghettiKart does not use Retro
 
 ## General Structure
 
