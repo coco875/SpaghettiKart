@@ -12,7 +12,7 @@
 #include "ModManager.h"
 
 void CheckMK64O2RExists();
-void ConstructTheListOfMods();
+void FindAndLoadMods();
 void PrintModInfo();
 void DetectCyclicDependencies();
 void DetectOutdatedDependencies();
@@ -25,7 +25,7 @@ const std::string assets_path = Ship::Context::LocateFileAcrossAppDirs("spaghett
 void InitModsSystem() {
     CheckMK64O2RExists();
 
-    ConstructTheListOfMods();
+    FindAndLoadMods();
 
     PrintModInfo();
 
@@ -135,11 +135,32 @@ std::optional<std::vector<std::string>> CheckOutdatedDependencies(const ModMetad
 }
 
 void SortModsByDependencies() {
+    // Core assets that should always be loaded first (at the bottom of the priority stack)
+    static const std::vector<std::string> coreAssets = { "mk64-assets", "extended-assets" };
+
     std::sort(Mods.begin(), Mods.end(),
               [](const std::tuple<ModMetadata, std::shared_ptr<Ship::Archive>>& a,
                  const std::tuple<ModMetadata, std::shared_ptr<Ship::Archive>>& b) {
                   const ModMetadata& metaA = std::get<0>(a);
                   const ModMetadata& metaB = std::get<0>(b);
+
+                  // Check if either mod is a core asset
+                  auto itA = std::find(coreAssets.begin(), coreAssets.end(), metaA.name);
+                  auto itB = std::find(coreAssets.begin(), coreAssets.end(), metaB.name);
+                  bool isACoreAsset = itA != coreAssets.end();
+                  bool isBCoreAsset = itB != coreAssets.end();
+
+                  // Core assets should come first (lower priority index)
+                  if (isACoreAsset && !isBCoreAsset) {
+                      return true;
+                  }
+                  if (!isACoreAsset && isBCoreAsset) {
+                      return false;
+                  }
+                  // If both are core assets, sort by their order in coreAssets
+                  if (isACoreAsset && isBCoreAsset) {
+                      return itA < itB;
+                  }
 
                   // If A depends on B, A should come after B
                   if (metaA.dependencies.contains(metaB.name)) {
@@ -180,7 +201,7 @@ void CheckMK64O2RExists() {
     }
 }
 
-void ConstructTheListOfMods() {
+void FindAndLoadMods() {
     Mods.clear();
     AddCoreDependencies();
     auto list = ListMods();
