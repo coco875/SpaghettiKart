@@ -2,7 +2,7 @@
 
 #include "StringHelper.h"
 #include "GameExtractor.h"
-#include "mods/ModsManager.h"
+#include "mods/ModManager.h"
 #include "ui/ImguiUI.h"
 #include "libultraship/src/Context.h"
 #include "libultraship/src/controller/controldevice/controller/mapping/ControllerDefaultMappings.h"

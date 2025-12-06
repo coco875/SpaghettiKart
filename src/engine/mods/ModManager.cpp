@@ -9,6 +9,48 @@
 #include <optional>
 #include <string>
 
+#include "ModManager.h"
+
+void CheckMK64O2RExists();
+void ConstructTheListOfMods();
+void PrintModInfo();
+void DetectCyclicDependencies();
+void DetectOutdatedDependencies();
+void SortModsByDependencies();
+
+std::vector<std::tuple<ModMetadata, std::shared_ptr<Ship::Archive>>> Mods = {};
+
+void InitModsSystem() {
+    CheckMK64O2RExists();
+
+    ConstructTheListOfMods();
+
+    PrintModInfo();
+
+    DetectCyclicDependencies();
+
+    DetectOutdatedDependencies();
+
+    SortModsByDependencies();
+
+    std::vector<std::shared_ptr<Ship::Archive>> loadedArchives;
+    loadedArchives.reserve(Mods.size());
+    for (const auto& [_, archive] : Mods) {
+        if (archive == nullptr) {
+            continue;
+        }
+        loadedArchives.push_back(archive);
+    }
+    auto context = GameEngine::Instance->context;
+    auto resourceManager = context->GetResourceManager();
+    auto archiveManager = resourceManager->GetArchiveManager();
+    archiveManager->SetArchives(std::make_shared<std::vector<std::shared_ptr<Ship::Archive>>>(loadedArchives));
+}
+
+void UnloadMods() {
+    Mods.clear();
+}
+
 void GenerateAssetsMods() {
     if (GameEngine::ShowYesNoBox("No O2R Files", "No O2R files found. Generate one now?") == IDYES) {
         if (!GameEngine::GenAssetFile()) {
@@ -49,8 +91,6 @@ std::vector<std::string> ListMods() {
 
     return archiveFiles;
 }
-
-std::vector<std::tuple<ModMetadata, std::shared_ptr<Ship::Archive>>> Mods = {};
 
 std::optional<std::vector<std::string>> CheckCyclicDependencies() {
     auto list = std::vector<std::string>{};
@@ -222,35 +262,4 @@ void PrintModInfo() {
     for (const auto& [meta, _] : Mods) {
         SPDLOG_INFO(" - {} v{}", meta.name, meta.version.to_string());
     }
-}
-
-void InitModsSystem() {
-    CheckMK64O2RExists();
-
-    ConstructTheListOfMods();
-
-    PrintModInfo();
-
-    DetectCyclicDependencies();
-
-    DetectOutdatedDependencies();
-
-    SortModsByDependencies();
-
-    std::vector<std::shared_ptr<Ship::Archive>> loadedArchives;
-    loadedArchives.reserve(Mods.size());
-    for (const auto& [_, archive] : Mods) {
-        if (archive == nullptr) {
-            continue;
-        }
-        loadedArchives.push_back(archive);
-    }
-    auto context = GameEngine::Instance->context;
-    auto resourceManager = context->GetResourceManager();
-    auto archiveManager = resourceManager->GetArchiveManager();
-    archiveManager->SetArchives(std::make_shared<std::vector<std::shared_ptr<Ship::Archive>>>(loadedArchives));
-}
-
-void UnloadMods() {
-    Mods.clear();
 }
