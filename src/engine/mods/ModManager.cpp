@@ -1,5 +1,5 @@
 #include "archive/Archive.h"
-#include "ModsMetadata.h"
+#include "ModMetadata.h"
 #include "libultraship/src/resource/archive/FolderArchive.h"
 #include "libultraship/src/resource/archive/O2rArchive.h"
 #include "port/Engine.h"

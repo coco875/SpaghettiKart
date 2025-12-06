@@ -1,4 +1,4 @@
-#include "ModsMetadata.h"
+#include "ModMetadata.h"
 #include <spdlog/spdlog.h>
 
 std::string ModMetadata::ToString() const {
