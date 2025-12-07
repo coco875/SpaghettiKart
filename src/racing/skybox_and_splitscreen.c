@@ -1015,6 +1015,10 @@ void func_802A7728(void) {
         temp_v0 = 0;
     }
 
+    if (gPhysicalFramebuffers[temp_v0] == NULL) {
+        return;
+    }
+
     copy_framebuffer(D_800DC5DC, D_800DC5E0, 64, 32, (u16*) PHYSICAL_TO_VIRTUAL(gPhysicalFramebuffers[temp_v0]),
                      (u16*) LOAD_ASSET_RAW(gTexture68272C));
     copy_framebuffer(D_800DC5DC + 64, D_800DC5E0, 64, 32, (u16*) PHYSICAL_TO_VIRTUAL(gPhysicalFramebuffers[temp_v0]),
