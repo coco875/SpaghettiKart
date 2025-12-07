@@ -10,7 +10,7 @@
     "libpng",
     {
       "name": "sdl2",
-      "features": ["x11"],
+      "features": ["x11", "alsa", "wayland"],
       "default-features": false
     },
     "sdl2-net",

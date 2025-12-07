@@ -147,8 +147,8 @@ GameEngine::GameEngine() {
         std::unordered_map<Ship::StickIndex, std::vector<std::pair<Ship::Direction, std::pair<SDL_GameControllerAxis, int32_t>>>>()
     );
     auto controlDeck = std::make_shared<LUS::ControlDeck>(std::vector<CONTROLLERBUTTONS_T>(), defaultMappings);
-
-    this->context->InitResourceManager({}, {}, 3); // without this line InitWindow fails in Gui::Init()
+    const std::string assets_path = Ship::Context::LocateFileAcrossAppDirs("spaghetti.o2r");
+    this->context->InitResourceManager({assets_path}, {}, 3); // without this line InitWindow fails in Gui::Init()
     this->context->InitConsole(); // without this line the GuiWindow constructor fails in ConsoleWindow::InitElement()
 
     auto gui = std::make_shared<Ship::SpaghettiGui>(std::vector<std::shared_ptr<Ship::GuiWindow>>({}));
@@ -157,7 +157,7 @@ GameEngine::GameEngine() {
     // auto wnd = std::make_shared<Fast::Fast3dWindow>(std::vector<std::shared_ptr<Ship::GuiWindow>>({}));
     // auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(Ship::Context::GetInstance()->GetWindow());
 
-    this->context->Init({}, {}, 3, { 26800, 512, 1100 }, wnd, controlDeck);
+    this->context->Init({assets_path}, {}, 3, { 26800, 512, 1100 }, wnd, controlDeck);
 
 #ifndef __SWITCH__
     Ship::Context::GetInstance()->GetLogger()->set_level(
