@@ -10,8 +10,17 @@
     "libpng",
     {
       "name": "sdl2",
-      "features": ["x11", "wayland"],
+      "features": ["x11", "alsa", "wayland"],
+      "platform": "linux",
       "default-features": false
+    },
+    {
+      "name": "sdl2",
+      "platform": "windows"
+    },
+    {
+      "name": "sdl2",
+      "platform": "osx"
     },
     "sdl2-net",
     "glew",
