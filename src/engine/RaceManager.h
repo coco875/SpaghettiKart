@@ -1,5 +1,17 @@
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include <libultraship/libultra/gbi.h>
+
+void add_triangle_to_collision_mesh(Vtx* vtx1, Vtx* vtx2, Vtx* vtx3, Vtx** outVtx1, Vtx** outVtx2, Vtx** outVtx3);
+
+#ifdef __cplusplus
+}
+#endif
+
+#ifdef __cplusplus
 class World;
 
 /**
@@ -22,6 +34,7 @@ class RaceManager {
 public:
     RaceManager(World& world);
     virtual void Load(); // virtual required here in the base class to allow inherited classes to override
+    virtual void UnLoad();
     virtual void PreInit();
     virtual void BeginPlay();
     virtual void PostInit();
@@ -29,3 +42,5 @@ public:
 protected:
     World& WorldContext;
 };
+
+#endif
