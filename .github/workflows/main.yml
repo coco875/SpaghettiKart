@@ -423,6 +423,9 @@ jobs:
               cmake --build build --parallel
             "
 
+      - name: Fix permissions
+        run: sudo chown -R $(id -u):$(id -g) build
+
       - name: Download spaghetti.o2r
         uses: actions/download-artifact@v4
         with:
