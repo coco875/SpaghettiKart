@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="3165,793,3280,819"/>
 <area shape="rect" id="Node000002" href="$code__800029B0_8c.html#ac1299bd5ed61e2135db0c04683089c63" title=" " alt="" coords="2943,732,3105,757"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="3167,792,3065,760,3067,755,3169,787"/>
-<area shape="rect" id="Node000044" href="$actors_8c.html#a142a32371ea62d0303702286b839bdfd" title="Loads actor textures, course specific actor textures. Calls to spawn_course_vehicles and place_course..." alt="" coords="2946,786,3102,826"/>
+<area shape="rect" id="Node000044" href="$actors_8c.html#a142a32371ea62d0303702286b839bdfd" title="Loads actor textures, track specific actor textures. Calls to spawn_track_vehicles and place_track_ac..." alt="" coords="2946,786,3102,826"/>
 <area shape="poly" id="edge67_Node000001_Node000044" title=" " alt="" coords="3151,809,3102,809,3102,803,3151,803"/>
 <area shape="rect" id="Node000047" href="$code__80281780_8c.html#a59f61302f1f5f6ecab728bf08608d16b" title=" " alt="" coords="2931,859,3117,884"/>
 <area shape="poly" id="edge71_Node000001_Node000047" title=" " alt="" coords="3171,826,3064,861,3063,856,3169,820"/>
@@ -77,7 +77,7 @@
 <area shape="poly" id="edge45_Node000025_Node000036" title=" " alt="" coords="933,178,558,214,557,208,933,173"/>
 <area shape="rect" id="Node000037" href="$menu__items_8c.html#a01003958fcc81831bd82f619ae874ac1" title=" " alt="" coords="606,153,727,179"/>
 <area shape="poly" id="edge47_Node000025_Node000037" title=" " alt="" coords="933,169,728,169,728,163,933,163"/>
-<area shape="rect" id="Node000027" href="$code__80280000_8c.html#aa9c130485d39c4a7276605b30db5150e" title=" " alt="" coords="435,12,557,37"/>
+<area shape="rect" id="Node000027" href="$code__80280000_8c.html#ae610920735bc9dad9f2dce878c5a6b32" title=" " alt="" coords="435,12,557,37"/>
 <area shape="poly" id="edge33_Node000026_Node000027" title=" " alt="" coords="592,24,557,25,557,20,592,18"/>
 <area shape="rect" id="Node000029" href="$code__80281C40_8c.html#af6f6a1f0caec6d086a4ab98602a6670e" title=" " alt="" coords="435,68,557,93"/>
 <area shape="poly" id="edge36_Node000026_Node000029" title=" " alt="" coords="620,38,533,70,531,65,618,33"/>

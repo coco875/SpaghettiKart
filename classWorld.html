@@ -108,7 +108,8 @@ $(function(){initNavTree('classWorld.html',''); initResizable(true); });
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a>  </div>
+<a href="#pub-attribs">Data Fields</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle"><div class="title">World Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -131,8 +132,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afa39d4e6f714a7a3691ac0c656f5e8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c73fba541a5817fff65147ba47cd827" id="r_a8c73fba541a5817fff65147ba47cd827"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c73fba541a5817fff65147ba47cd827">~World</a> ()</td></tr>
 <tr class="separator:a8c73fba541a5817fff65147ba47cd827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1339506213a8f4ea268d8b339592e76" id="r_af1339506213a8f4ea268d8b339592e76"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classCourse.html">Course</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1339506213a8f4ea268d8b339592e76">AddCourse</a> (std::shared_ptr&lt; <a class="el" href="classCourse.html">Course</a> &gt; course)</td></tr>
-<tr class="separator:af1339506213a8f4ea268d8b339592e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa31aec713e3a54e22e4406e4442107d" id="r_afa31aec713e3a54e22e4406e4442107d"><td class="memItemLeft" align="right" valign="top">RaceManager &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa31aec713e3a54e22e4406e4442107d">GetRaceManager</a> ()</td></tr>
+<tr class="separator:afa31aec713e3a54e22e4406e4442107d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68af48b64d5d719ff33afa8a0554ce28" id="r_a68af48b64d5d719ff33afa8a0554ce28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68af48b64d5d719ff33afa8a0554ce28">SetRaceManager</a> (std::unique_ptr&lt; RaceManager &gt; manager)</td></tr>
+<tr class="separator:a68af48b64d5d719ff33afa8a0554ce28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6962157728499e138c5aab126ebbe14" id="r_ac6962157728499e138c5aab126ebbe14"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6962157728499e138c5aab126ebbe14">AddTrack</a> (std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt; track)</td></tr>
+<tr class="separator:ac6962157728499e138c5aab126ebbe14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74f5e967e46a14dbc82cf55062d922b" id="r_aa74f5e967e46a14dbc82cf55062d922b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa74f5e967e46a14dbc82cf55062d922b">TickCameras</a> ()</td></tr>
+<tr class="separator:aa74f5e967e46a14dbc82cf55062d922b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcc97e3d1b7d9c4e2ec14a38902411b2" id="r_abcc97e3d1b7d9c4e2ec14a38902411b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAActor.html">AActor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcc97e3d1b7d9c4e2ec14a38902411b2">AddActor</a> (<a class="el" href="classAActor.html">AActor</a> *actor)</td></tr>
 <tr class="separator:abcc97e3d1b7d9c4e2ec14a38902411b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a215117703aa8944483793767a0fb80ed" id="r_a215117703aa8944483793767a0fb80ed"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structActor.html">Actor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a215117703aa8944483793767a0fb80ed">AddBaseActor</a> ()</td></tr>
@@ -171,8 +178,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1b0c4b7543e78126675c38cd900c57c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50c64c66a1807b8108ff78c079077aa4" id="r_a50c64c66a1807b8108ff78c079077aa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50c64c66a1807b8108ff78c079077aa4">AddCup</a> (<a class="el" href="classCup.html">Cup</a> *)</td></tr>
 <tr class="separator:a50c64c66a1807b8108ff78c079077aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79d19c3026b71f775446e2ea2dce580f" id="r_a79d19c3026b71f775446e2ea2dce580f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79d19c3026b71f775446e2ea2dce580f">SetCup</a> (<a class="el" href="classCup.html">Cup</a> *cup)</td></tr>
-<tr class="separator:a79d19c3026b71f775446e2ea2dce580f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26047598532e37305e3e096a0d0c2ecd" id="r_a26047598532e37305e3e096a0d0c2ecd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26047598532e37305e3e096a0d0c2ecd">SetCurrentCup</a> (<a class="el" href="classCup.html">Cup</a> *cup)</td></tr>
+<tr class="separator:a26047598532e37305e3e096a0d0c2ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37da13d556bec8e05d87b87942bdb19e" id="r_a37da13d556bec8e05d87b87942bdb19e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCup.html">Cup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37da13d556bec8e05d87b87942bdb19e">GetCurrentCup</a> ()</td></tr>
+<tr class="separator:a37da13d556bec8e05d87b87942bdb19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9790ca2103c8082b91a735423921b487" id="r_a9790ca2103c8082b91a735423921b487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9790ca2103c8082b91a735423921b487">SetCupIndex</a> (size_t index)</td></tr>
 <tr class="separator:a9790ca2103c8082b91a735423921b487"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b3b8109c526f4f76308efff8359820" id="r_ac1b3b8109c526f4f76308efff8359820"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1b3b8109c526f4f76308efff8359820">GetCupName</a> ()</td></tr>
@@ -183,21 +192,25 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abfe11f8fda296f0183c52efa300791b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b2c385e3bdc3d7fb07dfb33495bfd19" id="r_a8b2c385e3bdc3d7fb07dfb33495bfd19"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b2c385e3bdc3d7fb07dfb33495bfd19">PreviousCup</a> ()</td></tr>
 <tr class="separator:a8b2c385e3bdc3d7fb07dfb33495bfd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab721025b6bc57ab1d7c9c603cae3f001" id="r_ab721025b6bc57ab1d7c9c603cae3f001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab721025b6bc57ab1d7c9c603cae3f001">SetCourseFromCup</a> ()</td></tr>
-<tr class="separator:ab721025b6bc57ab1d7c9c603cae3f001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b155915655e5a34123a28b2b25a0b8" id="r_ab7b155915655e5a34123a28b2b25a0b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7b155915655e5a34123a28b2b25a0b8">SetTrackFromCup</a> ()</td></tr>
+<tr class="separator:ab7b155915655e5a34123a28b2b25a0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a425b754be9118b76205c27066b23c8d7" id="r_a425b754be9118b76205c27066b23c8d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorld.html">World</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a425b754be9118b76205c27066b23c8d7">GetWorld</a> (void)</td></tr>
 <tr class="separator:a425b754be9118b76205c27066b23c8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29a67039d24a02b2a9b5c79c3f7bb4a8" id="r_a29a67039d24a02b2a9b5c79c3f7bb4a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29a67039d24a02b2a9b5c79c3f7bb4a8">ClearWorld</a> (void)</td></tr>
-<tr class="separator:a29a67039d24a02b2a9b5c79c3f7bb4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade602b7d3351de3212ebf045e95f3d0c" id="r_ade602b7d3351de3212ebf045e95f3d0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade602b7d3351de3212ebf045e95f3d0c">SetCourse</a> (const char *)</td></tr>
-<tr class="separator:ade602b7d3351de3212ebf045e95f3d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add5fc20932442ff63d458ebe5903f913" id="r_add5fc20932442ff63d458ebe5903f913"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:add5fc20932442ff63d458ebe5903f913"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#add5fc20932442ff63d458ebe5903f913">SetCourseByType</a> ()</td></tr>
-<tr class="separator:add5fc20932442ff63d458ebe5903f913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a989f32e1e25a1d68afabb303b28c8038" id="r_a989f32e1e25a1d68afabb303b28c8038"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a989f32e1e25a1d68afabb303b28c8038">NextCourse</a> (void)</td></tr>
-<tr class="separator:a989f32e1e25a1d68afabb303b28c8038"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b59f53cd244c09959e5f7606b8a447d" id="r_a6b59f53cd244c09959e5f7606b8a447d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b59f53cd244c09959e5f7606b8a447d">PreviousCourse</a> (void)</td></tr>
-<tr class="separator:a6b59f53cd244c09959e5f7606b8a447d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68c87061bbbd6d702596d0c0a837a7ac" id="r_a68c87061bbbd6d702596d0c0a837a7ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68c87061bbbd6d702596d0c0a837a7ac">CleanWorld</a> (void)</td></tr>
+<tr class="separator:a68c87061bbbd6d702596d0c0a837a7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b13a09f655cc1fc4e660233433945c" id="r_a76b13a09f655cc1fc4e660233433945c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76b13a09f655cc1fc4e660233433945c">GetTrack</a> ()</td></tr>
+<tr class="separator:a76b13a09f655cc1fc4e660233433945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c75986da50aa86e5f4f233152e4b53" id="r_a18c75986da50aa86e5f4f233152e4b53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18c75986da50aa86e5f4f233152e4b53">SetCurrentTrack</a> (std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt; track)</td></tr>
+<tr class="separator:a18c75986da50aa86e5f4f233152e4b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7045465542726bb370c6103231bdb62" id="r_aa7045465542726bb370c6103231bdb62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7045465542726bb370c6103231bdb62">SetTrack</a> (const char *)</td></tr>
+<tr class="separator:aa7045465542726bb370c6103231bdb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc955a39e2388e6eff26ca9f464cc99" id="r_a5fc955a39e2388e6eff26ca9f464cc99"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a5fc955a39e2388e6eff26ca9f464cc99"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5fc955a39e2388e6eff26ca9f464cc99">SetTrackByType</a> ()</td></tr>
+<tr class="separator:a5fc955a39e2388e6eff26ca9f464cc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b32996766e380950452206ac452836" id="r_a46b32996766e380950452206ac452836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b32996766e380950452206ac452836">NextTrack</a> (void)</td></tr>
+<tr class="separator:a46b32996766e380950452206ac452836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85a6495f8137e6d68e37af59a62e003" id="r_af85a6495f8137e6d68e37af59a62e003"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af85a6495f8137e6d68e37af59a62e003">PreviousTrack</a> (void)</td></tr>
+<tr class="separator:af85a6495f8137e6d68e37af59a62e003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab29872febb58768cf17e6f91d6e0b4b8" id="r_ab29872febb58768cf17e6f91d6e0b4b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTrainCrossing.html">TrainCrossing</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab29872febb58768cf17e6f91d6e0b4b8">AddCrossing</a> (<a class="el" href="common__structs_8h.html#a5290523279339ea495248ab3a36cb46e">Vec3f</a> position, u32 waypointMin, u32 waypointMax, f32 approachRadius, f32 exitRadius)</td></tr>
 <tr class="separator:ab29872febb58768cf17e6f91d6e0b4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -205,14 +218,12 @@ Public Member Functions</h2></td></tr>
 Data Fields</h2></td></tr>
 <tr class="memitem:ae9ce07f0239d6ddc4485d1a285cb3a14" id="r_ae9ce07f0239d6ddc4485d1a285cb3a14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structWorld_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9ce07f0239d6ddc4485d1a285cb3a14">Mtx</a></td></tr>
 <tr class="separator:ae9ce07f0239d6ddc4485d1a285cb3a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb517f8fa4e9edfbfd8ae1866c37975b" id="r_acb517f8fa4e9edfbfd8ae1866c37975b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classCourse.html">Course</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb517f8fa4e9edfbfd8ae1866c37975b">CurrentCourse</a></td></tr>
-<tr class="separator:acb517f8fa4e9edfbfd8ae1866c37975b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e0f7eaac70026f4a8f374eb9aacdc68" id="r_a4e0f7eaac70026f4a8f374eb9aacdc68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCup.html">Cup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e0f7eaac70026f4a8f374eb9aacdc68">CurrentCup</a></td></tr>
-<tr class="separator:a4e0f7eaac70026f4a8f374eb9aacdc68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5867ae6125d8a60a2053bf49ad7e229" id="r_aa5867ae6125d8a60a2053bf49ad7e229"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCup.html">Cup</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5867ae6125d8a60a2053bf49ad7e229">Cups</a></td></tr>
 <tr class="separator:aa5867ae6125d8a60a2053bf49ad7e229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46358439ccabf4a7c7901a675a081b46" id="r_a46358439ccabf4a7c7901a675a081b46"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46358439ccabf4a7c7901a675a081b46">CupIndex</a> = 1</td></tr>
 <tr class="separator:a46358439ccabf4a7c7901a675a081b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2a65519fdf369d3e8622dcc07a9032" id="r_a6f2a65519fdf369d3e8622dcc07a9032"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classGameCamera.html">GameCamera</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f2a65519fdf369d3e8622dcc07a9032">Cameras</a></td></tr>
+<tr class="separator:a6f2a65519fdf369d3e8622dcc07a9032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5746fa7d0805b02b036c56a56a44b5b3" id="r_a5746fa7d0805b02b036c56a56a44b5b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classStaticMeshActor.html">StaticMeshActor</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5746fa7d0805b02b036c56a56a44b5b3">StaticMeshActors</a></td></tr>
 <tr class="separator:a5746fa7d0805b02b036c56a56a44b5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a801d7b9b95a56aad4e6c850e7b3f04f2" id="r_a801d7b9b95a56aad4e6c850e7b3f04f2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classAActor.html">AActor</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a801d7b9b95a56aad4e6c850e7b3f04f2">Actors</a></td></tr>
@@ -227,10 +238,19 @@ Data Fields</h2></td></tr>
 <tr class="separator:a68c5fac3f48b4df5f1204a19c4f5a083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619ee78eb9a2237f2a2eb5ef387d67b2" id="r_a619ee78eb9a2237f2a2eb5ef387d67b2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrainCrossing.html">TrainCrossing</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a619ee78eb9a2237f2a2eb5ef387d67b2">Crossings</a></td></tr>
 <tr class="separator:a619ee78eb9a2237f2a2eb5ef387d67b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a598535aed98bd024616b0df887b6d714" id="r_a598535aed98bd024616b0df887b6d714"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classCourse.html">Course</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a598535aed98bd024616b0df887b6d714">Courses</a></td></tr>
-<tr class="separator:a598535aed98bd024616b0df887b6d714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f92c3277e92005a361174b0a14c98a" id="r_a32f92c3277e92005a361174b0a14c98a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32f92c3277e92005a361174b0a14c98a">CourseIndex</a> = 0</td></tr>
-<tr class="separator:a32f92c3277e92005a361174b0a14c98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467282a14d34a38470f51ed90eff5cdd" id="r_a467282a14d34a38470f51ed90eff5cdd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a467282a14d34a38470f51ed90eff5cdd">Tracks</a></td></tr>
+<tr class="separator:a467282a14d34a38470f51ed90eff5cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1a71597598ec585b7ad3defeeafee8" id="r_a5e1a71597598ec585b7ad3defeeafee8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e1a71597598ec585b7ad3defeeafee8">TrackIndex</a> = 0</td></tr>
+<tr class="separator:a5e1a71597598ec585b7ad3defeeafee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7ca80d21d766912269f09e4e837a8f88" id="r_a7ca80d21d766912269f09e4e837a8f88"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ca80d21d766912269f09e4e837a8f88">mTrack</a></td></tr>
+<tr class="separator:a7ca80d21d766912269f09e4e837a8f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0f7eaac70026f4a8f374eb9aacdc68" id="r_a4e0f7eaac70026f4a8f374eb9aacdc68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCup.html">Cup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e0f7eaac70026f4a8f374eb9aacdc68">CurrentCup</a></td></tr>
+<tr class="separator:a4e0f7eaac70026f4a8f374eb9aacdc68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdeb8c0608b0f76c2b2f2595c509b8b7" id="r_acdeb8c0608b0f76c2b2f2595c509b8b7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; RaceManager &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdeb8c0608b0f76c2b2f2595c509b8b7">RaceManagerInstance</a></td></tr>
+<tr class="separator:acdeb8c0608b0f76c2b2f2595c509b8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa39d4e6f714a7a3691ac0c656f5e8a8" name="afa39d4e6f714a7a3691ac0c656f5e8a8"></a>
@@ -258,7 +278,7 @@ Data Fields</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_afa39d4e6f714a7a3691ac0c656f5e8a8_icgraph.svg" width="290" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_afa39d4e6f714a7a3691ac0c656f5e8a8_icgraph.svg" width="467" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -280,7 +300,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_a8c73fba541a5817fff65147ba47cd827_cgraph.svg" width="298" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_a8c73fba541a5817fff65147ba47cd827_cgraph.svg" width="467" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -340,23 +360,6 @@ Here is the call graph for this function:</div>
           <td class="memname">struct <a class="el" href="structActor.html">Actor</a> * World::AddBaseActor </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af1339506213a8f4ea268d8b339592e76" name="af1339506213a8f4ea268d8b339592e76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1339506213a8f4ea268d8b339592e76">&#9670;&#160;</a></span>AddCourse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classCourse.html">Course</a> &gt; World::AddCourse </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classCourse.html">Course</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>course</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -492,14 +495,31 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a29a67039d24a02b2a9b5c79c3f7bb4a8" name="a29a67039d24a02b2a9b5c79c3f7bb4a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29a67039d24a02b2a9b5c79c3f7bb4a8">&#9670;&#160;</a></span>ClearWorld()</h2>
+<a id="ac6962157728499e138c5aab126ebbe14" name="ac6962157728499e138c5aab126ebbe14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6962157728499e138c5aab126ebbe14">&#9670;&#160;</a></span>AddTrack()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void World::ClearWorld </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt; World::AddTrack </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>track</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68c87061bbbd6d702596d0c0a837a7ac" name="a68c87061bbbd6d702596d0c0a837a7ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68c87061bbbd6d702596d0c0a837a7ac">&#9670;&#160;</a></span>CleanWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::CleanWorld </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -509,7 +529,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_a29a67039d24a02b2a9b5c79c3f7bb4a8_cgraph.svg" width="322" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_a68c87061bbbd6d702596d0c0a837a7ac_cgraph.svg" width="304" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_a68c87061bbbd6d702596d0c0a837a7ac_icgraph.svg" width="315" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -657,6 +682,31 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a37da13d556bec8e05d87b87942bdb19e" name="a37da13d556bec8e05d87b87942bdb19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37da13d556bec8e05d87b87942bdb19e">&#9670;&#160;</a></span>GetCurrentCup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCup.html">Cup</a> * World::GetCurrentCup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa3208927564d9be072263fc4fc6a5d3d" name="aa3208927564d9be072263fc4fc6a5d3d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3208927564d9be072263fc4fc6a5d3d">&#9670;&#160;</a></span>GetObjectByIndex()</h2>
 
@@ -670,6 +720,56 @@ Here is the caller graph for this function:</div>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa31aec713e3a54e22e4406e4442107d" name="afa31aec713e3a54e22e4406e4442107d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa31aec713e3a54e22e4406e4442107d">&#9670;&#160;</a></span>GetRaceManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RaceManager &amp; World::GetRaceManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76b13a09f655cc1fc4e660233433945c" name="a76b13a09f655cc1fc4e660233433945c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b13a09f655cc1fc4e660233433945c">&#9670;&#160;</a></span>GetTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt; World::GetTrack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -696,23 +796,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a989f32e1e25a1d68afabb303b28c8038" name="a989f32e1e25a1d68afabb303b28c8038"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a989f32e1e25a1d68afabb303b28c8038">&#9670;&#160;</a></span>NextCourse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void World::NextCourse </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="abfe11f8fda296f0183c52efa300791b6" name="abfe11f8fda296f0183c52efa300791b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abfe11f8fda296f0183c52efa300791b6">&#9670;&#160;</a></span>NextCup()</h2>
 
@@ -735,14 +818,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a6b59f53cd244c09959e5f7606b8a447d" name="a6b59f53cd244c09959e5f7606b8a447d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b59f53cd244c09959e5f7606b8a447d">&#9670;&#160;</a></span>PreviousCourse()</h2>
+<a id="a46b32996766e380950452206ac452836" name="a46b32996766e380950452206ac452836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b32996766e380950452206ac452836">&#9670;&#160;</a></span>NextTrack()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void World::PreviousCourse </td>
+          <td class="memname">void World::NextTrack </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -774,6 +857,23 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="af85a6495f8137e6d68e37af59a62e003" name="af85a6495f8137e6d68e37af59a62e003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85a6495f8137e6d68e37af59a62e003">&#9670;&#160;</a></span>PreviousTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::PreviousTrack </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1b0c4b7543e78126675c38cd900c57c4" name="a1b0c4b7543e78126675c38cd900c57c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b0c4b7543e78126675c38cd900c57c4">&#9670;&#160;</a></span>Reset()</h2>
 
@@ -784,85 +884,6 @@ Here is the call graph for this function:</div>
           <td class="memname">void World::Reset </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ade602b7d3351de3212ebf045e95f3d0c" name="ade602b7d3351de3212ebf045e95f3d0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade602b7d3351de3212ebf045e95f3d0c">&#9670;&#160;</a></span>SetCourse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void World::SetCourse </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Todo</a></b></dt><dd>Use content dictionary instead </dd></dl>
-
-</div>
-</div>
-<a id="add5fc20932442ff63d458ebe5903f913" name="add5fc20932442ff63d458ebe5903f913"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add5fc20932442ff63d458ebe5903f913">&#9670;&#160;</a></span>SetCourseByType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void World::SetCourseByType </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab721025b6bc57ab1d7c9c603cae3f001" name="ab721025b6bc57ab1d7c9c603cae3f001"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab721025b6bc57ab1d7c9c603cae3f001">&#9670;&#160;</a></span>SetCourseFromCup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void World::SetCourseFromCup </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a79d19c3026b71f775446e2ea2dce580f" name="a79d19c3026b71f775446e2ea2dce580f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79d19c3026b71f775446e2ea2dce580f">&#9670;&#160;</a></span>SetCup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void World::SetCup </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classCup.html">Cup</a> *</td>          <td class="paramname"><span class="paramname"><em>cup</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -887,6 +908,152 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a26047598532e37305e3e096a0d0c2ecd" name="a26047598532e37305e3e096a0d0c2ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26047598532e37305e3e096a0d0c2ecd">&#9670;&#160;</a></span>SetCurrentCup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::SetCurrentCup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCup.html">Cup</a> *</td>          <td class="paramname"><span class="paramname"><em>cup</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18c75986da50aa86e5f4f233152e4b53" name="a18c75986da50aa86e5f4f233152e4b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c75986da50aa86e5f4f233152e4b53">&#9670;&#160;</a></span>SetCurrentTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::SetCurrentTrack </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classTrack.html">Track</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>track</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_a18c75986da50aa86e5f4f233152e4b53_cgraph.svg" width="335" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_a18c75986da50aa86e5f4f233152e4b53_icgraph.svg" width="410" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a68af48b64d5d719ff33afa8a0554ce28" name="a68af48b64d5d719ff33afa8a0554ce28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68af48b64d5d719ff33afa8a0554ce28">&#9670;&#160;</a></span>SetRaceManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::SetRaceManager </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; RaceManager &gt;</td>          <td class="paramname"><span class="paramname"><em>manager</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7045465542726bb370c6103231bdb62" name="aa7045465542726bb370c6103231bdb62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7045465542726bb370c6103231bdb62">&#9670;&#160;</a></span>SetTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::SetTrack </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Todo</a></b></dt><dd>Use content dictionary instead </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_aa7045465542726bb370c6103231bdb62_cgraph.svg" width="506" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5fc955a39e2388e6eff26ca9f464cc99" name="a5fc955a39e2388e6eff26ca9f464cc99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc955a39e2388e6eff26ca9f464cc99">&#9670;&#160;</a></span>SetTrackByType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::SetTrackByType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_a5fc955a39e2388e6eff26ca9f464cc99_cgraph.svg" width="552" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab7b155915655e5a34123a28b2b25a0b8" name="ab7b155915655e5a34123a28b2b25a0b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b155915655e5a34123a28b2b25a0b8">&#9670;&#160;</a></span>SetTrackFromCup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::SetTrackFromCup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWorld_ab7b155915655e5a34123a28b2b25a0b8_cgraph.svg" width="563" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a86d6ef1e859b7ba76982ec9feb7ff26e" name="a86d6ef1e859b7ba76982ec9feb7ff26e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86d6ef1e859b7ba76982ec9feb7ff26e">&#9670;&#160;</a></span>TickActors()</h2>
 
@@ -895,6 +1062,23 @@ template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void World::TickActors </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa74f5e967e46a14dbc82cf55062d922b" name="aa74f5e967e46a14dbc82cf55062d922b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74f5e967e46a14dbc82cf55062d922b">&#9670;&#160;</a></span>TickCameras()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void World::TickCameras </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -970,28 +1154,14 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a32f92c3277e92005a361174b0a14c98a" name="a32f92c3277e92005a361174b0a14c98a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32f92c3277e92005a361174b0a14c98a">&#9670;&#160;</a></span>CourseIndex</h2>
+<a id="a6f2a65519fdf369d3e8622dcc07a9032" name="a6f2a65519fdf369d3e8622dcc07a9032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2a65519fdf369d3e8622dcc07a9032">&#9670;&#160;</a></span>Cameras</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">size_t World::CourseIndex = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a598535aed98bd024616b0df887b6d714" name="a598535aed98bd024616b0df887b6d714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a598535aed98bd024616b0df887b6d714">&#9670;&#160;</a></span>Courses</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classCourse.html">Course</a>&gt; &gt; World::Courses</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classGameCamera.html">GameCamera</a>*&gt; World::Cameras</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1040,30 +1210,24 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="acb517f8fa4e9edfbfd8ae1866c37975b" name="acb517f8fa4e9edfbfd8ae1866c37975b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb517f8fa4e9edfbfd8ae1866c37975b">&#9670;&#160;</a></span>CurrentCourse</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classCourse.html">Course</a>&gt; World::CurrentCourse</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4e0f7eaac70026f4a8f374eb9aacdc68" name="a4e0f7eaac70026f4a8f374eb9aacdc68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e0f7eaac70026f4a8f374eb9aacdc68">&#9670;&#160;</a></span>CurrentCup</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classCup.html">Cup</a>* World::CurrentCup</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1092,6 +1256,28 @@ template&lt;typename T&gt; </div>
           <td class="memname">std::unordered_map&lt;s32, <a class="el" href="classOLakitu.html">OLakitu</a>*&gt; World::Lakitus</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ca80d21d766912269f09e4e837a8f88" name="a7ca80d21d766912269f09e4e837a8f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca80d21d766912269f09e4e837a8f88">&#9670;&#160;</a></span>mTrack</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classTrack.html">Track</a>&gt; World::mTrack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1139,6 +1325,28 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="acdeb8c0608b0f76c2b2f2595c509b8b7" name="acdeb8c0608b0f76c2b2f2595c509b8b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdeb8c0608b0f76c2b2f2595c509b8b7">&#9670;&#160;</a></span>RaceManagerInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;RaceManager&gt; World::RaceManagerInstance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5746fa7d0805b02b036c56a56a44b5b3" name="a5746fa7d0805b02b036c56a56a44b5b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5746fa7d0805b02b036c56a56a44b5b3">&#9670;&#160;</a></span>StaticMeshActors</h2>
 
@@ -1147,6 +1355,34 @@ template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="classStaticMeshActor.html">StaticMeshActor</a>*&gt; World::StaticMeshActors</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e1a71597598ec585b7ad3defeeafee8" name="a5e1a71597598ec585b7ad3defeeafee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e1a71597598ec585b7ad3defeeafee8">&#9670;&#160;</a></span>TrackIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t World::TrackIndex = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a467282a14d34a38470f51ed90eff5cdd" name="a467282a14d34a38470f51ed90eff5cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467282a14d34a38470f51ed90eff5cdd">&#9670;&#160;</a></span>Tracks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classTrack.html">Track</a>&gt; &gt; World::Tracks</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -31,6 +31,7 @@ var classAText =
     [ "PrintLetter3D", "classAText.html#a70a38a83b1264448d2e25b08cd06f562", null ],
     [ "Refresh", "classAText.html#a95dc1366e8afbf5113357fdb6426f226", null ],
     [ "SetSpawnParams", "classAText.html#ae629b01338490c08b55ac8cf80f3c7c8", null ],
+    [ "SetText", "classAText.html#a4126b6c7023fd999cda64a4c72da05a3", null ],
     [ "SetupVtx", "classAText.html#a32775153b99a75e6aae246788736707c", null ],
     [ "Spawn", "classAText.html#a2f38d1b087146f2510964124efc111f2", null ],
     [ "Tick", "classAText.html#a0d7bf3848c318df5a0f02278aafbb963", null ],

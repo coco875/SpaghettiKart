@@ -1,5 +1,5 @@
 <map id="init_actors_and_load_textures" name="init_actors_and_load_textures">
-<area shape="rect" id="Node000001" title="Loads actor textures, course specific actor textures. Calls to spawn_course_vehicles and place_course..." alt="" coords="2931,794,3087,834"/>
+<area shape="rect" id="Node000001" title="Loads actor textures, track specific actor textures. Calls to spawn_track_vehicles and place_track_ac..." alt="" coords="2931,794,3087,834"/>
 <area shape="rect" id="Node000002" href="$code__800029B0_8c.html#abb524837daa3cac25aa3bca580d4db94" title=" " alt="" coords="2780,776,2883,801"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2917,804,2882,799,2883,793,2917,798"/>
 <area shape="rect" id="Node000003" href="$code__800029B0_8c.html#aca6165112fc92e65ad6477e785a7098c" title=" " alt="" coords="2785,825,2878,851"/>
@@ -73,7 +73,7 @@
 <area shape="poly" id="edge45_Node000025_Node000036" title=" " alt="" coords="933,178,558,214,557,208,933,173"/>
 <area shape="rect" id="Node000037" href="$menu__items_8c.html#a01003958fcc81831bd82f619ae874ac1" title=" " alt="" coords="606,153,727,179"/>
 <area shape="poly" id="edge47_Node000025_Node000037" title=" " alt="" coords="933,169,728,169,728,163,933,163"/>
-<area shape="rect" id="Node000027" href="$code__80280000_8c.html#aa9c130485d39c4a7276605b30db5150e" title=" " alt="" coords="435,12,557,37"/>
+<area shape="rect" id="Node000027" href="$code__80280000_8c.html#ae610920735bc9dad9f2dce878c5a6b32" title=" " alt="" coords="435,12,557,37"/>
 <area shape="poly" id="edge33_Node000026_Node000027" title=" " alt="" coords="592,24,557,25,557,20,592,18"/>
 <area shape="rect" id="Node000029" href="$code__80281C40_8c.html#af6f6a1f0caec6d086a4ab98602a6670e" title=" " alt="" coords="435,68,557,93"/>
 <area shape="poly" id="edge36_Node000026_Node000029" title=" " alt="" coords="620,38,533,70,531,65,618,33"/>

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Loads actor textures, course specific actor textures. Calls to spawn_course_vehicles and place_course...">
+<g id="a_Node000001"><a xlink:title="Loads actor textures, track specific actor textures. Calls to spawn_track_vehicles and place_track_ac...">
 <polygon fill="#999999" stroke="#666666" points="2311,-113.5 2194,-113.5 2194,-83.5 2311,-83.5 2311,-113.5"/>
 <text text-anchor="start" x="2202" y="-101.5" font-family="Helvetica,sans-Serif" font-size="10.00">init_actors_and_load</text>
 <text text-anchor="middle" x="2252.5" y="-90.5" font-family="Helvetica,sans-Serif" font-size="10.00">_textures</text>
@@ -680,7 +680,7 @@
 <!-- Node27 -->
 <g id="Node000027" class="node">
 <title>Node27</title>
-<g id="a_Node000027"><a xlink:href="code__80280000_8c.html#aa9c130485d39c4a7276605b30db5150e" target="_top" xlink:title=" ">
+<g id="a_Node000027"><a xlink:href="code__80280000_8c.html#ae610920735bc9dad9f2dce878c5a6b32" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="413.5,-700 322.5,-700 322.5,-681 413.5,-681 413.5,-700"/>
 <text text-anchor="middle" x="368" y="-688" font-family="Helvetica,sans-Serif" font-size="10.00">func_80280038</text>
 </a>

@@ -1,28 +1,30 @@
 <map id="src/engine/actors/Ship.h" name="src/engine/actors/Ship.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="843,5,1020,31"/>
-<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="193,86,355,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="829,30,616,50,368,81,327,89,326,83,367,76,616,45,829,25"/>
-<area shape="rect" id="Node000007" href="$Ship_8cpp.html" title=" " alt="" coords="379,86,571,111"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="852,36,542,89,541,83,851,30"/>
-<area shape="rect" id="Node000008" href="$Harbour_8cpp.html" title=" " alt="" coords="596,79,739,119"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="881,37,732,81,730,76,879,32"/>
-<area shape="rect" id="Node000009" href="$TestCourse_8cpp.html" title=" " alt="" coords="763,79,905,119"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="908,41,859,81,856,76,905,37"/>
-<area shape="rect" id="Node000010" href="$Editor_8cpp.html" title=" " alt="" coords="929,86,1128,111"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="958,37,1016,84,1013,88,955,41"/>
-<area shape="rect" id="Node000011" href="$Gizmo_8cpp.html" title=" " alt="" coords="1152,86,1356,111"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="992,31,1208,83,1206,89,991,36"/>
-<area shape="rect" id="Node000012" href="$Light_8cpp.html" title=" " alt="" coords="1381,86,1575,111"/>
-<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1034,30,1369,76,1414,83,1413,89,1368,81,1033,35"/>
-<area shape="rect" id="Node000013" href="$ObjectPicker_8cpp.html" title=" " alt="" coords="1600,79,1777,119"/>
-<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1034,23,1286,43,1588,76,1600,78,1599,83,1587,81,1286,48,1033,28"/>
-<area shape="rect" id="Node000003" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="5,167,236,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,120,145,169,142,164,238,115"/>
-<area shape="rect" id="Node000004" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="163,240,385,265"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="277,125,277,240,271,240,271,125"/>
-<area shape="rect" id="Node000005" href="$ContentBrowser_8h.html" title=" " alt="" coords="312,167,519,192"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="308,116,396,164,393,169,306,120"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="382,200,298,242,296,237,379,196"/>
-<area shape="rect" id="Node000006" href="$ImguiUI_8cpp.html" title=" " alt="" coords="409,240,579,265"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="440,199,483,238,479,242,436,203"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1099,5,1277,31"/>
+<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="348,86,511,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1086,28,829,47,676,62,523,81,481,89,481,83,522,76,675,57,829,41,1085,22"/>
+<area shape="rect" id="Node000008" href="$Ship_8cpp.html" title=" " alt="" coords="535,86,727,111"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1086,34,740,81,695,89,694,83,740,76,1085,29"/>
+<area shape="rect" id="Node000009" href="$Editor_8cpp.html" title=" " alt="" coords="751,86,950,111"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1126,36,900,89,899,83,1125,31"/>
+<area shape="rect" id="Node000010" href="$Gizmo_8cpp.html" title=" " alt="" coords="974,86,1178,111"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1161,41,1094,88,1091,84,1158,37"/>
+<area shape="rect" id="Node000011" href="$Light_8cpp.html" title=" " alt="" coords="1203,86,1397,111"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="1218,37,1285,84,1282,88,1215,41"/>
+<area shape="rect" id="Node000012" href="$ObjectPicker_8cpp.html" title=" " alt="" coords="1422,79,1599,119"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1249,31,1434,76,1432,81,1247,36"/>
+<area shape="rect" id="Node000013" href="$Harbour_8cpp.html" title=" " alt="" coords="1623,86,1838,111"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1286,30,1612,76,1660,83,1659,89,1612,81,1285,35"/>
+<area shape="rect" id="Node000014" href="$TestTrack_8cpp.html" title=" " alt="" coords="1863,86,2087,111"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="1291,24,1546,45,1851,76,1904,83,1904,89,1850,81,1545,50,1290,29"/>
+<area shape="rect" id="Node000003" href="$RaceManager_8cpp.html" title=" " alt="" coords="5,167,213,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,117,157,169,155,164,369,112"/>
+<area shape="rect" id="Node000004" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="238,167,469,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="411,123,367,168,363,165,407,119"/>
+<area shape="rect" id="Node000005" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="396,240,617,265"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="452,120,484,165,499,205,507,239,502,240,494,207,479,168,447,123"/>
+<area shape="rect" id="Node000006" href="$ContentBrowser_8h.html" title=" " alt="" coords="545,167,751,192"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="475,113,617,164,615,169,473,118"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="615,200,531,242,529,237,612,196"/>
+<area shape="rect" id="Node000007" href="$ImguiUI_8cpp.html" title=" " alt="" coords="642,240,811,265"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="673,199,716,238,712,242,669,203"/>
 </map>

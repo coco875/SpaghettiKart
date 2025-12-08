@@ -1,18 +1,20 @@
 <map id="src/engine/actors/WarioSign.h" name="src/engine/actors/WarioSign.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="387,5,601,31"/>
-<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="193,86,355,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,38,307,88,305,83,448,33"/>
-<area shape="rect" id="Node000007" href="$WarioSign_8cpp.html" title=" " alt="" coords="379,86,609,111"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="497,44,497,86,491,86,491,44"/>
-<area shape="rect" id="Node000008" href="$WarioStadium_8cpp.html" title=" " alt="" coords="633,79,777,119"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="538,33,655,76,653,81,536,38"/>
-<area shape="rect" id="Node000003" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="5,167,236,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,120,145,169,142,164,238,115"/>
-<area shape="rect" id="Node000004" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="163,240,385,265"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="277,125,277,240,271,240,271,125"/>
-<area shape="rect" id="Node000005" href="$ContentBrowser_8h.html" title=" " alt="" coords="312,167,519,192"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="308,116,396,164,393,169,306,120"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="382,200,298,242,296,237,379,196"/>
-<area shape="rect" id="Node000006" href="$ImguiUI_8cpp.html" title=" " alt="" coords="409,240,579,265"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="440,199,483,238,479,242,436,203"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="542,5,757,31"/>
+<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="348,79,511,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="602,37,466,81,464,76,600,32"/>
+<area shape="rect" id="Node000008" href="$WarioSign_8cpp.html" title=" " alt="" coords="535,79,764,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="652,44,652,79,647,79,647,44"/>
+<area shape="rect" id="Node000009" href="$WarioStadium_8cpp.html" title=" " alt="" coords="789,79,1043,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="706,32,874,76,872,81,705,37"/>
+<area shape="rect" id="Node000003" href="$RaceManager_8cpp.html" title=" " alt="" coords="5,152,213,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="365,110,162,154,161,149,364,104"/>
+<area shape="rect" id="Node000004" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="238,152,469,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="409,115,368,154,364,150,405,111"/>
+<area shape="rect" id="Node000005" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="396,225,617,251"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="454,112,484,151,499,190,507,224,502,226,494,192,479,153,450,115"/>
+<area shape="rect" id="Node000006" href="$ContentBrowser_8h.html" title=" " alt="" coords="545,152,751,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="478,106,613,149,612,154,477,111"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="615,186,531,227,529,223,612,181"/>
+<area shape="rect" id="Node000007" href="$ImguiUI_8cpp.html" title=" " alt="" coords="642,225,811,251"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="673,185,716,223,712,227,669,189"/>
 </map>

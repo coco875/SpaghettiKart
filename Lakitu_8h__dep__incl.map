@@ -1,18 +1,20 @@
 <map id="src/engine/objects/Lakitu.h" name="src/engine/objects/Lakitu.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="380,5,520,45"/>
-<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="193,101,355,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="400,54,299,103,296,98,398,49"/>
-<area shape="rect" id="Node000007" href="$Lakitu_8cpp.html" title=" " alt="" coords="380,93,520,133"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="453,59,453,93,447,93,447,59"/>
-<area shape="rect" id="Node000008" href="$Game_8cpp.html" title=" " alt="" coords="545,101,686,126"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="500,49,595,98,592,103,497,54"/>
-<area shape="rect" id="Node000003" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="5,181,236,207"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,135,145,183,142,179,238,130"/>
-<area shape="rect" id="Node000004" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="163,255,385,280"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="277,140,277,254,271,254,271,140"/>
-<area shape="rect" id="Node000005" href="$ContentBrowser_8h.html" title=" " alt="" coords="312,181,519,207"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="308,130,396,179,393,183,306,135"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="382,215,298,257,296,252,379,210"/>
-<area shape="rect" id="Node000006" href="$ImguiUI_8cpp.html" title=" " alt="" coords="409,255,579,280"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="440,214,483,252,479,256,436,218"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="535,5,675,45"/>
+<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="348,101,511,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="556,54,454,103,452,98,553,49"/>
+<area shape="rect" id="Node000008" href="$Lakitu_8cpp.html" title=" " alt="" coords="535,93,675,133"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="608,59,608,93,603,93,603,59"/>
+<area shape="rect" id="Node000009" href="$Game_8cpp.html" title=" " alt="" coords="700,101,841,126"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="655,49,750,98,747,103,652,54"/>
+<area shape="rect" id="Node000003" href="$RaceManager_8cpp.html" title=" " alt="" coords="5,181,213,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,132,157,184,155,179,369,127"/>
+<area shape="rect" id="Node000004" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="238,181,469,207"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="411,138,367,183,363,179,407,134"/>
+<area shape="rect" id="Node000005" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="396,255,617,280"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="452,135,484,180,499,220,507,254,502,255,494,222,479,183,447,138"/>
+<area shape="rect" id="Node000006" href="$ContentBrowser_8h.html" title=" " alt="" coords="545,181,751,207"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="475,128,617,179,615,184,473,133"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="615,215,531,257,529,252,612,210"/>
+<area shape="rect" id="Node000007" href="$ImguiUI_8cpp.html" title=" " alt="" coords="642,255,811,280"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="673,214,716,252,712,256,669,218"/>
 </map>

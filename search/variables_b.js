@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['kalimari_5fdesert_5fdls_0',['kalimari_desert_dls',['../KalimariDesert_8cpp.html#ae27c3093cc2156a7f3165ad80b80b2cf',1,'kalimari_desert_dls:&#160;course_offsets.c'],['../all__course__offsets_8h.html#ae27c3093cc2156a7f3165ad80b80b2cf',1,'kalimari_desert_dls:&#160;course_offsets.c'],['../kalimari__desert_2course__offsets_8c.html#ade422610a6bb68f156ec72a7291bb7ce',1,'kalimari_desert_dls:&#160;course_offsets.c']]],
-  ['kalimari_5fdesert_5ftextures_1',['kalimari_desert_textures',['../KalimariDesert_8cpp.html#a53c50d68019e888780a8b938078c6980',1,'kalimari_desert_textures:&#160;KalimariDesert.cpp'],['../KalimariDesert_8h.html#a53c50d68019e888780a8b938078c6980',1,'kalimari_desert_textures:&#160;KalimariDesert.cpp']]],
+  ['kalimari_5fdesert_5fdls_0',['kalimari_desert_dls',['../KalimariDesert_8cpp.html#a34bc4781bd8287a2618d0b5e2251544e',1,'kalimari_desert_dls:&#160;course_offsets.c'],['../all__course__offsets_8h.html#ae27c3093cc2156a7f3165ad80b80b2cf',1,'kalimari_desert_dls:&#160;course_offsets.c'],['../kalimari__desert_2course__offsets_8c.html#ade422610a6bb68f156ec72a7291bb7ce',1,'kalimari_desert_dls:&#160;course_offsets.c']]],
+  ['kalimari_5fdesert_5ftextures_1',['kalimari_desert_textures',['../KalimariDesert_8h.html#a53c50d68019e888780a8b938078c6980',1,'KalimariDesert.h']]],
   ['kart_5fpalette_2',['kart_palette',['../structstruct__D__802F1F80.html#ae1d81e0b7c714d963e79980614c64069',1,'struct_D_802F1F80']]],
   ['kartfriction_3',['kartFriction',['../structPlayer.html#a0cbdc77f98b1cad4b2e02834c10c4fec',1,'Player']]],
   ['kartgravity_4',['kartGravity',['../structPlayer.html#a15fb9aa69b30c198243648eb33ba0410',1,'Player']]],
@@ -11,10 +11,11 @@ var searchData=
   ['kartpropulsionstrength_8',['kartPropulsionStrength',['../structPlayer.html#a3c874f89bbbddc704819a22c81f4748a',1,'Player']]],
   ['karts_9',['Karts',['../structWorld_1_1Matrix.html#abfa483739dc61bfa7e520c6158f252d5',1,'World::Matrix']]],
   ['keybase_10',['keyBase',['../structALKeyMap.html#aec1f90a35507d4ec74039b5b480f9014',1,'ALKeyMap']]],
-  ['keymap_11',['keyMap',['../structALSound__s.html#aff53a80677e56bccd8a77015b3fa8c47',1,'ALSound_s']]],
-  ['keymax_12',['keyMax',['../structALKeyMap.html#a4baa8c969cb232cfefd38fa32ee98bde',1,'ALKeyMap']]],
-  ['keymin_13',['keyMin',['../structALKeyMap.html#a423b1ebc7949a62d3bff8cc8a6e26552',1,'ALKeyMap']]],
-  ['koopa_5ftroopa_5fbeach_5fdls_14',['koopa_troopa_beach_dls',['../KoopaTroopaBeach_8cpp.html#a9f075766aa777eed598e36c987005631',1,'KoopaTroopaBeach.cpp']]],
-  ['koopa_5ftroopa_5fbeach_5fdls2_15',['koopa_troopa_beach_dls2',['../course__offsets_8h.html#a69ce56dedc90a6e392b23a2e0f6c95d8',1,'koopa_troopa_beach_dls2:&#160;course_offsets.c'],['../koopa__troopa__beach_2course__offsets_8c.html#a69ce56dedc90a6e392b23a2e0f6c95d8',1,'koopa_troopa_beach_dls2:&#160;course_offsets.c']]],
-  ['koopa_5ftroopa_5fbeach_5ftextures_16',['koopa_troopa_beach_textures',['../KoopaTroopaBeach_8cpp.html#ae74e61e0ad680ea0e147c088b13f81f1',1,'koopa_troopa_beach_textures:&#160;KoopaTroopaBeach.cpp'],['../KoopaTroopaBeach_8h.html#ae74e61e0ad680ea0e147c088b13f81f1',1,'koopa_troopa_beach_textures:&#160;KoopaTroopaBeach.cpp']]]
+  ['keyframeindex_11',['KeyFrameIndex',['../classTourCamera.html#abf41218c2ffa6cab0370ab0432a81118',1,'TourCamera']]],
+  ['keyframeprogress_12',['KeyFrameProgress',['../classTourCamera.html#a2c0ba5e1816615d50cc01aa26b3dcadb',1,'TourCamera']]],
+  ['keymap_13',['keyMap',['../structALSound__s.html#aff53a80677e56bccd8a77015b3fa8c47',1,'ALSound_s']]],
+  ['keymax_14',['keyMax',['../structALKeyMap.html#a4baa8c969cb232cfefd38fa32ee98bde',1,'ALKeyMap']]],
+  ['keymin_15',['keyMin',['../structALKeyMap.html#a423b1ebc7949a62d3bff8cc8a6e26552',1,'ALKeyMap']]],
+  ['koopa_5ftroopa_5fbeach_5fdls2_16',['koopa_troopa_beach_dls2',['../KoopaTroopaBeach_8cpp.html#abf565724b3d9d17c353dfa96a8fcdb4e',1,'koopa_troopa_beach_dls2:&#160;course_offsets.c'],['../koopa__troopa__beach_2course__offsets_8c.html#a69ce56dedc90a6e392b23a2e0f6c95d8',1,'koopa_troopa_beach_dls2:&#160;course_offsets.c']]],
+  ['koopa_5ftroopa_5fbeach_5ftextures_17',['koopa_troopa_beach_textures',['../KoopaTroopaBeach_8h.html#ae74e61e0ad680ea0e147c088b13f81f1',1,'KoopaTroopaBeach.h']]]
 ];

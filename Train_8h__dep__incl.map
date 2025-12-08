@@ -1,37 +1,39 @@
 <map id="src/engine/vehicles/Train.h" name="src/engine/vehicles/Train.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="961,5,1107,45"/>
-<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="193,101,355,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="947,35,687,58,527,75,368,96,327,103,326,98,367,91,527,69,686,52,947,30"/>
-<area shape="rect" id="Node000007" href="$Smoke_8cpp.html" title=" " alt="" coords="380,101,544,126"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="947,40,766,64,556,96,517,103,516,98,555,91,766,59,946,35"/>
-<area shape="rect" id="Node000008" href="$TrainCrossing_8cpp.html" title=" " alt="" coords="568,101,775,126"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="948,50,720,103,719,98,947,44"/>
-<area shape="rect" id="Node000009" href="$Harbour_8cpp.html" title=" " alt="" coords="799,93,941,133"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="987,54,907,96,905,91,985,49"/>
-<area shape="rect" id="Node000010" href="$KalimariDesert_8cpp.html" title=" " alt="" coords="873,181,1024,221"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1021,59,960,182,956,180,1016,56"/>
-<area shape="rect" id="Node000011" href="$KalimariDesert_8h.html" title=" " alt="" coords="1017,93,1160,133"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="1056,56,1079,92,1074,95,1051,58"/>
-<area shape="rect" id="Node000014" href="$TestCourse_8cpp.html" title=" " alt="" coords="1184,93,1327,133"/>
-<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="1096,48,1208,91,1206,96,1094,53"/>
-<area shape="rect" id="Node000015" href="$SceneManager_8cpp.html" title=" " alt="" coords="1351,101,1608,126"/>
-<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="1121,41,1420,98,1419,103,1120,46"/>
-<area shape="rect" id="Node000016" href="$Train_8cpp.html" title=" " alt="" coords="1633,93,1779,133"/>
-<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="1121,31,1348,54,1621,91,1633,93,1632,98,1620,96,1347,59,1121,36"/>
-<area shape="rect" id="Node000017" href="$Properties_8cpp.html" title=" " alt="" coords="1803,101,1987,126"/>
-<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="1121,29,1419,51,1605,69,1792,91,1838,98,1837,103,1791,96,1604,74,1418,56,1121,34"/>
-<area shape="rect" id="Node000003" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="5,189,236,214"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,135,143,191,140,186,240,131"/>
-<area shape="rect" id="Node000004" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="163,269,385,295"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="277,140,277,269,271,269,271,140"/>
-<area shape="rect" id="Node000005" href="$ContentBrowser_8h.html" title=" " alt="" coords="312,189,519,214"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="306,131,398,186,395,191,303,135"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="384,223,296,271,294,267,381,218"/>
-<area shape="rect" id="Node000006" href="$ImguiUI_8cpp.html" title=" " alt="" coords="409,269,579,295"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="439,222,484,267,480,271,435,226"/>
-<area shape="poly" id="edge12_Node000011_Node000010" title=" " alt="" coords="1048,143,981,184,978,179,1045,138"/>
-<area shape="rect" id="Node000012" href="$Game_8cpp.html" title=" " alt="" coords="1049,189,1190,214"/>
-<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="1103,145,1118,187,1113,189,1098,147"/>
-<area shape="rect" id="Node000013" href="$PortMenu_8cpp.html" title=" " alt="" coords="1215,189,1395,214"/>
-<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="1150,136,1277,186,1275,191,1148,141"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1341,5,1488,45"/>
+<area shape="rect" id="Node000002" href="$AllActors_8h.html" title=" " alt="" coords="348,101,511,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1328,32,975,51,750,70,523,96,481,103,480,98,522,91,749,65,975,46,1327,27"/>
+<area shape="rect" id="Node000008" href="$Smoke_8cpp.html" title=" " alt="" coords="535,101,699,126"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1327,35,1052,56,882,74,711,96,670,103,669,98,710,91,881,69,1051,51,1327,29"/>
+<area shape="rect" id="Node000009" href="$TrainCrossing_8cpp.html" title=" " alt="" coords="723,101,930,126"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1328,41,942,96,896,103,895,98,941,91,1327,36"/>
+<area shape="rect" id="Node000010" href="$SceneManager_8cpp.html" title=" " alt="" coords="954,101,1211,126"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1329,51,1128,103,1126,98,1328,46"/>
+<area shape="rect" id="Node000011" href="$Harbour_8cpp.html" title=" " alt="" coords="1235,101,1450,126"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="1392,58,1355,102,1351,98,1388,54"/>
+<area shape="rect" id="Node000012" href="$KalimariDesert_8cpp.html" title=" " alt="" coords="1363,181,1555,221"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1444,55,1456,73,1465,93,1470,116,1471,140,1466,181,1461,181,1465,140,1465,117,1460,94,1452,75,1440,58"/>
+<area shape="rect" id="Node000013" href="$KalimariDesert_8h.html" title=" " alt="" coords="1525,93,1717,133"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1474,48,1577,91,1575,96,1472,53"/>
+<area shape="rect" id="Node000016" href="$TestTrack_8cpp.html" title=" " alt="" coords="1741,101,1965,126"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="1502,41,1795,98,1794,103,1501,46"/>
+<area shape="rect" id="Node000017" href="$Train_8cpp.html" title=" " alt="" coords="1989,93,2136,133"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="1502,32,1719,55,1978,91,1990,93,1989,98,1977,96,1718,60,1501,37"/>
+<area shape="rect" id="Node000018" href="$Properties_8cpp.html" title=" " alt="" coords="2160,101,2344,126"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="1502,29,1790,52,1969,69,2148,91,2194,98,2193,103,2148,96,1968,74,1789,57,1502,35"/>
+<area shape="rect" id="Node000003" href="$RaceManager_8cpp.html" title=" " alt="" coords="5,189,213,214"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,132,153,191,152,186,372,127"/>
+<area shape="rect" id="Node000004" href="$RegisteredActors_8cpp.html" title=" " alt="" coords="238,189,469,214"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="412,138,366,190,362,186,408,135"/>
+<area shape="rect" id="Node000005" href="$ContentBrowser_8cpp.html" title=" " alt="" coords="396,269,617,295"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="451,135,482,180,499,229,508,269,502,270,494,230,478,183,447,138"/>
+<area shape="rect" id="Node000006" href="$ContentBrowser_8h.html" title=" " alt="" coords="545,189,751,214"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="472,129,620,186,618,191,470,134"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="616,223,529,271,526,267,614,218"/>
+<area shape="rect" id="Node000007" href="$ImguiUI_8cpp.html" title=" " alt="" coords="642,269,811,295"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="671,222,717,267,713,271,668,226"/>
+<area shape="poly" id="edge14_Node000013_Node000012" title=" " alt="" coords="1575,142,1496,184,1493,179,1572,137"/>
+<area shape="rect" id="Node000014" href="$Game_8cpp.html" title=" " alt="" coords="1579,189,1720,214"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="1634,145,1648,187,1643,189,1629,147"/>
+<area shape="rect" id="Node000015" href="$PortMenu_8cpp.html" title=" " alt="" coords="1745,189,1925,214"/>
+<area shape="poly" id="edge16_Node000013_Node000015" title=" " alt="" coords="1682,136,1807,186,1805,191,1680,141"/>
 </map>
