@@ -1015,7 +1015,7 @@ void func_802A7728(void) {
         temp_v0 = 0;
     }
 
-    if (gPhysicalFramebuffers[temp_v0] == NULL) {
+    if (NULL == gPhysicalFramebuffers[temp_v0]) {
         return;
     }
 
