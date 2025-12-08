@@ -10,8 +10,8 @@
 #include <limits>
 #include <cmath>
 
-#include <graphic/Fast3D/Fast3dWindow.h>
-#include <graphic/Fast3D/interpreter.h>
+#include <fast/Fast3dWindow.h>
+#include <fast/interpreter.h>
 
 extern "C" {
 #include "common_structs.h"
@@ -62,7 +62,7 @@ FVector ScreenRayTrace() {
 
     Mat4 perspMtx;
     u16 perspNorm;
-    guPerspectiveF(perspMtx, &perspNorm, gCameraZoom[0], OTRGetAspectRatio(), CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
+    guPerspectiveF(perspMtx, &perspNorm, gCameraFOV[0], OTRGetAspectRatio(), CM_GetProps()->NearPersp, CM_GetProps()->FarPersp, 1.0f);
 
     Mat4 inversePerspMtx;
     if (InverseMatrix((float*)&perspMtx, (float*)&inversePerspMtx) != 2) {

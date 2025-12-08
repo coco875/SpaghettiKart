@@ -1,7 +1,7 @@
 #include <libultraship.h>
 #include "World.h"
 #include "Cup.h"
-#include "courses/Course.h"
+#include "tracks/Track.h"
 #include "objects/BombKart.h"
 #include "TrainCrossing.h"
 #include <memory>
@@ -17,11 +17,17 @@ extern "C" {
 #include "defines.h"
 #include "audio/external.h"
 #include "menus.h"
+#include "code_800029B0.h"
 #include "assets/models/common_data.h"
 #include "assets/models/tracks/mario_raceway/mario_raceway_data.h"
 }
 
-std::shared_ptr<Course> CurrentCourse;
+#include "engine/cameras/GameCamera.h"
+#include "engine/cameras/FreeCamera.h"
+#include "engine/cameras/TourCamera.h"
+#include "engine/cameras/LookBehindCamera.h"
+
+std::shared_ptr<Track> mTrack;
 Cup* CurrentCup;
 
 World::World() {
@@ -29,30 +35,30 @@ World::World() {
 }
 
 World::~World() {
-    ClearWorld();
+    CleanWorld();
 }
 
-std::shared_ptr<Course> World::AddCourse(std::shared_ptr<Course> course) {
-    gWorldInstance.Courses.push_back(course);
-    return course;
+std::shared_ptr<Track> World::AddTrack(std::shared_ptr<Track> track) {
+    gWorldInstance.Tracks.push_back(track);
+    return track;
 }
 
 void World::AddCup(Cup* cup) {
     Cups.push_back(cup);
 }
 
-void World::SetCurrentCourse(std::shared_ptr<Course> course) {
-    if (CurrentCourse) {
-        UnLoadCourse();
+void World::SetCurrentTrack(std::shared_ptr<Track> track) {
+    if (mTrack) {
+        UnLoadTrack();
     }
-    if (CurrentCourse == course) {
+    if (mTrack == track) {
         return;
     }
-    CurrentCourse = std::move(course);
+    mTrack = std::move(track);
 }
 
-void World::SetCourseFromCup() {
-    SetCurrentCourse(CurrentCup->GetCourse());
+void World::SetTrackFromCup() {
+    SetCurrentTrack(CurrentCup->GetTrack());
 }
 
 TrainCrossing* World::AddCrossing(Vec3f position, u32 waypointMin, u32 waypointMax, f32 approachRadius,
@@ -108,33 +114,51 @@ void World::SetCurrentCup(Cup* cup) {
     }
 }
 
-void World::SetCourse(const char* name) {
+void World::SetTrack(const char* name) {
     //! @todo Use content dictionary instead
-    for (size_t i = 0; i < Courses.size(); i++) {
-        if (strcmp(Courses[i]->Props.Name, name) == 0) {
-            SetCurrentCourse(Courses[i]);
+    for (size_t i = 0; i < Tracks.size(); i++) {
+        if (strcmp(Tracks[i]->Props.Name, name) == 0) {
+            SetCurrentTrack(Tracks[i]);
             break;
         }
     }
-    std::runtime_error("SetCourse() Course name not found in Courses list");
+    std::runtime_error("[World] [SetTrack()] Track name not found in Track list");
 }
 
-void World::NextCourse() {
-    if (CourseIndex < Courses.size() - 1) {
-        CourseIndex++;
+void World::NextTrack() {
+    if (TrackIndex < Tracks.size() - 1) {
+        TrackIndex++;
     } else {
-        CourseIndex = 0;
+        TrackIndex = 0;
     }
-    gWorldInstance.SetCurrentCourse(Courses[CourseIndex]);
+    gWorldInstance.SetCurrentTrack(Tracks[TrackIndex]);
 }
 
-void World::PreviousCourse() {
-    if (CourseIndex > 0) {
-        CourseIndex--;
+void World::PreviousTrack() {
+    if (TrackIndex > 0) {
+        TrackIndex--;
     } else {
-        CourseIndex = Courses.size() - 1;
+        TrackIndex = Tracks.size() - 1;
     }
-    gWorldInstance.SetCurrentCourse(Courses[CourseIndex]);
+    gWorldInstance.SetCurrentTrack(Tracks[TrackIndex]);
+}
+
+void World::TickCameras() {
+
+    for (size_t i = 0; i < 4; i++) {
+        ScreenContext* screen = &gScreenContexts[i];
+        if (NULL == screen->pendingCamera) { continue; }
+        if (screen->pendingCamera != screen->camera) {
+            screen->camera = screen->pendingCamera;
+            screen->pendingCamera = nullptr;
+        }
+    }
+
+    for (GameCamera* camera : Cameras) {
+        if (camera->IsActive()) {
+            camera->Tick();
+        }
+    }
 }
 
 AActor* World::AddActor(AActor* actor) {
@@ -196,7 +220,7 @@ StaticMeshActor* World::AddStaticMeshActor(std::string name, FVector pos, IRotat
 }
 
 void World::DrawStaticMeshActors() {
-    for (const auto& actor: StaticMeshActors) {
+    for (const auto& actor : StaticMeshActors) {
         actor->Draw();
     }
 }
@@ -266,7 +290,7 @@ Object* World::GetObjectByIndex(size_t index) {
 }
 
 // Deletes all objects from the world
-void World::ClearWorld(void) {
+void World::CleanWorld(void) {
     printf("[Game.cpp] Clean World\n");
     World* world = &gWorldInstance;
     for (auto& actor : world->Actors) {
@@ -297,7 +321,4 @@ void World::ClearWorld(void) {
     gWorldInstance.Objects.clear();
     gWorldInstance.Emitters.clear();
     gWorldInstance.Lakitus.clear();
-
-    gWorldInstance.GetRaceManager().Clean();
-
 }

@@ -7,12 +7,11 @@
 #include "GameExtractor.h"
 #include <cstdio>
 #include <unordered_map>
-#include <Companion.h>
 
 #include <fstream>
 
 #include "Companion.h"
-#include "Context.h"
+#include "ship/Context.h"
 #include "spdlog/spdlog.h"
 #include <port/Engine.h>
 

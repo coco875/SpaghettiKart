@@ -27,7 +27,7 @@ AFallingRock::AFallingRock(SpawnParams params) : AActor(params) {
 
     FVector pos = params.Location.value_or(FVector(0, 0, 0));
     TimerLength = params.Behaviour.value_or(80);
-    Pos[0] = pos.x * gCourseDirection;
+    Pos[0] = pos.x * gTrackDirection;
     Pos[1] = pos.y + 10.0f;
     Pos[2] = pos.z;
     State = _count;
@@ -49,7 +49,7 @@ void AFallingRock::SetSpawnParams(SpawnParams& params) {
 void AFallingRock::Reset() {
     RespawnTimer = TimerLength;
     FVector pos = SpawnPos;
-    Pos[0] = (f32) pos.x * gCourseDirection;
+    Pos[0] = (f32) pos.x * gTrackDirection;
     Pos[1] = (f32) pos.y + 10.0f;
     Pos[2] = (f32) pos.z;
     vec3f_set(Velocity, 0, 0, 0);
@@ -157,7 +157,7 @@ void AFallingRock::Draw(Camera* camera) {
         return;
     }
 
-    height = is_within_render_distance(camera->pos, Pos, camera->rot[1], 400.0f, gCameraZoom[camera - camera1],
+    height = is_within_render_distance(camera->pos, Pos, camera->rot[1], 400.0f, gCameraFOV[camera - camera1],
                                        4000000.0f);
 
     if (CVarGetInteger("gNoCulling", 0) == 1) {

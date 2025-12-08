@@ -1,18 +1,18 @@
 #include "PortMenu.h"
 #include "UIWidgets.h"
 #include "port/Game.h"
-#include "window/gui/GuiMenuBar.h"
-#include "window/gui/GuiElement.h"
+#include "ship/window/gui/GuiMenuBar.h"
+#include "ship/window/gui/GuiElement.h"
 #include <variant>
-#include "StringHelper.h"
+#include "ship/utils/StringHelper.h"
 #include <spdlog/fmt/fmt.h>
 #include <variant>
 #include <tuple>
 #include "ResolutionEditor.h"
 
-#include "courses/Course.h"
-#include "courses/KalimariDesert.h"
-#include "courses/ToadsTurnpike.h"
+#include "engine/tracks/Track.h"
+#include "engine/tracks/KalimariDesert.h"
+#include "engine/tracks/ToadsTurnpike.h"
 
 #ifdef __SWITCH__
 #include <port/switch/SwitchImpl.h>
@@ -358,10 +358,6 @@ void PortMenu::AddEnhancements() {
     AddMenuEntry("Enhancements", "gSettings.Menu.EnhancementsSidebarSection");
     WidgetPath path = { "Enhancements", "General", SECTION_COLUMN_1 };
     AddSidebarEntry("Enhancements", "General", 3);
-    // UIWidgets::WindowButton("Multiplayer", "gMultiplayerWindowEnabled", GameUI::mMultiplayerWindow,
-    //                         { .tooltip = "Shows the multiplayer window" });
-    //     UIWidgets::WindowButton("Freecam", "gFreecam", GameUI::mFreecamWindow,
-    //                             { .tooltip = "Allows you to fly around the course" });
     AddWidget(path, "No multiplayer feature cuts", WIDGET_CVAR_CHECKBOX)
         .CVar("gMultiplayerNoFeatureCuts")
         .Options(CheckboxOptions().Tooltip("Allows full train and jumbotron in multiplayer, etc."));
@@ -403,6 +399,10 @@ void PortMenu::AddEnhancements() {
         .CVar("gShowSpaghettiVersion")
         .Options(CheckboxOptions().Tooltip("Show the Spaghetti Kart version on the Mario Kart menu").DefaultValue(true));
 
+    AddWidget(path, "Enable Look Behind Camera", WIDGET_CVAR_CHECKBOX)
+        .CVar("gLookBehind")
+        .Options(CheckboxOptions().Tooltip("Press C-Left to look behind you"));
+
     AddRulesets();
 
     path = { "Enhancements", "Cheats", SECTION_COLUMN_1 };
@@ -424,6 +424,9 @@ void PortMenu::AddEnhancements() {
     AddWidget(path, "Enable HM64 Labs", WIDGET_CVAR_CHECKBOX)
         .CVar("gEditorEnabled")
         .Callback([](WidgetInfo& info) {
+            if (CVarGetInteger("gEditorEnabled", false) == false) {
+                gIsEditorPaused = false;
+            }
             Ship::Context::GetInstance()->GetWindow()->GetGui()->GetGuiWindow("Tools")->ToggleVisibility();
             Ship::Context::GetInstance()->GetWindow()->GetGui()->GetGuiWindow("Scene Explorer")->ToggleVisibility();
             Ship::Context::GetInstance()->GetWindow()->GetGui()->GetGuiWindow("Content Browser")->ToggleVisibility();
@@ -542,7 +545,7 @@ void PortMenu::AddDevTools() {
                      .DefaultValue(60));
     AddWidget(path, "Render Collision", WIDGET_CVAR_CHECKBOX)
         .CVar("gRenderCollisionMesh")
-        .Options(CheckboxOptions().Tooltip("Renders the collision mesh instead of the course mesh"));
+        .Options(CheckboxOptions().Tooltip("Draws the collision mesh instead of the track mesh"));
 
     path = { "Developer", "Gfx Debugger", SECTION_COLUMN_1 };
     AddSidebarEntry("Developer", "Gfx Debugger", 1);
@@ -572,10 +575,6 @@ void PortMenu::AddDevTools() {
 PortMenu::PortMenu(const std::string& consoleVariable, const std::string& name)
     : Menu(consoleVariable, name, 0, UIWidgets::Colors::LightBlue) {
 }
-
-// bool CheckNetworkConnected(disabledInfo& info) {
-//     return gNetwork.isConnected;
-// }
 
 void PortMenu::InitElement() {
     Ship::Menu::InitElement();

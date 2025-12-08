@@ -4,7 +4,6 @@
 #include <mk64.h>
 #include <common_structs.h>
 #include <defines.h>
-#include <course.h>
 #include <stdio.h>
 #include "../camera.h"
 #include "framebuffer_effects.h"
@@ -18,14 +17,14 @@
 #include "memory.h"
 #include "code_80281780.h"
 #include "collision.h"
-#include "resourcebridge.h"
+#include "libultraship/bridge/resourcebridge.h"
 #include "skybox_and_splitscreen.h"
 #include "courses/all_course_data.h"
 #include "courses/all_course_packed.h"
 #include "courses/all_course_offsets.h"
 #include "port/Game.h"
 #include "engine/Matrix.h"
-#include "engine/courses/Course.h"
+#include "engine/tracks/Track.h"
 
 #include "enhancements/collision_viewer.h"
 
@@ -54,7 +53,7 @@ s32 func_80290C20(Camera* camera) {
     return 0;
 }
 
-void parse_course_displaylists(TrackSections* asset) {
+void parse_track_displaylists(TrackSections* asset) {
     TrackSections* section = (TrackSections*) asset;
 
     while (section->crc != 0) {
@@ -89,7 +88,7 @@ void parse_course_displaylists(TrackSections* asset) {
 
 extern u32 isFlycam;
 
-void render_course_segments(const char* addr[], struct UnkStruct_800DC5EC* arg1) {
+void render_track_sections(const char* addr[], ScreenContext* arg1) {
     Player* player = arg1->player;
     Camera* camera = arg1->camera;
     s16 direction;
@@ -126,7 +125,7 @@ void render_course_segments(const char* addr[], struct UnkStruct_800DC5EC* arg1)
     }
     arg1->playerDirection = direction;
 
-    if (D_80152300[camera - camera1] == 1) {
+    if (camera->mode == 1) {
         sp1E = get_track_section_id(camera->collision.meshIndexZX);
         temp_v0_3 = get_track_section_id(player->collision.meshIndexZX);
         index = sp1E - temp_v0_3;
@@ -191,7 +190,7 @@ void render_course_segments(const char* addr[], struct UnkStruct_800DC5EC* arg1)
     if (CVarGetInteger("gDisableLod", 1) == 1 && (IsBowsersCastle()) &&
         (index < 20 || index > 99)) { // always render higher version of bowser statue
         gDisplayListHead--;
-        gSPDisplayList(gDisplayListHead++, d_course_bowsers_castle_dl_9148); // use credit version of the course
+        gSPDisplayList(gDisplayListHead++, d_course_bowsers_castle_dl_9148); // use credit version of the track
     }
 }
 
@@ -200,9 +199,9 @@ void func_80291198(void) {
     gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_mario_raceway_packed_dl_1140); //
 }
 
-void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
+void func_8029122C(ScreenContext* screen, s32 playerId) {
     UNUSED s32 pad;
-    Player* player = arg0->player;
+    Player* player = screen->player;
     Mat4 matrix;
     Vec3f vector;
     u16 pathCounter;
@@ -210,38 +209,20 @@ void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
     s16 playerDirection;
 
     init_rdp();
-    pathCounter = (u16) arg0->pathCounter;
-    cameraRot = (u16) arg0->camera->rot[1];
-    playerDirection = arg0->playerDirection;
+    pathCounter = (u16) screen->pathCounter;
+    cameraRot = (u16) screen->camera->rot[1];
+    playerDirection = screen->playerDirection;
 
     // This pushes the camera matrices to the top of the stack.
     // It does not appear to really do anything.
-    // Perhaps they thought it was necessary to set the camera back to projection mode since rainbow road uses model
-    // mode. But that issue should be cleared up in render_screens() already.
-    switch (playerId) {
-        case PLAYER_ONE:
-            size_t playerIdx = PLAYER_ONE;
-            if (CVarGetInteger("gFreecam", 0) == true) {
-                playerIdx = CAMERA_FREECAM;
-            }
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(playerIdx), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(playerIdx), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-            break;
-        case PLAYER_TWO:
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_TWO), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_TWO), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-            break;
-        case PLAYER_THREE:
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_THREE), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_THREE), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-            break;
-        case PLAYER_FOUR:
-            gSPMatrix(gDisplayListHead++, GetPerspMatrix(PLAYER_FOUR), G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-            gSPMatrix(gDisplayListHead++, GetLookAtMatrix(PLAYER_FOUR), G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
-            break;
-    }
+    // Perhaps they thought it was necessary to set the camera back to projection mode since rainbow road uses model mode.
+    // But that issue should be cleared up in render_screens() already.
+    gSPMatrix(gDisplayListHead++, screen->camera->perspectiveMatrix,
+                G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
+    gSPMatrix(gDisplayListHead++, screen->camera->lookAtMatrix,
+                G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
 
-    FrameInterpolation_RecordOpenChild("track_water", playerId);
+    FrameInterpolation_RecordOpenChild("track_water", screen->camera->cameraId);
 
     mtxf_identity(matrix);
     if (gIsMirrorMode != 0) {
@@ -251,29 +232,13 @@ void func_8029122C(struct UnkStruct_800DC5EC* arg0, s32 playerId) {
     }
     render_set_position(matrix, 0);
 
-    CM_DrawWater(arg0, pathCounter, cameraRot, playerDirection);
+    CM_DrawWater(screen, pathCounter, cameraRot, playerDirection);
     FrameInterpolation_RecordCloseChild();
 }
 
-void render_credits(void) {
-    CM_RenderCredits();
-}
-
-void render_course(struct UnkStruct_800DC5EC* arg0) {
+void render_track(ScreenContext* screen) {
     set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
-
-    // Freecam priority renders collision.
-    if (CVarGetInteger("gRenderCollisionMesh", 0) == true) {
-        render_collision();
-        return;
-    }
-
-    if (creditsRenderMode) {
-        render_credits();
-        return;
-    }
-
-    CM_RenderCourse(arg0);
+    CM_DrawTrack(screen);
 }
 
 void func_80295BF8(s32 playerIndex) {
@@ -292,11 +257,11 @@ void func_80295BF8(s32 playerIndex) {
 
 void func_80295C6C(void) {
     gNextFreeMemoryAddress += ALIGN16(gCollisionMeshCount * sizeof(CollisionTriangle));
-    gCourseMaxX += 20;
-    gCourseMaxZ += 20;
-    gCourseMinX += -20;
-    gCourseMinZ += -20;
-    gCourseMinY += -20;
+    gTrackMaxX += 20;
+    gTrackMaxZ += 20;
+    gTrackMinX += -20;
+    gTrackMinZ += -20;
+    gTrackMinY += -20;
 
     gCollisionIndices = (u16*) gNextFreeMemoryAddress;
     generate_collision_grid();
@@ -311,9 +276,6 @@ UNUSED void func_80295D50(s16 arg0, s16 arg1) {
 void func_80295D6C(void) {
     D_8015F6F4 = 3000;
     D_8015F6F6 = -3000;
-}
-
-void course_init(void) {
 }
 
 void func_802966A0(void) {

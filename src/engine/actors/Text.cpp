@@ -182,7 +182,7 @@ void AText::Draw(Camera* camera) {
     }
 
     f32 distance = is_within_render_distance(camera->pos, (float*)&Pos[0], camera->rot[1], Close,
-                                             gCameraZoom[camera - camera1], Far);
+                                             gCameraFOV[camera - camera1], Far);
 
     if (distance == -1.0f) {
         Dist = DistanceProps::TOO_FAR;
@@ -372,6 +372,7 @@ void AText::DrawText3D(Camera* camera) { // Based on func_80095BD0
                 gSPDisplayList(gDisplayListHead++, (Gfx*)D_02007818);
                 break;
         }
+
         //printf("tex texture %p width %d height %d mode %d col %f\n", tex.Texture, tex.width, tex.height, tex.mode, tex.column);
         gDPLoadTextureTile_4b(gDisplayListHead++, (Gfx*)tex.Texture, G_IM_FMT_I, tex.width, 0, 0, 0, tex.width, tex.height + 2, 0,
                             G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOMASK, G_TX_NOLOD,

@@ -17,7 +17,7 @@
 #include "memory.h"
 
 #include "engine/Matrix.h"
-#include "engine/courses/Course.h"
+#include "engine/tracks/Track.h"
 #include "port/Game.h"
 
 struct UnkStruct80287560 {
@@ -55,7 +55,7 @@ extern Gfx D_80284F70[];
 extern Gfx D_80284EE0[];
 
 void func_80281D00(void) {
-    Camera* camera = &cameras[0];
+    Camera* camera = gScreenOneCtx->camera;
     UNUSED s32 pad[3];
     u16 perspNorm;
     Mat4 matrix;
@@ -74,22 +74,23 @@ void func_80281D00(void) {
     }
     func_8028150C();
     gSPSetGeometryMode(gDisplayListHead++, G_ZBUFFER | G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH);
-    guPerspective(GetPerspMatrix(0), &perspNorm, gCameraZoom[0], gScreenAspect, CM_GetProps()->NearPersp, CM_GetProps()->FarPersp,
+    guPerspective(camera->perspectiveMatrix, &perspNorm, gCameraFOV[0], gScreenAspect, CM_GetProps()->NearPersp, CM_GetProps()->FarPersp,
                   1.0f);
     gSPPerspNormalize(gDisplayListHead++, perspNorm);
-    gSPMatrix(gDisplayListHead++, GetPerspMatrix(0),
+    gSPMatrix(gDisplayListHead++, camera->perspectiveMatrix,
               G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_PROJECTION);
-    guLookAt(GetLookAtMatrix(0), camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
+    guLookAt(camera->lookAtMatrix, camera->pos[0], camera->pos[1], camera->pos[2], camera->lookAt[0],
              camera->lookAt[1], camera->lookAt[2], camera->up[0], camera->up[1], camera->up[2]);
-    gSPMatrix(gDisplayListHead++, GetLookAtMatrix(0),
+    gSPMatrix(gDisplayListHead++, camera->lookAtMatrix,
               G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
     mtxf_identity(matrix);
     render_set_position(matrix, 0);
+
     gSPDisplayList(gDisplayListHead++, D_80284F70);
-    render_players_on_screen_one();
+    render_players(camera, PLAYER_ONE);
     gSPDisplayList(gDisplayListHead++, VIRTUAL_TO_PHYSICAL2(&D_80284EE0));
     update_actors_loop();
-    render_object(RENDER_SCREEN_MODE_1P_PLAYER_ONE);
+    render_object(gScreenOneCtx);
     func_80021B0C();
     gSPDisplayList(gDisplayListHead++, VIRTUAL_TO_PHYSICAL2(&D_80284EE0));
     func_80093F10();

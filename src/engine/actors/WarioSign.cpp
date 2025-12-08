@@ -21,7 +21,7 @@ AWarioSign::AWarioSign(const SpawnParams& params) : AActor(params) {
     Speed = params.Speed.value_or(182);
 
     FVector pos = params.Location.value_or(FVector(0, 0, 0));
-    Pos[0] = pos.x * gCourseDirection;
+    Pos[0] = pos.x * gTrackDirection;
     Pos[1] = pos.y;
     Pos[2] = pos.z;
 
@@ -47,7 +47,7 @@ void AWarioSign::Tick() {
 void AWarioSign::Draw(Camera *camera) {
     Mat4 sp38;
     f32 unk =
-        is_within_render_distance(camera->pos, Pos, camera->rot[1], 0, gCameraZoom[camera - camera1], 16000000.0f);
+        is_within_render_distance(camera->pos, Pos, camera->rot[1], 0, gCameraFOV[camera - camera1], 16000000.0f);
 
     if (CVarGetInteger("gNoCulling", 0) == 1) {
         unk = MAX(unk, 0.0f);

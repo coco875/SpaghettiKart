@@ -93,11 +93,11 @@ void func_802818BC(void) {
 }
 
 void setup_podium_ceremony(void) {
-    Camera* camera = &cameras[0];
+    Vec3f spawn = {0, 0, 0};
 
     clear_D_802874D8_actors();
 
-    gCurrentCourseId = COURSE_ROYAL_RACEWAY;
+    gCurrentCourseId = TRACK_ROYAL_RACEWAY;
     SelectPodiumCeremony();
     D_800DC5B4 = (u16) 1;
     set_mirror_mode(0);
@@ -105,27 +105,25 @@ void setup_podium_ceremony(void) {
     D_80287554 = 0;
     func_802A4D18();
     set_screen();
-    camera->unk_B4 = 60.0f;
-    gCameraZoom[0] = 60.0f;
-    D_800DC5EC->screenWidth = SCREEN_WIDTH;
-    D_800DC5EC->screenHeight = SCREEN_HEIGHT;
-    D_800DC5EC->screenStartX = 160;
-    D_800DC5EC->screenStartY = 120;
+    gScreenOneCtx->screenWidth = SCREEN_WIDTH;
+    gScreenOneCtx->screenHeight = SCREEN_HEIGHT;
+    gScreenOneCtx->screenStartX = SCREEN_WIDTH / 2;
+    gScreenOneCtx->screenStartY = SCREEN_HEIGHT / 2;
     gScreenModeSelection = SCREEN_MODE_1P;
     gNextFreeMemoryAddress = gFreeMemoryResetAnchor;
     gActiveScreenMode = SCREEN_MODE_1P;
     gModeSelection = GRAND_PRIX;
-    load_course(gCurrentCourseId);
+    load_track(gCurrentCourseId);
     gFreeMemoryCourseAnchor = (s32) gNextFreeMemoryAddress;
     gWaterLevel = -2000.0f;
 
-    gCourseMinX = -0x15A1;
-    gCourseMinY = -0x15A1;
-    gCourseMinZ = -0x15A1;
+    gTrackMinX = -0x15A1;
+    gTrackMinY = -0x15A1;
+    gTrackMinZ = -0x15A1;
 
-    gCourseMaxX = 0x15A1;
-    gCourseMaxY = 0x15A1;
-    gCourseMaxZ = 0x15A1;
+    gTrackMaxX = 0x15A1;
+    gTrackMaxY = 0x15A1;
+    gTrackMaxZ = 0x15A1;
 
     D_8015F59C = 0;
     D_8015F5A0 = 0;
@@ -156,7 +154,12 @@ void setup_podium_ceremony(void) {
     func_80295C6C();
     debug_switch_character_ceremony_cutscene();
     func_802818BC();
-    func_8003D080();
+    CM_CleanCameras();
+    spawn_players_and_cameras();
+    gScreenOneCtx->camera->renderMode = RENDER_FULL_SCENE;
+    gScreenOneCtx->camera->unk_B4 = 60.0f;
+    gCameraFOV[0] = 60.0f;
+    load_kart_textures();
     init_hud();
     func_8001C05C();
     balloons_and_fireworks_init();
