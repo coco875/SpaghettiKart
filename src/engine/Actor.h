@@ -5,8 +5,6 @@
 #include "engine/editor/EditorMath.h"
 
 extern "C" {
-#include "macros.h"
-#include "main.h"
 #include "camera.h"
 #include "common_structs.h"
 }

@@ -1,8 +1,11 @@
-#ifndef BOMB_KART_H
-#define BOMB_KART_H
+#pragma once
 
 #include <common_structs.h>
 #include <mk64.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #define NUM_BOMB_KARTS_MAX 7
 #define NUM_BOMB_KARTS_VERSUS 7
@@ -58,4 +61,6 @@ extern s32 gIndexObjectBombKart[NUM_BOMB_KARTS_MAX];
 extern BombKart gBombKarts[NUM_BOMB_KARTS_MAX];
 extern Collision gBombKartCollision[NUM_BOMB_KARTS_MAX];
 
+#ifdef __cplusplus
+}
 #endif

@@ -5,7 +5,6 @@ Checks: '
   performance-*,
   bugprone-*,
   cppcoreguidelines-*,
-  llvm-include-order,
 
   -readability-magic-numbers,
   -readability-identifier-length,

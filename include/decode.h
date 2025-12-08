@@ -1,7 +1,11 @@
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
+#pragma once
 
 #include <common_structs.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifdef TARGET_N64
 void mio0decode(u8* arg0, u8* arg1);
 #endif
@@ -9,4 +13,6 @@ void mio0decode(u8* arg0, u8* arg1);
 // Unused mio0decode function.
 void func_80040030(u8* arg0, u8* arg1);
 
+#ifdef __cplusplus
+}
 #endif

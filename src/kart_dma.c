@@ -13,7 +13,6 @@
 #include <assets/textures/karts/bowser_kart.h>
 #include <assets/textures/karts/wario_kart.h>
 #include <assets/textures/karts/donkeykong_kart.h>
-#include "render_player.h"
 
 // Seemingly the largest compressed size for a frame for a given character
 // They seem slightly oversized too, either an alignemnt or safety thing

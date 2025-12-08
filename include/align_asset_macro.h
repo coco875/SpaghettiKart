@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 bool GameEngine_OTRSigCheck(const char* imgData);
 
 #if defined(_WIN32)
@@ -12,3 +16,7 @@ bool GameEngine_OTRSigCheck(const char* imgData);
     (path == NULL ? NULL \
                   : (GameEngine_OTRSigCheck((const char*) path) ? ResourceGetDataByName((const char*) path) : path))
 #define LOAD_ASSET_RAW(path) ResourceGetDataByName((const char*) path)
+
+#ifdef __cplusplus
+}
+#endif

@@ -6,7 +6,6 @@ extern "C" {
 #endif
 
 #include <common_structs.h>
-#include "objects.h"
 #include "camera.h"
 #include "code_800029B0.h"
 

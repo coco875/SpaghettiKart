@@ -1,9 +1,7 @@
 #include <libultraship.h>
 #include <libultraship/libultra.h>
-#include <string.h>
 #include <stdio.h>
 #include <stubs.h>
-#include "save.h"
 
 struct state_pak {
     OSPfsState state;

@@ -1,6 +1,9 @@
 #ifndef PROFILER_H
 #define PROFILER_H
 
+#include "libultra/time.h"
+#include "libultra/types.h"
+
 extern u64 osClockRate;
 
 struct ProfilerFrameData {

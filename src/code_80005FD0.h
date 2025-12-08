@@ -2,6 +2,8 @@
 #define CODE_80005FD0_H
 
 #include "vehicles.h"
+#include "macros.h"
+#include "defines.h"
 #include "camera.h"
 #include "waypoints.h"
 #include <assets/textures/common_data.h>

@@ -5,9 +5,7 @@
 #include "spawn_players.h"
 #include "code_800029B0.h"
 #include "kart_attributes.h"
-#include "memory.h"
 #include "waypoints.h"
-#include "buffers.h"
 #include "kart_dma.h"
 #include "camera.h"
 #include "math_util.h"
@@ -21,10 +19,8 @@
 #include "podium_ceremony_actors.h"
 #include "main.h"
 #include "menus.h"
-#include "render_player.h"
 #include "menu_items.h"
 #include "effects.h"
-#include "decode.h"
 #include "port/Game.h"
 
 f32 D_80165210[8];

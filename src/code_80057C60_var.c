@@ -1,6 +1,7 @@
 #include <libultraship.h>
 #include <macros.h>
 #include "code_80057C60.h"
+#include "objects.h"
 
 s16 D_8018CFE0;
 f32 D_8018CFE4;

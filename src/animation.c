@@ -3,10 +3,8 @@
 #include <mk64.h>
 #include "math_util.h"
 #include "animation.h"
-#include "memory.h"
 #include <main.h>
 #include <libultra/gbi.h>
-#include "code_80057C60.h"
 #include "engine/Matrix.h"
 #include "port/interpolation/FrameInterpolation.h"
 

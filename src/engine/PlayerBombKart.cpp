@@ -1,5 +1,6 @@
 #include "PlayerBombKart.h"
 #include "Matrix.h"
+#include "main.h"
 
 extern "C" {
 #include "common_structs.h"
@@ -9,7 +10,6 @@ extern "C" {
 #include "render_objects.h"
 #include "math_util_2.h"
 #include "code_80057C60.h"
-#include "menus.h"
 }
 
 void PlayerBombKart::Draw(size_t playerId, s32 cameraId) { // render_player_bomb_kart

@@ -1,40 +1,29 @@
 #include <libultraship.h>
 #include <libultra/gbi.h>
-#include <vector>
-#include <memory>
 
 #include "DKJungle.h"
 #include "World.h"
-#include "engine/actors/Finishline.h"
 #include "engine/objects/BombKart.h"
 #include "assets/models/tracks/dks_jungle_parkway/dks_jungle_parkway_data.h"
 #include "assets/other/tracks/dks_jungle_parkway/dks_jungle_parkway_data.h"
 
 #include "engine/vehicles/Boat.h"
-#include "engine/vehicles/Utils.h"
+#include "update_objects.h"
 
 extern "C" {
     #include "main.h"
     #include "common_structs.h"
-    #include "camera.h"
-    #include "course_offsets.h"
     #include "code_800029B0.h"
     #include "render_courses.h"
-    #include "code_8006E9C0.h"
-    #include "code_80057C60.h"
     #include "defines.h"
     #include "math_util.h"
     #include "external.h"
     #include "code_80005FD0.h"
     #include "spawn_players.h"
     #include "render_objects.h"
-    #include "assets/models/common_data.h"
-    #include "save.h"
-    #include "replays.h"
     #include "actors.h"
     #include "collision.h"
     #include "code_8003DC40.h"
-    #include "memory.h"
     #include "sounds.h"
     extern const char *d_course_dks_jungle_parkway_unknown_dl_list[105];
     extern s16 currentScreenSection;

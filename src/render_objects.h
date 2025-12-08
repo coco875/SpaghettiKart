@@ -2,7 +2,6 @@
 #define RENDER_OBJECTS_H
 
 #include <common_structs.h>
-#include "main.h"
 
 #ifdef __cplusplus
 extern "C" {

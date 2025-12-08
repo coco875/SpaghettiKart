@@ -1,10 +1,13 @@
-#ifndef ACTOR_TYPES_H
-#define ACTOR_TYPES_H
+#pragma once
 
 #include <libultraship.h>
 #include <macros.h>
 #include <common_structs.h>
 #include <assert.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 // #pragma GCC diagnostic push
 // #pragma GCC diagnostic ignored "-Wmicrosoft-extension"
@@ -422,4 +425,6 @@ struct BananaActor {
 
 // #pragma GCC diagnostic pop
 
-#endif // ACTOR_TYPES_H
+#ifdef __cplusplus
+}
+#endif

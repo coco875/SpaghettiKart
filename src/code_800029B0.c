@@ -5,14 +5,10 @@
 
 #include "code_800029B0.h"
 #include "memory.h"
-#include "waypoints.h"
 #include "actors.h"
 #include "actor_types.h"
-#include "math_util.h"
 #include "audio/external.h"
 #include <defines.h>
-#include "collision.h"
-#include "memory.h"
 #include "menu_items.h"
 #include "skybox_and_splitscreen.h"
 #include "code_8006E9C0.h"
@@ -20,8 +16,6 @@
 #include "replays.h"
 #include "render_courses.h"
 #include "main.h"
-#include "courses/all_course_data.h"
-#include "courses/all_course_packed.h"
 #include "menus.h"
 #include <assets/textures/other_textures.h>
 #include <assets/models/tracks/mario_raceway/mario_raceway_data.h>

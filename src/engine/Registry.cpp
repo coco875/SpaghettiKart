@@ -3,12 +3,6 @@
 #include <string>
 
 #include "Registry.h"
-#include "engine/CoreMath.h"
-
-extern "C" {
-#include "actors.h"
-#include "actor_types.h"
-}
 
 std::unordered_map<std::string, ActorRegistryEntry> gActorRegistry;
 

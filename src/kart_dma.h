@@ -1,7 +1,6 @@
 #ifndef KART_DMA_H
 #define KART_DMA_H
 
-#include "macros.h"
 #include <common_structs.h>
 
 /* Function Prototypes */

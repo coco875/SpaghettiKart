@@ -3,7 +3,8 @@
 
 #include <common_structs.h>
 #include "camera.h"
-#include "objects.h"
+#include "spline.h"
+#include "macros.h"
 
 void func_80086E70(s32);
 void func_80086EAC(s32, s32, s16);

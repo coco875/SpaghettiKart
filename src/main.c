@@ -16,7 +16,6 @@
 #include <defines.h>
 #include "buffers.h"
 #include "camera.h"
-#include "profiler.h"
 #include "race_logic.h"
 #include "skybox_and_splitscreen.h"
 #include "render_objects.h"
@@ -28,15 +27,12 @@
 #include "podium_ceremony_actors.h"
 #include "menu_items.h"
 #include "code_80057C60.h"
-#include "profiler.h"
 #include "player_controller.h"
 #include "render_player.h"
 #include "render_courses.h"
 #include "actors.h"
 #include "replays.h"
 #include <debug.h>
-#include "crash_screen.h"
-#include "buffers/gfx_output_buffer.h"
 #include <bridge/gfxdebuggerbridge.h>
 #include "enhancements/freecam/freecam.h"
 #include "port/interpolation/FrameInterpolation.h"

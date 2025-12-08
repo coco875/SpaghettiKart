@@ -2,10 +2,8 @@
 #include <macros.h>
 #include <mk64.h>
 #include <stdarg.h>
-#include <string.h>
 
 #include "crash_screen.h"
-#include "main.h"
 
 #ifdef CRASH_SCREEN_ENHANCEMENT
 #include "debug/crash_screen_enhancement.h"

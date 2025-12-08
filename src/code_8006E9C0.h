@@ -1,8 +1,8 @@
 #ifndef CODE_8006E9C0_H
 #define CODE_8006E9C0_H
 
+#include "objects.h"
 #include <common_structs.h>
-#include "update_objects.h"
 
 void init_hud(void);
 void reset_object_variable(void);

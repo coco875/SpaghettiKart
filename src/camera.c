@@ -9,7 +9,6 @@
 #include "camera.h"
 #include "code_800029B0.h"
 #include "racing/math_util.h"
-#include "racing/memory.h"
 #include "waypoints.h"
 #include "render_player.h"
 #include "collision.h"
@@ -17,11 +16,7 @@
 #include "code_80005FD0.h"
 #include "main.h"
 #include "spawn_players.h"
-#include "enhancements/freecam/freecam_engine.h"
-#include "enhancements/freecam/freecam.h"
-#include "port/interpolation/FrameInterpolation.h"
 
-#include "engine/GameAPI.h"
 #include "port/Game.h"
 
 f32 D_800DDB30[] = { 0.4f, 0.6f, 0.275f, 0.3f };

@@ -1,11 +1,14 @@
-#ifndef COURSE_OFFSETS_H
-#define COURSE_OFFSETS_H
+#pragma once
 
 #include <libultraship.h>
 #include <libultra/types.h>
 #include <libultra/gbi.h>
 #include <assets/textures/other_textures.h>
 #include "animation.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct {
     const char* addr;      // segmented address texture file
@@ -74,4 +77,6 @@ extern Animation d_course_yoshi_valley_unk3;
 extern Animation* d_course_yoshi_valley_unk4[];
 extern u32 d_course_yoshi_valley_unk6[];
 
-#endif // COURSE_OFFSETS_H
+#ifdef __cplusplus
+}
+#endif

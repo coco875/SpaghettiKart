@@ -1,9 +1,9 @@
 #ifndef UPDATE_OBJECTS_H
 #define UPDATE_OBJECTS_H
 
-#include "animation.h"
 #include <common_structs.h>
 #include "camera.h"
+#include "macros.h"
 #include "objects.h"
 
 /** @cond */

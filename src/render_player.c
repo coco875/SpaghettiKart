@@ -9,7 +9,6 @@
 #include "math_util.h"
 #include "math_util_2.h"
 #include "main.h"
-#include "decode.h"
 #include "kart_dma.h"
 #include "objects.h"
 #include "render_player.h"
@@ -20,7 +19,6 @@
 #include "player_controller.h"
 #include "render_objects.h"
 #include <assets/models/common_data.h>
-#include "skybox_and_splitscreen.h"
 #include "spawn_players.h"
 #include <assets/textures/karts/mario_kart.h>
 #include <assets/textures/karts/luigi_kart.h>

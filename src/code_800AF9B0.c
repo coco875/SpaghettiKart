@@ -4,11 +4,8 @@
 
 #include "code_800AF9B0.h"
 
-#include "menu_items.h"
-#include "memory.h"
 #include "main.h"
 #include "math_util.h"
-#include <stdlib.h>
 
 Lights1 D_800E8680 = gdSPDefLights1(31, 31, 31, 255, 255, 255, 40, 40, 20);
 #ifdef TARGET_N64

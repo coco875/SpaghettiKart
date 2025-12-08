@@ -1,10 +1,13 @@
-#ifndef _COMMON_STRUCTS_H_
-#define _COMMON_STRUCTS_H_
+#pragma once
 
 #ifndef TARGET_N64
 #include <libultraship.h>
 #else
 #include <ultra64.h>
+#endif
+
+#ifdef __cplusplus
+extern "C" {
 #endif
 
 typedef f32 Vec3f[3];
@@ -541,4 +544,6 @@ typedef struct {
 
 #define HUD_PLAYERS_SIZE 4
 
+#ifdef __cplusplus
+}
 #endif

@@ -1,8 +1,11 @@
-#ifndef _DEBUG_H_
-#define _DEBUG_H_
+#pragma once
 
 #include <libultraship.h>
 #include <defines.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /**
  * Debug Variable Display List (DVDL), display variables and address at runtime.
@@ -73,4 +76,6 @@ void display_dvdl(void);
 
 #endif
 
+#ifdef __cplusplus
+}
 #endif

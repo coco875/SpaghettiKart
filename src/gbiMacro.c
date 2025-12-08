@@ -5,8 +5,6 @@
 #include <assets/models/common_data.h>
 #include "src/port/interpolation/matrix.h"
 
-#include "math_util.h"
-
 extern s16 D_800E43A8;
 
 // rsp init
