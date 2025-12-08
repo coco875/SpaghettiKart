@@ -22,6 +22,7 @@ extern Editor::Editor gEditor;
 extern HarbourMastersIntro gMenuIntro;
 extern bool bCleanWorld;
 #endif
+// NOLINTBEGIN(readability-identifier-naming)
 
 Properties* CM_GetProps();
 Properties* CM_GetPropsCourseId(s32 courseId);
@@ -226,6 +227,8 @@ void* GetCup();
 
 void CM_RunGarbageCollector(void);
 void CM_ResetAudio(void);
+
+// NOLINTEND(readability-identifier-naming)
 
 #ifdef __cplusplus
 }
