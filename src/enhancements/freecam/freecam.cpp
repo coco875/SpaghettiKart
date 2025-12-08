@@ -1,9 +1,9 @@
 #include <libultraship.h>
-#include <window/Window.h>
+#include <ship/window/Window.h>
 #include "port/Engine.h"
 #include "port/Game.h"
-#include <controller/controldevice/controller/mapping/keyboard/KeyboardScancodes.h>
-#include <window/Window.h>
+#include <ship/controller/controldevice/controller/mapping/keyboard/KeyboardScancodes.h>
+#include <ship/window/Window.h>
 #include "port/interpolation/FrameInterpolation.h"
 #include "engine/Matrix.h"
 
@@ -25,7 +25,7 @@ extern "C" {
 #include "freecam.h"
 }
 
-#include "engine/courses/Course.h"
+#include "engine/tracks/Track.h"
 
 typedef struct {
     Vec3f pos;
@@ -344,7 +344,7 @@ void freecam_keyboard_manager(Camera* camera, Vec3f forwardVector) {
         if (fRankIndex > 0) {
             fRankIndex--;
             camera->playerId = fRankIndex;
-            D_800DC5EC->player = &gPlayers[fRankIndex];
+            gScreenOneCtx->player = &gPlayers[fRankIndex];
         }
     }
 
@@ -353,7 +353,7 @@ void freecam_keyboard_manager(Camera* camera, Vec3f forwardVector) {
         if (fRankIndex < 7) {
             fRankIndex++;
             camera->playerId = fRankIndex;
-            D_800DC5EC->player = &gPlayers[fRankIndex];
+            gScreenOneCtx->player = &gPlayers[fRankIndex];
         }
     }
 
