@@ -123,8 +123,6 @@ jobs:
       - name: Create Package
         run: |
           mkdir -p spaghetti-${{ matrix.config }}
-          cp build/Spaghettify spaghetti-${{ matrix.config }}/ || true
-          cp build/spaghetti.o2r spaghetti-${{ matrix.config }}/ || true
           wget -O gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/master/gamecontrollerdb.txt
           mv gamecontrollerdb.txt spaghetti-${{ matrix.config }}/
           cp build/*.appimage spaghetti-${{ matrix.config }}/ 2>/dev/null || true
