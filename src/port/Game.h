@@ -7,9 +7,15 @@
 
 #ifdef __cplusplus
 #include "engine/editor/Editor.h"
+#include "engine/Registry.h"
 class Track;
 struct Properties;
 class World;
+
+template<class T, typename... TArgs> T* SpawnActor(TArgs&&... args) {
+    return T::Spawn(std::forward<TArgs>(args)...);
+}
+
 extern "C" {
 #endif
 #include "camera.h"
@@ -22,11 +28,14 @@ extern s32 gTrophyIndex;
 extern Editor::Editor gEditor;
 extern HarbourMastersIntro gMenuIntro;
 extern bool bCleanWorld;
+extern Registry<TrackInfo> gTrackRegistry;
+extern Registry<ActorInfo, const SpawnParams&> gActorRegistry;
+World* GetWorld(void); // Retrieve the world instance
 #endif
 // NOLINTBEGIN(readability-identifier-naming)
 
+uintptr_t CM_GetTrack();
 Properties* CM_GetProps();
-Properties* CM_GetPropsTrackId(s32 trackId);
 
 void HM_InitIntro(void);
 void HM_TickIntro(void);
@@ -44,14 +53,6 @@ u32 GetCupIndex(void);
 const char* GetCupName(void);
 
 void LoadTrack();
-void UnLoadTrack();
-
-size_t GetTrackIndex();
-
-void SetTrack(const char* name);
-
-void NextTrack();
-void PreviousTrack();
 
 void CM_SetCup(void*);
 
@@ -88,7 +89,6 @@ void CM_DrawObjects(s32 cameraId);
 
 void CM_TickEditor();
 void CM_DrawEditor();
-void CM_Editor_SetLevelDimensions(s16 minX, s16 maxX, s16 minZ, s16 maxZ, s16 minY, s16 maxY);
 void CM_TickDraw();
 void Editor_ClearMatrix();
 void Editor_CleanWorld();
@@ -150,11 +150,7 @@ void SetCupCursorPosition(size_t position);
 
 size_t GetCupSize();
 
-void SetTrackFromCup();
-
 void* GetTrack(void);
-
-void SetTrackById(s32 track);
 
 struct Actor* CM_GetActor(size_t index);
 void CM_DeleteActor(size_t index);

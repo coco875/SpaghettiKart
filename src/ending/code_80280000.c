@@ -24,6 +24,7 @@
 #include "render_courses.h"
 #include "main.h"
 #include "render_player.h"
+#include "engine/TrackBrowser.h"
 
 #include "engine/tracks/Track.h"
 #include "engine/Matrix.h"
@@ -65,7 +66,7 @@ void func_80280038(Camera* camera) {
     gSPMatrix(gDisplayListHead++, camera->lookAtMatrix,
               G_MTX_NOPUSH | G_MTX_MUL | G_MTX_PROJECTION);
     gCurrentCourseId = gCreditsCourseId;
-    SetTrackById(gCreditsCourseId);
+    TrackBrowser_SetTrackByIdx(gCreditsCourseId);
     mtxf_identity(matrix);
     render_set_position(matrix, 0);
     render_track(gScreenOneCtx);
@@ -148,7 +149,7 @@ void load_credits(void) {
 
 
     gCurrentCourseId = gCreditsCourseId;
-    SetTrackById(gCreditsCourseId);
+    TrackBrowser_SetTrackByIdx(gCreditsCourseId);
     D_800DC5B4 = 1;
     func_802A4D18();
     set_screen();
@@ -173,7 +174,7 @@ void load_credits(void) {
     D_8015F5A0 = 0;
     D_8015F58C = 0;
     gCollisionMeshCount = 0;
-    D_800DC5BC = 0;
+    bFog = false;
     D_800DC5C8 = 0;
     gCollisionMesh = (CollisionTriangle*) gNextFreeMemoryAddress;
     camera->pos[0] = 1400.0f;

@@ -1,6 +1,8 @@
 #include <libultraship.h>
 #include <libultra/vi.h>
 #include <libultra/os.h>
+#include "buffers/gfx_output_buffer.h"
+#include <libultraship/bridge/gfxdebuggerbridge.h>
 #include <macros.h>
 #include <decode.h>
 #include <mk64.h>
@@ -36,9 +38,8 @@
 #include "replays.h"
 #include <debug.h>
 #include "crash_screen.h"
-#include "buffers/gfx_output_buffer.h"
-#include <bridge/gfxdebuggerbridge.h>
 #include "enhancements/freecam/freecam.h"
+#include "engine/editor/Editor.h"
 #include "port/interpolation/FrameInterpolation.h"
 #include "engine/wasm.h"
 #include "port/Game.h"
@@ -669,7 +670,7 @@ void display_debug_info(void) {
 
 void process_game_tick(void) {
 
-    if (gIsEditorPaused == false) {
+    if (Editor_IsPaused() == false) {
         if (D_8015011E) {
             gCourseTimer += TRACK_TIMER_ITER;
         }
@@ -681,7 +682,7 @@ void process_game_tick(void) {
     CM_TickCameras();
 
     // Editor requires this so the camera keeps moving while the game is paused.
-    if (gIsEditorPaused == true) {
+    if (Editor_IsPaused() == true) {
         return;
     }
     
@@ -730,7 +731,7 @@ void race_logic_loop(void) {
         for (size_t i = 0; i < gTickLogic; i++) {
             process_game_tick();
         }
-        if (gIsEditorPaused == false) {
+        if (Editor_IsPaused() == false) {
             func_80022744();
         }
     }
@@ -1094,19 +1095,19 @@ void update_gamestate(void) {
     switch (gGamestate) {
         case START_MENU_FROM_QUIT:
             func_80002658();
-            gCurrentlyLoadedCourseId = TRACK_NULL;
+            gCurrentlyLoadedTrackAddr = NULL;
             break;
         case MAIN_MENU_FROM_QUIT:
             func_800025D4();
-            gCurrentlyLoadedCourseId = TRACK_NULL;
+            gCurrentlyLoadedTrackAddr = NULL;
             break;
         case PLAYER_SELECT_MENU_FROM_QUIT:
             func_80002600();
-            gCurrentlyLoadedCourseId = TRACK_NULL;
+            gCurrentlyLoadedTrackAddr = NULL;
             break;
         case COURSE_SELECT_MENU_FROM_QUIT:
             func_8000262C();
-            gCurrentlyLoadedCourseId = TRACK_NULL;
+            gCurrentlyLoadedTrackAddr = NULL;
             break;
         case RACING:
             /**
@@ -1117,12 +1118,12 @@ void update_gamestate(void) {
             setup_race();
             break;
         case ENDING:
-            gCurrentlyLoadedCourseId = TRACK_NULL;
+            gCurrentlyLoadedTrackAddr = NULL;
             init_segment_ending_sequences();
             setup_podium_ceremony();
             break;
         case CREDITS_SEQUENCE:
-            gCurrentlyLoadedCourseId = TRACK_NULL;
+            gCurrentlyLoadedTrackAddr = NULL;
             // init_segment_racing();
             init_segment_ending_sequences();
             load_credits();

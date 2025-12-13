@@ -50,7 +50,7 @@ MarioRaceway::MarioRaceway() {
     Props.Minimap.FinishlineY = -2.0;
     ResizeMinimap(&Props.Minimap);
 
-    Id = "mk:mario_raceway";
+    ResourceName = "mk:mario_raceway";
     Props.SetText(Props.Name, "mario raceway", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "m circuit", sizeof(Props.DebugName));
     Props.SetText(Props.TrackLength, "567m", sizeof(Props.TrackLength));
@@ -154,10 +154,6 @@ void MarioRaceway::Load() {
     Props.WaterLevel = gTrackMinY - 10.0f;
 }
 
-void MarioRaceway::UnLoad() {
-    RestoreTriangleWinding();
-}
-
 void MarioRaceway::BeginPlay() {
     struct Actor* actor;
     Vec3f position;
@@ -168,21 +164,21 @@ void MarioRaceway::BeginPlay() {
     spawn_piranha_plants((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_mario_raceway_piranha_plant_spawns));
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_mario_raceway_item_box_spawns));
 
-    AMarioSign::Spawn(FVector(150.0f, 40.0f, -1300.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
-    AMarioSign::Spawn(FVector(2520.0f, 0.0f, 1240.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
+    SpawnActor<AMarioSign>(FVector(150.0f, 40.0f, -1300.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
+    SpawnActor<AMarioSign>(FVector(2520.0f, 0.0f, 1240.0f), IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f));
 
     if (gModeSelection == VERSUS) {
-        OBombKart::Spawn(0, 40, 3, 0.8333333f);
-        OBombKart::Spawn(0, 100, 3, 0.8333333f);
-        OBombKart::Spawn(0, 265, 3, 0.8333333f);
-        OBombKart::Spawn(0, 285, 1, 0.8333333f);
-        OBombKart::Spawn(0, 420, 1, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 40, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 100, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 265, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 285, 1, 0.8333333f);
+        SpawnActor<OBombKart>(0, 420, 1, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
     }
 
     if (gGamestate != CREDITS_SEQUENCE) {
-        OGrandPrixBalloons::Spawn(FVector(0, 5, -240));
+        SpawnActor<OGrandPrixBalloons>(FVector(0, 5, -240));
     }
 }
 

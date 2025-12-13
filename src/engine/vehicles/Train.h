@@ -2,14 +2,12 @@
 
 #include <libultraship.h>
 #include <vector>
+#include "RegisterContent.h"
 #include "engine/SpawnParams.h"
 #include "engine/CoreMath.h"
 #include "engine/World.h"
 
 #include "Actor.h"
-
-class World;
-extern World gWorldInstance;
 
 extern "C" {
 #include "main.h"
@@ -72,7 +70,7 @@ class ATrain : public AActor {
             .Bool = tender,
             .Speed = speed, // 120.0f is about the maximum usable value
         };
-        return static_cast<ATrain*>(gWorldInstance.AddActor(new ATrain(params)));
+        return static_cast<ATrain*>(AddActorToWorld<ATrain>(params));
     }
 
     virtual void SetSpawnParams(SpawnParams& params);

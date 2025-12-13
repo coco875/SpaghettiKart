@@ -17,20 +17,17 @@ extern Gfx gBowserStatueGfx[162];
 // That generator is currently commented out. So this actor is not usable atm.
 class ABowserStatue : public AActor {
 public:
-    enum Behaviour {
+    enum Behaviour : int16_t {
         DEFAULT,
         CRUSH
     };
 
     virtual ~ABowserStatue() = default;
-    explicit ABowserStatue(FVector pos, ABowserStatue::Behaviour behaviour);
+    explicit ABowserStatue(const SpawnParams& params);
 
     virtual void Tick() override;
     virtual void Draw(Camera*) override;
     virtual bool IsMod() override;
-
-    FVector Pos;
 private:
-    ABowserStatue::Behaviour _behaviour;
-    f32 scale;
+    ABowserStatue::Behaviour mBehaviour;
 };

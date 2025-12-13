@@ -17,7 +17,7 @@ extern f32 gKartGravityTable[];
 }
 
 ACloud::ACloud(const SpawnParams& params) : AActor(params) {
-    Name = "Cloud";
+    Name = "Cloud (HM64)";
     ResourceName = "hm:cloud";
     FVector pos = params.Location.value_or(FVector(0, 0, 0));
     Pos[0] = pos.x;
@@ -48,8 +48,10 @@ void ACloud::SetSpawnParams(SpawnParams& params) {
 extern Gfx cloud_mesh[];
 void ACloud::BeginPlay() {
     // Prevent collision mesh from being generated extra times.
-    if (Triangles.size() == 0) {
-        Editor::GenerateCollisionMesh(this, (Gfx*)cloud_mesh, 1.0f);
+    if (Editor_IsEnabled()) {
+        if (Triangles.size() == 0) {
+            Editor::GenerateCollisionMesh(this, (Gfx*)cloud_mesh, 1.0f);
+        }
     }
 }
 
@@ -87,7 +89,7 @@ void ACloud::Draw(Camera* camera) {
 
 void ACloud::Collision(Player* player, AActor* actor) {
     if (!PickedUp) {
-        if (query_collision_player_vs_actor_item(player, gWorldInstance.ConvertAActorToActor(actor))) {
+        if (query_collision_player_vs_actor_item(player, GetWorld()->ConvertAActorToActor(actor))) {
             // Player has picked up the actor, activate the cloud effect
             _player = player;
             PickedUp = true;

@@ -129,10 +129,6 @@ void KalimariDesert::Load() {
     Props.WaterLevel = gTrackMinY - 10.0f;
 }
 
-void KalimariDesert::UnLoad() {
-    RestoreTriangleWinding();
-}
-
 void KalimariDesert::BeginPlay() {
     struct RailroadCrossing* rrxing;
     Vec3f position;
@@ -146,8 +142,8 @@ void KalimariDesert::BeginPlay() {
 
         Vec3f crossingPos = {-2500, 2, 2355};
         Vec3f crossingPos2 = {-1639, 2, 68};
-        uintptr_t* crossing1 = (uintptr_t*) gWorldInstance.AddCrossing(crossingPos, 306, 310, 900.0f, 650.0f);
-        uintptr_t* crossing2 = (uintptr_t*) gWorldInstance.AddCrossing(crossingPos2, 176, 182, 900.0f, 650.0f);
+        uintptr_t* crossing1 = (uintptr_t*) GetWorld()->AddCrossing(crossingPos, 306, 310, 900.0f, 650.0f);
+        uintptr_t* crossing2 = (uintptr_t*) GetWorld()->AddCrossing(crossingPos2, 176, 182, 900.0f, 650.0f);
 
         vec3f_set(position, -1680.0f, 2.0f, 35.0f);
         position[0] *= gTrackDirection;
@@ -202,17 +198,17 @@ void KalimariDesert::BeginPlay() {
                 }
             }
 
-            ATrain::Spawn(_tender, _numCarriages, 2.5f, 0, waypoint, ATrain::SpawnMode::POINT);
+            SpawnActor<ATrain>(_tender, _numCarriages, 2.5f, 0, waypoint, ATrain::SpawnMode::POINT);
         }
 
         if (gModeSelection == VERSUS) {
-            OBombKart::Spawn(0, 50, 3, 0.8333333f);
-            OBombKart::Spawn(0, 138, 1, 0.8333333f);
-            OBombKart::Spawn(0, 280, 3, 0.8333333f);
-            OBombKart::Spawn(0, 404, 1, 0.8333333f);
-            OBombKart::Spawn(0, 510, 3, 0.8333333f);
-            OBombKart::Spawn(0, 0, 0, 0.8333333f);
-            OBombKart::Spawn(0, 0, 0, 0.8333333f);
+            SpawnActor<OBombKart>(0, 50, 3, 0.8333333f);
+            SpawnActor<OBombKart>(0, 138, 1, 0.8333333f);
+            SpawnActor<OBombKart>(0, 280, 3, 0.8333333f);
+            SpawnActor<OBombKart>(0, 404, 1, 0.8333333f);
+            SpawnActor<OBombKart>(0, 510, 3, 0.8333333f);
+            SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
+            SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
         }
     }
 }

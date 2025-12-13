@@ -50,7 +50,7 @@ ChocoMountain::ChocoMountain() {
     Props.Minimap.FinishlineY = -16.0;
     ResizeMinimap(&Props.Minimap);
 
-    Id = "mk:choco_mountain";
+    ResourceName = "mk:choco_mountain";
     Props.SetText(Props.Name, "choco mountain", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "mountain", sizeof(Props.DebugName));
     Props.SetText(Props.TrackLength, "687m", sizeof(Props.TrackLength));
@@ -127,12 +127,13 @@ void ChocoMountain::Load() {
         InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_5D8);
         InvertTriangleWindingByName(d_course_choco_mountain_packed_dl_718);
     }
-    D_800DC5BC = 1;
-    D_801625EC = 255;
-    D_801625F4 = 255;
-    D_801625F0 = 255;
-    D_802B87B0 = 0x3E3;
-    D_802B87B4 = 0x3E8;
+    bFog = true;
+    gFogColour.r = 255;
+    gFogColour.g = 255;
+    gFogColour.b = 255;
+    gFogColour.a = 255;
+    gFogMin = 0x3E3;
+    gFogMax = 0x3E8;
     D_802B87D4 = 0x71C;
     D_802B87D0 = 0xE38;
 
@@ -157,24 +158,20 @@ void ChocoMountain::Load() {
     func_80295C6C();
 }
 
-void ChocoMountain::UnLoad() {
-    RestoreTriangleWinding();
-}
-
 void ChocoMountain::BeginPlay() {
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_choco_mountain_item_box_spawns));
-    AFallingRock::Spawn(FVector(2019, 156, 164), 60);
-    AFallingRock::Spawn(FVector(2018, 155, 379), 120);
-    AFallingRock::Spawn(FVector(1996, 146, 505), 180);
+    SpawnActor<AFallingRock>(FVector(2019, 156, 164), 60);
+    SpawnActor<AFallingRock>(FVector(2018, 155, 379), 120);
+    SpawnActor<AFallingRock>(FVector(1996, 146, 505), 180);
 
     if (gModeSelection == VERSUS) {
-        OBombKart::Spawn(0, 140, 3, 0.8333333f);
-        OBombKart::Spawn(0, 165, 1, 0.8333333f);
-        OBombKart::Spawn(0, 330, 3, 0.8333333f);
-        OBombKart::Spawn(0, 550, 1, 0.8333333f);
-        OBombKart::Spawn(0, 595, 3, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 140, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 165, 1, 0.8333333f);
+        SpawnActor<OBombKart>(0, 330, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 550, 1, 0.8333333f);
+        SpawnActor<OBombKart>(0, 595, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
     }
 }
 
@@ -236,8 +233,8 @@ void ChocoMountain::Draw(ScreenContext* arg0) {
         gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_choco_mountain_packed_dl_4608);
     }
     gDPSetCycleType(gDisplayListHead++, G_CYC_2CYCLE);
-    gDPSetFogColor(gDisplayListHead++, D_801625EC, D_801625F4, D_801625F0, 0xFF);
-    gSPFogPosition(gDisplayListHead++, D_802B87B0, D_802B87B4);
+    gDPSetFogColor(gDisplayListHead++, gFogColour.r, gFogColour.g, gFogColour.b, gFogColour.a);
+    gSPFogPosition(gDisplayListHead++, gFogMin, gFogMax);
 
     gDPPipeSync(gDisplayListHead++);
     gSPSetGeometryMode(gDisplayListHead++, G_FOG);

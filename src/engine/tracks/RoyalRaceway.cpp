@@ -124,26 +124,22 @@ void RoyalRaceway::Load() {
     func_80295C6C();
 }
 
-void RoyalRaceway::UnLoad() {
-    RestoreTriangleWinding();
-}
-
 void RoyalRaceway::BeginPlay() {
     spawn_foliage((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_royal_raceway_tree_spawn));
     spawn_all_item_boxes((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_royal_raceway_item_box_spawns));
     spawn_piranha_plants((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_royal_raceway_piranha_plant_spawn));
 
     if (gModeSelection == VERSUS) {
-        OBombKart::Spawn(0, 50, 3, 0.8333333f);
-        OBombKart::Spawn(0, 100, 3, 0.8333333f);
-        OBombKart::Spawn(0, 296, 3, 0.8333333f);
-        OBombKart::Spawn(0, 400, 1, 0.8333333f);
-        OBombKart::Spawn(0, 746, 3, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 50, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 100, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 296, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 400, 1, 0.8333333f);
+        SpawnActor<OBombKart>(0, 746, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
     }
     if (gGamestate != CREDITS_SEQUENCE) {
-        OGrandPrixBalloons::Spawn(FVector(-64, 5, -330));
+        SpawnActor<OGrandPrixBalloons>(FVector(-64, 5, -330));
     }
 }
 

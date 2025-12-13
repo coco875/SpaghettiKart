@@ -6,6 +6,8 @@
 #include <stubs.h>
 
 #include "menus.h"
+#include "TrackBrowser.h"
+#include "editor/Editor.h"
 #include "main.h"
 #include "code_800029B0.h"
 #include "actors.h"
@@ -1054,8 +1056,8 @@ void splash_menu_act(struct Controller* controller, u16 controllerIdx) {
             case DEBUG_MENU_COURSE: {
                 if (btnAndStick & R_JPAD) {
                     play_sound2(SOUND_MENU_CURSOR_MOVE);
-                    NextTrack();
-                    gCurrentCourseId = GetTrackIndex();
+                    TrackBrowser_NextTrack();
+                    gCurrentCourseId = TrackBrowser_GetTrackIndex();
                     // if (gCurrentCourseId < (NUM_TRACKS - 2)) {
                     //     gCurrentCourseId += 1;
                     // } else {
@@ -1064,8 +1066,8 @@ void splash_menu_act(struct Controller* controller, u16 controllerIdx) {
                 }
                 if (btnAndStick & L_JPAD) {
                     play_sound2(SOUND_MENU_CURSOR_MOVE);
-                    PreviousTrack();
-                    gCurrentCourseId = GetTrackIndex();
+                    TrackBrowser_PreviousTrack();
+                    gCurrentCourseId = TrackBrowser_GetTrackIndex();
                     // if (gCurrentCourseId > 0) {
                     //     gCurrentCourseId -= 1;
                     // } else {
@@ -1168,6 +1170,22 @@ void splash_menu_act(struct Controller* controller, u16 controllerIdx) {
                     play_sound2(SOUND_MENU_CURSOR_MOVE);
                 }
                 if (btnAndStick & D_JPAD) {
+                    gDebugMenuSelection = DEBUG_MENU_LAUNCH_EDITOR;
+                    play_sound2(SOUND_MENU_CURSOR_MOVE);
+                }
+                break;
+            }
+            case DEBUG_MENU_LAUNCH_EDITOR: {
+                if (btnAndStick & (A_BUTTON | START_BUTTON)) {
+                    Editor_Launch("mk:test_track");
+                    play_sound2(SOUND_INTRO_ENTER_MENU);
+                }
+
+                if (btnAndStick & U_JPAD) {
+                    gDebugMenuSelection = DEBUG_MENU_SOUND_MODE;
+                    play_sound2(SOUND_MENU_CURSOR_MOVE);
+                }
+                if (btnAndStick & D_JPAD) {
                     gDebugMenuSelection = DEBUG_MENU_GIVE_ALL_GOLD_CUP;
                     play_sound2(SOUND_MENU_CURSOR_MOVE);
                 }
@@ -1175,7 +1193,7 @@ void splash_menu_act(struct Controller* controller, u16 controllerIdx) {
             }
             case DEBUG_MENU_GIVE_ALL_GOLD_CUP: {
                 if (btnAndStick & U_JPAD) {
-                    gDebugMenuSelection = DEBUG_MENU_SOUND_MODE;
+                    gDebugMenuSelection = DEBUG_MENU_LAUNCH_EDITOR;
                     play_sound2(SOUND_MENU_CURSOR_MOVE);
                 }
                 if (btnAndStick & B_BUTTON) {
@@ -1764,7 +1782,7 @@ void course_select_menu_act(struct Controller* controller, u16 controllerIdx) {
 
                 D_800DC540 = GetCupIndex();
                 gCurrentCourseId = gCupCourseOrder[gCupSelection][gCourseIndexInCup];
-                SetTrackFromCup();
+                TrackBrowser_SetTrackFromCup();
                 if ((btnAndStick & B_BUTTON) != 0) {
                     func_8009E208();
                     play_sound2(SOUND_MENU_GO_BACK);
@@ -1776,7 +1794,7 @@ void course_select_menu_act(struct Controller* controller, u16 controllerIdx) {
                         gSubMenuSelection = SUB_MENU_MAP_SELECT_OK;
                         play_sound2(SOUND_MENU_SELECT);
                         SetCupCursorPosition(TRACK_ONE);
-                        SetTrackFromCup();
+                        TrackBrowser_SetTrackFromCup();
                         gCurrentCourseId = gCupCourseOrder[gCupSelection][TRACK_ONE];
                         gMenuTimingCounter = 0;
                     }
@@ -1799,7 +1817,7 @@ void course_select_menu_act(struct Controller* controller, u16 controllerIdx) {
                 }
 
                 gCurrentCourseId = gCupCourseOrder[gCupSelection][gCourseIndexInCup];
-                SetTrackFromCup();
+                TrackBrowser_SetTrackFromCup();
                 if ((btnAndStick & B_BUTTON) != 0) {
                     if (gSubMenuSelection == SUB_MENU_MAP_SELECT_COURSE) {
                         gSubMenuSelection = SUB_MENU_MAP_SELECT_CUP;

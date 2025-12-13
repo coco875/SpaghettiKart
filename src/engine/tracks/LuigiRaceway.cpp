@@ -55,7 +55,7 @@ LuigiRaceway::LuigiRaceway() {
     Props.Minimap.FinishlineY = 0;
     ResizeMinimap(&Props.Minimap);
 
-    Id = "mk:luigi_raceway";
+    ResourceName = "mk:luigi_raceway";
     Props.SetText(Props.Name, "luigi raceway", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "l circuit", sizeof(Props.DebugName));
     Props.SetText(Props.TrackLength, "717m", sizeof(Props.TrackLength));
@@ -130,10 +130,6 @@ void LuigiRaceway::Load() {
     Props.WaterLevel = gTrackMinY - 10.0f;
 }
 
-void LuigiRaceway::UnLoad() {
-    RestoreTriangleWinding();
-}
-
 void LuigiRaceway::BeginPlay() {
     spawn_foliage((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_luigi_raceway_tree_spawn));
     spawn_all_item_boxes((struct ActorSpawnData*) LOAD_ASSET_RAW(d_course_luigi_raceway_item_box_spawns));
@@ -146,13 +142,13 @@ void LuigiRaceway::BeginPlay() {
     }
 
     if (gModeSelection == VERSUS) {
-        OBombKart::Spawn(0, 50, 1, 0.8333333f);
-        OBombKart::Spawn(0, 200, 3, 0.8333333f);
-        OBombKart::Spawn(0, 305, 1, 0.8333333f);
-        OBombKart::Spawn(0, 440, 3, 0.8333333f);
-        OBombKart::Spawn(0, 515, 3, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 50, 1, 0.8333333f);
+        SpawnActor<OBombKart>(0, 200, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 305, 1, 0.8333333f);
+        SpawnActor<OBombKart>(0, 440, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 515, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
     }
 }
 

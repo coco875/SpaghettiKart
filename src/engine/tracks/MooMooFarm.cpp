@@ -128,10 +128,6 @@ void MooMooFarm::Load() {
     Props.WaterLevel = gTrackMinY - 10.0f;
 }
 
-void MooMooFarm::UnLoad() {
-    RestoreTriangleWinding();
-}
-
 void MooMooFarm::BeginPlay() {
     if (gPlayerCountSelection1 != 4) {
         spawn_foliage((struct ActorSpawnData*)LOAD_ASSET_RAW(d_course_moo_moo_farm_tree_spawn));
@@ -213,19 +209,19 @@ void MooMooFarm::BeginPlay() {
                 break;
         }
 
-        gWorldInstance.AddObject(new OMoleGroup(moleSpawns1, tick1));
-        gWorldInstance.AddObject(new OMoleGroup(moleSpawns2, tick2));
-        gWorldInstance.AddObject(new OMoleGroup(moleSpawns3, tick3));
+        GetWorld()->AddObject(std::make_unique<OMoleGroup>(moleSpawns1, tick1));
+        GetWorld()->AddObject(std::make_unique<OMoleGroup>(moleSpawns2, tick2));
+        GetWorld()->AddObject(std::make_unique<OMoleGroup>(moleSpawns3, tick3));
     }
 
     if (gModeSelection == VERSUS) {
-        OBombKart::Spawn(0, 50, 3, 0.8333333f);
-        OBombKart::Spawn(0, 140, 3, 0.8333333f);
-        OBombKart::Spawn(0, 225, 3, 0.8333333f);
-        OBombKart::Spawn(0, 316, 3, 0.8333333f);
-        OBombKart::Spawn(0, 434, 3, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
-        OBombKart::Spawn(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 50, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 140, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 225, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 316, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 434, 3, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
+        SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
     }
 }
 
@@ -273,7 +269,7 @@ void MooMooFarm::Draw(ScreenContext* arg0) {
     gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_moo_moo_farm_packed_dl_4DF8);
     // d_course_moo_moo_farm_packed_dl_5640
     gSPDisplayList(gDisplayListHead++, (Gfx*) d_course_moo_moo_farm_packed_dl_5640);
-    gSPFogPosition(gDisplayListHead++, D_802B87B0, D_802B87B4);
+    gSPFogPosition(gDisplayListHead++, gFogMin, gFogMax);
 
     render_track_sections(moo_moo_farm_dls, arg0);
 

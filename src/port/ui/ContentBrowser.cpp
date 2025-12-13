@@ -19,6 +19,7 @@
 #include "AllActors.h"
 #include "port/Game.h"
 #include "src/engine/editor/SceneManager.h"
+#include "engine/TrackBrowser.h"
 
 #include "World.h"
 
@@ -43,10 +44,8 @@ namespace Editor {
         // Query content in o2r and add them to Content
         if (Refresh) {
             Refresh = false;
-            RemoveCustomTracksFromTrackList();
-            Tracks.clear();
             Content.clear();
-            FindTracks();
+            TrackBrowser::Instance->Refresh(gTrackRegistry);
             FindContent();
             return;
         }
@@ -55,25 +54,27 @@ namespace Editor {
 
         ContentBrowserWindow::FolderButton("Tracks", TrackContent);
         ContentBrowserWindow::FolderButton("Actors", ActorContent);
-        ContentBrowserWindow::FolderButton("Objects", ObjectContent);
         ContentBrowserWindow::FolderButton("Custom", CustomContent);
         ImGui::EndChild();
         ImGui::SameLine();
         ImGui::BeginChild("RightPanel", ImVec2(0, 0), true, ImGuiWindowFlags_None);
+        
+        // Search bar
+        ImGui::InputTextWithHint("##GlobalSearch", "Search name or #tag", mSearchBuffer, IM_ARRAYSIZE(mSearchBuffer));
+        ImGui::NewLine();
+
+        std::string search = ToLower(std::string(mSearchBuffer));
+        
         if (TrackContent) {
-            AddTrackContent();
+            AddTrackContent(search);
         }
 
         if (ActorContent) {
-            AddActorContent();
-        }
-
-        if (ObjectContent) {
-            AddObjectContent();
+            AddActorContent(search);
         }
 
         if (CustomContent) {
-            AddCustomContent();
+            AddCustomContent(search);
         }
         ImGui::EndChild();
     }
@@ -83,289 +84,123 @@ namespace Editor {
         if (ImGui::Button(buttonText.c_str(), size)) {
             TrackContent = false;
             ActorContent = false;
-            ObjectContent = false;
             CustomContent = false;
             contentFlag = !contentFlag;
         }
     }
 
-    // For C-actors
-    std::unordered_map<std::string, std::function<void(const FVector&)>> CActorList = {
-        { "Item Box", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_ITEM_BOX);
-            s32 height = spawn_actor_on_surface(position[0], position[1] + 10.0f, position[2]);
-
-            Actor* actor = CM_GetActor(id);
-            actor->unk_08 = height;
-            actor->velocity[0] = position[1];
-            actor->pos[1] = height - 20.0f;
-
-        }},
-        { "Fake Item Box", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_FAKE_ITEM_BOX);
-
-            Actor* actor = CM_GetActor(id);
-            actor->state = 1;
-            actor->velocity[1] = position[1];
-        }},
-        { "Yoshi Egg", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_YOSHI_EGG);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Piranha Plant", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_PIRANHA_PLANT);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-
-        { "Tree (Mario Raceway)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_TREE_MARIO_RACEWAY);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Tree (Yoshi Valley)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_TREE_YOSHI_VALLEY);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Tree (Royal Raceway)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_TREE_ROYAL_RACEWAY);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Tree (Moo Moo Farm)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_TREE_MOO_MOO_FARM);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Palm Tree", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_PALM_TREE);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Tree (Luigi Raceway)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_TREE_LUIGI_RACEWAY);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Unknown Plant (0x1B)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_UNKNOWN_0x1B);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Tree (Peach's Castle)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_TREE_PEACH_CASTLE);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Tree (Frappe Snowland)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_TREE_FRAPPE_SNOWLAND);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Cactus 1 (Kalamari Desert)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_CACTUS1_KALAMARI_DESERT);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Cactus 2 (Kalamari Desert)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_CACTUS2_KALAMARI_DESERT);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Cactus 3 (Kalamari Desert)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_CACTUS3_KALAMARI_DESERT);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-        { "Bush (Bowser's Castle)", [](const FVector& pos) {
-            Vec3f position = {pos.x, pos.y, pos.z};
-            Vec3s rot = {0, 0, 0};
-            Vec3f vel = {0, 0, 0};
-            s32 id = add_actor_to_empty_slot(position, rot, vel, ACTOR_BUSH_BOWSERS_CASTLE);
-            s32 height = spawn_actor_on_surface(position[0], position[1], position[2]);
-        }},
-    };
-
-    std::unordered_map<std::string, std::function<AActor*(const FVector&)>> ActorList = {
-        // The banana gets attached to a player. This needs to be disconnected if this should be used in the editor
-//        { "Banana", [](const FVector& pos) { return gWorldInstance.AddActor(new ABanana(SpawnParams{.Name = "mk:banana", .Location = pos})); } },
-        { "Falling Rock", [](const FVector& pos) { return AFallingRock::Spawn(pos, 80); } },
-        { "Mario Sign", [](const FVector& pos) { return AMarioSign::Spawn(pos, IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f)); } },
-        { "Wario Sign", [](const FVector& pos) { return AWarioSign::Spawn(pos, IRotator(0, 0, 0), FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f)); } },
-        { "Cloud", [](const FVector& pos) { return ACloud::Spawn(pos, 500, 3.0f, 200.0f); } },
-        { "Finishline", [](const FVector& pos) { return AFinishline::Spawn(pos, IRotator(0, 0, 0)); } },
-        { "Ghostship", [](const FVector& pos) { return AShip::Spawn(pos, IRotator(0, 0, 0), FVector(0.4f, 0.4f, 0.4f), AShip::Skin::GHOSTSHIP); } },
-        { "Ship 1", [](const FVector& pos) { return AShip::Spawn(pos, IRotator(0, 0, 0), FVector(0.4f, 0.4f, 0.4f), AShip::Skin::SHIP2); } },
-        { "Ship 2", [](const FVector& pos) { return AShip::Spawn(pos, IRotator(0, 0, 0), FVector(0.4f, 0.4f, 0.4f), AShip::Skin::SHIP3); } },
-        { "SpaghettiShip", [](const FVector& pos) { return ASpaghettiShip::Spawn(pos, IRotator(0, 0, 0), FVector(0.4f, 0.4f, 0.4f)); } },
-        { "Starship", [](const FVector& pos) { return AStarship::Spawn(pos, IRotator(0, 0, 0), FVector(1.5f, 1.5f, 1.5f), 0.01f, 150.0f); } },
-        { "Train", [](const FVector& pos) { bIsTrainWindowOpen = true; return nullptr;  } },
-        { "Boat", [](const FVector& pos) { return ABoat::Spawn((0.6666666f)/4, 0, 0, ABoat::SpawnMode::AUTO); } },
-        { "Bus", [](const FVector& pos) { return ABus::Spawn(2.0f, 2.5f, 0, 0, ABus::SpawnMode::AUTO); } },
-        { "Car", [](const FVector& pos) { return ACar::Spawn(2.0f, 2.5f, 0, 0, ACar::SpawnMode::AUTO); } },
-        { "Truck", [](const FVector& pos) { return ATruck::Spawn(2.0f, 2.5f, 0, 0, ATruck::SpawnMode::AUTO); } },
-        { "Tanker Truck", [](const FVector& pos) { return ATankerTruck::Spawn(2.0f, 2.5f, 0, 0, ATankerTruck::SpawnMode::AUTO); } },
-        { "Text", [](const FVector& pos) { return AText::Spawn("Harbour Masters", FVector(0, 0, 0), FVector(1.0f, 1.0f, 1.0f), AText::TextMode::STATIONARY, 0); } },
-    };
-
-    std::unordered_map<std::string, std::function<OObject*(const FVector&)>> ObjectList = {
-        { "Bat", [](const FVector& pos) { return OBat::Spawn(pos, IRotator(0, 0, 0)); } },
-        { "Bomb Kart", [](const FVector& pos) { return OBombKart::Spawn(pos, 1, 0.8333333f); } },
-        { "Boos", [](const FVector& pos) { return OBoos::Spawn(5, IPathSpan(0, 50), IPathSpan(60, 90), IPathSpan(100, 140)); } },
-        { "Cheep Cheep", [](const FVector& pos) { return OCheepCheep::Spawn(pos, OCheepCheep::Behaviour::RACE, IPathSpan(0, 10)); } },
-        { "Crab", [](const FVector& pos) { return OCrab::Spawn(FVector2D(pos.x, pos.z), FVector2D(pos.x + 100, pos.z + 100)); } },
-
-        // Animation crash
-        // { "Chain Chomp", [](const FVector& pos) { return gWorldInstance.AddObject(new OChainChomp()); } },
-        { "Flagpole", [](const FVector& pos) { return OFlagpole::Spawn(pos, 0); } },
-        { "Hedgehog", [](const FVector& pos) { return OHedgehog::Spawn(pos, FVector2D(0, 10), 0); } },
-        { "Hot Air Balloon", [](const FVector& pos) { return OHotAirBalloon::Spawn(pos); } },
-        { "Lakitu", [](const FVector& pos) { return new OLakitu(0, OLakitu::LakituType::STARTER); } },
-        // { "Mole", [](const FVector& pos) { return new OMole(pos, ); } }, // <-- Needs a group
-        { "Penguin", [](const FVector& pos) { return OPenguin::Spawn(pos, 0x150, 0, 100.0f, OPenguin::PenguinType::ADULT, OPenguin::Behaviour::CIRCLE); } },
-        { "Seagull", [](const FVector& pos) { return OSeagull::Spawn(pos); } },
-        { "Thwomp", [](const FVector& pos) { return OThwomp::Spawn(pos.x, pos.z, 0, 1.0f, 1, 0, 7); } },
-        { "Trash Bin", [](const FVector& pos) { return OTrashBin::Spawn(pos, IRotator(0, 0, 0), 1.0f, OTrashBin::Behaviour::MUNCHING); } },
-        { "Trophy", [](const FVector& pos) { return OTrophy::Spawn(pos, OTrophy::TrophyType::GOLD_150, OTrophy::Behaviour::ROTATE2); } },
-        { "Snowman", [](const FVector& pos) { return OSnowman::Spawn(pos); } },
-        { "Podium", [](const FVector& pos) { return OPodium::Spawn(pos); } },
-        { "Balloons", [](const FVector& pos) { return OGrandPrixBalloons::Spawn(pos); } },
-    };
-
-    void ContentBrowserWindow::AddTrackContent() {
+    void ContentBrowserWindow::AddTrackContent(std::string search) {
         size_t i_track = 0;
-        for (auto& track : Tracks) {
-            if (!track.SceneFile.empty()) { // has scene file
-                std::string label = fmt::format("{}##{}", track.Name, i_track);
-                if (ImGui::Button(label.c_str())) {
-                    gWorldInstance.SetCurrentTrack(track.track);
-                    gGamestateNext = RACING;
-                    SetSceneFile(track.Archive, track.SceneFile);
-                    break;
-                }
-            } else { // no scene file
-                std::string label = fmt::format("{} {}", ICON_FA_EXCLAMATION_TRIANGLE, track.Name);
-                if (ImGui::Button(label.c_str())) {
-                    track.SceneFile = track.Dir + "/scene.json";
-                    gWorldInstance.SetCurrentTrack(track.invalidTrack);
-                    SetSceneFile(track.Archive, track.SceneFile);
-                    SaveLevel();
-                    Refresh = true;
-                }
+        for (const TrackInfo* info : gTrackRegistry.GetAllInfo()) {
+            if (!info) { continue; }
+
+            if (!search.empty() &&
+                ToLower(info->Name).find(search) == std::string::npos) {
+                continue;
+            }
+
+            std::string label = fmt::format("{}##{}", info->Name, i_track);
+            if (ImGui::Button(label.c_str())) {
+                //gGamestateNext = RACING;
+                gGotoMode = RACING;
+                gIsInQuitToMenuTransition = 1;
+                gQuitToMenuTransitionCounter = 5;
+                TrackBrowser::Instance->SetTrack(info->ResourceName);
+                break;
+            }
+
+            if ((i_track != 0) && (i_track % 8 == 0)) {
+            } else {
+                ImGui::SameLine();
             }
 
             i_track += 1;
         }
     }
 
-    // When resetting the known content, we need to also pop the custom tracks
-    // out of World::Tracks vector. Otherwise, duplicate tracks would show up for users.
-    void ContentBrowserWindow::RemoveCustomTracksFromTrackList() {
-        for (auto& track : Tracks) {
-            auto it = gWorldInstance.Tracks.begin();
-            while (it != gWorldInstance.Tracks.end()) {
-                if (track.track.get() == it->get()) {
-                    it = gWorldInstance.Tracks.erase(it);
-                } else {
-                    ++it;
+void ContentBrowserWindow::AddActorContent(std::string search) {
+
+    bool isTagSearch = false;
+    std::string tagToSearch;
+
+    if (!search.empty() && search[0] == '#') {
+        isTagSearch = true;
+        tagToSearch = ToLower(search.substr(1)); // Remove the #
+    } else {
+        search = ToLower(search);
+    }
+    
+
+    FVector pos = GetPositionAheadOfCamera(300.0f);
+    SpawnParams params;
+    params.Location = pos;
+
+    size_t i_actor = 0;
+
+    for (const auto* actorInfo : gActorRegistry.GetAllInfo()) {
+        if (!actorInfo) continue;
+
+        // Filtering
+        bool show = false;
+        if (isTagSearch) {
+            // Check tags case-insensitively
+            for (const auto& tag : actorInfo->Tags) {
+                if (ToLower(tag) == tagToSearch) {
+                    show = true;
+                    break;
                 }
             }
+        } else if (!search.empty()) {
+            if (ToLower(actorInfo->Name).find(search) != std::string::npos) {
+                show = true;
+            }
+        } else {
+            show = true; // No search --> show all
         }
+
+        if (!show) continue;
+
+        if ((i_actor != 0) && (i_actor % 8 == 0)) {
+        } else {
+            ImGui::SameLine();
+        }
+
+        std::string label = fmt::format("{}##{}", actorInfo->Name, i_actor);
+        if (ImGui::Button(label.c_str())) {
+            gActorRegistry.Invoke(actorInfo->ResourceName, params);
+        }
+
+        i_actor += 1;
     }
 
-    void ContentBrowserWindow::AddActorContent() {
-        FVector pos = GetPositionAheadOfCamera(300.0f);
-
-        size_t i_actor = 0;
-        for (const auto& actor : CActorList) {
-            if ((i_actor != 0) && (i_actor % 8 == 0)) {
-            } else {
-                ImGui::SameLine();
-            }
-            std::string label = fmt::format("{}##{}", actor.first, i_actor);
-            if (ImGui::Button(label.c_str())) {
-                actor.second(pos);
-            }
-            
-            i_actor += 1;
+    // Add a couple actor models (always shown, bypass search)
+    auto addShipButton = [&](int id, const char* name, int type) {
+        ImGui::PushID(id);
+        if (ImGui::Button(name)) {
+            params.Type = static_cast<int16_t>(type);
+            gActorRegistry.Invoke("hm:ship", params);
         }
+        ImGui::PopID();
+    };
 
-        for (const auto& actor : ActorList) {
-            if ((i_actor != 0) && (i_actor % 8 == 0)) {
-            } else {
-                ImGui::SameLine();
-            }
+    addShipButton(i_actor++, "Ship 2 (HM64)", AShip::Skin::SHIP2);
+    addShipButton(i_actor++, "Ship 3 (HM64)", AShip::Skin::SHIP3);
 
-            std::string label = fmt::format("{}##{}", actor.first, i_actor);
-            if (ImGui::Button(label.c_str())) {
-                //gWorldInstance.AddActor(
-                actor.second(pos);
-            }
-            i_actor += 1;
-        }
+    ContentBrowserWindow::TrainWindow();
+}
 
-        ContentBrowserWindow::TrainWindow();
-    }
 
-    void ContentBrowserWindow::AddObjectContent() {
-        FVector pos = GetPositionAheadOfCamera(300.0f);
-
-        size_t i_object = 0;
-        for (auto& object : ObjectList) {
-            if ((i_object != 0) && (i_object % 10 == 0)) {
-            } else {
-                ImGui::SameLine();
-            }
-
-            std::string label = fmt::format("{}##{}", object.first, i_object);
-            if (ImGui::Button(label.c_str())) {
-                object.second(pos);
-            }
-            i_object += 1;
-        }
-    }
-
-    void ContentBrowserWindow::AddCustomContent() {
+    void ContentBrowserWindow::AddCustomContent(std::string search) {
         FVector pos = GetPositionAheadOfCamera(300.0f);
 
         size_t i_custom = 0;
         for (const auto& file : Content) {
+            std::string name = ToLower(file);
+            if (!search.empty() &&
+                name.find(search) == std::string::npos) {
+                continue;
+            }
+
             if ((i_custom != 0) && (i_custom % 5 == 0)) {
             } else {
                 ImGui::SameLine();
@@ -376,58 +211,12 @@ namespace Editor {
                 int coll;
                 //printf("ContentBrowser.cpp: name: %s\n", test.c_str());
                 std::string name = file.substr(file.find_last_of('/') + 1);
-                auto actor = gWorldInstance.AddStaticMeshActor(name, FVector(pos), IRotator(0, 0, 0), FVector(1, 1, 1), "__OTR__" + file, &coll);
+                auto actor = GetWorld()->AddStaticMeshActor(name, FVector(pos), IRotator(0, 0, 0), FVector(1, 1, 1), "__OTR__" + file, &coll);
                 // This is required because ptr gets cleaned up.
                 actor->Model = "__OTR__" + file;
 
             }
             i_custom += 1;
-        }
-    }
-
-    // Finds modded archives only. For discovering tracks
-    void ContentBrowserWindow::FindTracks() {
-        auto manager = GameEngine::Instance->context->GetResourceManager()->GetArchiveManager();
-
-        auto ptr2 = manager->ListDirectories("tracks/*");
-        if (ptr2) {
-            auto dirs = *ptr2;
-
-            for (const std::string& dir : dirs) {
-                std::string name = dir.substr(dir.find_last_of('/') + 1);
-                std::string sceneFile = dir + "/scene.json";
-                std::string minimapFile = dir + "/minimap.png";
-                // The track has a valid scene file
-                if (manager->HasFile(sceneFile)) {
-                    auto archive = manager->GetArchiveFromFile(sceneFile);
-                    
-                    auto track = std::make_shared<Track>();
-                    track->RootArchive = archive;
-                    track->LoadO2R(dir);
-                    LoadLevel(track.get(), sceneFile);
-                    LoadMinimap(track.get(), minimapFile);
-                    Tracks.push_back({nullptr, track, sceneFile, name, dir, archive});
-                    gWorldInstance.Tracks.push_back(std::move(track));
-                } else { // The track does not have a valid scene file
-                    const std::string file = dir + "/data_track_sections";
-
-                    // If the track has a data_track_sections file,
-                    // then it must at least be a valid track.
-                    // So lets add it as an uninitialized track.
-                    if (manager->HasFile(file)) {
-
-                        auto track = std::make_shared<Track>();
-                        track->Id = (std::string("mods:") + name).c_str();
-                        track->Props.SetText(track->Props.Name, name.c_str(), sizeof(track->Props.Name));
-                        track->Props.SetText(track->Props.DebugName, name.c_str(), sizeof(track->Props.Name));
-                        auto archive = manager->GetArchiveFromFile(file);
-                        Tracks.push_back({track, nullptr, "", name, dir, archive});
-                    } else {
-                        printf("ContentBrowser.cpp: Track '%s' missing required track files. Cannot add to game\n  Missing %s/data_track_sections file\n", name.c_str(), dir.c_str());
-                    }
-
-                }
-            }
         }
     }
 
@@ -443,6 +232,15 @@ namespace Editor {
                     continue;
                 } else if (file.find("_vtx_") != std::string::npos) {
                     // Has _vtx_
+                    continue;
+                } else if (file.find("_vertices") != std::string::npos) {
+                    // Has _vertices
+                    continue;
+                } else if (file.find("_spawns") != std::string::npos) {
+                    // has _spawns
+                    continue;
+                } else if (file.find("_waypoints") != std::string::npos) {
+                    // has _waypoints
                     continue;
                 } else if (file.find('.') != std::string::npos) {
                     // File has an extension

@@ -133,10 +133,6 @@ void DKJungle::Load() {
     find_vtx_and_set_colours((Gfx*) d_course_dks_jungle_parkway_packed_dl_3FA8, 120, 255, 255, 255);
 }
 
-void DKJungle::UnLoad() {
-    RestoreTriangleWinding();
-}
-
 f32 DKJungle::GetWaterLevel(FVector pos, Collision* collision) {
     int32_t temp_v1 = get_track_section_id(collision->meshIndexZX) & 0xFF;
 
@@ -179,16 +175,16 @@ void DKJungle::BeginPlay() {
 
         // The original game only ran vehicle logic every second frame.
         // Thus the speed gets divided by two to set speed to match properly
-        ABoat::Spawn((0.6666666f)/4, 0, 0, ABoat::SpawnMode::POINT);
+        SpawnActor<ABoat>((0.6666666f)/4, 0, 0, ABoat::SpawnMode::POINT);
 
         if (gModeSelection == VERSUS) {
-            OBombKart::Spawn(0, 50, 3, 0.8333333f);
-            OBombKart::Spawn(0, 100, 1, 0.8333333f);
-            OBombKart::Spawn(0, 150, 3, 0.8333333f);
-            OBombKart::Spawn(0, 190, 1, 0.8333333f);
-            OBombKart::Spawn(0, 250, 3, 0.8333333f);
-            OBombKart::Spawn(0, 0, 0, 0.8333333f);
-            OBombKart::Spawn(0, 0, 0, 0.8333333f);
+            SpawnActor<OBombKart>(0, 50, 3, 0.8333333f);
+            SpawnActor<OBombKart>(0, 100, 1, 0.8333333f);
+            SpawnActor<OBombKart>(0, 150, 3, 0.8333333f);
+            SpawnActor<OBombKart>(0, 190, 1, 0.8333333f);
+            SpawnActor<OBombKart>(0, 250, 3, 0.8333333f);
+            SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
+            SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
         }
     }
 }

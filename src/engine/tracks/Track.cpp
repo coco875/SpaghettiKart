@@ -7,7 +7,6 @@
 #include "MarioRaceway.h"
 #include "ChocoMountain.h"
 #include "port/Game.h"
-#include "port/resource/type/TrackPathPointData.h"
 #include "engine/editor/SceneManager.h"
 #include "Registry.h"
 #include "libultraship/bridge/resourcebridge.h"
@@ -83,6 +82,21 @@ static void SwapTriangleVertices(Gfx* cmd) {
     }
 }
 
+// Remove all occurrences of the marker "__OTR__" from a name string.
+static std::string StripOtrPrefix(const char* s) {
+    if (s == nullptr) {
+        return std::string();
+    }
+
+    std::string out(s);
+    const std::string marker = "__OTR__";
+    size_t pos = 0;
+    while ((pos = out.find(marker, pos)) != std::string::npos) {
+        out.erase(pos, marker.length());
+    }
+    return out;
+}
+
 static void InvertTriangleWindingInternal(Gfx* gfx, const char* gfxName, bool shouldSwap) {
     if (gfx == nullptr) {
         return;
@@ -93,7 +107,7 @@ static void InvertTriangleWindingInternal(Gfx* gfx, const char* gfxName, bool sh
     }
     
     if (gfxName != nullptr) {
-        std::string nameStr(gfxName);
+        std::string nameStr = StripOtrPrefix(gfxName);
         if (gModifiedGfxSet.find(nameStr) != gModifiedGfxSet.end()) {
             return;
         }
@@ -151,12 +165,99 @@ static void InvertTriangleWindingInternal(Gfx* gfx, const char* gfxName, bool sh
                 uint64_t hash = ((uint64_t)cmd->words.w0 << 32) | cmd->words.w1;
                 const char* name = ResourceGetNameByCrc(hash);
                 if (name != nullptr && gfxName == nullptr) {
-                    std::string nameStr(name);
+                    std::string nameStr = StripOtrPrefix(name);
                     if (gModifiedGfxSet.find(nameStr) != gModifiedGfxSet.end()) {
                         return;
                     }
                     gModifiedGfxSet.insert(nameStr);
                     shouldSwap = (strstr(name, "packed") != nullptr);
+                }
+                break;
+            }
+            case G_MTX_OTR:
+            case G_SETTIMG_OTR_HASH:
+                cmd++;
+                i++;
+                break;
+            case G_ENDDL:
+                return;
+            default:
+                break;
+        }
+        
+        cmd++;
+    }
+}
+
+static void InvertTriangleWindingModdedInternal(Gfx* gfx, const char* gfxName) {
+    if (gfx == nullptr) {
+        return;
+    }
+    
+    if (GameEngine_OTRSigCheck((char*)gfx)) {
+        gfx = (Gfx*)LOAD_ASSET(gfx);
+    }
+    
+    if (gfxName != nullptr) {
+        std::string nameStr = StripOtrPrefix(gfxName);
+        if (gModifiedGfxSet.find(nameStr) != gModifiedGfxSet.end()) {
+            return;
+        }
+        gModifiedGfxSet.insert(nameStr);
+    }
+    
+    Gfx* cmd = gfx;
+    
+    for (int i = 0; i < 0x1FFF; i++) {
+        int8_t opcode = cmd->words.w0 >> 24;
+        
+        switch (opcode) {
+            case G_TRI1:
+            case G_TRI1_OTR:
+            case G_TRI2:
+            case G_QUAD:
+                SwapTriangleVertices(cmd);
+                break;
+            case G_DL: {
+                Gfx* subDL = (Gfx*)(uintptr_t)cmd->words.w1;
+                InvertTriangleWindingModdedInternal(subDL, nullptr);
+                break;
+            }
+            case G_DL_OTR_HASH: {
+                cmd++;
+                i++;
+                uint64_t hash = ((uint64_t)cmd->words.w0 << 32) | cmd->words.w1;
+                const char* name = ResourceGetNameByCrc(hash);
+                if (name != nullptr) {
+                    Gfx* subDL = (Gfx*)ResourceGetDataByCrc(hash);
+                    InvertTriangleWindingModdedInternal(subDL, name);
+                }
+                break;
+            }
+            case G_DL_OTR_FILEPATH: {
+                const char* name = (const char*)(uintptr_t)cmd->words.w1;
+                if (name != nullptr) {
+                    Gfx* subDL = (Gfx*)ResourceGetDataByName(name);
+                    InvertTriangleWindingModdedInternal(subDL, name);
+                }
+                break;
+            }
+            case G_VTX_OTR_FILEPATH:
+            case G_VTX_OTR_HASH:
+                cmd++;
+                i++;
+                break;
+            case G_MARKER: {
+                cmd++;
+                i++;
+                uint64_t hash = ((uint64_t)cmd->words.w0 << 32) | cmd->words.w1;
+                const char* name = ResourceGetNameByCrc(hash);
+                if (name != nullptr) {
+                    std::string nameStr = StripOtrPrefix(name);
+                    if (gModifiedGfxSet.find(nameStr) != gModifiedGfxSet.end()) {
+                        return;
+                    }
+                    gModifiedGfxSet.insert(nameStr);
                 }
                 break;
             }
@@ -186,6 +287,14 @@ void InvertTriangleWindingByName(const char* name) {
     Gfx* gfx = (Gfx*)ResourceGetDataByName(name);
     bool shouldSwap = (strstr(name, "packed") != nullptr);
     InvertTriangleWindingInternal(gfx, name, shouldSwap);
+}
+
+void InvertTriangleWindingModdedByName(const char* name) {
+    if (name == nullptr) {
+        return;
+    }
+    Gfx* gfx = (Gfx*)ResourceGetDataByName(name);
+    InvertTriangleWindingModdedInternal(gfx, name);
 }
 
 void RestoreTriangleWinding() {
@@ -248,7 +357,7 @@ Track::Track() {
     Props.SetText(Props.TrackLength, "100m", sizeof(Props.TrackLength));
     // Props.Cup = FLOWER_CUP;
     // Props.CupIndex = 3;
-    Id = "";
+    ResourceName = "";
     Props.Minimap.Texture = minimap_mario_raceway;
     Props.Minimap.Width = ResourceGetTexWidthByName(Props.Minimap.Texture);
     Props.Minimap.Height = ResourceGetTexHeightByName(Props.Minimap.Texture);
@@ -309,6 +418,14 @@ Track::Track() {
     Props.Clouds = NULL;
     Props.CloudList = NULL;
     Props.Sequence = MusicSeq::MUSIC_SEQ_UNKNOWN;
+
+    bFog = false;
+    gFogColour.r = 0;
+    gFogColour.g = 0;
+    gFogColour.b = 0;
+    gFogColour.a = 255;
+    gFogMin = 995;
+    gFogMax = 1000;
 }
 
 // Load custom track from code
@@ -316,58 +433,38 @@ void Track::Load(Vtx* vtx, Gfx* gfx) {
     Track::Init();
 }
 
-void Track::UnLoad() {
-}
-
-void Track::LoadO2R(std::string trackPath) {
-    if (!trackPath.empty()) {
-        SceneFilePtr = (trackPath + "/scene.json");
-        TrackSectionsPtr = (trackPath + "/data_track_sections");
-
-        std::string path_file = (trackPath + "/data_paths").c_str();
-
-        auto res = std::dynamic_pointer_cast<MK64::Paths>(ResourceLoad(path_file.c_str()));
-
-        if (res != nullptr) {
-            auto& paths = res->PathList;
-
-            size_t i = 0;
-            u16* ptr = &Props.PathSizes.unk0;
-            for (auto& path : paths) {
-                if (i >= ARRAY_COUNT(Props.PathTable2)) {
-                    printf("[Track.cpp] The game can only import 5 paths. Found more than 5. Skipping the rest\n");
-                    break; // Only 5 paths allowed. 4 track, 1 vehicle
-                }
-                ptr[i] = path.size();
-                Props.PathTable2[i] = (TrackPathPoint*) path.data();
-
-                i += 1;
-            }
-        }
-        gVehiclePathSize = Props.PathSizes.unk0; // This is likely incorrect.
-
-    } else {
-        printf("Track.cpp: LoadO2R: trackPath str is empty\n");
-    }
-}
-
 // Load stock and o2r tracks
 void Track::Load() {
-    // Re-load scenefile in-case changes were made in the editor
-      if (!SceneFilePtr.empty()) {
-        Editor::LoadLevel(this, SceneFilePtr);
+    printf("[Track] Loading... %s\n", ResourceName.c_str());
+    const TrackInfo* info = gTrackRegistry.GetInfo(ResourceName);
+    if (nullptr == info) {
+        printf("Could not find TrackInfo for %s\n", ResourceName.c_str());
+        return;
     }
+    const std::string& trackPath = info->Path;
 
-    // Load from O2R
-    if (!TrackSectionsPtr.empty()) {
+    if (trackPath.empty()) {
+        // Load stock track
+        Track::Init();
+    } else { // Load custom track
         bIsMod = true;
-        // auto res = std::dynamic_pointer_cast<MK64::TrackSectionsO2RClass>(ResourceLoad(TrackSectionsPtr.c_str()));
 
-        TrackSections* sections = (TrackSections*) LOAD_ASSET_RAW(TrackSectionsPtr.c_str());
-        size_t size = ResourceGetSizeByName(TrackSectionsPtr.c_str());
+        Editor::LoadTrackDataFromJson(this, trackPath);
+        
+        const std::string trackSectionPath = (trackPath + "/data_track_sections");
+        TrackSections* sections = (TrackSections*) LOAD_ASSET_RAW(trackSectionPath.c_str());
+        size_t size = ResourceGetSizeByName(trackSectionPath.c_str());
+
+        size_t totalSections = size / sizeof(TrackSections);
 
         if (sections != nullptr) {
             Track::Init();
+            if (gIsMirrorMode != 0) {
+                for (size_t i = 0; i < totalSections; i++) {
+                    auto name = ResourceGetNameByCrc(sections[i].crc);
+                    InvertTriangleWindingModdedByName(name);
+                }
+            }
             ParseTrackSections(sections, size);
             func_80295C6C();
 
@@ -377,10 +474,7 @@ void Track::Load() {
         } else {
             printf("Track.cpp: Custom track sections are invalid\n");
         }
-        return;
     }
-
-    Track::Init();
 }
 
 // C++ version of parse_track_displaylists()
@@ -450,7 +544,6 @@ void Track::Init() {
     D_8015F58C = 0;
     gCollisionMeshCount = 0;
     gCollisionMesh = (CollisionTriangle*) gNextFreeMemoryAddress;
-    D_800DC5BC = 0;
     D_800DC5C8 = 0;
 }
 
@@ -462,13 +555,8 @@ void Track::BeginPlay() {
 
 // Spawns actors from SpawnParams set by the scene file in SceneManager.cpp
 void Track::SpawnActors() {
-    for (const auto& actor : SpawnList) {
-        auto it = gActorRegistry.find(actor.Name);
-        if (it != gActorRegistry.end() && it->second.spawnFunc) {
-            it->second.spawnFunc(actor);
-        } else {
-            printf("Actor not found %s\n", actor.Name.c_str());
-        }
+    for (const auto& params : SpawnList) {
+        gActorRegistry.Invoke(params.Name, params);
     }
 }
 
@@ -533,24 +621,26 @@ void Track::Waypoints(Player* player, int8_t playerId) {
 }
 
 void Track::Draw(ScreenContext* arg0) {
-    if (!TrackSectionsPtr.empty()) {
-        gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
-        gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
-        set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
-        gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
-        gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
+    gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
+    gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
+    set_track_light_direction(D_800DC610, D_802B87D4, 0, 1);
+    gSPTexture(gDisplayListHead++, 0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON);
+    gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
 
-        if (func_80290C20(arg0->camera) == 1) {
-            gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
-            gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
-            // d_course_big_donut_packed_dl_DE8
-        }
+    if (func_80290C20(arg0->camera) == 1) {
+        gDPSetCombineMode(gDisplayListHead++, G_CC_SHADE, G_CC_SHADE);
+        gDPSetRenderMode(gDisplayListHead++, G_RM_AA_ZB_OPA_SURF, G_RM_AA_ZB_OPA_SURF2);
+        // d_course_big_donut_packed_dl_DE8
+    }
 
-        TrackSections* sections = (TrackSections*) LOAD_ASSET_RAW(TrackSectionsPtr.c_str());
-        size_t size = ResourceGetSizeByName(TrackSectionsPtr.c_str());
-        for (size_t i = 0; i < (size / sizeof(TrackSections)); i++) {
-            gSPDisplayList(gDisplayListHead++, (Gfx*) ResourceGetDataByCrc(sections[i].crc));
-        }
+    const TrackInfo* info = gTrackRegistry.GetInfo(ResourceName);
+    std::string res = info->Path + "/data_track_sections";
+
+    TrackSections* sections = (TrackSections*) LOAD_ASSET_RAW(res.c_str());
+    size_t size = ResourceGetSizeByName(res.c_str());
+    size_t totalSections = size / sizeof(TrackSections);
+    for (size_t i = 0; i < totalSections; i++) {
+        gSPDisplayList(gDisplayListHead++, (Gfx*) ResourceGetDataByCrc(sections[i].crc));
     }
 }
 
@@ -561,7 +651,7 @@ f32 Track::GetWaterLevel(FVector pos, Collision* collision) {
     float highestWater = -FLT_MAX;
     bool found = false;
 
-    for (const auto& volume : gWorldInstance.GetTrack()->WaterVolumes) {
+    for (const auto& volume : GetWorld()->GetTrack()->WaterVolumes) {
         if (pos.x >= volume.MinX && pos.x <= volume.MaxX && pos.z >= volume.MinZ && pos.z <= volume.MaxZ) {
             // Choose the highest water volume the player is over
             if (!found || volume.Height > highestWater) {
@@ -572,13 +662,12 @@ f32 Track::GetWaterLevel(FVector pos, Collision* collision) {
     }
 
     // If player is not over-top of a water volume then return the tracks default water level
-    return found ? highestWater : gWorldInstance.GetTrack()->Props.WaterLevel;
+    return found ? highestWater : GetWorld()->GetTrack()->Props.WaterLevel;
 }
 
 void Track::ScrollingTextures() {
 }
-void Track::DrawWater(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot,
-                       uint16_t playerDirection) {
+void Track::DrawWater(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) {
 }
 
 void Track::Destroy() {

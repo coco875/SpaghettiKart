@@ -52,15 +52,11 @@ extern "C" void add_triangle_to_collision_mesh(Vtx* vtx1, Vtx* vtx2, Vtx* vtx3, 
 }
 
 void RaceManager::Load() {
-    if (WorldContext.GetTrack()) {
+    if (GetWorld()->GetTrack()) {
         mirroredVtxCache.clear();
-        WorldContext.GetTrack()->Load();
-    }
-}
-
-void RaceManager::UnLoad() {
-    if (WorldContext.GetTrack()) {
-        WorldContext.GetTrack()->UnLoad();
+        GetWorld()->GetTrack()->Load();
+    } else {
+        printf("[RaceManager] [Load] Track was nullptr\n");
     }
 }
 
@@ -97,8 +93,8 @@ void RaceManager::BeginPlay() {
 void RaceManager::PostInit() {
     // Ruleset options
     if (CVarGetInteger("gAllThwompsAreMarty", false) == true) {
-        for (auto object : gWorldInstance.Objects) {
-            if (OThwomp* thwomp = dynamic_cast<OThwomp*>(object)) {
+        for (auto& object : GetWorld()->Objects) {
+            if (OThwomp* thwomp = dynamic_cast<OThwomp*>(object.get())) {
                 gObjectList[thwomp->_objectIndex].unk_0D5 = OThwomp::States::JAILED; // Sets all the thwomp behaviour flags to marty
                 thwomp->Behaviour = OThwomp::States::JAILED;
             }
@@ -106,8 +102,8 @@ void RaceManager::PostInit() {
     }
 
     if (CVarGetInteger("gAllBombKartsChase", false) == true) {
-        for (auto object : gWorldInstance.Objects) {
-            if (OBombKart* kart = dynamic_cast<OBombKart*>(object)) {
+        for (auto& object : GetWorld()->Objects) {
+            if (OBombKart* kart = dynamic_cast<OBombKart*>(object.get())) {
                 kart->Behaviour = OBombKart::States::CHASE;
             }
         }

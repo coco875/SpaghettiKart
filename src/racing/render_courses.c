@@ -1,5 +1,6 @@
 #include <libultraship.h>
 #include <libultra/gbi.h>
+#include <libultraship/bridge/resourcebridge.h>
 #include <macros.h>
 #include <mk64.h>
 #include <common_structs.h>
@@ -17,7 +18,6 @@
 #include "memory.h"
 #include "code_80281780.h"
 #include "collision.h"
-#include "libultraship/bridge/resourcebridge.h"
 #include "skybox_and_splitscreen.h"
 #include "courses/all_course_data.h"
 #include "courses/all_course_packed.h"
@@ -28,8 +28,8 @@
 
 #include "enhancements/collision_viewer.h"
 
-s16 D_802B87B0 = 995;
-s16 D_802B87B4 = 1000;
+s16 gFogMin = 995;
+s16 gFogMax = 1000;
 UNUSED s32 D_802B87B8 = 0;
 s32 D_802B87BC = 0;
 UNUSED s32 D_802B87C0 = 0;

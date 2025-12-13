@@ -35,7 +35,7 @@ void ObjectPicker::Tick() {
 }
 
 void ObjectPicker::SelectObject(std::vector<GameObject*> objects) {
-    Camera* camera = gEditor.eCamera;
+    Camera* camera = gScreenOneCtx->camera;
     Ray ray;
     ray.Origin = FVector(camera->pos[0], camera->pos[1], camera->pos[2]);
 
@@ -59,7 +59,7 @@ void ObjectPicker::SelectObject(std::vector<GameObject*> objects) {
 }
 
 void ObjectPicker::DragHandle() {
-    Camera* camera = gEditor.eCamera;
+    Camera* camera = gScreenOneCtx->camera;
     Ray ray;
     ray.Origin = FVector(camera->pos[0], camera->pos[1], camera->pos[2]);
     ray.Direction = ScreenRayTrace();
@@ -136,7 +136,7 @@ void ObjectPicker::Draw() {
     }, _selected);
 
     if (Debug) {
-        Camera* camera = gEditor.eCamera;
+        Camera* camera = gScreenOneCtx->camera;
         Mat4 CursorMtx;
         IRotator rot = IRotator(0,0,0);
         FVector scale = FVector(1, 1, 1);
@@ -249,7 +249,7 @@ std::pair<AActor*, float> ObjectPicker::CheckAActorRay(Ray ray) {
     AActor* hitActor = nullptr;
     float hitDistance = FLT_MAX;
 
-    for (auto actor : gWorldInstance.Actors) {
+    for (const auto& actor : GetWorld()->Actors) {
         if ((actor->bPendingDestroy) && (!actor->IsMod())) {
             continue;
         }
@@ -265,7 +265,7 @@ std::pair<AActor*, float> ObjectPicker::CheckAActorRay(Ray ray) {
                 if (IntersectRayTriangleAndTransform(ray, FVector(actor->Pos[0], actor->Pos[1], actor->Pos[2]), tri, t)) {
                     if (t < hitDistance) {
                         hitDistance = t;
-                        hitActor = static_cast<AActor*>(actor);
+                        hitActor = actor.get();
                     }
                 }
             }
@@ -283,7 +283,7 @@ std::pair<AActor*, float> ObjectPicker::CheckAActorRay(Ray ray) {
             if (QueryCollisionRayActor(&ray.Origin.x, &ray.Direction.x, boxMin, boxMax, &t)) {
                 if (t < hitDistance) {
                     hitDistance = t;
-                    hitActor = static_cast<AActor*>(actor);
+                    hitActor = actor.get();
                 }
             }
         }
