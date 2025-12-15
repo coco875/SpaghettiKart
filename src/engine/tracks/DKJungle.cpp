@@ -53,6 +53,7 @@ DKJungle::DKJungle() {
     Props.Minimap.FinishlineY = 0;
     ResizeMinimap(&Props.Minimap);
 
+    ResourceName = "mk:dks_jungle_parkway";
     Props.SetText(Props.Name, "d.k.'s jungle parkway", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "jungle", sizeof(Props.DebugName));
     Props.SetText(Props.TrackLength, "893m", sizeof(Props.TrackLength));

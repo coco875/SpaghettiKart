@@ -21,6 +21,10 @@ void TrackBrowser::FindCustomTracks() {
                 auto archive = manager->GetArchiveFromFile(sceneFile);
 
                 TrackInfo info;
+                // simplification for now
+                info.ResourceName = std::string("mods:") + name;
+                info.Name = name;
+                info.DebugName = name;
                 info.Path = dir;
                 Editor::LoadTrackInfo(info, archive, sceneFile);
                 printf("Added custom track %s\n", info.Name.c_str());
