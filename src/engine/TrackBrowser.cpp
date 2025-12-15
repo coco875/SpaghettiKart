@@ -26,6 +26,9 @@ void TrackBrowser::FindCustomTracks() {
             TrackInfo info;
             info.Path = dir;
             TrackEditor::LoadTrackInfo(info, archive, sceneFile);
+            if (info.ResourceName.empty()) {
+                info.ResourceName = std::string("mods:") + name;
+            }
             printf("[TrackBrowser] Added custom track %s\n", info.Name.c_str());
             gTrackRegistry.Add(info, [info, archive]() {
                 auto track = std::make_unique<Track>();
