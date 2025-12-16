@@ -56,7 +56,6 @@ BansheeBoardwalk::BansheeBoardwalk() {
     ResizeMinimap(&Props.Minimap);
 
     ResourceName = "mk:banshee_boardwalk";
-
     Props.SetText(Props.Name, "banshee boardwalk", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "ghost", sizeof(Props.DebugName));
     Props.SetText(Props.TrackLength, "747m", sizeof(Props.TrackLength));
@@ -166,7 +165,7 @@ void BansheeBoardwalk::BeginPlay() {
     }
 
     if (gIsMirrorMode) {
-        SpawnActor<OTrashBin>(FVector(1765.0f, 45.0f, 195.0f), IRotator(0, 180, 0), 1.0f, bhv);
+        SpawnActor<OTrashBin>(FVector(-1765.0f, 45.0f, 195.0f), IRotator(0, 180, 0), 1.0f, bhv);
     } else {
         SpawnActor<OTrashBin>(FVector(-1765.0f, 45.0f, 70.0f), IRotator(0, 0, 0), 1.0f, bhv);
     }

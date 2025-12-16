@@ -29,20 +29,31 @@ extern "C" {
 #include "actors.h"
 #include "actor_types.h"
 #include "code_80005FD0.h"
+#include "code_800029B0.h"
+#include "render_courses.h"
 }
 
-namespace Editor {
-    void SaveLevel(Track* track) {
+namespace TrackEditor {
+    void SaveLevel(Track* track, const TrackInfo* info) {
         nlohmann::json data;
 
         /**
          * Save track properties, static mesh actors, actors, and tour camera
          */
-        data["Props"] = track->Props.to_json();
+        try {
+            data["Props"] = track->Props.to_json();
+            data["Props"]["ResourceName"] = track->ResourceName.c_str();
+        } catch (...) {
+            SPDLOG_ERROR("[SceneManager] [SaveLevel] Failed serializing track Props");
+        }
 
-        nlohmann::json staticMesh;
-        SaveStaticMeshActors(staticMesh);
-        data["StaticMeshActors"] = staticMesh;
+        try {
+            nlohmann::json staticMesh;
+            SaveStaticMeshActors(staticMesh);
+            data["StaticMeshActors"] = staticMesh;
+        } catch (...) {
+            SPDLOG_ERROR("[SceneManager] [SaveLevel] Failed serializing StaticMeshActors");
+        }
 
 
         nlohmann::json actors;
@@ -55,6 +66,10 @@ namespace Editor {
             SaveTour(track, tour);
             data["Tour"] = tour;
         }
+
+        nlohmann::json fog;
+        SaveFog(fog);
+        data["Fog"] = fog;
 
         if (nullptr == track->Archive) {
             SPDLOG_INFO("[SceneManager] [SaveLevel] Track archive nullptr");
@@ -69,7 +84,6 @@ namespace Editor {
             std::vector<uint8_t> bytes; // Turn the str into raw data
             bytes.assign(jsonStr.begin(), jsonStr.end());
 
-            const TrackInfo* info = gTrackRegistry.GetInfo(track->ResourceName);
             std::string sceneFile = info->Path + "/scene.json";
 
             // Write file to disk
@@ -297,6 +311,19 @@ namespace Editor {
         }
     }
 
+    void SaveFog(nlohmann::json& fog) {
+        fog["EnableFog"] = bFog;
+        if (bFog) {
+            fog["Colour"]["R"] = gFogColour.r;
+            fog["Colour"]["G"] = gFogColour.g;
+            fog["Colour"]["B"] = gFogColour.b;
+            fog["Colour"]["A"] = gFogColour.a;
+
+            fog["Min"] = gFogMin;
+            fog["Max"] = gFogMax;
+        }
+    }
+
     void LoadProps(Track* track, nlohmann::json& data) {
         if (!data.contains("Props") || !data["Props"].is_object()) {
             SPDLOG_INFO("Track is missing props data. Is the scene.json file corrupt?");
@@ -305,6 +332,7 @@ namespace Editor {
 
         try {
             track->Props.from_json(data["Props"]);
+            track->ResourceName = data["Props"].at("ResourceName").get<std::string>();
         } catch(const std::exception& e) {
             std::cerr << "  Error parsing track properties: " << e.what() << std::endl;
             std::cerr << "    Is your scene.json file out of date?" << std::endl;
@@ -312,27 +340,34 @@ namespace Editor {
     }
 
     void LoadPaths(Track* track, const std::string& trackPath) {
+        SPDLOG_INFO("[SceneManager] [LoadPaths] Loading Paths...");
         std::string path_file = (trackPath + "/data_paths").c_str();
 
         auto res = std::dynamic_pointer_cast<MK64::Paths>(ResourceLoad(path_file.c_str()));
+        if (nullptr == res) {
+            SPDLOG_ERROR("  Unable to load path file (data_paths)");
+            SPDLOG_ERROR("  This file is required for custom tracks to work ");
+            SPDLOG_ERROR("  Make sure the first path point is at coordinates 0,0,0");
+            SPDLOG_ERROR("  In blender you may need to apply transformations and then move the point to 0,0,0");
+        }
 
-        if (res != nullptr) {
-            auto& paths = res->PathList;
+        auto& paths = res->PathList;
 
-            size_t i = 0;
-            u16* ptr = &track->Props.PathSizes.unk0;
-            for (auto& path : paths) {
-                if (i >= ARRAY_COUNT(track->Props.PathTable2)) {
-                    printf("[Track.cpp] The game can only import 5 paths. Found more than 5. Skipping the rest\n");
-                    break; // Only 5 paths allowed. 4 track, 1 vehicle
-                }
-                ptr[i] = path.size();
-                track->Props.PathTable2[i] = (TrackPathPoint*) path.data();
-
-                i += 1;
+        size_t i = 0;
+        u16* ptr = &track->Props.PathSizes.unk0;
+        for (auto& path : paths) {
+            if (i >= ARRAY_COUNT(track->Props.PathTable2)) {
+                SPDLOG_INFO("  The game can only import 5 paths. Found more than 5. Skipping the rest");
+                break; // Only 5 paths allowed. 4 track, 1 vehicle
             }
+            ptr[i] = path.size();
+            track->Props.PathTable2[i] = (TrackPathPoint*) path.data();
+            SPDLOG_INFO("  Added path {}", i);
+
+            i += 1;
         }
         gVehiclePathSize = track->Props.PathSizes.unk0; // This is likely incorrect.
+        SPDLOG_INFO("[SceneManager] [LoadPaths] Path Loading Complete!");
     }
 
     void LoadTrackInfoData(TrackInfo& info, nlohmann::json& data) {
@@ -414,5 +449,44 @@ namespace Editor {
                 track->TourShots.push_back(FromJsonCameraShot(shotJson));
             }
         }
+    }
+
+    void LoadFog(nlohmann::json& data) {
+        if (!data.contains("Fog") || !data["Fog"].is_object()) {
+            SPDLOG_INFO("  This track does not contain fog");
+            return;
+        }
+
+        nlohmann::json& fog = data["Fog"];
+
+        bFog = fog.value("Enabled", false);
+
+        if (!bFog) return;
+
+        // Load color
+        if (fog.contains("Colour") && fog["Colour"].is_object()) {
+            nlohmann::json& c = fog["Colour"];
+            gFogColour.r = c.value("R", 255);
+            gFogColour.g = c.value("G", 255);
+            gFogColour.b = c.value("B", 255);
+            gFogColour.a = c.value("A", 255);
+        }
+
+        // Load min/max with safety clamps
+        int minVal = fog.value("Min", 0);
+        int maxVal = fog.value("Max", 500);
+
+        // Ensure min < max
+        if (minVal >= maxVal) {
+            minVal = maxVal - 1;
+        }
+
+        // Clamp to valid ranges
+        minVal = std::clamp(minVal, 0, 999);
+        maxVal = std::clamp(maxVal, 1, 1000);
+
+        gFogMin = static_cast<int16_t>(minVal);
+        gFogMax = static_cast<int16_t>(maxVal);
+
     }
 }

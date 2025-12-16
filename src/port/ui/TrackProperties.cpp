@@ -14,6 +14,9 @@
 #include "port/Game.h"
 
 #include "engine/cameras/TourCamera.h"
+#include "engine/TrackBrowser.h"
+#include "engine/editor/SceneManager.h"
+#include "engine/Registry.h"
 
 extern "C" {
 #include "code_800029B0.h"
@@ -23,26 +26,23 @@ extern "C" {
 #include "render_objects.h"
 }
 
-namespace Editor {
+namespace TrackEditor {
 
     TrackPropertiesWindow::~TrackPropertiesWindow() {
         SPDLOG_TRACE("destruct track properties window");
     }
 
     void TrackPropertiesWindow::DrawElement() {
-        static char idBuffer[256] = "mk:mario_raceway";
-        static char nameBuffer[256] = "Mario Raceway";
-        static char debugNameBuffer[256] = "m circuit";
-        static char lengthBuffer[256] = "567m";
-
         if (nullptr == GetWorld()->GetTrack()) {
             return;
         }
 
-        ImGui::InputText("ID", idBuffer, IM_ARRAYSIZE(idBuffer));
-        ImGui::InputText("Name", GetWorld()->GetTrack()->Props.Name, IM_ARRAYSIZE(nameBuffer));
-        ImGui::InputText("Debug Name", GetWorld()->GetTrack()->Props.DebugName, IM_ARRAYSIZE(debugNameBuffer));
-        ImGui::InputText("Track Length", GetWorld()->GetTrack()->Props.TrackLength, IM_ARRAYSIZE(lengthBuffer));
+        if (ImGui::Button("Edit TrackInfo")) {
+            ImGui::OpenPopup("Edit TrackInfo");
+        }
+
+        DrawResourceNameEdit();
+
         ImGui::InputFloat("Water Level", &GetWorld()->GetTrack()->Props.WaterLevel);
 
         if (ImGui::CollapsingHeader("Camera")) {
@@ -57,6 +57,7 @@ namespace Editor {
         }
 
         if (ImGui::CollapsingHeader("Environment")) {
+            TrackPropertiesWindow::DrawFog();
             TrackPropertiesWindow::DrawLight();
         }
 
@@ -174,6 +175,99 @@ namespace Editor {
         TrackPropertiesWindow::DrawTourCamera();
     }
 
+    void TrackPropertiesWindow::DrawResourceNameEdit() {
+        Track* track = GetWorld()->GetTrack();
+        if (!track) {
+            return;
+        }
+
+        static char resourceNameBuffer[128] = {};
+        static char nameBuffer[128] = "blank_track";
+        static char debugNameBuffer[128] = "blanktrack";
+        static char lengthBuffer[128] = "100m";
+        static bool initialized = false;
+        static std::string oldResourceName = track->ResourceName;
+
+        // Auto-sizing fills the height of the screen for a single frame.
+        // Because there's no content in the window in the first frame.
+        // This forces the window size to prevent that
+        ImGui::SetNextWindowSize(ImVec2(400, 275), ImGuiCond_Always);
+        if (ImGui::BeginPopupModal("Edit TrackInfo", nullptr,
+                                ImGuiWindowFlags_AlwaysAutoResize)) {
+                                    
+            // Initialize once per popup open
+            if (!initialized) {
+                strncpy(resourceNameBuffer, track->ResourceName.c_str(), sizeof(resourceNameBuffer));
+                resourceNameBuffer[sizeof(resourceNameBuffer) - 1] = '\0';
+                oldResourceName = track->ResourceName;
+                initialized = true;
+            }
+
+            ImGui::TextWrapped(
+                "Changing these fields will:\n"
+                "- Save the current track\n"
+                "- Reload the track\n"
+                "- Update the registry\n\n"
+            );
+
+            gEditor.Pause();
+
+            ImGui::Spacing();
+            ImGui::Separator();
+            ImGui::Spacing();
+
+            ImGui::InputText("ResourceName", resourceNameBuffer, IM_ARRAYSIZE(resourceNameBuffer));
+            ImGui::InputText("Name", GetWorld()->GetTrack()->Props.Name, IM_ARRAYSIZE(nameBuffer));
+            ImGui::InputText("Debug Name", GetWorld()->GetTrack()->Props.DebugName, IM_ARRAYSIZE(debugNameBuffer));
+            ImGui::InputText("Track Length", GetWorld()->GetTrack()->Props.TrackLength, IM_ARRAYSIZE(lengthBuffer));
+
+            ImGui::Spacing();
+            ImGui::Separator();
+            ImGui::Spacing();
+
+            bool cancel = ImGui::Button("Cancel", ImVec2(120, 0));
+
+            ImGui::SameLine();
+
+            bool confirm = ImGui::Button("Confirm", ImVec2(120, 0));
+
+            if (confirm) {
+                if (oldResourceName != resourceNameBuffer) {
+                    track->ResourceName = resourceNameBuffer;
+                    const TrackInfo* oldInfo = gTrackRegistry.GetInfo(oldResourceName);
+                    TrackInfo info;
+                    info.ResourceName = track->ResourceName;
+                    info.Name = track->Props.Name;
+                    info.DebugName = track->Props.DebugName;
+                    info.Path = oldInfo->Path;
+
+                    TrackEditor::SaveLevel(track, static_cast<const TrackInfo*>(&info));
+                    auto archive = track->Archive;
+                    gTrackRegistry.Remove(oldResourceName);
+                    gTrackRegistry.Add(info, [info, archive]() {
+                        auto track = std::make_unique<Track>();
+                        track->Archive = archive;
+                        track->ResourceName = info.ResourceName;
+                        GetWorld()->SetCurrentTrack(std::move(track));
+                    });
+                    TrackBrowser::Instance->Refresh(gTrackRegistry);
+                    gGotoMode = RACING;
+
+                }
+                initialized = false;
+
+                ImGui::CloseCurrentPopup();
+            }
+
+            if (cancel) {
+                initialized = false;
+                ImGui::CloseCurrentPopup();
+            }
+
+            ImGui::EndPopup();
+        }
+    }
+
     void TrackPropertiesWindow::DrawMusic() {
         const char* items[] = {
             "None", "Title Screen", "Main Menu", "Wario Stadium", "Moo Moo Farm",
@@ -249,6 +343,40 @@ namespace Editor {
         }
     }
 
+    void TrackPropertiesWindow::DrawFog() {
+        if (ImGui::CollapsingHeader("Fog")) {
+            ImGui::Checkbox("Enable Fog", &bFog);
+            float colours[4];
+
+            // Convert rgba to floats
+            RGB8ToFloat((u8*)&gFogColour, colours);
+            colours[3] = gFogColour.a / 255.0f;
+            // Edit the ambient RGB colour
+            ImGui::ColorEdit4("Fog Colour", colours);
+
+            // Convert floats to rgba
+            FloatToRGB8(colours, (u8*)&gFogColour);
+            gFogColour.a = static_cast<u8>(colours[3] * 255.0f);
+
+            // Fog near and far planes
+            int val[2] = {static_cast<int>(gFogMin), static_cast<int>(gFogMax)};
+
+            ImGui::DragInt2("##MinimapPosition", &val[0], 1.0f, 0, 1000);
+
+            if (val[0] >= val[1]) {
+                val[0] = val[1] - 1;
+            }
+
+            // Clamp to allowed range just in case
+            val[0] = std::clamp(val[0], 0, 999);
+            val[1] = std::clamp(val[1], 1, 1000);
+
+            gFogMin = static_cast<int16_t>(val[0]);
+            gFogMax = static_cast<int16_t>(val[1]);
+        }
+
+    }
+
     void TrackPropertiesWindow::DrawLight() {
         // Convert and pass to ImGui ColorEdit3
         
@@ -260,17 +388,17 @@ namespace Editor {
             RGB8ToFloat((u8*)&D_800DC610[i].l->l.col, diffuse);
             RGB8ToFloat((u8*)&D_800DC610[i].l->l.dir, direction);
 
-            // Edit the ambient RGB color
-            ImGui::Text("Light %d - Ambient Color", i + 1);
-            ImGui::ColorEdit3(("Ambient Color " + std::to_string(i)).c_str(), ambient); // Modify ambient color
+            // Edit the ambient RGB colour
+            ImGui::Text("Light %d - Ambient Colour", i + 1);
+            ImGui::ColorEdit3(("Ambient Colour " + std::to_string(i)).c_str(), ambient); // Modify ambient colour
+
+            // Edit the diffuse RGB colour
+            ImGui::Text("Light %d - Diffuse Colour", i + 1);
+            ImGui::ColorEdit3(("Diffuse Colour " + std::to_string(i)).c_str(), diffuse); // Modify diffuse colour
     
-            // Edit the diffuse RGB color
-            ImGui::Text("Light %d - Diffuse Color", i + 1);
-            ImGui::ColorEdit3(("Diffuse Color " + std::to_string(i)).c_str(), diffuse); // Modify diffuse color
-    
-            // Edit the direction RGB color (this could be represented as a direction vector)
+            // Edit the direction RGB colour (this could be represented as a direction vector)
             ImGui::Text("Light %d - Direction", i + 1);
-            ImGui::ColorEdit3(("Direction Color " + std::to_string(i)).c_str(), direction); // Modify direction vector color
+            ImGui::ColorEdit3(("Direction Colour " + std::to_string(i)).c_str(), direction); // Modify direction vector colour
 
             FloatToRGB8(ambient, (u8*)&D_800DC610[i].a.l.col);
             FloatToRGB8(ambient, (u8*)&D_800DC610[i].a.l.colc);
@@ -281,7 +409,7 @@ namespace Editor {
         }
     }
 
-    // Convert s16 color values to float (normalized to [0, 1] range)
+    // Convert s16 colour values to float (normalized to [0, 1] range)
     void TrackPropertiesWindow::RGB8ToFloat(const u8* src, float* dst) {
         for (size_t i = 0; i < 3; ++i) {
             dst[i] = src[i] / 255.0f;  // Normalize to the range [0.0f, 1.0f]

@@ -1,4 +1,5 @@
 #include <libultraship.h>
+#include <typeinfo>
 
 #include "Game.h"
 #include "port/Engine.h"
@@ -68,7 +69,7 @@ Cup* gBattleCup;
 
 HarbourMastersIntro gMenuIntro;
 
-Editor::Editor gEditor;
+TrackEditor::Editor gEditor;
 
 s32 gTrophyIndex = NULL;
 
@@ -281,6 +282,12 @@ s32 CM_GetCrossingOnTriggered(uintptr_t* crossing) {
  */
 void CM_DrawTrack(ScreenContext* screen) {
     if (nullptr == GetWorld()->GetTrack()) {
+        return;
+    }
+
+    // Check if collision mesh rendering is enabled via CVar
+    if (CVarGetInteger("gRenderCollisionMesh", 0)) {
+        render_collision();
         return;
     }
 
@@ -756,7 +763,7 @@ void CM_ActorGenerateCollision(struct Actor* actor) {
 
     if ((nullptr != act->Model) && (act->Model[0] != '\0')) {
         if (act->Triangles.size() == 0) {
-            Editor::GenerateCollisionMesh(act, (Gfx*)LOAD_ASSET_RAW(act->Model), 1.0f);
+            TrackEditor::GenerateCollisionMesh(act, (Gfx*)LOAD_ASSET_RAW(act->Model), 1.0f);
         }
     }
 }

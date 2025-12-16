@@ -55,6 +55,7 @@ ToadsTurnpike::ToadsTurnpike() {
     Props.Minimap.FinishlineY = 0;
     ResizeMinimap(&Props.Minimap);
 
+    ResourceName = "mk:toads_turnpike";
     Props.SetText(Props.Name, "toad's turnpike", sizeof(Props.Name));
     Props.SetText(Props.DebugName, "highway", sizeof(Props.DebugName));
     Props.SetText(Props.TrackLength, "1036m", sizeof(Props.TrackLength));
@@ -103,7 +104,7 @@ ToadsTurnpike::ToadsTurnpike() {
     Props.CloudList = gToadsTurnpikeRainbowRoadStars;
 
     FVector finish;
-    finish.x = (gIsMirrorMode != 0) ? 100 + 138.0f : 100 - 138.0f;
+    finish.x = -38.0f * xOrientation;
     finish.y = (f32) (0 - 15);
     finish.z = 16;
 

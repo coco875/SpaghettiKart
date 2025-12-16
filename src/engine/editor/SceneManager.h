@@ -6,8 +6,8 @@
 #include <optional>
 #include <nlohmann/json.hpp>
 
-namespace Editor {
-    void SaveLevel(Track* track);
+namespace TrackEditor {
+    void SaveLevel(Track* track, const TrackInfo* info);
     void LoadTrackDataFromJson(Track* track, const std::string& trackPath);
     void LoadTrackInfo(TrackInfo& info, std::shared_ptr<Ship::Archive> archive, std::string sceneFile);
     void Load_AddStaticMeshActor(const nlohmann::json& actorJson);
@@ -17,6 +17,7 @@ namespace Editor {
     void SaveActors(nlohmann::json& actorList);
     void SaveStaticMeshActors(nlohmann::json& actorList);
     void SaveTour(Track* track, nlohmann::json& tour);
+    void SaveFog(nlohmann::json& fog);
 
     void LoadProps(Track* track, nlohmann::json& data);
     void LoadPaths(Track* track, const std::string& trackPath);
@@ -24,6 +25,7 @@ namespace Editor {
     void LoadActors(Track* track, nlohmann::json& data);
     void LoadStaticMeshActors(Track* track, nlohmann::json& data);
     void LoadTour(Track* track, nlohmann::json& data);
+    void LoadFog(nlohmann::json& data);
 
     void SpawnActors(std::vector<std::pair<std::string, SpawnParams>> spawnList);
 
