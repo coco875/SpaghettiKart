@@ -595,7 +595,7 @@ void func_800C2474(void) {
         gPlayers[var_v0].unk_20C = 0.0f;
         gPlayers[var_v0].unk_0C0 = 0;
         gPlayers[var_v0].unk_098 = 0.0f;
-        gPlayers[var_v0].oobProps = WATER_NO_INTERACTION;
+        gPlayers[var_v0].oobProps = 0;
         D_8018FC10[var_v0][0] = 0x00FF;
         D_8018FC10[var_v0][1] = 0;
         D_800EA10C[var_v0] = 0;

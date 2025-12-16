@@ -518,14 +518,6 @@ player spins. Something  with avoding rollover of aniamation frame data? */
 #define COLOR_LAVA GPACK_RGB888(0x34, 0x00, 0x00)
 #define COLOR_BLACK GPACK_RGB888(0, 0, 0)
 
-
-/**
- * @brief player water interaction flags (player->unk_0DE)
- *
- */
-
-#define WATER_NO_INTERACTION 0x0000             // No water interaction
-
 /**
  *
  * Collision mesh flags
