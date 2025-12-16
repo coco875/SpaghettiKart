@@ -1,17 +1,5 @@
 var annotated_dup =
 [
-    [ "Editor", "namespaceEditor.html", [
-      [ "ContentBrowserWindow", "classEditor_1_1ContentBrowserWindow.html", "classEditor_1_1ContentBrowserWindow" ],
-      [ "GameObject", "classEditor_1_1GameObject.html", "classEditor_1_1GameObject" ],
-      [ "Gizmo", "classEditor_1_1Gizmo.html", "classEditor_1_1Gizmo" ],
-      [ "Handles", "classEditor_1_1Handles.html", "classEditor_1_1Handles" ],
-      [ "LightObject", "classEditor_1_1LightObject.html", "classEditor_1_1LightObject" ],
-      [ "ObjectPicker", "classEditor_1_1ObjectPicker.html", "classEditor_1_1ObjectPicker" ],
-      [ "PropertiesWindow", "classEditor_1_1PropertiesWindow.html", "classEditor_1_1PropertiesWindow" ],
-      [ "SceneExplorerWindow", "classEditor_1_1SceneExplorerWindow.html", "classEditor_1_1SceneExplorerWindow" ],
-      [ "ToolsWindow", "classEditor_1_1ToolsWindow.html", "classEditor_1_1ToolsWindow" ],
-      [ "TrackPropertiesWindow", "classEditor_1_1TrackPropertiesWindow.html", "classEditor_1_1TrackPropertiesWindow" ]
-    ] ],
     [ "GameUI", "namespaceGameUI.html", [
       [ "PortMenu", "classGameUI_1_1PortMenu.html", "classGameUI_1_1PortMenu" ]
     ] ],
@@ -102,6 +90,18 @@ var annotated_dup =
       [ "AudioSampleFactoryV0", "classSM64_1_1AudioSampleFactoryV0.html", "classSM64_1_1AudioSampleFactoryV0" ],
       [ "AudioSequenceFactoryV0", "classSM64_1_1AudioSequenceFactoryV0.html", "classSM64_1_1AudioSequenceFactoryV0" ]
     ] ],
+    [ "TrackEditor", "namespaceTrackEditor.html", [
+      [ "ContentBrowserWindow", "classTrackEditor_1_1ContentBrowserWindow.html", "classTrackEditor_1_1ContentBrowserWindow" ],
+      [ "GameObject", "classTrackEditor_1_1GameObject.html", "classTrackEditor_1_1GameObject" ],
+      [ "Gizmo", "classTrackEditor_1_1Gizmo.html", "classTrackEditor_1_1Gizmo" ],
+      [ "Handles", "classTrackEditor_1_1Handles.html", "classTrackEditor_1_1Handles" ],
+      [ "LightObject", "classTrackEditor_1_1LightObject.html", "classTrackEditor_1_1LightObject" ],
+      [ "ObjectPicker", "classTrackEditor_1_1ObjectPicker.html", "classTrackEditor_1_1ObjectPicker" ],
+      [ "PropertiesWindow", "classTrackEditor_1_1PropertiesWindow.html", "classTrackEditor_1_1PropertiesWindow" ],
+      [ "SceneExplorerWindow", "classTrackEditor_1_1SceneExplorerWindow.html", "classTrackEditor_1_1SceneExplorerWindow" ],
+      [ "ToolsWindow", "classTrackEditor_1_1ToolsWindow.html", "classTrackEditor_1_1ToolsWindow" ],
+      [ "TrackPropertiesWindow", "classTrackEditor_1_1TrackPropertiesWindow.html", "classTrackEditor_1_1TrackPropertiesWindow" ]
+    ] ],
     [ "UIWidgets", "namespaceUIWidgets.html", [
       [ "ButtonOptions", "structUIWidgets_1_1ButtonOptions.html", "structUIWidgets_1_1ButtonOptions" ],
       [ "CheckboxOptions", "structUIWidgets_1_1CheckboxOptions.html", "structUIWidgets_1_1CheckboxOptions" ],
@@ -133,8 +133,8 @@ var annotated_dup =
     [ "ACar", "classACar.html", "classACar" ],
     [ "ACloud", "classACloud.html", "classACloud" ],
     [ "Actor", "structActor.html", "structActor" ],
+    [ "ActorInfo", "structActorInfo.html", "structActorInfo" ],
     [ "ActorInitParams", "structActorInitParams.html", "structActorInitParams" ],
-    [ "ActorRegistryEntry", "structActorRegistryEntry.html", "structActorRegistryEntry" ],
     [ "ActorSpawnData", "structActorSpawnData.html", "structActorSpawnData" ],
     [ "AdpcmBook", "structAdpcmBook.html", "structAdpcmBook" ],
     [ "AdpcmLoop", "structAdpcmLoop.html", "structAdpcmLoop" ],
@@ -239,6 +239,7 @@ var annotated_dup =
     [ "GameModePack", "unionGameModePack.html", "unionGameModePack" ],
     [ "GfxPool", "structGfxPool.html", "structGfxPool" ],
     [ "Gui", "classGui.html", null ],
+    [ "GuiWindow", "classGuiWindow.html", null ],
     [ "Harbour", "classHarbour.html", "classHarbour" ],
     [ "HegdehogSpawn", "structHegdehogSpawn.html", "structHegdehogSpawn" ],
     [ "hud_player", "structhud__player.html", "structhud__player" ],
@@ -482,6 +483,7 @@ var annotated_dup =
     [ "Ray", "structRay.html", "structRay" ],
     [ "RegisterMenuInitFunc", "structRegisterMenuInitFunc.html", "structRegisterMenuInitFunc" ],
     [ "RegisterMenuUpdateFunc", "structRegisterMenuUpdateFunc.html", "structRegisterMenuUpdateFunc" ],
+    [ "Registry", "classRegistry.html", "classRegistry" ],
     [ "ReverbBits", "unionReverbBits.html", "unionReverbBits" ],
     [ "ReverbBitsData", "structReverbBitsData.html", "structReverbBitsData" ],
     [ "ReverbInfo", "structReverbInfo.html", "structReverbInfo" ],
@@ -492,7 +494,6 @@ var annotated_dup =
     [ "RGBA5551", "structRGBA5551.html", "structRGBA5551" ],
     [ "RGBA8", "structRGBA8.html", "structRGBA8" ],
     [ "RoyalRaceway", "classRoyalRaceway.html", "classRoyalRaceway" ],
-    [ "Rulesets", "classRulesets.html", "classRulesets" ],
     [ "SaveData", "structSaveData.html", "structSaveData" ],
     [ "SaveInfo", "structSaveInfo.html", "structSaveInfo" ],
     [ "ScreenContext", "structScreenContext.html", "structScreenContext" ],
@@ -553,6 +554,7 @@ var annotated_dup =
     [ "ToadsTurnpike", "classToadsTurnpike.html", "classToadsTurnpike" ],
     [ "TourCamera", "classTourCamera.html", "classTourCamera" ],
     [ "Track", "classTrack.html", null ],
+    [ "TrackInfo", "structTrackInfo.html", "structTrackInfo" ],
     [ "TrackPathPoint", "structTrackPathPoint.html", "structTrackPathPoint" ],
     [ "TrackPathSizes", "structTrackPathSizes.html", "structTrackPathSizes" ],
     [ "TrackPositionFactorInstruction", "structTrackPositionFactorInstruction.html", "structTrackPositionFactorInstruction" ],
