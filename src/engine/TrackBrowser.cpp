@@ -27,6 +27,7 @@ void TrackBrowser::FindCustomTracks() {
             info.Path = dir;
             TrackEditor::LoadTrackInfo(info, archive, sceneFile);
             if (info.ResourceName.empty()) {
+                printf("[TrackBrowser] Track has invalid resource name; expected format: author:mod_name");
                 info.ResourceName = std::string("mods:") + name;
             }
             printf("[TrackBrowser] Added custom track %s\n", info.Name.c_str());
