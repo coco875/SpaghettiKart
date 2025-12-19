@@ -1,5 +1,10 @@
 var NAVTREEINDEX42 =
 {
+"md_docs_2BUILDING.html#create-the-docker-container":[2,1,2,0],
+"md_docs_2BUILDING.html#debianubuntu":[2,1,1,0,0],
+"md_docs_2BUILDING.html#developing-spaghettikart":[2,0,0],
+"md_docs_2BUILDING.html#docker-1":[2,1,2],
+"md_docs_2BUILDING.html#fedora-1":[2,1,1,0,2],
 "md_docs_2BUILDING.html#generate-a-distributable":[2,1,3],
 "md_docs_2BUILDING.html#generating-a-distributable":[2,2,0],
 "md_docs_2BUILDING.html#generating-the-distributable":[2,0,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX42 =
 "menu__items_8c.html#a3398cf29d209a963651e19d02e49e0ce":[19,0,3,48,442],
 "menu__items_8c.html#a339d2d418704e61fba5d9bd467ebebfd":[19,0,3,48,299],
 "menu__items_8c.html#a34084a40fcd849fb784bf0b30717920d":[19,0,3,48,301],
-"menu__items_8c.html#a3476b052d43fdcbf9e8c032cd6d3f5e6":[19,0,3,48,491],
-"menu__items_8c.html#a347b90ac0c06e43c2fb50a05cb03f61f":[19,0,3,48,412],
-"menu__items_8c.html#a34e938762875c4c1d00067a4ab30e177":[19,0,3,48,93],
-"menu__items_8c.html#a35d6ec0fb783aa79c66a9639a896a115":[19,0,3,48,317],
-"menu__items_8c.html#a360c4fd3a89a0d861062c665cdb875db":[19,0,3,48,367],
-"menu__items_8c.html#a36b50985f08aa8d4b566a89074c4e880":[19,0,3,48,302]
+"menu__items_8c.html#a3476b052d43fdcbf9e8c032cd6d3f5e6":[19,0,3,48,491]
 };
