@@ -1350,9 +1350,9 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
 #endif
     if ((screenId == 0) || (screenId == 1)) {
         sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
-        // gross hack to match original behavior
+        // Texture not loaded yet - load it synchronously into the current buffer slot
         if (sKartTexture == NULL) {
-            load_kart_texture(player, playerId, screenId, screenId, 1);
+            load_kart_texture(player, playerId, screenId, screenId, D_801651D0[screenId][playerId]);
             sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
         }
     } else {
