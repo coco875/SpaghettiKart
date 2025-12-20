@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"____osViInit_8c.html#a36511d1bdf47d5cdc155727f8f1ee88e":[19,0,3,8,25,2],
 "____osViInit_8c.html#a517cd7d58bc43a978cb893e815f78433":[19,0,3,8,25,6],
 "____osViInit_8c.html#a88e1c1713b33b8f41ca47f5e7ad61e1a":[19,0,3,8,25,0],
 "____osViInit_8c.html#a947e0ae1f7b0c1e63906079fd2ca0c3c":[19,0,3,8,25,5],
@@ -87,7 +88,7 @@ var NAVTREEINDEX6 =
 "actor__types_8h.html#affb5ffde510634c5c1e09a5b934d29c3":[19,0,2,4,20],
 "actor__types_8h_source.html":[19,0,2,4],
 "actors.html":[0,0],
-"actors.html#actors":[0,0,0],
+"actors.html#actors-1":[0,0,0],
 "actors_8c.html":[19,0,3,10,0],
 "actors_8c.html#a074156bcbfcb24d6b691adf751bb8580":[19,0,3,10,0,62],
 "actors_8c.html#a074bb86cc794d40a8b569035fcb5bbe9":[19,0,3,10,0,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "all__variables_8h.html":[19,0,3,4,0],
 "all__variables_8h_source.html":[19,0,3,4,0],
 "animation_8c.html":[19,0,3,11],
-"animation_8c.html#a5dad4f876a91b09b8d59e2b410302f20":[19,0,3,11,7],
-"animation_8c.html#a5df48d40f4cbf20ab82b1e562ceff0ea":[19,0,3,11,0]
+"animation_8c.html#a5dad4f876a91b09b8d59e2b410302f20":[19,0,3,11,7]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"HMAS_8h.html#a3a8f95723047fdbf0a9156b76d5100aaa259bc085ab8423576f40e1898d9a6f4b":[19,0,3,9,0,1,1,2],
 "HMAS_8h.html#a3a8f95723047fdbf0a9156b76d5100aaa5ba5a62a847d5f9b02b6090c9d0ca4ba":[19,0,3,9,0,1,1,3],
 "HMAS_8h.html#a3a8f95723047fdbf0a9156b76d5100aaa9c9541c497083780d46b1fecf6243d46":[19,0,3,9,0,1,1,0],
 "HMAS_8h.html#a42a2a5fe4bc20bb3f1a9000ab64f15ef":[19,0,3,9,0,1,7],
@@ -35,7 +34,9 @@ var NAVTREEINDEX3 =
 "Harbour_8h.html":[19,0,3,6,8,17],
 "Harbour_8h_source.html":[19,0,3,6,8,17],
 "Hedgehog_8cpp.html":[19,0,3,6,5,16],
-"Hedgehog_8cpp.html#a1f079b9dd17a0f9ef327cb49816409e2":[19,0,3,6,5,16,0],
+"Hedgehog_8cpp.html#a15a6af4b7ca2f5ea803a149177978f41":[19,0,3,6,5,16,1],
+"Hedgehog_8cpp.html#a1f079b9dd17a0f9ef327cb49816409e2":[19,0,3,6,5,16,2],
+"Hedgehog_8cpp.html#ab5ac22cbf088a09f37f3bbdfada033df":[19,0,3,6,5,16,0],
 "Hedgehog_8h.html":[19,0,3,6,5,17],
 "Hedgehog_8h_source.html":[19,0,3,6,5,17],
 "Hitbox_8cpp.html":[19,0,3,9,2,1,20],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "ModManager_8h.html":[19,0,3,6,4,1],
 "ModManager_8h.html#a9d0a65c78ca0da1f4042d278992cda9b":[19,0,3,6,4,1,0],
 "ModManager_8h.html#adb21fd7d6f39f4b982b7bf70f2893c6d":[19,0,3,6,4,1,1],
-"ModManager_8h_source.html":[19,0,3,6,4,1],
-"ModMetadata_8cpp.html":[19,0,3,6,4,2]
+"ModManager_8h_source.html":[19,0,3,6,4,1]
 };
