@@ -60,8 +60,6 @@ static World sWorldInstance;
 // Deferred cleaning when clearing all actors in the editor
 bool bCleanWorld = false;
 
-std::unique_ptr<PodiumCeremony> gPodiumCeremony;
-
 Cup* gMushroomCup;
 Cup* gFlowerCup;
 Cup* gStarCup;
@@ -97,8 +95,6 @@ void CustomEngineInit() {
     gTrackBrowser = std::make_unique<TrackBrowser>(gTrackRegistry);
     TrackBrowser::Instance->FindCustomTracks();
     TrackBrowser::Instance->Refresh(gTrackRegistry);
-
-    gPodiumCeremony = std::make_unique<PodiumCeremony>();
 
     gMushroomCup = new Cup("mk:mushroom_cup", "Mushroom Cup", {
         "mk:luigi_raceway", 
@@ -161,7 +157,6 @@ void CustomEngineInit() {
 void CustomEngineDestroy() {
     gTrackRegistry.Clear();
     gActorRegistry.Clear();
-    gPodiumCeremony = nullptr;
     delete gMushroomCup;
     delete gFlowerCup;
     delete gStarCup;
@@ -862,7 +857,7 @@ void SelectSkyscraper()         { GetWorld()->SetCurrentTrack(std::make_unique<S
 void SelectDoubleDeck()         { GetWorld()->SetCurrentTrack(std::make_unique<DoubleDeck>()); }
 void SelectDkJungle()           { GetWorld()->SetCurrentTrack(std::make_unique<DKJungle>()); }
 void SelectBigDonut()           { GetWorld()->SetCurrentTrack(std::make_unique<BigDonut>()); }
-void SelectPodiumCeremony()     { GetWorld()->SetCurrentTrack(std::move(gPodiumCeremony)); }
+void SelectPodiumCeremony()     { GetWorld()->SetCurrentTrack(std::make_unique<PodiumCeremony>()); }
 // clang-format on
 
 void* GetMushroomCup(void) {
