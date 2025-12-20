@@ -135,6 +135,13 @@ void CustomEngineInit() {
         "mk:skyscraper"
     });
 
+    /* Validate Cup Track IDs */
+    gMushroomCup->ValidateTrackIds(gTrackRegistry);
+    gFlowerCup->ValidateTrackIds(gTrackRegistry);
+    gStarCup->ValidateTrackIds(gTrackRegistry);
+    gSpecialCup->ValidateTrackIds(gTrackRegistry);
+    gBattleCup->ValidateTrackIds(gTrackRegistry);
+
     /* Instantiate Cups */
     GetWorld()->AddCup(gMushroomCup);
     GetWorld()->AddCup(gFlowerCup);
