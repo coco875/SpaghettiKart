@@ -714,7 +714,7 @@ void* GetTrack(void) {
 }
 
 struct Actor* CM_GetActor(size_t index) {
-    if (index < GetWorld()->Actors.size()) {
+    if (index >= 0 && index < GetWorld()->Actors.size()) {
         AActor* actor = GetWorld()->Actors[index].get();
         return reinterpret_cast<struct Actor*>(reinterpret_cast<char*>(actor) + sizeof(void*));
     } else {
