@@ -718,7 +718,7 @@ struct Actor* CM_GetActor(size_t index) {
         AActor* actor = GetWorld()->Actors[index].get();
         return reinterpret_cast<struct Actor*>(reinterpret_cast<char*>(actor) + sizeof(void*));
     } else {
-        // throw std::runtime_error("GetActor() index out of bounds");
+        throw std::runtime_error("GetActor() index out of bounds");
         return NULL;
     }
 }
