@@ -60,11 +60,11 @@ static World sWorldInstance;
 // Deferred cleaning when clearing all actors in the editor
 bool bCleanWorld = false;
 
-Cup* gMushroomCup;
-Cup* gFlowerCup;
-Cup* gStarCup;
-Cup* gSpecialCup;
-Cup* gBattleCup;
+std::unique_ptr<Cup> gMushroomCup;
+std::unique_ptr<Cup> gFlowerCup;
+std::unique_ptr<Cup> gStarCup;
+std::unique_ptr<Cup> gSpecialCup;
+std::unique_ptr<Cup> gBattleCup;
 
 HarbourMastersIntro gMenuIntro;
 
@@ -96,35 +96,35 @@ void CustomEngineInit() {
     TrackBrowser::Instance->FindCustomTracks();
     TrackBrowser::Instance->Refresh(gTrackRegistry);
 
-    gMushroomCup = new Cup("mk:mushroom_cup", "Mushroom Cup", {
+    gMushroomCup = std::make_unique<Cup>("mk:mushroom_cup", "Mushroom Cup", std::vector<std::string>{
         "mk:luigi_raceway", 
         "mk:moo_moo_farm", 
         "mk:koopa_troopa_beach", 
         "mk:kalimari_desert"
     });
 
-    gFlowerCup = new Cup("mk:flower_cup", "Flower Cup", {
+    gFlowerCup = std::make_unique<Cup>("mk:flower_cup", "Flower Cup", std::vector<std::string>{
         "mk:toads_turnpike", 
         "mk:frappe_snowland", 
         "mk:choco_mountain", 
         "mk:mario_raceway"
     });
 
-    gStarCup = new Cup("mk:star_cup", "Star Cup", {
+    gStarCup = std::make_unique<Cup>("mk:star_cup", "Star Cup", std::vector<std::string>{
         "mk:wario_stadium", 
         "mk:sherbet_land", 
         "mk:royal_raceway", 
         "mk:bowsers_castle"
     });
 
-    gSpecialCup = new Cup("mk:special_cup", "Special Cup", {
+    gSpecialCup = std::make_unique<Cup>("mk:special_cup", "Special Cup", std::vector<std::string>{
         "mk:dk_jungle", 
         "mk:yoshi_valley", 
         "mk:banshee_boardwalk", 
         "mk:rainbow_road"
     });
 
-    gBattleCup = new Cup("mk:battle_cup", "Battle Cup", {
+    gBattleCup = std::make_unique<Cup>("mk:battle_cup", "Battle Cup", std::vector<std::string>{
         "mk:big_donut", 
         "mk:block_fort", 
         "mk:double_deck", 
@@ -139,11 +139,11 @@ void CustomEngineInit() {
     gBattleCup->ValidateTrackIds(gTrackRegistry);
 
     /* Instantiate Cups */
-    GetWorld()->AddCup(gMushroomCup);
-    GetWorld()->AddCup(gFlowerCup);
-    GetWorld()->AddCup(gStarCup);
-    GetWorld()->AddCup(gSpecialCup);
-    GetWorld()->AddCup(gBattleCup);
+    GetWorld()->AddCup(gMushroomCup.get());
+    GetWorld()->AddCup(gFlowerCup.get());
+    GetWorld()->AddCup(gStarCup.get());
+    GetWorld()->AddCup(gSpecialCup.get());
+    GetWorld()->AddCup(gBattleCup.get());
 
     SetMarioRaceway();
 
@@ -157,11 +157,11 @@ void CustomEngineInit() {
 void CustomEngineDestroy() {
     gTrackRegistry.Clear();
     gActorRegistry.Clear();
-    delete gMushroomCup;
-    delete gFlowerCup;
-    delete gStarCup;
-    delete gSpecialCup;
-    delete gBattleCup;
+    gMushroomCup.reset();
+    gFlowerCup.reset();
+    gStarCup.reset();
+    gSpecialCup.reset();
+    gBattleCup.reset();
 }
 
 extern "C" {
@@ -181,7 +181,7 @@ void HM_DrawIntro() {
 // Set default track; mario raceway
 void SetMarioRaceway(void) {
     SelectMarioRaceway();
-    GetWorld()->SetCurrentCup(gMushroomCup);
+    GetWorld()->SetCurrentCup(gMushroomCup.get());
     GetWorld()->GetCurrentCup()->CursorPosition = 3;
     GetWorld()->CupIndex = 0;
 }
@@ -342,8 +342,8 @@ void CM_DrawActors(Camera* camera) {
         }
     }
 
-    for (auto* camera : GetWorld()->Cameras) {
-        if (auto* tourCam = dynamic_cast<TourCamera*>(camera)) {
+    for (auto& camera : GetWorld()->Cameras) {
+        if (auto* tourCam = dynamic_cast<TourCamera*>(camera.get())) {
             if (tourCam->IsActive()) {
                 tourCam->Draw();
             }
@@ -366,7 +366,7 @@ void CM_BeginPlay() {
     if (tour) {
       //  GetWorld()->Cameras[2]->SetActive(true);
        // gScreenOneCtx->camera = GetWorld()->Cameras[2]->Get();
-        if (reinterpret_cast<TourCamera*>(GetWorld()->Cameras[2])->IsTourComplete()) {
+        if (reinterpret_cast<TourCamera*>(GetWorld()->Cameras[2].get())->IsTourComplete()) {
             tour = false;
             gScreenOneCtx->pendingCamera = &cameras[0];
         }
@@ -378,7 +378,7 @@ void CM_BeginPlay() {
 }
 
 Camera* CM_GetPlayerCamera(s32 playerIndex) {
-    for (GameCamera* cam : GetWorld()->Cameras) {
+    for (auto& cam : GetWorld()->Cameras) {
         // Make sure this is a player camera and not a different type of camera
         if (typeid(*cam) == typeid(GameCamera)) {
             Camera* camera = cam->Get();
@@ -391,7 +391,7 @@ Camera* CM_GetPlayerCamera(s32 playerIndex) {
 }
 
 void CM_SetViewProjection(Camera* camera) {
-    for (GameCamera* gameCamera : GetWorld()->Cameras) {
+    for (auto& gameCamera : GetWorld()->Cameras) {
         if (camera == gameCamera->Get()) {
             gameCamera->SetViewProjection();
         }
@@ -407,7 +407,7 @@ Camera* CM_AddCamera(Vec3f spawn, s16 rot, u32 mode) {
         printf("Reached the max number of cameras, %d\n", NUM_CAMERAS);
         return nullptr;
     }
-    GetWorld()->Cameras.push_back(new GameCamera(FVector(spawn[0], spawn[1], spawn[2]), rot, mode));
+    GetWorld()->Cameras.push_back(std::make_unique<GameCamera>(FVector(spawn[0], spawn[1], spawn[2]), rot, mode));
     return GetWorld()->Cameras.back()->Get();
 }
 
@@ -416,7 +416,7 @@ Camera* CM_AddFreeCamera(Vec3f spawn, s16 rot, u32 mode) {
         printf("Reached the max number of cameras, %d\n", NUM_CAMERAS);
         return nullptr;
     }
-    GetWorld()->Cameras.push_back(new FreeCamera(FVector(spawn[0], spawn[1], spawn[2]), rot, mode));
+    GetWorld()->Cameras.push_back(std::make_unique<FreeCamera>(FVector(spawn[0], spawn[1], spawn[2]), rot, mode));
     return GetWorld()->Cameras.back()->Get();
 }
 
@@ -446,8 +446,8 @@ Camera* CM_AddTourCamera(Vec3f spawn, s16 rot, u32 mode) {
         return nullptr;
     }
 
-    GetWorld()->Cameras.push_back(new TourCamera(FVector(spawn[0], spawn[1], spawn[2]), rot, mode));
-    TourCamera* tour = static_cast<TourCamera*>(GetWorld()->Cameras.back());
+    GetWorld()->Cameras.push_back(std::make_unique<TourCamera>(FVector(spawn[0], spawn[1], spawn[2]), rot, mode));
+    TourCamera* tour = static_cast<TourCamera*>(GetWorld()->Cameras.back().get());
     tour->SetActive(true);
     return tour->Get();
 }
@@ -469,7 +469,7 @@ Camera* CM_AddLookBehindCamera(Vec3f spawn, s16 rot, u32 mode) {
         printf("Reached the max number of cameras, %d\n", NUM_CAMERAS);
         return nullptr;
     }
-    GetWorld()->Cameras.push_back(new LookBehindCamera(FVector(spawn[0], spawn[1], spawn[2]), rot, mode));
+    GetWorld()->Cameras.push_back(std::make_unique<LookBehindCamera>(FVector(spawn[0], spawn[1], spawn[2]), rot, mode));
     return GetWorld()->Cameras.back()->Get();
 }
 
@@ -484,7 +484,7 @@ void CM_CameraSetActive(size_t idx, bool state) {
 }
 
 void CM_SetFreeCamera(bool state) {
-    for (auto* cam : GetWorld()->Cameras) {
+    for (auto& cam : GetWorld()->Cameras) {
         if (cam->Get() == gScreenOneCtx->freeCamera) {
             if (state) {
                 gScreenOneCtx->pendingCamera = gScreenOneCtx->freeCamera;
@@ -504,7 +504,7 @@ void CM_SetFreeCamera(bool state) {
 }
 
 void CM_ActivateTourCamera(Camera* camera) {
-    for (auto* cam : GetWorld()->Cameras) {
+    for (auto& cam : GetWorld()->Cameras) {
         if (cam->Get() == camera) {
             cam->SetActive(true);
         }
@@ -755,10 +755,6 @@ void CM_CleanWorld(void) {
 }
 
 void CM_CleanCameras(void) {
-    for (auto& camera : GetWorld()->Cameras) {
-        delete camera;
-    }
-
     GetWorld()->Cameras.clear();
 }
 
@@ -861,23 +857,23 @@ void SelectPodiumCeremony()     { GetWorld()->SetCurrentTrack(std::make_unique<P
 // clang-format on
 
 void* GetMushroomCup(void) {
-    return gMushroomCup;
+    return gMushroomCup.get();
 }
 
 void* GetFlowerCup(void) {
-    return gFlowerCup;
+    return gFlowerCup.get();
 }
 
 void* GetStarCup(void) {
-    return gStarCup;
+    return gStarCup.get();
 }
 
 void* GetSpecialCup(void) {
-    return gSpecialCup;
+    return gSpecialCup.get();
 }
 
 void* GetBattleCup(void) {
-    return gBattleCup;
+    return gBattleCup.get();
 }
 
 // End of frame cleanup of actors, objects, etc.
