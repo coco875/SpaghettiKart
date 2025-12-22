@@ -733,8 +733,8 @@ void FrameInterpolation_RecordMatrixTranslate(Mat4* matrix, Vec3f b) {
     if (!check_if_recording()) {
         return;
     }
-
-    append(Op::MatrixTranslate).matrix_translate = { matrix, *((Vec3fInterp*) &b) };
+    // Note: Vec3f decays to pointer when passed as parameter. Cast directly, not &b.
+    append(Op::MatrixTranslate).matrix_translate = { matrix, *((Vec3fInterp*) b) };
 }
 
 void FrameInterpolation_RecordMatrixScale(Mat4* matrix, f32 scale) {
@@ -786,7 +786,9 @@ void FrameInterpolation_RecordMatrixPosRotXYZ(Mat4* out, Vec3f pos, Vec3s orient
     if (!check_if_recording()) {
         return;
     }
-    append(Op::MatrixPosRotXYZ).matrix_pos_rot_xyz = { out, *((Vec3fInterp*) &pos), *((Vec3sInterp*) &orientation) };
+    // Note: Vec3f and Vec3s decay to pointers when passed as parameters.
+    // We cast the pointer directly (not &pos which would be pointer-to-pointer).
+    append(Op::MatrixPosRotXYZ).matrix_pos_rot_xyz = { out, *((Vec3fInterp*) pos), *((Vec3sInterp*) orientation) };
 }
 
 void FrameInterpolation_RecordMatrixPosRotScaleXY(Mat4* matrix, s32 x, s32 y, u16 angle, f32 scale) {
