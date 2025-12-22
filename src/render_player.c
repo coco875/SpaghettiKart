@@ -1344,7 +1344,12 @@ void render_kart(Player* player, s8 playerId, s8 screenId, s8 flipOffset) {
     }
     load_kart_palette(player, playerId, screenId, D_801651D0[screenId][playerId]);
     gPlayerPalette = &gPlayerPalettesList[D_801651D0[screenId][playerId]][screenId][playerId];
-    load_kart_texture(player, playerId, screenId, screenId, D_801651D0[screenId][playerId]);
+    // When screenId >= 2 (in 3/4 player mode), adjust indices to fit gEncodedKartTexture[2][2][8] dimensions
+    if ((screenId == 0) || (screenId == 1)) {
+        load_kart_texture(player, playerId, screenId, screenId, D_801651D0[screenId][playerId]);
+    } else {
+        load_kart_texture(player, playerId - 4, screenId, screenId - 1, D_801651D0[screenId][playerId]);
+    }
     if ((screenId == 0) || (screenId == 1)) {
         sKartTexture = gEncodedKartTexture[D_801651D0[screenId][playerId]][screenId][playerId].unk_00;
     } else {
