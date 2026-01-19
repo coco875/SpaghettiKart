@@ -1,7 +1,6 @@
 #include <libultraship.h>
 #include <libultra/vi.h>
 #include <libultra/os.h>
-#include "buffers/gfx_output_buffer.h"
 #include <libultraship/bridge/gfxdebuggerbridge.h>
 #include <macros.h>
 #include <decode.h>
@@ -18,7 +17,6 @@
 #include <defines.h>
 #include "buffers.h"
 #include "camera.h"
-#include "profiler.h"
 #include "race_logic.h"
 #include "skybox_and_splitscreen.h"
 #include "render_objects.h"
@@ -30,19 +28,17 @@
 #include "podium_ceremony_actors.h"
 #include "menu_items.h"
 #include "code_80057C60.h"
-#include "profiler.h"
 #include "player_controller.h"
 #include "render_player.h"
-#include "render_courses.h"
 #include "actors.h"
 #include "replays.h"
 #include <debug.h>
-#include "crash_screen.h"
 #include "enhancements/freecam/freecam.h"
 #include "engine/editor/Editor.h"
 #include "port/interpolation/FrameInterpolation.h"
 #include "engine/wasm.h"
 #include "port/Game.h"
+#include "port/Engine.h"
 #include "engine/Matrix.h"
 
 // Declarations (not in this file)
