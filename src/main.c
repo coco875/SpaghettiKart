@@ -469,7 +469,7 @@ void* clear_framebuffer(s32 color) {
     gDPSetCycleType(gDisplayListHead++, G_CYC_FILL);
 
     gDPSetFillColor(gDisplayListHead++, color);
-    gDPFillRectangle(gDisplayListHead++, 0, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1);
+    gDPFillWideRectangle(gDisplayListHead++, OTRGetRectDimensionFromLeftEdge(0), 0, OTRGetGameRenderWidth(), SCREEN_HEIGHT);
 
     gDPPipeSync(gDisplayListHead++);
 
@@ -1172,8 +1172,9 @@ void thread5_iteration(void) {
     }
     profiler_log_thread5_time(THREAD5_START);
     config_gfx_pool();
-    FB_CreateFramebuffers();
     read_controllers();
+    FB_CreateFramebuffers();
+    clear_framebuffer(0); // Clear the framebuffer
     game_state_handler();
 
     // call_render_hook();
