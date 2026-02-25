@@ -53,10 +53,10 @@ math(EXPR PATCH_INDEX "${PROJECT_VERSION_PATCH}")
 # Use the patch number to select the correct word
 list(GET NATO_PHONETIC_ALPHABET ${PATCH_INDEX} PROJECT_PATCH_WORD)
 
-set(PROJECT_BUILD_NAME "Alfredo ${PROJECT_PATCH_WORD}" CACHE STRING "" FORCE)
+set(PROJECT_BUILD_NAME "Bolognese ${PROJECT_PATCH_WORD}" CACHE STRING "" FORCE)
 set(PROJECT_TEAM "github.com/harbourmasters" CACHE STRING "" FORCE)
 
-message("Spaghetti Kart version: ${PROJECT_VERSION} Alfredo ${PROJECT_PATCH_WORD}")
+message("Spaghetti Kart version: ${PROJECT_VERSION} Bolognese ${PROJECT_PATCH_WORD}")
 
 if(APPLE)
   enable_language(OBJCXX)
