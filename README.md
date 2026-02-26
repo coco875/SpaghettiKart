@@ -70,6 +70,8 @@ Currently, there are three rendering APIs supported: DirectX11 (Windows), OpenGL
 
 Custom assets are packed in `.o2r` or stored `.zip` files. To use custom assets, place them in the `mods` folder.
 
+There is an official [gamebanana page](https://gamebanana.com/games/22970).
+
 If you're interested in creating and/or packing your own custom asset `.o2r` files, check out the [documentation page](https://harbourmasters.github.io/SpaghettiKart/).
 
 **Note that .otr archives are not supported in SpaghettiKart!**
