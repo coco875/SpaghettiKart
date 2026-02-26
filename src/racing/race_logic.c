@@ -1054,6 +1054,7 @@ UNUSED void func_80290314(void) {
     gTourComplete = false;
 }
 
+// Quit
 void func_80290338(void) {
     gIsInQuitToMenuTransition = 1;
     gQuitToMenuTransitionCounter = 5;
@@ -1061,6 +1062,7 @@ void func_80290338(void) {
     gTourComplete = false;
 }
 
+// Driver Change
 void func_80290360(void) {
     gIsInQuitToMenuTransition = 1;
     gQuitToMenuTransitionCounter = 5;
@@ -1068,6 +1070,7 @@ void func_80290360(void) {
     gTourComplete = false;
 }
 
+// Course Change
 void func_80290388(void) {
     gIsInQuitToMenuTransition = 1;
     gQuitToMenuTransitionCounter = 5;
@@ -1075,6 +1078,7 @@ void func_80290388(void) {
     gTourComplete = false;
 }
 
+// Retry
 void func_802903B0(void) {
     gIsInQuitToMenuTransition = 1;
     gQuitToMenuTransitionCounter = 5;
