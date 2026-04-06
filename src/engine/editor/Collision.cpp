@@ -30,14 +30,14 @@ namespace TrackEditor {
             lo = ptr->words.w0;
             hi = ptr->words.w1;
 
-            opcode = (EDITOR_GFX_GET_OPCODE(lo) >> 24);
+            opcode = (EDITOR_GFX_GET_OPCODE(ptr->words.w0) >> 24);
             switch(opcode) {
                 case G_DL:
                     GenerateCollisionMesh(object, (Gfx*)hi, scale);
                     break;
                 case G_DL_OTR_HASH:
                     ptr++;
-                    GenerateCollisionMesh(object, (Gfx*)ResourceGetDataByCrc(((uint64_t)(ptr->words.w0 << 32)) + ptr->words.w1), scale);
+                    GenerateCollisionMesh(object, (Gfx*)ResourceGetDataByCrc(((uint64_t)ptr->words.w0 << 32) | (uint32_t)ptr->words.w1), scale);
                     break;
                 case G_DL_OTR_FILEPATH:
                    // printf("otr filepath: %s\n", (const char*)hi);
@@ -48,7 +48,7 @@ namespace TrackEditor {
                     break;
                 case G_VTX_OTR_HASH: {
                     ptr++;
-                    vtx = (Vtx*)ResourceGetDataByCrc(((uint64_t)(ptr->words.w0 << 32)) + ptr->words.w1);
+                    vtx = (Vtx*)ResourceGetDataByCrc(((uint64_t)ptr->words.w0 << 32) | (uint32_t)ptr->words.w1);
                     break;
                 }
                 case G_VTX_OTR_FILEPATH: {
@@ -201,7 +201,7 @@ namespace TrackEditor {
 
         // Render triangles in batches of 3
         for (size_t i = 0; i + 2 < vtxBuffer.size(); i += 3) {
-            gSPVertex(gDisplayListHead++, (uintptr_t)&vtxBuffer[i], 3, 0);
+            gSPVertex(gDisplayListHead++, (uint64_t)(uintptr_t)&vtxBuffer[i], 3, 0);
             gSP1Triangle(gDisplayListHead++, 0, 1, 2, 0);
         }
 

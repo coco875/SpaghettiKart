@@ -59,6 +59,7 @@ endif()
 message("Spaghetti Kart version: ${PROJECT_VERSION} ${PROJECT_PATCH_WORD}")
 
 if(APPLE)
+  enable_language(OBJC)
   enable_language(OBJCXX)
 endif()
 
@@ -263,6 +264,7 @@ file(GLOB_RECURSE ALL_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     "src/port/*.h"
     "src/port/*.c"
     "src/port/*.cpp"
+    "src/port/*.mm"
     "src/mods/*.h"
     "src/mods/*.c"
     "src/mods/*.cpp"
@@ -301,10 +303,9 @@ if (CMAKE_SYSTEM_NAME STREQUAL "iOS")
   set(IOS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/ios)
 
   set(STORYBOARD_FILE ${IOS_DIR}/Launch.storyboard)
-  set(IMAGE_FILES ${IOS_DIR}/PoweredBy.png)
-  set(ICON_FILES ${IOS_DIR}/Icon.png)
+  set(ICON_FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon.png)
 
-  list(APPEND ALL_FILES ${STORYBOARD_FILE} ${IMAGE_FILES} ${ICON_FILES})
+  list(APPEND ALL_FILES ${STORYBOARD_FILE} ${ICON_FILES})
 
   add_executable(${PROJECT_NAME} ${ALL_FILES})
   set_xcode_property(${PROJECT_NAME} PRODUCT_BUNDLE_IDENTIFIER ${PROJECT_ID} All)
@@ -313,7 +314,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "iOS")
         PROPERTIES
         MACOSX_BUNDLE TRUE
         MACOSX_BUNDLE_INFO_PLIST ${IOS_DIR}/plist.in
-        RESOURCE "${IMAGE_FILES};${STORYBOARD_FILE};${ICON_FILES}"
+        RESOURCE "${STORYBOARD_FILE};${ICON_FILES}"
     )
 else()
   add_executable(${PROJECT_NAME} ${ALL_FILES})
@@ -483,6 +484,52 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
   target_include_directories(${PROJECT_NAME} PRIVATE
         ${DEVKITPRO}/portlibs/wiiu/include/
     )
+elseif(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+  set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+  set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
+  set(INSTALL_DOCS OFF CACHE BOOL "" FORCE)
+  set(INSTALL_PKG_CONFIG_MODULE OFF CACHE BOOL "" FORCE)
+
+  FetchContent_Declare(
+        libogg
+        GIT_REPOSITORY https://github.com/xiph/ogg.git
+        GIT_TAG v1.3.6
+  )
+  FetchContent_MakeAvailable(libogg)
+
+  set(OGG_ROOT "${libogg_BINARY_DIR}" CACHE PATH "" FORCE)
+  set(OGG_INCLUDE_DIR "${libogg_SOURCE_DIR}/include" CACHE PATH "" FORCE)
+  set(OGG_LIBRARY "${libogg_BINARY_DIR}/libogg.a" CACHE FILEPATH "" FORCE)
+
+  if(TARGET ogg AND NOT TARGET Ogg::ogg)
+    add_library(Ogg::ogg ALIAS ogg)
+  endif()
+
+  FetchContent_Declare(
+        libvorbis
+        GIT_REPOSITORY https://github.com/xiph/vorbis.git
+        GIT_TAG v1.3.7
+  )
+  FetchContent_MakeAvailable(libvorbis)
+
+  if(TARGET vorbis AND NOT TARGET Vorbis::vorbis)
+    add_library(Vorbis::vorbis ALIAS vorbis)
+  endif()
+
+  if(TARGET vorbisenc AND NOT TARGET Vorbis::vorbisenc)
+    add_library(Vorbis::vorbisenc ALIAS vorbisenc)
+  endif()
+
+  if(TARGET vorbisfile AND NOT TARGET Vorbis::vorbisfile)
+    add_library(Vorbis::vorbisfile ALIAS vorbisfile)
+  endif()
+
+  set(ADDITIONAL_LIBRARY_DEPENDENCIES
+        "Ogg::ogg"
+        "Vorbis::vorbis"
+        "Vorbis::vorbisenc"
+        "Vorbis::vorbisfile"
+  )
 else()
   find_package(Ogg REQUIRED)
   find_package(Vorbis REQUIRED)
@@ -658,10 +705,19 @@ endif()
 add_custom_command(
  TARGET ${PROJECT_NAME} POST_BUILD
  COMMENT "Copying asset yamls..."
- COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/config.yml" "$<TARGET_FILE_DIR:Spaghettify>/config.yml"
- COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/yamls/" "$<TARGET_FILE_DIR:Spaghettify>/yamls/"
-    COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/meta/" "$<TARGET_FILE_DIR:Spaghettify>/meta/"
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/config.yml" "$<TARGET_FILE_DIR:Spaghettify>/config.yml"
+  COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/yamls/" "$<TARGET_FILE_DIR:Spaghettify>/yamls/"
+     COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/meta/" "$<TARGET_FILE_DIR:Spaghettify>/meta/"
 )
+
+if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+  add_custom_command(
+   TARGET ${PROJECT_NAME} POST_BUILD
+   COMMENT "Copying packaged O2R assets..."
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_BINARY_DIR}/mk64.o2r" "$<TARGET_FILE_DIR:Spaghettify>/mk64.o2r"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_BINARY_DIR}/spaghetti.o2r" "$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r"
+  )
+endif()
 
 if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
   include(ExternalProject)
@@ -687,7 +743,7 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
     COMMAND ${TORCH_EXECUTABLE} pack assets spaghetti.o2r o2r
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/mk64.o2r" "${CMAKE_BINARY_DIR}/mk64.o2r"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/spaghetti.o2r" "${CMAKE_BINARY_DIR}/spaghetti.o2r"
-)
+  )
 
   add_custom_target(
     GenerateO2R
@@ -695,7 +751,11 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMAND ${TORCH_EXECUTABLE} pack assets spaghetti.o2r o2r
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/spaghetti.o2r" "${CMAKE_BINARY_DIR}/spaghetti.o2r"
-)
+  )
+
+  if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+    add_dependencies(${PROJECT_NAME} ExtractAssets)
+  endif()
 
   if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
     install(FILES "${CMAKE_BINARY_DIR}/spaghetti.o2r" DESTINATION . COMPONENT ${PROJECT_NAME})
