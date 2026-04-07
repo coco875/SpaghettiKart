@@ -1,13 +1,5 @@
 var NAVTREEINDEX84 =
 {
-"structma__data__converter__config.html#a798ee581da84bf5ea315b420064ff506":[19,0,185,5],
-"structma__data__converter__config.html#a979d1e122ed02fc8e433315f93129f3b":[19,0,185,8],
-"structma__data__converter__config.html#aa1e439ee5dd02925b677285ac7604be8":[19,0,185,10],
-"structma__data__converter__config.html#aa5ac18801060bd86c126d30e4dd13b7b":[19,0,185,6],
-"structma__data__converter__config.html#aa5c19501ff1f989678fdcdf7c621bec7":[19,0,185,9],
-"structma__data__converter__config.html#ad7b476719cb54b12929d24884d2aa0bd":[19,0,185,3],
-"structma__data__converter__config.html#af36ae0f6d0cb27ba9922ccf143c51012":[19,0,185,13],
-"structma__data__source__base.html":[19,0,186],
 "structma__data__source__base.html#a2e1f97a190cb7421dbce0effc4d2ce7d":[19,0,186,5],
 "structma__data__source__base.html#a59a5c238a598123aff4edbe17c604d94":[19,0,186,3],
 "structma__data__source__base.html#a77321dcbf0e245dba25b03ccc35ad40f":[19,0,186,1],
@@ -249,5 +241,13 @@ var NAVTREEINDEX84 =
 "structma__device__info.html#afee5be65decd132e97f984fbb9135038":[19,0,204,6],
 "structma__device__job__thread.html":[19,0,205],
 "structma__device__job__thread.html#a4488a09e1b3ba811aee95b29c324a452":[19,0,205,1],
-"structma__device__job__thread.html#a5f715da9ae7fbb869ab1f7b6c9666233":[19,0,205,2]
+"structma__device__job__thread.html#a5f715da9ae7fbb869ab1f7b6c9666233":[19,0,205,2],
+"structma__device__job__thread.html#aec75c50428b72dc22b874df09b0c9fc1":[19,0,205,0],
+"structma__device__job__thread__config.html":[19,0,206],
+"structma__device__job__thread__config.html#a00c86a14ef83900d7473b8dfcad1a27d":[19,0,206,0],
+"structma__device__job__thread__config.html#ad8117c4d1da4bae9fda1f26008d7b999":[19,0,206,2],
+"structma__device__job__thread__config.html#adae694dab33cff4a123b542e9cb6f156":[19,0,206,1],
+"structma__device__notification.html":[19,0,207],
+"structma__device__notification.html#a0bb5823f25d666715172ca3053449107":[19,0,207,3],
+"structma__device__notification.html#a267e1b26d0c0075fc81af34f341d3042":[19,0,207,1]
 };

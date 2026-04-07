@@ -1,5 +1,16 @@
 var NAVTREEINDEX56 =
 {
+"models_2tracks_2bowsers__castle_2bowsers__castle__data_8h.html":[20,0,2,0,0,0,3,0],
+"models_2tracks_2bowsers__castle_2bowsers__castle__data_8h.html#ae84f7e8f9496e50de0fa84c8c2b84b53":[20,0,2,0,0,0,3,0,0],
+"models_2tracks_2bowsers__castle_2bowsers__castle__data_8h_source.html":[20,0,2,0,0,0,3,0],
+"models_2tracks_2choco__mountain_2choco__mountain__data_8h.html":[20,0,2,0,0,0,4,0],
+"models_2tracks_2choco__mountain_2choco__mountain__data_8h.html#a3374cd3722784dd9c4e5685931939e3a":[20,0,2,0,0,0,4,0,0],
+"models_2tracks_2choco__mountain_2choco__mountain__data_8h_source.html":[20,0,2,0,0,0,4,0],
+"models_2tracks_2dks__jungle__parkway_2dks__jungle__parkway__data_8h.html":[20,0,2,0,0,0,5,0],
+"models_2tracks_2dks__jungle__parkway_2dks__jungle__parkway__data_8h.html#ac35e19771ea23451308964944aff8608":[20,0,2,0,0,0,5,0,0],
+"models_2tracks_2dks__jungle__parkway_2dks__jungle__parkway__data_8h_source.html":[20,0,2,0,0,0,5,0],
+"models_2tracks_2double__deck_2double__deck__data_8h.html":[20,0,2,0,0,0,6,0],
+"models_2tracks_2double__deck_2double__deck__data_8h.html#a75bb3f6bd1f2de3f58e9e422867643ba":[20,0,2,0,0,0,6,0,0],
 "models_2tracks_2double__deck_2double__deck__data_8h_source.html":[20,0,2,0,0,0,6,0],
 "models_2tracks_2frappe__snowland_2frappe__snowland__data_8h.html":[20,0,2,0,0,0,7,0],
 "models_2tracks_2frappe__snowland_2frappe__snowland__data_8h.html#a7186e932790c20df6bb2055854a905f9":[20,0,2,0,0,0,7,0,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX56 =
 "namespaceTrackEditor.html":[18,0,9],
 "namespaceTrackEditor.html#a045e1f94de546859660d3a8b5f32a42e":[18,0,9,31],
 "namespaceTrackEditor.html#a0c32e9fb6fce671cfe7c8e6083f0e1b4":[18,0,9,36],
-"namespaceTrackEditor.html#a1d8652c5847136a3a49d76549f87c814":[18,0,9,34],
-"namespaceTrackEditor.html#a219704236eea5ff0a1a39c0f53f7538c":[18,0,9,15],
-"namespaceTrackEditor.html#a30c8330a0c072d3da8abbff873f05216":[18,0,9,27],
-"namespaceTrackEditor.html#a32d30c3e2c08be0ca763f6323bec6df2":[18,0,9,21],
-"namespaceTrackEditor.html#a3c32bf38d445b20d55a7092da6b673a5":[18,0,9,10],
-"namespaceTrackEditor.html#a79d25f3b85758b1d930e2eb429655ead":[18,0,9,14],
-"namespaceTrackEditor.html#a7ab33e5d4df5a5dc0b3df27c04de6fcc":[18,0,9,30],
-"namespaceTrackEditor.html#a7e0a8e9ee6341698d3385a2fba05b37b":[18,0,9,33],
-"namespaceTrackEditor.html#a9075bc0d22971dfd312b0557e9d6bec8":[18,0,9,18],
-"namespaceTrackEditor.html#a9080bcebe7f661f02fd863fea0006aee":[18,0,9,19],
-"namespaceTrackEditor.html#a928be70c491755a0f3c0d3d85640d549":[18,0,9,24],
-"namespaceTrackEditor.html#a99f257ca9eebe29df775acc71a5a0fee":[18,0,9,12]
+"namespaceTrackEditor.html#a1d8652c5847136a3a49d76549f87c814":[18,0,9,34]
 };

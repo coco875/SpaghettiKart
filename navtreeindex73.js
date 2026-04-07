@@ -1,13 +1,5 @@
 var NAVTREEINDEX73 =
 {
-"structActor.html#abb823b9528b91c1bc292f8729803785a":[19,0,29,11],
-"structActor.html#ac722b487dbdddd92acbc81e998952643":[19,0,29,2],
-"structActor.html#acd34f66c2555a2b2dba239da10475057":[19,0,29,7],
-"structActor.html#adcfb3392dc0eb67986f52f2c51fc2b5d":[19,0,29,9],
-"structActor.html#ae96f9783bff4ee28d963be1c0a277e5f":[19,0,29,8],
-"structActor.html#af49bb0c1202a06dc594529a2e77249c6":[19,0,29,1],
-"structActor.html#afa1455dbf1a4698584ed8c501439692f":[19,0,29,3],
-"structActor.html#afa5dea9480abaa994c912de779986ef9":[19,0,29,0],
 "structActorInfo.html":[19,0,30],
 "structActorInfo.html#a2b9fa97da051f0577f1eb27489444823":[19,0,30,1],
 "structActorInfo.html#a6201bd3e47dd79c5fbef43e366676d68":[19,0,30,3],
@@ -249,5 +241,13 @@ var NAVTREEINDEX73 =
 "structCamera.html#ae87778b1cb8804985aad9c5eb7c4b36f":[19,0,85,1],
 "structCamera.html#af0659dfe9ec249eb88a1752aed444cfd":[19,0,85,16],
 "structCamera.html#af3dd5e00525e8726e522e601dadfc0a4":[19,0,85,22],
-"structCeremonyActor.html":[19,0,86]
+"structCeremonyActor.html":[19,0,86],
+"structCeremonyActor.html#a110b550dc583aeb02fd38123620c8674":[19,0,86,9],
+"structCeremonyActor.html#a13f7987d81c585bd2298c5bc6ea5c04e":[19,0,86,21],
+"structCeremonyActor.html#a277ad2eda07a8de516f07337576809dd":[19,0,86,0],
+"structCeremonyActor.html#a27dc934acc4ee0a396c40200ffcd44e2":[19,0,86,2],
+"structCeremonyActor.html#a29880f9182b999494a29b6a79a268cdb":[19,0,86,12],
+"structCeremonyActor.html#a42af7e698199717ee309a86b47111385":[19,0,86,18],
+"structCeremonyActor.html#a47062d029901aad6a105fc69de8a8454":[19,0,86,23],
+"structCeremonyActor.html#a69c20526dea2316424da2fd93f55ea74":[19,0,86,19]
 };

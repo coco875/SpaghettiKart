@@ -1,13 +1,5 @@
 var NAVTREEINDEX78 =
 {
-"structSF64_1_1ColPolyData.html#a2a6bd382215a07aa4474a346c194c008":[19,0,3,3,3],
-"structSF64_1_1ColPolyData.html#a2effad54da7e2944637e1fd4745d840a":[18,0,6,3,1],
-"structSF64_1_1ColPolyData.html#a2effad54da7e2944637e1fd4745d840a":[19,0,3,3,1],
-"structSF64_1_1ColPolyData.html#acaefcd33d89a0577031f2e943470684f":[18,0,6,3,4],
-"structSF64_1_1ColPolyData.html#acaefcd33d89a0577031f2e943470684f":[19,0,3,3,4],
-"structSF64_1_1ColPolyData.html#adf743dd078f835e2a9a2568314dea000":[18,0,6,3,0],
-"structSF64_1_1ColPolyData.html#adf743dd078f835e2a9a2568314dea000":[19,0,3,3,0],
-"structSF64_1_1EnvSettingsData.html":[18,0,6,5],
 "structSF64_1_1EnvSettingsData.html":[19,0,3,5],
 "structSF64_1_1EnvSettingsData.html#a03280a97c40234b2c9f5747cb5c776c5":[18,0,6,5,12],
 "structSF64_1_1EnvSettingsData.html#a03280a97c40234b2c9f5747cb5c776c5":[19,0,3,5,12],
@@ -249,5 +241,13 @@ var NAVTREEINDEX78 =
 "structSequenceChannel.html#a84d7c255c7bbc4df3d4840580b5f8819":[19,0,397,12],
 "structSequenceChannel.html#a86118c5e4c57c5cd83f9b0eda9b892c2":[19,0,397,6],
 "structSequenceChannel.html#a88afac12f721bc4ccc1f402618b49121":[19,0,397,25],
-"structSequenceChannel.html#a8c82a0041bd75994697dafc694d6c646":[19,0,397,41]
+"structSequenceChannel.html#a8c82a0041bd75994697dafc694d6c646":[19,0,397,41],
+"structSequenceChannel.html#a931ca3d182c264a8cc5a5143c1d3b560":[19,0,397,19],
+"structSequenceChannel.html#aaa0ea8943c6b8d1cd4d9b7011dcc9779":[19,0,397,9],
+"structSequenceChannel.html#aaa63661308a45bc9c410c831888136d6":[19,0,397,24],
+"structSequenceChannel.html#ab43f4dc03aa765bcdc052d6b59072554":[19,0,397,32],
+"structSequenceChannel.html#aba80ebc742588c90ece54666ed0cfc00":[19,0,397,45],
+"structSequenceChannel.html#abf2b47257aa645eda0acca176e25d10a":[19,0,397,18],
+"structSequenceChannel.html#ac28336aa1b2f34a4f95ab24d24ecc680":[19,0,397,5],
+"structSequenceChannel.html#ac52f6431cf860520640e89d37a845398":[19,0,397,28]
 };

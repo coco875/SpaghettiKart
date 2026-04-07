@@ -1,13 +1,5 @@
 var NAVTREEINDEX80 =
 {
-"structTemporaryPool.html#a24a042e0593ca803b8d6fdc52d950be5":[19,0,448,0],
-"structTemporaryPool.html#a9e76933800efc66eef61fe322f49c69c":[19,0,448,1],
-"structTextureMap.html":[19,0,451],
-"structTextureMap.html#a8b4286ddfe639a65e498930733799cf6":[19,0,451,0],
-"structTextureMap.html#ad91eea22f2775fcc40c7627062c429b3":[19,0,451,1],
-"structThwompSpawn.html":[19,0,453],
-"structThwompSpawn.html#a37b6087d0a9347a416e26a4d7079bd28":[19,0,453,0],
-"structThwompSpawn.html#a62a6d334f8884644437c7ea8400cd3d3":[19,0,453,2],
 "structThwompSpawn.html#ad125afdac071b04e78cc7c0134d9f7ae":[19,0,453,1],
 "structThwompSpawn.html#ae947218abf0b0de40a991c6a929b19d5":[19,0,453,3],
 "structTourCamera_1_1CameraShot.html":[19,0,455,0],
@@ -249,5 +241,13 @@ var NAVTREEINDEX80 =
 "structUIWidgets_1_1IntSliderOptions.html#aa733c535f03679e2f44fa36afeafdb82":[19,0,7,4,7],
 "structUIWidgets_1_1IntSliderOptions.html#abb66dbfef8c8a77150fbadc7f448efa8":[18,0,10,5,8],
 "structUIWidgets_1_1IntSliderOptions.html#abb66dbfef8c8a77150fbadc7f448efa8":[19,0,7,4,8],
-"structUIWidgets_1_1IntSliderOptions.html#abfddd81049e57c1e832969aab1de9833":[18,0,10,5,12]
+"structUIWidgets_1_1IntSliderOptions.html#abfddd81049e57c1e832969aab1de9833":[18,0,10,5,12],
+"structUIWidgets_1_1IntSliderOptions.html#abfddd81049e57c1e832969aab1de9833":[19,0,7,4,12],
+"structUIWidgets_1_1IntSliderOptions.html#ad5564b4b45983d86313f32703cb5530e":[18,0,10,5,18],
+"structUIWidgets_1_1IntSliderOptions.html#ad5564b4b45983d86313f32703cb5530e":[19,0,7,4,18],
+"structUIWidgets_1_1IntSliderOptions.html#ad9f57d51181a0c4ff6ba3ddb620131d8":[18,0,10,5,10],
+"structUIWidgets_1_1IntSliderOptions.html#ad9f57d51181a0c4ff6ba3ddb620131d8":[19,0,7,4,10],
+"structUIWidgets_1_1IntSliderOptions.html#aeb3c7df2e6e8c9fe8c68cce6a96e4d13":[18,0,10,5,3],
+"structUIWidgets_1_1IntSliderOptions.html#aeb3c7df2e6e8c9fe8c68cce6a96e4d13":[19,0,7,4,3],
+"structUIWidgets_1_1IntSliderOptions.html#af7d904f2ed0b37c6e389e1a053a00c64":[18,0,10,5,5]
 };
