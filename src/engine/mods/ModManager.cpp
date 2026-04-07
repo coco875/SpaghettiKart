@@ -5,8 +5,6 @@
 #include "port/Engine.h"
 #include "semver.hpp"
 #include "utils/StringHelper.h"
-#include <SDL2/SDL.h>
-#include <cctype>
 #include <filesystem>
 #include <memory>
 #include <optional>
@@ -23,23 +21,10 @@ void DetectOutdatedDependencies();
 void SortModsByDependencies();
 
 namespace {
-constexpr const char* kMk64ReloadedUrl = "https://evilgames.eu/texture-packs/mk64-reloaded.htm#rt64";
-
 bool IsArchivePath(const std::filesystem::path& path) {
     const auto ext = path.extension().string();
     return StringHelper::IEquals(ext, ".zip") || StringHelper::IEquals(ext, ".o2r") ||
            std::filesystem::is_directory(path);
-}
-
-bool IsMk64ReloadedPath(const std::filesystem::path& path) {
-    if (!path.has_filename()) {
-        return false;
-    }
-
-    auto fileName = path.filename().string();
-    std::transform(fileName.begin(), fileName.end(), fileName.begin(),
-                   [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
-    return fileName.find("mk64-reloaded") != std::string::npos;
 }
 
 void AddUniqueArchive(std::vector<std::string>& archiveFiles, std::set<std::string>& seenArchivePaths,
@@ -54,40 +39,6 @@ void AddUniqueArchive(std::vector<std::string>& archiveFiles, std::set<std::stri
     }
 }
 
-#ifdef __IOS__
-void AddIosDocumentsArchives(std::vector<std::string>& archiveFiles, std::set<std::string>& seenArchivePaths,
-                             bool hasMk64Reloaded) {
-    const auto appDirectory = std::filesystem::path(Ship::Context::GetAppDirectoryPath());
-
-    if (!std::filesystem::exists(appDirectory) || !std::filesystem::is_directory(appDirectory)) {
-        return;
-    }
-
-    for (const auto& entry : std::filesystem::directory_iterator(appDirectory)) {
-        if (!entry.is_regular_file()) {
-            continue;
-        }
-
-        const auto entryPath = entry.path();
-        if (!IsMk64ReloadedPath(entryPath)) {
-            continue;
-        }
-
-        AddUniqueArchive(archiveFiles, seenArchivePaths, entryPath);
-        hasMk64Reloaded = true;
-    }
-
-    if (!hasMk64Reloaded && !CVarGetInteger("gIosMk64ReloadedPromptShown", 0)) {
-        CVarSetInteger("gIosMk64ReloadedPromptShown", 1);
-        if (GameEngine::ShowYesNoBox(
-                "Recommended Mod",
-                "Installing the official MK64 Reloaded SpaghettiKart O2R currently avoids several iOS track crashes.\n\n"
-                "Open the download page now?") == IDYES) {
-            SDL_OpenURL(kMk64ReloadedUrl);
-        }
-    }
-}
-#endif
 } // namespace
 
 std::vector<std::tuple<ModMetadata, std::shared_ptr<Ship::Archive>>> Mods = {};
@@ -164,14 +115,6 @@ std::vector<std::string> ListMods() {
             AddUniqueArchive(archiveFiles, seenArchivePaths, p.path());
         }
     }
-
-#ifdef __IOS__
-    const bool hasMk64Reloaded = std::any_of(
-        archiveFiles.begin(), archiveFiles.end(),
-        [](const std::string& archivePath) { return IsMk64ReloadedPath(std::filesystem::path(archivePath)); });
-    AddIosDocumentsArchives(archiveFiles, seenArchivePaths, hasMk64Reloaded);
-#endif
-
     return archiveFiles;
 }
 
