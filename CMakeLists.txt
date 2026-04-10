@@ -721,13 +721,15 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang|AppleClang")
   endif()
 endif()
 
+file(WRITE ${CMAKE_BINARY_DIR}/copy_if_exists.cmake "if(EXISTS \"\${SRC}\")\n  execute_process(COMMAND \${CMAKE_COMMAND} -E copy_if_different \"\${SRC}\" \"\${DST}\")\nendif()\n")
+
 add_custom_command(
  TARGET ${PROJECT_NAME} POST_BUILD
  COMMENT "Copying asset yamls..."
   COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/config.yml" "$<TARGET_FILE_DIR:Spaghettify>/config.yml"
   COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/yamls/" "$<TARGET_FILE_DIR:Spaghettify>/yamls/"
      COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/meta/" "$<TARGET_FILE_DIR:Spaghettify>/meta/"
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/spaghetti.o2r" "$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r"
+  COMMAND ${CMAKE_COMMAND} -DSRC="${CMAKE_SOURCE_DIR}/spaghetti.o2r" -DDST="$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r" -P "${CMAKE_BINARY_DIR}/copy_if_exists.cmake"
 )
 
 if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
@@ -735,7 +737,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
    TARGET ${PROJECT_NAME} POST_BUILD
    COMMENT "Copying packaged O2R assets..."
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_BINARY_DIR}/mk64.o2r" "$<TARGET_FILE_DIR:Spaghettify>/mk64.o2r"
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_BINARY_DIR}/spaghetti.o2r" "$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r"
+    COMMAND ${CMAKE_COMMAND} -DSRC="${CMAKE_BINARY_DIR}/spaghetti.o2r" -DDST="$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r" -P "${CMAKE_BINARY_DIR}/copy_if_exists.cmake"
   )
 endif()
 
@@ -778,7 +780,7 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
   endif()
 
   if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
-    install(FILES "${CMAKE_BINARY_DIR}/spaghetti.o2r" DESTINATION . COMPONENT ${PROJECT_NAME})
+    install(FILES "${CMAKE_BINARY_DIR}/spaghetti.o2r" DESTINATION . COMPONENT ${PROJECT_NAME} OPTIONAL)
   endif()
 
   if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
