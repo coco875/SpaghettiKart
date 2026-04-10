@@ -63,6 +63,7 @@ endif()
 message("Spaghetti Kart version: ${PROJECT_VERSION} ${PROJECT_PATCH_WORD}")
 
 if(APPLE)
+  set_source_files_properties(src/port/audio/HMAS.cpp PROPERTIES COMPILE_FLAGS "-x objective-c++")
   enable_language(OBJC)
   enable_language(OBJCXX)
 endif()
@@ -193,12 +194,18 @@ set(GFX_DEBUG_DISASSEMBLER OFF)
 
 # Add compile definitions for the target
 include(CheckCCompilerFlag)
+include(CheckCXXCompilerFlag)
 check_c_compiler_flag("-Wno-error=int-conversion" HAS_WNO_ERROR_INT_CONVERSION)
+check_cxx_compiler_flag("-Wno-error=changes-meaning" HAS_WNO_ERROR_CHANGES_MEANING)
+
+add_compile_options("$<$<COMPILE_LANGUAGE:C>:-Wno-error=incompatible-pointer-types>" "$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=narrowing>")
 
 if(HAS_WNO_ERROR_INT_CONVERSION)
-  add_compile_options("$<$<COMPILE_LANGUAGE:C>:-Wno-error=incompatible-pointer-types>" "$<$<COMPILE_LANGUAGE:C>:-Wno-error=int-conversion>" "$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=changes-meaning>" "$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=narrowing>")
-else()
-  add_compile_options("$<$<COMPILE_LANGUAGE:C>:-Wno-error=incompatible-pointer-types>" "$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=narrowing>")
+  add_compile_options("$<$<COMPILE_LANGUAGE:C>:-Wno-error=int-conversion>")
+endif()
+
+if(HAS_WNO_ERROR_CHANGES_MEANING)
+  add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=changes-meaning>")
 endif()
 add_compile_definitions(
     VERSION_US=1
@@ -720,6 +727,7 @@ add_custom_command(
   COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/config.yml" "$<TARGET_FILE_DIR:Spaghettify>/config.yml"
   COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/yamls/" "$<TARGET_FILE_DIR:Spaghettify>/yamls/"
      COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/meta/" "$<TARGET_FILE_DIR:Spaghettify>/meta/"
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/spaghetti.o2r" "$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r"
 )
 
 if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
