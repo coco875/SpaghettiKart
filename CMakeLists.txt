@@ -305,7 +305,7 @@ list(FILTER ALL_FILES EXCLUDE REGEX ".*.inc.c")
 list(FILTER ALL_FILES EXCLUDE REGEX "./src/debug/crash_screen_enhancement.c")
 
 if (CMAKE_SYSTEM_NAME STREQUAL "iOS")
-  set(IOS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/ios)
+  set(IOS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ios)
 
   set(STORYBOARD_FILE ${IOS_DIR}/Launch.storyboard)
   set(ICON_FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon.png)
