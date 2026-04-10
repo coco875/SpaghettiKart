@@ -232,6 +232,58 @@ cpack
 cmake --build build-cmake --target clean
 ```
 
+## iOS
+Requires:
+  * macOS with Xcode installed
+  * CMake and Ninja in `PATH`
+  * Homebrew packages: `cmake ninja sdl2 libpng glew nlohmann-json libzip vorbis-tools sdl2_net tinyxml2 pkg-config git`
+  * Your own supported Mario Kart 64 ROM
+
+Install the Homebrew dependencies:
+
+```bash
+brew install cmake ninja sdl2 libpng glew nlohmann-json libzip vorbis-tools sdl2_net tinyxml2 pkg-config git
+```
+
+Build steps:
+
+```bash
+# Clone the repo
+git clone --recurse-submodules https://github.com/HarbourMasters/SpaghettiKart.git
+cd SpaghettiKart
+
+# If needed later
+git submodule update --init --recursive
+
+# Put your supported ROM at the repo root with this filename
+ln -sf "/path/to/your/baserom.us.z64" baserom.us.z64
+
+# Generate mk64.o2r and spaghetti.o2r from your own ROM
+cmake -S . -B build-cmake -GNinja
+cmake --build build-cmake --target ExtractAssets
+
+# Configure the iOS build
+cmake -S . -B build-ios-make -DCMAKE_BUILD_TYPE=Release -DIOS=ON -DSIGN_LIBRARY=OFF
+
+# Build the app
+cmake --build build-ios-make --config Release
+
+# Package an unsigned IPA
+mkdir -p build-ios-make/Payload
+rm -rf build-ios-make/Payload/Spaghettify.app
+cp -R build-ios-make/Spaghettify.app build-ios-make/Payload/Spaghettify.app
+rm -f build-ios-make/SpaghettiKart-unsigned.ipa
+zip -qry build-ios-make/SpaghettiKart-unsigned.ipa build-ios-make/Payload
+
+# Output
+ls build-ios-make/SpaghettiKart-unsigned.ipa
+```
+
+Notes:
+  * The IPA produced by these steps is unsigned.
+  * The build generates `mk64.o2r` and `spaghetti.o2r` from your own ROM and copies them into the iOS app bundle.
+  * If you are using the current iOS workaround branch, install MK64 Reloaded manually by copying its `.o2r` file into `Spaghettify/mods` on the device.
+
 ## Getting CI to work on your fork
 
 The CI works via [Github Actions](https://github.com/features/actions) where we mostly make use of machines hosted by Github; except for the very first step of the CI process called "Extract assets". This steps extracts assets from the game file and generates an "assets" folder in `mm/`.
