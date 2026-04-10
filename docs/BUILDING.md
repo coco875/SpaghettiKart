@@ -269,19 +269,20 @@ cmake -S . -B build-ios-make -DCMAKE_BUILD_TYPE=Release -DIOS=ON -DSIGN_LIBRARY=
 cmake --build build-ios-make --config Release
 
 # Package an unsigned IPA
-mkdir -p build-ios-make/Payload
-rm -rf build-ios-make/Payload/Spaghettify.app
-cp -R build-ios-make/Spaghettify.app build-ios-make/Payload/Spaghettify.app
-rm -f build-ios-make/SpaghettiKart-unsigned.ipa
-zip -qry build-ios-make/SpaghettiKart-unsigned.ipa build-ios-make/Payload
+# The IPA must contain Payload/ at the archive root.
+rm -rf ipa-package
+mkdir -p ipa-package/Payload
+cp -R build-ios-make/Spaghettify.app ipa-package/Payload/Spaghettify.app
+(cd ipa-package && zip -qry ../SpaghettiKart-unsigned.ipa Payload)
 
 # Output
-ls build-ios-make/SpaghettiKart-unsigned.ipa
+ls SpaghettiKart-unsigned.ipa
 ```
 
 Notes:
   * The IPA produced by these steps is unsigned.
   * The build generates `mk64.o2r` and `spaghetti.o2r` from your own ROM and copies them into the iOS app bundle.
+  * Do not zip `build-ios-make/Payload` directly, or the archive will have the wrong root folder for signing tools.
   * If you are using the current iOS workaround branch, install MK64 Reloaded manually by copying its `.o2r` file into `Spaghettify/mods` on the device.
 
 ## Getting CI to work on your fork
