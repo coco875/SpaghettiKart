@@ -283,7 +283,7 @@ Notes:
   * The IPA produced by these steps is unsigned.
   * The build generates `mk64.o2r` and `spaghetti.o2r` from your own ROM and copies them into the iOS app bundle.
   * Do not zip `build-ios-make/Payload` directly, or the archive will have the wrong root folder for signing tools.
-  * If you are using the current iOS workaround branch, install MK64 Reloaded manually by copying its `.o2r` file into `Spaghettify/mods` on the device.
+  * No additional mod pack is required for the current iOS build flow.
 
 ## Getting CI to work on your fork
 
