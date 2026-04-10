@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
 
+if(CMAKE_VERSION VERSION_GREATER_EQUAL "4.0")
+  set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
+endif()
+
 # Set the project version and language
 project(Spaghettify VERSION 1.0.0 LANGUAGES C CXX ASM)
 include(FetchContent)
