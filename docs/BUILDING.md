@@ -285,6 +285,40 @@ Notes:
   * Do not zip `build-ios-make/Payload` directly, or the archive will have the wrong root folder for signing tools.
   * No additional mod pack is required for the current iOS build flow.
 
+## iOS Simulator (macOS)
+To run the project on the iOS Simulator on a macOS host (Apple Silicon `arm64`), use the following steps. This assumes you have already extracted the assets as shown in the iOS or macOS sections.
+
+### Build steps
+
+```bash
+# Clean previous builds to avoid conflicts
+rm -rf build-ios-make
+
+# Configure the project for the simulator
+# This ensures we target the simulator's arm64 architecture instead of physical devices
+cmake -B build-ios-make -G "Unix Makefiles" \
+    -DCMAKE_TOOLCHAIN_FILE=cmake/ios.toolchain.cmake \
+    -DPLATFORM=SIMULATORARM64 \
+    -DCMAKE_OSX_SYSROOT=iphonesimulator \
+    -DCMAKE_OSX_ARCHITECTURES=arm64
+
+# Compile the project
+cmake --build build-ios-make -j8
+```
+
+### Running on the Simulator
+
+```bash
+# Boot your preferred simulator (e.g., iPhone 16 Pro)
+xcrun simctl boot "iPhone 16 Pro"
+
+# Install the app onto the booted simulator
+xcrun simctl install booted build-ios-make/Spaghettify.app
+
+# Launch the app
+xcrun simctl launch booted dev.net64.game
+```
+
 ## Getting CI to work on your fork
 
 The CI works via [Github Actions](https://github.com/features/actions) where we mostly make use of machines hosted by Github; except for the very first step of the CI process called "Extract assets". This steps extracts assets from the game file and generates an "assets" folder in `mm/`.
