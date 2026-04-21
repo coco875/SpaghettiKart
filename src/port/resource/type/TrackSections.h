@@ -16,9 +16,6 @@ class TrackSectionsClass : public Ship::Resource<TrackSections> {
     size_t GetPointerSize() override;
 
     std::vector<TrackSections> TrackSectionsList;
-
-  private:
-    std::vector<TrackSections> PointerData;
 };
 
 class TrackSectionsO2RClass : public Ship::Resource<TrackSections> {
@@ -31,9 +28,6 @@ class TrackSectionsO2RClass : public Ship::Resource<TrackSections> {
     size_t GetPointerSize() override;
 
     std::vector<TrackSections> TrackSectionsList;
-
-  private:
-    std::vector<TrackSections> PointerData;
 };
 
 } // namespace MK64
