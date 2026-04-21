@@ -522,13 +522,22 @@ jobs:
           name: spaghetti.o2r
           path: ./build-x86
 
+      - name: Generate AppImage
+        run: |
+          docker run --rm --platform linux/386 \
+            -v "${{ github.workspace }}:/project" \
+            spaghettikart-x86:latest \
+            bash -c "
+              cd /project/build-x86 && \
+              cpack -G External || true
+            "
+
       - name: Create Package
         run: |
           mkdir -p spaghetti-x86-${{ matrix.config }}
           wget -O gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/master/gamecontrollerdb.txt
           mv gamecontrollerdb.txt spaghetti-x86-${{ matrix.config }}/
-          mv build-x86/Spaghettify spaghetti-x86-${{ matrix.config }}/
-          mv build-x86/spaghetti.o2r spaghetti-x86-${{ matrix.config }}/
+          cp build-x86/*.appimage spaghetti-x86-${{ matrix.config }}/spaghetti.appimage 2>/dev/null || true
 
       - name: Publish packaged artifacts
         uses: actions/upload-artifact@v4
