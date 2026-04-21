@@ -729,15 +729,13 @@ add_custom_command(
   COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/config.yml" "$<TARGET_FILE_DIR:Spaghettify>/config.yml"
   COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/yamls/" "$<TARGET_FILE_DIR:Spaghettify>/yamls/"
      COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/meta/" "$<TARGET_FILE_DIR:Spaghettify>/meta/"
-  COMMAND ${CMAKE_COMMAND} -DSRC="${CMAKE_SOURCE_DIR}/spaghetti.o2r" -DDST="$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r" -P "${CMAKE_BINARY_DIR}/copy_if_exists.cmake"
 )
 
 if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
   add_custom_command(
    TARGET ${PROJECT_NAME} POST_BUILD
    COMMENT "Copying packaged O2R assets..."
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_BINARY_DIR}/mk64.o2r" "$<TARGET_FILE_DIR:Spaghettify>/mk64.o2r"
-    COMMAND ${CMAKE_COMMAND} -DSRC="${CMAKE_BINARY_DIR}/spaghetti.o2r" -DDST="$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r" -P "${CMAKE_BINARY_DIR}/copy_if_exists.cmake"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_BINARY_DIR}/spaghetti.o2r" "$<TARGET_FILE_DIR:Spaghettify>/spaghetti.o2r"
   )
 endif()
 
@@ -758,7 +756,7 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
 
   add_custom_target(
     ExtractAssets
-    DEPENDS TorchExternal
+    DEPENDS ${TORCH_EXECUTABLE}
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMAND ${TORCH_EXECUTABLE} header -o baserom.us.z64
     COMMAND ${TORCH_EXECUTABLE} o2r baserom.us.z64 --additional-files meta/mods.toml
@@ -769,15 +767,13 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
 
   add_custom_target(
     GenerateO2R
-    DEPENDS TorchExternal
+    DEPENDS TorchExternal "${CMAKE_SOURCE_DIR}/assets"
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMAND ${TORCH_EXECUTABLE} pack assets spaghetti.o2r o2r
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/spaghetti.o2r" "${CMAKE_BINARY_DIR}/spaghetti.o2r"
   )
 
-  if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
-    add_dependencies(${PROJECT_NAME} ExtractAssets)
-  endif()
+  add_dependencies(${PROJECT_NAME} GenerateO2R)
 
   if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
     install(FILES "${CMAKE_BINARY_DIR}/spaghetti.o2r" DESTINATION . COMPONENT ${PROJECT_NAME} OPTIONAL)
