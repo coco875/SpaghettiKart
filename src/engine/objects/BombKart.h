@@ -85,13 +85,16 @@ class OBombKart : public OObject {
     virtual void Translate(FVector pos) override;
     virtual void DrawEditorProperties() override;
     void DrawBattle(s32 cameraId);
-    void SomeRender(Vec3f arg1);
-    void LoadMtx();
+    void func_800563DC(s32 cameraId, s32 arg2);
+    void func_800562E4(s32 cameraId, s32 arg0, s32 arg1, s32 arg2, s32 id);
+    void SomeRender(s32 cameraId, Vec3f arg1);
+    void LoadMtx(s32 cameraId);
     void Waypoint(s32 screenId);
 
     OBombKart::States Behaviour = OBombKart::States::COUNTERCLOCKWISE;
     float SpeedB = 2.7f;
   private:
+    static u32 vec[3][3];
     static size_t _count;
     s32 _idx;
     Player* FindTarget();

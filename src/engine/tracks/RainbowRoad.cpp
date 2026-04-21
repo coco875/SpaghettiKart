@@ -94,6 +94,7 @@ RainbowRoad::RainbowRoad() {
 
     Props.Clouds = gToadsTurnpikeRainbowRoadStars;
     Props.CloudList = gToadsTurnpikeRainbowRoadStars;
+    mCloudType = CloudType::STARS;
 
     Props.Skybox.TopRight = {0, 0, 0};
     Props.Skybox.BottomRight = {0, 0, 0};
@@ -150,14 +151,6 @@ void RainbowRoad::BeginPlay() {
     }
 }
 
-void RainbowRoad::InitClouds() {
-    init_stars(this->Props.Clouds);
-}
-
-void RainbowRoad::TickClouds(s32 sp1C, Camera* camera) {
-    update_stars(sp1C, camera, this->Props.CloudList);
-}
-
 void RainbowRoad::InitTrackObjects() {
     if (gGamestate != CREDITS_SEQUENCE) {
         size_t i;
@@ -204,8 +197,7 @@ void RainbowRoad::Waypoints(Player* player, int8_t playerId) {
     player->nearestPathPointId = gCopyNearestWaypointByPlayerId[playerId];
 }
 
-void RainbowRoad::DrawWater(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) {
-
+void RainbowRoad::DrawTransparency(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) {
     gDPPipeSync(gDisplayListHead++);
     gSPClearGeometryMode(gDisplayListHead++, G_CULL_BACK);
     render_track_sections(rainbow_road_dls, screen);

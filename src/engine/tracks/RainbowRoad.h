@@ -25,8 +25,6 @@ public:
 //                  course_texture* textures, const char* displaylists, size_t dlSize);
     virtual void Load() override;
     virtual void BeginPlay() override;
-    virtual void InitClouds() override;
-    virtual void TickClouds(s32, Camera*) override;
     virtual void InitTrackObjects() override;
     virtual void TickTrackObjects() override;
     virtual void DrawTrackObjects(s32 cameraId) override;
@@ -36,7 +34,7 @@ public:
     virtual void Draw(ScreenContext*) override;
     virtual void DrawCredits() override;    
     virtual void Waypoints(Player* player, int8_t playerId) override;
-    virtual void DrawWater(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) override;
+    virtual void DrawTransparency(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot, uint16_t playerDirection) override;
     virtual void CreditsSpawnActors() override;
     virtual void Destroy() override;
 };

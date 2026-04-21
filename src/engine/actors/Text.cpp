@@ -21,9 +21,12 @@ extern "C" {
 #include "code_80005FD0.h"
 }
 
+size_t AText::_count;
+
 AText::AText(const SpawnParams& params) : AActor(params) {
     Name = "Text";
     ResourceName = "hm:text";
+    _idx = _count;
     
     SpawnPos = params.Location.value_or(FVector(0.0f, 100.0f, 0.0f));
     Pos[0] = SpawnPos.x;
@@ -65,6 +68,8 @@ AText::AText(const SpawnParams& params) : AActor(params) {
 
     Text = ValidateString(params.Skin.value_or("Harbour Masters"));
     AText::Print3D((char*)Text.c_str(), 0, CENTER_TEXT_MODE_2);
+
+    _count += 1;
 }
 
 /**
@@ -352,6 +357,7 @@ void AText::SetupVtx() {
 void AText::DrawText3D(Camera* camera) { // Based on func_80095BD0
     Mat4 mtx;
 
+    FrameInterpolation_RecordOpenChild("actor_text", (_idx << 4) | camera->cameraId);
     if (FaceCamera) {
         ApplySphericalBillBoard(mtx, *(FVector*)Pos, Scale, camera->cameraId);
     } else {
@@ -360,7 +366,6 @@ void AText::DrawText3D(Camera* camera) { // Based on func_80095BD0
 
     AddObjectMatrix(mtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
 
-    FrameInterpolation_RecordOpenChild("actor_text", TAG_LETTER(this));
     gSPDisplayList(gDisplayListHead++, (Gfx*)D_020077A8);
 
     for (CharacterList& tex : TextureList) {

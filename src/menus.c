@@ -1,4 +1,5 @@
 #include <libultraship.h>
+#include <libultraship/bridge/audiobridge.h>
 #include <macros.h>
 #include <defines.h>
 #include <common_structs.h>
@@ -152,7 +153,7 @@ const s8 unref_800F2BDC[4] = { 1, 0, 0, 0 };
 // from sScreenModePlayerTable, note the 2 is not set since that's for vertical 2p screen
 const s8 sScreenModeIdxFromPlayerMode[4] = { 0, 1, 3, 4 };
 
-const union GameModePack sSoundMenuPack = { { SOUND_STEREO, SOUND_HEADPHONES, SOUND_UNUSED, SOUND_MONO } };
+const union GameModePack sSoundMenuPack = { { SOUND_STEREO, SOUND_HEADPHONES, SOUND_SURROUND, SOUND_MONO } };
 
 /**************************/
 
@@ -298,9 +299,6 @@ void options_menu_act(struct Controller* controller, u16 controllerIdx) {
                             } else {
                                 gSoundMode = SOUND_STEREO;
                             }
-                            if (gSoundMode == SOUND_UNUSED) {
-                                gSoundMode = SOUND_MONO;
-                            }
                             set_sound_mode();
                             switch (gSoundMode) {
                                 case SOUND_STEREO:
@@ -308,6 +306,9 @@ void options_menu_act(struct Controller* controller, u16 controllerIdx) {
                                     return;
                                 case SOUND_HEADPHONES:
                                     play_sound2(SOUND_MENU_HEADPHONES);
+                                    return;
+                                case SOUND_SURROUND:
+                                    play_sound2(SOUND_MENU_SURROUND);
                                     return;
                                 case SOUND_MONO:
                                     play_sound2(SOUND_MENU_MONO);
@@ -1146,9 +1147,6 @@ void splash_menu_act(struct Controller* controller, u16 controllerIdx) {
             case DEBUG_MENU_SOUND_MODE: {
                 if ((btnAndStick & R_JPAD) && (gSoundMode < 3)) {
                     gSoundMode += 1;
-                    if (gSoundMode == SOUND_UNUSED) {
-                        gSoundMode = SOUND_MONO;
-                    }
                     play_sound2(SOUND_MENU_CURSOR_MOVE);
                     set_sound_mode();
                     gSaveData.main.saveInfo.soundMode = gSoundMode;
@@ -1157,9 +1155,6 @@ void splash_menu_act(struct Controller* controller, u16 controllerIdx) {
                 }
                 if ((btnAndStick & L_JPAD) && (gSoundMode > 0)) {
                     gSoundMode -= 1;
-                    if (gSoundMode == SOUND_UNUSED) {
-                        gSoundMode = SOUND_HEADPHONES;
-                    }
                     play_sound2(SOUND_MENU_CURSOR_MOVE);
                     set_sound_mode();
                     gSaveData.main.saveInfo.soundMode = gSoundMode;
@@ -1547,8 +1542,11 @@ GLOBAL_ASM("asm/non_matchings/menus/main_menu_act.s")
  * hovered character at grid position `gridId`
  */
 bool is_character_spot_free(s32 gridId) {
-    s32 i;
-    for (i = 0; i < ARRAY_COUNT(gCharacterGridSelections); i++) {
+    if (CVarGetInteger("gUniqueCharacterSelections", true) == false) {
+        return true;
+    }
+  
+    for (size_t i = 0; i < ARRAY_COUNT(gCharacterGridSelections); i++) {
         if (gridId == gCharacterGridSelections[i]) {
             return false;
         }
@@ -2075,8 +2073,15 @@ void set_sound_mode(void) {
     union GameModePack pack;
 
     pack = sSoundMenuPack;
-    if ((gSoundMode == SOUND_STEREO) || (gSoundMode == SOUND_HEADPHONES) || (gSoundMode == SOUND_MONO)) {
+    if ((gSoundMode == SOUND_STEREO) || (gSoundMode == SOUND_HEADPHONES) || 
+        (gSoundMode == SOUND_SURROUND) || (gSoundMode == SOUND_MONO)) {
         func_800C3448(pack.modes[gSoundMode] | 0xE0000000);
+        
+        if (gSoundMode == SOUND_SURROUND) {
+            SetAudioChannels(audioMatrix51);
+        } else {
+            SetAudioChannels(audioStereo);
+        }
     }
 }
 

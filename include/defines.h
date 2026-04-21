@@ -124,15 +124,6 @@
 #define FOUR_PLAYERS_SELECTED 4
 #define SELECTED_PLAYER_DEFINES_TOTAL 5
 
-// Camera index into cameras array
-enum CameraId {
-    CAMERA_ONE = 0,
-    CAMERA_TWO,
-    CAMERA_THREE,
-    CAMERA_FOUR,
-    CAMERA_FREECAM
-};
-
 enum PlayerId {
     PLAYER_NONE = -1,
     PLAYER_ONE = 0,
@@ -287,12 +278,10 @@ enum COLOR_ID {
 
 /**
  * @brief Sound mode options
- * Option 2 appears to be unused, as such its probably not
- * a valid option
  */
 #define SOUND_STEREO 0
 #define SOUND_HEADPHONES 1
-#define SOUND_UNUSED 2
+#define SOUND_SURROUND 2
 #define SOUND_MONO 3
 #define NUM_SOUND_MODES 4
 

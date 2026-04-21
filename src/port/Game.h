@@ -4,6 +4,7 @@
 #include <libultraship.h>
 #include "engine/tracks/Track.h"
 #include "engine/HM_Intro.h"
+#include "macros.h"
 
 #ifdef __cplusplus
 #include "engine/editor/Editor.h"
@@ -37,6 +38,8 @@ World* GetWorld(void); // Retrieve the world instance
 #endif
 // NOLINTBEGIN(readability-identifier-naming)
 
+void Graphics_PushFrame(Gfx* pool);
+
 uintptr_t CM_GetTrack();
 Properties* CM_GetProps();
 
@@ -69,8 +72,6 @@ void CM_ActivateSecondLapLakitu(s32 playerId);
 void CM_ActivateFinalLapLakitu(s32 playerId);
 void CM_ActivateReverseLakitu(s32 playerId);
 
-void CM_InitClouds();
-
 void CM_DrawActors(Camera* camera);
 void CM_DrawStaticMeshActors();
 
@@ -99,7 +100,7 @@ void Editor_CleanWorld();
 void CM_TickParticles(void);
 void CM_DrawParticles(s32 cameraId);
 
-void CM_TickClouds(s32 arg0, Camera* camera);
+void CM_RaceDrawSky(ScreenContext* screen, s32 someId);
 
 void CM_Waypoints(Player* player, int8_t playerId);
 
@@ -124,13 +125,13 @@ void CM_SetStaffGhost();
 
 void CM_BombKartsWaypoint(s32 cameraId);
 
-void CM_ScrollingTextures();
+void CM_TickTrack();
 
 s32 CM_GetCrossingOnTriggered(uintptr_t* crossing);
 
 void CM_BeginPlay();
 
-void CM_DrawWater(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot,
+void CM_DrawTransparency(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot,
                   uint16_t playerDirection);
 
 void CM_AICrossingBehaviour(s32 playerId);
@@ -233,16 +234,7 @@ void CM_ResetAudio(void);
 __attribute__((format(printf, 1, 2)))
 #endif
 
-// Add noreturn attribute
-#if defined(_MSC_VER)
-    __declspec(noreturn) 
-#elif defined(__APPLE__)
-#elif defined(__cplusplus) || (__STDC_VERSION__ >= 202311)
-    [[noreturn]] 
-#elif defined(__GNUC__)
-    __attribute__((noreturn))
-#endif
-void CM_ThrowRuntimeError(const char* fmt, ...);
+NORETURN void CM_ThrowRuntimeError(const char* fmt, ...);
 
 // NOLINTEND(readability-identifier-naming)
 

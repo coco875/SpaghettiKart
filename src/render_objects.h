@@ -3,13 +3,13 @@
 
 #include <common_structs.h>
 #include "main.h"
+#include "code_800029B0.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 void func_80045738(u8*, u8*, s32, s32);
-void render_bomb_karts(s32);
 void func_800431B0(Vec3f, Vec3su, f32, Vtx*);
 void func_80043220(Vec3f, Vec3su, f32, Gfx*);
 void func_80043328(Vec3f, Vec3su, f32, Gfx*);
@@ -317,22 +317,20 @@ void func_80050E34(s32, s32);
 
 void func_800514BC(void);
 void render_object_leaf_particle(s32);
-void render_object_snowflakes_particles(void);
-void render_clouds(s32, s16, s16);
-void func_800519D4(s32, s16, s16);
-void func_80051ABC(s16, s32);
-void func_80051C60(s16, s32);
-void func_80051EBC(void);
-void func_80051EF8(void);
-void func_80051F9C(void);
+void render_object_snowflakes_particles(s32 cameraId);
+void func_80051ABC(ScreenContext* screen, s16, s32);
+void func_80051C60(ScreenContext* screen, s16, s32);
+void func_80051EBC(ScreenContext* screen);
+void func_80051EF8(ScreenContext* screen);
+void func_80051F9C(ScreenContext* screen);
+void func_80052044(ScreenContext* screen);
+void func_80052080(ScreenContext* screen);
 
-void func_80052044(void);
-void func_80052080(void);
 void func_800520C0(s32);
-void func_8005285C(s32);
+void func_8005285C(s32, s32);
 void func_800528EC(s32);
 void render_ice_block(s32);
-void func_80052D70(s32);
+void func_80052D70(s32, s32);
 void func_80052E30(s32);
 void render_object_snowmans_list_2(s32);
 
@@ -361,7 +359,7 @@ void func_80055228(s32);
 void render_object_seagulls(s32);
 void render_object_crabs(s32);
 void func_800557AC(void);
-void func_800557B4(s32, u32, u32);
+void func_800557B4(s32, s32, u32, u32);
 void func_80055AB8(s32, s32);
 void render_object_chain_chomps(s32);
 void func_80055EF4(s32, s32);
@@ -369,18 +367,9 @@ void func_80055F48(s32);
 
 void func_80056160(s32);
 void render_object_neon(s32);
-void func_800562E4(s32, s32, s32);
-void func_800563DC(s32, s32, s32);
-void func_800568A0(s32, s32);
-void func_8005669C(s32, s32, s32);
 void func_800569F4(s32);
 void func_80056A40(s32, s32);
 void func_80056A94(s32);
-void render_battle_bomb_karts(s32);
-void func_80056E24(s32, Vec3f);
-void func_80056FCC(s32);
-
-void render_bomb_karts(s32);
 void func_8005762C(s32*, s32*, s32, u32);
 void func_80057330(void);
 void func_80057338(void);

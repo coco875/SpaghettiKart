@@ -9,6 +9,8 @@
 
 namespace GameUI {
 
+constexpr size_t MAX_FPS = 480;
+
 static const std::unordered_map<int32_t, const char*> menuExtentOptions = {
     { UIWidgets::MenuExtent::Condensed, "Condensed" },
     { UIWidgets::MenuExtent::Stretched, "Stretched" },
@@ -72,6 +74,7 @@ class PortMenu : public Ship::Menu {
     void AddEnhancements();
       void AddRulesets();
     void AddDevTools();
+      void AddSceneVisibility();
 };
 } // namespace BenGui
 

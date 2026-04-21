@@ -37,7 +37,7 @@ uintptr_t gCurrentlyLoadedTrackAddr = NULL;
 u16 D_800DC5A8 = 0;
 s32 D_800DC5AC = 0;
 u16 D_800DC5B0 = 1;
-u16 D_800DC5B4 = 0;
+bool bDrawSkybox = false;
 u16 D_800DC5B8 = 0;
 bool bFog = false;
 u16 gIsInQuitToMenuTransition = 0;
@@ -153,11 +153,11 @@ f32 gWaterLevel;
 f32 gWaterVelocity;
 s16 gPlayerPositionLUT[8]; // Player index at each position
 u16 gNumPermanentActors;
-s32 code_800029B0_bss_pad2[44];
+//s32 code_800029B0_bss_pad2[44];
 
-struct Actor gActorList[100];
+//struct Actor gActorList[100]; use CM_FindActorIndex(actor) instead
 //! @warning todo: Is this apart of the actor array?
-UNUSED u8 D_80162578[sizeof(struct Actor)];
+//UNUSED u8 D_80162578[sizeof(struct Actor)];
 
 s16 gDebugPathCount;
 s16 sIsController1Unplugged;

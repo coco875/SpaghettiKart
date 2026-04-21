@@ -146,8 +146,10 @@ void OThwomp::Tick60fps() { // func_80081210
 
     player = gPlayerOne;
     for (var_s4 = 0; var_s4 < NUM_PLAYERS; var_s4++, player++) {
-        player->tyres[FRONT_LEFT].unk_14 &= ~3;
-        player->unk_046 &= ~0x0006;
+        if (_idx == 0) { // Clear only once per frame
+            player->tyres[FRONT_LEFT].unk_14 &= ~3;
+            player->unk_046 &= ~0x0006;
+        }
 
         if (!(player->effects & BOO_EFFECT)) {
             OThwomp::func_80080B28(_objectIndex, var_s4);
@@ -168,9 +170,6 @@ void OThwomp::Tick60fps() { // func_80081210
 
     if (_idx == 0) {
         for (var_s4 = 0; var_s4 < gObjectParticle2_SIZE; var_s4++) {
-            // @port: Tag the transform.
-            FrameInterpolation_RecordOpenChild("Thwomp_part", (uintptr_t) var_s4);
-
             objectIndex = gObjectParticle2[var_s4];
             if (objectIndex == DELETED_OBJECT_ID) {
                 continue;
@@ -183,9 +182,6 @@ void OThwomp::Tick60fps() { // func_80081210
                 continue;
             }
             delete_object_wrapper(&gObjectParticle2[var_s4]);
-
-            // @port Pop the transform id.
-            FrameInterpolation_RecordCloseChild();
         }
     }
 }
@@ -667,7 +663,7 @@ void OThwomp::func_80080B28(s32 objectIndex, s32 playerId) {
                 }
             } else if ((temp_f0 <= 17.5) && (func_80072320(objectIndex, 1) != 0) &&
                        (is_within_horizontal_distance_of_player(objectIndex, player,
-                                                                (player->speed * 0.5) + BoundingBoxSize) != 0)) {
+                                                                (player->speed * 0.5) + gObjectList[objectIndex].boundingBoxSize) != 0)) {
                 if ((player->type & PLAYER_EXISTS) && !(player->type & PLAYER_INVISIBLE_OR_BOMB)) {
                     if (is_obj_flag_status_active(objectIndex, 0x04000000) != 0) {
                         func_80072180();
@@ -715,7 +711,7 @@ void OThwomp::Draw(s32 cameraId) {
     plusone = gObjectList[objectIndex].unk_0DF + 1;
 
     if (gGamestate != CREDITS_SEQUENCE) {
-        OThwomp::DrawModel(objectIndex);
+        OThwomp::DrawModel(cameraId, objectIndex);
     }
 
     gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D0079C8);
@@ -731,9 +727,11 @@ void OThwomp::Draw(s32 cameraId) {
         if (objectIndex != NULL_OBJECT_ID) {
             object = &gObjectList[objectIndex];
             if ((object->state > 0) && (Behaviour == States::MOVE_FAR)) {
+                FrameInterpolation_RecordOpenChild("thwomp_particle2", (_idx << 12) | (i << 4) | cameraId);
                 rsp_set_matrix_transformation(object->pos, object->orientation, object->sizeScaling);
                 gSPVertex(gDisplayListHead++, (uintptr_t) D_0D005C00, 3, 0);
                 gSPDisplayList(gDisplayListHead++, (Gfx*) D_0D006930);
+                FrameInterpolation_RecordCloseChild();
             }
         }
     }
@@ -752,15 +750,17 @@ void OThwomp::Draw(s32 cameraId) {
             if ((object->state >= 2) && (Behaviour == States::MOVE_AND_ROTATE)) {
                 func_8004B138(0x000000FF, 0x000000FF, 0x000000FF, (s32) object->primAlpha);
                 D_80183E80[1] = func_800418AC(object->pos[0], object->pos[2], camera->pos);
+                FrameInterpolation_RecordOpenChild("thwomp_particle", (_idx << 12) | (i << 4) | cameraId);
                 func_800431B0(object->pos, D_80183E80, object->sizeScaling, (Vtx*) D_0D005AE0);
+                FrameInterpolation_RecordCloseChild();
             }
         }
     }
 }
 
-void OThwomp::DrawModel(s32 objectIndex) {
+void OThwomp::DrawModel(s32 cameraId, s32 objectIndex) {
     if ((gObjectList[objectIndex].state >= 2) && (func_80072354(objectIndex, 0x00000040) != 0)) {
-        FrameInterpolation_RecordOpenChild("Thwomp_Main", TAG_THWOMP(this));
+        FrameInterpolation_RecordOpenChild("Thwomp_Main", TAG_THWOMP((_idx << 5) | cameraId));
         func_8004A7AC(objectIndex, 1.75f);
         rsp_set_matrix_transformation(gObjectList[objectIndex].pos, gObjectList[objectIndex].orientation,
                                       gObjectList[objectIndex].sizeScaling);

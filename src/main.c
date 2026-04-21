@@ -1,7 +1,6 @@
 #include <libultraship.h>
 #include <libultra/vi.h>
 #include <libultra/os.h>
-#include "buffers/gfx_output_buffer.h"
 #include <libultraship/bridge/gfxdebuggerbridge.h>
 #include <macros.h>
 #include <decode.h>
@@ -18,7 +17,6 @@
 #include <defines.h>
 #include "buffers.h"
 #include "camera.h"
-#include "profiler.h"
 #include "race_logic.h"
 #include "skybox_and_splitscreen.h"
 #include "render_objects.h"
@@ -30,19 +28,17 @@
 #include "podium_ceremony_actors.h"
 #include "menu_items.h"
 #include "code_80057C60.h"
-#include "profiler.h"
 #include "player_controller.h"
 #include "render_player.h"
-#include "render_courses.h"
 #include "actors.h"
 #include "replays.h"
 #include <debug.h>
-#include "crash_screen.h"
 #include "enhancements/freecam/freecam.h"
 #include "engine/editor/Editor.h"
 #include "port/interpolation/FrameInterpolation.h"
 #include "engine/wasm.h"
 #include "port/Game.h"
+#include "port/Engine.h"
 #include "engine/Matrix.h"
 
 // Declarations (not in this file)
@@ -266,8 +262,6 @@ void start_sptask(s32 taskType) {
     gActiveSPTask->state = SPTASK_STATE_RUNNING;
 }
 
-extern void Graphics_PushFrame(Gfx* data);
-
 /**
  * Initializes the Fast3D OSTask structure.
  * Loads F3DEX or F3DLX based on the number of players
@@ -314,7 +308,7 @@ void create_gfx_task_structure(void) {
 }
 
 f32 gDeltaTime = 0.0f;
-f32 calculate_delta_time(void) {
+void calculate_delta_time(void) {
     static u32 prevtime = 0;
     u32 now = osGetCount();
     f32 deltaTime;
@@ -471,7 +465,7 @@ void* clear_framebuffer(s32 color) {
     gDPSetCycleType(gDisplayListHead++, G_CYC_FILL);
 
     gDPSetFillColor(gDisplayListHead++, color);
-    gDPFillRectangle(gDisplayListHead++, 0, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1);
+    gDPFillWideRectangle(gDisplayListHead++, OTRGetRectDimensionFromLeftEdge(0), 0, OTRGetGameRenderWidth(), SCREEN_HEIGHT);
 
     gDPPipeSync(gDisplayListHead++);
 
@@ -691,7 +685,7 @@ void process_game_tick(void) {
     func_80059AC8();
     update_course_actors();
     CM_TickActors();
-    func_802966A0();
+    CM_TickTrack();
     if (CM_IsTourEnabled() == false) {
         func_8028FCBC();
     }
@@ -746,50 +740,49 @@ void race_logic_loop(void) {
 
     switch (gActiveScreenMode) {
         case SCREEN_MODE_1P:
-            render_screens(RENDER_SCREEN_MODE_1P_PLAYER_ONE, 0, 0);
+            render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_1P_PLAYER_ONE, 0, 0);
             break;
         case SCREEN_MODE_2P_SPLITSCREEN_HORIZONTAL:
             if (gPlayerWinningIndex == 0) {
                 // In VS Mode the winning player's viewport takes over the whole screen.
                 // Rendering the winning player last places their screen above the other screens
-                render_screens(RENDER_SCREEN_MODE_2P_HORIZONTAL_PLAYER_TWO, 1, 1);
-                render_screens(RENDER_SCREEN_MODE_2P_HORIZONTAL_PLAYER_ONE, 0, 0);
+                render_screens(gScreenTwoCtx, RENDER_SCREEN_MODE_2P_HORIZONTAL_PLAYER_TWO, 4, 1);
+                render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_2P_HORIZONTAL_PLAYER_ONE, 3, 0);
             } else {
-                render_screens(RENDER_SCREEN_MODE_2P_HORIZONTAL_PLAYER_ONE, 0, 0);
-                render_screens(RENDER_SCREEN_MODE_2P_HORIZONTAL_PLAYER_TWO, 1, 1);
+                render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_2P_HORIZONTAL_PLAYER_ONE, 3, 0);
+                render_screens(gScreenTwoCtx, RENDER_SCREEN_MODE_2P_HORIZONTAL_PLAYER_TWO, 4, 1);
             }
             break;
         case SCREEN_MODE_2P_SPLITSCREEN_VERTICAL:
             if (gPlayerWinningIndex == 0) {
-                render_screens(RENDER_SCREEN_MODE_2P_VERTICAL_PLAYER_TWO, 1, 1);
-                render_screens(RENDER_SCREEN_MODE_2P_VERTICAL_PLAYER_ONE, 0, 0);
+                render_screens(gScreenTwoCtx, RENDER_SCREEN_MODE_2P_VERTICAL_PLAYER_TWO, 2, 1);
+                render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_2P_VERTICAL_PLAYER_ONE, 1, 0);
             } else {
-                render_screens(RENDER_SCREEN_MODE_2P_VERTICAL_PLAYER_ONE, 0, 0);
-                render_screens(RENDER_SCREEN_MODE_2P_VERTICAL_PLAYER_TWO, 1, 1);
+                render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_2P_VERTICAL_PLAYER_ONE, 1, 0);
+                render_screens(gScreenTwoCtx, RENDER_SCREEN_MODE_2P_VERTICAL_PLAYER_TWO, 2, 1);
             }
             break;
         case SCREEN_MODE_3P_4P_SPLITSCREEN:
             if (gPlayerWinningIndex == 0) {
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_TWO, 1, 1);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_THREE, 2, 2);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_FOUR, 3, 3);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_ONE, 0, 0);
+                render_screens(gScreenTwoCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_TWO, 9, 1);
+                render_screens(gScreenThreeCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_THREE, 10, 2);
+                render_screens(gScreenFourCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_FOUR, 11, 3);
+                render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_ONE, 8, 0);
             } else if (gPlayerWinningIndex == 1) {
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_ONE, 0, 0);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_THREE, 2, 2);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_FOUR, 3, 3);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_TWO, 1, 1);
+                render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_ONE, 8, 0);
+                render_screens(gScreenThreeCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_THREE, 10, 2);
+                render_screens(gScreenFourCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_FOUR, 11, 3);
+                render_screens(gScreenTwoCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_TWO, 9, 1);
             } else if (gPlayerWinningIndex == 2) {
-
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_ONE, 0, 0);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_TWO, 1, 1);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_FOUR, 3, 3);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_THREE, 2, 2);
+                render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_ONE, 8, 0);
+                render_screens(gScreenTwoCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_TWO, 9, 1);
+                render_screens(gScreenFourCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_FOUR, 11, 3);
+                render_screens(gScreenThreeCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_THREE, 10, 2);
             } else {
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_ONE, 0, 0);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_TWO, 1, 1);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_THREE, 2, 2);
-                render_screens(RENDER_SCREEN_MODE_3P_4P_PLAYER_FOUR, 3, 3);
+                render_screens(gScreenOneCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_ONE, 8, 0);
+                render_screens(gScreenTwoCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_TWO, 9, 1);
+                render_screens(gScreenThreeCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_THREE, 10, 2);
+                render_screens(gScreenFourCtx, RENDER_SCREEN_MODE_3P_4P_PLAYER_FOUR, 11, 3);
             }
             break;
     }
@@ -1174,8 +1167,9 @@ void thread5_iteration(void) {
     }
     profiler_log_thread5_time(THREAD5_START);
     config_gfx_pool();
-    FB_CreateFramebuffers();
     read_controllers();
+    FB_CreateFramebuffers();
+    clear_framebuffer(0); // Clear the framebuffer
     game_state_handler();
 
     // call_render_hook();

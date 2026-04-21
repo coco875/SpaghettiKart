@@ -18,6 +18,7 @@
 
 #include "engine/vehicles/Train.h"
 
+#include "engine/actors/Finishline.h"
 #include "engine/objects/Object.h"
 #include "engine/objects/Thwomp.h"
 #include "engine/objects/Snowman.h"
@@ -86,15 +87,11 @@ namespace TrackEditor {
 
             std::string sceneFile = info->Path + "/scene.json";
 
+            Ship::ResourceIdentifier id(sceneFile, 0, track->Archive);
             // Write file to disk
-            bool wrote = GameEngine::Instance->context->GetResourceManager()->GetArchiveManager()->WriteFile(track->Archive, sceneFile, bytes);
-            if (wrote) {
-                // Tell the cache this file needs to be reloaded
-                auto resource = GameEngine::Instance->context->GetResourceManager()->GetCachedResource(sceneFile);
-                if (resource) {
-                    resource->Dirty();
-                }
-            } else {
+            auto rm = GameEngine::Instance->context->GetResourceManager();
+            bool wrote = rm->WriteResource(id, bytes, true);
+            if (!wrote) {
                 SPDLOG_INFO("[SceneManager] [SaveLevel] Failed to write scene file!");
             }
         } catch (const nlohmann::json::exception& e) {
@@ -129,8 +126,9 @@ namespace TrackEditor {
         initData->ResourceVersion = 0;
 
         // Load the scene file and return the json data
+        Ship::ResourceIdentifier id(sceneFile, 0, track->Archive);
         nlohmann::json data = std::static_pointer_cast<Ship::Json>(
-            GameEngine::Instance->context->GetResourceManager()->LoadResource(sceneFile, true, initData))->Data;
+            GameEngine::Instance->context->GetResourceManager()->LoadResource(id, true, initData))->Data;
 
         // Check that the data is valid
         if (data.is_null() || !data.is_object() || data.empty()) {
@@ -169,8 +167,9 @@ namespace TrackEditor {
         initData->ResourceVersion = 0;
 
         // Load the scene file and return the json data
+        Ship::ResourceIdentifier id(sceneFile, 0, archive);
         nlohmann::json data = std::static_pointer_cast<Ship::Json>(
-            GameEngine::Instance->context->GetResourceManager()->LoadResource(sceneFile, true, initData))->Data;
+            GameEngine::Instance->context->GetResourceManager()->LoadResource(id, true, initData))->Data;
 
         // Check that the data is valid
         if (data.is_null() || !data.is_object() || data.empty()) {
@@ -279,6 +278,11 @@ namespace TrackEditor {
             if (!alreadyProcessed) {
                 actor->SetSpawnParams(params);
                 if (!params.Name.empty()) {
+                    if (AFinishline* finishline = dynamic_cast<AFinishline*>(actor.get())) {
+                        if (finishline->bIsFinishline == true) {
+                            continue; // Do not add the default spawn finishline
+                        }
+                    }
                     actorList.push_back(params.to_json());
                 }
             }
@@ -341,7 +345,7 @@ namespace TrackEditor {
     }
 
     void LoadPaths(Track* track, const std::string& trackPath) {
-        SPDLOG_INFO("[SceneManager] [LoadPaths] Loading Paths...");
+        SPDLOG_INFO(" Loading Paths...");
         std::string path_file = (trackPath + "/data_paths").c_str();
 
         auto res = std::dynamic_pointer_cast<MK64::Paths>(ResourceLoad(path_file.c_str()));
@@ -352,23 +356,33 @@ namespace TrackEditor {
             SPDLOG_ERROR("  In blender you may need to apply transformations and then move the point to 0,0,0");
         }
 
-        auto& paths = res->PathList;
+        auto& pathObjs = res->PathObject;
 
-        size_t i = 0;
+        std::unordered_set<int32_t> addedPathIndexes;
         u16* ptr = &track->Props.PathSizes.unk0;
-        for (auto& path : paths) {
-            if (i >= ARRAY_COUNT(track->Props.PathTable2)) {
-                SPDLOG_INFO("  The game can only import 5 paths. Found more than 5. Skipping the rest");
-                break; // Only 5 paths allowed. 4 track, 1 vehicle
+        for (auto& obj : pathObjs) {
+            int32_t pathIndex = obj.PathIndex;
+            if (pathIndex >= 5) {
+                SPDLOG_INFO("  Path index too high, cannot add path {}", pathIndex + 1);
+                continue;
             }
-            ptr[i] = path.size();
-            track->Props.PathTable2[i] = (TrackPathPoint*) path.data();
-            SPDLOG_INFO("  Added path {}", i);
+            if (addedPathIndexes.find(pathIndex) != addedPathIndexes.end()) {
+                SPDLOG_INFO("  Already added path {}, skipping", pathIndex + 1);
+                continue;
+            }
 
-            i += 1;
+            ptr[pathIndex] = obj.PathList.size();
+            track->Props.PathTable2[pathIndex] = (TrackPathPoint*) obj.PathList.data();
+            addedPathIndexes.insert(pathIndex); // Mark this path as added
+            SPDLOG_INFO("    Added path {} with {} points", pathIndex + 1, ptr[pathIndex]);
         }
-        gVehiclePathSize = track->Props.PathSizes.unk0; // This is likely incorrect.
-        SPDLOG_INFO("[SceneManager] [LoadPaths] Path Loading Complete!");
+
+        if (nullptr == track->Props.PathTable2[0]) {
+            SPDLOG_INFO("\n  The first track path is not set! Make sure your main path is exported with path type 1\n");
+        }
+
+        gVehiclePathSize = track->Props.PathSizes.unk8; // This is likely incorrect.
+        SPDLOG_INFO(" Path Loading Complete!");
     }
 
     void LoadTrackInfoData(TrackInfo& info, nlohmann::json& data) {

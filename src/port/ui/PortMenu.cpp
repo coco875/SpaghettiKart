@@ -214,7 +214,7 @@ void PortMenu::AddSettings() {
     static int32_t maxFps;
     const char* tooltip = "";
     if (Ship::Context::GetInstance()->GetWindow()->GetWindowBackend() == Ship::WindowBackend::FAST3D_DXGI_DX11) {
-        maxFps = 360;
+        maxFps = MAX_FPS;
         tooltip = "Uses Matrix Interpolation to create extra frames, resulting in smoother graphics. This is "
                   "purely visual and does not impact game logic, execution of glitches etc.\n\nA higher target "
                   "FPS than your monitor's refresh rate will waste resources, and might give a worse result.";
@@ -227,7 +227,6 @@ void PortMenu::AddSettings() {
     AddSidebarEntry("Settings", "Graphics", 3);
     AddWidget(path, "Renderer API (Needs reload)", WIDGET_VIDEO_BACKEND);
 
-#ifndef __APPLE__
     AddWidget(path, "Internal Resolution: %.0f%%", WIDGET_CVAR_SLIDER_FLOAT)
         .CVar(CVAR_INTERNAL_RESOLUTION)
         .Callback([](WidgetInfo& info) {
@@ -252,7 +251,7 @@ void PortMenu::AddSettings() {
                 .Format("")
                 .Min(0.5f)
                 .Max(4.0f));
-#endif
+
 #ifndef __WIIU__
     AddWidget(path, "Anti-aliasing (MSAA): %d", WIDGET_CVAR_SLIDER_INT)
         .CVar(CVAR_MSAA_VALUE)
@@ -287,7 +286,7 @@ void PortMenu::AddSettings() {
     AddWidget(path, "Match Refresh Rate", WIDGET_BUTTON)
         .Callback([](WidgetInfo& info) {
             int hz = Ship::Context::GetInstance()->GetWindow()->GetCurrentRefreshRate();
-            if (hz >= 30 && hz <= 360) {
+            if (hz >= 30 && hz <= MAX_FPS) {
                 CVarSetInteger("gInterpolationFPS", hz);
                 Ship::Context::GetInstance()->GetWindow()->GetGui()->SaveConsoleVariablesNextFrame();
             }
@@ -307,7 +306,7 @@ void PortMenu::AddSettings() {
                               "CPU to work on one frame while GPU works on the previous frame.\nThis setting "
                               "should be used when your computer is too slow to do CPU + GPU work in time.")
                      .Min(0)
-                     .Max(360)
+                     .Max(MAX_FPS)
                      .DefaultValue(80));
     AddWidget(path, "Enable Vsync", WIDGET_CVAR_CHECKBOX)
         .CVar(CVAR_VSYNC_ENABLED)
@@ -438,7 +437,13 @@ void PortMenu::AddRulesets() {
     // AddWidget(path, "Number of Laps", WIDGET_CVAR_SLIDER_INT)
     //     .CVar("gNumLaps")
     //     .Options(UIWidgets::IntSliderOptions().Min().Max(20).Step(1).DefaultValue(3));
-
+    AddWidget(path, "Unique Character Selections", WIDGET_CVAR_CHECKBOX)
+        .CVar("gUniqueCharacterSelections")
+        .Options(CheckboxOptions()
+          .Tooltip(
+            "Prevents players from selecting the same character")
+          .DefaultValue(true)
+        );
     AddWidget(path, "No Itemboxes", WIDGET_CVAR_CHECKBOX)
         .CVar("gDisableItemboxes")
         .Options(CheckboxOptions().Tooltip(
@@ -522,11 +527,13 @@ void PortMenu::AddDevTools() {
         .Options(IntSliderOptions()
                      .Tooltip("Sets the target FPS for interpolation. When Modify Interpolation Target FPS are enable")
                      .Min(15)
-                     .Max(360)
+                     .Max(MAX_FPS)
                      .DefaultValue(60));
     AddWidget(path, "Render Collision", WIDGET_CVAR_CHECKBOX)
         .CVar("gRenderCollisionMesh")
         .Options(CheckboxOptions().Tooltip("Draws the collision mesh instead of the track mesh"));
+
+    AddSceneVisibility();
 
     path = { "Developer", "Gfx Debugger", SECTION_COLUMN_1 };
     AddSidebarEntry("Developer", "Gfx Debugger", 1);
@@ -551,6 +558,59 @@ void PortMenu::AddDevTools() {
         .Options(ButtonOptions().Tooltip(
             "Enables the console window, allowing you to input commands. Type help for some examples"))
         .WindowName("Console");
+}
+
+void PortMenu::AddSceneVisibility() {
+    WidgetPath path = { "Developer", "Scene Visibility", SECTION_COLUMN_1 };
+    AddSidebarEntry("Developer", "Scene Visibility", 1);
+
+    AddWidget(path, "Draw Sky", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawSky")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Sky Actors", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawSkyActors")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Track Geometry", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawTrackGeometry")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Transparent Track", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawTransparentTrack")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Players", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawPlayers")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Item Boxes", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawItemBoxes")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Original Actors", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawCActors")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Rewrite Actors", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawCPPActors")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Static Mesh", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawStaticMeshActors")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Objects", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawObjects")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw Particles", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawParticles")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
+
+    AddWidget(path, "Draw HUD", WIDGET_CVAR_CHECKBOX)
+        .CVar("gDrawHUD")
+        .Options(UIWidgets::CheckboxOptions().DefaultValue(true));
 }
 
 PortMenu::PortMenu(const std::string& consoleVariable, const std::string& name)

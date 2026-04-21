@@ -97,6 +97,7 @@ WarioStadium::WarioStadium() {
 
     Props.Clouds = gWarioStadiumStars;
     Props.CloudList = gWarioStadiumStars;
+    mCloudType = CloudType::STARS;
 
     FVector finish;
     finish.x = (gIsMirrorMode != 0) ? 13 + 12.0f : 13 - 12.0f;
@@ -166,14 +167,6 @@ void WarioStadium::BeginPlay() {
         SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
         SpawnActor<OBombKart>(0, 0, 0, 0.8333333f);
     }
-}
-
-void WarioStadium::InitClouds() {
-    init_stars(this->Props.Clouds);
-}
-
-void WarioStadium::TickClouds(s32 sp1C, Camera* camera) {
-    update_stars(sp1C, camera, this->Props.CloudList);
 }
 
 void WarioStadium::InitTrackObjects() {
@@ -301,7 +294,7 @@ void WarioStadium::SomeCollisionThing(Player* player, Vec3f arg1, Vec3f arg2, Ve
     func_8003EE2C(player, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-void WarioStadium::DrawWater(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot,
+void WarioStadium::DrawTransparency(ScreenContext* screen, uint16_t pathCounter, uint16_t cameraRot,
                              uint16_t playerDirection) {
 
     gDPPipeSync(gDisplayListHead++);
