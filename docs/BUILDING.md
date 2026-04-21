@@ -303,7 +303,7 @@ cmake -B build-ios-make -G "Unix Makefiles" \
     -DCMAKE_OSX_ARCHITECTURES=arm64
 
 # Compile the project
-cmake --build build-ios-make -j8
+cmake --build build-ios-make
 ```
 
 ### Running on the Simulator
