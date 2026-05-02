@@ -189,6 +189,7 @@ set(SKIP_XCODE_VERSION_CHECK ON)
 # TODO: Sorry i broke this
 set(GFX_DEBUG_DISASSEMBLER OFF)
 
+if(NOT MSVC)
 include(CheckCCompilerFlag)
 include(CheckCXXCompilerFlag)
 check_c_compiler_flag("-Wno-error=int-conversion" HAS_WNO_ERROR_INT_CONVERSION)
@@ -202,6 +203,7 @@ endif()
 
 if(HAS_WNO_ERROR_CHANGES_MEANING)
   add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=changes-meaning>")
+endif()
 endif()
 
 # Add compile definitions for the target
