@@ -170,7 +170,7 @@ struct RailroadCrossing {
         struct {
             /* 0x08 */ void* crossingTrigger; // Crossing Trigger Class
         };
-        struct {
+        struct { // original field in actors
             /* 0x08 */ f32 unk_08;
             /* 0x0C */ f32 boundingBoxSize;
         };
