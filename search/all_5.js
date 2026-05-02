@@ -268,6 +268,5 @@ var searchData=
   ['buttondepressed_265',['buttonDepressed',['../structController.html#af68b8dc9459d69a7dfdf57dabf8dbae5',1,'Controller']]],
   ['buttonoptions_266',['ButtonOptions',['../structUIWidgets_1_1ButtonOptions.html',1,'UIWidgets']]],
   ['buttonpressed_267',['buttonPressed',['../structController.html#a8c4688ece90c09c9c228512234b82fbb',1,'Controller']]],
-  ['buttons_5fto_5fname_268',['buttons_to_name',['../classpfd_1_1internal_1_1dialog.html#ac906c01d0365c13c9066cea857fd258a',1,'pfd::internal::dialog']]],
-  ['bzero_269',['bzero',['../bstring_8h.html#ab828ad07c8ebf898973f27778c543651',1,'bstring.h']]]
+  ['buttons_5fto_5fname_268',['buttons_to_name',['../classpfd_1_1internal_1_1dialog.html#ac906c01d0365c13c9066cea857fd258a',1,'pfd::internal::dialog']]]
 ];
