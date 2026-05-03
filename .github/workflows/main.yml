@@ -568,8 +568,8 @@ jobs:
           git -C libultraship remote add nx https://github.com/Net64DD/libultraship.git
           git -C libultraship fetch nx
           git -C libultraship checkout nx/main-nx
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git -C libultraship config --local user.email "action@github.com"
+          git -C libultraship config --local user.name "GitHub Action"
           git -C libultraship merge origin/main --no-commit --no-ff
           wget https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-linux-x86_64.sh -O /tmp/cmake.sh
           sudo sh /tmp/cmake.sh --prefix=/usr/local/ --exclude-subdir
