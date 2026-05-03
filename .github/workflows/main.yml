@@ -65,7 +65,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: spaghetti.o2r
-          path: ./build/x64/${{ matrix.config }}
+          path: ./build/${{ matrix.arch }}/${{ matrix.config }}
       - name: Create Package
         run: |
           mkdir spaghetti-${{ matrix.config }}
