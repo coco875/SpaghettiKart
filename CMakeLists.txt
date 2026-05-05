@@ -59,7 +59,6 @@ option(USE_OPENGLES "Use OpenGLES instead of Desktop OpenGL" OFF)
 
 # Set game compilation version
 set(VERSION us)
-set(USE_NETWORKING OFF)
 set(SKIP_XCODE_VERSION_CHECK ON)
 
 # TODO: Sorry i broke this
@@ -189,19 +188,6 @@ else()
 endif()
 
 # ##############################################################################
-# OpenGL / OpenGLES library
-# ##############################################################################
-if(UNIX AND NOT APPLE)
-  if(USE_OPENGLES)
-    find_library(GLESv2_LIBRARY GLESv2 REQUIRED)
-    target_link_libraries(${PROJECT_NAME} PRIVATE ${GLESv2_LIBRARY})
-  else()
-    find_package(OpenGL REQUIRED)
-    target_link_libraries(${PROJECT_NAME} PRIVATE OpenGL::GL)
-  endif()
-endif()
-
-# ##############################################################################
 # MSVC runtime library
 # ##############################################################################
 if(MSVC)
@@ -243,70 +229,8 @@ endif()
 
 include(cmake/dependencies/common.cmake)
 
-# ==============================================================================#
-# Libultraship Integration                                                     #
-# ==============================================================================#
+include(cmake/dependencies/FindLib.cmake)
 
-# Removes MPQ/OTR support
-set(EXCLUDE_MPQ_SUPPORT
-    TRUE
-    CACHE BOOL "")
-set(ENABLE_EXP_AUTO_CONFIGURE_CONTROLLERS
-    ON
-    CACHE BOOL "")
-add_compile_definitions(EXCLUDE_MPQ_SUPPORT)
-
-if(CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
-  find_package(SDL2)
-endif()
-
-include_directories(
-  ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include/libultraship
-  ${SDL2_INCLUDE_DIRS} ${dr_libs_SOURCE_DIR})
-
-if(NOT USE_OPENGLES)
-  include_directories(${GLEW_INCLUDE_DIRS})
-endif()
-
-add_subdirectory(libultraship ${CMAKE_CURRENT_SOURCE_DIR}/libultraship)
-add_dependencies(${PROJECT_NAME} libultraship)
-target_link_libraries(${PROJECT_NAME} PRIVATE libultraship)
-
-if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-  find_package(Ogg CONFIG REQUIRED)
-  link_libraries(Ogg::ogg)
-
-  find_package(Vorbis CONFIG REQUIRED)
-  link_libraries(Vorbis::vorbisfile)
-  set(ADDITIONAL_LIBRARY_DEPENDENCIES "Ogg::ogg" "Vorbis::vorbis"
-                                      "Vorbis::vorbisenc" "Vorbis::vorbisfile")
-elseif(CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
-  set(ADDITIONAL_LIBRARY_DEPENDENCIES -lglad SDL2::SDL2)
-elseif(CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
-  set(ADDITIONAL_LIBRARY_DEPENDENCIES "$<$<CONFIG:Debug>:-Wl,--wrap=abort>")
-  target_include_directories(${PROJECT_NAME}
-                             PRIVATE ${DEVKITPRO}/portlibs/wiiu/include/)
-else()
-  find_package(Ogg REQUIRED)
-  find_package(Vorbis REQUIRED)
-  set(ADDITIONAL_LIBRARY_DEPENDENCIES "Ogg::ogg" "Vorbis::vorbis"
-                                      "Vorbis::vorbisenc" "Vorbis::vorbisfile")
-endif()
-
-# torch
-option(USE_STANDALONE "Build as a standalone executable" OFF)
-option(BUILD_STORMLIB "Build with StormLib support" OFF)
-
-option(BUILD_SM64 "Build with Super Mario 64 support" OFF)
-option(BUILD_MK64 "Build with Mario Kart 64 support" ON)
-option(BUILD_SF64 "Build with Star Fox 64 support" OFF)
-option(BUILD_FZERO "Build with F-Zero X support" OFF)
-option(BUILD_MARIO_ARTIST "Build with Mario Artist support" OFF)
-
-add_subdirectory(torch)
-target_link_libraries(${PROJECT_NAME}
-                      PRIVATE torch "${ADDITIONAL_LIBRARY_DEPENDENCIES}")
 
 if(CMAKE_SYSTEM_NAME MATCHES "NintendoSwitch")
 
