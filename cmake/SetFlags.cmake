@@ -116,22 +116,4 @@ elseif("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU|Clang|AppleClang")
     SPDLOG_ACTIVE_LEVEL=0 _CONSOLE _CRT_SECURE_NO_WARNINGS UNICODE _UNICODE)
 endif()
 
-if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang|AppleClang")
-  if(CMAKE_SYSTEM_NAME STREQUAL "Darwin" OR CMAKE_SYSTEM_NAME STREQUAL "iOS")
-    target_compile_options(${PROJECT_NAME} PRIVATE -pthread)
 
-    target_link_options(${PROJECT_NAME} PRIVATE -pthread)
-  elseif(CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
-    target_compile_options(${PROJECT_NAME} PRIVATE -pthread)
-
-    target_link_options(${PROJECT_NAME} PRIVATE -pthread)
-  elseif(NOT CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
-    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
-      set(CPU_OPTION -msse2 -mfpmath=sse)
-    endif()
-
-    target_compile_options(${PROJECT_NAME} PRIVATE -pthread ${CPU_OPTION})
-
-    target_link_options(${PROJECT_NAME} PRIVATE -pthread -Wl,-export-dynamic)
-  endif()
-endif()
