@@ -46,7 +46,7 @@ else()
               -Wno-incompatible-pointer-types)
   add_compile_options("$<$<COMPILE_LANGUAGE:C>:${C_FLAGS}>")
 
-  set(CXX_FLAGS -fpermissive -fomit-frame-pointer)
+  set(CXX_FLAGS -fpermissive -fomit-frame-pointer -Wno-error=narrowing)
   add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:${CXX_FLAGS}>")
 
   add_compile_options(
