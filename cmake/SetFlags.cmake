@@ -36,6 +36,7 @@ else()
     -Wno-error
     -Wno-missing-field-initializers
     -Wno-parentheses
+    -Wno-error=int-conversion
     -Wno-missing-braces
     -ffast-math
     -flto=auto
