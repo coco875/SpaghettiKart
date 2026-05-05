@@ -82,21 +82,7 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/include
   ${CMAKE_CURRENT_SOURCE_DIR}/include/assets
-  ${CMAKE_CURRENT_SOURCE_DIR}/src
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/racing
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/ending
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/data
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/buffers
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/audio
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/debug
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/engine
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/engine/tracks
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/engine/actors
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/engine/objects
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/engine/sky
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/engine/particles
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/enhancements
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/enhancements/freecam)
+  ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # Collect source files to build the executable
 file(
@@ -119,45 +105,27 @@ file(
   GLOB_RECURSE ALL_FILES
   RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
   "src/buffers/*.c"
-  "src/buffers/*.h"
   "src/data/*.c"
-  "src/data/*.h"
   "src/debug/*.c"
-  "src/debug/*.h"
   "src/ending/*.c"
-  "src/ending/*.h"
   "src/racing/*.c"
-  "src/racing/*.h"
   "src/audio/*.c"
-  "src/audio/*.h"
-  "src/port/*.h"
   "src/port/*.c"
   "src/port/*.cpp"
-  "src/mods/*.h"
   "src/mods/*.c"
   "src/mods/*.cpp"
   "assets/code/*.c"
   "courses/*.c"
-  "courses/*.h"
   "src/engine/*.cpp"
-  "src/engine/*.h"
   "src/engine/tracks/*.c"
-  "src/engine/tracks/*.h"
   "src/engine/actors/*.cpp"
-  "src/engine/actors/*.h"
   "src/engine/objects/*.cpp"
-  "src/engine/objects/*.h"
   "src/engine/sky/*.cpp"
-  "src/engine/sky/*.h"
   "src/engine/particles/*.cpp"
-  "src/engine/particles/*.h"
   "src/enhancements/*.c"
-  "src/enhancements/*.h"
   "src/enhancements/freecam/*.c"
   "src/enhancements/freecam/*.cpp"
-  "src/enhancements/freecam/*.h"
   "src/engine/*.cpp"
-  "src/engine/*.h"
   "Resource.rc")
 
 list(APPEND ALL_FILES ${ALL_FILES_ROOT})
