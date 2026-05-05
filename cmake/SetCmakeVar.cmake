@@ -11,7 +11,7 @@ set(CMAKE_OSX_ARCHITECTURES=arm64;x86_64)
 # Set the C++ standard and enable the MSVC parallel build option
 set(CMAKE_CXX_STANDARD 20 CACHE STRING "The C++ standard to use")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_C_STANDARD 99 CACHE STRING "The C standard to use")
+set(CMAKE_C_STANDARD 11 CACHE STRING "The C standard to use")
 
 # Automatically select Spaghettify (for visual studio, etc)
 set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Spaghettify)
