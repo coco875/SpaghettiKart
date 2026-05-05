@@ -10,8 +10,7 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
   set(ADDITIONAL_LIBRARY_DEPENDENCIES -lglad SDL2::SDL2)
 elseif(CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
   set(ADDITIONAL_LIBRARY_DEPENDENCIES "$<$<CONFIG:Debug>:-Wl,--wrap=abort>")
-  target_include_directories(${PROJECT_NAME}
-                             PRIVATE ${DEVKITPRO}/portlibs/wiiu/include/)
+  include_directories(${DEVKITPRO}/portlibs/wiiu/include/)
 else()
   find_package(Ogg REQUIRED)
   find_package(Vorbis REQUIRED)
@@ -38,3 +37,5 @@ if(NOT USE_OPENGLES)
   include_directories(${GLEW_INCLUDE_DIRS})
 endif()
 
+target_link_libraries(${PROJECT_NAME}
+                      PRIVATE torch "${ADDITIONAL_LIBRARY_DEPENDENCIES}")

@@ -67,6 +67,4 @@ option(BUILD_FZERO "Build with F-Zero X support" OFF)
 option(BUILD_MARIO_ARTIST "Build with Mario Artist support" OFF)
 
 add_subdirectory(torch)
-target_link_libraries(${PROJECT_NAME}
-                      PRIVATE torch "${ADDITIONAL_LIBRARY_DEPENDENCIES}")
 
