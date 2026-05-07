@@ -195,9 +195,9 @@ if(MSVC)
   endif()
 endif()
 
-include(cmake/dependencies/common.cmake)
-
 include(cmake/dependencies/FindLib.cmake)
+
+include(cmake/dependencies/common.cmake)
 
 
 if(CMAKE_SYSTEM_NAME MATCHES "NintendoSwitch")
