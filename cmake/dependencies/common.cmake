@@ -23,6 +23,8 @@ FetchContent_Declare(
   GIT_TAG da35f9d6c7374a95353fd1df1d394d44ab66cf01)
 FetchContent_MakeAvailable(dr_libs)
 
+include_directories(${dr_libs_SOURCE_DIR})
+
 # =================== STB ===================
 include_directories(${STB_DIR})
 
@@ -47,8 +49,7 @@ add_compile_definitions(EXCLUDE_MPQ_SUPPORT)
 
 include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include/libultraship
-  ${SDL2_INCLUDE_DIRS} ${dr_libs_SOURCE_DIR})
+  ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include/libultraship)
 
 add_subdirectory(libultraship ${CMAKE_CURRENT_SOURCE_DIR}/libultraship)
 add_dependencies(${PROJECT_NAME} libultraship)

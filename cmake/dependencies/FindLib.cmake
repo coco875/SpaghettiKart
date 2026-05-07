@@ -32,6 +32,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
   find_package(SDL2)
 endif()
 
+include_directories(${SDL2_INCLUDE_DIRS})
 
 if(NOT USE_OPENGLES)
   include_directories(${GLEW_INCLUDE_DIRS})
