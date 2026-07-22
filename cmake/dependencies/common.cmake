@@ -39,25 +39,19 @@ target_link_libraries(${PROJECT_NAME} PRIVATE tomlplusplus::tomlplusplus)
 
 # libultraship
 # Removes MPQ/OTR support
-set(EXCLUDE_MPQ_SUPPORT
-    TRUE
-        CACHE BOOL "")
-set(ENABLE_EXP_AUTO_CONFIGURE_CONTROLLERS
-    ON
-        CACHE BOOL "")
+set(EXCLUDE_MPQ_SUPPORT TRUE CACHE BOOL "")
+set(ENABLE_EXP_AUTO_CONFIGURE_CONTROLLERS ON CACHE BOOL "")
 add_compile_definitions(EXCLUDE_MPQ_SUPPORT)
 
 include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include
   ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include/libultraship)
 
-add_subdirectory(libultraship ${CMAKE_CURRENT_SOURCE_DIR}/libultraship)
+add_subdirectory(libultraship ${CMAKE_BINARY_DIR}/libultraship)
 add_dependencies(${PROJECT_NAME} libultraship)
 target_link_libraries(${PROJECT_NAME} PRIVATE libultraship)
 
-
-# torch
-
+# Torch
 option(USE_STANDALONE "Build as a standalone executable" OFF)
 option(BUILD_STORMLIB "Build with StormLib support" OFF)
 
@@ -68,4 +62,3 @@ option(BUILD_FZERO "Build with F-Zero X support" OFF)
 option(BUILD_MARIO_ARTIST "Build with Mario Artist support" OFF)
 
 add_subdirectory(torch)
-

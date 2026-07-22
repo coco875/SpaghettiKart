@@ -1,32 +1,12 @@
-set(NATO_PHONETIC_ALPHABET
-  "Alfa" "Bravo" "Charlie" "Delta" "Echo" "Foxtrot" "Golf" "Hotel"
-  "India" "Juliett" "Kilo" "Lima" "Mike" "November" "Oscar" "Papa"
-  "Quebec" "Romeo" "Sierra" "Tango" "Uniform" "Victor" "Whiskey"
-  "Xray" "Yankee" "Zulu"
-)
-
-# Get the patch version number from the project version
-math(EXPR PATCH_INDEX "${PROJECT_VERSION_PATCH}")
-
-# Use the patch number to select the correct word
-list(GET NATO_PHONETIC_ALPHABET ${PATCH_INDEX} PROJECT_PATCH_WORD)
-
-set(PROJECT_BUILD_NAME "Bolognese ${PROJECT_PATCH_WORD}" CACHE STRING "" FORCE)
-set(PROJECT_TEAM "SpaghettiKart Team - HarbourMasters")
-
 execute_process(
-  COMMAND git config --global --add safe.directory ${CMAKE_SOURCE_DIR}
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-  OUTPUT_QUIET
-)
-
-execute_process(
-  COMMAND git describe --tags
+  COMMAND git -c safe.directory=${CMAKE_SOURCE_DIR} describe --tags
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   OUTPUT_VARIABLE PROJECT_VERSION
+  RESULT_VARIABLE GIT_DESCRIBE_RESULT
+  ERROR_QUIET
   OUTPUT_STRIP_TRAILING_WHITESPACE
 )
-if (DEFINED PROJECT_VERSION AND NOT "${PROJECT_VERSION}" STREQUAL "")
+if(GIT_DESCRIBE_RESULT EQUAL 0 AND NOT PROJECT_VERSION STREQUAL "")
   string(REPLACE "-" ";" PROJECT_VERSION_LIST "${PROJECT_VERSION}")
   list(GET PROJECT_VERSION_LIST 0 PROJECT_VERSION_PATCH)
   string(REPLACE "." ";" PROJECT_VERSION_LIST "${PROJECT_VERSION_PATCH}")
@@ -39,9 +19,10 @@ if (DEFINED PROJECT_VERSION AND NOT "${PROJECT_VERSION}" STREQUAL "")
 else()
   set(PROJECT_VERSION "Unknown")
   execute_process(
-    COMMAND git log --pretty=format:%h -1
+    COMMAND git -c safe.directory=${CMAKE_SOURCE_DIR} log --pretty=format:%h -1
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     OUTPUT_VARIABLE PROJECT_VERSION_PATCH
+    ERROR_QUIET
     OUTPUT_STRIP_TRAILING_WHITESPACE
   )
   if (DEFINED PROJECT_VERSION_PATCH AND NOT "${PROJECT_VERSION_PATCH}" STREQUAL "")
@@ -49,5 +30,19 @@ else()
   endif()
   set(PROJECT_VERSION_PATCH 0)
 endif()
+
+set(NATO_PHONETIC_ALPHABET
+    "Alfa" "Bravo" "Charlie" "Delta" "Echo" "Foxtrot" "Golf" "Hotel"
+    "India" "Juliett" "Kilo" "Lima" "Mike" "November" "Oscar" "Papa"
+    "Quebec" "Romeo" "Sierra" "Tango" "Uniform" "Victor" "Whiskey"
+    "Xray" "Yankee" "Zulu")
+list(LENGTH NATO_PHONETIC_ALPHABET NATO_WORD_COUNT)
+math(EXPR PATCH_INDEX "${PROJECT_VERSION_PATCH} % ${NATO_WORD_COUNT}")
+list(GET NATO_PHONETIC_ALPHABET ${PATCH_INDEX} PROJECT_PATCH_WORD)
+
+set(PROJECT_BUILD_NAME
+    "Bolognese ${PROJECT_PATCH_WORD}"
+    CACHE STRING "" FORCE)
+set(PROJECT_TEAM "SpaghettiKart Team - HarbourMasters")
 
 message("Spaghetti Kart version: ${PROJECT_VERSION} ${PROJECT_PATCH_WORD}")

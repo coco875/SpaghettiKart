@@ -158,47 +158,15 @@ endif()
 # ##############################################################################
 # MSVC runtime library
 # ##############################################################################
-if(MSVC)
-  if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-    get_property(
-      MSVC_RUNTIME_LIBRARY_DEFAULT
-      TARGET ${PROJECT_NAME}
-      PROPERTY MSVC_RUNTIME_LIBRARY)
-    if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
-      string(
-        CONCAT
-          "MSVC_RUNTIME_LIBRARY_STR"
-          $<$<CONFIG:Debug>:
-          MultiThreadedDebug
-          >
-          $<$<CONFIG:Release>:
-          MultiThreaded
-          >
-          $<$<NOT:$<OR:$<CONFIG:Debug>,$<CONFIG:Release>>>:${MSVC_RUNTIME_LIBRARY_DEFAULT}>
-      )
-    elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "Win32")
-      string(
-        CONCAT
-          "MSVC_RUNTIME_LIBRARY_STR"
-          $<$<CONFIG:Debug>:
-          MultiThreadedDebug
-          >
-          $<$<CONFIG:Release>:
-          MultiThreaded
-          >
-          $<$<NOT:$<OR:$<CONFIG:Debug>,$<CONFIG:Release>>>:${MSVC_RUNTIME_LIBRARY_DEFAULT}>
-      )
-    endif()
-    set_target_properties(
-      ${PROJECT_NAME} PROPERTIES MSVC_RUNTIME_LIBRARY
-                                 ${MSVC_RUNTIME_LIBRARY_STR})
-  endif()
+if(MSVC AND CMAKE_SYSTEM_NAME STREQUAL "Windows")
+  set_property(
+    TARGET ${PROJECT_NAME}
+    PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
-
-include(cmake/dependencies/FindLib.cmake)
 
 include(cmake/dependencies/common.cmake)
 
+include(cmake/dependencies/FindLib.cmake)
 
 if(CMAKE_SYSTEM_NAME MATCHES "NintendoSwitch")
 
@@ -296,32 +264,9 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
   if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
     add_custom_target(
       CreateOSXIcons
-      COMMAND mkdir -p ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset
-      COMMAND sips -z 16 16 icon.png --out
-              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_16x16.png
-      COMMAND sips -z 32 32 icon.png --out
-              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_16x16@2x.png
-      COMMAND sips -z 32 32 icon.png --out
-              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_32x32.png
-      COMMAND sips -z 64 64 icon.png --out
-              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_32x32@2x.png
-      COMMAND sips -z 128 128 icon.png --out
-              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_128x128.png
-      COMMAND
-        sips -z 256 256 icon.png --out
-        ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_128x128@2x.png
-      COMMAND sips -z 256 256 icon.png --out
-              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_256x256.png
-      COMMAND
-        sips -z 512 512 icon.png --out
-        ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_256x256@2x.png
-      COMMAND sips -z 512 512 icon.png --out
-              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_512x512.png
-      COMMAND
-        cp icon.png
-        ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset/icon_512x512@2x.png
-      COMMAND iconutil -c icns -o ${CMAKE_BINARY_DIR}/macosx/spaghettikart.icns
-              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.iconset
+      COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/macosx
+      COMMAND sips -s format icns icon.png --out
+              ${CMAKE_BINARY_DIR}/macosx/spaghettikart.icns
       WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
       COMMENT "Creating OSX icons ...")
     add_dependencies(${PROJECT_NAME} CreateOSXIcons)

@@ -3,8 +3,8 @@ if(MSVC)
 
   if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
     add_compile_options(
-      "$<$<CONFIG:Debug>:/w;/Od;/MTd;/ZI>"
-      "$<$<CONFIG:Release>:/O2;/Oi;/Gy;/W3;/MT;/Zi>" /permissive- /MP
+      "$<$<CONFIG:Debug>:/w;/Od;/ZI>"
+      "$<$<CONFIG:Release>:/O2;/Oi;/Gy;/W3;/Zi>" /permissive- /MP
       ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT} ${DEFAULT_CXX_EXCEPTION_HANDLING})
     add_link_options(
       "$<$<CONFIG:Debug>:/INCREMENTAL>"
@@ -12,8 +12,7 @@ if(MSVC)
       /MANIFEST:NO /DEBUG /SUBSYSTEM:WINDOWS)
   elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "Win32")
     add_compile_options(
-      "$<$<CONFIG:Debug>:/MTd>"
-      "$<$<CONFIG:Release>:/O2;/Oi;/Gy;/MT>"
+      "$<$<CONFIG:Release>:/O2;/Oi;/Gy>"
       /permissive-
       /MP
       /w
