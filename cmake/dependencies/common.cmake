@@ -58,6 +58,8 @@ option(BUILD_MK64 "Build with Mario Kart 64 support" ON)
 option(BUILD_SF64 "Build with Star Fox 64 support" OFF)
 option(BUILD_FZERO "Build with F-Zero X support" OFF)
 option(BUILD_MARIO_ARTIST "Build with Mario Artist support" OFF)
-option(BUILD_NAUDIO "Build with NAudio support" OFF)
+# Companion.cpp uses AudioManager unconditionally, so preserve Torch's ON
+# default until its non-NAudio build is fixed upstream.
+option(BUILD_NAUDIO "Build with NAudio support" ON)
 
 add_subdirectory(torch)
