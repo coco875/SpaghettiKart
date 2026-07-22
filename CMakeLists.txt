@@ -87,6 +87,7 @@ include_directories(
 # Collect source files to build the executable
 file(
   GLOB ALL_FILES_ROOT
+  CONFIGURE_DEPENDS
   RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
   "src/*.c"
   "src/*.h"
@@ -103,29 +104,35 @@ file(
 
 file(
   GLOB_RECURSE ALL_FILES
+  CONFIGURE_DEPENDS
   RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
   "src/buffers/*.c"
+  "src/buffers/*.h"
   "src/data/*.c"
+  "src/data/*.h"
   "src/debug/*.c"
+  "src/debug/*.h"
   "src/ending/*.c"
+  "src/ending/*.h"
   "src/racing/*.c"
+  "src/racing/*.h"
   "src/audio/*.c"
+  "src/audio/*.h"
   "src/port/*.c"
   "src/port/*.cpp"
+  "src/port/*.h"
   "src/mods/*.c"
   "src/mods/*.cpp"
+  "src/mods/*.h"
   "assets/code/*.c"
   "courses/*.c"
+  "courses/*.h"
   "src/engine/*.cpp"
-  "src/engine/tracks/*.c"
-  "src/engine/actors/*.cpp"
-  "src/engine/objects/*.cpp"
-  "src/engine/sky/*.cpp"
-  "src/engine/particles/*.cpp"
+  "src/engine/*.c"
+  "src/engine/*.h"
   "src/enhancements/*.c"
-  "src/enhancements/freecam/*.c"
-  "src/enhancements/freecam/*.cpp"
-  "src/engine/*.cpp"
+  "src/enhancements/*.cpp"
+  "src/enhancements/*.h"
   "Resource.rc")
 
 list(APPEND ALL_FILES ${ALL_FILES_ROOT})
