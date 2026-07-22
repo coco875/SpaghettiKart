@@ -4,7 +4,7 @@ if(MSVC)
   if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
     add_compile_options(
       "$<$<CONFIG:Debug>:/w;/Od;/MTd;/ZI>"
-      "$<$<CONFIG:Release>:/Oi;/Gy;/W3;/MT;/Zi>" /permissive- /MP
+      "$<$<CONFIG:Release>:/O2;/Oi;/Gy;/W3;/MT;/Zi>" /permissive- /MP
       ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT} ${DEFAULT_CXX_EXCEPTION_HANDLING})
     add_link_options(
       "$<$<CONFIG:Debug>:/INCREMENTAL>"
@@ -36,7 +36,6 @@ else()
     -Wno-error
     -Wno-missing-field-initializers
     -Wno-parentheses
-    -Wno-error=int-conversion
     -Wno-missing-braces
     -ffast-math
     -flto=auto
@@ -47,14 +46,35 @@ else()
               -Wno-incompatible-pointer-types)
   add_compile_options("$<$<COMPILE_LANGUAGE:C>:${C_FLAGS}>")
 
-  set(CXX_FLAGS -fpermissive -fomit-frame-pointer -Wno-error=narrowing)
+  set(CXX_FLAGS -fpermissive -fomit-frame-pointer)
   add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:${CXX_FLAGS}>")
+
+  include(CheckCCompilerFlag)
+  include(CheckCXXCompilerFlag)
+
+  check_c_compiler_flag("-Wno-error=int-conversion"
+                        HAS_WNO_ERROR_INT_CONVERSION)
+  if(HAS_WNO_ERROR_INT_CONVERSION)
+    add_compile_options(
+      "$<$<COMPILE_LANGUAGE:C>:-Wno-error=int-conversion>")
+  endif()
+
+  check_cxx_compiler_flag("-Wno-error=narrowing" HAS_WNO_ERROR_NARROWING)
+  if(HAS_WNO_ERROR_NARROWING)
+    add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=narrowing>")
+  endif()
+
+  check_cxx_compiler_flag("-Wno-error=changes-meaning"
+                          HAS_WNO_ERROR_CHANGES_MEANING)
+  if(HAS_WNO_ERROR_CHANGES_MEANING)
+    add_compile_options(
+      "$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=changes-meaning>")
+  endif()
 
   add_compile_options(
     "$<$<CONFIG:Debug>:-g>" "$<$<CONFIG:Release>:-O3>"
     "$<$<CONFIG:MinSizeRel>:-Os>" "$<$<CONFIG:RelWithDebInfo>:-O2;-g>")
 
-  include(CheckCXXCompilerFlag)
   check_cxx_compiler_flag("-pthread" HAS_PTHREAD)
   if(HAS_PTHREAD AND NOT CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
     add_compile_options(-pthread)
@@ -77,6 +97,13 @@ else()
     if(HAS_EXPORT_DYNAMIC)
       add_link_options(-Wl,-export-dynamic)
     endif()
+  endif()
+
+  # LTO breaks debug information with AppleClang and Ninja. Keep LTO for all
+  # other configurations and explicitly override it for macOS Debug builds.
+  if(CMAKE_CXX_COMPILER_ID MATCHES "AppleClang")
+    add_compile_options("$<$<CONFIG:Debug>:-fno-lto>")
+    add_link_options("$<$<CONFIG:Debug>:-fno-lto>")
   endif()
 endif()
 
@@ -116,5 +143,3 @@ elseif("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU|Clang|AppleClang")
     "$<$<BOOL:${BUILD_CROWD_CONTROL}>:ENABLE_CROWD_CONTROL>"
     _CONSOLE _CRT_SECURE_NO_WARNINGS UNICODE _UNICODE)
 endif()
-
-
