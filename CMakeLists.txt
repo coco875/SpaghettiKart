@@ -7,23 +7,6 @@ project(
   LANGUAGES C CXX ASM)
 include(FetchContent)
 
-# fmt's consteval format-string checking fails to compile under newer
-# AppleClang (Xcode 16+) with the spdlog/fmt versions in use (both vcpkg's on
-# CI and Torch's bundled copy — see cmake/TorchExternalFixes.cmake for the
-# latter):
-#   error: call to consteval function 'fmt::basic_format_string<...>' is not
-#   a constant expression
-# Defining FMT_CONSTEVAL as empty falls back to fmt's pre-C++20 constexpr
-# checking, which compiles cleanly with identical runtime behavior. Scoped to
-# AppleClang; other platforms and compilers are untouched.
-# TODO: Temporary hack. Remove this (plus cmake/TorchExternalFixes.cmake and
-# the vcpkg.json fmt/spdlog pins) once the Torch pin is bumped past Torch's
-# spdlog/fmt update. Note the bump also needs matching MK64 loader changes,
-# see the discussion on PR #712.
-if(APPLE AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    add_compile_definitions("FMT_CONSTEVAL=")
-endif()
-
 # Set Project Version
 include(cmake/GetVersion.cmake)
 
@@ -33,8 +16,7 @@ include(cmake/SetCmakeVar.cmake)
 # add_compile_options(-fsanitize=address) add_link_options(-fsanitize=address)
 
 set(YAML_CPP_STATIC_DEFINE ON)
-add_compile_definitions(YAML_CPP_STATIC_DEFINE)
-include(cmake/lus-cvars.cmake)
+include(libultraship/cmake/cvars.cmake)
 
 if(WIN32)
   option(ENABLE_VCPKG "Enable vcpkg for dependencies" ON)
@@ -46,10 +28,11 @@ if(ENABLE_VCPKG)
   include(cmake/dependencies/vcpkg.cmake)
 endif()
 
-if(IOS)
+set(SPAGHETTIKART_IOS OFF)
+if(IOS OR CMAKE_SYSTEM_NAME STREQUAL "iOS")
+  set(SPAGHETTIKART_IOS ON)
   set(PLATFORM "OS64")
   include(cmake/ios.toolchain.cmake)
-  add_compile_definitions(PLATFORM_IOS=1)
   set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM "YOUR_TEAM_ID")
   set(PROJECT_ID "dev.net64.game")
 endif()
@@ -70,19 +53,10 @@ else()
   set(CPP "${CMAKE_C_COMPILER}" "-E" "-P" "-Wno-trigraphs" "-x" "c")
 endif()
 
-include(cmake/SetFlags.cmake)
-
-if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+if(WIN32)
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/properties.h.in
                  ${CMAKE_CURRENT_SOURCE_DIR}/properties.h @ONLY)
 endif()
-
-# Include directories
-include_directories(
-  ${CMAKE_CURRENT_SOURCE_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/include/assets
-  ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # Collect source files to build the executable
 file(
@@ -141,7 +115,7 @@ list(APPEND ALL_FILES ${ALL_FILES_ROOT})
 list(FILTER ALL_FILES EXCLUDE REGEX ".*.inc.c")
 list(FILTER ALL_FILES EXCLUDE REGEX "./src/debug/crash_screen_enhancement.c")
 
-if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+if(SPAGHETTIKART_IOS)
   set(IOS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/ios)
 
   set(STORYBOARD_FILE ${IOS_DIR}/Launch.storyboard)
@@ -150,7 +124,18 @@ if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
 
   list(APPEND ALL_FILES ${STORYBOARD_FILE} ${IMAGE_FILES} ${ICON_FILES})
 
-  add_executable(${PROJECT_NAME} ${ALL_FILES})
+endif()
+
+add_executable(${PROJECT_NAME} ${ALL_FILES})
+target_include_directories(
+  ${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+                          ${CMAKE_CURRENT_SOURCE_DIR}/include
+                          ${CMAKE_CURRENT_SOURCE_DIR}/include/assets
+                          ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_compile_definitions(${PROJECT_NAME} PRIVATE YAML_CPP_STATIC_DEFINE)
+
+if(SPAGHETTIKART_IOS)
+  target_compile_definitions(${PROJECT_NAME} PRIVATE PLATFORM_IOS=1)
   set_xcode_property(${PROJECT_NAME} PRODUCT_BUNDLE_IDENTIFIER ${PROJECT_ID}
                      All)
   set_target_properties(
@@ -158,14 +143,14 @@ if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
     PROPERTIES MACOSX_BUNDLE TRUE
                MACOSX_BUNDLE_INFO_PLIST ${IOS_DIR}/plist.in
                RESOURCE "${IMAGE_FILES};${STORYBOARD_FILE};${ICON_FILES}")
-else()
-  add_executable(${PROJECT_NAME} ${ALL_FILES})
 endif()
+
+include(cmake/SetFlags.cmake)
 
 # ##############################################################################
 # MSVC runtime library
 # ##############################################################################
-if(MSVC AND CMAKE_SYSTEM_NAME STREQUAL "Windows")
+if(MSVC)
   set_property(
     TARGET ${PROJECT_NAME}
     PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
@@ -175,7 +160,26 @@ include(cmake/dependencies/common.cmake)
 
 include(cmake/dependencies/FindLib.cmake)
 
-if(CMAKE_SYSTEM_NAME MATCHES "NintendoSwitch")
+# fmt's consteval format-string checking fails to compile under newer
+# AppleClang (Xcode 16+) with the spdlog/fmt versions in use (both vcpkg's on
+# CI and Torch's bundled copy — see cmake/TorchExternalFixes.cmake for the
+# latter):
+#   error: call to consteval function 'fmt::basic_format_string<...>' is not
+#   a constant expression
+# Defining FMT_CONSTEVAL as empty falls back to fmt's pre-C++20 constexpr
+# checking, which compiles cleanly with identical runtime behavior. Scoped to
+# AppleClang; other platforms and compilers are untouched.
+# TODO: Temporary hack. Remove this (plus cmake/TorchExternalFixes.cmake and
+# the vcpkg.json fmt/spdlog pins) once the Torch pin is bumped past Torch's
+# spdlog/fmt update. Note the bump also needs matching MK64 loader changes,
+# see the discussion on PR #712.
+if(APPLE AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  foreach(FMT_CONSUMER ${PROJECT_NAME} libultraship torch)
+    target_compile_definitions(${FMT_CONSUMER} PRIVATE "FMT_CONSTEVAL=")
+  endforeach()
+endif()
+
+if(CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
 
   nx_generate_nacp(
     ${PROJECT_NAME}.nacp
@@ -204,12 +208,11 @@ add_custom_command(
   TARGET ${PROJECT_NAME}
   POST_BUILD
   COMMENT "Copying asset yamls..."
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/config.yml"
-          "$<TARGET_FILE_DIR:Spaghettify>/config.yml"
-  COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/yamls/"
-          "$<TARGET_FILE_DIR:Spaghettify>/yamls/"
-  COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/meta/"
-          "$<TARGET_FILE_DIR:Spaghettify>/meta/")
+  COMMAND
+    ${CMAKE_COMMAND} -DSOURCE_DIR=${CMAKE_SOURCE_DIR}
+    -DDESTINATION_DIR=$<TARGET_FILE_DIR:${PROJECT_NAME}>
+    -P ${CMAKE_SOURCE_DIR}/cmake/StageRuntimeFiles.cmake
+  VERBATIM)
 
 if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
   include(ExternalProject)
@@ -228,7 +231,15 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
     SOURCE_DIR ${CMAKE_SOURCE_DIR}/torch
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/torch
                -DCMAKE_PROJECT_INCLUDE=${CMAKE_SOURCE_DIR}/cmake/TorchExternalFixes.cmake
-)
+               -DUSE_STANDALONE=ON
+               -DBUILD_STORMLIB=${BUILD_STORMLIB}
+               -DBUILD_SM64=${BUILD_SM64}
+               -DBUILD_MK64=${BUILD_MK64}
+               -DBUILD_SF64=${BUILD_SF64}
+               -DBUILD_FZERO=${BUILD_FZERO}
+               -DBUILD_MARIO_ARTIST=${BUILD_MARIO_ARTIST}
+               -DBUILD_NAUDIO=${BUILD_NAUDIO}
+  )
 
   ExternalProject_Get_Property(TorchExternal install_dir)
   if(MSVC)
@@ -245,30 +256,31 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
     COMMAND ${TORCH_EXECUTABLE} header -o baserom.us.z64
     COMMAND ${TORCH_EXECUTABLE} o2r baserom.us.z64 --additional-files
             meta/mods.toml
-    COMMAND ${TORCH_EXECUTABLE} pack assets spaghetti.o2r o2r
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/mk64.o2r"
             "${CMAKE_BINARY_DIR}/mk64.o2r"
     COMMAND
-      ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/spaghetti.o2r"
-      "${CMAKE_BINARY_DIR}/spaghetti.o2r")
+      ${CMAKE_COMMAND} -DTORCH_EXECUTABLE=${TORCH_EXECUTABLE}
+      -DSOURCE_DIR=${CMAKE_SOURCE_DIR} -DBINARY_DIR=${CMAKE_BINARY_DIR}
+      -P ${CMAKE_SOURCE_DIR}/cmake/GenerateO2R.cmake
+    VERBATIM)
 
   add_custom_target(
     GenerateO2R
     DEPENDS TorchExternal
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    COMMAND ${TORCH_EXECUTABLE} pack assets spaghetti.o2r o2r
     COMMAND
-      ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/spaghetti.o2r"
-      "${CMAKE_BINARY_DIR}/spaghetti.o2r")
+      ${CMAKE_COMMAND} -DTORCH_EXECUTABLE=${TORCH_EXECUTABLE}
+      -DSOURCE_DIR=${CMAKE_SOURCE_DIR} -DBINARY_DIR=${CMAKE_BINARY_DIR}
+      -P ${CMAKE_SOURCE_DIR}/cmake/GenerateO2R.cmake
+    VERBATIM)
 
-  if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
+  if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     install(
       FILES "${CMAKE_BINARY_DIR}/spaghetti.o2r"
       DESTINATION .
       COMPONENT ${PROJECT_NAME})
   endif()
 
-  if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+  if(APPLE AND NOT SPAGHETTIKART_IOS)
     add_custom_target(
       CreateOSXIcons
       COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/macosx
@@ -290,11 +302,11 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
                                                "${CMAKE_SOURCE_DIR}/icon.png")
 endif()
 
-if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
   set(CPACK_GENERATOR "External")
 elseif(CMAKE_SYSTEM_NAME MATCHES "Windows|NintendoSwitch|CafeOS")
   set(CPACK_GENERATOR "ZIP")
-elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+elseif(APPLE)
   set(CPACK_GENERATOR "Bundle")
 endif()
 

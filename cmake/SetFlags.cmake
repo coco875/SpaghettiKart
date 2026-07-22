@@ -1,24 +1,24 @@
 if(MSVC)
-  add_compile_options(/fp:fast)
+  target_compile_options(${PROJECT_NAME} PRIVATE /fp:fast)
 
   if("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "x64")
-    add_compile_options(
+    target_compile_options(${PROJECT_NAME} PRIVATE
       "$<$<CONFIG:Debug>:/w;/Od;/ZI>"
       "$<$<CONFIG:Release>:/O2;/Oi;/Gy;/W3;/Zi>" /permissive- /MP
       ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT} ${DEFAULT_CXX_EXCEPTION_HANDLING})
-    add_link_options(
+    target_link_options(${PROJECT_NAME} PRIVATE
       "$<$<CONFIG:Debug>:/INCREMENTAL>"
       "$<$<CONFIG:Release>:/OPT:REF;/OPT:ICF;/INCREMENTAL:NO;/FORCE:MULTIPLE>"
       /MANIFEST:NO /DEBUG /SUBSYSTEM:WINDOWS)
   elseif("${CMAKE_VS_PLATFORM_NAME}" STREQUAL "Win32")
-    add_compile_options(
+    target_compile_options(${PROJECT_NAME} PRIVATE
       "$<$<CONFIG:Release>:/O2;/Oi;/Gy>"
       /permissive-
       /MP
       /w
       ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT}
       ${DEFAULT_CXX_EXCEPTION_HANDLING})
-    add_link_options(
+    target_link_options(${PROJECT_NAME} PRIVATE
       "$<$<CONFIG:Debug>:/STACK:8777216>"
       "$<$<CONFIG:Release>:/OPT:REF;/OPT:ICF;/INCREMENTAL:NO;/FORCE:MULTIPLE>"
       /MANIFEST:NO /DEBUG /SUBSYSTEM:WINDOWS)
@@ -29,7 +29,7 @@ if(MSVC)
     string(REGEX REPLACE "/RTC(su|[1su])" "" ${fentry} "${${fentry}}")
   endforeach()
 else()
-  add_compile_options(
+  target_compile_options(${PROJECT_NAME} PRIVATE
     -Wall
     -Wextra
     -Wno-error
@@ -39,14 +39,16 @@ else()
     -ffast-math
     -flto=auto
     -pipe)
-  add_link_options(-flto=auto)
+  target_link_options(${PROJECT_NAME} PRIVATE -flto=auto)
 
   set(C_FLAGS -Werror-implicit-function-declaration
               -Wno-incompatible-pointer-types)
-  add_compile_options("$<$<COMPILE_LANGUAGE:C>:${C_FLAGS}>")
+  target_compile_options(${PROJECT_NAME} PRIVATE
+                         "$<$<COMPILE_LANGUAGE:C>:${C_FLAGS}>")
 
   set(CXX_FLAGS -fpermissive -fomit-frame-pointer)
-  add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:${CXX_FLAGS}>")
+  target_compile_options(${PROJECT_NAME} PRIVATE
+                         "$<$<COMPILE_LANGUAGE:CXX>:${CXX_FLAGS}>")
 
   include(CheckCCompilerFlag)
   include(CheckCXXCompilerFlag)
@@ -54,60 +56,63 @@ else()
   check_c_compiler_flag("-Wno-error=int-conversion"
                         HAS_WNO_ERROR_INT_CONVERSION)
   if(HAS_WNO_ERROR_INT_CONVERSION)
-    add_compile_options(
+    target_compile_options(${PROJECT_NAME} PRIVATE
       "$<$<COMPILE_LANGUAGE:C>:-Wno-error=int-conversion>")
   endif()
 
   check_cxx_compiler_flag("-Wno-error=narrowing" HAS_WNO_ERROR_NARROWING)
   if(HAS_WNO_ERROR_NARROWING)
-    add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=narrowing>")
+    target_compile_options(
+      ${PROJECT_NAME} PRIVATE
+      "$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=narrowing>")
   endif()
 
   check_cxx_compiler_flag("-Wno-error=changes-meaning"
                           HAS_WNO_ERROR_CHANGES_MEANING)
   if(HAS_WNO_ERROR_CHANGES_MEANING)
-    add_compile_options(
+    target_compile_options(${PROJECT_NAME} PRIVATE
       "$<$<COMPILE_LANGUAGE:CXX>:-Wno-error=changes-meaning>")
   endif()
 
-  add_compile_options(
+  target_compile_options(${PROJECT_NAME} PRIVATE
     "$<$<CONFIG:Debug>:-g>" "$<$<CONFIG:Release>:-O3>"
     "$<$<CONFIG:MinSizeRel>:-Os>" "$<$<CONFIG:RelWithDebInfo>:-O2;-g>")
 
   check_cxx_compiler_flag("-pthread" HAS_PTHREAD)
   if(HAS_PTHREAD AND NOT CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
-    add_compile_options(-pthread)
-    add_link_options(-pthread)
+    target_compile_options(${PROJECT_NAME} PRIVATE -pthread)
+    target_link_options(${PROJECT_NAME} PRIVATE -pthread)
   endif()
 
-  if(NOT CMAKE_SYSTEM_NAME STREQUAL "Darwin"
-     AND NOT CMAKE_SYSTEM_NAME STREQUAL "iOS"
+  if(NOT APPLE
      AND NOT CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch"
      AND NOT CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
     if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
       check_cxx_compiler_flag("-msse2 -mfpmath=sse" HAS_SSE2)
       if(HAS_SSE2)
-        add_compile_options(-msse2 -mfpmath=sse)
+        target_compile_options(${PROJECT_NAME} PRIVATE -msse2 -mfpmath=sse)
       endif()
     endif()
 
     include(CheckLinkerFlag)
     check_linker_flag("CXX" "-Wl,-export-dynamic" HAS_EXPORT_DYNAMIC)
     if(HAS_EXPORT_DYNAMIC)
-      add_link_options(-Wl,-export-dynamic)
+      target_link_options(${PROJECT_NAME} PRIVATE -Wl,-export-dynamic)
     endif()
   endif()
 
   # LTO breaks debug information with AppleClang and Ninja. Keep LTO for all
   # other configurations and explicitly override it for macOS Debug builds.
   if(CMAKE_CXX_COMPILER_ID MATCHES "AppleClang")
-    add_compile_options("$<$<CONFIG:Debug>:-fno-lto>")
-    add_link_options("$<$<CONFIG:Debug>:-fno-lto>")
+    target_compile_options(${PROJECT_NAME} PRIVATE
+                           "$<$<CONFIG:Debug>:-fno-lto>")
+    target_link_options(${PROJECT_NAME} PRIVATE
+                        "$<$<CONFIG:Debug>:-fno-lto>")
   endif()
 endif()
 
 # Add compile definitions for the target
-add_compile_definitions(
+target_compile_definitions(${PROJECT_NAME} PRIVATE
   NDEBUG
   VERSION_US=1
   "$<$<BOOL:${USE_OPENGLES}>:USE_OPENGLES>"
@@ -121,10 +126,10 @@ add_compile_definitions(
   AVOID_UB=1
   SPAGHETTI_VERSION="${PROJECT_VERSION}")
 
-add_compile_definitions("$<$<CONFIG:Debug>:_DEBUG>")
+target_compile_definitions(${PROJECT_NAME} PRIVATE "$<$<CONFIG:Debug>:_DEBUG>")
 
-if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-  add_compile_definitions(
+if(WIN32)
+  target_compile_definitions(${PROJECT_NAME} PRIVATE
     "$<$<CONFIG:Debug>:ENABLE_DX11>"
     INCLUDE_GAME_PRINTF
     NOMINMAX
@@ -135,10 +140,11 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
     STORMLIB_NO_AUTO_LINK)
   set(STORMLIB_NO_AUTO_LINK ON)
 elseif(CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
-  add_compile_definitions(SPDLOG_ACTIVE_LEVEL=3 SPDLOG_NO_THREAD_ID
-                          SPDLOG_NO_TLS STBI_NO_THREAD_LOCALS)
+  target_compile_definitions(
+    ${PROJECT_NAME} PRIVATE SPDLOG_ACTIVE_LEVEL=3 SPDLOG_NO_THREAD_ID
+                            SPDLOG_NO_TLS STBI_NO_THREAD_LOCALS)
 elseif("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU|Clang|AppleClang")
-  add_compile_definitions(
+  target_compile_definitions(${PROJECT_NAME} PRIVATE
     "$<$<BOOL:${BUILD_CROWD_CONTROL}>:ENABLE_CROWD_CONTROL>"
     _CONSOLE _CRT_SECURE_NO_WARNINGS UNICODE _UNICODE)
 endif()

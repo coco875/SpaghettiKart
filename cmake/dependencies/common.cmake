@@ -5,7 +5,7 @@ file(
   "https://raw.githubusercontent.com/DLTcollab/sse2neon/refs/heads/master/sse2neon.h"
   "${SSE2NEON_DIR}/sse2neon.h")
 
-include_directories(${SSE2NEON_DIR})
+target_include_directories(${PROJECT_NAME} PRIVATE ${SSE2NEON_DIR})
 
 # ================== SEMVER ===================
 set(SEMVER_DIR ${CMAKE_BINARY_DIR}/_deps/semver)
@@ -14,7 +14,7 @@ file(
   "https://raw.githubusercontent.com/Neargye/semver/refs/tags/v1.0.0-rc/include/semver.hpp"
   "${SEMVER_DIR}/semver.hpp")
 
-include_directories(${SEMVER_DIR})
+target_include_directories(${PROJECT_NAME} PRIVATE ${SEMVER_DIR})
 
 # =================== DRLibs ===================
 FetchContent_Declare(
@@ -23,10 +23,7 @@ FetchContent_Declare(
   GIT_TAG da35f9d6c7374a95353fd1df1d394d44ab66cf01)
 FetchContent_MakeAvailable(dr_libs)
 
-include_directories(${dr_libs_SOURCE_DIR})
-
-# =================== STB ===================
-include_directories(${STB_DIR})
+target_include_directories(${PROJECT_NAME} PRIVATE ${dr_libs_SOURCE_DIR})
 
 # =================== tomlplusplus ===================
 include(FetchContent)
@@ -41,9 +38,10 @@ target_link_libraries(${PROJECT_NAME} PRIVATE tomlplusplus::tomlplusplus)
 # Removes MPQ/OTR support
 set(EXCLUDE_MPQ_SUPPORT TRUE CACHE BOOL "")
 set(ENABLE_EXP_AUTO_CONFIGURE_CONTROLLERS ON CACHE BOOL "")
-add_compile_definitions(EXCLUDE_MPQ_SUPPORT)
+target_compile_definitions(${PROJECT_NAME} PRIVATE EXCLUDE_MPQ_SUPPORT)
 
-include_directories(
+target_include_directories(
+  ${PROJECT_NAME} PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include
   ${CMAKE_CURRENT_SOURCE_DIR}/libultraship/include/libultraship)
 
@@ -60,5 +58,6 @@ option(BUILD_MK64 "Build with Mario Kart 64 support" ON)
 option(BUILD_SF64 "Build with Star Fox 64 support" OFF)
 option(BUILD_FZERO "Build with F-Zero X support" OFF)
 option(BUILD_MARIO_ARTIST "Build with Mario Artist support" OFF)
+option(BUILD_NAUDIO "Build with NAudio support" OFF)
 
 add_subdirectory(torch)

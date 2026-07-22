@@ -11,8 +11,9 @@ set(CMAKE_CXX_STANDARD 20 CACHE STRING "The C++ standard to use")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11 CACHE STRING "The C standard to use")
 
-# Automatically select Spaghettify (for visual studio, etc)
-set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Spaghettify)
+# Automatically select the game target (for Visual Studio, etc.)
+set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT
+                                                      ${PROJECT_NAME})
 
 # Add a custom module path to locate additional CMake modules
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")

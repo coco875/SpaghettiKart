@@ -1,21 +1,20 @@
-if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+if(WIN32)
   find_package(Ogg CONFIG REQUIRED)
-  link_libraries(Ogg::ogg)
-
   find_package(Vorbis CONFIG REQUIRED)
-  link_libraries(Vorbis::vorbisfile)
-  set(ADDITIONAL_LIBRARY_DEPENDENCIES "Ogg::ogg" "Vorbis::vorbis"
-                                      "Vorbis::vorbisenc" "Vorbis::vorbisfile")
 elseif(CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
   set(ADDITIONAL_LIBRARY_DEPENDENCIES -lglad SDL2::SDL2)
 elseif(CMAKE_SYSTEM_NAME STREQUAL "CafeOS")
   set(ADDITIONAL_LIBRARY_DEPENDENCIES "$<$<CONFIG:Debug>:-Wl,--wrap=abort>")
-  include_directories(${DEVKITPRO}/portlibs/wiiu/include/)
+  target_include_directories(${PROJECT_NAME} PRIVATE
+                             ${DEVKITPRO}/portlibs/wiiu/include/)
 else()
   find_package(Ogg REQUIRED)
   find_package(Vorbis REQUIRED)
-  set(ADDITIONAL_LIBRARY_DEPENDENCIES "Ogg::ogg" "Vorbis::vorbis"
-                                      "Vorbis::vorbisenc" "Vorbis::vorbisfile")
+endif()
+
+if(NOT CMAKE_SYSTEM_NAME MATCHES "NintendoSwitch|CafeOS")
+  set(ADDITIONAL_LIBRARY_DEPENDENCIES Ogg::ogg Vorbis::vorbis
+                                      Vorbis::vorbisenc Vorbis::vorbisfile)
 endif()
 
 if(UNIX AND NOT APPLE)
@@ -32,10 +31,10 @@ if(CMAKE_SYSTEM_NAME STREQUAL "NintendoSwitch")
   find_package(SDL2)
 endif()
 
-include_directories(${SDL2_INCLUDE_DIRS})
+target_include_directories(${PROJECT_NAME} PRIVATE ${SDL2_INCLUDE_DIRS})
 
 if(NOT USE_OPENGLES)
-  include_directories(${GLEW_INCLUDE_DIRS})
+  target_include_directories(${PROJECT_NAME} PRIVATE ${GLEW_INCLUDE_DIRS})
 endif()
 
 target_link_libraries(${PROJECT_NAME}
