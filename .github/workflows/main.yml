@@ -512,7 +512,7 @@ jobs:
             spaghettikart-x86:latest \
             bash -c "
               cd /project/build-x86 && \
-              cpack -G External || true
+              cpack -G External
             "
 
       - name: Create Package
@@ -520,7 +520,7 @@ jobs:
           mkdir -p spaghetti-x86-${{ matrix.config }}
           wget -O gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/master/gamecontrollerdb.txt
           mv gamecontrollerdb.txt spaghetti-x86-${{ matrix.config }}/
-          cp build-x86/*.appimage spaghetti-x86-${{ matrix.config }}/spaghetti.appimage 2>/dev/null || true
+          cp build-x86/*.appimage spaghetti-x86-${{ matrix.config }}/spaghetti.appimage
 
       - name: Publish packaged artifacts
         uses: actions/upload-artifact@v4
